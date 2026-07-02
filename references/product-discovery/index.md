@@ -31,3 +31,6 @@
 - "早期想法快速筛选（<30 分钟）" → ICE Framework（主）
 - "找未满足需求/产品机会识别" → Opportunity Score（主）
 - "假设验证实验选型" → Experiment Design Library（主）
+- "假设识别与分类" / "不确定性映射" → Assumption Mapping
+- "最小可行原型" / "pretotype" → Pretotypes
+- "产品团队协作" / "三合一角色" → Product Trio

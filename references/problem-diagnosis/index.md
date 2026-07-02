@@ -20,3 +20,4 @@
 - "找根本原因" / "为什么出了问题" → 5 Whys（主）
 - "颠覆性思考" / "打破假设" → First Principles（主）
 - "80/20 重点识别" / "资源聚焦" → Pareto Analysis（主）
+- "多因素成因分析" / "鱼骨图" → Fishbone / Ishikawa（主）

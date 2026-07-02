@@ -26,12 +26,7 @@
 | **Value Chain Analysis** | 主活动+支持活动逐环节识别竞争优势来源 | 竞争优势诊断、成本领先/差异化策略、流程优化 | `value-chain-analysis.md` |
 | **Benchmarking** | 对标行业/跨行业最佳实践识别差距 | 绩效提升、流程改进、最佳实践学习 | `benchmarking.md` |
 | **Product Life Cycle** | 导入/成长/成熟/衰退 4 阶段匹配策略 | 产品策略、投资时机、组合管理 | `product-life-cycle.md` |
-
-## 补充方法论
-
-| 方法论 | 一句话描述 | 最佳场景 | Reference |
-| --- | --- | --- | --- |
-| **VRIO Framework** | 价值性/稀缺性/不可模仿性/组织化 四问资源观 | 资源能力评估、可持续竞争优势识别；作为 Can't-Won't Defensibility 的备选 | `vrio.md` |
+| **VRIO Framework** | 价值性/稀缺性/不可模仿性/组织化 四问资源观 | 资源能力评估、可持续竞争优势识别 | `vrio.md` |
 
 ## 各方法论最低信息需求
 
@@ -55,6 +50,7 @@
 - **Value Chain Analysis**：需要企业各环节成本与价值数据 + 对手对比
 - **Benchmarking**：需要可获取的标杆对象数据（至少 2 个独立来源）
 - **Product Life Cycle**：需要产品销售/竞争/客户构成趋势数据
+- **VRIO Framework**：L1：企业的资源/能力清单；L2：竞争对手对比数据
 
 ## 路由触发信号
 
@@ -69,10 +65,12 @@
 - "产品组合管理/投资平衡" → BCG Matrix（主）
 - "战略显性化/9 段式战略画布" → Product Strategy Canvas（主）
 - "早期创业商业模式验证" → Lean Canvas（主）
+- "战略与盈利分离" / "创业画布" → Startup Canvas（主）
 - "价值主张文案/6 段 JTBD 模板" → JDB Value Proposition（主）
 - "变现模型选型" → Monetization Strategy（主）
 - "定价/价格敏感度测算" → Pricing Strategy（主）
 - "护城河/竞品不可复制性设计" → Can't-Won't Defensibility（主）
+- "资源能力评估" / "竞争优势来源" → VRIO Framework（主）
 - "国家竞争优势/跨国选址/产业政策" → Porter Diamond Model（主）
 - "多元化业务组合/SBU 资源分配" → GE-McKinsey Matrix（主）
 - "行业内部竞争结构/战略群组" → Strategic Group Mapping（主）
