@@ -15,6 +15,7 @@
 
 ## 各方法论最低信息需求
 
+- **MECE + Pyramid Principle**：需要明确的待表达/分解的复杂问题（结论先行 + 相互独立完全穷尽）
 - **Six Thinking Hats**：需要明确议题/问题陈述
 - **Socratic Questioning**：需要一个具体主张或假设作为起点
 - **Cynefin**：需要问题描述（用于判断问题域）

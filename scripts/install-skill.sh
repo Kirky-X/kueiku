@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
-# install-skill.sh — 安装/卸载 skill 到项目级 agent 目录
+# install-skill.sh — 安装/卸载/更新 skill 到项目级 agent 目录
 #
 # 子命令:
 #   install <skill>     安装 skill 到目标项目的 agent 目录
+#   update [skill]      从 git 拉取最新版本并重新安装（不指定 skill 则更新所有）
 #   uninstall <skill>   卸载 skill
 #   list-skills         列出可安装的 skill
 #   list-agents         列出支持的 agent 类型及安装路径
@@ -88,6 +89,8 @@ Usage: install-skill.sh <command> [options]
 Commands:
   install <skill-name> [--target <dir>] [--agent <type>|--all-agents]
       安装 skill 到目标项目的 agent 目录（默认 --target .  默认 --agent claude）
+  update [skill-name] [--target <dir>] [--agent <type>|--all-agents]
+      从 git 拉取最新版本并重新安装。不指定 skill-name 则更新所有 skill
   uninstall <skill-name> [--target <dir>] [--agent <type>|--all-agents]
       卸载 skill
   list-skills
@@ -246,6 +249,108 @@ cmd_install() {
 
     printf '%-10s %-58s %s%s%s\n' "$agent" "$dest" "$GREEN" "OK" "$RESET"
   done <<< "$agents"
+
+  [[ $failed -ne 0 ]] && exit 1
+  return 0
+}
+
+# ---------- 子命令: update ----------
+cmd_update() {
+  local skill_name=""
+  TARGET_DIR="."
+  AGENT_FLAG=""
+
+  # 解析参数：第一个非 flag 参数是 skill-name（可选）
+  while [[ $# -gt 0 ]]; do
+    case "$1" in
+      --target)
+        shift
+        [[ $# -gt 0 ]] || { err "--target 需要参数"; exit 1; }
+        TARGET_DIR="$1"
+        ;;
+      --agent)
+        shift
+        [[ $# -gt 0 ]] || { err "--agent 需要参数"; exit 1; }
+        AGENT_FLAG="$1"
+        ;;
+      --all-agents)
+        AGENT_FLAG="all"
+        ;;
+      -h|--help)
+        usage; exit 0
+        ;;
+      -*)
+        err "未知参数: $1"; usage; exit 1
+        ;;
+      *)
+        [[ -z "$skill_name" ]] && skill_name="$1" || { err "多余参数: $1"; usage; exit 1; }
+        ;;
+    esac
+    shift
+  done
+
+  # Step 1: git pull
+  info "拉取最新版本..."
+  if [[ -d "$PROJECT_ROOT/.git" ]]; then
+    if ! git -C "$PROJECT_ROOT" pull --ff-only 2>/dev/null; then
+      warn "git pull 失败，尝试 git fetch + reset"
+      git -C "$PROJECT_ROOT" fetch origin 2>/dev/null || true
+      local current_branch
+      current_branch="$(git -C "$PROJECT_ROOT" branch --show-current 2>/dev/null || echo "main")"
+      git -C "$PROJECT_ROOT" reset --hard "origin/$current_branch" 2>/dev/null || {
+        err "无法拉取最新版本，请手动 git pull"
+        exit 1
+      }
+    fi
+    info "已拉取最新版本"
+  else
+    warn "当前目录非 git 仓库，跳过拉取，直接重新安装"
+  fi
+
+  # Step 2: 收集要更新的 skill 列表
+  local skills=()
+  if [[ -n "$skill_name" ]]; then
+    skills=("$skill_name")
+  else
+    # 独立仓库模式：只有自己
+    if is_standalone_skill_repo; then
+      skills=("*")
+    else
+      # 多 skill 模式：扫描所有 skill
+      local d
+      for d in "$PROJECT_ROOT"/*/; do
+        [[ -d "$d" ]] || continue
+        local name
+        name="$(basename "$d")"
+        [[ "$name" == "temp" ]] && continue
+        [[ -f "$d/SKILL.md" ]] || continue
+        skills+=("$name")
+      done
+    fi
+  fi
+
+  if [[ ${#skills[@]} -eq 0 ]]; then
+    warn "未找到任何可更新的 skill"
+    return 0
+  fi
+
+  # Step 3: 逐个更新
+  printf '%s%-12s %-10s%s\n' "$BOLD" "SKILL" "STATUS" "$RESET"
+  printf '%.0s-' {1..40}; printf '\n'
+
+  local s failed=0
+  for s in "${skills[@]}"; do
+    if [[ "$s" == "*" ]]; then
+      # 独立仓库模式：skill 名 = 仓库 basename
+      s="$(basename "$PROJECT_ROOT")"
+    fi
+    if cmd_install "$s" --target "$TARGET_DIR" --agent "${AGENT_FLAG:-claude}" >/dev/null 2>&1; then
+      printf '%-12s %s%s%s\n' "$s" "$GREEN" "UPDATED" "$RESET"
+    else
+      printf '%-12s %s%s%s\n' "$s" "$RED" "FAILED" "$RESET"
+      failed=1
+    fi
+  done
 
   [[ $failed -ne 0 ]] && exit 1
   return 0
@@ -554,6 +659,7 @@ main() {
   shift
   case "$cmd" in
     install)           cmd_install "$@" ;;
+    update)            cmd_update "$@" ;;
     uninstall)         cmd_uninstall "$@" ;;
     list-skills)       cmd_list_skills ;;
     list-agents)       cmd_list_agents ;;

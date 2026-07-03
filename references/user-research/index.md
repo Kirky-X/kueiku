@@ -27,6 +27,6 @@
 ## 常见组合
 
 - **需求挖掘**：Empathy Map → Customer Journey → JTBD
-- **服务优化**：Customer Journey → Pain Point 分析 → SCAMPER（创意改进）
+- **服务优化**：Customer Journey → SCAMPER（创意改进）
 - **需求层次定位**：Empathy Map → Maslow Hierarchy → User Personas
 - **决策旅程优化**：Consumer Decision Journey → RFM Model（识别关键群）→ A/B Test（触点验证）

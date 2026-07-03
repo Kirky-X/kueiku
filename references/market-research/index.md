@@ -36,4 +36,4 @@
 
 - **市场进入策略**：Market Sizing → Market Segmentation → STP Analysis → Perceptual Mapping
 - **新产品上市**：STP Analysis → Technology Adoption Lifecycle → Pricing Strategy
-- **品牌定位优化**：Perceptual Mapping → STP Analysis（重新定位）→ Brand Tracking
+- **品牌定位优化**：Perceptual Mapping → STP Analysis（重新定位）
