@@ -1,168 +1,168 @@
-# Eisenhower Matrix · 艾森豪威尔矩阵
+# Eisenhower Matrix
 
-## 核心理念
+## Core Concept
 
-以**重要性**和**紧迫性**两个维度划分任务，帮助区分"真正重要的工作"与"感觉忙但没有价值的工作"。
+Divides tasks along two dimensions: **importance** and **urgency**, helping to distinguish "truly important work" from "feeling busy but unproductive work."
 
 ```mermaid
 quadrantChart
-    title 艾森豪威尔矩阵
-    x-axis 紧迫 --> 不紧迫
-    y-axis 不重要 --> 重要
-    quadrant-1 Q2 价值区（主动规划）
-    quadrant-2 Q1 危机区（立即处理）
-    quadrant-3 Q3 干扰区（委派/简化）
-    quadrant-4 Q4 废时区（删除/限制）
+    title Eisenhower Matrix
+    x-axis Urgent --> Not urgent
+    y-axis Not important --> Important
+    quadrant-1 Q2 Value Zone (Proactive Planning)
+    quadrant-2 Q1 Crisis Zone (Handle Immediately)
+    quadrant-3 Q3 Distraction Zone (Delegate/Simplify)
+    quadrant-4 Q4 Time-waste Zone (Eliminate/Restrict)
 ```
 
-> 艾森豪威尔曾说："紧急的事情很少是重要的，重要的事情很少是紧急的。"
-> **高效人士的特征：大量时间在 Q2，而非在 Q1 救火。**
+> Eisenhower once said, "What is urgent is rarely important, and what is important is rarely urgent."
+> **Characteristic of highly effective people: Spending most time in Q2, not firefighting in Q1.**
 
 ---
 
-## 适用场景
+## Applicable Scenarios
 
-✅ **最适合**
-- 个人每日/每周任务规划
-- 团队任务分配和优先级对齐
-- 时间管理混乱时的快速梳理
-- 识别哪些事项可以委派或删除
+✅ **Best suited for**
+- Personal daily/weekly task planning
+- Team task assignment and priority alignment
+- Quick sorting when time management is chaotic
+- Identifying which items can be delegated or eliminated
 
-⚠️ **慎用**
-- 跨项目、多功能的产品优先级排序（用 RICE 更精准）
-- 需要量化权衡的复杂决策
-
----
-
-## 四象限详解
-
-### Q1 · 重要且紧急（Do First）
-
-**特征**：deadline 临近、紧急故障、客户投诉升级
-**处理原则**：立即处理，全力投入
-**注意**：长期在 Q1 工作 = 没有做好 Q2 的主动规划，是压力来源
-
-常见事项：
-- 线上故障/事故响应
-- 即将到期的重要交付物
-- 关键决策的临时紧急处理
+⚠️ **Use with caution**
+- Cross-project, multi-feature product prioritization (RICE is more precise)
+- Complex decisions requiring quantified trade-offs
 
 ---
 
-### Q2 · 重要但不紧急（Schedule）
+## Detailed Explanation of the Four Quadrants
 
-**特征**：没有 deadline 压力，但对长期目标至关重要
-**处理原则**：主动规划时间，保护不被 Q1/Q3 挤占
-**这是精力投入的最高价值区域**
+### Q1 · Important and Urgent (Do First)
 
-常见事项：
-- 战略规划、季度目标设定（OKR）
-- 技术债偿还、架构升级
-- 用户研究、产品调研
-- 个人/团队能力建设
-- 预防性维护（避免 Q1 危机）
+**Characteristics**: Approaching deadlines, urgent failures, escalating customer complaints
+**Handling principle**: Handle immediately, full effort
+**Note**: Long-term work in Q1 = Lack of proactive Q2 planning, source of stress
 
-**提升策略**：
-- 在日历中 block 固定的 Q2 时间（通勤、早晨第一小时）
-- 将 Q2 任务分解为可操作的小步骤
-- 对 Q3 说不，保护 Q2 时间
+Common items:
+- Online failure/incident response
+- Important deliverables due soon
+- Temporary emergency handling of critical decisions
 
 ---
 
-### Q3 · 紧急但不重要（Delegate）
+### Q2 · Important but Not Urgent (Schedule)
 
-**特征**：感觉急，但实际上对核心目标贡献低
-**处理原则**：委派给他人，或建立自动化流程减少人工介入
-**陷阱**：这类任务制造"忙碌感"，但消耗 Q2 的时间
+**Characteristics**: No deadline pressure, but crucial for long-term goals
+**Handling principle**: Proactively schedule time, protect from being squeezed by Q1/Q3
+**This is the highest-value area for energy investment**
 
-常见事项：
-- 他人发起的非关键会议
-- 部分来自他人的"紧急"请求（对他们紧急，对你未必重要）
-- 可以由他人处理的日常沟通
+Common items:
+- Strategic planning, quarterly goal setting (OKR)
+- Technical debt repayment, architecture upgrades
+- User research, product investigation
+- Personal/team capability building
+- Preventive maintenance (avoiding Q1 crises)
 
----
-
-### Q4 · 不重要也不紧急（Eliminate）
-
-**特征**：纯粹消耗时间，几乎没有价值产出
-**处理原则**：识别并删除/限制
-**注意**：适度的 Q4 活动可以是休息（如休闲娱乐），但要有意识地选择
-
-常见事项：
-- 无目的的社交媒体刷新
-- 冗长的低价值会议
-- 不必要的过度准备/完美主义
+**Enhancement strategies**:
+- Block fixed Q2 time in calendar (commute, first hour of morning)
+- Break down Q2 tasks into actionable small steps
+- Say no to Q3, protect Q2 time
 
 ---
 
-## 执行步骤
+### Q3 · Urgent but Not Important (Delegate)
 
-### Step 1：任务清单倾倒
+**Characteristics**: Feels urgent, but actually contributes little to core goals
+**Handling principle**: Delegate to others, or establish automated processes to reduce manual intervention
+**Pitfall**: These tasks create a "sense of busyness" but consume Q2 time
 
-把当前所有待办事项写出来（大脑倾倒），不做评判。
-
-### Step 2：四象限分类
-
-对每个任务，快速判断：
-- **重要性**：这个任务是否直接贡献于我的核心目标/OKR？
-- **紧迫性**：如果今天不做，会有什么实质性后果？
-
-分入对应象限。
-
-**注意**：区分"别人认为紧急"（别人的 Q1）和"我的真正重要任务"（我的 Q2）。
-
-### Step 3：制定行动计划
-
-- Q1：今天或明天内处理
-- Q2：在日历中安排具体时间
-- Q3：明确委派给谁，何时
-- Q4：直接删除或限制接触频率
-
-### Step 4：每周复盘
-
-- Q1 任务是否可以通过更好的 Q2 规划来预防？
-- Q3 任务占比是否过高？是否需要边界设置？
-- Q2 时间是否被保护？
+Common items:
+- Non-critical meetings initiated by others
+- Some "urgent" requests from others (urgent for them, not necessarily important for you)
+- Daily communications that can be handled by others
 
 ---
 
-## 输出模板
+### Q4 · Not Important and Not Urgent (Eliminate)
+
+**Characteristics**: Purely time-consuming, almost no value output
+**Handling principle**: Identify and eliminate/restrict
+**Note**: Moderate Q4 activities can be rest (like leisure and entertainment), but choose consciously
+
+Common items:
+- Mindless social media scrolling
+- Lengthy low-value meetings
+- Unnecessary over-preparation/perfectionism
+
+---
+
+## Execution Steps
+
+### Step 1: Task List Dump
+
+Write out all current to-do items (brain dump), without judgment.
+
+### Step 2: Four Quadrant Classification
+
+For each task, quickly assess:
+- **Importance**: Does this task directly contribute to my core goals/OKR?
+- **Urgency**: If not done today, what substantive consequences will there be?
+
+Classify into the corresponding quadrant.
+
+**Note**: Distinguish between "what others think is urgent" (others' Q1) and "my truly important tasks" (my Q2).
+
+### Step 3: Develop Action Plan
+
+- Q1: Handle today or tomorrow
+- Q2: Schedule specific times in calendar
+- Q3: Clearly delegate to whom and when
+- Q4: Directly eliminate or restrict contact frequency
+
+### Step 4: Weekly Review
+
+- Can Q1 tasks be prevented through better Q2 planning?
+- Is the proportion of Q3 tasks too high? Do boundaries need to be set?
+- Is Q2 time being protected?
+
+---
+
+## Output Template
 
 ```
-日期/周次：[...]
-处理对象：[个人 / 团队名称]
+Date/Week: [...]
+Subject: [Individual / Team Name]
 
-任务清单：
+Task List:
 
-Q1（立即处理）：
-  1. [任务] — 截止时间：[...] — 预计耗时：[...]
+Q1 (Handle Immediately):
+  1. [Task] — Deadline: [...] — Estimated time: [...]
   2. [...]
 
-Q2（计划安排）：
-  1. [任务] — 安排时间：[...] — 战略价值：[...]
+Q2 (Schedule):
+  1. [Task] — Scheduled time: [...] — Strategic value: [...]
   2. [...]
 
-Q3（委派/简化）：
-  1. [任务] — 委派给：[...] — 或自动化方案：[...]
+Q3 (Delegate/Simplify):
+  1. [Task] — Delegate to: [...] — Or automation solution: [...]
   2. [...]
 
-Q4（删除/限制）：
-  1. [任务] — 处理方式：删除 / 限制频率至 [...]
+Q4 (Eliminate/Restrict):
+  1. [Task] — Handling: Eliminate / Restrict frequency to [...]
   2. [...]
 
-本周 Q2 时间 Block：
-  [周一 9:00-11:00] → [Q2 任务名]
+This Week's Q2 Time Blocks:
+  [Monday 9:00-11:00] → [Q2 Task Name]
   [...]
 
-反思：
-  Q1 中哪些是可以通过 Q2 预防的？[...]
-  Q3 占比是否需要设置边界？[...]
+Reflection:
+  Which Q1 items could have been prevented through Q2? [...]
+  Does Q3 proportion require boundary setting? [...]
 ```
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **配合 OKR**：OKR 定义重要目标，用矩阵判断每日任务是否真正服务于 OKR（Q2）
-- **补充 RICE**：RICE 用于多项目/功能排序，矩阵用于个人和团队日常任务管理
-- **前置 GTD（Getting Things Done）**：矩阵是 GTD 的决策树核心之一
+- **Combined with OKR**: OKR defines important goals, use matrix to assess whether daily tasks truly serve OKR (Q2)
+- **Complements RICE**: RICE is for multi-project/feature ranking, matrix is for personal and team daily task management
+- **Precedes GTD (Getting Things Done)**: Matrix is one of GTD's core decision trees

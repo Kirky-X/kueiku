@@ -1,20 +1,20 @@
-# JDB Value Proposition · 6 段 JTBD 价值主张
+# JDB Value Proposition
 
-## 核心思想
-用 6 段结构化的 JTBD 模板写出可被 challenge 的价值主张，避免"我们提供了一个云原生的、AI 驱动的、可扩展的解决方案"这类空洞表述。每一段都强制聚焦具体客户、具体动机、具体替代品。
+## Core Concept
+Use a 6-segment structured JTBD template to write challengeable value propositions, avoiding hollow statements like "we provide a cloud-native, AI-driven, scalable solution." Each segment forces focus on specific customers, specific motivations, and specific alternatives.
 
-## 适用场景
-- 写 PRD/官网/销售材料前，先沉淀价值主张
-- 价值主张停留在"功能列表"层面
-- 不同人对产品价值主张表述不一致
+## Use Cases
+- Before writing PRD/website/sales materials, crystallize the value proposition first
+- Value proposition stuck at the "feature list" level
+- Different people expressing inconsistent product value propositions
 
-## 关键步骤
-1. Who：目标客户是谁（具体到角色/场景，不是"所有企业"）
-2. Why：他们为什么需要——要完成的 Job 是什么
-3. What before：他们现在用什么替代方案解决这个 Job
-4. How：我们怎么解决——核心机制（不是功能列表）
-5. What after：用了之后的世界是什么样——可量化的结果
-6. Alternatives：相对于替代方案（包括"不做"）的差异化是什么
+## Key Steps
+1. Who: Target customers (specific to roles/scenarios, not "all enterprises")
+2. Why: Why they need it — what Job needs to be done
+3. What before: What alternative solutions they currently use for this Job
+4. How: How we solve it — core mechanism (not a feature list)
+5. What after: What the world looks like after using it — quantifiable outcomes
+6. Alternatives: Differentiation compared to alternatives (including "doing nothing")
 
-## 来源
-Paweł Huryn & Aatir Abdul Rauf（Product Compass 推广的 6 段 JTBD 模板）
+## Source
+Paweł Huryn & Aatir Abdul Rauf (6-segment JTBD template promoted by Product Compass)

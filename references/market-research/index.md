@@ -1,39 +1,39 @@
-# Market Research · 市场研究
+# Market Research
 
-**适用场景**：市场规模、细分、用户分群、画像
+**Applicable scenarios**: Market size, segmentation, user segmentation, personas
 
-| 方法论 | 一句话描述 | 最佳场景 | Reference |
+| Methodology | One-line description | Best scenario | Reference |
 | --- | --- | --- | --- |
-| **Market Sizing** | TAM/SAM/SOM + top-down 与 bottom-up 三角验证 | 融资 deck、新市场评估 | `market-sizing.md` |
-| **Market Segmentation** | 3-5 个 non-overlapping segments，behavior+JTBD+needs | 战略制定初期明确服务谁 | `market-segmentation.md` |
-| **User Segmentation** | 从反馈数据按 behavior/JTBD/needs 聚类 | 同一客户群内部使用模式差异分析 | `user-segmentation.md` |
-| **User Personas** | 3 个 persona，含 JTBD+Top3 Pains/Gains+Unexpected Insight | 团队对目标用户认知对齐 | `user-personas.md` |
-| **STP Analysis** | Segmentation-Targeting-Positioning 三步法 | 市场进入、产品定位、营销策略制定 | `stp-analysis.md` |
-| **Perceptual Mapping** | 二维坐标图展示消费者对品牌的感知定位 | 品牌定位、竞品感知对比、定位调整 | `perceptual-mapping.md` |
-| **Technology Adoption Lifecycle** | 创新者→早期采用者→大众→落后者 5 阶段+鸿沟 | 技术产品营销、跨越鸿沟策略、目标客户选择 | `technology-adoption-lifecycle.md` |
+| **Market Sizing** | TAM/SAM/SOM + top-down and bottom-up triangulation | Funding deck, new market assessment | `market-sizing.md` |
+| **Market Segmentation** | 3-5 non-overlapping segments, behavior+JTBD+needs | Early strategy formulation to define who to serve | `market-segmentation.md` |
+| **User Segmentation** | Clustering from feedback data by behavior/JTBD/needs | Analyzing usage pattern differences within the same customer group | `user-segmentation.md` |
+| **User Personas** | 3 personas, including JTBD+Top3 Pains/Gains+Unexpected Insight | Team alignment on target user understanding | `user-personas.md` |
+| **STP Analysis** | Segmentation-Targeting-Positioning three-step method | Market entry, product positioning, marketing strategy formulation | `stp-analysis.md` |
+| **Perceptual Mapping** | Two-dimensional coordinate chart showing consumer perception of brand positioning | Brand positioning, competitor perception comparison, positioning adjustment | `perceptual-mapping.md` |
+| **Technology Adoption Lifecycle** | Innovators→Early Adopters→Mainstream→Laggards 5 stages + chasm | Technology product marketing, crossing the chasm strategy, target customer selection | `technology-adoption-lifecycle.md` |
 
-## 各方法论最低信息需求
+## Minimum Information Requirements for Each Methodology
 
-- **Market Sizing**：需要行业总量数据 + 单客户 ARPU 数据
-- **Market Segmentation**：需要客户行为/JTBD/needs 数据
-- **User Segmentation**：需要产品分析 + 调研 + 工单数据
-- **User Personas**：需要访谈/调研数据聚类
-- **STP Analysis**：需要细分维度数据 + 各段规模/竞争/匹配度评估
-- **Perceptual Mapping**：需要 50+ 目标段用户对多品牌的感知评分数据
-- **Technology Adoption Lifecycle**：需要客户构成 + 获客方式 + 成交周期数据
+- **Market Sizing**: Industry total data + single customer ARPU data
+- **Market Segmentation**: Customer behavior/JTBD/needs data
+- **User Segmentation**: Product analytics + surveys + support ticket data
+- **User Personas**: Interview/survey data clustering
+- **STP Analysis**: Segmentation dimension data + segment scale/competitive/fit assessment
+- **Perceptual Mapping**: 50+ target segment users' perception ratings across multiple brands
+- **Technology Adoption Lifecycle**: Customer composition + acquisition methods + sales cycle data
 
-## 路由触发信号
+## Routing Trigger Signals
 
-- "市场规模测算" → Market Sizing（主）
-- "市场细分/3-5 个 non-overlapping" → Market Segmentation（主）
-- "用户细分/使用行为聚类" → User Segmentation（主）
-- "用户画像/3 个 persona" → User Personas（主）
-- "市场进入/产品定位/营销策略制定" → STP Analysis（主）
-- "品牌定位/竞品感知对比/定位调整" → Perceptual Mapping（主）
-- "技术产品营销/跨越鸿沟/目标客户段选择" → Technology Adoption Lifecycle（主）
+- "Market size estimation" → Market Sizing (primary)
+- "Market segmentation/3-5 non-overlapping" → Market Segmentation (primary)
+- "User segmentation/usage behavior clustering" → User Segmentation (primary)
+- "User personas/3 personas" → User Personas (primary)
+- "Market entry/product positioning/marketing strategy formulation" → STP Analysis (primary)
+- "Brand positioning/competitor perception comparison/positioning adjustment" → Perceptual Mapping (primary)
+- "Technology product marketing/crossing the chasm/target customer segment selection" → Technology Adoption Lifecycle (primary)
 
-## 常见组合
+## Common Combinations
 
-- **市场进入策略**：Market Sizing → Market Segmentation → STP Analysis → Perceptual Mapping
-- **新产品上市**：STP Analysis → Technology Adoption Lifecycle → Pricing Strategy
-- **品牌定位优化**：Perceptual Mapping → STP Analysis（重新定位）
+- **Market entry strategy**: Market Sizing → Market Segmentation → STP Analysis → Perceptual Mapping
+- **New product launch**: STP Analysis → Technology Adoption Lifecycle → Pricing Strategy
+- **Brand positioning optimization**: Perceptual Mapping → STP Analysis (repositioning)

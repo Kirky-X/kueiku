@@ -1,148 +1,148 @@
-# DCF · 现金流折现
+# DCF · Discounted Cash Flow
 
-## 核心理念
+## Core Concept
 
-企业价值 = 未来自由现金流的现值之和。
+Enterprise value = Sum of present values of future free cash flows.
 
-DCF（Discounted Cash Flow）基于"资产的价值等于其未来能产生的现金流的现值"这一基本原则。它是内在价值法，不依赖市场交易价格，因此被视为最理论的估值方法。但 DCF 的准确性高度依赖假设——垃圾进，垃圾出。
+DCF (Discounted Cash Flow) is based on the fundamental principle that "the value of an asset equals the present value of the cash flows it can generate in the future." It is an intrinsic value approach that does not rely on market transaction prices, making it the most theoretically grounded valuation method. However, DCF accuracy is highly dependent on assumptions — garbage in, garbage out.
 
-> **核心理念**：DCF 是"假设驱动"的估值方法。
-> 估值的准确性不在于公式，而在于现金流预测的合理性和折现率的准确性。敏感性分析是必做项，不是可选项。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 企业估值（成熟、现金流稳定的企业）
-- 投资决策（计算内在价值 vs 市场价格）
-- 并购定价（确定报价区间）
-- 资本预算（项目投资决策）
-
-⚠️ **慎用**
-- 早期创业公司（现金流不可预测）
-- 周期性行业（需跨周期平均化）
-- 高增长未盈利企业（需调整模型）
-- 短期投机决策（DCF 是长期内在价值）
+> **Core Concept**: DCF is an "assumption-driven" valuation method.
+> Valuation accuracy lies not in the formula, but in the reasonableness of cash flow projections and the accuracy of the discount rate. Sensitivity analysis is mandatory, not optional.
 
 ---
 
-## 执行步骤
+## Applicable Scenarios
 
-### Step 1：预测自由现金流
+✅ **Best suited for**
+- Enterprise valuation (mature companies with stable cash flows)
+- Investment decisions (calculating intrinsic value vs. market price)
+- M&A pricing (determining bid range)
+- Capital budgeting (project investment decisions)
 
-预测显性预测期（通常 5-10 年）的自由现金流（FCF）：
-- FCFF（公司自由现金流）= EBIT × (1 - 税率) + 折旧摊销 - 资本支出 - 营运资本变动
-- FCFE（股权自由现金流）= FCFF - 税后利息 + 净新增借款
-
-预测依据：
-- 历史财务数据趋势
-- 行业增长预测
-- 公司竞争力和战略规划
-- 宏观经济假设
-
-> 预测需基于可解释的假设，不是简单外推历史增长率。
-
-### Step 2：估算 WACC
-
-计算加权平均资本成本（WACC）作为折现率：
-- WACC = E/(D+E) × Re + D/(D+E) × Rd × (1 - 税率)
-- Re（股权成本）= Rf + β × (Rm - Rf)（CAPM）
-- Rd（债务成本）= 税前债务利率
-- Rf：无风险利率（长期国债）
-- Rm - Rf：股权风险溢价
-- β：行业 beta
-
-### Step 3：计算终值
-
-显性预测期后的价值用终值（Terminal Value）表示：
-- 永续增长法：TV = FCF(n+1) / (WACC - g)，g 为永续增长率（通常 2-3%，不超长期 GDP）
-- 退出倍数法：TV = EBITDA(n) × 行业 EV/EBITDA 倍数
-
-> 两种方法交叉验证，终值常占估值 60-80%，假设敏感。
-
-### Step 4：折现求和
-
-计算企业价值：
-- 企业价值（EV）= Σ FCFt / (1+WACC)^t + TV / (1+WACC)^n
-- 股权价值 = EV - 净债务
-- 每股价值 = 股权价值 / 股本
-
-### Step 5：敏感性分析
-
-对关键假设做敏感性分析：
-- WACC ± 1% / 2% 的影响
-- 永续增长率 g ± 0.5% 的影响
-- 显性期增长率 ± 10% 的影响
-- 输出估值区间（保守 / 基准 / 乐观），而非单一数字
-
-> 没有敏感性分析的 DCF 是不负责任的——单一数字给出虚假的精确感。
+⚠️ **Use with caution**
+- Early-stage startups (unpredictable cash flows)
+- Cyclical industries (require cross-cycle averaging)
+- High-growth unprofitable companies (require model adjustments)
+- Short-term speculative decisions (DCF measures long-term intrinsic value)
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Project Free Cash Flows
+
+Project free cash flows (FCF) for the explicit forecast period (typically 5-10 years):
+- FCFF (Free Cash Flow to Firm) = EBIT × (1 - Tax Rate) + Depreciation & Amortization - Capital Expenditures - Changes in Working Capital
+- FCFE (Free Cash Flow to Equity) = FCFF - After-tax Interest + Net New Borrowing
+
+Projection basis:
+- Historical financial data trends
+- Industry growth forecasts
+- Company competitiveness and strategic plans
+- Macroeconomic assumptions
+
+> Projections must be based on explainable assumptions, not simply extrapolating historical growth rates.
+
+### Step 2: Estimate WACC
+
+Calculate the Weighted Average Cost of Capital (WACC) as the discount rate:
+- WACC = E/(D+E) × Re + D/(D+E) × Rd × (1 - Tax Rate)
+- Re (Cost of Equity) = Rf + β × (Rm - Rf) (CAPM)
+- Rd (Cost of Debt) = Pre-tax debt interest rate
+- Rf: Risk-free rate (long-term government bonds)
+- Rm - Rf: Equity risk premium
+- β: Industry beta
+
+### Step 3: Calculate Terminal Value
+
+Value beyond the explicit forecast period is represented by Terminal Value:
+- Perpetuity Growth Method: TV = FCF(n+1) / (WACC - g), where g is the perpetuity growth rate (typically 2-3%, not exceeding long-term GDP)
+- Exit Multiple Method: TV = EBITDA(n) × Industry EV/EBITDA Multiple
+
+> Cross-validate both methods. Terminal value typically accounts for 60-80% of valuation and is highly assumption-sensitive.
+
+### Step 4: Discount and Sum
+
+Calculate enterprise value:
+- Enterprise Value (EV) = Σ FCFt / (1+WACC)^t + TV / (1+WACC)^n
+- Equity Value = EV - Net Debt
+- Value Per Share = Equity Value / Shares Outstanding
+
+### Step 5: Sensitivity Analysis
+
+Perform sensitivity analysis on key assumptions:
+- Impact of WACC ± 1% / 2%
+- Impact of perpetuity growth rate g ± 0.5%
+- Impact of explicit period growth rate ± 10%
+- Output valuation range (conservative / base / optimistic), not a single number
+
+> A DCF without sensitivity analysis is irresponsible — a single number creates a false sense of precision.
+
+---
+
+## Output Template
 
 ```
-分析对象：[公司名称]
-估值日期：[日期]
+Analysis Subject: [Company Name]
+Valuation Date: [Date]
 
-自由现金流预测（FCFF）：
-  | 年份 | 营收 | EBIT | 税后EBIT | +D&A | -CapEx | -ΔWC | FCFF |
+Free Cash Flow Projection (FCFF):
+  | Year | Revenue | EBIT | After-tax EBIT | +D&A | -CapEx | -ΔWC | FCFF |
   |------|------|------|---------|------|--------|------|------|
   | Y1   | ...  | ...  | ...     | ...  | ...    | ...  | ...  |
   | ...  | ...  | ...  | ...     | ...  | ...    | ...  | ...  |
   | Y10  | ...  | ...  | ...     | ...  | ...    | ...  | ...  |
 
-WACC 计算：
-  - 无风险利率 Rf：[X%]
-  - 股权风险溢价 Rm-Rf：[Y%]
-  - Beta：[Z]
-  - 股权成本 Re：[X%]
-  - 债务成本 Rd（税后）：[X%]
-  - 资本结构 D/(D+E)：[X%]
-  - WACC：[X%]
+WACC Calculation:
+  - Risk-free Rate Rf: [X%]
+  - Equity Risk Premium Rm-Rf: [Y%]
+  - Beta: [Z]
+  - Cost of Equity Re: [X%]
+  - Cost of Debt Rd (after-tax): [X%]
+  - Capital Structure D/(D+E): [X%]
+  - WACC: [X%]
 
-终值计算：
-  - 方法：[永续增长 / 退出倍数]
-  - 永续增长率 g：[X%]
-  - 终值 TV：[X]
-  - 终值现值：[X]
+Terminal Value Calculation:
+  - Method: [Perpetuity Growth / Exit Multiple]
+  - Perpetuity Growth Rate g: [X%]
+  - Terminal Value TV: [X]
+  - Present Value of Terminal Value: [X]
 
-估值结果：
-  - 企业价值 EV：[X]
-  - 净债务：[X]
-  - 股权价值：[X]
-  - 每股价值：[X]
-  - 当前股价：[X]
-  - 溢价/折价：[X%]
+Valuation Results:
+  - Enterprise Value EV: [X]
+  - Net Debt: [X]
+  - Equity Value: [X]
+  - Value Per Share: [X]
+  - Current Share Price: [X]
+  - Premium/Discount: [X%]
 
-敏感性分析：
+Sensitivity Analysis:
   | WACC \ g | 1.5% | 2.0% | 2.5% | 3.0% |
   |----------|------|------|------|------|
   | 8%       | ...  | ...  | ...  | ...  |
   | 9%       | ...  | ...  | ...  | ...  |
   | 10%      | ...  | ...  | ...  | ...  |
 
-估值结论：[低估/合理/高估]，区间 [保守 ~ 乐观]
+Valuation Conclusion: [Undervalued/Fairly Valued/Overvalued], Range [Conservative ~ Optimistic]
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 避免方式 |
+| Pitfall | Avoidance Method |
 |------|---------|
-| 给出单一数字的虚假精确感 | 必做敏感性分析，输出区间 |
-| 永续增长率超过长期 GDP | g 通常 ≤ 3%，超过需极强理由 |
-| 终值占比过高未审视 | 终值占比 > 80% 说明显性期预测不足 |
-| WACC 估算随意 | 各参数需有数据来源，不可拍脑袋 |
-| 用 DCF 估值早期创业公司 | 早期公司用可比公司法或实物期权法 |
-| 预测期过短 | 显性期至少 5 年，覆盖一个商业周期 |
+| Providing single-number false precision | Must perform sensitivity analysis, output range |
+| Perpetuity growth rate exceeding long-term GDP | g typically ≤ 3%; exceeding requires strong justification |
+| Terminal value proportion too high without scrutiny | TV > 80% of total indicates insufficient explicit period projection |
+| Arbitrary WACC estimation | All parameters need documented data sources, no guessing |
+| Using DCF for early-stage startups | Use comparable company or real options methods for early-stage |
+| Forecast period too short | Explicit period at least 5 years, covering one business cycle |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **互补 Comparable Company**：DCF 是内在价值法，可比公司是市场法，交叉验证
-- **前置 DuPont Analysis**：杜邦诊断历史质量，支撑 FCF 预测的合理性
-- **后接 EVA**：DCF 估算价值，EVA 验证持有期价值创造
+- **Complementary Comparable Company**: DCF is intrinsic value approach; CCA is market approach — cross-validate
+- **Upstream DuPont Analysis**: DuPont diagnoses historical quality, supporting FCF projection reasonableness
+- **Downstream EVA**: DCF estimates value; EVA validates value creation during holding period

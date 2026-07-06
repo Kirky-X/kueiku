@@ -1,39 +1,39 @@
 #!/usr/bin/env bash
-# install-skill.sh — 安装/卸载/更新 skill 到项目级 agent 目录
+# install-skill.sh — Install/uninstall/update skills to project-level agent directories
 #
-# 子命令:
-#   install <skill>     安装 skill 到目标项目的 agent 目录
-#   update [skill]      从 git 拉取最新版本并重新安装（不指定 skill 则更新所有）
-#   uninstall <skill>   卸载 skill
-#   list-skills         列出可安装的 skill
-#   list-agents         列出支持的 agent 类型及安装路径
-#   status              显示目标项目中已安装的 skill
-#   generate-commands <skill>  为 skill 子命令生成 agent commands 文件
+# Subcommands:
+#   install <skill>     Install skill to target project's agent directory
+#   update [skill]      Pull latest version from git and reinstall (update all if no skill specified)
+#   uninstall <skill>   Uninstall skill
+#   list-skills         List installable skills
+#   list-agents         List supported agent types and install paths
+#   status              Show installed skills in target project
+#   generate-commands <skill>  Generate agent commands file for skill subcommands
 #
-# 支持两种部署模式（自动识别）：
-#   1. 多 skill 父目录模式：脚本在 <root>/scripts/ 下，<root>/<skill-name>/ 有 SKILL.md
-#   2. 独立 skill 仓库模式：脚本在 <skill-repo>/scripts/ 下，<skill-repo>/SKILL.md 直接存在
-#      此模式下 skill-name 必须等于 <skill-repo> 的 basename，install/list-skills 才能工作
+# Supports two deployment modes (auto-detected):
+#   1. Multi-skill parent directory mode: script is in <root>/scripts/, <root>/<skill-name>/ has SKILL.md
+#   2. Standalone skill repo mode: script is in <skill-repo>/scripts/, <skill-repo>/SKILL.md exists directly
+#      In this mode skill-name must equal the basename of <skill-repo> for install/list-skills to work
 
 set -euo pipefail
 
-# ---------- 定位项目根（文件副本或软链接调用均支持）----------
+# ---------- Locate project root (works with both file copy and symlink calls) ----------
 SCRIPT_REAL_PATH="$(readlink -f "$0")"
 SCRIPT_DIR="$(cd "$(dirname "$SCRIPT_REAL_PATH")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
-# ---------- 模式识别：独立 skill 仓库 vs 多 skill 父目录 ----------
-# 独立 skill 仓库模式：PROJECT_ROOT/SKILL.md 直接存在
-# 此模式下 PROJECT_ROOT 本身就是 skill 源目录
+# ---------- Mode detection: standalone skill repo vs multi-skill parent directory ----------
+# Standalone skill repo mode: PROJECT_ROOT/SKILL.md exists directly
+# In this mode PROJECT_ROOT itself is the skill source directory
 is_standalone_skill_repo() {
   [[ -f "$PROJECT_ROOT/SKILL.md" ]]
 }
 
-# 解析 skill 源目录路径（stdout）
-# 用法: resolve_skill_src <skill-name>
-# 多 skill 模式: $PROJECT_ROOT/<skill-name>
-# 独立仓库模式: $PROJECT_ROOT（当且仅当 skill-name == basename(PROJECT_ROOT)）
-# 失败时返回空字符串（stderr 由调用方打印）
+# Resolve skill source directory path (stdout)
+# Usage: resolve_skill_src <skill-name>
+# Multi-skill mode: $PROJECT_ROOT/<skill-name>
+# Standalone repo mode: $PROJECT_ROOT (if and only if skill-name == basename(PROJECT_ROOT))
+# Returns empty string on failure (stderr is printed by caller)
 resolve_skill_src() {
   local skill_name="$1"
   if is_standalone_skill_repo; then
@@ -51,7 +51,7 @@ resolve_skill_src() {
   return 1
 }
 
-# ---------- 颜色输出 ----------
+# ---------- Color output ----------
 if [[ -t 1 ]]; then
   RED=$'\033[31m'; GREEN=$'\033[32m'; YELLOW=$'\033[33m'; BLUE=$'\033[34m'
   BOLD=$'\033[1m'; RESET=$'\033[0m'
@@ -63,8 +63,8 @@ err()  { printf '%s[ERROR]%s %s\n' "$RED" "$RESET" "$*" >&2; }
 warn() { printf '%s[WARN]%s  %s\n' "$YELLOW" "$RESET" "$*" >&2; }
 info() { printf '%s[INFO]%s  %s\n' "$BLUE" "$RESET" "$*"; }
 
-# ---------- agent 映射 ----------
-# 格式: agent_name|folder|skill_subdir
+# ---------- Agent mapping ----------
+# Format: agent_name|folder|skill_subdir
 AGENTS=(
   "claude|.claude|skills"
   "cursor|.cursor|rules"
@@ -78,44 +78,44 @@ AGENTS=(
 )
 ALL_AGENT_NAMES=(claude cursor windsurf trae gemini copilot opencode roocode qoder)
 
-# 排除项（相对 skill 源目录的顶层条目）
+# Exclusion patterns (top-level entries relative to skill source directory)
 EXCLUDE_PATTERNS=(.git .venv node_modules __pycache__ temp .gitnexus .claude)
 
-# ---------- 用法 ----------
+# ---------- Usage ----------
 usage() {
   cat <<'EOF'
 Usage: install-skill.sh <command> [options]
 
 Commands:
   install <skill-name> [--target <dir>] [--agent <type>|--all-agents]
-      安装 skill 到目标项目的 agent 目录（默认 --target .  默认 --agent claude）
+      Install skill to target project's agent directory (default --target .  default --agent claude)
   update [skill-name] [--target <dir>] [--agent <type>|--all-agents]
-      从 git 拉取最新版本并重新安装。不指定 skill-name 则更新所有 skill
+      Pull latest version from git and reinstall. Update all skills if no skill-name specified
   uninstall <skill-name> [--target <dir>] [--agent <type>|--all-agents]
-      卸载 skill
+      Uninstall skill
   list-skills
-      列出可安装的 skill（扫描项目根下含 SKILL.md 的目录）
+      List installable skills (scan project root for directories containing SKILL.md)
   list-agents
-      列出支持的 agent 类型及安装路径
+      List supported agent types and install paths
   status [--target <dir>]
-      显示目标项目中已安装的 skill
+      Show installed skills in target project
   generate-commands <skill-name> [--target <dir>] [--agent <type>|--all-agents] [--commands <cmd1,cmd2,...>]
-      为 skill 的每个子命令生成 agent commands 文件（<target>/<folder>/commands/<skill>-<sub>.md）
-      子命令来源：--commands 显式指定 > SKILL.md argument-hint > SKILL.md 路由表扫描
+      Generate agent commands file for each skill subcommand (<target>/<folder>/commands/<skill>-<sub>.md)
+      Subcommand sources: explicit --commands > SKILL.md argument-hint > SKILL.md routing table scan
 
 Options:
-  --target <dir>   目标项目目录（默认当前目录 .）
-  --agent <type>   指定单个 agent（默认 claude）
-  --all-agents     对所有支持的 agent 操作
-  --commands <list> 逗号分隔的子命令列表（仅 generate-commands 使用）
-  -h, --help       显示此帮助
+  --target <dir>   Target project directory (default current directory .)
+  --agent <type>   Specify a single agent (default claude)
+  --all-agents     Operate on all supported agents
+  --commands <list> Comma-separated subcommand list (used with generate-commands only)
+  -h, --help       Show this help
 
 Agents: claude cursor windsurf trae gemini copilot opencode roocode qoder
 EOF
 }
 
-# ---------- 解析 install/uninstall 公共选项 ----------
-# 全局: TARGET_DIR / AGENT_FLAG
+# ---------- Parse common options for install/uninstall ----------
+# Globals: TARGET_DIR / AGENT_FLAG
 TARGET_DIR="."
 AGENT_FLAG=""
 parse_target_agent() {
@@ -125,12 +125,12 @@ parse_target_agent() {
     case "${args[$i]}" in
       --target)
         ((i++)) || true
-        [[ $i -lt ${#args[@]} ]] || { err "--target 需要参数"; exit 1; }
+        [[ $i -lt ${#args[@]} ]] || { err "--target requires an argument"; exit 1; }
         TARGET_DIR="${args[$i]}"
         ;;
       --agent)
         ((i++)) || true
-        [[ $i -lt ${#args[@]} ]] || { err "--agent 需要参数"; exit 1; }
+        [[ $i -lt ${#args[@]} ]] || { err "--agent requires an argument"; exit 1; }
         AGENT_FLAG="${args[$i]}"
         ;;
       --all-agents)
@@ -140,14 +140,14 @@ parse_target_agent() {
         usage; exit 0
         ;;
       *)
-        err "未知参数: ${args[$i]}"; usage; exit 1
+        err "Unknown argument: ${args[$i]}"; usage; exit 1
         ;;
     esac
     ((i++)) || true
   done
 }
 
-# 解析 AGENT_FLAG 为 agent 名列表（stdout）
+# Resolve AGENT_FLAG into agent name list (stdout)
 resolve_agents() {
   local flag="${AGENT_FLAG:-claude}"
   if [[ "$flag" == "all" ]]; then
@@ -159,14 +159,14 @@ resolve_agents() {
     [[ "$a" == "$flag" ]] && { found=1; break; }
   done
   if [[ -z "$found" ]]; then
-    err "不支持的 agent 类型: $flag"
-    info "支持的 agent: ${ALL_AGENT_NAMES[*]}"
+    err "Unsupported agent type: $flag"
+    info "Supported agents: ${ALL_AGENT_NAMES[*]}"
     exit 1
   fi
   printf '%s\n' "$flag"
 }
 
-# agent_name -> 输出 "folder|subdir"
+# agent_name -> output "folder|subdir"
 agent_config() {
   local name="$1" line
   for line in "${AGENTS[@]}"; do
@@ -179,20 +179,20 @@ agent_config() {
   return 1
 }
 
-# ---------- 子命令: install ----------
+# ---------- Subcommand: install ----------
 cmd_install() {
-  [[ $# -ge 1 ]] || { err "install 需要 <skill-name>"; usage; exit 1; }
+  [[ $# -ge 1 ]] || { err "install requires <skill-name>"; usage; exit 1; }
   local skill_name="$1"
   shift
   parse_target_agent "$@"
 
   local src
   src="$(resolve_skill_src "$skill_name")" || {
-    err "skill 源目录不存在: $PROJECT_ROOT/$skill_name（独立仓库模式需 skill-name == $(basename "$PROJECT_ROOT")）";
+    err "Skill source directory not found: $PROJECT_ROOT/$skill_name (standalone repo mode requires skill-name == $(basename "$PROJECT_ROOT"))";
     exit 1;
   }
-  [[ -d "$src" ]]      || { err "skill 源目录不存在: $src"; exit 1; }
-  [[ -f "$src/SKILL.md" ]] || { err "skill 源目录缺少 SKILL.md: $src/SKILL.md"; exit 1; }
+  [[ -d "$src" ]]      || { err "Skill source directory not found: $src"; exit 1; }
+  [[ -f "$src/SKILL.md" ]] || { err "Skill source directory missing SKILL.md: $src/SKILL.md"; exit 1; }
 
   [[ -d "$TARGET_DIR" ]] || mkdir -p "$TARGET_DIR"
   TARGET_DIR="$(cd "$TARGET_DIR" && pwd)"
@@ -206,17 +206,17 @@ cmd_install() {
   local agent
   while IFS= read -r agent; do
     local cfg folder subdir dest
-    cfg="$(agent_config "$agent")" || { err "内部错误: agent_config $agent"; exit 1; }
+    cfg="$(agent_config "$agent")" || { err "Internal error: agent_config $agent"; exit 1; }
     folder="${cfg%%|*}"
     subdir="${cfg##*|}"
     dest="$TARGET_DIR/$folder/$subdir/$skill_name"
 
-    # 清理后重建，避免残留旧文件
+    # Clean and rebuild to avoid leftover old files
     rm -rf "$dest"
     mkdir -p "$dest"
 
-    # 复制源目录顶层条目，跳过排除项（避免复制 .venv / .git 等大目录）
-    # 纯 bash 实现：dotglob 让 * 匹配隐藏文件，遍历时按名跳过 EXCLUDE_PATTERNS
+    # Copy top-level entries from source directory, skipping exclusions (avoid copying large dirs like .venv / .git)
+    # Pure bash implementation: dotglob makes * match hidden files, skip EXCLUDE_PATTERNS by name during iteration
     local item ename p excluded cp_failed=0
     local _dg=0 _ng=0
     shopt -q dotglob  && _dg=1
@@ -239,12 +239,12 @@ cmd_install() {
     [[ $_ng -eq 0 ]] && shopt -u nullglob
 
     if [[ $cp_failed -ne 0 ]]; then
-      err "复制失败: $src -> $dest"
+      err "Copy failed: $src -> $dest"
       failed=1
       printf '%-10s %-58s %s%s%s\n' "$agent" "$dest" "$RED" "FAILED" "$RESET"
       continue
     fi
-    # specmark/changes 为运行时产物（specmark skill 本身保留）
+    # specmark/changes is a runtime artifact (specmark skill itself is preserved)
     rm -rf "$dest/specmark/changes" 2>/dev/null || true
 
     printf '%-10s %-58s %s%s%s\n' "$agent" "$dest" "$GREEN" "OK" "$RESET"
@@ -254,23 +254,23 @@ cmd_install() {
   return 0
 }
 
-# ---------- 子命令: update ----------
+# ---------- Subcommand: update ----------
 cmd_update() {
   local skill_name=""
   TARGET_DIR="."
   AGENT_FLAG=""
 
-  # 解析参数：第一个非 flag 参数是 skill-name（可选）
+  # Parse arguments: first non-flag argument is skill-name (optional)
   while [[ $# -gt 0 ]]; do
     case "$1" in
       --target)
         shift
-        [[ $# -gt 0 ]] || { err "--target 需要参数"; exit 1; }
+        [[ $# -gt 0 ]] || { err "--target requires an argument"; exit 1; }
         TARGET_DIR="$1"
         ;;
       --agent)
         shift
-        [[ $# -gt 0 ]] || { err "--agent 需要参数"; exit 1; }
+        [[ $# -gt 0 ]] || { err "--agent requires an argument"; exit 1; }
         AGENT_FLAG="$1"
         ;;
       --all-agents)
@@ -280,43 +280,43 @@ cmd_update() {
         usage; exit 0
         ;;
       -*)
-        err "未知参数: $1"; usage; exit 1
+        err "Unknown argument: $1"; usage; exit 1
         ;;
       *)
-        [[ -z "$skill_name" ]] && skill_name="$1" || { err "多余参数: $1"; usage; exit 1; }
+        [[ -z "$skill_name" ]] && skill_name="$1" || { err "Extra argument: $1"; usage; exit 1; }
         ;;
     esac
     shift
   done
 
   # Step 1: git pull
-  info "拉取最新版本..."
+  info "Pulling latest version..."
   if [[ -d "$PROJECT_ROOT/.git" ]]; then
     if ! git -C "$PROJECT_ROOT" pull --ff-only 2>/dev/null; then
-      warn "git pull 失败，尝试 git fetch + reset"
+      warn "git pull failed, trying git fetch + reset"
       git -C "$PROJECT_ROOT" fetch origin 2>/dev/null || true
       local current_branch
       current_branch="$(git -C "$PROJECT_ROOT" branch --show-current 2>/dev/null || echo "main")"
       git -C "$PROJECT_ROOT" reset --hard "origin/$current_branch" 2>/dev/null || {
-        err "无法拉取最新版本，请手动 git pull"
+        err "Unable to pull latest version, please run git pull manually"
         exit 1
       }
     fi
-    info "已拉取最新版本"
+    info "Latest version pulled"
   else
-    warn "当前目录非 git 仓库，跳过拉取，直接重新安装"
+    warn "Current directory is not a git repo, skipping pull, reinstalling directly"
   fi
 
-  # Step 2: 收集要更新的 skill 列表
+  # Step 2: Collect skills to update
   local skills=()
   if [[ -n "$skill_name" ]]; then
     skills=("$skill_name")
   else
-    # 独立仓库模式：只有自己
+    # Standalone repo mode: only itself
     if is_standalone_skill_repo; then
       skills=("*")
     else
-      # 多 skill 模式：扫描所有 skill
+      # Multi-skill mode: scan all skills
       local d
       for d in "$PROJECT_ROOT"/*/; do
         [[ -d "$d" ]] || continue
@@ -330,18 +330,18 @@ cmd_update() {
   fi
 
   if [[ ${#skills[@]} -eq 0 ]]; then
-    warn "未找到任何可更新的 skill"
+    warn "No updatable skills found"
     return 0
   fi
 
-  # Step 3: 逐个更新
+  # Step 3: Update each skill
   printf '%s%-12s %-10s%s\n' "$BOLD" "SKILL" "STATUS" "$RESET"
   printf '%.0s-' {1..40}; printf '\n'
 
   local s failed=0
   for s in "${skills[@]}"; do
     if [[ "$s" == "*" ]]; then
-      # 独立仓库模式：skill 名 = 仓库 basename
+      # Standalone repo mode: skill name = repo basename
       s="$(basename "$PROJECT_ROOT")"
     fi
     if cmd_install "$s" --target "$TARGET_DIR" --agent "${AGENT_FLAG:-claude}" >/dev/null 2>&1; then
@@ -356,14 +356,14 @@ cmd_update() {
   return 0
 }
 
-# ---------- 子命令: uninstall ----------
+# ---------- Subcommand: uninstall ----------
 cmd_uninstall() {
-  [[ $# -ge 1 ]] || { err "uninstall 需要 <skill-name>"; usage; exit 1; }
+  [[ $# -ge 1 ]] || { err "uninstall requires <skill-name>"; usage; exit 1; }
   local skill_name="$1"
   shift
   parse_target_agent "$@"
 
-  [[ -d "$TARGET_DIR" ]] || { err "目标目录不存在: $TARGET_DIR"; exit 1; }
+  [[ -d "$TARGET_DIR" ]] || { err "Target directory not found: $TARGET_DIR"; exit 1; }
   TARGET_DIR="$(cd "$TARGET_DIR" && pwd)"
 
   local agents
@@ -389,13 +389,13 @@ cmd_uninstall() {
   done <<< "$agents"
 }
 
-# ---------- 子命令: list-skills ----------
+# ---------- Subcommand: list-skills ----------
 cmd_list_skills() {
   printf '%s%-12s %s%s\n' "$BOLD" "NAME" "DESCRIPTION" "$RESET"
   printf '%.0s-' {1..80}; printf '\n'
   local found=0 d name dir desc
 
-  # 独立 skill 仓库模式：PROJECT_ROOT 本身就是 skill
+  # Standalone skill repo mode: PROJECT_ROOT itself is the skill
   if is_standalone_skill_repo; then
     name="$(basename "$PROJECT_ROOT")"
     desc="$(grep -m1 '^description:' "$PROJECT_ROOT/SKILL.md" 2>/dev/null || true)"
@@ -410,7 +410,7 @@ cmd_list_skills() {
     return
   fi
 
-  # 多 skill 父目录模式：扫描 PROJECT_ROOT/*/ 下的 skill
+  # Multi-skill parent directory mode: scan skills under PROJECT_ROOT/*/
   for d in "$PROJECT_ROOT"/*/; do
     [[ -d "$d" ]] || continue
     dir="${d%/}"
@@ -419,11 +419,11 @@ cmd_list_skills() {
     [[ -f "$dir/SKILL.md" ]] || continue
     desc="$(grep -m1 '^description:' "$dir/SKILL.md" 2>/dev/null || true)"
     desc="${desc#description:}"
-    desc="${desc# }"               # 去前导空格
-    # 去首尾引号
+    desc="${desc# }"               # Remove leading space
+    # Remove surrounding quotes
     desc="${desc#\"}"; desc="${desc%\"}"
     desc="${desc#\'}"; desc="${desc%\'}"
-    # 截断到 80 字符
+    # Truncate to 80 characters
     if [[ ${#desc} -gt 80 ]]; then
       desc="${desc:0:77}..."
     fi
@@ -431,11 +431,11 @@ cmd_list_skills() {
     found=1
   done
   if [[ $found -eq 0 ]]; then
-    warn "未在 $PROJECT_ROOT 下找到任何 skill"
+    warn "No skills found under $PROJECT_ROOT"
   fi
 }
 
-# ---------- 子命令: list-agents ----------
+# ---------- Subcommand: list-agents ----------
 cmd_list_agents() {
   printf '%s%-10s %-12s %-10s %s%s\n' "$BOLD" "AGENT" "FOLDER" "SUBDIR" "FULL PATH" "$RESET"
   printf '%.0s-' {1..80}; printf '\n'
@@ -448,26 +448,26 @@ cmd_list_agents() {
   done
 }
 
-# ---------- 子命令: status ----------
+# ---------- Subcommand: status ----------
 cmd_status() {
   TARGET_DIR="."
   while [[ $# -gt 0 ]]; do
     case "$1" in
       --target)
         shift
-        [[ $# -gt 0 ]] || { err "--target 需要参数"; exit 1; }
+        [[ $# -gt 0 ]] || { err "--target requires an argument"; exit 1; }
         TARGET_DIR="$1"
         ;;
       -h|--help) usage; exit 0 ;;
-      *) err "未知参数: $1"; usage; exit 1 ;;
+      *) err "Unknown argument: $1"; usage; exit 1 ;;
     esac
     shift
   done
 
-  [[ -d "$TARGET_DIR" ]] || { err "目标目录不存在: $TARGET_DIR"; exit 1; }
+  [[ -d "$TARGET_DIR" ]] || { err "Target directory not found: $TARGET_DIR"; exit 1; }
   TARGET_DIR="$(cd "$TARGET_DIR" && pwd)"
 
-  printf '目标: %s\n' "$TARGET_DIR"
+  printf 'Target: %s\n' "$TARGET_DIR"
   printf '%s%-10s %-14s %s%s\n' "$BOLD" "AGENT" "SKILL" "PATH" "$RESET"
   printf '%.0s-' {1..80}; printf '\n'
   local any=0 line name folder subdir base sd sname
@@ -486,18 +486,18 @@ cmd_status() {
     done
   done
   if [[ $any -eq 0 ]]; then
-    warn "未在 $TARGET_DIR 下发现已安装的 skill"
+    warn "No installed skills found under $TARGET_DIR"
   fi
 }
 
-# ---------- 子命令: generate-commands ----------
-# 从 skill 的 SKILL.md 提取子命令列表（stdout，每行一个）
-# 用法: extract_subcommands <skillmd>
-# 策略 1: frontmatter `argument-hint: "[cmd1|cmd2|...]"`
-# 策略 2: markdown 表格行 | `cmd` | 描述 |
+# ---------- Subcommand: generate-commands ----------
+# Extract subcommand list from skill's SKILL.md (stdout, one per line)
+# Usage: extract_subcommands <skillmd>
+# Strategy 1: frontmatter `argument-hint: "[cmd1|cmd2|...]"`
+# Strategy 2: markdown table row | `cmd` | description |
 extract_subcommands() {
   local skillmd="$1"
-  # 策略 1: argument-hint frontmatter
+  # Strategy 1: argument-hint frontmatter
   local hint
   hint="$(grep -m1 '^argument-hint:' "$skillmd" 2>/dev/null || true)"
   if [[ -n "$hint" && "$hint" =~ \[([^\]]+)\] ]]; then
@@ -510,7 +510,7 @@ extract_subcommands() {
     done
     return 0
   fi
-  # 策略 2: markdown 表格行 | `cmd` | ...
+  # Strategy 2: markdown table row | `cmd` | ...
   local line
   while IFS= read -r line; do
     if [[ "$line" =~ ^\|[[:space:]]*\`([a-z][a-z0-9-]*)\`[[:space:]]*\| ]]; then
@@ -519,9 +519,9 @@ extract_subcommands() {
   done < "$skillmd"
 }
 
-# 从 SKILL.md 提取子命令描述（stdout）
-# 用法: extract_subcommand_desc <skillmd> <subcommand>
-# 策略: 表格行 | `sub` | 描述 | ... → 取第 3 列；兜底 "执行 <sub> 任务"
+# Extract subcommand description from SKILL.md (stdout)
+# Usage: extract_subcommand_desc <skillmd> <subcommand>
+# Strategy: table row | `sub` | description | ... -> take column 3; fallback "Execute <sub> task"
 extract_subcommand_desc() {
   local skillmd="$1" sub="$2"
   local line desc=""
@@ -530,13 +530,13 @@ extract_subcommand_desc() {
     desc="$(printf '%s' "$line" | awk -F'|' '{gsub(/^[ \t]+|[ \t]+$/, "", $3); print $3}')"
   fi
   if [[ -z "$desc" ]]; then
-    desc="执行 $sub 任务"
+    desc="Execute $sub task"
   fi
   printf '%s\n' "$desc"
 }
 
 cmd_generate_commands() {
-  [[ $# -ge 1 ]] || { err "generate-commands 需要 <skill-name>"; usage; exit 1; }
+  [[ $# -ge 1 ]] || { err "generate-commands requires <skill-name>"; usage; exit 1; }
   local skill_name="$1"
   shift
 
@@ -548,12 +548,12 @@ cmd_generate_commands() {
     case "$1" in
       --target)
         shift
-        [[ $# -gt 0 ]] || { err "--target 需要参数"; exit 1; }
+        [[ $# -gt 0 ]] || { err "--target requires an argument"; exit 1; }
         TARGET_DIR="$1"
         ;;
       --agent)
         shift
-        [[ $# -gt 0 ]] || { err "--agent 需要参数"; exit 1; }
+        [[ $# -gt 0 ]] || { err "--agent requires an argument"; exit 1; }
         AGENT_FLAG="$1"
         ;;
       --all-agents)
@@ -561,27 +561,27 @@ cmd_generate_commands() {
         ;;
       --commands)
         shift
-        [[ $# -gt 0 ]] || { err "--commands 需要参数"; exit 1; }
+        [[ $# -gt 0 ]] || { err "--commands requires an argument"; exit 1; }
         commands_arg="$1"
         ;;
       -h|--help) usage; exit 0 ;;
-      *) err "未知参数: $1"; usage; exit 1 ;;
+      *) err "Unknown argument: $1"; usage; exit 1 ;;
     esac
     shift
   done
 
   local src
   src="$(resolve_skill_src "$skill_name")" || {
-    err "skill 源目录不存在: $PROJECT_ROOT/$skill_name（独立仓库模式需 skill-name == $(basename "$PROJECT_ROOT")）";
+    err "Skill source directory not found: $PROJECT_ROOT/$skill_name (standalone repo mode requires skill-name == $(basename "$PROJECT_ROOT"))";
     exit 1;
   }
   local skillmd="$src/SKILL.md"
-  [[ -f "$skillmd" ]] || { err "skill 源目录缺少 SKILL.md: $skillmd"; exit 1; }
+  [[ -f "$skillmd" ]] || { err "Skill source directory missing SKILL.md: $skillmd"; exit 1; }
 
   [[ -d "$TARGET_DIR" ]] || mkdir -p "$TARGET_DIR"
   TARGET_DIR="$(cd "$TARGET_DIR" && pwd)"
 
-  # 解析子命令列表
+  # Parse subcommand list
   local subcommands=() s
   if [[ -n "$commands_arg" ]]; then
     local -a cmds=()
@@ -601,12 +601,12 @@ cmd_generate_commands() {
   fi
 
   if [[ ${#subcommands[@]} -eq 0 ]]; then
-    err "未能从 SKILL.md 提取子命令，且未指定 --commands"
-    info "用法: generate-commands <skill> --commands cmd1,cmd2,... [--target <dir>] [--agent <type>|--all-agents]"
+    err "Failed to extract subcommands from SKILL.md, and --commands not specified"
+    info "Usage: generate-commands <skill> --commands cmd1,cmd2,... [--target <dir>] [--agent <type>|--all-agents]"
     exit 1
   fi
 
-  # 去重，保留顺序
+  # Deduplicate while preserving order
   local seen="" unique_subs=()
   for s in "${subcommands[@]}"; do
     if [[ " $seen " != *" $s "* ]]; then
@@ -624,7 +624,7 @@ cmd_generate_commands() {
   local agent failed=0
   while IFS= read -r agent; do
     local cfg folder subdir cmddir
-    cfg="$(agent_config "$agent")" || { err "内部错误: agent_config $agent"; exit 1; }
+    cfg="$(agent_config "$agent")" || { err "Internal error: agent_config $agent"; exit 1; }
     folder="${cfg%%|*}"
     subdir="${cfg##*|}"
     cmddir="$TARGET_DIR/$folder/commands"
@@ -640,7 +640,7 @@ cmd_generate_commands() {
 description: $desc
 ---
 
-使用 $skill_name skill 的 $sub 子命令进行以下任务：$desc。
+Use the $sub subcommand of the $skill_name skill for the following task: $desc.
 EOF
       created=$((created+1))
     done
@@ -652,7 +652,7 @@ EOF
   return 0
 }
 
-# ---------- 主分发 ----------
+# ---------- Main dispatch ----------
 main() {
   [[ $# -lt 1 ]] && { usage; exit 1; }
   local cmd="$1"
@@ -666,7 +666,7 @@ main() {
     status)            cmd_status "$@" ;;
     generate-commands) cmd_generate_commands "$@" ;;
     -h|--help)         usage; exit 0 ;;
-    *) err "未知命令: $cmd"; usage; exit 1 ;;
+    *) err "Unknown command: $cmd"; usage; exit 1 ;;
   esac
 }
 

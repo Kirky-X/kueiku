@@ -1,121 +1,121 @@
-# 5 Whys · 五问法 / 根因分析
+# 5 Whys · Root Cause Analysis
 
-## 核心理念
+## Core Philosophy
 
-通过连续追问"为什么"，穿透问题表象，找到**可操作的根本原因**。由丰田佐吉创立，是丰田生产系统（TPS）的核心工具。
+By asking "Why" consecutively, we penetrate through surface symptoms to find the **actionable root cause**. Created by Sakichi Toyoda, it is a core tool of the Toyota Production System (TPS).
 
-> 表象是症状，根因才是病灶。处理症状只会复发，解决根因才能根治。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 线上故障/事故复盘（incident post-mortem）
-- 业务指标异常下滑
-- 流程失误或质量问题
-- 某项结果持续不符合预期
-
-⚠️ **慎用**
-- 问题有多个相互独立的根因（改用 Fishbone）
-- 根因在结构性/政治性因素上（5 Whys 可以识别但难以解决）
-- 没有足够数据支撑每步追问
+> Symptoms are manifestations; the root cause is the true source. Treating symptoms only leads to recurrence; resolving the root cause ensures lasting resolution.
 
 ---
 
-## 执行步骤
+## Applicable Scenarios
 
-### Step 1：清晰定义问题陈述
+✅ **Best Suited For**
+- Production incident post-mortems
+- Significant business metric declines
+- Process errors or quality issues
+- Persistent results deviating from expectations
 
-写出明确的问题陈述，包含：**什么出了问题 + 何时 + 影响范围**
-
-```
-❌ 模糊："系统很慢"
-✅ 清晰："2024-06-01 14:00 起，支付接口响应时间从 200ms 升至 3000ms，影响约 30% 用户"
-```
-
-### Step 2：第一轮 Why
-
-针对问题陈述，提问：**"为什么会发生这件事？"**
-
-写出直接原因，需有事实依据（日志、数据、观察），不允许猜测未验证的原因。
-
-### Step 3-5：继续追问
-
-对每个上一步的答案继续追问"为什么"，直到：
-- 达到可操作的根因（可以采取行动解决的层级）
-- 或问题已无法继续追问（已到系统/人性/资源约束层）
-
-**每一步都需要验证：** 这个原因是否经过数据或证据支撑？
-
-### Step 6：定义修复行动
-
-针对**最终根因**（通常在第4-6层）制定：
-- 立即修复（治标）
-- 长期预防（治本）
+⚠️ **Use with Caution**
+- When the problem has multiple independent root causes (use Fishbone instead)
+- When root causes are structural/political (5 Whys can identify but may be difficult to resolve)
+- When insufficient data supports each step of questioning
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Clearly Define the Problem Statement
+
+Write a clear problem statement that includes: **What went wrong + When + Scope of impact**
 
 ```
-问题陈述：[具体、可量化的问题描述]
-
-Why 1：[直接原因] — 证据：[...]
-  Why 2：[更深层原因] — 证据：[...]
-    Why 3：[更深层原因] — 证据：[...]
-      Why 4：[更深层原因] — 证据：[...]
-        Why 5：[根本原因 / Root Cause] — 证据：[...]
-
-根本原因：[一句话总结]
-
-修复行动：
-  - 立即（治标）：[...]
-  - 长期（治本）：[...]
-  - 责任人 / 时限：[...]
+❌ Vague: "System is slow"
+✅ Clear: "Starting from 2024-06-01 14:00, payment API response time increased from 200ms to 3000ms, affecting approximately 30% of users"
 ```
+
+### Step 2: First Round of Why
+
+For the problem statement, ask: **"Why did this happen?"**
+
+Write the direct cause, supported by factual evidence (logs, data, observations). Unverified guesses are not permitted.
+
+### Step 3-5: Continue Questioning
+
+For each answer from the previous step, continue asking "Why" until:
+- An actionable root cause is reached (a level where action can be taken to resolve)
+- Or questioning cannot continue further (reached the system/human nature/resource constraint level)
+
+**Each step must be verified:** Is this cause supported by data or evidence?
+
+### Step 6: Define Remediation Actions
+
+For **the final root cause** (typically at levels 4-6), develop:
+- Immediate fix (treat symptoms)
+- Long-term prevention (address root cause)
 
 ---
 
-## 执行示例
-
-**问题**：用户投诉增加 40%，客服工单从 200 升至 280/天
+## Output Template
 
 ```
-Why 1：为什么工单数量上升？
-→ APP 更新后新手引导流程让用户困惑，大量用户不知道如何完成首次操作
+Problem Statement: [Specific, quantifiable problem description]
 
-Why 2：为什么新手引导让用户困惑？
-→ 新版引导是从 B 端产品直接迁移过来，没有针对 C 端用户重新设计
+Why 1: [Direct cause] — Evidence: [...]
+  Why 2: [Deeper cause] — Evidence: [...]
+    Why 3: [Deeper cause] — Evidence: [...]
+      Why 4: [Deeper cause] — Evidence: [...]
+        Why 5: [Root Cause] — Evidence: [...]
 
-Why 3：为什么没有针对 C 端重新设计？
-→ 产品迭代排期紧张，引导优化被视为低优先级跳过了
+Root Cause: [One-sentence summary]
 
-Why 4：为什么引导优化被视为低优先级？
-→ 优先级排序时没有数据支撑新手引导的影响，完全基于主观判断
-
-根本原因：缺乏用户行为数据追踪，导致产品决策无法量化新手体验价值
-
-修复行动：
-  立即：临时添加视频引导弹窗（客服处理）
-  长期：① 接入埋点 ② 建立 onboarding 漏斗监控 ③ 引导优先级评估标准化
+Remediation Actions:
+  - Immediate (symptom treatment): [...]
+  - Long-term (root cause treatment): [...]
+  - Owner / Deadline: [...]
 ```
 
 ---
 
-## 常见陷阱
+## Execution Example
 
-| 陷阱 | 说明 | 避免方式 |
-|------|------|---------|
-| 停在表象 | Why 1-2 就停止，实际只找到症状 | 强制追问到可执行的系统性根因 |
-| 跳跃式推断 | 每步之间逻辑不严谨，凭感觉跳过 | 每步要有证据支撑 |
-| 单一根因偏见 | 复杂问题只归因于一个原因 | 发现多条 Why 链时，用 Fishbone 补充 |
-| 停在人上 | 根因是"某人失误"——这不可操作 | 继续追问：为什么这个人会失误？系统/流程/培训在哪出了问题？ |
+**Problem**: User complaints increased by 40%, customer service tickets rose from 200 to 280/day
+
+```
+Why 1: Why did ticket volume increase?
+→ The onboarding flow after the APP update confused users, many were unable to complete their first actions
+
+Why 2: Why did the onboarding flow confuse users?
+→ The new flow was directly migrated from the B-end product without redesign for C-end users
+
+Why 3: Why wasn't it redesigned for C-end users?
+→ Product iteration schedule was tight, and onboarding optimization was considered low priority and skipped
+
+Why 4: Why was onboarding optimization considered low priority?
+→ Priority ranking lacked data to support the impact of onboarding, relying entirely on subjective judgment
+
+Root Cause: Lack of user behavior data tracking prevented product decisions from quantifying the value of user onboarding experience
+
+Remediation Actions:
+  Immediate: Temporarily add video guide popups (handled by customer service)
+  Long-term: ① Implement event tracking ② Establish onboarding funnel monitoring ③ Standardize onboarding priority evaluation
+```
 
 ---
 
-## 与其他方法论的关系
+## Common Pitfalls
 
-- **搭配 Fishbone**：当有多个独立根因时，用 Fishbone 先展开全貌，再对每条分支用 5 Whys 深挖
-- **输出接 RICE**：根因确认后，修复方案的优先级排序可用 RICE
-- **输出接 OKR**：长期预防措施可转化为 OKR 的 Key Result
+| Pitfall | Description | Avoidance Method |
+|---------|-------------|------------------|
+| Stopping at symptoms | Stopping at Why 1-2, only identifying symptoms | Force questioning until an actionable systemic root cause is reached |
+| Leaping inference | Lack of rigorous logic between steps, jumping based on intuition | Each step must be supported by evidence |
+| Single root cause bias | Attributing complex problems to a single cause | When multiple Why chains are discovered, supplement with Fishbone |
+| Stopping at people | Root cause is "someone's mistake" — this is not actionable | Continue questioning: Why did this person make a mistake? Where did the system/process/training fail? |
+
+---
+
+## Relationship with Other Methodologies
+
+- **Combine with Fishbone**: When there are multiple independent root causes, use Fishbone to first map the full picture, then use 5 Whys to deeply explore each branch
+- **Output feeds RICE**: Once root cause is confirmed, prioritize remediation solutions using RICE
+- **Output feeds OKR**: Long-term prevention measures can be converted into OKR Key Results

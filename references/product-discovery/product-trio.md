@@ -1,19 +1,19 @@
-# Product Trio · 产品三人组
+# Product Trio
 
-## 核心思想
-产品发现应由 PM + Designer + Engineer 三人小组持续协同，而非 PM 单独做完再交接。三人各自代表可行性/可用性/价值性视角，每周与用户访谈同步发现，避免"建了发现 → 工程接不住"或"体验好但技术债高"。
+## Core Idea
+Product discovery should be a continuous collaboration between a PM + Designer + Engineer trio, rather than the PM doing it alone and handing it off. Each person represents a different perspective — feasibility, usability, and value — conducting weekly user interviews together to avoid "building something discovery found → engineering can't handle it" or "great experience but high technical debt."
 
-## 适用场景
-- 已采用 Continuous Discovery 但发现仍由 PM 单人扛
-- 工程师/设计师不接触用户，决策延迟
-- 需要在发现阶段就引入技术与设计约束
+## Use Cases
+- Already adopted Continuous Discovery but discovery is still carried by PM alone
+- Engineers/designers don't interact with users, causing decision delays
+- Need to introduce technical and design constraints during the discovery phase
 
-## 关键步骤
-1. 组建三人组：PM（价值）、Designer（可用性）、Engineer（可行性），明确各自视角职责
-2. 每周固定访谈节奏：三人共同参与用户访谈（可轮流主持，但全员在场）
-3. 共同维护 Opportunity Solution Tree，三人都有权添加/质疑机会
-4. 方案发散与实验设计由三人共同产出，技术可行性在设计阶段就介入
-5. 决策仍由 PM 拍板，但技术与设计有否决权（在各自领域内）
+## Key Steps
+1. Form the trio: PM (value), Designer (usability), Engineer (feasibility) — clarify each person's perspective and responsibilities
+2. Weekly fixed interview cadence: All three participate in user interviews (can rotate the facilitator, but everyone must be present)
+3. Jointly maintain the Opportunity Solution Tree; all three have the right to add/challenge opportunities
+4. Solution ideation and experiment design are co-produced by all three; technical feasibility is involved from the design stage
+5. Final decisions still made by the PM, but tech and design have veto power (within their respective domains)
 
-## 来源
-Teresa Torres（Continuous Discovery Habits 推广 Product Trio 概念）
+## Source
+Teresa Torres (promoted the Product Trio concept in *Continuous Discovery Habits*)

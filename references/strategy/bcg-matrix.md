@@ -1,191 +1,191 @@
-# BCG Matrix · 波士顿矩阵
+# BCG Matrix
 
-## 核心理念
+## Core Concept
 
-用**市场增长率**（高/低）× **相对市场份额**（高/低）构成 2×2 矩阵，将产品/业务单元分为四类：**明星**（Stars）、**现金牛**（Cash Cows）、**问题**（Question Marks）、**瘦狗**（Dogs）。每类隐含不同的投资策略：建设、持有、收割或剥离。
+Uses **Market Growth Rate** (High/Low) × **Relative Market Share** (High/Low) to form a 2×2 matrix, categorizing products/business units into four types: **Stars**, **Cash Cows**, **Question Marks**, and **Dogs**. Each type implies a different investment strategy: Build, Hold, Harvest, or Divest.
 
-> 健康的业务组合需要现金牛提供资金、明星创造未来、问题中筛选出下一个明星、果断剥离瘦狗。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 多产品/多业务线的投资组合管理
-- 企业级资源分配决策
-- 产品生命周期战略规划
-- 并购后的业务组合优化
-
-⚠️ **慎用**
-- 单一产品公司（矩阵需要多个业务单元才有意义）
-- 市场份额和增长率不是关键成功因素时
-- 早期创业公司（数据不稳定，分类无意义）
-- 需要精细竞争分析时（矩阵只看两个维度，粒度太粗）
+> A healthy portfolio needs Cash Cows to provide funding, Stars to create the future, Question Marks filtered to find the next Star, and Dogs decisively divested.
 
 ---
 
-## 执行步骤
+## Use Cases
 
-### Step 1：列出所有产品/业务单元
+✅ **Best for**
+- Multi-product/multi-business-line portfolio management
+- Enterprise-level resource allocation decisions
+- Product life cycle strategic planning
+- Post-M&A business portfolio optimization
+
+⚠️ **Use with caution**
+- Single-product companies (matrix needs multiple business units to be meaningful)
+- When market share and growth rate are not key success factors
+- Early-stage startups (unstable data, categorization meaningless)
+- When detailed competitive analysis is needed (matrix only looks at two dimensions, too coarse)
+
+---
+
+## Execution Steps
+
+### Step 1: List All Products/Business Units
 
 ```
-产品/业务列表：
-  1. [产品A] — 收入：[...] / 市场份额：[...] / 增长率：[...]
-  2. [产品B] — 收入：[...] / 市场份额：[...] / 增长率：[...]
-  3. [产品C] — 收入：[...] / 市场份额：[...] / 增长率：[...]
+Product/Business list:
+  1. [Product A] — Revenue: [...] / Market share: [...] / Growth rate: [...]
+  2. [Product B] — Revenue: [...] / Market share: [...] / Growth rate: [...]
+  3. [Product C] — Revenue: [...] / Market share: [...] / Growth rate: [...]
   ...
 ```
 
-### Step 2：确定分界线
+### Step 2: Set Dividing Lines
 
-为两个维度设定高/低的分界标准：
+Define high/low thresholds for both dimensions:
 
 ```
-市场增长率分界线：[如 10%] — 高于此为高增长市场
-相对市场份额分界线：[如 1.0x] — 相对最大竞争对手的份额比
+Market growth rate dividing line: [e.g., 10%] — Above this is a high-growth market
+Relative market share dividing line: [e.g., 1.0x] — Share ratio relative to largest competitor
 ```
 
-> 相对市场份额 = 自身市场份额 / 最大竞争对手市场份额。1.0x 意味着与最大对手持平。
+> Relative market share = Own market share / Largest competitor's market share. 1.0x means on par with the largest competitor.
 
-### Step 3：将每个产品定位到矩阵
+### Step 3: Position Each Product on the Matrix
 
 ```mermaid
 quadrantChart
-    title BCG 矩阵
-    x-axis 低相对份额 --> 高相对份额
-    y-axis 低增长 --> 高增长
-    quadrant-1 星星（Stars）
-    quadrant-2 问题（Question Marks）
-    quadrant-3 瘦狗（Dogs）
-    quadrant-4 现金牛（Cash Cows）
+    title BCG Matrix
+    x-axis Low relative share --> High relative share
+    y-axis Low growth --> High growth
+    quadrant-1 Stars
+    quadrant-2 Question Marks
+    quadrant-3 Dogs
+    quadrant-4 Cash Cows
 ```
 
-每个产品的圆圈大小与收入成正比。
+Each product's circle size is proportional to revenue.
 
-### Step 4：分析组合平衡
+### Step 4: Analyze Portfolio Balance
 
-检查整体组合的健康度：
-
-```
-组合健康度检查：
-  □ 是否有足够的明星 → 保证未来收入？
-  □ 是否有足够的现金牛 → 为明星和问题提供资金？
-  □ 问题产品是否有潜力成为明星 → 值得投资？
-  □ 瘦狗是否需要剥离 → 释放资源？
-```
-
-**理想组合**：少量现金牛 + 若干明星 + 精选问题 + 极少瘦狗
-
-### Step 5：制定每类产品的策略
+Check overall portfolio health:
 
 ```
-明星（Stars）— 建设策略（Build）
-  行动：持续投资，维持/扩大市场份额
-  目标：随市场成熟转化为现金牛
-
-现金牛（Cash Cows）— 持有策略（Hold）
-  行动：维持市场份额，不过度投资
-  目标：最大化现金流产出，资助明星和问题
-
-问题（Question Marks）— 选择性建设或收割
-  有潜力 → 建设策略：加大投资，争取成为明星
-  无潜力 → 收割策略：短期最大化现金流，逐步退出
-
-瘦狗（Dogs）— 收割或剥离（Harvest / Divest）
-  行动：减少投入，收割残余价值；或直接剥离
-  目标：释放资源投向更有价值的业务
+Portfolio health check:
+  □ Are there enough Stars → Ensuring future revenue?
+  □ Are there enough Cash Cows → Funding Stars and Question Marks?
+  □ Do Question Marks have potential to become Stars → Worth investing?
+  □ Do Dogs need to be divested → Freeing up resources?
 ```
 
----
+**Ideal portfolio**: Few Cash Cows + Several Stars + Selected Question Marks + Very few Dogs
 
-## 输出模板
+### Step 5: Formulate Strategy for Each Category
 
 ```
-BCG 矩阵分析报告
+Stars — Build Strategy
+  Action: Continuously invest, maintain/expand market share
+  Goal: Convert to Cash Cows as market matures
 
-一、分界标准
-  市场增长率分界线：[X%]
-  相对市场份额分界线：[X]x
+Cash Cows — Hold Strategy
+  Action: Maintain market share, don't over-invest
+  Goal: Maximize cash flow generation, fund Stars and Question Marks
 
-二、矩阵定位
-  明星（Stars）：
-    - [产品] — 增长率：[X%] — 相对份额：[X]x — 收入：[X]
-  现金牛（Cash Cows）：
-    - [产品] — 增长率：[X%] — 相对份额：[X]x — 收入：[X]
-  问题（Question Marks）：
-    - [产品] — 增长率：[X%] — 相对份额：[X]x — 收入：[X]
-  瘦狗（Dogs）：
-    - [产品] — 增长率：[X%] — 相对份额：[X]x — 收入：[X]
+Question Marks — Selective Build or Harvest
+  Potential → Build strategy: Increase investment, aim to become a Star
+  No potential → Harvest strategy: Maximize short-term cash flow, gradually exit
 
-三、组合平衡评估
-  整体健康度：健康 / 需调整 / 严重失衡
-  核心问题：[如：缺少明星 / 现金牛不足 / 瘦狗过多]
-
-四、战略建议
-  [产品A]（明星）：建设 — [具体行动]
-  [产品B]（现金牛）：持有 — [具体行动]
-  [产品C]（问题）：建设/收割 — [判断依据]
-  [产品D]（瘦狗）：剥离 — [时间表]
-
-五、资源再分配
-  从 [现金牛/瘦狗] 释放 [X] 资源 → 投入 [明星/问题]
+Dogs — Harvest or Divest
+  Action: Reduce investment, harvest residual value; or divest directly
+  Goal: Free up resources for more valuable businesses
 ```
 
 ---
 
-## 执行示例
-
-**场景**：一家互联网公司的产品组合评估
+## Output Template
 
 ```
-一、分界标准
-  市场增长率分界线：15%
-  相对市场份额分界线：1.0x
+BCG Matrix Analysis Report
 
-二、矩阵定位
-  明星：
-    - AI 写作助手 — 增长率：45% — 相对份额：1.8x — 收入：800万
-  现金牛：
-    - 企业邮箱 — 增长率：5% — 相对份额：2.5x — 收入：5000万
-  问题：
-    - 协同文档 — 增长率：30% — 相对份额：0.4x — 收入：300万
-    - 视频会议 — 增长率：20% — 相对份额：0.3x — 收入：200万
-  瘦狗：
-    - 传统网盘 — 增长率：-5% — 相对份额：0.6x — 收入：500万
+I. Dividing Standards
+  Market growth rate dividing line: [X%]
+  Relative market share dividing line: [X]x
 
-三、组合平衡评估
-  整体健康度：需调整
-  核心问题：现金牛依赖单一产品（企业邮箱），明星只有1个，问题产品2个但份额都低
+II. Matrix Positioning
+  Stars:
+    - [Product] — Growth rate: [X%] — Relative share: [X]x — Revenue: [X]
+  Cash Cows:
+    - [Product] — Growth rate: [X%] — Relative share: [X]x — Revenue: [X]
+  Question Marks:
+    - [Product] — Growth rate: [X%] — Relative share: [X]x — Revenue: [X]
+  Dogs:
+    - [Product] — Growth rate: [X%] — Relative share: [X]x — Revenue: [X]
 
-四、战略建议
-  AI 写作助手（明星）：建设 — 加大研发投入，扩展行业模板
-  企业邮箱（现金牛）：持有 — 维护客户关系，控制成本
-  协同文档（问题）：建设 — 市场增长快且有技术协同，值得投资
-  视频会议（问题）：收割 — 竞争过于激烈（腾讯会议/飞书），不再追加投入
-  传统网盘（瘦狗）：剥离 — 6个月内完成用户迁移，团队转岗
+III. Portfolio Balance Assessment
+  Overall health: Healthy / Needs adjustment / Severely imbalanced
+  Core issue: [e.g., Lacking Stars / Insufficient Cash Cows / Too many Dogs]
 
-五、资源再分配
-  从视频会议和传统网盘释放 15 人 → 投入 AI 写作助手和协同文档
+IV. Strategic Recommendations
+  [Product A] (Star): Build — [Specific actions]
+  [Product B] (Cash Cow): Hold — [Specific actions]
+  [Product C] (Question Mark): Build/Harvest — [Judgment basis]
+  [Product D] (Dog): Divest — [Timeline]
+
+V. Resource Reallocation
+  Release [X] resources from [Cash Cows/Dogs] → Invest in [Stars/Question Marks]
 ```
 
 ---
 
-## 常见陷阱
+## Execution Example
 
-| 陷阱 | 说明 | 避免方式 |
+**Scenario**: An internet company's product portfolio assessment
+
+```
+I. Dividing Standards
+  Market growth rate dividing line: 15%
+  Relative market share dividing line: 1.0x
+
+II. Matrix Positioning
+  Stars:
+    - AI Writing Assistant — Growth rate: 45% — Relative share: 1.8x — Revenue: 8M
+  Cash Cows:
+    - Enterprise Email — Growth rate: 5% — Relative share: 2.5x — Revenue: 50M
+  Question Marks:
+    - Collaborative Docs — Growth rate: 30% — Relative share: 0.4x — Revenue: 3M
+    - Video Conferencing — Growth rate: 20% — Relative share: 0.3x — Revenue: 2M
+  Dogs:
+    - Legacy Cloud Storage — Growth rate: -5% — Relative share: 0.6x — Revenue: 5M
+
+III. Portfolio Balance Assessment
+  Overall health: Needs adjustment
+  Core issue: Cash Cow depends on a single product (Enterprise Email), only 1 Star, 2 Question Marks with low share
+
+IV. Strategic Recommendations
+  AI Writing Assistant (Star): Build — Increase R&D investment, expand industry templates
+  Enterprise Email (Cash Cow): Hold — Maintain customer relationships, control costs
+  Collaborative Docs (Question Mark): Build — Fast market growth with tech synergy, worth investing
+  Video Conferencing (Question Mark): Harvest — Too intense competition (Tencent Meeting/Feishu), stop additional investment
+  Legacy Cloud Storage (Dog): Divest — Complete user migration within 6 months, reassign team
+
+V. Resource Reallocation
+  Release 15 people from Video Conferencing and Legacy Cloud Storage → Invest in AI Writing Assistant and Collaborative Docs
+```
+
+---
+
+## Common Pitfalls
+
+| Pitfall | Description | How to Avoid |
 |------|------|---------|
-| 只看当前不看趋势 | 今天的问题可能是明天的瘦狗，今天的明星可能即将成熟 | 结合产品生命周期判断未来走向 |
-| 瘦狗一刀切 | 有些瘦狗有战略价值（如防御性产品、品牌形象产品） | 评估瘦狗时考虑战略协同价值，不只看财务指标 |
-| 忽视市场份额的定义 | 不同市场定义导致份额差异巨大 | 先明确市场边界，再用统一口径计算 |
-| 过度依赖两个维度 | 市场份额和增长率不能涵盖所有竞争因素 | BCG 做初筛，复杂决策补充 Porter's 或 SWOT |
-| 问题产品犹豫不决 | 不敢决策是建设还是收割，持续消耗资源 | 设定明确的时间窗口和里程碑，到期不达标则收割 |
+| Only looking at current, not trends | Today's Question Mark may be tomorrow's Dog; today's Star may be maturing | Judge future direction using product life cycle |
+| Blanket approach to Dogs | Some Dogs have strategic value (defensive products, brand image products) | When assessing Dogs, consider strategic synergy value, not just financial metrics |
+| Ignoring market share definition | Different market definitions lead to vastly different share figures | Define market boundaries first, then calculate using consistent methodology |
+| Over-relying on two dimensions | Market share and growth rate don't cover all competitive factors | Use BCG for initial screening; supplement with Porter's or SWOT for complex decisions |
+| Indecisive about Question Marks | Daring not to decide between build or harvest, continuously draining resources | Set clear time windows and milestones; harvest if targets not met by deadline |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **搭配 Porter's Five Forces**：BCG 看产品组合，五力分析每个产品的行业竞争格局
-- **搭配 SWOT**：BCG 定位产品类别，SWOT 深入分析单个产品的优劣势和机会威胁
-- **搭配 Pareto Analysis**：用帕累托验证现金牛是否真的贡献了大部分收入
-- **输入 OKR**：明星产品的建设目标、问题产品的里程碑可转化为 OKR
-- **搭配 Product Lifecycle**：BCG 的四类对应生命周期不同阶段，结合判断更准确
+- **Combined with Porter's Five Forces**: BCG looks at product portfolio; Five Forces analyzes each product's industry competitive landscape
+- **Combined with SWOT**: BCG positions product categories; SWOT deeply analyzes individual product strengths/weaknesses/opportunities/threats
+- **Combined with Pareto Analysis**: Use Pareto to verify whether Cash Cows truly contribute the majority of revenue
+- **Input to OKR**: Star product build goals and Question Mark milestones can be converted to OKRs
+- **Combined with Product Lifecycle**: BCG's four categories correspond to different life cycle stages; combining them yields more accurate judgment

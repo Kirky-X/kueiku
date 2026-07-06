@@ -1,18 +1,18 @@
-# AI Delivery · AI 交付
+# AI Delivery
 
-**适用场景**：AI 时代交付物标准、文档代码 drift 检测
+**Use cases**: AI-era deliverable standards, doc-code drift detection
 
-| 方法论 | 一句话描述 | 最佳场景 | Reference |
+| Methodology | One-liner | Best for | Reference |
 | --- | --- | --- | --- |
-| **Shipping Artifacts** | Core 5 + Conditional 4 文档 + Anti-PRD rule | AI 项目交付物标准 | `shipping-artifacts.md` |
-| **Intended vs Implemented** | documented intent ↔ cited code 双向引用 + boundary mismatch | 文档与代码 drift 检测 | `intended-vs-implemented.md` |
+| **Shipping Artifacts** | Core 5 + Conditional 4 docs + Anti-PRD rule | AI project deliverable standards | `shipping-artifacts.md` |
+| **Intended vs Implemented** | documented intent ↔ cited code bidirectional referencing + boundary mismatch | Doc-code drift detection | `intended-vs-implemented.md` |
 
-## 各方法论最低信息需求
+## Minimum information requirements per methodology
 
-- **Shipping Artifacts**：需要项目范围 + 文档版本管理
-- **Intended vs Implemented**：需要 Design Doc + 代码引用关系
+- **Shipping Artifacts**: project scope + document version management
+- **Intended vs Implemented**: Design Doc + code reference relationships
 
-## 路由触发信号
+## Routing trigger signals
 
-- "AI 项目交付物标准" → Shipping Artifacts（主）
-- "文档与代码 drift 检测" → Intended vs Implemented（主）
+- "AI project deliverable standards" → Shipping Artifacts (primary)
+- "Doc-code drift detection" → Intended vs Implemented (primary)

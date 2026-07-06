@@ -1,19 +1,19 @@
-# Opportunity Score · 机会评分
+# Opportunity Score
 
-## 核心思想
-通过 Importance × (1 − Satisfaction) 量化用户对某需求的机会大小。重要但当前满意度低的需求得分高，意味着最大的产品机会。源自 Kano 思想但归一化到 0–1 区间，便于横向对比。
+## Core Idea
+Quantifies the opportunity size for a user need through Importance × (1 − Satisfaction). Needs that are important but currently have low satisfaction score high, indicating the greatest product opportunities. Originated from Kano thinking but normalized to the 0–1 range for easy cross-comparison.
 
-## 适用场景
-- 已有用户调研数据（重要度 + 满意度），需要排需求优先级
-- 找"低满意高重要"的快速胜利机会
-- 验证产品-市场契合度差距
+## Use Cases
+- Already have user research data (importance + satisfaction) and need to prioritize requirements
+- Find "low satisfaction, high importance" quick-win opportunities
+- Validate product-market fit gaps
 
-## 关键步骤
-1. 对每个候选需求/功能，请目标用户打分：重要度（1–5 或 1–10）+ 当前满意度（1–5）
-2. 归一化：将重要度和满意度都映射到 0–1（如 5 分制下 score = (rating−1)/4）
-3. 计算机会分：Opportunity = Importance × (1 − Satisfaction)
-4. 按 Opportunity 分降序排序，关注高分项（高重要 + 低满意 = 蓝海）
-5. 高分但满意度已高的项是已满足需求；低重要项即使满意度低也不值得投入
+## Key Steps
+1. For each candidate need/feature, have target users rate: Importance (1–5 or 1–10) + Current Satisfaction (1–5)
+2. Normalize: Map both importance and satisfaction to 0–1 (e.g., on a 5-point scale: score = (rating−1)/4)
+3. Calculate opportunity score: Opportunity = Importance × (1 − Satisfaction)
+4. Sort by Opportunity score descending, focus on high-scoring items (high importance + low satisfaction = blue ocean)
+5. High-scoring items with already-high satisfaction are satisfied needs; low-importance items aren't worth investing in even with low satisfaction
 
-## 来源
-Dan Olsen《The Lean Product Playbook》（2015）
+## Source
+Dan Olsen, *The Lean Product Playbook* (2015)

@@ -1,32 +1,32 @@
 # User Research · 用户研究
 
-**适用场景**：深度理解用户需求、行为、痛点
+**Applicable Scenarios**: Deeply understand user needs, behaviors, and pain points
 
-| 方法论 | 一句话描述 | 最佳场景 | Reference |
+| Methodology | One-Line Description | Best Scenario | Reference |
 | --- | --- | --- | --- |
-| **Customer Journey Map** | 用户全旅程触点、情感与痛点可视化 | 服务优化、产品体验设计、跨部门对齐 | `customer-journey.md` |
-| **Empathy Map** | 用户的所说/所做/所想/所感四维画像 | 用户研究启动、persona补充 | `empathy-map.md` |
-| **Consumer Decision Journey** | 考虑→评估→购买→体验→拥护 非线性决策旅程 | 旅程优化、触点设计、流失分析、忠诚循环设计 | `consumer-decision-journey.md` |
-| **Maslow Hierarchy** | 生理→安全→社交→尊重→自我实现 5 层需求 | 用户需求挖掘、产品定位、营销诉求设计、升级路径规划 | `maslow-hierarchy.md` |
+| **Customer Journey Map** | Visualize user touchpoints, emotions, and pain points across the entire journey | Service optimization, product experience design, cross-department alignment | `customer-journey.md` |
+| **Empathy Map** | Four-dimensional profile of what users say / do / think / feel | Kickoff of user research, supplementing personas | `empathy-map.md` |
+| **Consumer Decision Journey** | Non-linear decision journey: Consider → Evaluate → Purchase → Experience → Advocate | Journey optimization, touchpoint design, churn analysis, loyalty loop design | `consumer-decision-journey.md` |
+| **Maslow Hierarchy** | Five-level needs: Physiological → Safety → Social → Esteem → Self-actualization | User needs discovery, product positioning, marketing messaging design, upgrade path planning | `maslow-hierarchy.md` |
 
-## 各方法论最低信息需求
+## Minimum Information Requirements per Methodology
 
-- **Customer Journey Map**：需要可观察的用户行为路径数据或访谈
-- **Empathy Map**：需要至少 1-2 个用户访谈记录
-- **Consumer Decision Journey**：需要各阶段触点 + 体验评分 + 流失数据
-- **Maslow Hierarchy**：需要用户访谈/行为数据/评论挖掘判断主导需求层次
+- **Customer Journey Map**: Observable user behavioral path data or interview transcripts
+- **Empathy Map**: At least 1-2 user interview records
+- **Consumer Decision Journey**: Touchpoints per stage + experience scores + churn data
+- **Maslow Hierarchy**: User interviews / behavioral data / review mining to determine dominant need level
 
-## 路由触发信号
+## Routing Trigger Signals
 
-- "用户旅程梳理" → Customer Journey Map（主）
-- "理解用户真实需求"（备选） → Empathy Map + Customer Journey
-- "用户画像"（备选） → Empathy Map（作为 persona 补充）
-- "决策旅程优化/触点设计/流失分析" → Consumer Decision Journey（主）
-- "用户需求挖掘/营销诉求设计/需求层次" → Maslow Hierarchy（主）
+- "User journey mapping" → Customer Journey Map (primary)
+- "Understand users' true needs" (alternative) → Empathy Map + Customer Journey
+- "User persona" (alternative) → Empathy Map (as a persona supplement)
+- "Decision journey optimization / touchpoint design / churn analysis" → Consumer Decision Journey (primary)
+- "User needs discovery / marketing messaging design / need hierarchy" → Maslow Hierarchy (primary)
 
-## 常见组合
+## Common Combinations
 
-- **需求挖掘**：Empathy Map → Customer Journey → JTBD
-- **服务优化**：Customer Journey → SCAMPER（创意改进）
-- **需求层次定位**：Empathy Map → Maslow Hierarchy → User Personas
-- **决策旅程优化**：Consumer Decision Journey → RFM Model（识别关键群）→ A/B Test（触点验证）
+- **Needs Discovery**: Empathy Map → Customer Journey → JTBD
+- **Service Optimization**: Customer Journey → SCAMPER (creative improvement)
+- **Need Level Positioning**: Empathy Map → Maslow Hierarchy → User Personas
+- **Decision Journey Optimization**: Consumer Decision Journey → RFM Model (identify key segments) → A/B Test (touchpoint validation)

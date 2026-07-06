@@ -1,20 +1,20 @@
-# Market Sizing · 市场规模测算
+# Market Sizing
 
-## 核心思想
-用 TAM / SAM / SOM 三层叠加 top-down 与 bottom-up 双向三角验证，避免单一方法产生的幻觉市场规模。投资人/董事会看到的市场场规模必须可被两种独立路径交叉佐证。
+## Core Concept
+Use TAM / SAM / SOM three-layer plus top-down and bottom-up dual triangulation to avoid illusory market size from a single method. The market size presented to investors/board must be cross-validated by two independent paths.
 
-## 适用场景
-- 商业计划书/融资 deck 中需说明市场机会
-- 进入新市场前评估是否值得投入
-- 现有市场规模估算被质疑"过于乐观"
+## Applicable Scenarios
+- Need to explain market opportunity in business plans/funding decks
+- Assess whether a new market is worth entering before entry
+- Existing market size estimates questioned as "too optimistic"
 
-## 关键步骤
-1. TAM（Total Addressable Market）：全球/全行业总规模——所有可能用户都用你的产品时的市场规模
-2. SAM（Serviceable Available Market）：你能服务的子市场规模——按地域/客群/技术能力过滤
-3. SOM（Serviceable Obtainable Market）：未来 3–5 年实际能拿到的份额——结合自身资源与竞争
-4. Top-down 测算：从行业总量逐层切分（"行业 100 亿 × 子细分 20% × 我们份额 10%"）
-5. Bottom-up 测算：从单客户年收入 × 客户数推算（"ARPU $1k × 10k 客户 = $10M"）
-6. 三角验证：两种方法结果应在同一数量级（差 2 倍以内）；差距大说明假设有问题
+## Key Steps
+1. TAM (Total Addressable Market): Global/total industry scale — market size when all possible users use your product
+2. SAM (Serviceable Available Market): Sub-market you can serve — filtered by geography/customer segment/technical capability
+3. SOM (Serviceable Obtainable Market): Actual share obtainable in next 3–5 years — combined with own resources and competition
+4. Top-down calculation: Progressive segmentation from industry total ("Industry 10B × sub-segment 20% × our share 10%")
+5. Bottom-up calculation: Derived from single customer annual revenue × customer count ("ARPU $1k × 10k customers = $10M")
+6. Triangulation: Results from both methods should be within the same order of magnitude (within 2x); large gaps indicate flawed assumptions
 
-## 来源
-标准 PM/GTM 实践（Aulet《Disciplined Entrepreneurship》等推广）
+## Source
+Standard PM/GTM practice (popularized by Aulet "Disciplined Entrepreneurship" et al.)

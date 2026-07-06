@@ -1,44 +1,44 @@
 # Product & Growth · 产品与增长
 
-**适用场景**：产品设计、用户增长、需求验证
+**Applicable Scenarios**: Product design, user growth, demand validation
 
-| 方法论 | 一句话描述 | 最佳场景 | Reference |
+| Methodology | One-Line Description | Best For | Reference |
 | --- | --- | --- | --- |
-| **AARRR Funnel** | 获取→激活→留存→推荐→营收 的增长漏斗 | 增长瓶颈定位、用户生命周期分析 | `aarrr.md` |
-| **JTBD** | 用户购买的是"任务完成"，不是产品本身 | 需求挖掘、产品定位、竞品替换分析 | `jtbd.md` |
-| **Design Thinking** | 同理→定义→构思→原型→测试 的人本设计循环 | 新产品从0到1、服务设计、创新工作坊 | `design-thinking.md` |
-| **Lean BML Loop** | 最小化假设→构建→测量→学习 的快速迭代 | 产品验证、MVP设计、假设检验 | `lean-bml.md` |
-| **Value Proposition Canvas** | 产品功能与用户痛点/收益的契合度验证 | PMF验证、功能优先级、差异化定位 | `value-proposition-canvas.md` |
-| **SCAMPER** | 替换/合并/借鉴/改变/转用/删减/反转 七维创意触发 | 产品迭代、体验优化、系统化创新 | `scamper.md` |
-| **Kano Model** | 将功能分为必备/期望/兴奋/无差异/反向五类 | 需求性质分类、满意度策略、功能类型判断 | `kano.md` |
-| **North Star Framework** | 定义一个北极星指标+3-5个输入指标，统一增长方向 | 指标体系设计、全公司增长对齐 | `north-star.md` |
+| **AARRR Funnel** | Acquisition → Activation → Retention → Referral → Revenue growth funnel | Growth bottleneck identification, user lifecycle analysis | `aarrr.md` |
+| **JTBD** | Users buy "task completion," not the product itself | Demand discovery, product positioning, competitive replacement analysis | `jtbd.md` |
+| **Design Thinking** | Empathize → Define → Ideate → Prototype → Test human-centered design cycle | New product from 0 to 1, service design, innovation workshops | `design-thinking.md` |
+| **Lean BML Loop** | Minimize assumptions → Build → Measure → Learn rapid iteration | Product validation, MVP design, hypothesis testing | `lean-bml.md` |
+| **Value Proposition Canvas** | Validate fit between product features and user pains/gains | PMF validation, feature prioritization, differentiation positioning | `value-proposition-canvas.md` |
+| **SCAMPER** | Substitute/Combine/Adapt/Modify/Put-to-other-uses/Eliminate/Reverse 7-dimension creative trigger | Product iteration, experience optimization, systematic innovation | `scamper.md` |
+| **Kano Model** | Classify features into Must-be/One-dimensional/Attractive/Indifferent/Reverse five types | Demand nature classification, satisfaction strategy, feature type judgment | `kano.md` |
+| **North Star Framework** | Define one North Star Metric + 3-5 input metrics to unify growth direction | Metric system design, company-wide growth alignment | `north-star.md` |
 
-## 各方法论最低信息需求
+## Minimum Information Requirements for Each Methodology
 
-- **AARRR**：需要产品已有用户数据或明确的业务阶段
-- **Value Proposition Canvas**：需要至少有初步用户访谈数据或假设
-- **SCAMPER**：需要明确的现有产品/服务/流程作为改造对象
-- **Kano Model**：需要候选功能列表 + 可接触的目标用户（用于问卷）
-- **North Star**：需要明确的产品核心价值主张
-- **JTBD**：需要可接触的目标用户做访谈（JTBD 是定性框架，通过访谈挖掘用户真实任务）
-- **Design Thinking**：需要明确的问题/用户群体 + 跨职能团队投入
-- **Lean BML Loop**：需要可表述的最小化假设 + 可度量的学习指标
+- **AARRR**: Requires existing user data or a clear business stage
+- **Value Proposition Canvas**: Requires at least preliminary user interview data or hypotheses
+- **SCAMPER**: Requires a clear existing product/service/process as the subject of transformation
+- **Kano Model**: Requires a candidate feature list + accessible target users (for surveys)
+- **North Star**: Requires a clear product core value proposition
+- **JTBD**: Requires accessible target users for interviews (JTBD is a qualitative framework that uncovers real user tasks through interviews)
+- **Design Thinking**: Requires a clear problem/target user group + cross-functional team commitment
+- **Lean BML Loop**: Requires articulable minimum hypotheses + measurable learning metrics
 
-## 路由触发信号
+## Routing Trigger Signals
 
-- "理解用户真实需求" → JTBD（主）
-- "增长瓶颈分析" → AARRR Funnel（主）
-- "从0到1设计产品/服务" → Design Thinking（主）
-- "产品迭代验证假设" → Lean Build-Measure-Learn（主）
-- "产品-需求契合度验证" → Value Proposition Canvas（主）
-- "产品/服务系统化创意" → SCAMPER（主）
-- "功能需求性质分类" → Kano Model（主）
-- "关键指标体系设计" → North Star Framework（主）
+- "Understand users' real needs" → JTBD (primary)
+- "Growth bottleneck analysis" → AARRR Funnel (primary)
+- "Design product/service from 0 to 1" → Design Thinking (primary)
+- "Iterate product to validate hypotheses" → Lean Build-Measure-Learn (primary)
+- "Validate product-demand fit" → Value Proposition Canvas (primary)
+- "Systematic product/service creativity" → SCAMPER (primary)
+- "Classify feature demand nature" → Kano Model (primary)
+- "Design key metric system" → North Star Framework (primary)
 
-## 常见组合
+## Common Combinations
 
-- **产品创新**：JTBD → Design Thinking → Lean BML
-- **系统创意**：六顶思考帽（绿帽）→ SCAMPER → RICE（筛选）
-- **增长诊断**：AARRR → 5 Whys → RICE
-- **需求全流程管理**：Kano（分类性质）→ MoSCoW（裁剪范围）→ RICE（排优先级）
-- **指标体系搭建**：North Star（定义核心指标）→ AARRR（分层拆解）→ OKR（目标对齐）
+- **Product Innovation**: JTBD → Design Thinking → Lean BML
+- **Systematic Creativity**: Six Thinking Hats (Green Hat) → SCAMPER → RICE (filtering)
+- **Growth Diagnosis**: AARRR → 5 Whys → RICE
+- **End-to-End Demand Management**: Kano (classify nature) → MoSCoW (scope trimming) → RICE (prioritization)
+- **Metric System Building**: North Star (define core metrics) → AARRR (layered decomposition) → OKR (goal alignment)

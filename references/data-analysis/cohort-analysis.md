@@ -1,20 +1,20 @@
-# Cohort Analysis · 同期群分析
+# Cohort Analysis · Cohort Analysis
 
-## 核心思想
-把"平均留存率"拆为按时间分组的同期群留存曲线——按用户首次使用时间分组（如"1 月注册用户"为一组），追踪每组在 W1/W2/W4/W8 的留存。平均数会掩盖 cohort 间的差异，而 cohort 视图能暴露"新用户留存是否在变好/变差"。
+## Core Idea
+Split the "average retention rate" into cohort retention curves grouped by time — group users by their first use time (e.g., "January registrants" as one group), and track each group's retention at W1/W2/W4/W8. Averages mask differences between cohorts, while a cohort view reveals "whether new user retention is improving/worsening".
 
-## 适用场景
-- 总留存率看似稳定但实际在恶化
-- 评估产品改动对不同时段用户的影响
-- 判断 PMF 是否达成（同期群曲线应趋于水平而非持续下降）
+## Applicable Scenarios
+- Overall retention rate appears stable but is actually deteriorating
+- Evaluating the impact of product changes on users from different periods
+- Determining whether PMF is achieved (cohort curves should level off rather than continue declining)
 
-## 关键步骤
-1. 选定 cohort 维度：按注册时间（最常见）/按首次付费时间/按渠道来源
-2. 选定时间窗口：周（高频产品）/月（B2B 或低频产品）
-3. 计算每个 cohort 在 W1/W2/W4/W8/W12 的留存率
-4. 横向看单 cohort 曲线：drop-off 集中在哪一期（首周？次周？）
-5. 纵向看同期对比：W4 留存率随 cohort 推进是否提升（产品改进奏效）
-6. 结合 engagement 趋势：留存用户的使用频率是否同步增长
+## Key Steps
+1. Choose cohort dimension: by registration time (most common) / by first payment time / by channel source
+2. Choose time window: weekly (high‑frequency products) / monthly (B2B or low‑frequency products)
+3. Calculate each cohort's retention rate at W1/W2/W4/W8/W12
+4. Look horizontally at a single cohort curve: where does the drop‑off concentrate (first week? second week?)
+5. Look vertically at period‑over‑period comparison: does W4 retention improve as cohorts progress (product improvements taking effect)
+6. Combine with engagement trends: is the usage frequency of retained users also increasing
 
-## 来源
-标准 PM analytics 实践（Amplitude/Mixpanel 等推广）
+## Source
+Standard PM analytics practices (promoted by Amplitude/Mixpanel etc.)

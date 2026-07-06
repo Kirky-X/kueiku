@@ -1,161 +1,161 @@
-# Fishbone Diagram · 鱼骨图 / 石川图
+# Fishbone Diagram
 
-## 核心理念
+## Core Concept
 
-将问题的所有潜在成因**系统性、多维度**地可视化，避免遗漏成因类别。形似鱼骨：鱼头=问题，主骨=大类成因，小骨=具体成因。
+Systematically visualize all potential causes of a problem in **multiple dimensions** to avoid missing cause categories. Shaped like a fishbone: fish head = problem, main bones = major cause categories, small bones = specific causes.
 
-由日本质量管理专家石川馨（Kaoru Ishikawa）在1960年代发明。
+Invented by Japanese quality management expert Kaoru Ishikawa in the 1960s.
 
-> 5 Whys 是垂直深挖，Fishbone 是水平铺开——二者互补。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 问题有**多个相互独立的成因**（5 Whys 只能处理单条因果链）
-- 需要**团队协作**头脑风暴成因（Fishbone 可视化结构利于讨论）
-- 制造业/工程领域的质量问题分析
-- 复杂业务问题的全貌梳理
-
-⚠️ **慎用**
-- 单一明确根因的问题（5 Whys 更直接）
-- 需要定量分析的场景（Fishbone 是定性工具）
+> 5 Whys digs vertically deep; Fishbone spreads horizontally wide — they complement each other.
 
 ---
 
-## 常用分类框架
+## When to Use
 
-### 6M 框架（制造/工程领域）
+✅ **Best suited for**
+- Problems with **multiple independent causes** (5 Whys can only handle a single causal chain)
+- **Team collaboration** brainstorming causes (Fishbone's visual structure facilitates discussion)
+- Quality problem analysis in manufacturing/engineering
+- Full-picture mapping of complex business problems
 
-| 类别 | 英文 | 说明 |
-|------|------|------|
-| 人员 | Man / People | 人为操作、技能、疲劳、疏忽 |
-| 机器 | Machine | 设备故障、工具磨损、校准问题 |
-| 材料 | Material | 原材料质量、供应商问题 |
-| 方法 | Method | 流程、操作规程、标准 |
-| 测量 | Measurement | 测量方式偏差、仪器精度 |
-| 环境 | Milieu/Environment | 温度、湿度、噪声、工作环境 |
-
-### 4P 框架（服务/营销领域）
-
-| 类别 | 说明 |
-|------|------|
-| 流程 (Policies) | 政策规则、审批流程、SOP |
-| 流程 (Procedures) | 操作步骤、执行方式 |
-| 人员 (People) | 团队能力、培训、协作 |
-| 工厂/设施 (Plant) | 系统、工具、物理空间 |
-
-### 8P 框架（互联网/产品领域，自定义）
-
-可根据产品特点自定义类别，例如：
-- **产品 (Product)**：功能缺陷、设计问题
-- **技术 (Platform)**：系统稳定性、性能
-- **流程 (Process)**：研发流程、协作方式
-- **人员 (People)**：技能、资源
-- **数据 (Data)**：数据质量、监控覆盖
-- **外部 (External)**：第三方依赖、政策
+⚠️ **Use with caution**
+- Problems with a single clear root cause (5 Whys is more direct)
+- Scenarios requiring quantitative analysis (Fishbone is a qualitative tool)
 
 ---
 
-## 执行步骤
+## Common Classification Frameworks
 
-### Step 1：定义问题（鱼头）
+### 6M Framework (Manufacturing/Engineering)
 
-在图的右侧写出**清晰、具体**的问题陈述（同 5 Whys 的要求）。
+| Category | English | Description |
+|----------|---------|-------------|
+| Man / People | Man / People | Human operation, skills, fatigue, negligence |
+| Machine | Machine | Equipment failure, tool wear, calibration issues |
+| Material | Material | Raw material quality, supplier issues |
+| Method | Method | Processes, operating procedures, standards |
+| Measurement | Measurement | Measurement bias, instrument precision |
+| Milieu/Environment | Milieu/Environment | Temperature, humidity, noise, work environment |
 
-### Step 2：选择分类框架
+### 4P Framework (Service/Marketing)
 
-根据问题领域选择 6M / 4P / 自定义框架，画出主骨。
+| Category | Description |
+|----------|-------------|
+| Policies | Policy rules, approval processes, SOPs |
+| Procedures | Operating steps, execution methods |
+| People | Team capabilities, training, collaboration |
+| Plant | Systems, tools, physical space |
 
-### Step 3：集体脑暴成因
+### 8P Framework (Internet/Product, Custom)
 
-对每个类别，**头脑风暴**所有可能的成因，写在对应的小骨上：
-- 不评判，先发散
-- 鼓励追问"这条成因的成因是什么"（可向小骨再分叉）
-- 每个成因用**名词短语**描述，不是解决方案
-
-### Step 4：整理和验证
-
-- 标记**高可能性**的成因（用数据/观察支撑）
-- 识别**成因聚集区域**（哪个类别问题最多）
-- 确定**下一步需要验证**的成因
-
-### Step 5：优先级排序
-
-选出 Top 3-5 最可能的根因，进行深入调查（可以对每条用 5 Whys 继续追问）。
+Customize categories based on product characteristics, for example:
+- **Product**: Feature defects, design issues
+- **Platform**: System stability, performance
+- **Process**: R&D process, collaboration methods
+- **People**: Skills, resources
+- **Data**: Data quality, monitoring coverage
+- **External**: Third-party dependencies, policies
 
 ---
 
-## 输出模板（文字版）
+## Execution Steps
+
+### Step 1: Define the Problem (Fish Head)
+
+Write a **clear, specific** problem statement on the right side of the diagram (same requirements as 5 Whys).
+
+### Step 2: Choose a Classification Framework
+
+Select 6M / 4P / custom framework based on the problem domain, and draw the main bones.
+
+### Step 3: Brainstorm Causes
+
+For each category, **brainstorm** all possible causes and write them on the corresponding small bones:
+- Don't evaluate, diverge first
+- Encourage asking "what causes this cause?" (can branch further into sub-bones)
+- Describe each cause using **noun phrases**, not solutions
+
+### Step 4: Organize and Verify
+
+- Mark **high-probability** causes (supported by data/observations)
+- Identify **cause cluster areas** (which category has the most issues)
+- Determine which causes need **further verification**
+
+### Step 5: Prioritize
+
+Select the top 3-5 most likely root causes for deep investigation (you can apply 5 Whys to each one).
+
+---
+
+## Output Template (Text Version)
 
 ```
-问题（鱼头）：[具体问题陈述]
+Problem (Fish Head): [Specific problem statement]
 
-分析框架：[6M / 4P / 自定义]
+Analysis Framework: [6M / 4P / Custom]
 
-成因梳理：
+Cause Mapping:
 
-【人员 / People】
-  - [成因 A]
-  - [成因 B]
-  - [成因 B.1]（成因 B 的子成因）
+【People】
+  - [Cause A]
+  - [Cause B]
+  - [Cause B.1] (sub-cause of Cause B)
 
-【方法 / Method】
-  - [成因 C]
-  - [成因 D]
+【Method】
+  - [Cause C]
+  - [Cause D]
 
-【技术 / Machine / Platform】
-  - [成因 E]
+【Machine / Platform】
+  - [Cause E]
 
-【材料 / Material / Data】
-  - [成因 F]
+【Material / Data】
+  - [Cause F]
 
-【环境 / Environment / External】
-  - [成因 G]
+【Environment / External】
+  - [Cause G]
 
-高优先级成因（需进一步调查）：
-  1. [成因 X] — 证据/理由：[...]
-  2. [成因 Y] — 证据/理由：[...]
-  3. [成因 Z] — 证据/理由：[...]
-```
-
----
-
-## 执行示例
-
-**问题**：APP 新版本上线后 7 日留存率从 42% 下降至 28%
-
-```
-【产品/功能】
-  - 核心功能入口下沉，用户找不到
-  - 新 Tab 栏设计用户不熟悉
-  - 首页信息密度过高，认知负荷增加
-
-【技术/性能】
-  - 新版包体积增大，低端机崩溃率上升
-  - 图片懒加载延迟导致白屏
-
-【流程/测试】
-  - A/B 测试覆盖率不足，只测了 5% 用户
-  - 测试期间未观察留存指标，只看了 DAU
-
-【数据/埋点】
-  - 新版本埋点遗漏，用户行为路径不可追踪
-
-【外部/竞品】
-  - 竞品同期上线了相似功能（分流）
-
-高优先级：
-  1. 核心功能入口下沉 — 热力图数据显示核心路径点击下降 60%
-  2. 低端机崩溃率上升 — Crash 报告显示崩溃率从 0.3% 升至 2.1%
-  3. A/B 测试流程缺陷 — 这次测试确认未包含留存指标
+High-priority causes (need further investigation):
+  1. [Cause X] — Evidence/rationale: [...]
+  2. [Cause Y] — Evidence/rationale: [...]
+  3. [Cause Z] — Evidence/rationale: [...]
 ```
 
 ---
 
-## 与其他方法论的关系
+## Worked Example
 
-- **配合 5 Whys**：Fishbone 铺开全貌，5 Whys 对重点成因深挖
-- **输入 RICE**：高优先级成因对应的解决方案可用 RICE 排优先级
-- **配合数据分析**：Fishbone 生成假设，数据分析验证假设
+**Problem**: After the new app version launch, 7-day retention dropped from 42% to 28%
+
+```
+【Product/Features】
+  - Core feature entry point buried, users can't find it
+  - New tab bar design unfamiliar to users
+  - Homepage information density too high, increased cognitive load
+
+【Technology/Performance】
+  - New package size increased, crash rate on low-end devices rose
+  - Image lazy loading delays causing blank screens
+
+【Process/Testing】
+  - A/B test coverage insufficient, only tested 5% of users
+  - Retention metrics not monitored during testing, only DAU was checked
+
+【Data/Tracking】
+  - New version tracking gaps, user behavior paths not traceable
+
+【External/Competitive】
+  - Competitors launched similar features simultaneously (diverting traffic)
+
+High priority:
+  1. Core feature entry point buried — Heatmap data shows 60% drop in core path clicks
+  2. Low-end device crash rate increase — Crash reports show rate rose from 0.3% to 2.1%
+  3. A/B test process deficiency — This test confirmed retention metrics were not included
+```
+
+---
+
+## Relationship with Other Methodologies
+
+- **Combined with 5 Whys**: Fishbone spreads the full picture, 5 Whys digs deep into key causes
+- **Feeds into RICE**: Solutions for high-priority causes can be prioritized using RICE
+- **Combined with data analysis**: Fishbone generates hypotheses, data analysis validates them

@@ -1,167 +1,167 @@
-# Technology Adoption Lifecycle · 技术采用生命周期
+# Technology Adoption Lifecycle
 
-## 核心理念
+## Core Concept
 
- Geoffrey Moore 在《跨越鸿沟》中提出，新技术产品的客户群沿时间轴分为五段：**创新者 → 早期采用者 → 早期大众 → 晚期大众 → 落后者**。每段客户特征与购买动机不同，且**早期采用者与早期大众之间存在"鸿沟"（Chasm）**——这是绝大多数技术产品失败的地方。
+Geoffrey Moore proposed in "Crossing the Chasm" that the customer base of new technology products divides into five segments along a timeline: **Innovators → Early Adopters → Early Majority → Late Majority → Laggards**. Each segment has different characteristics and purchasing motivations, and there exists a **"Chasm" between Early Adopters and the Early Majority** — this is where most technology products fail.
 
-> 鸿沟的本质：早期采用者愿意为"愿景"买单，早期大众要的是"成熟产品 + 完整方案 + 可靠服务"。用早期市场的打法做大众市场，必然跌入鸿沟。
+> The essence of the chasm: Early Adopters are willing to pay for "vision," while the Early Majority wants "mature product + complete solution + reliable service." Using early-market tactics for the mainstream market will inevitably fall into the chasm.
 
 ```
-          创新者  早期采用者   |鸿沟|  早期大众   晚期大众   落后者
-          2.5%    13.5%              34%        34%       16%
+          Innovators  Early Adopters  |Chasm|  Early Majority  Late Majority  Laggards
+          2.5%        13.5%                    34%             34%            16%
         ┌──────┬───────────┐     ┌──────────────────────────┐
         │      │           │     │                          │
         └──────┴───────────┘     ┴──────────────────────────┘
-        愿景驱动、容忍缺陷        务实、要完整方案、要参考案例
+        Vision-driven, defect-tolerant        Pragmatic, want complete solutions, want references
 ```
 
-| 客户段 | 占比 | 购买动机 | 容忍度 | 获取方式 |
+| Customer Segment | Share | Purchase Motivation | Tolerance | Acquisition Method |
 |--------|------|---------|--------|---------|
-| 创新者 | 2.5% | 技术本身的新奇 | 极高 | 直接触达、技术社区 |
-| 早期采用者 | 13.5% | 战略愿景/先发优势 | 高 | 案例营销、意见领袖 |
-| 早期大众 | 34% | 务实改进/性价比 | 中 | 完整方案 + 参考客户 |
-| 晚期大众 | 34% | 从众/不得不采用 | 低 | 标准化产品 + 服务 |
-| 落后者 | 16% | 维持现状/被迫 | 极低 | 价格/便利 |
+| Innovators | 2.5% | Novelty of the technology itself | Very High | Direct outreach, tech communities |
+| Early Adopters | 13.5% | Strategic vision/first-mover advantage | High | Case marketing, opinion leaders |
+| Early Majority | 34% | Pragmatic improvement/cost-effectiveness | Medium | Complete solution + reference customers |
+| Late Majority | 34% | Herd mentality/forced adoption | Low | Standardized products + services |
+| Laggards | 16% | Status quo/pushed by circumstances | Very Low | Price/convenience |
 
 ---
 
-## 适用场景
+## Applicable Scenarios
 
-✅ **最适合**
-- 新技术/新产品营销策略制定
-- 目标客户段选择与触达策略
-- 跨越鸿沟策略设计
-- 产品成熟度与目标客户匹配判断
+✅ **Best suited for**
+- New technology/new product marketing strategy formulation
+- Target customer segment selection and outreach strategy
+- Crossing the chasm strategy design
+- Product maturity and target customer matching assessment
 
-⚠️ **慎用**
-- 成熟消费品（无典型技术采用曲线）
-- 改良型迭代产品（已有用户基础，非全新采用）
-- 把每个客户都当早期大众（忽视鸿沟）
-- 无明确技术革新成分的产品
-
----
-
-## 执行步骤
-
-### Step 1：定位产品所处阶段
-
-判断当前产品主要服务哪个客户段：
-
-```
-阶段定位检查：
-  □ 当前客户特征：[技术极客/愿景买家/务实买家/从众买家]
-  □ 获客方式：[技术社区/案例营销/销售团队/渠道分销]
-  □ 客户容忍度：[高/中/低] — 对缺陷的反应
-  □ 成交周期：[短/中/长]
-  □ 决策依据：[愿景/案例/ROI/从众]
-```
-
-### Step 2：评估鸿沟
-
-如果产品在早期市场（创新者+早期采用者）成功，评估是否即将面对鸿沟：
-
-```
-鸿沟信号检查：
-  □ 早期客户增长放缓但大众市场未启动
-  □ 早期客户与大众客户的需求差异大
-  □ 缺乏完整产品方案（只有核心功能）
-  □ 缺乏大众市场的参考案例
-  □ 销售从"卖愿景"转为"卖 ROI"时困难
-```
-
-> 鸿沟不是渐变，而是断崖。早期市场验证成功不等于大众市场会自然跟上。
-
-### Step 3：制定跨越策略
-
-Geoffrey Moore 的核心建议：**聚焦单一细分市场做"整体产品"，建立滩头阵地再扩张**。
-
-```
-跨越鸿沟策略：
-  1. 选定目标细分市场（beachhead）
-     - 标准：有痛点、可触达、可成为标杆、可复制
-     - 避免：同时打多个市场（资源分散）
-
-  2. 构建整体产品（whole product）
-     - 核心产品 + 周边服务 + 集成 + 支持 + 培训
-     - 让务实买家开箱即用、零风险
-
-  3. 建立参考客户链
-     - 在目标细分市场拿下 2-3 个标杆客户
-     - 用他们的案例背书获取同段其他客户
-
-  4. 定价与渠道适配
-     - 定价从愿景溢价转为 ROI 可量化
-     - 渠道从直销转分销/合作伙伴
-```
-
-### Step 4：监控阶段转换
-
-```
-转换监控指标：
-  早期市场 → 大众市场信号：
-    □ 客户主动询盘占比上升（非主动获客）
-    □ 成交周期缩短
-    □ 客户决策依据从愿景转 ROI
-    □ 出现"我们也要用因为竞品用了"的从众需求
-
-  大众市场 → 落后市场信号：
-    □ 增长主要来自保守客户
-    □ 价格敏感度上升
-    □ 产品标准化程度达到极限
-```
+⚠️ **Use with caution**
+- Mature consumer goods (no typical technology adoption curve)
+- Iterative improvement products (existing user base, not brand-new adoption)
+- Treating every customer as Early Majority (ignoring the chasm)
+- Products without clear technology innovation components
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Locate the Current Stage
+
+Determine which customer segment the product currently serves:
 
 ```
-技术采用生命周期分析
+Stage location check:
+  □ Current customer characteristics: [Tech geek/Vision buyer/Pragmatic buyer/Herding buyer]
+  □ Acquisition method: [Tech community/Case marketing/Sales team/Channel distribution]
+  □ Customer tolerance: [High/Medium/Low] — reaction to defects
+  □ Sales cycle: [Short/Medium/Long]
+  □ Decision basis: [Vision/Cases/ROI/Herding]
+```
 
-一、阶段定位
-  产品：[名称]
-  当前主要客户段：[创新者/早期采用者/早期大众/晚期大众/落后者]
-  判断依据：[...]
+### Step 2: Assess the Chasm
 
-二、鸿沟评估
-  是否面临鸿沟：[是/否]
-  鸿沟信号：[列出触发的信号]
-  鸿沟规模：[小/中/大]
+If the product has succeeded in the early market (Innovators + Early Adopters), assess whether it is about to face the chasm:
 
-三、跨越策略
-  目标细分市场（beachhead）：[...] — 选择理由：[...]
-  整体产品方案：[核心 + 周边服务 + 集成 + 支持]
-  参考客户计划：[标杆客户 1, 2, 3]
-  定价调整：[...]
-  渠道调整：[...]
+```
+Chasm signal check:
+  □ Early customer growth slowing but mainstream market not activated
+  □ Large gap between early customer and mainstream customer needs
+  □ Lack of complete product solution (only core features)
+  □ Lack of reference cases for the mainstream market
+  □ Difficulty when sales shifts from "selling vision" to "selling ROI"
+```
 
-四、阶段转换监控
-  关键指标：[...]
-  复测频率：[季度/半年]
+> The chasm is not a gradual transition, but a cliff. Early market validation success does not mean the mainstream market will naturally follow.
 
-五、营销组合对齐
-  信息诉求：[愿景/ROI/从众] — 匹配目标段
-  获客渠道：[技术社区/案例营销/销售/渠道]
+### Step 3: Develop Crossing Strategy
+
+Geoffrey Moore's core recommendation: **Focus on a single segment to build a "whole product," establish a beachhead, then expand**.
+
+```
+Crossing the chasm strategy:
+  1. Select target segment (beachhead)
+     - Criteria: has pain points, reachable, can become a benchmark, replicable
+     - Avoid: attacking multiple markets simultaneously (resource dilution)
+
+  2. Build the whole product
+     - Core product + peripheral services + integration + support + training
+     - Make it turnkey for pragmatic buyers, zero risk
+
+  3. Establish reference customer chain
+     - Win 2-3 benchmark customers in the target segment
+     - Use their cases to endorse and acquire other customers in the same segment
+
+  4. Pricing and channel adaptation
+     - Shift pricing from vision premium to quantifiable ROI
+     - Shift channels from direct sales to distribution/partners
+```
+
+### Step 4: Monitor Stage Transitions
+
+```
+Transition monitoring indicators:
+  Early market → Mainstream market signals:
+    □ Increase in proactive customer inquiries (not active acquisition)
+    □ Shortened sales cycle
+    □ Customer decision basis shifts from vision to ROI
+    □ Emergence of herd demand: "We need it too because competitors use it"
+
+  Mainstream market → Late market signals:
+    □ Growth primarily from conservative customers
+    □ Increased price sensitivity
+    □ Product standardization reaches its limit
 ```
 
 ---
 
-## 常见陷阱
+## Output Template
 
-| 陷阱 | 避免方式 |
+```
+Technology Adoption Lifecycle Analysis
+
+I. Stage Location
+  Product: [Name]
+  Current primary customer segment: [Innovators/Early Adopters/Early Majority/Late Majority/Laggards]
+  Assessment basis: [...]
+
+II. Chasm Assessment
+  Facing chasm: [Yes/No]
+  Chasm signals: [List triggered signals]
+  Chasm scale: [Small/Medium/Large]
+
+III. Crossing Strategy
+  Target segment (beachhead): [...] — Selection rationale: [...]
+  Whole product plan: [Core + peripheral services + integration + support]
+  Reference customer plan: [Benchmark customers 1, 2, 3]
+  Pricing adjustment: [...]
+  Channel adjustment: [...]
+
+IV. Stage Transition Monitoring
+  Key indicators: [...]
+  Reassessment frequency: [Quarterly/Semi-annually]
+
+V. Marketing Mix Alignment
+  Message appeal: [Vision/ROI/Herding] — matches target segment
+  Acquisition channels: [Tech community/Case marketing/Sales/Channels]
+```
+
+---
+
+## Common Pitfalls
+
+| Pitfall | How to Avoid |
 |------|---------|
-| 用早期市场打法打大众市场 | 识别阶段，主动切换营销组合 |
-| 同时打多个细分市场 | 跨越鸿沟期聚焦单一 beachhead |
-| 忽视整体产品只卖核心功能 | 大众市场要完整方案，不只核心产品 |
-| 把早期采用者当早期大众 | 两者动机不同，触达方式不同 |
-| 跨越鸿沟后扩张太快 | 巩固滩头阵地后再逐市场扩张 |
-| 把鸿沟当成普通增长瓶颈 | 鸿沟是结构性断崖，需结构性策略 |
+| Using early-market tactics for mainstream market | Identify the stage, proactively switch marketing mix |
+| Attacking multiple segments simultaneously | During chasm crossing, focus on a single beachhead |
+| Ignoring the whole product, only selling core features | Mainstream market needs complete solutions, not just core products |
+| Treating Early Adopters as Early Majority | Different motivations require different outreach methods |
+| Expanding too fast after crossing the chasm | Consolidate the beachhead before expanding market by market |
+| Treating the chasm as a normal growth bottleneck | The chasm is a structural cliff requiring structural strategies |
 
 ---
 
-## 与其他方法论的关系
+## Relationships with Other Methodologies
 
-- **搭配 Product Life Cycle**：技术采用生命周期看客户群分布，产品生命周期看产品阶段，两者交叉判断
-- **搭配 STP Analysis**：跨越鸿沟的目标细分市场选择，本质是 STP 的 T 步骤
-- **搭配 User Personas**：每段客户对应不同 persona，触达策略差异化
-- **搭配 BCG Matrix**：鸿沟期产品常是"问题"，跨越后转为"明星"
-- **后接 OKR**：跨越鸿沟的目标转化为 OKR 跟踪
+- **Combined with Product Life Cycle**: Technology adoption lifecycle examines customer segment distribution; product lifecycle examines product stage — cross-reference both for judgment
+- **Combined with STP Analysis**: Target segment selection for crossing the chasm is essentially the T step in STP
+- **Combined with User Personas**: Each customer segment corresponds to a different persona; differentiate outreach strategies
+- **Combined with BCG Matrix**: Products during the chasm period are often "Question Marks"; after crossing, they become "Stars"
+- **Followed by OKR**: Goals for crossing the chasm are converted into OKR tracking

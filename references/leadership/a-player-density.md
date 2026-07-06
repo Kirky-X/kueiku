@@ -1,124 +1,124 @@
-# A-Player Density · A 级人才密度
+# A-Player Density · A-Player Density
 
-## 核心理念
+## Core Concept
 
-A级人才招聘 A 级，B 级招 C 级，人才密度决定团队上限。
+A-players recruit A-players, B-players recruit C-players — talent density determines the team's ceiling.
 
-人才密度是指团队中 A 级人才的比例。A 级人才不仅自身产出高，还能吸引和识别其他 A 级人才；B 级人才因不安全感会倾向招聘 C 级以维护自身地位，导致团队质量螺旋下降。一旦人才密度跌破临界点，团队会进入不可逆的衰退。
+Talent density refers to the proportion of A-players in a team. A-players not only produce at a high level themselves, but also attract and identify other A-players. B-players, driven by insecurity, tend to recruit C-players to protect their own standing, causing team quality to spiral downward. Once talent density falls below the critical threshold, the team enters an irreversible decline.
 
-> **关键判断**：人才密度不是"全员 A 级"，而是"A 级人才的比例足够支撑团队文化标准"。
-> 临界点之下，标准会被稀释；临界点之上，标准能自我维持。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 招聘决策（标准制定、面试评估）
-- 团队组建和扩张
-- 绩效管理和淘汰机制
-- 组织文化标准维护
-
-⚠️ **慎用**
-- 规模化扩张期（需平衡速度和质量）
-- 成熟业务运维团队（B 级人才足以胜任标准化工作）
-- 人才市场极度稀缺领域（标准需务实调整）
+> **Key Insight**: Talent density is not "everyone is an A-player," but rather "the proportion of A-players is sufficient to sustain the team's cultural standards."
+> Below the threshold, standards are diluted; above the threshold, standards are self-sustaining.
 
 ---
 
-## 执行步骤
+## Applicable Scenarios
 
-### Step 1：定义 A 级行为标准
+✅ **Best Suited For**
+- Hiring decisions (standard-setting, interview assessment)
+- Team building and scaling
+- Performance management and attrition mechanisms
+- Organizational culture standard maintenance
 
-A 级不是抽象的"优秀"，而是具体可观察的行为：
-- **能力**：在所负责领域有深度，能独立解决非标准问题
-- **主动性**：不等待指令，主动识别和解决问题
-- **标准传递**：自身高标准影响周围人，能识别和吸引 A 级
-- **协作**：能与他人高质量协作，不是单打独斗的明星
-
-> 标准必须可观察、可评估，避免"我觉得他不错"的主观判断。
-
-### Step 2：评估现有团队密度
-
-对现有团队成员逐一评估：
-- 是否符合 A 级行为标准？
-- 若不符合，是 B 级（可培养）还是 C 级（需淘汰）？
-- 当前 A 级人才密度比例是多少？
-- 是否在临界点之上？
-
-> 密度评估要基于行为证据，不是个人好感。
-
-### Step 3：招聘策略
-
-制定招聘策略维持/提升密度：
-- **面试官必须是 A 级**：B 级面试官会拒掉 A 级（威胁感）或放过 C 级
-- **降级不将就**：宁可空缺也不降级招聘
-- **多维度评估**：技术 + 行为 + 协作 + 文化匹配
-- **拒绝理由记录**：被拒候选人的反馈用于校准标准
-
-### Step 4：淘汰机制
-
-建立明确的淘汰机制防止密度稀释：
-- 定期绩效评估（季度/半年）
-- 不达标的明确反馈和改进期
-- 改进期未达标则淘汰
-- 淘汰决策由 A 级人才参与（避免 B 级包庇 C 级）
-
-> 淘汰不是惩罚，是保护团队密度。拖延淘汰会向团队传递"标准可妥协"的信号。
+⚠️ **Use with Caution**
+- During rapid scaling (need to balance speed and quality)
+- Mature operations teams (B-players are sufficient for standardized work)
+- Extremely scarce talent markets (standards need pragmatic adjustment)
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Define A-Player Behavioral Standards
+
+"A-player" is not an abstract notion of "excellence," but specific observable behaviors:
+- **Capability**: Deep expertise in their domain; able to independently solve non-standard problems
+- **Initiative**: Proactively identifies and solves problems without waiting for instructions
+- **Standard Transmission**: Their high standards influence those around them; able to identify and attract A-players
+- **Collaboration**: Able to collaborate at a high quality with others, not a solo star
+
+> Standards must be observable and assessable. Avoid subjective judgments like "I think they're good."
+
+### Step 2: Assess Current Team Density
+
+Evaluate each existing team member:
+- Do they meet A-player behavioral standards?
+- If not, are they a B-player (developable) or C-player (needs removal)?
+- What is the current A-player density ratio?
+- Is it above the critical threshold?
+
+> Density assessment must be based on behavioral evidence, not personal preference.
+
+### Step 3: Hiring Strategy
+
+Develop a hiring strategy to maintain/improve density:
+- **Interviewers must be A-players**: B-player interviewers will reject A-players (threat) or let C-players pass
+- **Rather leave a gap than lower the bar**: Never compromise on standards to fill positions
+- **Multi-dimensional assessment**: Technical + Behavioral + Collaboration + Culture fit
+- **Document rejection reasons**: Feedback on rejected candidates helps calibrate standards
+
+### Step 4: Attrition Mechanism
+
+Establish a clear attrition mechanism to prevent density dilution:
+- Regular performance reviews (quarterly/biannual)
+- Clear feedback and improvement periods for underperformers
+- Remove those who don't improve during the improvement period
+- Attrition decisions should involve A-players (prevent B-players from shielding C-players)
+
+> Attrition is not punishment — it's protecting team density. Delaying attrition sends the signal that "standards are negotiable."
+
+---
+
+## Output Template
 
 ```
-分析对象：[团队]
-分析时间：[日期]
+Subject: [Team]
+Analysis Date: [Date]
 
-A 级行为标准定义：
-  - 能力维度：[具体描述]
-  - 主动性维度：[具体描述]
-  - 标准传递维度：[具体描述]
-  - 协作维度：[具体描述]
+A-Player Behavioral Standard Definition:
+  - Capability: [Specific description]
+  - Initiative: [Specific description]
+  - Standard Transmission: [Specific description]
+  - Collaboration: [Specific description]
 
-现有团队密度评估：
-  | 成员 | 能力 | 主动性 | 标准传递 | 协作 | 综合判定 |
-  |------|------|--------|---------|------|---------|
-  | ...  | 强/中/弱 | ... | ... | ... | A/B/C |
+Current Team Density Assessment:
+  | Member | Capability | Initiative | Standard Transmission | Collaboration | Overall Rating |
+  |--------|-----------|------------|----------------------|---------------|----------------|
+  | ...    | Strong/Medium/Weak | ... | ... | ... | A/B/C |
 
-  当前 A 级密度：[X%]
-  临界点：[Y%]
-  状态：[健康 / 接近临界 / 低于临界]
+  Current A-Player Density: [X%]
+  Critical Threshold: [Y%]
+  Status: [Healthy / Near Threshold / Below Threshold]
 
-招聘策略：
-  - 面试官名单（必须 A 级）：[...]
-  - 评估维度及权重：[...]
-  - 降级红线：[绝不降级的情况]
+Hiring Strategy:
+  - Interviewer List (must be A-players): [...]
+  - Assessment Dimensions and Weights: [...]
+  - Non-negotiable Red Line: [Situations where standards cannot be lowered]
 
-淘汰机制：
-  - 评估周期：[季度/半年]
-  - 改进期长度：[X 周]
-  - 淘汰决策参与者：[A 级人才名单]
-  - 当前需关注成员：[名单及改进计划]
+Attrition Mechanism:
+  - Review Cycle: [Quarterly/Biannual]
+  - Improvement Period Duration: [X weeks]
+  - Attrition Decision Makers: [A-player list]
+  - Members Needing Attention: [List and improvement plans]
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 避免方式 |
-|------|---------|
-| A 级标准抽象化（"聪明能干"） | 标准必须可观察的具体行为 |
-| B 级面试官招人 | 面试官必须是 A 级，否则会稀释标准 |
-| 为扩张速度降级招聘 | 宁可慢，不可降级；降级会螺旋下降 |
-| 拖延淘汰传递错误信号 | 不达标及时淘汰，保护团队密度 |
-| 把"明星"当 A 级 | A 级包含协作维度，单打独斗的明星不是完整 A 级 |
-| 标准一成不变 | 标准需随业务阶段调整，但只能升不能降 |
+| Pitfall | How to Avoid |
+|---------|-------------|
+| Abstract A-player standards ("smart and capable") | Standards must be specific observable behaviors |
+| B-player interviewers conducting interviews | Interviewers must be A-players, otherwise standards will be diluted |
+| Lowering the bar for speed of scaling | Better to go slow than lower the bar; lowering the bar causes a downward spiral |
+| Delaying attrition sends wrong signals | Remove underperformers promptly to protect team density |
+| Treating "stars" as A-players | A-players include a collaboration dimension; solo stars are not complete A-players |
+| Standards never change | Standards need to adapt to business stages, but can only go up, never down |
 
 ---
 
-## 与其他方法论的关系
+## Relationships with Other Methodologies
 
-- **前置 Reality Distortion Field**：A 级团队更能承接 RDF 并转化为真实能力
-- **对照 McKinsey 7S**：7S 评估组织一致性，A-Player Density 聚焦人才维度
-- **后接 OKR**：A 级团队需匹配高挑战性 OKR
-- **互补 Invisible Perfection**：A 级人才自然推动内部工艺标准
+- **Precedes Reality Distortion Field**: A-players are better equipped to absorb RDF and convert it into real capability
+- **Compared to McKinsey 7S**: 7S assesses organizational alignment; A-Player Density focuses on the talent dimension
+- **Feeds into OKR**: A-player teams need to be matched with high-challenge OKRs
+- **Complements Invisible Perfection**: A-players naturally drive internal craft standards

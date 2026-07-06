@@ -1,119 +1,119 @@
-# Technology Meets Humanities · 科技与人文的十字路口
+# Technology Meets Humanities
 
-## 核心理念
+## Core Philosophy
 
-单一科技视角不足以做出好产品，需要人文视角补充。
+A single technology perspective is insufficient for building great products. The humanities perspective is needed as a complement.
 
-科技视角回答"能不能做到"和"做得有多好"，人文视角回答"值不值得做"和"做出来对人意味着什么"。两者交汇处才是真正卓越产品的诞生地——技术先进但人文缺失的产品是冰冷的工具，人文动人但技术不足的产品是空洞的演示。
+The technology perspective answers "can we build it?" and "how well does it perform?" The humanities perspective answers "is it worth building?" and "what does it mean for people?" The intersection of both is where truly excellent products are born — a product that is technologically advanced but lacking in humanities is a cold tool; a product that is emotionally resonant but technologically weak is a hollow demo.
 
-> **三维评估**：技术先进性 × 人文感受性 × 商业可行性。
-> 任何一维缺失，产品都难以持久。三者交汇的"甜区"是产品决策的目标区域。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 产品整体评估（不只看技术指标）
-- 设计决策（功能 vs 体验的权衡）
-- 团队组建（补充人文视角的人才）
-- 新技术采用决策（技术可行 ≠ 用户体验好）
-
-⚠️ **慎用**
-- 纯工程任务（技术可行性是主决策维度）
-- 短期交付压力下的执行决策
-- 合规/安全相关决策（标准明确，非体验问题）
+> **Three-dimensional Assessment**: Technological Advancement × Human Sensitivity × Business Viability.
+> If any one dimension is missing, the product cannot endure. The "sweet spot" where all three intersect is the target zone for product decisions.
 
 ---
 
-## 执行步骤
+## Applicable Scenarios
 
-### Step 1：技术先进性评估
+✅ **Best For**
+- Holistic product evaluation (not just technical metrics)
+- Design decisions (trade-offs between features and experience)
+- Team composition (supplementing with humanities talent)
+- New technology adoption decisions (technically feasible ≠ good user experience)
 
-评估产品的技术维度：
-- 技术是否领先于替代方案？
-- 技术指标（性能/精度/效率）如何？
-- 技术壁垒是否可持续？
-- 技术成熟度（参考 Gartner Hype Cycle）
-
-### Step 2：人文感受性评估
-
-评估产品的人文维度：
-- 用户使用时的情绪体验是什么？
-- 产品是否尊重用户的认知负担和时间？
-- 产品传递的价值观是否与目标用户共鸣？
-- 产品的美学和细节是否打磨？
-
-> 人文评估不能靠"我觉得"，需要用户访谈、行为数据、情绪反馈支撑。
-
-### Step 3：商业可行性评估
-
-评估产品的商业维度：
-- 单位经济模型是否成立？
-- 市场规模和增长趋势如何？
-- 竞争格局和差异化空间？
-- 商业模式是否可持续？
-
-### Step 4：三维交汇分析
-
-将三维评估结果绘制到坐标系，识别：
-- **甜区**（三维都强）：投入资源放大
-- **短板区**（某维度弱）：明确补足方向
-- **死区**（多维弱）：考虑退出或重构
-
-> 决策原则：不追求三维都满分，但不能有任何一维处于"死区"。
+⚠️ **Use With Caution**
+- Pure engineering tasks (technical feasibility is the primary decision dimension)
+- Execution decisions under short-term delivery pressure
+- Compliance/security-related decisions (standards are clear, not experience issues)
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Technological Advancement Assessment
+
+Evaluate the product's technology dimension:
+- Is the technology ahead of alternatives?
+- How do the technology metrics (performance/accuracy/efficiency) compare?
+- Is the technology moat sustainable?
+- Technology maturity (reference: Gartner Hype Cycle)
+
+### Step 2: Human Sensitivity Assessment
+
+Evaluate the product's humanities dimension:
+- What is the user's emotional experience during use?
+- Does the product respect the user's cognitive load and time?
+- Do the values the product conveys resonate with the target users?
+- Are the aesthetics and details polished?
+
+> Humanities assessment cannot rely on "I think so" — it needs user interviews, behavioral data, and emotional feedback as support.
+
+### Step 3: Business Viability Assessment
+
+Evaluate the product's business dimension:
+- Is the unit economics model viable?
+- What is the market size and growth trend?
+- What is the competitive landscape and differentiation space?
+- Is the business model sustainable?
+
+### Step 4: Three-dimensional Intersection Analysis
+
+Plot the three-dimensional assessment results on a coordinate system to identify:
+- **Sweet spot** (strong in all three dimensions): Invest resources to amplify
+- **Weakness zone** (one dimension is weak): Clarify the direction for improvement
+- **Dead zone** (weak in multiple dimensions): Consider exit or restructuring
+
+> Decision principle: Don't aim for perfect scores in all three dimensions, but no single dimension should be in the "dead zone."
+
+---
+
+## Output Template
 
 ```
-分析对象：[产品/功能]
-分析时间：[日期]
+Analysis Target: [Product/Feature]
+Analysis Date: [Date]
 
-技术先进性评估：
-  - 技术领先度：[强/中/弱] — 依据：[...]
-  - 技术指标：[关键指标及对比]
-  - 技术壁垒：[可持续/可复制/无壁垒]
-  - 技术成熟度：[阶段] — 参考 Gartner Hype Cycle
+Technological Advancement Assessment:
+  - Technology leadership: [Strong/Medium/Weak] — Evidence: [...]
+  - Technology metrics: [Key metrics and comparisons]
+  - Technology moat: [Sustainable/Replicable/None]
+  - Technology maturity: [Stage] — Reference: Gartner Hype Cycle
 
-人文感受性评估：
-  - 核心情绪体验：[描述]
-  - 认知负担：[低/中/高] — 依据：[...]
-  - 价值观共鸣：[描述]
-  - 细节打磨度：[评估]
+Human Sensitivity Assessment:
+  - Core emotional experience: [Description]
+  - Cognitive load: [Low/Medium/High] — Evidence: [...]
+  - Values resonance: [Description]
+  - Detail polish level: [Assessment]
 
-商业可行性评估：
-  - 单位经济：[LTV/CAC 等关键指标]
-  - 市场规模：[TAM/SAM/SOM]
-  - 差异化空间：[描述]
-  - 商业模式：[描述]
+Business Viability Assessment:
+  - Unit economics: [LTV/CAC and other key metrics]
+  - Market size: [TAM/SAM/SOM]
+  - Differentiation space: [Description]
+  - Business model: [Description]
 
-三维交汇定位：
-  - 甜区：[哪些方面三维都强]
-  - 短板区：[哪个维度弱，补足方向]
-  - 死区：[是否有多维弱项需退出]
+Three-dimensional Intersection Positioning:
+  - Sweet spot: [Areas strong in all three dimensions]
+  - Weakness zone: [Which dimension is weak, improvement direction]
+  - Dead zone: [Whether there are multi-dimensional weaknesses requiring exit]
 
-决策：[投入放大 / 补足短板 / 退出重构]
+Decision: [Invest and amplify / Address weaknesses / Exit and restructure]
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 避免方式 |
-|------|---------|
-| 只评估技术维度，人文/商业靠"感觉" | 三维都必须有数据或访谈支撑 |
-| 把"人文"等同于"UI 好看" | 人文包括情绪、认知、价值观、美学多维 |
-| 追求三维都满分导致决策瘫痪 | 目标是避开死区，不是全满分 |
-| 商业维度被技术团队忽视 | 必须有商业视角的人参与评估 |
-| 技术先进性评估脱离用户需求 | 技术领先要服务于用户任务，不是为先进而先进 |
+| Pitfall | How to Avoid |
+|---------|-------------|
+| Only assessing the technology dimension; relying on "gut feel" for humanities/business | All three dimensions must be supported by data or interviews |
+| Equating "humanities" with "pretty UI" | Humanities includes emotion, cognition, values, and aesthetics across multiple dimensions |
+| Pursuing perfect scores in all three dimensions leads to decision paralysis | The goal is to avoid the dead zone, not achieve perfect scores everywhere |
+| Business dimension being ignored by the technology team | Someone with a business perspective must participate in the assessment |
+| Technology advancement assessment disconnected from user needs | Technological leadership should serve user tasks, not exist for its own sake |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **前置 Focus as No**：聚焦后对保留功能做三维评估
-- **互补 Whole Widget**：整合决策需兼顾技术可行性和人文体验
-- **对照 SWOT**：SWOT 是四象限现状评估，本方法是三维产品评估
-- **后接 Invisible Perfection**：人文维度的高分需要内部工艺支撑
+- **Preceded by Focus as No**: After focusing, conduct a three-dimensional assessment on retained features
+- **Complementary to Whole Widget**: Integration decisions must consider both technical feasibility and human experience
+- **Contrasted with SWOT**: SWOT is a four-quadrant current-state assessment; this methodology is a three-dimensional product assessment
+- **Followed by Invisible Perfection**: High scores in the humanities dimension require internal craft support

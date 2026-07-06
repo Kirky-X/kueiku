@@ -1,211 +1,211 @@
-# Pre-mortem & Counterfactual · 逆向规划与反事实思维
+# Pre-mortem & Counterfactual
 
-## 核心理念
+## Core Concept
 
-**Pre-mortem**：在行动*之前*，想象它已经失败，逆向推导失败原因——从而提前规避。
-**反事实思维**：改变过去/未来的某个条件，推演「如果 X 不同，结果会怎样」——从而识别关键变量。
+**Pre-mortem**: Before taking action*, imagine it has already failed, reverse-engineer the causes of failure — thus avoiding them in advance.
+**Counterfactual thinking**: Change a condition in the past/future, speculate "what if X were different, what would the result be" — thus identifying key variables.
 
-> 正向规划问「怎么成功」；逆向规划问「如果失败了，是因为什么」。后者往往能找到前者忽视的盲点。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 重大决策前的风险识别（投资、产品发布、战略转型）
-- 项目启动前暴露团队的隐性忧虑
-- 复盘：理解「为什么会走到今天这一步」
-- 识别计划中过度依赖的单点假设
-
-⚠️ **慎用**
-- 执行层细节优化（不需要这么重型的工具）
-- 已无法改变的决策（反事实推演此时只产生后悔，无实用价值）
+> Forward planning asks "how to succeed"; reverse planning asks "if it fails, what caused it." The latter often finds blind spots the former overlooks.
 
 ---
 
-## 执行步骤
+## Applicable Scenarios
 
-### 模式 A：Pre-mortem（失败前验尸）
+✅ **Best suited for**
+- Risk identification before major decisions (investment, product launch, strategic transformation)
+- Exposing team's hidden concerns before project initiation
+- Retrospective: Understanding "why we ended up here"
+- Identifying over-reliance on single-point assumptions in plans
 
-#### Step 1：清晰描述计划
+⚠️ **Use with caution**
+- Execution-level detail optimization (too heavyweight a tool for this)
+- Decisions that cannot be changed (counterfactual speculation only produces regret, no practical value)
 
-写出计划的核心要素：
+---
+
+## Execution Steps
+
+### Mode A: Pre-mortem (Failure Autopsy)
+
+#### Step 1: Clearly Describe the Plan
+
+Write out the core elements of the plan:
 ```
-目标：[...]
-关键假设：[...]
-时间节点：[...]
+Goal: [...]
+Key assumptions: [...]
+Timeline: [...]
 ```
 
-#### Step 2：想象失败
+#### Step 2: Imagine Failure
 
-**强制设定**：「现在是 [目标时间点]，计划已经失败了。不是小的失败，是彻底失败。」
+**Mandatory setup**: "Now is [target time point], the plan has already failed. Not minor failure, but total failure."
 
-让自己完全代入这个情景，然后问：**「失败是怎么发生的？」**
+Fully immerse yourself in this scenario, then ask: **"How did the failure happen?"**
 
-#### Step 3：头脑风暴失败原因
+#### Step 3: Brainstorm Causes of Failure
 
-不加评判地列出所有可能的失败路径——越多越好：
+List all possible failure paths without judgment — the more, the better:
 
 ```
-失败原因候选列表：
-  - [原因1]
-  - [原因2]
+Candidate list of failure causes:
+  - [Cause 1]
+  - [Cause 2]
   - ...
 ```
 
-技巧：每条原因要具体到「谁、做了什么、导致了什么」，不要写「执行不好」这类泛泛的描述。
+Tip: Each cause should be specific to "who, did what, led to what" — avoid vague descriptions like "poor execution."
 
-#### Step 4：评估概率与影响
+#### Step 4: Assess Probability and Impact
 
-对每条原因打分：
-
-```
-原因 | 发生概率（高/中/低）| 影响程度（高/中/低）| 当前是否有预防措施
-```
-
-优先关注「高概率 + 高影响 + 无预防措施」的原因。
-
-#### Step 5：制定预防行动
-
-针对高优先级风险，设计预防机制：
+Score each cause:
 
 ```
-风险：[...]
-预防行动：[...]
-触发信号（早期预警）：[...]
-负责人/时限：[...]
+Cause | Probability (High/Medium/Low) | Impact (High/Medium/Low) | Current preventive measures in place
 ```
 
----
+Prioritize causes with "high probability + high impact + no preventive measures."
 
-### 模式 B：反事实思维（关键变量识别）
+#### Step 5: Develop Preventive Actions
 
-#### Step 1：定义参照事件
-
-```
-实际发生的情况：[...]
-```
-
-#### Step 2：改变单一变量
-
-每次只改变**一个**条件，问「如果 X 不同，结果会怎样？」
+For high-priority risks, design preventive mechanisms:
 
 ```
-反事实1：如果 [变量A] 不同（具体：...），结果会是 [...]
-反事实2：如果 [变量B] 不同（具体：...），结果会是 [...]
-```
-
-#### Step 3：识别关键变量
-
-哪个变量的改变对结果影响最大？这个变量就是**关键杠杆点**。
-
-#### Step 4：转化为行动
-
-```
-关键变量：[...]
-未来如何影响/控制这个变量：[...]
+Risk: [...]
+Preventive action: [...]
+Trigger signal (early warning): [...]
+Responsible person/Deadline: [...]
 ```
 
 ---
 
-## 输出模板
+### Mode B: Counterfactual Thinking (Key Variable Identification)
 
-### Pre-mortem 输出
-
-```
-计划概述：[...]
-
-【失败情景】（假设时间点：[...]，计划已彻底失败）
-
-高风险失败路径：
-  ① [原因] — 概率：高 — 影响：高 — 预防措施：[无/有（描述）]
-  ② [原因] — 概率：中 — 影响：高 — 预防措施：[...]
-
-优先预防行动：
-  1. [行动] — 解决风险① — 触发信号：[...] — 负责人：[...]
-  2. [行动] — 解决风险② — 触发信号：[...] — 负责人：[...]
-
-计划中需要修改的部分：[...]
-置信度变化：优化前 [x%] → 优化后 [y%]
-```
-
-### 反事实输出
+#### Step 1: Define Reference Event
 
 ```
-参照事件：[...]
+What actually happened: [...]
+```
 
-关键反事实分析：
-  变量A改变 → 结果变化：[...]  影响程度：高/中/低
-  变量B改变 → 结果变化：[...]  影响程度：高/中/低
+#### Step 2: Change Single Variable
 
-最关键变量：[...]
-未来行动：[...]
+Each time change only **one** condition, ask "what if X were different, what would the result be?"
+
+```
+Counterfactual 1: If [Variable A] were different (specifically: ...), the result would be [...]
+Counterfactual 2: If [Variable B] were different (specifically: ...), the result would be [...]
+```
+
+#### Step 3: Identify Key Variables
+
+Which variable change has the greatest impact on the result? This variable is the **key leverage point**.
+
+#### Step 4: Translate into Action
+
+```
+Key variable: [...]
+How to influence/control this variable in the future: [...]
 ```
 
 ---
 
-## 执行示例
+## Output Templates
 
-**Pre-mortem 场景**：准备在三个月内完成产品 MVP 并发布
+### Pre-mortem Output
 
 ```
-【失败情景】三个月后，MVP 发布严重延期，或发布后无人使用。
+Plan overview: [...]
 
-失败路径头脑风暴：
-  - 核心功能技术难度被低估，研发拖期 6 周
-  - 团队对目标用户的需求理解有偏差，做出来没人要
-  - 竞品在我们发布前两周推出了类似功能
-  - 关键工程师离职导致进度中断
-  - 用户测试反馈极差但没有时间迭代
+【Failure Scenario】(Assumed time point: [...], plan has completely failed)
 
-优先风险：
-  ① 需求理解偏差 — 概率：高 — 影响：高 — 无预防措施
-  ② 技术低估 — 概率：中 — 影响：高 — 无预防措施
+High-risk failure paths:
+  ① [Cause] — Probability: High — Impact: High — Preventive measures: [None/Yes (description)]
+  ② [Cause] — Probability: Medium — Impact: High — Preventive measures: [...]
 
-预防行动：
-  ① 发布前4周做5个目标用户深访，核心场景验证 — 触发信号：用户测试满意度<70%
-  ② 第1周完成技术评估，识别高风险模块 — 触发信号：任一模块评估超2倍预期工时
+Priority preventive actions:
+  1. [Action] — Addresses risk ① — Trigger signal: [...] — Responsible person: [...]
+  2. [Action] — Addresses risk ② — Trigger signal: [...] — Responsible person: [...]
+
+Parts of the plan that need modification: [...]
+Confidence level change: Before optimization [x%] → After optimization [y%]
+```
+
+### Counterfactual Output
+
+```
+Reference event: [...]
+
+Key counterfactual analysis:
+  Variable A change → Result change: [...]  Impact: High/Medium/Low
+  Variable B change → Result change: [...]  Impact: High/Medium/Low
+
+Most critical variable: [...]
+Future action: [...]
 ```
 
 ---
 
-## 常见陷阱
+## Execution Example
 
-| 陷阱 | 说明 | 避免方式 |
+**Pre-mortem scenario**: Preparing to complete product MVP and launch within three months
+
+```
+【Failure Scenario】Three months later, MVP launch is severely delayed, or no one uses it after launch.
+
+Failure path brainstorm:
+  - Core feature technical difficulty underestimated, R&D delayed 6 weeks
+  - Team's understanding of target user needs is off, built something no one wants
+  - Competitor launches similar feature two weeks before our launch
+  - Key engineer resignation causes progress interruption
+  - User test feedback is terrible but no time to iterate
+
+Priority risks:
+  ① Requirement understanding deviation — Probability: High — Impact: High — No preventive measures
+  ② Technical underestimation — Probability: Medium — Impact: High — No preventive measures
+
+Preventive actions:
+  ① 4 weeks before launch, conduct 5 in-depth interviews with target users, validate core scenarios — Trigger signal: User test satisfaction <70%
+  ② Complete technical assessment in Week 1, identify high-risk modules — Trigger signal: Any module assessment exceeds 2x estimated work hours
+```
+
+---
+
+## Common Pitfalls
+
+| Pitfall | Description | How to Avoid |
 |------|------|---------|
-| 失败原因太泛 | 「资源不足」「执行不力」无法转化为行动 | 追问到具体的人、事、时间节点 |
-| 只列风险不给预防措施 | Pre-mortem 变成吐槽大会 | 每条高风险必须对应一个预防行动 |
-| 反事实变成后悔清单 | 对无法改变的过去做反事实 | 只对「未来可控变量」做反事实；过去复盘只提炼规律 |
-| 过度悲观 | Pre-mortem 后团队士气受损 | 明确说明：识别风险是为了成功，不是预测失败 |
+| Failure causes too vague | "Insufficient resources," "poor execution" cannot be translated into actions | Drill down to specific people, events, time points |
+| Only listing risks without preventive measures | Pre-mortem becomes a complaint session | Each high risk must have a corresponding preventive action |
+| Counterfactual becomes a regret list | Doing counterfactual on unchangeable past | Only do counterfactual on "future controllable variables"; retrospective only extracts patterns |
+| Overly pessimistic | Team morale damaged after Pre-mortem | Clearly state: Identifying risks is for success, not predicting failure |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **前置于重大决策**：RICE/OKR 确定方向后，用 Pre-mortem 做最后一次风险审查
-- **配合六顶思考帽**：Pre-mortem 是黑帽思维的深化版本
-- **配合苏格拉底提问**：质疑假设后，用反事实思维测试假设失败时的影响
-- **输出接 Eisenhower Matrix**：预防行动按紧急/重要分类，排入执行优先级
+- **Precedes major decisions**: After RICE/OKR determines direction, use Pre-mortem for final risk review
+- **Combined with Six Thinking Hats**: Pre-mortem is a deepened version of Black Hat thinking
+- **Combined with Socratic Questioning**: After questioning assumptions, use counterfactual thinking to test the impact if assumptions fail
+- **Output feeds Eisenhower Matrix**: Preventive actions classified by urgency/importance, scheduled into execution priority
 
 ---
 
-## Tigers / Paper Tigers / Elephants 三分类法
+## Tigers / Paper Tigers / Elephants Three-Category Method
 
-Pre-mortem 头脑风暴会产出大量风险条目，直接按"概率 × 影响"打分容易让团队陷入"每条都重要"的困境。三分类法把风险按其性质归为三类，分别采用不同响应策略：
+Pre-mortem brainstorming produces many risk items; directly scoring by "probability × impact" easily leads teams into a "everything is important" dilemma. The three-category method groups risks by nature into three types, each with different response strategies:
 
-| 风险类型 | 概率 | 影响 | 性质 | 响应策略 |
+| Risk Type | Probability | Impact | Nature | Response Strategy |
 |---------|------|------|------|---------|
-| **Tiger（真虎）** | 高 | 高 | 真实且严重的威胁，极可能发生并造成重大损害 | **必须立即行动**：分配专人/预算预防，设早期预警，进入 OKR |
-| **Paper Tiger（纸虎）** | 低 | 高 | 看起来吓人但实际发生概率低 | **不要过度投入**：写一份应对预案即可，避免占用主力资源；定期重评估概率 |
-| **Elephant（大象）** | 高 | 低 | 几乎必然发生但单次影响有限 | **监控而非消除**：建立常态监控与快速响应流程；批量处理而非逐个预防 |
+| **Tiger (Real Tiger)** | High | High | Real and serious threat, highly likely to occur and cause significant damage | **Must act immediately**: Assign dedicated personnel/budget for prevention, set early warnings, incorporate into OKR |
+| **Paper Tiger** | Low | High | Looks scary but actual probability is low | **Do not over-invest**: Write a contingency plan only, avoid consuming main resources; regularly reassess probability |
+| **Elephant** | High | Low | Almost certain to occur but single impact is limited | **Monitor rather than eliminate**: Establish routine monitoring and rapid response processes; handle in batches rather than individually |
 
-**使用方式**：
-1. Pre-mortem 产出的每条风险，先判断属于 Tiger / Paper Tiger / Elephant
-2. Tiger 进入预防行动清单（参考 Step 5）
-3. Paper Tiger 进入"观察清单"，每季度重评估概率变化
-4. Elephant 进入"运营清单"，由运营/CS 团队日常处理
+**Usage method**:
+1. For each risk produced by Pre-mortem, first determine if it's Tiger / Paper Tiger / Elephant
+2. Tigers go into the preventive action list (reference Step 5)
+3. Paper Tigers go into the "observation list," reassess probability changes quarterly
+4. Elephants go into the "operations list," handled daily by operations/CS team
 
-**反模式**：
-- 把所有 Paper Tiger 当 Tiger 处理 → 资源被稀释，真正的 Tiger 反而被忽视
-- 把 Elephant 当 Tiger 处理 → 投入大量预防资源却收效有限
-- 把 Tiger 当 Paper Tiger → "黑天鹅"事故的根源
+**Anti-patterns**:
+- Treating all Paper Tigers as Tigers → Resources diluted, real Tigers overlooked
+- Treating Elephants as Tigers → Investing heavily in prevention with limited returns
+- Treating Tigers as Paper Tigers → Root cause of "black swan" incidents

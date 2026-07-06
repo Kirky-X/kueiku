@@ -1,177 +1,177 @@
-# Socratic Questioning · 苏格拉底式提问
+# Socratic Questioning · Socratic Questioning
 
-## 核心理念
+## Core Idea
 
-通过系统性追问，**澄清假设、检验逻辑、暴露矛盾**，帮助思考者自己发现问题或结论的根基是否稳固。不是提供答案，而是通过提问让前提浮出水面。
+Through systematic questioning, **clarify assumptions, test logic, and expose contradictions**, helping thinkers discover whether the foundations of their problems or conclusions are sound. Not providing answers, but using questions to bring assumptions to the surface.
 
-> 5 Whys 追问「为什么发生」；苏格拉底提问追问「你凭什么这么认为」。
+> 5 Whys asks "why did this happen"; Socratic questioning asks "what makes you think so?"
 
-**六类提问方向：**
+**Six Categories of Questioning Directions:**
 
-| 类型 | 目的 | 示例问题 |
-|------|------|---------|
-| 澄清概念 | 弄清楚「X」到底是什么意思 | 「你说的『成功』具体指什么？」 |
-| 质疑假设 | 检验前提是否成立 | 「这个判断依赖什么假设？这个假设一定成立吗？」 |
-| 追问证据 | 验证论据是否支撑结论 | 「你有什么证据支持这个判断？」 |
-| 探索视角 | 引入反例或不同立场 | 「有没有人会得出相反结论？他们的依据是什么？」 |
-| 考察影响 | 追问结论的后续效应 | 「如果这个是真的，会产生什么连锁影响？」 |
-| 反问问题本身 | 质疑问题的设定 | 「为什么这是一个需要解决的问题？」 |
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 用户提出模糊或自相矛盾的需求时
-- 策略/决策依赖未经验证的假设
-- 需要帮助思考者厘清自己真正想要什么
-- 现有框架无法生效，因为问题本身就定义错了
-
-⚠️ **慎用**
-- 问题已明确、只需执行分析（浪费时间）
-- 时间紧迫需要快速决策
-- 对方处于情绪激动状态（苏格拉底提问容易被误读为攻击）
+| Type | Purpose | Example Questions |
+|------|---------|-------------------|
+| Clarify concepts | Understand what "X" actually means | "What specifically do you mean by 'success'?" |
+| Question assumptions | Test whether premises hold | "What assumption does this judgment depend on? Does this assumption necessarily hold?" |
+| Demand evidence | Verify that evidence supports the conclusion | "What evidence do you have to support this judgment?" |
+| Explore perspectives | Introduce counterexamples or different positions | "Could anyone reach the opposite conclusion? What is their basis?" |
+| Examine impact | Ask about the downstream effects of the conclusion | "If this is true, what chain reactions would it produce?" |
+| Question the question itself | Challenge the problem's framing | "Why is this a problem that needs solving?" |
 
 ---
 
-## 执行步骤
+## Applicable Scenarios
 
-### Step 1：识别核心主张
+✅ **Best suited for**
+- When users present vague or contradictory requirements
+- When strategies/decisions depend on unverified assumptions
+- When thinkers need help clarifying what they truly want
+- When existing frameworks don't work because the problem itself is poorly defined
 
-提取对方陈述中的**核心主张**或**核心假设**，写成一句话：
-
-```
-主张：「[具体陈述]」
-```
-
-### Step 2：澄清概念
-
-对主张中的关键词逐一追问：
-
-```
-「[关键词] 在这个情境下具体指什么？」
-「你用这个词时，和[相似词]有什么区别？」
-```
-
-目标：排除歧义，确保讨论的是同一件事。
-
-### Step 3：质疑假设
-
-识别主张依赖的前提，逐条检验：
-
-```
-「这个判断依赖什么假设？」
-「这个假设在什么条件下不成立？」
-「你是一直这样认为的，还是因为[特定经历/信息]才这样认为？」
-```
-
-### Step 4：追问证据
-
-```
-「支撑这个结论的证据是什么？」
-「这个证据是直接的还是间接的？」
-「有没有与此相反的证据？你如何解释它？」
-```
-
-### Step 5：引入反例与视角
-
-```
-「有没有情况下这个结论不成立？」
-「持相反观点的人会怎么说？」
-「如果换一个背景/群体/时间点，结论还一样吗？」
-```
-
-### Step 6：考察影响与连锁效应
-
-```
-「如果这个是真的，最直接的影响是什么？」
-「这个结论会导致什么你可能不接受的结论？」
-「如果按这个逻辑行动，最坏的情形是什么？」
-```
-
-### Step 7：反问问题本身（必要时）
-
-```
-「这是我们真正需要回答的问题吗？」
-「如果这个问题不存在，真正的问题是什么？」
-```
+⚠️ **Use with caution**
+- When the problem is already clear and only execution analysis is needed (waste of time)
+- When time is tight and quick decisions are needed
+- When the other party is emotionally agitated (Socratic questioning is easily misread as an attack)
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Identify the Core Claim
+
+Extract the **core claim** or **core assumption** from the other party's statement, written as one sentence:
 
 ```
-原始主张：[用户/问题的核心陈述]
+Claim: "[Specific statement]"
+```
 
-澄清后的主张：[消除歧义后的精确表述]
+### Step 2: Clarify Concepts
 
-核心假设（已识别）：
-  假设1：[...] — 是否成立？[...]
-  假设2：[...] — 是否成立？[...]
+Question key terms in the claim one by one:
 
-证据检验：
-  支撑证据：[...]
-  反向证据：[...]
-  证据缺口：[...]
+```
+"What does '[key term]' specifically mean in this context?"
+"When you use this word, how does it differ from [similar word]?"
+```
 
-反例/异视角：[...]
+Goal: Eliminate ambiguity and ensure discussion is about the same thing.
 
-连锁影响：[...]
+### Step 3: Question Assumptions
 
-结论：
-  原始主张的成立条件：[...]
-  需要修正的部分：[...]
-  或：主张的更精确版本：[...]
+Identify the premises the claim depends on, test each:
+
+```
+"What assumption does this judgment depend on?"
+"Under what conditions would this assumption not hold?"
+"Have you always believed this, or is it because of [specific experience/information]?"
+```
+
+### Step 4: Demand Evidence
+
+```
+"What evidence supports this conclusion?"
+"Is this evidence direct or indirect?"
+"Is there contradictory evidence? How do you explain it?"
+```
+
+### Step 5: Introduce Counterexamples and Perspectives
+
+```
+"Are there situations where this conclusion doesn't hold?"
+"What would someone with the opposite view say?"
+"If you changed the context/group/timing, would the conclusion still be the same?"
+```
+
+### Step 6: Examine Impact and Chain Reactions
+
+```
+"If this is true, what is the most direct impact?"
+"What conclusion might this lead to that you wouldn't accept?"
+"If you acted on this logic, what is the worst-case scenario?"
+```
+
+### Step 7: Question the Question Itself (when necessary)
+
+```
+"Is this really the question we need to answer?"
+"If this question didn't exist, what would the real question be?"
 ```
 
 ---
 
-## 执行示例
-
-**场景**：产品团队认为「我们应该做一个 AI 客服机器人来降低成本」
+## Output Template
 
 ```
-澄清概念：
-  Q：「降低成本」——具体是哪类成本？人力成本？响应时间成本？
-  A：主要是客服人力成本（当前月均60万）
+Original claim: [User/problem's core statement]
 
-质疑假设：
-  Q：AI客服能替代的是哪类工单？
-  A：约40%是标准化FAQ类
-  → 假设：60万成本中，40%由FAQ工单产生 → 需验证
+Clarified claim: [Precise statement after disambiguation]
 
-追问证据：
-  Q：有数据支持AI客服能提升还是降低满意度吗？
-  A：（无数据）
-  → 证据缺口：AI客服对满意度的影响未知
+Core assumptions (identified):
+  Assumption 1: [...] — Does it hold? [...]
+  Assumption 2: [...] — Does it hold? [...]
 
-引入反例：
-  Q：有没有案例中AI客服反而增加了成本？
-  A：复杂工单被AI误导后，人工处理成本翻倍
+Evidence testing:
+  Supporting evidence: [...]
+  Contradictory evidence: [...]
+  Evidence gaps: [...]
 
-结论：
-  原始主张依赖的假设有两个未验证：
-  1. FAQ工单占成本的比例
-  2. AI不会增加复杂工单的处理成本
-  修正后的主张：先做工单分类分析，再决定是否上AI客服
+Counterexample / alternative perspective: [...]
+
+Chain reactions: [...]
+
+Conclusion:
+  Conditions under which the original claim holds: [...]
+  Parts needing revision: [...]
+  Or: More precise version of the claim: [...]
 ```
 
 ---
 
-## 常见陷阱
+## Execution Example
 
-| 陷阱 | 说明 | 避免方式 |
-|------|------|---------|
-| 变成审讯 | 连续质疑让对方感到被攻击 | 每个问题后给空间回应，语气保持中立好奇 |
-| 质疑一切 | 没有终止条件，无限追问 | 设定目标：找到1-3个关键假设即可 |
-| 跳过澄清直接质疑 | 还没确认概念就开始争论 | 始终先澄清概念再质疑假设 |
-| 用来赢得辩论 | 苏格拉底法变成诡辩工具 | 目标是找到更好的答案，不是证明对方错了 |
+**Scenario**: The product team believes "we should build an AI customer service bot to reduce costs"
+
+```
+Clarify concepts:
+  Q: "Reduce costs" — specifically what kind of costs? Labor costs? Response time costs?
+  A: Mainly customer service labor costs (currently averaging 600K/month)
+
+Question assumptions:
+  Q: What types of tickets can AI customer service replace?
+  A: About 40% are standardized FAQ-type tickets
+  → Assumption: Of the 600K cost, 40% is generated by FAQ tickets → Needs verification
+
+Demand evidence:
+  Q: Is there data on whether AI customer service improves or reduces satisfaction?
+  A: (No data)
+  → Evidence gap: Unknown impact of AI customer service on satisfaction
+
+Introduce counterexample:
+  Q: Are there cases where AI customer service actually increased costs?
+  A: Complex tickets misdirected by AI doubled manual handling costs
+
+Conclusion:
+  The original claim depends on two unverified assumptions:
+  1. The proportion of FAQ tickets in total costs
+  2. AI won't increase processing costs for complex tickets
+  Revised claim: First conduct ticket classification analysis, then decide whether to implement AI customer service
+```
 
 ---
 
-## 与其他方法论的关系
+## Common Pitfalls
 
-- **前置于任何分析框架**：问题定义模糊时，先用苏格拉底法澄清再选框架
-- **与 First Principles 互补**：First Principles 从零构建；苏格拉底法解构现有假设
-- **与 Pre-mortem 配合**：苏格拉底法识别假设后，用 Pre-mortem 预演假设失败的情形
-- **与六顶思考帽衔接**：苏格拉底提问可作为六帽中「黑帽」阶段的深化工具
+| Pitfall | Description | How to Avoid |
+|---------|-------------|-------------|
+| Turning into an interrogation | Continuous questioning makes the other party feel attacked | Give space for response after each question; maintain a neutral, curious tone |
+| Questioning everything | No termination condition, infinite questioning | Set a goal: find 1-3 key assumptions and stop |
+| Skipping clarification, jumping to challenges | Arguing before confirming concepts | Always clarify concepts before questioning assumptions |
+| Using it to win arguments | Socratic method becomes a sophistry tool | The goal is to find a better answer, not to prove the other person wrong |
+
+---
+
+## Relationship with Other Methodologies
+
+- **Precedes any analysis framework**: When problem definition is ambiguous, clarify with Socratic method first, then choose a framework
+- **Complementary to First Principles**: First principles builds from scratch; Socratic method deconstructs existing assumptions
+- **Works with Pre-mortem**: After Socratic method identifies assumptions, use Pre-mortem to simulate what happens when assumptions fail
+- **Connects with Six Thinking Hats**: Socratic questioning can serve as a deepening tool during the "black hat" phase

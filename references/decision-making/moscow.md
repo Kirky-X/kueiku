@@ -1,143 +1,143 @@
-# MoSCoW Method · 莫斯科法
+# MoSCoW Method
 
-## 核心理念
+## Core Concept
 
-由 Dai Clegg 在 DSDM 方法中提出，将需求按**必要性程度**分为四个优先级：Must have（必须有）、Should have（应该有）、Could have（可以有）、Won't have（不会有）。名称取自首字母 M-S-C-W。核心洞察：**明确"不做"比"都做"更有价值**。
+Proposed by Dai Clegg in the DSDM method, this classifies requirements into four priority levels based on **necessity**: Must have, Should have, Could have, Won't have. The name comes from the initials M-S-C-W. Core insight: **Explicitly stating "what not to do" is more valuable than "doing everything."**
 
 ```mermaid
 flowchart TD
-    M["Must have — 没有它产品不可交付（≈ 60% 工作量）"]
-    S["Should have — 重要但可变通（≈ 20% 工作量）"]
-    C["Could have — 锦上添花（≈ 20% 工作量）"]
-    W["Won't have — 明确排除（0% 工作量）"]
+    M["Must have — Without it, the product cannot be delivered (~60% workload)"]
+    S["Should have — Important but can be worked around (~20% workload)"]
+    C["Could have — Nice to have (~20% workload)"]
+    W["Won't have — Explicitly excluded (0% workload)"]
     M --> S
     S --> C
     C --> W
 ```
 
-| 优先级 | 含义 | 判断标准 | 工作量占比 |
+| Priority | Meaning | Judgment criteria | Workload share |
 |--------|------|---------|-----------|
-| **Must have** | 必须有 | 没有它 = 项目失败 / 产品不可用 | ~60% |
-| **Should have** | 应该有 | 重要但有替代方案，延迟不致命 | ~20% |
-| **Could have** | 可以有 | 提升体验，缺少不影响核心价值 | ~20% |
-| **Won't have** | 不会有 | 本次不纳入，明确排除 | 0% |
+| **Must have** | Must have | Without it = project failure / product unusable | ~60% |
+| **Should have** | Should have | Important but has alternatives, delay not fatal | ~20% |
+| **Could have** | Could have | Enhances experience, absence doesn't affect core value | ~20% |
+| **Won't have** | Won't have | Not included this time, explicitly excluded | 0% |
 
-> **关键区分**：MoSCoW 分类的是**需求的必要性**，不是紧迫性。Eisenhower Matrix 分类的是**任务的紧迫×重要性**。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 项目/版本范围管理（什么进 V1.0，什么不进）
-- Sprint 规划中的需求筛选
-- 利益相关者期望对齐（Won't have 管理预期）
-- MVP 范围界定（Must have = MVP）
-
-⚠️ **慎用**
-- 需要量化评分时（用 RICE 更精准）
-- 对任务/活动排序时（用 Eisenhower Matrix）
-- 团队对"Must"标准没有共识时（所有需求都变 Must）
+> **Key distinction**: MoSCoW classifies **requirement necessity**, not urgency. Eisenhower Matrix classifies **task urgency × importance**.
 
 ---
 
-## 执行步骤
+## Applicable Scenarios
 
-### Step 1：收集需求清单
+✅ **Best suited for**
+- Project/release scope management (what goes into V1.0, what doesn't)
+- Requirement screening in Sprint planning
+- Stakeholder expectation alignment (Won't have manages expectations)
+- MVP scope definition (Must have = MVP)
 
-列出所有待分类的需求/功能，确保每条描述清晰、可理解。来源可包括：用户反馈、业务目标拆解、竞品对标、技术债。
+⚠️ **Use with caution**
+- When quantified scoring is needed (RICE is more precise)
+- When ordering tasks/activities (use Eisenhower Matrix)
+- When the team lacks consensus on "Must" criteria (all requirements become Must)
 
-### Step 2：逐条分类
+---
 
-对每条需求归入 M/S/C/W。
+## Execution Steps
 
-**分类技巧**：
-- 先标 Must have（用严格标准），再标 Won't have（明确排除），剩余区分 S 和 C
-- 犹豫 M 还是 S → 默认归 S
-- 犹豫 C 还是 W → 默认归 W
+### Step 1: Collect Requirement List
 
-**Must have 验证问题**：
-- "如果没有这个功能，产品还能上线吗？"
-- "如果没有，用户能完成核心任务吗？"
-- "这是法律/合规/安全硬性要求吗？"
+List all requirements/features to be classified, ensuring each description is clear and understandable. Sources may include: user feedback, business goal decomposition, competitive benchmarking, technical debt.
 
-> 如果以上任一答案为"是"，则确认是 Must have。如果全部为"否"，应降级为 Should have。
+### Step 2: Classify Item by Item
 
-### Step 3：验证工作量分布
+Classify each requirement into M/S/C/W.
+
+**Classification tips**:
+- First mark Must have (use strict criteria), then mark Won't have (explicitly exclude), then distinguish S and C for the rest
+- Hesitating between M and S → default to S
+- Hesitating between C and W → default to W
+
+**Must have verification questions**:
+- "If this feature is missing, can the product still launch?"
+- "If missing, can users complete core tasks?"
+- "Is this a legal/compliance/safety hard requirement?"
+
+> If any of the above answers is "yes," confirm it as Must have. If all are "no," it should be downgraded to Should have.
+
+### Step 3: Verify Workload Distribution
 
 ```
-Must have ≈ 60% 总工作量
+Must have ≈ 60% total workload
 Should have ≈ 20%
 Could have ≈ 20%
 
-Must > 70% → 分类标准过松，重新审视
-Must < 40% → 可能遗漏关键需求
+Must > 70% → Classification criteria too loose, review again
+Must < 40% → May be missing key requirements
 ```
 
-### Step 4：利益相关者对齐
+### Step 4: Stakeholder Alignment
 
-与利益相关者逐条确认，重点对齐：
-- Must have 是否真的是"没有就不行"
-- Won't have 的理由是否被理解和接受
-- Should have 和 Could have 的取舍逻辑
+Confirm item by item with stakeholders, focusing on alignment:
+- Whether Must have is truly "can't do without"
+- Whether the reason for Won't have is understood and accepted
+- The trade-off logic for Should have and Could have
 
-**对齐技巧**：让利益相关者对 Must have 做减法——"如果只能保留一半的 Must have，你保留哪些？"
+**Alignment technique**: Ask stakeholders to subtract from Must have — "If you could only keep half of the Must have, which would you keep?"
 
-### Step 5：文档化 Won't have
-
-```
-Won't have 清单：
-  W1: [需求] — 排除理由：[...] — 重新评估：[V2.0]
-  W2: [需求] — 排除理由：[...] — 重新评估：[用户量达 X 时]
-```
-
----
-
-## 输出模板
+### Step 5: Document Won't have
 
 ```
-项目/版本：[名称]  分类时间：[日期]
-
-Must have（必须有，≈60% 工作量）：
-  M1: [需求] — 理由：[没有它产品不可用]
-  M2: [需求] — 理由：[...]
-
-Should have（应该有，≈20% 工作量）：
-  S1: [需求] — 替代方案：[...]
-  S2: [需求] — 替代方案：[...]
-
-Could have（可以有，≈20% 工作量）：
-  C1: [需求] — 价值说明：[...]
-  C2: [需求] — 价值说明：[...]
-
-Won't have（不会有，本次排除）：
-  W1: [需求] — 排除理由：[...] — 重新评估：[时间/条件]
-  W2: [需求] — 排除理由：[...] — 重新评估：[时间/条件]
-
-工作量验证：Must [%] / Should [%] / Could [%]
-风险备注：进度落后优先砍除 [C1, C2]；资源增加优先补充 [S1]
+Won't have list:
+  W1: [Requirement] — Exclusion reason: [...] — Re-evaluation: [V2.0]
+  W2: [Requirement] — Exclusion reason: [...] — Re-evaluation: [When user count reaches X]
 ```
 
 ---
 
-## 常见陷阱
+## Output Template
 
-| 陷阱 | 避免方式 |
+```
+Project/Release: [Name]  Classification Date: [Date]
+
+Must have (must have, ~60% workload):
+  M1: [Requirement] — Reason: [Without it, product unusable]
+  M2: [Requirement] — Reason: [...]
+
+Should have (should have, ~20% workload):
+  S1: [Requirement] — Alternative: [...]
+  S2: [Requirement] — Alternative: [...]
+
+Could have (could have, ~20% workload):
+  C1: [Requirement] — Value explanation: [...]
+  C2: [Requirement] — Value explanation: [...]
+
+Won't have (won't have, excluded this time):
+  W1: [Requirement] — Exclusion reason: [...] — Re-evaluation: [Time/condition]
+  W2: [Requirement] — Exclusion reason: [...] — Re-evaluation: [Time/condition]
+
+Workload verification: Must [%] / Should [%] / Could [%]
+Risk notes: If behind schedule, prioritize cutting [C1, C2]; if resources increase, prioritize adding [S1]
+```
+
+---
+
+## Common Pitfalls
+
+| Pitfall | How to Avoid |
 |------|---------|
-| 所有需求都变成 Must have | 用"没有它产品能上线吗？"严格检验，默认归 S 而非 M |
-| Won't have 不敢写 | Won't have 是管理期望的关键，不写 = 隐性范围蔓延 |
-| S 和 C 区分模糊 | S = 延迟会明显影响体验，C = 延迟几乎无感 |
-| 一次性分类不再调整 | 随项目推进需动态调整，S 可能升级为 M |
-| 与 Eisenhower Matrix 混用 | MoSCoW 分类需求必要性，Eisenhower 分类任务紧迫性 |
-| 忽视需求间的依赖 | B 是 Must 但依赖 C，则 C 也应升级为 Must |
-| Won't have 不记录重新评估条件 | 每条 Won't have 应注明何时重新考虑，避免永久遗忘 |
+| All requirements become Must have | Use "Can the product launch without it?" as strict check, default to S not M |
+| Won't have not written down | Won't have is key for managing expectations, not writing = hidden scope creep |
+| S and C distinction unclear | S = Delay noticeably affects experience, C = Delay almost imperceptible |
+| One-time classification without adjustment | Need dynamic adjustment as project progresses, S may upgrade to M |
+| Confusing with Eisenhower Matrix | MoSCoW classifies requirement necessity, Eisenhower classifies task urgency |
+| Ignoring dependencies between requirements | If B is Must but depends on C, then C should also be upgraded to Must |
+| Won't have not recording re-evaluation conditions | Each Won't have should note when to reconsider, avoiding permanent omission |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **配合 RICE**：MoSCoW 做粗粒度必要性分类，RICE 在同类需求内做量化排序
-- **配合 Kano**：Kano 必备型 → MoSCoW Must have；Kano 兴奋型 → MoSCoW Could have
-- **配合 Eisenhower Matrix**：MoSCoW 管需求范围，Eisenhower 管任务执行优先级
-- **配合 OKR**：OKR 定义目标，MoSCoW 界定实现目标的 MVP 范围
-- **配合 Lean BML**：MoSCoW 的 Must have 定义 MVP，BML 循环验证 MVP 假设
+- **Combined with RICE**: MoSCoW does coarse-grained necessity classification, RICE does quantitative ranking within similar requirements
+- **Combined with Kano**: Kano must-be → MoSCoW Must have; Kano attractive → MoSCoW Could have
+- **Combined with Eisenhower Matrix**: MoSCoW manages requirement scope, Eisenhower manages task execution priority
+- **Combined with OKR**: OKR defines goals, MoSCoW defines MVP scope for achieving goals
+- **Combined with Lean BML**: MoSCoW's Must have defines MVP, BML loop validates MVP hypotheses

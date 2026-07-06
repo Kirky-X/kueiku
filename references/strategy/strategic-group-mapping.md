@@ -1,143 +1,143 @@
-# Strategic Group Mapping · 战略群组图
+# Strategic Group Mapping
 
-## 核心理念
+## Core Concept
 
-行业内采用**相似战略**的企业归为同一"战略群组"，通过绘制群组图分析群组间的竞争壁垒与利润差异。迈克尔·波特提出，行业内部并非铁板一块，而是由若干战略群组构成，群组间的**移动壁垒**（Mobility Barriers）决定了竞争格局。
+Firms within an industry adopting **similar strategies** are grouped into the same "strategic group." By mapping group charts, you analyze inter-group competitive barriers and profit differentials. Michael Porter proposed that an industry is not monolithic but composed of several strategic groups, with **mobility barriers** between groups determining the competitive landscape.
 
-> 战略群组图揭示行业内部结构：哪些群组利润高、哪些群组竞争激烈、新进入者最可能落入哪个群组。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 行业竞争结构分析
-- 新进入者定位与战略差异化决策
-- 识别行业内利润最高的群组
-- 并购目标筛选（同群组或跨群组）
-
-⚠️ **慎用**
-- 行业内企业高度同质化（无群组可言，直接用 Five Forces）
-- 战略变量难以量化（群组划分主观性大）
-- 初创行业（战略尚未分化稳定）
+> Strategic group maps reveal intra-industry structure: which groups have high profits, which face intense competition, and where new entrants are most likely to land.
 
 ---
 
-## 执行步骤
+## Use Cases
 
-### Step 1：识别战略变量
+✅ **Best for**
+- Industry competitive structure analysis
+- New entrant positioning and strategic differentiation decisions
+- Identifying the highest-profit groups within an industry
+- M&A target screening (within or across groups)
 
-选取 2-3 个能区分行业内企业战略的关键变量。常见战略变量：
+⚠️ **Use with caution**
+- Highly homogeneous firms within an industry (no meaningful groups, use Five Forces directly)
+- Strategic variables difficult to quantify (subjective group delineation)
+- nascent industries (strategies not yet differentiated or stabilized)
 
-```
-可选战略变量（选 2-3 个，避免过多）：
-  - 产品线宽度（窄 ↔ 宽）
-  - 价格定位（低价 ↔ 高价）
-  - 渠道覆盖（区域 ↔ 全国 ↔ 全球）
-  - 技术投入强度（低 ↔ 高）
-  - 服务水平（自助 ↔ 全服务）
-  - 品牌定位（功能 ↔ 情感）
-  - 垂直整合度（外包 ↔ 全链条）
-```
+---
 
-> 变量选择决定群组划分质量。选太多维度会让图无法绘制；选错维度会掩盖真实群组。
+## Execution Steps
 
-### Step 2：聚类分组
+### Step 1: Identify Strategic Variables
 
-将行业内主要企业按所选变量定位，聚类为若干群组：
+Select 2-3 key variables that differentiate firms' strategies within the industry. Common strategic variables:
 
 ```
-企业定位表：
-  企业 A — [变量1: X] / [变量2: Y] → 群组 ?
-  企业 B — [变量1: X] / [变量2: Y] → 群组 ?
+Selectable strategic variables (pick 2-3, avoid too many):
+  - Product line width (Narrow ↔ Wide)
+  - Price positioning (Low ↔ High)
+  - Channel coverage (Regional ↔ National ↔ Global)
+  - Technology investment intensity (Low ↔ High)
+  - Service level (Self-service ↔ Full-service)
+  - Brand positioning (Functional ↔ Emotional)
+  - Vertical integration (Outsourced ↔ Full chain)
+```
+
+> Variable selection determines group delineation quality. Too many dimensions make the map unreadable; wrong dimensions hide real groups.
+
+### Step 2: Cluster into Groups
+
+Position major industry firms by the selected variables, clustering into several groups:
+
+```
+Firm positioning table:
+  Firm A — [Variable1: X] / [Variable2: Y] → Group ?
+  Firm B — [Variable1: X] / [Variable2: Y] → Group ?
   ...
 ```
 
-同一群组内企业战略相似，群组间战略明显不同。
+Firms within the same group have similar strategies; strategies differ significantly between groups.
 
-### Step 3：绘制群组图
-
-```
-战略群组图（示例：以产品线宽度 × 价格定位）
-
-  价格 高 |  [群组1: 高端精品]   [群组2: 高端全品类]
-          |        (A, B)              (C)
-          |
-        中 |  [群组3: 中端专业]   [群组4: 中端全品类]
-          |       (D, E)            (F, G, H)
-          |
-        低 |  [群组5: 低价单品]   [群组6: 低价全品类]
-          |        (I)               (J, K)
-          +----------------------------------
-           窄                            宽
-                    产品线宽度
-```
-
-圆圈大小与群组总销售额成正比。
-
-### Step 4：分析群组间壁垒与利润
-
-对每个群组评估：
+### Step 3: Draw the Strategic Group Map
 
 ```
-群组分析：
-  1. 移动壁垒：[群组间移动的障碍 — 规模/品牌/渠道/技术/牌照]
-  2. 利润水平：[群组平均利润率 — 高/中/低]
-  3. 竞争强度：[群组内竞争 — 激烈/温和]
-  4. 进入威胁：[新进入者最可能落入哪个群组]
+Strategic Group Map (Example: Product line width × Price positioning)
+
+  Price High |  [Group 1: Premium Boutique]   [Group 2: Premium Full-range]
+              |        (A, B)                    (C)
+              |
+          Medium |  [Group 3: Mid-range Specialist]   [Group 4: Mid-range Full-range]
+              |       (D, E)                    (F, G, H)
+              |
+          Low |  [Group 5: Low-price Single]   [Group 6: Low-price Full-range]
+              |        (I)                       (J, K)
+              +----------------------------------
+               Narrow                            Wide
+                      Product line width
 ```
 
-**关键洞察**：
-- 移动壁垒高的群组，利润受保护
-- 群组内企业少 + 壁垒高 → 利润空间大
-- 我方所在群组利润低 → 考虑跨群组移动或重塑战略
+Circle size is proportional to the group's total sales.
+
+### Step 4: Analyze Inter-group Barriers and Profits
+
+Evaluate each group:
+
+```
+Group analysis:
+  1. Mobility barriers: [Obstacles to moving between groups — Scale/Brand/Channels/Technology/Licenses]
+  2. Profit level: [Group average profit margin — High/Medium/Low]
+  3. Competitive intensity: [Intra-group competition — Intense/Moderate]
+  4. Entry threat: [Where new entrants are most likely to land]
+```
+
+**Key insights**:
+- Groups with high mobility barriers have protected profits
+- Few firms in a group + high barriers → large profit potential
+- Our group has low profits → consider cross-group movement or strategy reset
 
 ---
 
-## 输出模板
+## Output Template
 
 ```
-战略群组图分析
+Strategic Group Map Analysis
 
-一、战略变量选择
-  变量 1：[名称] — 区分理由：[...]
-  变量 2：[名称] — 区分理由：[...]
+I. Strategic Variable Selection
+  Variable 1: [Name] — Rationale for differentiation: [...]
+  Variable 2: [Name] — Rationale for differentiation: [...]
 
-二、群组划分
-  群组 1：[名称] — 企业：[A, B] — 战略特征：[...]
-  群组 2：[名称] — 企业：[C, D] — 战略特征：[...]
-  群组 3：[名称] — 企业：[E] — 战略特征：[...]
+II. Group Delineation
+  Group 1: [Name] — Firms: [A, B] — Strategic characteristics: [...]
+  Group 2: [Name] — Firms: [C, D] — Strategic characteristics: [...]
+  Group 3: [Name] — Firms: [E] — Strategic characteristics: [...]
 
-三、群组图
-  [二维坐标图，标注群组位置与大小]
+III. Group Map
+  [2D coordinate map, marking group positions and sizes]
 
-四、群组壁垒与利润分析
-  群组 1：壁垒[高/中/低] / 利润[高/中/低] / 竞争[激烈/温和]
-  群组 2：...
+IV. Group Barriers and Profit Analysis
+  Group 1: Barriers [High/Medium/Low] / Profits [High/Medium/Low] / Competition [Intense/Moderate]
+  Group 2: ...
 
-五、战略启示
-  我方所在群组：[...]
-  利润最高群组：[...] — 移动壁垒：[...]
-  行动建议：[坚守/移动/重塑战略]
+V. Strategic Implications
+  Our group: [...]
+  Highest-profit group: [...] — Mobility barriers: [...]
+  Recommended action: [Hold/Move/Reset strategy]
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 避免方式 |
+| Pitfall | How to Avoid |
 |------|---------|
-| 战略变量选太多，图无法解读 | 限制在 2-3 个最能区分战略的变量 |
-| 群组划分主观，不可复现 | 明确聚类规则，让他人能复现分组结果 |
-| 只看当前群组，忽视移动可能性 | 评估移动壁垒，判断我方/对手跨群组可能性 |
-| 忽视群组内竞争 | 群组内竞争往往比群组间更激烈 |
-| 与 BCG/GE 矩阵混淆 | 战略群组看行业内战略分化，BCG/GE 看业务组合 |
+| Too many strategic variables, map unreadable | Limit to 2-3 variables that best differentiate strategies |
+| Subjective, non-reproducible group delineation | Define clustering rules explicitly so others can reproduce the results |
+| Only looking at current groups, ignoring movement possibilities | Assess mobility barriers and judge cross-group movement potential for ourselves/competitors |
+| Ignoring intra-group competition | Intra-group competition is often more intense than inter-group competition |
+| Confusing with BCG/GE matrix | Strategic groups show intra-industry strategic differentiation; BCG/GE shows business portfolio |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **搭配 Porter's Five Forces**：五力分析整体行业，战略群组图分析行业内部结构
-- **搭配 Porter Diamond Model**：钻石模型看国家优势，战略群组看行业内群组竞争
-- **搭配 Value Chain Analysis**：群组定位战略方向，价值链分析战略执行的活动支撑
-- **后接 Blue Ocean Strategy**：识别群组后，用蓝海寻找跨群组的无人争抢空间
+- **Combined with Porter's Five Forces**: Five forces analyze the overall industry; strategic group maps analyze intra-industry structure
+- **Combined with Porter Diamond Model**: Diamond model looks at national advantage; strategic groups look at intra-industry group competition
+- **Combined with Value Chain Analysis**: Groups position strategic direction; value chain analyzes the activity support for strategy execution
+- **Followed by Blue Ocean Strategy**: After identifying groups, use Blue Ocean to find uncontested space across groups

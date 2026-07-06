@@ -1,182 +1,182 @@
 # Customer Journey Map · 客户旅程地图
 
-## 核心理念
+## Core Concept
 
-将用户与产品/服务的**全流程交互**可视化，呈现每个触点的用户行为、情绪、痛点和机遇，帮助团队从**用户视角**而非功能视角理解产品体验。
+Visualize the user's **end-to-end interaction** with a product / service, capturing user behavior, emotions, pain points, and opportunities at each touchpoint, helping teams understand the product experience from the **user's perspective** rather than a feature perspective.
 
-旅程地图的维度：
+Dimensions of the journey map:
 
 ```
-阶段（Stage）：用户的旅程阶段划分
-行动（Actions）：用户在每个阶段做什么
-想法（Thoughts）：用户在想什么
-情绪（Emotions）：用户的情绪曲线（高/平/低）
-痛点（Pain Points）：阻碍或令人沮丧的体验
-机遇（Opportunities）：可以改善的设计机会
-触点（Touchpoints）：用户与产品/服务的接触渠道
+Stage: Division of the user's journey phases
+Actions: What the user does at each stage
+Thoughts: What the user is thinking
+Emotions: The user's emotional curve (high / flat / low)
+Pain Points: Experiences that cause friction or frustration
+Opportunities: Design improvements that can be made
+Touchpoints: Channels through which the user interacts with the product / service
 ```
 
 ---
 
-## 适用场景
+## Applicable Scenarios
 
-✅ **最适合**
-- 产品体验综合诊断（"用户在哪里流失或不满"）
-- 新产品/服务设计前的体验规划
-- 跨部门对齐（让产品、运营、客服共同理解用户体验全貌）
-- 发现被忽视的体验断点
+✅ **Best Suited For**
+- Comprehensive product experience diagnosis ("Where are users dropping off or dissatisfied?")
+- Experience planning before designing new products / services
+- Cross-department alignment (helping product, operations, and customer service jointly understand the full user experience)
+- Discovering overlooked experience breakpoints
 
-⚠️ **慎用**
-- 没有用户研究数据支撑时（凭想象绘制的旅程地图意义有限）
-- 需要量化分析的场景（配合 AARRR 互补）
-
----
-
-## 执行步骤
-
-### Step 1：确定范围
-
-- **用户视角**：选择一个具体的用户角色（Persona）
-- **旅程边界**：起点（用户第一次听说产品）和终点（用户流失 or 成为忠实用户）
-- **场景**：特定任务/目标（如"完成首次购买"或"从注册到完成第一个项目"）
-
-### Step 2：拆解旅程阶段
-
-将旅程划分为 4-7 个阶段，阶段名用**用户视角**描述（不是功能名）：
-
-常见阶段模式：
-```
-消费产品：认知 → 兴趣 → 考虑 → 购买 → 使用 → 续费/流失
-SaaS 产品：发现 → 注册 → 激活 → 日常使用 → 付费 → 续费/推荐
-线下服务：需求产生 → 搜索 → 到店 → 服务过程 → 离开 → 复购
-```
-
-### Step 3：填充每个阶段的维度
-
-对每个阶段，逐一填充：
-
-**行动（What are they doing?）**
-- 用户在这个阶段的具体操作步骤
-
-**想法（What are they thinking?）**
-- 用户的内心独白，关注点，疑虑
-- 来源：用户访谈引语、客服记录、用户评论
-
-**情绪（How do they feel?）**
-- 情绪曲线：用+5到-5的曲线表示情绪高低
-- 情绪峰值和低谷点是最重要的设计机会
-
-**触点（Touchpoints）**
-- 用户在这个阶段通过什么渠道接触产品/服务
-- 如：App、官网、邮件、客服、社交媒体
-
-**痛点（Pain Points）**
-- 让用户感到阻力、困惑、沮丧的具体时刻
-
-**机遇（Opportunities）**
-- 基于痛点和情绪低谷，可以设计哪些改善措施
-
-### Step 4：绘制情绪曲线
-
-将整个旅程的情绪变化绘制为曲线，重点标注：
-- **情绪低谷**：流失和不满的高风险点（首要改善对象）
-- **情绪峰值**：可以强化的"Wow Moment"
-- **情绪平段**：可能存在可以优化的低刺激区域
-
-### Step 5：提取机遇点并排优先级
-
-从旅程地图中提取所有机遇点，用 RICE 或 Eisenhower 矩阵排序优先级。
+⚠️ **Use with Caution**
+- When no user research data is available (a journey map drawn from imagination has limited value)
+- When quantitative analysis is needed (complement with AARRR)
 
 ---
 
-## 输出模板（文字版）
+## Execution Steps
 
+### Step 1: Define the Scope
+
+- **User perspective**: Choose a specific user role (Persona)
+- **Journey boundaries**: Start point (user first learns about the product) and end point (user churns or becomes a loyal user)
+- **Scenario**: A specific task / goal (e.g., "complete first purchase" or "from sign-up to finishing the first project")
+
+### Step 2: Break Down Journey Stages
+
+Divide the journey into 4-7 stages, named from the **user's perspective** (not feature names):
+
+Common stage patterns:
 ```
-旅程主体：[用户角色/Persona 描述]
-旅程场景：[具体目标，如"新用户完成首次项目创建"]
-旅程范围：[起点] → [终点]
+Consumer product: Awareness → Interest → Consideration → Purchase → Usage → Renewal / Churn
+SaaS product: Discovery → Sign-up → Activation → Daily usage → Payment → Renewal / Referral
+Offline service: Need emergence → Search → Arrival → Service process → Departure → Repeat purchase
+```
+
+### Step 3: Fill in Dimensions for Each Stage
+
+For each stage, fill in one by one:
+
+**Actions (What are they doing?)**
+- The user's specific operational steps at this stage
+
+**Thoughts (What are they thinking?)**
+- The user's inner monologue, concerns, doubts
+- Sources: User interview quotes, customer service records, user reviews
+
+**Emotions (How do they feel?)**
+- Emotional curve: Use a +5 to -5 scale to represent emotional highs and lows
+- Emotional peaks and valleys are the most important design opportunities
+
+**Touchpoints**
+- Which channels the user uses to interact with the product / service at this stage
+- E.g., App, official website, email, customer service, social media
+
+**Pain Points**
+- Specific moments that cause friction, confusion, or frustration for the user
+
+**Opportunities**
+- Based on pain points and emotional valleys, what improvement measures can be designed
+
+### Step 4: Draw the Emotional Curve
+
+Plot the emotional changes across the entire journey as a curve, highlighting:
+- **Emotional valleys**: High-risk points for churn and dissatisfaction (primary improvement targets)
+- **Emotional peaks**: "Wow Moments" that can be reinforced
+- **Emotional plateaus**: Low-stimulation areas where optimization may be possible
+
+### Step 5: Extract Opportunities and Prioritize
+
+Extract all opportunity points from the journey map and rank them using RICE or Eisenhower matrix.
 
 ---
 
-阶段 1：[阶段名称，用户视角]
+## Output Template (Text Version)
 
-  触点：[App 首页 / 官网 / 邮件邀请]
+```
+Journey subject: [User role / Persona description]
+Journey scenario: [Specific goal, e.g., "New user completes first project creation"]
+Journey scope: [Start point] → [End point]
+
+---
+
+Stage 1: [Stage name, user perspective]
+
+  Touchpoints: [App homepage / Official website / Email invitation]
   
-  行动：
-    - [用户动作 1]
-    - [用户动作 2]
+  Actions:
+    - [User action 1]
+    - [User action 2]
   
-  想法：
-    "[用户内心独白，最好是访谈引语]"
+  Thoughts:
+    "[User inner monologue, preferably interview quotes]"
     "[...]"
   
-  情绪：[+3 / 好奇，期待] 
+  Emotions: [+3 / Curious, Anticipation]
   
-  痛点：
-    - [具体痛点描述]
+  Pain Points:
+    - [Specific pain point description]
     - [...]
   
-  机遇：
-    - [改善方向 1]
+  Opportunities:
+    - [Improvement direction 1]
     - [...]
 
 ---
 
-阶段 2：[...] （同上格式）
+Stage 2: [...] (Same format as above)
 
 ---
 
-情绪曲线摘要：
-  阶段：[1]  [2]  [3]  [4]  [5]
-  情绪：[+3] [+1] [-2] [-4] [+2]
-  关键：阶段 4 是情绪最低谷，原因：[...]
+Emotional curve summary:
+  Stages: [1]  [2]  [3]  [4]  [5]
+  Emotions: [+3] [+1] [-2] [-4] [+2]
+  Key: Stage 4 is the lowest emotional valley, reason: [...]
 
-机遇点优先级：
-  P0（必须修复）：[阶段4痛点，情绪-4]
-  P1：[...]
-  P2：[...]
+Opportunity point priorities:
+  P0 (Must fix): [Stage 4 pain point, emotion -4]
+  P1: [...]
+  P2: [...]
 ```
 
 ---
 
-## 执行示例（片段）
+## Execution Example (Excerpt)
 
-**场景**：SaaS 项目管理工具，新用户首次使用旅程
+**Scenario**: SaaS project management tool, new user first-use journey
 
 ```
-阶段 3：激活（注册后 24 小时内）
+Stage 3: Activation (within 24 hours after sign-up)
 
-  触点：Web App、引导邮件
+  Touchpoints: Web App, onboarding emails
 
-  行动：
-    - 登录产品
-    - 查看 Onboarding Checklist
-    - 尝试创建第一个项目
-    - 邀请团队成员（卡壳）
+  Actions:
+    - Log in to the product
+    - View Onboarding Checklist
+    - Attempt to create the first project
+    - Invite team members (get stuck)
 
-  想法：
-    "界面很多东西，不知道从哪开始"
-    "我只想先建一个项目试试，为什么要填这么多"
-    "邀请成员怎么这么复杂？"
+  Thoughts:
+    "There's so much on the interface, I don't know where to start"
+    "I just want to create a project and try it — why do I have to fill in so much?"
+    "Why is inviting members so complicated?"
 
-  情绪：+1 → -3（创建项目时开始焦虑）
+  Emotions: +1 → -3 (Anxiety starts when creating a project)
 
-  痛点：
-    - 信息密度过高，认知负荷大
-    - 邀请流程需要 5 步，用户找不到入口
-    - 无法跳过非核心配置直接体验核心功能
+  Pain Points:
+    - Information density too high, large cognitive load
+    - Invite flow requires 5 steps, user can't find the entry point
+    - Cannot skip non-core configuration to directly experience core features
 
-  机遇：
-    - 重设计 Onboarding，只保留最核心的 3 个步骤
-    - 把邀请成员简化为一键复制链接
-    - 提供示例项目模板，让用户"看到成功状态"
+  Opportunities:
+    - Redesign onboarding to keep only the 3 most essential steps
+    - Simplify member invitation to a one-click copy link
+    - Provide example project templates so users can "see a success state"
 ```
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **前置 JTBD**：JTBD 定义用户的核心 Job，旅程地图描述完成这个 Job 的过程
-- **配合 AARRR**：AARRR 提供量化漏斗（哪个阶段数字下滑），旅程地图提供质化解释（为什么下滑）
-- **输出接 RICE**：机遇点排优先级
-- **输入 Design Thinking**：旅程地图是 Empathize 阶段的核心工具，产出用于 Define 阶段
+- **Preceded by JTBD**: JTBD defines the user's core Job; the Journey Map describes the process of completing that Job
+- **Pairs with AARRR**: AARRR provides the quantitative funnel (which stage numbers drop); Journey Map provides qualitative explanation (why they drop)
+- **Feeds into RICE**: Opportunity points prioritized
+- **Feeds into Design Thinking**: Journey Map is a core tool of the Empathize phase; outputs are used in the Define phase

@@ -1,78 +1,78 @@
 # Kano Model · 狩野模型
 
-## 核心理念
+## Core Concept
 
-由狩野纪昭于 1984 年提出，将产品功能按其与用户满意度的关系分为五类。核心洞察：功能实现程度与满意度之间是**非线性关系**，不同类型功能对满意度的作用机制完全不同。
+Proposed by Noriaki Kano in 1984, it classifies product features into five categories based on their relationship with user satisfaction. Core insight: the relationship between feature implementation level and satisfaction is **non-linear**, and different feature types have completely different mechanisms affecting satisfaction.
 
-> 注：此处保留 ASCII 图表。Kano 模型为 5 条曲线的折线图，mermaid `xychart-beta` 表达力有限，无法准确呈现多条非线性曲线，故不转换。
+> Note: ASCII diagram preserved. The Kano Model is a line chart with 5 curves; mermaid `xychart-beta` has limited expressiveness and cannot accurately represent multiple non-linear curves, so conversion is omitted.
 
 ```
-满意度
-  ↑        ╱ 兴奋型（Attractive）
+Satisfaction
+  ↑        ╱ Attractive
   │       ╱
-  │      ╱    期望型（One-dimensional）
+  │      ╱    One-dimensional
   │     ╱   ╱
-  │────╱──╱───────── 必备型（Must-be）
+  │────╱──╱───────── Must-be
   │  ╱  ╱
-  │╱  ╱        无差异型（Indifferent）
+  │╱  ╱        Indifferent
   │ ╱
-  │╲               反向型（Reverse）
-  └──────────────────→ 功能实现程度
+  │╲               Reverse
+  └──────────────────→ Feature Implementation Level
 ```
 
-| 功能类型 | 实现时 | 不实现时 | 策略 |
+| Feature Type | When Implemented | When Not Implemented | Strategy |
 |---------|--------|---------|------|
-| **必备型** Must-be | 理所应当，不增加满意度 | 极度不满 | 必须满足 |
-| **期望型** One-dimensional | 满意度线性上升 | 满意度线性下降 | 越多越好，竞争主战场 |
-| **兴奋型** Attractive | 惊喜，大幅提升满意度 | 无不满 | 差异化利器 |
-| **无差异型** Indifferent | 无感 | 无感 | 低优先级 |
-| **反向型** Reverse | 不满 | 满意 | 坚决不做 |
+| **Must-be** | Expected, does not increase satisfaction | Extreme dissatisfaction | Must satisfy |
+| **One-dimensional** | Satisfaction rises linearly | Satisfaction drops linearly | The more the better, main competitive battleground |
+| **Attractive** | Surprise, significantly boosts satisfaction | No dissatisfaction | Differentiation weapon |
+| **Indifferent** | No feeling | No feeling | Low priority |
+| **Reverse** | Dissatisfaction | Satisfaction | Never do |
 
 ---
 
-## 适用场景
+## Applicable Scenarios
 
-✅ **最适合**
-- 产品功能分类与需求本质分析
-- 版本规划中的功能组合策略（必备打底 + 期望竞争 + 兴奋差异化）
-- 用户满意度策略制定
+✅ **Best For**
+- Product feature classification and demand nature analysis
+- Feature combination strategy in version planning (Must-be foundation + One-dimensional competition + Attractive differentiation)
+- User satisfaction strategy formulation
 
-⚠️ **慎用**
-- 需要执行优先级排序时（Kano 分类 ≠ 优先级，用 RICE 排序）
-- 无法获取用户输入时（Kano 本质是用户驱动的分类方法）
-- 功能之间有强依赖关系时
+⚠️ **Use with Caution**
+- When execution prioritization is needed (Kano classification ≠ priority; use RICE for ranking)
+- When user input cannot be obtained (Kano is fundamentally a user-driven classification method)
+- When features have strong dependencies
 
 ---
 
-## 执行步骤
+## Execution Steps
 
-### Step 1：列出候选功能
+### Step 1: List Candidate Features
 
-收集所有待评估的功能/需求，形成功能清单。来源可包括：用户反馈、竞品分析、业务目标拆解、技术驱动。
+Collect all features/requirements to be evaluated and form a feature list. Sources can include: user feedback, competitive analysis, business goal decomposition, technology-driven.
 
-### Step 2：设计 Kano 问卷
+### Step 2: Design Kano Questionnaire
 
-对每个功能设计**功能性**和**非功能性**成对问题，5 点量表：喜欢 / 期望如此 / 无所谓 / 勉强接受 / 不喜欢。
-
-```
-功能性问题：如果有这个功能，你觉得怎么样？
-非功能性问题：如果没有这个功能，你觉得怎么样？
-
-注意：
-  - 两个问题必须成对出现，缺一不可
-  - 措辞保持中性，避免引导性表述
-  - 问卷开头说明"没有对错之分"
-```
-
-### Step 3：收集问卷并分类
-
-使用 Kano 评估表对每份问卷分类，取众数作为该功能的 Kano 类型：
+Design **functional** and **dysfunctional** paired questions for each feature, with a 5-point scale: Like / Expect / Neutral / Tolerate / Dislike.
 
 ```
-                    非功能性回答
+Functional question: If this feature existed, how would you feel?
+Dysfunctional question: If this feature did not exist, how would you feel?
+
+Note:
+  - The two questions must always appear in pairs
+  - Wording must remain neutral, avoid leading statements
+  - Questionnaire introduction should state "there are no right or wrong answers"
+```
+
+### Step 3: Collect Questionnaire and Classify
+
+Use the Kano evaluation table to classify each questionnaire response, taking the mode as that feature's Kano type:
+
+```
+                    Dysfunctional Response
                     Like  Must  Neutral  Tolerate  Dislike
-功能性行答  Like     Q     A      A        A         O
-            Must     R     I      I        I         M
+Functional  Like     Q     A      A        A         O
+Response    Must     R     I      I        I         M
             Neutral  R     I      I        I         M
             Tolerate R     I      I        I         M
             Dislike  R     R      R        R         Q
@@ -80,69 +80,69 @@
 M=Must-be, O=One-dimensional, A=Attractive, I=Indifferent, R=Reverse, Q=Questionable
 ```
 
-### Step 4：计算满意度系数
+### Step 4: Calculate Satisfaction Coefficients
 
 ```
-满意度系数 CS+ = (A + O) / (A + O + M + I)
-  → 越接近 1，实现该功能对满意度提升越大
+Satisfaction Coefficient CS+ = (A + O) / (A + O + M + I)
+  → Closer to 1, the greater the satisfaction boost from implementing this feature
 
-不满意度系数 CS- = (O + M) / (A + O + M + I) × (-1)
-  → 越接近 -1，不实现导致的不满越严重
+Dissatisfaction Coefficient CS- = (O + M) / (A + O + M + I) × (-1)
+  → Closer to -1, the more severe the dissatisfaction from not implementing
 ```
 
-### Step 5：制定功能策略
+### Step 5: Formulate Feature Strategy
 
 ```
-必备型 → 必须做（不满足 = 产品不可用）
-期望型 → 竞争性投入（做得越好满意度越高）
-兴奋型 → 选择性投入（差异化，1-2 个即可）
-无差异型 → 暂缓或不做
-反向型 → 坚决不做
-同类功能内部排序：用 CS+ 和 CS- 数值辅助决策
+Must-be → Must do (not meeting = product unusable)
+One-dimensional → Competitive investment (better performance = higher satisfaction)
+Attractive → Selective investment (differentiation, 1-2 is sufficient)
+Indifferent → Defer or skip
+Reverse → Never do
+Intra-type ranking: Use CS+ and CS- values to aid decision-making
 ```
 
-> **功能类型的时间演变**：兴奋型功能会随竞品跟进逐渐降级为期望型，最终成为必备型。因此需每 1-2 个版本重新评估功能分类。
+> **Feature Type Evolution Over Time**: Attractive features gradually downgrade to One-dimensional as competitors follow, eventually becoming Must-be. Therefore, re-evaluate feature classification every 1-2 versions.
 
 ---
 
-## 输出模板
+## Output Template
 
 ```
-产品：[名称]  评估时间：[日期]  样本量：[N]
+Product: [Name]  Evaluation Date: [Date]  Sample Size: [N]
 
-| 功能名称 | Kano 类型 | CS+ | CS- | 策略 |
+| Feature Name | Kano Type | CS+ | CS- | Strategy |
 |---------|----------|-----|-----|------|
-| 功能 A  | Must-be  | 0.20 | -0.85 | 必做 |
-| 功能 B  | O-dimensional | 0.65 | -0.70 | 重点投入 |
-| 功能 C  | Attractive | 0.75 | -0.10 | 差异化 |
-| 功能 D  | Indifferent | 0.15 | -0.05 | 暂缓 |
-| 功能 E  | Reverse  | 0.05 | 0.40 | 不做 |
+| Feature A  | Must-be  | 0.20 | -0.85 | Must do |
+| Feature B  | One-dimensional | 0.65 | -0.70 | Heavy investment |
+| Feature C  | Attractive | 0.75 | -0.10 | Differentiation |
+| Feature D  | Indifferent | 0.15 | -0.05 | Defer |
+| Feature E  | Reverse  | 0.05 | 0.40 | Skip |
 
-版本规划：
-  V1.0 必备型：[功能 A, ...]
-  V1.0 期望型：[功能 B, ...]
-  V1.1 兴奋型：[功能 C, ...]
-  搁置：[功能 D, ...]  排除：[功能 E, ...]
+Version Planning:
+  V1.0 Must-be: [Feature A, ...]
+  V1.0 One-dimensional: [Feature B, ...]
+  V1.1 Attractive: [Feature C, ...]
+  Deferred: [Feature D, ...]  Excluded: [Feature E, ...]
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 避免方式 |
+| Pitfall | How to Avoid |
 |------|---------|
-| 把 Kano 分类当作优先级排序 | Kano 是需求本质分析，优先级还需结合 RICE |
-| 问卷设计有引导性 | 功能性/非功能性问题必须成对，措辞保持中性 |
-| 忽视功能类型的动态演变 | 兴奋型 → 期望型 → 必备型是常见路径，需定期重评估 |
-| 样本量不足或样本偏差 | 至少 50 份有效问卷，覆盖核心和边缘用户群 |
-| 把所有功能都归为期望型 | 区分"用户说想要"（期望型）和"用户没提但会惊喜"（兴奋型） |
+| Treating Kano classification as priority ranking | Kano is demand nature analysis; priority still requires RICE |
+| Questionnaire design has leading statements | Functional/dysfunctional questions must be paired, wording must stay neutral |
+| Ignoring dynamic feature type evolution | Attractive → One-dimensional → Must-be is a common path; re-evaluate periodically |
+| Insufficient sample size or sample bias | At least 50 valid questionnaires, covering core and edge user groups |
+| Categorizing all features as One-dimensional | Distinguish "what users say they want" (One-dimensional) from "what users didn't mention but would delight them" (Attractive) |
 
 ---
 
-## 与其他方法论的关系
+## Relationships with Other Methodologies
 
-- **前置 JTBD**：JTBD 识别核心 Job，Kano 对实现 Job 的功能做分类
-- **后接 RICE**：Kano 分类是 RICE 中 Impact 维度的重要输入
-- **配合 MoSCoW**：Kano 必备型 ≈ MoSCoW Must have，但 Kano 基于用户数据，MoSCoW 基于利益相关者判断
-- **配合 OKR**：兴奋型功能可作为 OKR 的差异化目标
-- **配合 AARRR**：AARRR 定位漏斗瓶颈，Kano 判断该层需要什么类型功能来突破
+- **Preceded by JTBD**: JTBD identifies core Jobs; Kano classifies the features that implement those Jobs
+- **Followed by RICE**: Kano classification is an important input for the Impact dimension in RICE
+- **Combined with MoSCoW**: Kano Must-be ≈ MoSCoW Must have, but Kano is based on user data while MoSCoW is based on stakeholder judgment
+- **Combined with OKR**: Attractive features can serve as differentiation objectives in OKR
+- **Combined with AARRR**: AARRR locates funnel bottlenecks; Kano determines what type of feature is needed to break through at that layer

@@ -1,27 +1,27 @@
-# Lean Analytics Metrics · 精益分析指标
+# Lean Analytics Metrics · Lean Analytics Metrics
 
-## 核心思想
-Ben Yoskovitz 提出选指标的 4 条准则 + 8 种指标类型 + NSM 四层，避免团队陷入"看一堆 dashboard 但不知道业务是否健康"的状态。一个真正的好指标能直接驱动决策。
+## Core Idea
+Ben Yoskovitz proposed 4 criteria for selecting metrics + 8 metric types + NSM four‑level framework to prevent teams from falling into the state of "looking at a bunch of dashboards but not knowing whether the business is healthy". A truly good metric can directly drive decisions.
 
-## 适用场景
-- dashboard 指标爆炸但无人能回答"业务是否健康"
-- 团队对"看哪个数字"无法对齐
-- 不同阶段选错指标（早期看收入、成熟期看激活率）
+## Applicable Scenarios
+- Dashboard metric explosion but no one can answer "is the business healthy?"
+- Teams cannot align on "which number to look at"
+- Choosing the wrong metrics for different stages (looking at revenue early on, activation rate in maturity)
 
-## 关键步骤
-1. 用 4 准则筛指标：
-   - 可比较（跨时间/群体/竞品可对比）
-   - 可理解（团队能解释含义）
-   - 可行动（变化能直接触发行动）
-   - 可量化（有明确数字，非"满意度高"）
-2. 识别指标类型（8 种）：人均收入/获客成本/活跃度/参与度/留存率/转化率/任务成功率/流失率
-3. 选定 NSM（North Star Metric）并按四层拆解：
-   - L1：NSM（北极星）
-   - L2：NSM 的核心驱动因素
-   - L3：每个驱动因素的输入指标
-   - L4：可被团队直接影响的行动指标
-4. 每个阶段只看 1 个核心指标 + 3–5 个辅助指标（参考 lean-bml.md 的阶段划分）
-5. 月度复盘：指标是否仍反映业务真实状态，失效则换
+## Key Steps
+1. Filter metrics using the 4 criteria:
+   - Comparable (can compare across time/groups/competitors)
+   - Understandable (team can explain the meaning)
+   - Actionable (changes can directly trigger actions)
+   - Quantifiable (has clear numbers, not "high satisfaction")
+2. Identify metric types (8 kinds): revenue per user / customer acquisition cost / activity / engagement / retention rate / conversion rate / task success rate / churn rate
+3. Select NSM (North Star Metric) and break it down into four levels:
+   - L1: NSM (North Star)
+   - L2: Core drivers of NSM
+   - L3: Input metrics for each driver
+   - L4: Action metrics that can be directly influenced by the team
+4. At each stage, look at only 1 core metric + 3‑5 auxiliary metrics (refer to lean‑bml.md for stage division)
+5. Monthly review: check if metrics still reflect the true business state; replace if they fail
 
-## 来源
-Ben Yoskovitz & Alistair Croll《Lean Analytics》（2013）
+## Source
+Ben Yoskovitz & Alistair Croll "Lean Analytics" (2013)

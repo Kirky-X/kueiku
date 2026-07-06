@@ -1,125 +1,125 @@
-# DuPont Analysis · 杜邦分析
+# DuPont Analysis
 
-## 核心理念
+## Core Concept
 
-ROE = 净利率 × 资产周转率 × 权益乘数，三因素拆解。
+ROE = Net Profit Margin × Asset Turnover × Equity Multiplier — a three-factor decomposition.
 
-杜邦分析把净资产收益率（ROE）拆解为三个独立驱动因素，揭示企业高 ROE 背后的真实经营模式：是靠高利润率、高资产效率，还是高财务杠杆。同样 20% 的 ROE，三因素结构不同代表完全不同的商业模式和风险水平。
+DuPont Analysis decomposes Return on Equity (ROE) into three independent driving factors, revealing the true operating model behind a high ROE: whether it comes from high profit margins, high asset efficiency, or high financial leverage. The same 20% ROE with different three-factor structures represents entirely different business models and risk levels.
 
-> **核心理念**：ROE 是结果，三因素结构才是原因。
-> 不拆解的 ROE 会掩盖风险——高杠杆撑起的 ROE 在周期下行时崩溃。
+> **Core Concept**: ROE is the outcome; the three-factor structure is the cause.
+> An undecomposed ROE hides risk — an ROE propped up by high leverage collapses when the cycle turns.
 
-| 因素 | 公式 | 反映 |
+| Factor | Formula | Reflects |
 |------|------|------|
-| 净利率 | 净利润 / 营业收入 | 盈利能力 |
-| 资产周转率 | 营业收入 / 总资产 | 运营效率 |
-| 权益乘数 | 总资产 / 股东权益 | 财务杠杆 |
+| Net Profit Margin | Net Income / Revenue | Profitability |
+| Asset Turnover | Revenue / Total Assets | Operational Efficiency |
+| Equity Multiplier | Total Assets / Shareholders' Equity | Financial Leverage |
 
 ---
 
-## 适用场景
+## Applicable Scenarios
 
-✅ **最适合**
-- ROE 异动原因分析
-- 同业公司财务模式对比
-- 企业经营改善方向定位
-- 投资标的的财务质量评估
+✅ **Best suited for**
+- Diagnosing causes of ROE fluctuations
+- Comparing financial models of peer companies
+- Identifying directions for operational improvement
+- Assessing financial quality of investment targets
 
-⚠️ **慎用**
-- 金融行业（资产负债结构特殊，需调整）
-- 跨行业对比（三因素结构差异大，需谨慎）
-- 单一年度分析（需多年趋势对比）
-
----
-
-## 执行步骤
-
-### Step 1：收集三因素数据
-
-从财务报表提取数据：
-- 净利润（利润表）
-- 营业收入（利润表）
-- 总资产（资产负债表，期初+期末平均）
-- 股东权益（资产负债表，期初+期末平均）
-
-计算三因素：
-- 净利率 = 净利润 / 营业收入
-- 资产周转率 = 营业收入 / 平均总资产
-- 权益乘数 = 平均总资产 / 平均股东权益
-- 验证：净利率 × 资产周转率 × 权益乘数 ≈ ROE
-
-### Step 2：计算各因素贡献
-
-用连环替代法或差额分析法计算各因素对 ROE 变动的贡献：
-- 基期 ROE = 净利率₀ × 周转率₀ × 权益乘数₀
-- 替换净利率：ΔROE(净利率) = (净利率₁ - 净利率₀) × 周转率₀ × 权益乘数₀
-- 替换周转率：ΔROE(周转率) = 净利率₁ × (周转率₁ - 周转率₀) × 权益乘数₀
-- 替换权益乘数：ΔROE(权益乘数) = 净利率₁ × 周转率₁ × (权益乘数₁ - 权益乘数₀)
-
-### Step 3：同业对比
-
-将三因素与同业公司对比，识别差异：
-- 利润率高于/低于同业 → 定价能力或成本结构差异
-- 周转率高于/低于同业 → 资产运营效率差异
-- 权益乘数高于/低于同业 → 财务杠杆策略差异
-
-> 对比时需选择业务模式相似的同业，跨模式对比会失真。
-
-### Step 4：定位改善方向
-
-基于贡献分析和同业对比，定位改善方向：
-- 净利率低 → 提价 / 降本 / 产品结构升级
-- 周转率低 → 库存管理 / 应收账款 / 资产处置
-- 权益乘数过高 → 降杠杆（降低风险，但可能降低 ROE）
+⚠️ **Use with caution**
+- Financial industry (special balance sheet structure, requires adjustments)
+- Cross-industry comparison (large structural differences, proceed with caution)
+- Single-year analysis (requires multi-year trend comparison)
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Collect Three-Factor Data
+
+Extract data from financial statements:
+- Net Income (Income Statement)
+- Revenue (Income Statement)
+- Total Assets (Balance Sheet, average of opening + closing)
+- Shareholders' Equity (Balance Sheet, average of opening + closing)
+
+Calculate three factors:
+- Net Profit Margin = Net Income / Revenue
+- Asset Turnover = Revenue / Average Total Assets
+- Equity Multiplier = Average Total Assets / Average Shareholders' Equity
+- Verification: Net Profit Margin × Asset Turnover × Equity Multiplier ≈ ROE
+
+### Step 2: Calculate Each Factor's Contribution
+
+Use chain substitution or difference analysis to calculate each factor's contribution to ROE change:
+- Base Period ROE = Margin₀ × Turnover₀ × Multiplier₀
+- Substitute Margin: ΔROE(Margin) = (Margin₁ - Margin₀) × Turnover₀ × Multiplier₀
+- Substitute Turnover: ΔROE(Turnover) = Margin₁ × (Turnover₁ - Turnover₀) × Multiplier₀
+- Substitute Multiplier: ΔROE(Multiplier) = Margin₁ × Turnover₁ × (Multiplier₁ - Multiplier₀)
+
+### Step 3: Peer Comparison
+
+Compare three factors with peer companies to identify differences:
+- Margin higher/lower than peers → Pricing power or cost structure differences
+- Turnover higher/lower than peers → Asset operational efficiency differences
+- Multiplier higher/lower than peers → Financial leverage strategy differences
+
+> Comparisons should use peers with similar business models; cross-model comparisons will be distorted.
+
+### Step 4: Identify Improvement Directions
+
+Based on contribution analysis and peer comparison, identify improvement directions:
+- Low Net Profit Margin → Price increases / Cost reduction / Product mix upgrade
+- Low Asset Turnover → Inventory management / Receivables management / Asset disposal
+- Excessive Equity Multiplier → De-leverage (reduces risk but may lower ROE)
+
+---
+
+## Output Template
 
 ```
-分析对象：[公司名称]
-分析期间：[年份/季度]
+Analysis Subject: [Company Name]
+Analysis Period: [Year/Quarter]
 
-三因素数据：
-  | 指标 | 本期 | 上期 | 同业均值 |
+Three-Factor Data:
+  | Metric | Current Period | Prior Period | Peer Average |
   |------|------|------|---------|
-  | 净利率 | X% | Y% | Z% |
-  | 资产周转率 | X | Y | Z |
-  | 权益乘数 | X | Y | Z |
-  | ROE（验证） | X% | Y% | Z% |
+  | Net Profit Margin | X% | Y% | Z% |
+  | Asset Turnover | X | Y | Z |
+  | Equity Multiplier | X | Y | Z |
+  | ROE (Verification) | X% | Y% | Z% |
 
-各因素贡献（连环替代法）：
-  - 净利率变动贡献：+X%
-  - 周转率变动贡献：+Y%
-  - 权益乘数变动贡献：+Z%
-  - 合计：+ΔROE%
+Factor Contributions (Chain Substitution):
+  - Margin Change Contribution: +X%
+  - Turnover Change Contribution: +Y%
+  - Multiplier Change Contribution: +Z%
+  - Total: +ΔROE%
 
-同业对比结论：
-  - 利润率：[高于/低于/接近]同业，原因：[...]
-  - 周转率：[高于/低于/接近]同业，原因：[...]
-  - 杠杆：[高于/低于/接近]同业，原因：[...]
+Peer Comparison Conclusions:
+  - Margin: [Above/Below/In line with] peers, Reason: [...]
+  - Turnover: [Above/Below/In line with] peers, Reason: [...]
+  - Leverage: [Above/Below/In line with] peers, Reason: [...]
 
-改善方向：
-  1. [优先方向] — 预期影响：[...]
-  2. [次要方向] — 预期影响：[...]
+Improvement Directions:
+  1. [Primary Direction] — Expected Impact: [...]
+  2. [Secondary Direction] — Expected Impact: [...]
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 避免方式 |
+| Pitfall | Avoidance Method |
 |------|---------|
-| 只看 ROE 不看结构 | 必须拆解三因素，结构比结果更重要 |
-| 跨行业直接对比 | 选择业务模式相似的同业 |
-| 忽略杠杆风险 | 高权益乘数的 ROE 需标注风险 |
-| 单点分析无趋势 | 至少 3 年趋势对比 |
-| 用期末数而非平均数 | 资产/权益用期初+期末平均 |
+| Looking only at ROE without examining structure | Must decompose three factors; structure matters more than outcome |
+| Direct cross-industry comparison | Select peers with similar business models |
+| Ignoring leverage risk | High multiplier ROE must flag risk |
+| Single-point analysis without trends | At least 3 years of trend comparison |
+| Using closing balances instead of averages | Use opening + closing averages for assets/equity |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **后接 EVA**：杜邦看 ROE 结构，EVA 验证是否真实创造价值（高于资本成本）
-- **互补 DCF**：杜邦诊断历史质量，DCF 预测未来价值
-- **对照 Comparable Company**：同业对比的财务维度补充
+- **Downstream EVA**: DuPont examines ROE structure; EVA validates whether value is truly being created (above capital cost)
+- **Complementary DCF**: DuPont diagnoses historical quality; DCF projects future value
+- **Cross-reference Comparable Company**: Peer comparison supplements financial dimensions

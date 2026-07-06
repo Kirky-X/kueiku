@@ -1,150 +1,150 @@
-# Framework Selection · 框架选择元方法论
+# Framework Selection · Framework Selection Meta-Methodology
 
-## 核心理念
+## Core Idea
 
-选框架本身也需要方法论。面对一个问题，选错框架会导致分析方向偏差、资源浪费、结论失效。本元方法论提供 **5 原则 + 决策树**，帮助在众多框架中选出最匹配的一个。
+Choosing a framework itself requires a methodology. When facing a problem, choosing the wrong framework leads to biased analysis direction, wasted resources, and invalid conclusions. This meta-methodology provides **5 principles + a decision tree** to help select the most fitting framework from among many.
 
-> "如果你只有一把锤子，所有问题看起来都像钉子。"框架选择元方法论的本质是：先判断问题性质，再选工具，而非反过来。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 面对复杂问题不知用哪个框架时的元决策
-- 团队对框架选择有分歧时的对齐工具
-- 避免框架误用（用 SWOT 做量化、用 BCG 做单产品分析等）
-- 培训新人的框架认知入门
-
-⚠️ **慎用**
-- 问题明确对应单一框架（无需元决策，直接用）
-- 时间极度紧急（先行动后反思，跳过选择）
-- 团队对候选框架都不熟悉（选了也用不好，先培训）
+> "If all you have is a hammer, everything looks like a nail." The essence of framework selection meta-methodology is: first assess the problem's nature, then choose the tool — not the other way around.
 
 ---
 
-## 执行步骤
+## Applicable Scenarios
 
-### Step 1：判断问题类型（原则 1）
+✅ **Best suited for**
+- Meta-decisions when facing complex problems and unsure which framework to use
+- Alignment tool when the team disagrees on framework selection
+- Preventing framework misuse (using SWOT for quantitative analysis, using BCG for single-product analysis, etc.)
+- Training newcomers on framework awareness
 
-将问题归类，对应不同的框架族：
+⚠️ **Use with caution**
+- When the problem clearly maps to a single framework (no meta-decision needed, just use it)
+- Extremely time-sensitive situations (act first, reflect later, skip selection)
+- When the team is unfamiliar with all candidate frameworks (training needed first; selecting won't help)
 
-```
-问题类型 → 框架族映射：
-  分析类（理解现状）→ SWOT / PESTLE / Five Forces / Value Chain
-  决策类（多选一）  → Decision Matrix / RICE / Eisenhower
-  创意类（生成方案）→ SCAMPER / Six Thinking Hats / Connecting Dots
-  诊断类（找根因）  → 5 Whys / FMEA / Pre-mortem
-  规划类（定方向）  → OKR / Ansoff / BCG / STP
-  评估类（打分排序）→ RICE / Decision Matrix / GE Matrix
-```
+---
 
-### Step 2：评估信息充分度（原则 2）
+## Execution Steps
 
-```
-信息充分度 → 框架类型匹配：
-  信息少 / 不确定 → 探索性框架（Lean Canvas / Empathy Map / Cynefin）
-  信息中等       → 诊断性框架（SWOT / Five Forces / Value Chain）
-  信息充足       → 量化框架（RICE / Decision Matrix / BCG Matrix）
+### Step 1: Determine Problem Type (Principle 1)
 
-判断信号：
-  探索性：假设未验证、数据缺失、问题边界不清
-  诊断性：有定性信息但无精确数据
-  量化性：有可靠数据支撑打分
-```
-
-### Step 3：评估时间约束（原则 3）
+Classify the problem, mapping to different framework families:
 
 ```
-时间约束 → 框架深度匹配：
-  紧急（小时级）→ 快速框架（Eisenhower / 5 Whys / MECE 单层分解）
-  中等（天级）  → 标准框架（SWOT / Decision Matrix / RICE）
-  宽松（周级）  → 深度框架（PESTLE / BCG / McKinsey 7S / Value Chain）
+Problem type → Framework family mapping:
+  Analysis (understand current state)  → SWOT / PESTLE / Five Forces / Value Chain
+  Decision (choose one from many)      → Decision Matrix / RICE / Eisenhower
+  Creative (generate solutions)        → SCAMPER / Six Thinking Hats / Connecting Dots
+  Diagnostic (find root cause)         → 5 Whys / FMEA / Pre-mortem
+  Planning (set direction)             → OKR / Ansoff / BCG / STP
+  Evaluation (score and rank)          → RICE / Decision Matrix / GE Matrix
 ```
 
-### Step 4：评估输出形式（原则 4）
+### Step 2: Assess Information Sufficiency (Principle 2)
 
 ```
-所需输出形式 → 框架形式匹配：
-  清单    → MoSCoW / 5 Whys / Pre-mortem
-  矩阵    → BCG / GE / Eisenhower / Decision Matrix
-  叙事    → SWOT 交叉 / Customer Journey / Strategic Group
-  数字    → RICE / BCG 份额 / RFM 评分
-  画布    → BMC / Lean Canvas / Empathy Map
+Information sufficiency → Framework type matching:
+  Low information / uncertain   → Exploratory frameworks (Lean Canvas / Empathy Map / Cynefin)
+  Moderate information          → Diagnostic frameworks (SWOT / Five Forces / Value Chain)
+  Sufficient information        → Quantitative frameworks (RICE / Decision Matrix / BCG Matrix)
+
+Signals:
+  Exploratory: Assumptions unverified, data missing, problem boundaries unclear
+  Diagnostic: Qualitative information available but no precise data
+  Quantitative: Reliable data available for scoring
 ```
 
-### Step 5：评估团队熟悉度（原则 5）
+### Step 3: Assess Time Constraints (Principle 3)
 
 ```
-团队熟悉度 → 选择策略：
-  团队都熟 → 直接用
-  部分人熟 → 熟手带新手，增加对齐时间
-  都不熟   → 培训成本 > 框架收益时，换熟悉框架或先用简单框架
+Time constraints → Framework depth matching:
+  Urgent (hours)    → Quick frameworks (Eisenhower / 5 Whys / MECE single-level decomposition)
+  Moderate (days)   → Standard frameworks (SWOT / Decision Matrix / RICE)
+  Relaxed (weeks)   → Deep frameworks (PESTLE / BCG / McKinsey 7S / Value Chain)
 ```
 
-> 一个团队用得不熟的"高级"框架，效果远不如用得熟练的"简单"框架。
-
-### Step 6：综合决策树
-
-将 5 原则串联成决策流：
+### Step 4: Assess Output Format (Principle 4)
 
 ```
-决策流：
-  1. 问题类型？→ 缩小到框架族
-  2. 信息充分度？→ 探索/诊断/量化
-  3. 时间约束？→ 快速/标准/深度
-  4. 输出形式？→ 清单/矩阵/叙事/数字/画布
-  5. 团队熟悉度？→ 直接用 / 培训 / 换框架
+Required output format → Framework format matching:
+  Checklist  → MoSCoW / 5 Whys / Pre-mortem
+  Matrix     → BCG / GE / Eisenhower / Decision Matrix
+  Narrative  → SWOT cross-analysis / Customer Journey / Strategic Group
+  Numbers    → RICE / BCG share / RFM scoring
+  Canvas     → BMC / Lean Canvas / Empathy Map
+```
+
+### Step 5: Assess Team Familiarity (Principle 5)
+
+```
+Team familiarity → Selection strategy:
+  Team all familiar     → Use directly
+  Some familiar         → Experienced guide newcomers, add alignment time
+  None familiar         → If training cost > framework benefit, switch to a familiar framework or use a simple one first
+```
+
+> An "advanced" framework that the team is unfamiliar with produces far worse results than a "simple" framework they use proficiently.
+
+### Step 6: Synthesize Decision Tree
+
+Chain the 5 principles into a decision flow:
+
+```
+Decision flow:
+  1. Problem type? → Narrow to framework family
+  2. Information sufficiency? → Exploratory / Diagnostic / Quantitative
+  3. Time constraints? → Quick / Standard / Deep
+  4. Output format? → Checklist / Matrix / Narrative / Numbers / Canvas
+  5. Team familiarity? → Use directly / Train / Switch framework
   ↓
-  输出：选定框架 + 备选框架 + 选择理由
+  Output: Selected framework + Alternative framework + Selection rationale
 ```
 
 ---
 
-## 输出模板
+## Output Template
 
 ```
-框架选择决策
+Framework Selection Decision
 
-一、问题陈述
-  [一句话描述问题]
+I. Problem Statement
+  [One-sentence problem description]
 
-二、5 原则评估
-  原则 1 问题类型：[分析/决策/创意/诊断/规划/评估] → 框架族：[...]
-  原则 2 信息充分度：[少/中/充足] → 框架类型：[探索/诊断/量化]
-  原则 3 时间约束：[紧急/中等/宽松] → 框架深度：[快速/标准/深度]
-  原则 4 输出形式：[清单/矩阵/叙事/数字/画布] → 框架形式：[...]
-  原则 5 团队熟悉度：[都熟/部分熟/都不熟] → 选择策略：[...]
+II. 5-Principle Assessment
+  Principle 1 (Problem type): [Analysis / Decision / Creative / Diagnostic / Planning / Evaluation] → Framework family: [...]
+  Principle 2 (Information sufficiency): [Low / Moderate / Sufficient] → Framework type: [Exploratory / Diagnostic / Quantitative]
+  Principle 3 (Time constraints): [Urgent / Moderate / Relaxed] → Framework depth: [Quick / Standard / Deep]
+  Principle 4 (Output format): [Checklist / Matrix / Narrative / Numbers / Canvas] → Framework format: [...]
+  Principle 5 (Team familiarity): [All familiar / Some familiar / None familiar] → Selection strategy: [...]
 
-三、候选框架筛选
-  候选 1：[框架] — 5 原则匹配度：[...]
-  候选 2：[框架] — 5 原则匹配度：[...]
+III. Candidate Framework Screening
+  Candidate 1: [Framework] — 5-principle match: [...]
+  Candidate 2: [Framework] — 5-principle match: [...]
 
-四、最终选择
-  选定框架：[...]
-  备选框架：[...]（主框架不适用时切换）
-  选择理由：[...]
-  已知局限：[...]（该框架在此场景的盲区）
+IV. Final Selection
+  Selected framework: [...]
+  Alternative framework: [...] (switch when primary is not applicable)
+  Selection rationale: [...]
+  Known limitations: [...] (blind spots of this framework in this scenario)
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 避免方式 |
-|------|---------|
-| 只因熟悉就选用，不顾匹配度 | 强制走 5 原则评估，记录匹配理由 |
-| 一个框架打天下 | 识别问题类型，匹配不同框架族 |
-| 忽视团队熟悉度选"高级"框架 | 培训成本 > 收益时换框架 |
-| 选完框架不做局限标注 | 必须记录该框架在此场景的盲区 |
-| 元决策本身耗时长 | 元决策应在 15 分钟内完成，否则过度 |
-| 选错框架硬撑到底 | 设定检查点，框架不奏效及时切换备选 |
+| Pitfall | How to Avoid |
+|---------|-------------|
+| Choosing only because of familiarity, ignoring fit | Force the 5-principle assessment, document match rationale |
+| One framework for everything | Identify problem type, match different framework families |
+| Ignoring team familiarity and choosing "advanced" frameworks | When training cost > benefit, switch frameworks |
+| Not documenting limitations after selection | Must record this framework's blind spots in this scenario |
+| Meta-decision itself takes too long | Meta-decision should complete within 15 minutes; otherwise it's overdone |
+| Choosing wrong framework and persisting stubbornly | Set checkpoints; switch to alternative when framework doesn't work |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **本方法是所有其他方法论的元层**：先选框架再用框架，本方法管"选"
-- **搭配 Cynefin**：Cynefin 判断问题域（清晰/繁杂/复杂/混沌），是原则 1 的深化
-- **搭配 First Principles**：无现成框架可用时，退回第一性原理
-- **搭配 Reframe and Elevate**：框架都不奏效时，先重构问题再选框架
+- **This methodology is the meta-layer of all other methodologies**: Choose the framework first, then use it. This methodology governs "choosing."
+- **Complements Cynefin**: Cynefin determines the problem domain (clear/complicated/complex/chaotic), deepening Principle 1
+- **Complements First Principles**: When no existing framework is available, fall back to first principles
+- **Complements Reframe and Elevate**: When no framework works, reframe the problem first, then select a framework

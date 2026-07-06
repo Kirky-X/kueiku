@@ -1,20 +1,20 @@
-# TDD: Red-Green-Refactor · 测试驱动开发
+# TDD: Red-Green-Refactor · Test-Driven Development
 
-## 核心思想
-通过三相循环强制"先想清楚要什么，再写代码，再清理"——Red（写测试，必然失败）→ Green（写最简代码让测试通过）→ Refactor（清理结构，保持绿）。每一步都小于 5 分钟，让设计意图在测试中显性化。
+## Core Idea
+Enforce "think clearly about what you want, then write code, then clean up" through a three-phase cycle — Red (write a test, it must fail) → Green (write the simplest code to make the test pass) → Refactor (clean up structure, stay green). Each step is under 5 minutes, making design intent explicit in tests.
 
-## 适用场景
-- 代码改动后频繁出回归 bug
-- 重构缺乏安全网，不敢动
-- 需求模糊，靠"写完再想"导致返工
+## Use Cases
+- Frequent regression bugs after code changes
+- Refactoring lacks a safety net, afraid to touch code
+- Requirements are vague, leading to rework from "write first, think later"
 
-## 关键步骤
-1. Red：写一个测试，描述当前还不存在的行为；运行，确认失败（且失败原因正确——是断言失败而非编译失败）
-2. Green：写**最简**实现让测试通过（允许丑陋、允许硬编码）；不写测试未覆盖的代码
-3. Refactor：清理代码结构（命名/提取函数/消除重复）；每次小改后立即重跑测试，保持绿
-4. 循环：每 2–5 分钟一个 Red-Green-Refactor 周期
-5. 禁止跳过 Red：先写实现再补测试等于没做 TDD
-6. 测试质量检验：能否通过删除产品代码让测试失败？不能则测试无效
+## Key Steps
+1. Red: Write a test describing behavior that doesn't exist yet; run it, confirm it fails (and fails for the right reason — assertion failure, not compilation failure)
+2. Green: Write the **simplest** implementation to make the test pass (ugly is okay, hardcoding is okay); don't write code not covered by tests
+3. Refactor: Clean up code structure (naming/extract functions/eliminate duplication); after each small change, immediately re-run tests, stay green
+4. Cycle: One Red-Green-Refactor cycle every 2–5 minutes
+5. Never skip Red: Writing implementation first and adding tests later is not TDD
+6. Test quality check: Can you make the test fail by deleting production code? If not, the test is ineffective
 
-## 来源
-Kent Beck《Test-Driven Development: By Example》（2002）；TDD 概念可追溯至 Kent Beck 1990s Smalltalk 实践
+## Source
+Kent Beck, *Test-Driven Development: By Example* (2002); TDD concept traceable to Kent Beck's 1990s Smalltalk practice

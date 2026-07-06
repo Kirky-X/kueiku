@@ -1,141 +1,141 @@
-# EVA · 经济增加值
+# EVA · Economic Value Added
 
-## 核心理念
+## Core Concept
 
-EVA = NOPAT - 资本成本 × 投入资本，衡量真实价值创造。
+EVA = NOPAT - Capital Cost × Invested Capital, measuring true value creation.
 
-传统会计利润（如净利润）只扣除了债务资本成本（利息），没有扣除股权资本成本——这意味着"会计盈利"的企业可能实际上在毁灭股东价值。EVA 扣除全部资本成本（债务 + 股权），只有当回报高于全部资本的机会成本时，才是真正创造价值。
+Traditional accounting profit (e.g., net income) only deducts the cost of debt capital (interest), but not the cost of equity capital — meaning a company with "accounting profits" may actually be destroying shareholder value. EVA deducts all capital costs (debt + equity), and only when returns exceed the opportunity cost of all capital is true value being created.
 
-> **核心理念**：会计利润 ≠ 价值创造。
-> 一家企业会计盈利但 ROIC < WACC，本质是在毁灭价值——它占用的资本本可以获得更高回报。
+> **Core Concept**: Accounting profit ≠ Value creation.
+> A company that is profitable on paper but has ROIC < WACC is fundamentally destroying value — the capital it ties up could earn higher returns elsewhere.
 
-| 指标 | 公式 | 含义 |
+| Metric | Formula | Meaning |
 |------|------|------|
-| NOPAT | EBIT × (1 - 税率) | 税后营业净利润 |
-| 投入资本 | 股东权益 + 有息负债 - 现金 | 实际投入经营的资本 |
-| 资本成本 | WACC | 全部资本的加权机会成本 |
-| EVA | NOPAT - WACC × 投入资本 | 经济增加值 |
+| NOPAT | EBIT × (1 - Tax Rate) | Net Operating Profit After Tax |
+| Invested Capital | Equity + Interest-Bearing Debt - Cash | Capital actually deployed in operations |
+| Capital Cost | WACC | Weighted opportunity cost of all capital |
+| EVA | NOPAT - WACC × Invested Capital | Economic Value Added |
 
 ---
 
-## 适用场景
+## Applicable Scenarios
 
-✅ **最适合**
-- 绩效评估（衡量业务单元真实贡献）
-- 投资决策（项目是否创造价值）
-- 价值管理（引导管理层关注资本效率）
-- 激励考核（与 EVA 挂钩避免短期会计操纵）
+✅ **Best suited for**
+- Performance evaluation (measuring true contribution of business units)
+- Investment decisions (whether a project creates value)
+- Value management (guiding management to focus on capital efficiency)
+- Incentive compensation (tying bonuses to EVA to avoid short-term accounting manipulation)
 
-⚠️ **慎用**
-- 早期高增长企业（短期 EVA 为负但长期创造价值）
-- 资本密集型行业的短期评估（需跨周期看）
-- 会计调整过度复杂化（失去可比性）
-
----
-
-## 执行步骤
-
-### Step 1：计算 NOPAT
-
-NOPAT（税后营业净利润）反映核心经营的税后盈利：
-- 起点：EBIT（营业利润）
-- 调整：加回非经常性损益、减去非经营性收益
-- 税务调整：EBIT × (1 - 实际税率)
-
-> 会计调整需谨慎，过度调整会失去可比性和可信度。核心调整 5-10 项即可。
-
-### Step 2：计算资本成本
-
-计算 WACC（加权平均资本成本）：
-- 股权成本 Re = Rf + β × (Rm - Rf)
-- 债务成本 Rd（税后）= Rd × (1 - 税率)
-- WACC = E/(D+E) × Re + D/(D+E) × Rd(税后)
-
-> WACC 的估算方法与 DCF 一致，参见 DCF 方法论。
-
-### Step 3：计算投入资本
-
-投入资本反映实际投入经营的资本：
-- 投入资本 = 股东权益 + 有息负债 - 现金及等价物
-- 或：投入资本 = 净营运资本 + 固定资产净值 + 无形资产
-- 需调整：剔除非经营性资产
-
-> 两种算法结果应一致，可用于交叉验证。
-
-### Step 4：计算 EVA
-
-- EVA = NOPAT - WACC × 投入资本
-- 或：EVA = (ROIC - WACC) × 投入资本
-
-**判定**：
-- EVA > 0：创造价值（回报高于资本成本）
-- EVA = 0：临界（回报等于资本成本）
-- EVA < 0：毁灭价值（回报低于资本成本）
-
-> ROIC = NOPAT / 投入资本，与 WACC 的差值是价值创造的来源。
+⚠️ **Use with caution**
+- Early-stage high-growth companies (short-term negative EVA but long-term value creation)
+- Short-term evaluation of capital-intensive industries (need cross-cycle analysis)
+- Overly complex accounting adjustments (losing comparability)
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Calculate NOPAT
+
+NOPAT (Net Operating Profit After Tax) reflects after-tax profitability of core operations:
+- Starting point: EBIT (Operating Profit)
+- Adjustments: Add back non-recurring gains/losses, subtract non-operating income
+- Tax adjustment: EBIT × (1 - Effective Tax Rate)
+
+> Accounting adjustments should be conservative. Over-adjusting loses comparability and credibility. 5-10 core adjustments are sufficient.
+
+### Step 2: Calculate Capital Cost
+
+Calculate WACC (Weighted Average Cost of Capital):
+- Cost of Equity Re = Rf + β × (Rm - Rf)
+- Cost of Debt Rd (after-tax) = Rd × (1 - Tax Rate)
+- WACC = E/(D+E) × Re + D/(D+E) × Rd(after-tax)
+
+> WACC estimation follows the same methodology as DCF. See the DCF methodology.
+
+### Step 3: Calculate Invested Capital
+
+Invested capital reflects capital actually deployed in operations:
+- Invested Capital = Equity + Interest-Bearing Debt - Cash & Equivalents
+- Or: Invested Capital = Net Working Capital + Net Fixed Assets + Intangible Assets
+- Adjustments needed: Remove non-operating assets
+
+> Both calculation methods should yield the same result and can be used for cross-validation.
+
+### Step 4: Calculate EVA
+
+- EVA = NOPAT - WACC × Invested Capital
+- Or: EVA = (ROIC - WACC) × Invested Capital
+
+**Judgment**:
+- EVA > 0: Value created (returns exceed capital cost)
+- EVA = 0: Breakeven (returns equal capital cost)
+- EVA < 0: Value destroyed (returns below capital cost)
+
+> ROIC = NOPAT / Invested Capital. The spread between ROIC and WACC is the source of value creation.
+
+---
+
+## Output Template
 
 ```
-分析对象：[公司/业务单元]
-分析期间：[年份/季度]
+Analysis Subject: [Company/Business Unit]
+Analysis Period: [Year/Quarter]
 
-NOPAT 计算：
-  - EBIT：[X]
-  - 会计调整项：[±各项]
-  - 调整后 EBIT：[X]
-  - 实际税率：[X%]
-  - NOPAT = 调整后 EBIT × (1 - 税率)：[X]
+NOPAT Calculation:
+  - EBIT: [X]
+  - Accounting Adjustments: [± items]
+  - Adjusted EBIT: [X]
+  - Effective Tax Rate: [X%]
+  - NOPAT = Adjusted EBIT × (1 - Tax Rate): [X]
 
-资本成本（WACC）：
-  - 股权成本 Re：[X%]
-  - 税后债务成本 Rd：[X%]
-  - 资本结构 D/(D+E)：[X%]
-  - WACC：[X%]
+Capital Cost (WACC):
+  - Cost of Equity Re: [X%]
+  - After-tax Cost of Debt Rd: [X%]
+  - Capital Structure D/(D+E): [X%]
+  - WACC: [X%]
 
-投入资本计算：
-  - 股东权益：[X]
-  - 有息负债：[X]
-  - 现金及等价物：[X]
-  - 投入资本 = 权益 + 有息负债 - 现金：[X]
+Invested Capital Calculation:
+  - Equity: [X]
+  - Interest-Bearing Debt: [X]
+  - Cash & Equivalents: [X]
+  - Invested Capital = Equity + Debt - Cash: [X]
 
-EVA 计算：
-  - NOPAT：[X]
-  - 资本成本 = WACC × 投入资本：[X]
-  - EVA = NOPAT - 资本成本：[X]
-  - ROIC = NOPAT / 投入资本：[X%]
-  - ROIC - WACC：[X%]
+EVA Calculation:
+  - NOPAT: [X]
+  - Capital Cost = WACC × Invested Capital: [X]
+  - EVA = NOPAT - Capital Cost: [X]
+  - ROIC = NOPAT / Invested Capital: [X%]
+  - ROIC - WACC: [X%]
 
-价值创造判定：
-  - EVA [>0 / =0 / <0]，[创造 / 临界 / 毁灭] 价值
-  - 趋势对比：[上年 EVA，本年 EVA，变化]
+Value Creation Assessment:
+  - EVA [>0 / =0 / <0], [Creating / Breakeven / Destroying] value
+  - Trend Comparison: [Prior Year EVA, Current Year EVA, Change]
 
-改善方向：
-  - 提升 NOPAT：[具体措施]
-  - 降低资本占用：[具体措施]
-  - 优化资本结构：[具体措施]
+Improvement Directions:
+  - Increase NOPAT: [Specific measures]
+  - Reduce Capital Employed: [Specific measures]
+  - Optimize Capital Structure: [Specific measures]
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 避免方式 |
+| Pitfall | Avoidance Method |
 |------|---------|
-| 只看会计利润不看资本成本 | 必须计算 EVA，会计盈利≠价值创造 |
-| 会计调整过度复杂 | 核心调整 5-10 项，保持可比性 |
-| WACC 估算随意 | 与 DCF 用同一套 WACC 方法 |
-| 投入资本含非经营资产 | 剔除非经营性资产 |
-| 用单期 EVA 下结论 | 至少 3 年趋势，识别改善/恶化 |
-| 高增长企业短期 EVA 为负就否定 | 区分"投资期负 EVA"和"价值毁灭" |
+| Looking only at accounting profit, ignoring capital cost | Must calculate EVA; accounting profit ≠ value creation |
+| Overly complex accounting adjustments | Keep to 5-10 core adjustments for comparability |
+| Arbitrary WACC estimation | Use the same WACC methodology as DCF |
+| Invested capital includes non-operating assets | Exclude non-operating assets |
+| Drawing conclusions from single-period EVA | Use at least 3 years of trends to identify improvement/deterioration |
+| Dismissing high-growth companies for negative short-term EVA | Distinguish between "investment-phase negative EVA" and "value destruction" |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **前置 DuPont Analysis**：杜邦看 ROE 结构，EVA 验证是否真实创造价值
-- **互补 DCF**：DCF 估算价值，EVA 衡量价值创造能力
-- **对照 Comparable Company**：CCA 是市场估值，EVA 是内在价值创造
-- **后接绩效管理**：EVA 挂钩激励考核，避免短期会计操纵
+- **Upstream DuPont Analysis**: DuPont examines ROE structure; EVA validates whether value is truly being created
+- **Complementary DCF**: DCF estimates value; EVA measures value creation capability
+- **Cross-reference Comparable Company**: CCA reflects market valuation; EVA reflects intrinsic value creation
+- **Downstream Performance Management**: EVA ties to incentive compensation, avoiding short-term accounting manipulation

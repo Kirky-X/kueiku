@@ -1,157 +1,157 @@
 # Consumer Decision Journey · 消费者决策旅程
 
-## 核心理念
+## Core Concept
 
-麦肯锡提出，消费者从产生需求到形成忠诚的过程是**非线性**的，而非传统漏斗式的直线推进。决策旅程包含：**考虑 → 评估 → 购买 → 体验 → 忠诚（拥护）**，其中**体验阶段**是品牌能否进入忠诚循环的关键。
+McKinsey proposed that the process from a consumer's need arising to forming loyalty is **non-linear**, not a traditional funnel-style linear progression. The decision journey includes: **Consider → Evaluate → Purchase → Experience → Advocate (Loyalty)**, where the **Experience stage** is the key to whether a brand enters the loyalty loop.
 
-> 传统漏斗假设消费者被动 narrowing down，实际旅程中消费者会主动添加/剔除品牌，且购后体验决定是否进入忠诚循环——这才是复购与口碑的引擎。
-
-```
-        ┌──────────────── 忠诚循环 ──────────────┐
-        ↓                                      │
-  考虑 → 评估 → 购买 → 体验 → 拥护 ────────────┘
-                          │
-                          └→ 不满意则退出循环
-```
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 用户旅程优化与触点设计
-- 营销资源在决策阶段间的分配
-- 流失分析与召回设计
-- 全渠道体验一致性诊断
-
-⚠️ **慎用**
-- 低参与度冲动消费（决策旅程极短，模型价值低）
-- B2B 复杂采购（多决策者，需用 B2B 采购旅程模型）
-- 缺乏触点数据（无法定位体验瓶颈）
-- 把旅程当线性漏斗（丢失非线性洞察）
-
----
-
-## 执行步骤
-
-### Step 1：绘制旅程
-
-列出消费者从需求产生到忠诚的全过程：
+> The traditional funnel assumes consumers passively narrow down choices. In reality, consumers actively add/remove brands during their journey, and post-purchase experience determines whether they enter the loyalty loop — this is the engine of repeat purchases and word-of-mouth.
 
 ```
-决策旅程阶段：
-  1. 考虑（Consider）：消费者产生需求，初步想到候选品牌池
-  2. 评估（Evaluate）：主动收集信息，添加/剔除品牌
-  3. 购买（Buy）：在渠道完成交易
-  4. 体验（Experience）：使用产品/服务，形成感知
-  5. 拥护（Advocate）：满意则推荐/复购，进入忠诚循环
-```
-
-针对每个阶段，识别消费者在做什么、想什么、感受如何。
-
-### Step 2：识别触点
-
-列出每个阶段消费者与品牌/渠道的所有触点：
-
-```
-触点清单（示例）：
-  考虑：广告/口碑/搜索结果/社交媒体/朋友推荐
-  评估：官网/评测/比价站/客服咨询/线下体验
-  购买：电商平台/门店/APP/销售员
-  体验：开箱/使用/客服/社区/内容
-  拥护：评价/分享/推荐/复购/UGC
-```
-
-> 触点不全是品牌可控的（如口碑、评测），但都影响决策，必须纳入分析。
-
-### Step 3：评估体验
-
-对每个阶段和触点评估消费者体验：
-
-```
-体验评估表：
-  阶段    触点          体验评分  痛点              流失风险
-  考虑    搜索结果      [低]     品牌词被竞品截流   高
-  评估    官网          [中]     信息架构混乱       中
-  购买    支付流程      [高]     步骤多             低
-  体验    开箱          [高]     无                 低
-  体验    客服          [低]     响应慢             高
-  拥护    复购引导      [中]     无召回机制         中
-```
-
-重点关注**体验阶段**：这是决定是否进入忠诚循环的关键。购后体验差，前面所有触点的努力归零。
-
-### Step 4：优化关键触点
-
-按"影响 × 痛点严重度"排序，优先优化：
-
-```
-优化优先级矩阵：
-  高影响 + 高痛点 → 立即优化（如客服响应）
-  高影响 + 低痛点 → 保持监控
-  低影响 + 高痛点 → 次优优化
-  低影响 + 低痛点 → 暂不投入
-
-优化动作示例：
-  - 考虑阶段：加强品牌词 SEO/SEM，拦截竞品
-  - 评估阶段：重构官网信息架构，提供决策工具
-  - 体验阶段：提升客服响应 SLA，建立主动关怀
-  - 拥护阶段：设计复购激励 + 推荐奖励
-```
-
-> 旅程优化的目标不是单触点最优，而是**全旅程流畅**。单点最优但其他触点断裂，仍会流失。
-
----
-
-## 输出模板
-
-```
-消费者决策旅程分析
-
-一、旅程概览
-  品类：[...] / 目标客群：[...]
-  旅程阶段：考虑 → 评估 → 购买 → 体验 → 拥护
-
-二、触点清单
-  [按阶段列出所有触点，标注品牌可控/不可控]
-
-三、体验评估
-  [表格：阶段/触点/体验评分/痛点/流失风险]
-  关键流失点：[...] — 根因：[...]
-
-四、优化优先级
-  优先级 1：[触点] — 动作 [...] — 预期降低流失 [X%]
-  优先级 2：[触点] — 动作 [...] — ...
-
-五、忠诚循环设计
-  体验关键动作：[...]
-  拥护激励机制：[...]
-  复购触发器：[...]
-
-六、效果追踪
-  关键指标：[各阶段转化率/复购率/NPS]
-  复测频率：[季度]
+        ┌──────────────── Loyalty Loop ──────────────┐
+        ↓                                            │
+  Consider → Evaluate → Purchase → Experience → Advocate ──────────┘
+                                    │
+                                    └→ Exit loop if dissatisfied
 ```
 
 ---
 
-## 常见陷阱
+## Applicable Scenarios
 
-| 陷阱 | 避免方式 |
+✅ **Best Suited For**
+- User journey optimization and touchpoint design
+- Marketing resource allocation across decision stages
+- Churn analysis and re-engagement design
+- Omnichannel experience consistency diagnosis
+
+⚠️ **Use with Caution**
+- Low-involvement impulse purchases (decision journey is too short; model has low value)
+- Complex B2B procurement (multiple decision-makers; use B2B procurement journey model instead)
+- Lack of touchpoint data (cannot pinpoint experience bottlenecks)
+- Treating the journey as a linear funnel (losing non-linear insights)
+
+---
+
+## Execution Steps
+
+### Step 1: Map the Journey
+
+List the full process from need emergence to loyalty:
+
+```
+Decision journey stages:
+  1. Consider: Consumer develops a need and initially thinks of candidate brands
+  2. Evaluate: Actively gathers information, adds/removes brands
+  3. Buy: Completes the transaction at a channel
+  4. Experience: Uses the product/service, forms perceptions
+  5. Advocate: If satisfied, recommends/repeats purchase, entering the loyalty loop
+```
+
+For each stage, identify what consumers are doing, thinking, and feeling.
+
+### Step 2: Identify Touchpoints
+
+List all touchpoints between consumers and the brand / channel at each stage:
+
+```
+Touchpoint inventory (examples):
+  Consider: Ads / word-of-mouth / search results / social media / friend recommendations
+  Evaluate: Official website / reviews / comparison sites / customer service inquiries / offline experiences
+  Buy: E-commerce platforms / stores / apps / sales staff
+  Experience: Unboxing / usage / customer service / community / content
+  Advocate: Reviews / sharing / referrals / repeat purchases / UGC
+```
+
+> Not all touchpoints are brand-controllable (e.g., word-of-mouth, reviews), but they all influence decisions and must be included in the analysis.
+
+### Step 3: Evaluate Experience
+
+Assess consumer experience at each stage and touchpoint:
+
+```
+Experience evaluation table:
+  Stage     Touchpoint       Experience Score  Pain Point           Churn Risk
+  Consider  Search results   [Low]             Brand terms hijacked by competitors  High
+  Evaluate  Official website [Medium]          Confused information architecture    Medium
+  Buy       Payment process  [High]            Too many steps                         Low
+  Experience Unboxing        [High]            None                                   Low
+  Experience Customer service[Low]             Slow response                          High
+  Advocate   Reorder prompt  [Medium]          No re-engagement mechanism             Medium
+```
+
+Focus on the **Experience stage**: this is the key to entering the loyalty loop. Poor post-purchase experience zeroes out all prior touchpoint efforts.
+
+### Step 4: Optimize Key Touchpoints
+
+Prioritize by "Impact × Pain Severity":
+
+```
+Optimization priority matrix:
+  High impact + High pain → Optimize immediately (e.g., customer service response)
+  High impact + Low pain  → Monitor and maintain
+  Low impact + High pain  → Secondary optimization
+  Low impact + Low pain   → No investment for now
+
+Optimization action examples:
+  - Consider stage: Strengthen brand term SEO/SEM, intercept competitors
+  - Evaluate stage: Restructure website information architecture, provide decision tools
+  - Experience stage: Improve customer service response SLA, establish proactive care
+  - Advocate stage: Design reorder incentives + referral rewards
+```
+
+> The goal of journey optimization is not single-touchpoint excellence, but **whole-journey smoothness**. Single-point optimization with broken touchpoints elsewhere still leads to churn.
+
+---
+
+## Output Template
+
+```
+Consumer Decision Journey Analysis
+
+I. Journey Overview
+  Category: [...] / Target audience: [...]
+  Journey stages: Consider → Evaluate → Purchase → Experience → Advocate
+
+II. Touchpoint Inventory
+  [List all touchpoints by stage, marking brand-controllable / uncontrollable]
+
+III. Experience Assessment
+  [Table: Stage / Touchpoint / Experience Score / Pain Point / Churn Risk]
+  Key churn points: [...] — Root cause: [...]
+
+IV. Optimization Priorities
+  Priority 1: [Touchpoint] — Action [...] — Expected churn reduction [X%]
+  Priority 2: [Touchpoint] — Action [...] — ...
+
+V. Loyalty Loop Design
+  Experience key actions: [...]
+  Advocate incentive mechanisms: [...]
+  Repeat purchase triggers: [...]
+
+VI. Effect Tracking
+  Key metrics: [Stage conversion rates / repeat purchase rate / NPS]
+  Re-measurement frequency: [Quarterly]
+```
+
+---
+
+## Common Pitfalls
+
+| Pitfall | How to Avoid |
 |------|---------|
-| 把旅程当线性漏斗 | 必须刻画非线性的添加/剔除品牌行为 |
-| 只关注购买前触点 | 体验阶段是忠诚循环的关键，不能忽视 |
-| 忽视不可控触点 | 口碑/评测虽不可控但影响决策，必须纳入 |
-| 单触点优化忽视全旅程 | 全旅程流畅度优先于单点最优 |
-| 旅程一成不变 | 旅程随渠道/品类演进，定期复测 |
-| 用平均体验掩盖细分差异 | 不同客群旅程可能不同，需分层分析 |
+| Treating the journey as a linear funnel | Must capture non-linear add/remove brand behaviors |
+| Only focusing on pre-purchase touchpoints | The Experience stage is critical for the loyalty loop and cannot be ignored |
+| Ignoring uncontrollable touchpoints | Word-of-mouth / reviews are uncontrollable but influence decisions; must be included |
+| Single-touchpoint optimization ignoring the whole journey | Whole-journey smoothness takes priority over single-point excellence |
+| Journey remains static | Journey evolves with channels / categories; re-measure regularly |
+| Using average experience to mask segment differences | Different audience segments may have different journeys; analyze by segment |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **搭配 Customer Journey Map**：CJM 是更细颗粒度的服务设计工具，CDJ 是战略层框架
-- **搭配 RFM Model**：RFM 识别高价值/流失用户，CDJ 设计触达动作
-- **搭配 STP Analysis**：不同目标段的决策旅程可能不同，需分别绘制
-- **搭配 Empathy Map**：共情图补充旅程中消费者的所想所感
-- **搭配 A/B Test**：触点优化用 A/B 测试验证效果
+- **Pair with Customer Journey Map**: CJM is a finer-grained service design tool; CDJ is a strategic-level framework
+- **Pair with RFM Model**: RFM identifies high-value / churn-risk users; CDJ designs engagement actions
+- **Pair with STP Analysis**: Different target segments may have different decision journeys; map separately
+- **Pair with Empathy Map**: Empathy Map supplements what consumers think and feel during the journey
+- **Pair with A/B Test**: Touchpoint optimization validated through A/B testing

@@ -1,30 +1,30 @@
-# Product Philosophy · 产品哲学
+# Product Philosophy
 
-**适用场景**：需要在产品方向、架构与工艺标准上做底层判断，而非执行层排期
+**Applicable Scenarios**: When making foundational judgments on product direction, architecture, and craft standards — not execution-level scheduling
 
-| 方法论 | 一句话描述 | 最佳场景 | Reference |
+| Methodology | One-Line Description | Best Scenario | Reference |
 | --- | --- | --- | --- |
-| **Focus as No** | 聚焦不是说"是"，而是说"不"，激进减法锁定最小集 | 产品范围决策、功能取舍、防止产品臃肿 | `focus-as-no.md` |
-| **Whole Widget** | 端到端负责，关键决策不外包的垂直整合架构 | 产品架构决策、垂直整合 vs 水平分工选择 | `whole-widget.md` |
-| **Technology Meets Humanities** | 科技 × 人文 × 商业三维评估，单一视角不足以做出好产品 | 产品评估、设计决策、团队组建 | `technology-meets-humanities.md` |
-| **Invisible Perfection** | 内部工艺质量决定外部体验，看不见的地方也要打磨 | 代码质量、内部工具、工艺标准制定 | `invisible-perfection.md` |
+| **Focus as No** | Focus is not about saying "yes" but "no" — radical subtraction to lock in the minimal set | Product scope decisions, feature trade-offs, preventing product bloat | `focus-as-no.md` |
+| **Whole Widget** | End-to-end responsibility, key decisions not outsourced — vertical integration architecture | Product architecture decisions, vertical integration vs. horizontal specialization | `whole-widget.md` |
+| **Technology Meets Humanities** | Technology × Humanities × Business three-dimensional assessment — a single perspective is insufficient for great products | Product evaluation, design decisions, team composition | `technology-meets-humanities.md` |
+| **Invisible Perfection** | Internal craft quality determines external experience — polish even the unseen areas | Code quality, internal tools, craft standard setting | `invisible-perfection.md` |
 
-## 各方法论最低信息需求
+## Minimum Information Requirements per Methodology
 
-- **Focus as No**：当前功能/需求清单 + 业务目标优先级
-- **Whole Widget**：产品关键决策点清单 + 各环节外包成本/收益数据
-- **Technology Meets Humanities**：产品的技术指标 + 用户人文感受数据 + 商业模型
-- **Invisible Perfection**：内部工艺点清单 + 现有质量标准 + 自动化检查能力
+- **Focus as No**: Current feature/requirement list + business goal priorities
+- **Whole Widget**: Product key decision point inventory + outsourcing cost/benefit data for each component
+- **Technology Meets Humanities**: Product technical metrics + user humanities sensitivity data + business model
+- **Invisible Perfection**: Internal craft point inventory + existing quality standards + automation check capabilities
 
-## 路由触发信号
+## Routing Trigger Signals
 
-- "功能太多/产品臃肿/什么都想做" → Focus as No（主）
-- "这个环节要不要自研还是外包/买方案" → Whole Widget（主）
-- "产品评估只看技术指标不够/缺少人文视角" → Technology Meets Humanities（主）
-- "代码质量/内部工具要不要花时间打磨" → Invisible Perfection（主）
+- "Too many features / product bloat / wanting to do everything" → Focus as No (primary)
+- "Should this component be built in-house or outsourced/purchased?" → Whole Widget (primary)
+- "Product evaluation only looking at technical metrics is insufficient / missing humanities perspective" → Technology Meets Humanities (primary)
+- "Code quality / internal tools — should we spend time polishing?" → Invisible Perfection (primary)
 
-## 常见组合
+## Common Combinations
 
-- **产品范围决策**：Focus as No（锁定最小集）→ RICE（执行排序）→ Invisible Perfection（工艺标准）
-- **架构决策**：Whole Widget（识别关键决策点）→ Technology Meets Humanities（三维评估）
-- **新品评估**：Technology Meets Humanities（三维评估）→ Focus as No（剔除诱惑项）
+- **Product scope decision**: Focus as No (lock in minimal set) → RICE (execution prioritization) → Invisible Perfection (craft standards)
+- **Architecture decision**: Whole Widget (identify key decision points) → Technology Meets Humanities (three-dimensional assessment)
+- **New product evaluation**: Technology Meets Humanities (three-dimensional assessment) → Focus as No (eliminate temptations)

@@ -1,19 +1,19 @@
-# Pretotypes · 预原型
+# Pretotypes
 
-## 核心思想
-在写一行代码前，先用最便宜的方式验证"该不该做这件事"（Right It），而不是"做得对不对"。通过 XYZ 假设 + 轻量 pretotype 实验，在投入工程前过滤掉注定失败的想法。
+## Core Idea
+Before writing a single line of code, validate "whether this should be built" (Right It) in the cheapest way possible, rather than "whether it's built correctly." Through XYZ hypotheses + lightweight pretotype experiments, filter out ideas destined to fail before investing in engineering.
 
-## 适用场景
-- 新想法还停留在"我觉得用户会要"阶段
-- 工程成本高，需在开发前验证需求存在性
-- 多个候选想法，需快速筛选
+## Use Cases
+- New ideas still stuck in the "I think users will want it" stage
+- High engineering costs, need to validate demand existence before development
+- Multiple candidate ideas, need quick screening
 
-## 关键步骤
-1. 写出 XYZ 假设：X% 的目标用户在 Y 场景下会 Z 行为
-2. 选择 pretotype 类型：Landing Page 测流量 / 一段视频测点击 / 预购测付费意愿 / Concierge MVP 手动服务测真实使用
-3. 加入 Skin-in-the-Game 信号：让用户付出时间/邮箱/金钱/数据，而非只是口头说"会要"
-4. 设定事先的成功阈值（如 CTR ≥ 5%），未达即放弃，避免事后合理化
-5. 通过后才进入真正的原型/工程实现
+## Key Steps
+1. Write XYZ hypotheses: X% of target users will Z behavior in Y context
+2. Choose pretotype type: Landing page to test traffic / Video to test clicks / Pre-order to test willingness to pay / Concierge MVP with manual service to test real usage
+3. Add Skin-in-the-Game signals: Make users invest time/email/money/data, not just verbally say "I'd want it"
+4. Set pre-defined success thresholds (e.g., CTR ≥ 5%), abandon if not met to avoid post-hoc rationalization
+5. Only proceed to real prototyping/engineering implementation after passing
 
-## 来源
-Alberto Savoia《The Right It》（2019）
+## Source
+Alberto Savoia, *The Right It* (2019)

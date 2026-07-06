@@ -1,177 +1,179 @@
 # Maslow Hierarchy · 马斯洛需求层次
 
-## 核心理念
+## Core Concept
 
-马斯洛提出人类需求从低到高分为五层：**生理 → 安全 → 社交 → 尊重 → 自我实现**。低层需求基本满足后会激发高层需求，但并非严格阶梯——多数人同时在多个层次有需求。该模型用于挖掘用户真实需求层次，避免在错误层次做产品诉求。
+Maslow proposed that human needs are ranked from low to high in five levels: **Physiological → Safety → Social → Esteem → Self-actualization**. When lower-level needs are mostly satisfied, higher-level needs emerge — though not as a strict ladder; most people have needs across multiple levels simultaneously. This model is used to uncover users' true dominant need level, avoiding mismatched product messaging at the wrong level.
 
-> 产品诉求与用户当前主导需求层次错配，是营销失败的常见根源。卖安全感的文案打不动追求自我实现的客群。
+> Mismatched product messaging and the user's current dominant need level is a common root cause of marketing failure. Messaging about safety won't resonate with an audience pursuing self-actualization.
 
 ```
             ┌─────────────┐
-            │  自我实现     │  成长需求（更高层次）
+            │  Self-      │  Growth Needs (Higher Level)
+            │ actualization│
             ├─────────────┤
-            │  尊重        │
+            │  Esteem     │
             ├─────────────┤
-            │  社交/归属    │
+            │  Social /   │
+            │  Belonging   │
             ├─────────────┤
-            │  安全        │  缺失需求（更低层次）
+            │  Safety     │  Deficiency Needs (Lower Level)
             ├─────────────┤
-            │  生理        │
+            │  Physiological│
             └─────────────┘
 ```
 
-| 层次 | 核心需求 | 产品诉求示例 |
+| Level | Core Need | Product Messaging Examples |
 |------|---------|------------|
-| 生理 | 生存、温饱、休息 | 基础功能、低价、可得性 |
-| 安全 | 安全、稳定、保障、健康 | 可靠、合规、保障、隐私 |
-| 社交 | 归属、友谊、亲密、社群 | 连接、社区、共享、认同 |
-| 尊重 | 认可、地位、成就、尊严 | 品牌象征、专属、专业、荣誉 |
-| 自我实现 | 成长、创造、意义、潜能 | 创造工具、成长路径、意义感 |
+| Physiological | Survival, sustenance, rest | Basic functionality, low price, availability |
+| Safety | Security, stability, protection, health | Reliability, compliance, protection, privacy |
+| Social | Belonging, friendship, intimacy, community | Connection, community, sharing, identity |
+| Esteem | Recognition, status, achievement, dignity | Brand symbol, exclusivity, professionalism, honor |
+| Self-actualization | Growth, creativity, meaning, potential | Creative tools, growth paths, sense of purpose |
 
 ---
 
-## 适用场景
+## Applicable Scenarios
 
-✅ **最适合**
-- 用户需求挖掘与产品定位
-- 营销诉求与文案设计
-- 产品升级路径规划（从低层需求向高层延伸）
-- 客群分层与差异化诉求
+✅ **Best Suited For**
+- User needs discovery and product positioning
+- Marketing messaging and copywriting design
+- Product upgrade path planning (extending from lower to higher need levels)
+- Customer segmentation and differentiated messaging
 
-⚠️ **慎用**
-- 把层次当严格阶梯（实际需求层次可交叉并存）
-- 用模型预测个体行为（模型描述群体趋势，非个体）
-- B2B 采购决策（组织决策更复杂，需求层次不直接适用）
-- 文化普适性假设（不同文化对各层次权重不同）
-
----
-
-## 执行步骤
-
-### Step 1：识别用户当前主导层次
-
-通过访谈/调研/行为数据判断目标客群的主导需求层次：
-
-```
-层次识别信号：
-  生理层：关注价格/可得性/基础功能是否满足
-  安全层：关注风险/保障/可靠性/隐私/健康
-  社交层：关注是否被接纳/能否与他人连接
-  尊重层：关注地位/认可/专属/品牌象征
-  自我实现：关注成长/创造/意义/潜能实现
-
-判断方法：
-  - 用户访谈：问"为什么买/最在意什么"
-  - 行为数据：看用户花时间在哪些功能
-  - 评论挖掘：提取高频关键词映射到层次
-  - 竞品分析：竞品诉求在哪个层次
-```
-
-> 主导层次不一定是唯一层次。多数用户同时在 2-3 个层次有需求，但有一个**主导驱动**。
-
-### Step 2：评估产品满足层次
-
-判断产品当前主要满足哪个层次，以及是否有向上延伸空间：
-
-```
-产品满足层次评估：
-  当前主要满足层次：[X]
-  附加满足层次：[Y, Z]
-  未触及层次：[...]
-
-层次-功能映射：
-  生理：[功能 A] — 满足度 [高/中/低]
-  安全：[功能 B] — 满足度 [...]
-  社交：[功能 C] — 满足度 [...]
-  尊重：[功能 D] — 满足度 [...]
-  自我实现：[功能 E] — 满足度 [...]
-```
-
-### Step 3：设计升级路径
-
-如果产品要向上层延伸，设计升级路径：
-
-```
-升级路径设计（示例：从安全层向尊重层延伸）：
-  当前：主打"安全可靠"（安全层）
-  目标：增加"专业身份象征"（尊重层）
-  路径：
-    1. 新增专业认证/徽章功能
-    2. 推出专家版/企业版区分身份
-    3. 营销诉求从"安心"扩展为"专业认可"
-  风险：升级不能损害低层满足（可靠性不能降）
-```
-
-> 升级路径要避免"跳层"。低层未满足就追求高层，会被用户视为虚妄。先稳固低层再向上。
-
-### Step 4：验证需求假设
-
-验证主导层次判断是否正确：
-
-```
-验证方法：
-  - A/B 测试：不同层次诉求的文案/功能对比转化率
-  - 小范围试点：上线升级功能看留存与付费
-  - 深度访谈：验证用户对诉求的真实反应
-  - 竞品对照：同层次竞品的市场表现
-
-验证指标：
-  - 主导层次诉求的转化率应显著高于错配层次
-  - 升级功能的目标客群付费意愿
-```
+⚠️ **Use with Caution**
+- Treating levels as a strict ladder (actual need levels can overlap and coexist)
+- Using the model to predict individual behavior (model describes group trends, not individuals)
+- B2B purchasing decisions (organizational decisions are more complex; need levels don't apply directly)
+- Assuming cultural universality (different cultures weight each level differently)
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Identify the User's Current Dominant Level
+
+Through interviews / research / behavioral data, determine the target audience's dominant need level:
 
 ```
-马斯洛需求层次分析
+Level identification signals:
+  Physiological: Focus on price / availability / whether basic functions are met
+  Safety: Focus on risk / protection / reliability / privacy / health
+  Social: Focus on being accepted / connecting with others
+  Esteem: Focus on status / recognition / exclusivity / brand symbol
+  Self-actualization: Focus on growth / creativity / meaning / potential realization
 
-一、用户主导层次识别
-  目标客群：[...]
-  主导需求层次：[生理/安全/社交/尊重/自我实现]
-  判断依据：[访谈/数据/评论/竞品]
+Judgment methods:
+  - User interviews: Ask "why do you buy / what matters most"
+  - Behavioral data: See which features users spend time on
+  - Review mining: Extract high-frequency keywords and map to levels
+  - Competitive analysis: Which level do competitors' messages target
+```
 
-二、产品满足层次评估
-  当前主要满足：[层次]
-  附加满足：[层次]
-  未触及：[层次]
-  层次-功能映射表：[...]
+> The dominant level is not necessarily the only level. Most users have needs at 2-3 levels simultaneously, but one is the **primary driver**.
 
-三、升级路径设计
-  目标延伸层次：[...]
-  升级动作：[功能/营销/品牌]
-  低层稳固措施：[...]
-  风险与应对：[...]
+### Step 2: Assess Which Levels the Product Satisfies
 
-四、诉求对齐
-  营销诉求：[匹配主导层次]
-  文案方向：[...]
+Determine which level the product currently satisfies most, and whether there's room to extend upward:
 
-五、验证计划
-  验证方法：[A/B/试点/访谈]
-  验证指标：[...]
+```
+Product satisfaction level assessment:
+  Currently mainly satisfies: [X]
+  Additionally satisfies: [Y, Z]
+  Not reached: [...]
+
+Level-function mapping:
+  Physiological: [Feature A] — Satisfaction [High/Medium/Low]
+  Safety: [Feature B] — Satisfaction [...]
+  Social: [Feature C] — Satisfaction [...]
+  Esteem: [Feature D] — Satisfaction [...]
+  Self-actualization: [Feature E] — Satisfaction [...]
+```
+
+### Step 3: Design the Upgrade Path
+
+If the product aims to extend to a higher level, design the upgrade path:
+
+```
+Upgrade path design (example: extending from Safety to Esteem):
+  Current: Emphasizes "safe and reliable" (Safety level)
+  Goal: Add "professional identity symbol" (Esteem level)
+  Path:
+    1. Add professional certification / badge features
+    2. Launch Expert / Enterprise editions to differentiate identity
+    3. Expand marketing messaging from "peace of mind" to "professional recognition"
+  Risk: Upgrading must not undermine lower-level satisfaction (reliability cannot decrease)
+```
+
+> Avoid "skipping levels" in the upgrade path. Pursuing higher levels before lower ones are met will be perceived as hollow by users. Stabilize lower levels first, then move upward.
+
+### Step 4: Validate the Needs Hypothesis
+
+Verify whether the dominant level judgment is correct:
+
+```
+Validation methods:
+  - A/B testing: Compare conversion rates of messaging / features at different levels
+  - Small-scale pilot: Launch upgrade features and observe retention and payment
+  - In-depth interviews: Verify users' genuine reactions to messaging
+  - Competitive benchmarking: Market performance of competitors at the same level
+
+Validation metrics:
+  - Conversion rate for dominant-level messaging should significantly exceed mismatched-level messaging
+  - Target audience's willingness to pay for upgrade features
 ```
 
 ---
 
-## 常见陷阱
+## Output Template
 
-| 陷阱 | 避免方式 |
+```
+Maslow Hierarchy Analysis
+
+I. User Dominant Level Identification
+  Target audience: [...]
+  Dominant need level: [Physiological / Safety / Social / Esteem / Self-actualization]
+  Evidence basis: [Interviews / Data / Reviews / Competitive analysis]
+
+II. Product Satisfaction Level Assessment
+  Currently mainly satisfies: [Level]
+  Additionally satisfies: [Level]
+  Not reached: [Level]
+  Level-function mapping table: [...]
+
+III. Upgrade Path Design
+  Target extension level: [...]
+  Upgrade actions: [Features / Marketing / Branding]
+  Lower-level stabilization measures: [...]
+  Risks and mitigation: [...]
+
+IV. Messaging Alignment
+  Marketing messaging: [Match dominant level]
+  Copywriting direction: [...]
+
+V. Validation Plan
+  Validation method: [A/B / Pilot / Interview]
+  Validation metrics: [...]
+```
+
+---
+
+## Common Pitfalls
+
+| Pitfall | How to Avoid |
 |------|---------|
-| 把层次当严格阶梯 | 认识到层次可交叉并存，识别主导层而非唯一层 |
-| 主导层次判断靠猜测 | 用访谈/数据/评论多源验证 |
-| 跳层升级忽视低层 | 升级前确保低层需求稳固满足 |
-| 营销诉求与主导层次错配 | 诉求必须匹配目标客群主导层次 |
-| 把模型当个体预测工具 | 模型描述群体趋势，不预测个体 |
-| 忽视文化差异 | 不同文化对各层次权重不同，需本地化校准 |
+| Treating levels as a strict ladder | Recognize levels can overlap; identify the dominant level, not the only one |
+| Guessing the dominant level | Validate through interviews / data / reviews from multiple sources |
+| Upgrading by skipping levels, neglecting lower needs | Ensure lower-level needs are solidly met before upgrading |
+| Mismatched messaging and dominant level | Messaging must match the target audience's dominant level |
+| Using the model as an individual prediction tool | Model describes group trends, not individual predictions |
+| Ignoring cultural differences | Different cultures weight levels differently; localize and calibrate |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **搭配 User Personas**：Persona 描述用户画像，马斯洛层次挖掘其主导需求
-- **搭配 Empathy Map**：共情图理解用户所想所感，马斯洛层次定位需求层级
-- **搭配 STP Analysis**：不同目标段的主导需求层次可能不同，诉求差异化
-- **搭配 Value Proposition Canvas**：价值主张需对应用户主导需求层次
-- **搭配 Jobs-to-be-Done**：JTBD 看功能性任务，马斯洛看情感/意义层级动机
+- **Pair with User Personas**: Personas describe user profiles; Maslow uncovers their dominant needs
+- **Pair with Empathy Map**: Empathy Map understands what users think and feel; Maslow positions the need level
+- **Pair with STP Analysis**: Different target segments may have different dominant need levels; differentiate messaging
+- **Pair with Value Proposition Canvas**: Value propositions must correspond to the user's dominant need level
+- **Pair with Jobs-to-be-Done**: JTBD looks at functional tasks; Maslow examines emotional / meaning-level motivations

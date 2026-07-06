@@ -1,23 +1,23 @@
-# Research Methodology · 研究方法论
+# Research Methodology
 
-**适用场景**：需要对复杂问题做系统化调研，输出有证据支撑的结论
+**Applicable Scenario**: Systematic research on complex problems, outputting evidence-backed conclusions
 
-| 方法论 | 一句话描述 | 最佳场景 | Reference |
+| Methodology | One-Line Description | Best Scenario | Reference |
 | --- | --- | --- | --- |
-| **Systematic Research Process** | 提问→检索→评估→综合→输出 五步闭环研究流程 | 复杂问题调研、行业研究、技术选型调研 | `systematic-research-process.md` |
+| **Systematic Research Process** | Five-step closed-loop research process: question → search → evaluate → synthesize → output | Complex problem research, industry research, technology selection research | `systematic-research-process.md` |
 
-## 各方法论最低信息需求
+## Minimum Information Requirements per Methodology
 
-- **Systematic Research Process**：明确的研究问题 + 可访问的多源信息渠道
+- **Systematic Research Process**: Clear research question + accessible multi-source information channels
 
-## 路由触发信号
+## Routing Trigger Signals
 
-- "研究/调研/分析某个复杂问题" → Systematic Research Process（主）
-- "需要多源交叉验证的结论" → Systematic Research Process（主）
-- "技术选型/行业趋势/竞品深度" → Systematic Research Process（主）
+- "Research/analyze a complex problem" → Systematic Research Process (primary)
+- "Need conclusions validated across multiple sources" → Systematic Research Process (primary)
+- "Technology selection/industry trends/in-depth competitive research" → Systematic Research Process (primary)
 
-## 常见组合
+## Common Combinations
 
-- **行业研究**：Systematic Research Process（信息收集）→ Industry Value Chain（价值链分析）→ Gartner Hype Cycle（技术成熟度）
-- **竞品调研**：Systematic Research Process（信息收集）→ SWOT（竞争对比）
-- **技术选型**：Systematic Research Process（信息收集）→ Gartner Hype Cycle（成熟度判断）→ DCF（投入产出评估）
+- **Industry Research**: Systematic Research Process (information collection) → Industry Value Chain (value chain analysis) → Gartner Hype Cycle (technology maturity)
+- **Competitive Research**: Systematic Research Process (information collection) → SWOT (competitive comparison)
+- **Technology Selection**: Systematic Research Process (information collection) → Gartner Hype Cycle (maturity assessment) → DCF (investment-return evaluation)

@@ -1,24 +1,24 @@
-# A/B Test Analysis · A/B 测试分析
+# A/B Test Analysis · A/B Test Analysis
 
-## 核心思想
-A/B 测试不是"看哪个版本数字高就上哪个"——需要事先算样本量、事后检验统计显著性、决策走标准矩阵，并检测 SRM（样本比例失衡）这种隐蔽但致命的错误。
+## Core Idea
+A/B testing is not "just pick the version with higher numbers" — you need to calculate sample size beforehand, test statistical significance afterward, follow a standard decision matrix, and detect SRM (Sample Ratio Mismatch), a subtle but fatal error.
 
-## 适用场景
-- 产品迭代需要数据驱动而非直觉决策
-- A/B 测试结果"差一点点"不知是否上线
-- 测试结果反直觉需排查是否方法出错
+## Applicable Scenarios
+- Product iterations require data‑driven rather than intuition‑based decisions
+- A/B test results are "close" and you don’t know whether to ship
+- Test results are counter‑intuitive and you need to check if the method was wrong
 
-## 关键步骤
-1. 事先算样本量：基于 MDE（最小可检测效应）+ 基线转化率 + 显著性水平（α=0.05）+ Power（β=0.8）查表
-2. 跑测试至样本量达标，**禁止提前停止**（会破坏统计有效性）
-3. 检测 SRM（Sample Ratio Mismatch）：实际样本比例与设计比例偏差 >1% 即存在 SRM，结果不可信，需先排查
-4. 检验统计显著性：p < 0.05 且效应量 ≥ MDE 才算有效
-5. 决策矩阵：
-   - 显著正向 + 业务意义足 → **Ship**
-   - 显著正向但效应小 → **Extend**（扩大测试范围或找放大场景）
-   - 显著负向 → **Stop**
-   - 不显著 → **Investigate**（拆分 segment 看是否有子群体显著）
-6. 记录测试假设/结果/决策到实验库
+## Key Steps
+1. Calculate sample size beforehand: based on MDE (Minimum Detectable Effect) + baseline conversion rate + significance level (α=0.05) + Power (β=0.8) using lookup tables
+2. Run the test until sample size is met, **do not stop early** (this invalidates statistical validity)
+3. Detect SRM (Sample Ratio Mismatch): if actual sample ratio deviates from the designed ratio by >1%, SRM exists and results are unreliable — investigate first
+4. Test statistical significance: p < 0.05 and effect size ≥ MDE to be considered valid
+5. Decision matrix:
+   - Significant positive + sufficient business value → **Ship**
+   - Significant positive but small effect → **Extend** (expand test scope or find amplification scenarios)
+   - Significant negative → **Stop**
+   - Not significant → **Investigate** (split by segment to see if any sub‑group is significant)
+6. Record test hypothesis/results/decision in the experiment repository
 
-## 来源
-统计学（Neyman-Pearson 假设检验框架）；A/B 测试实践见 Ronny Kohavi《Trustworthy Online Controlled Experiments》
+## Source
+Statistics (Neyman‑Pearson hypothesis testing framework); A/B testing practice see Ronny Kohavi "Trustworthy Online Controlled Experiments"

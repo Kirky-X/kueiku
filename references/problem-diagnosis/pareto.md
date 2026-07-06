@@ -1,187 +1,187 @@
-# Pareto Analysis · 帕累托分析
+# Pareto Analysis
 
-## 核心理念
+## Core Concept
 
-80/20 法则在决策中的系统化应用——识别**关键少数**（20% 的原因产生 80% 的影响），将资源聚焦于此。通过帕累托图（柱状图 + 累积曲线）可视化并按影响排序，找到投入产出比最高的切入点。
+A systematic application of the 80/20 rule to decision-making — identify the **vital few** (20% of causes producing 80% of impact), and focus resources there. Visualize with a Pareto chart (bar chart + cumulative curve) sorted by impact to find the highest ROI entry point.
 
-> 不是所有问题都值得同等对待。抓住关键少数，放弃琐碎多数，才能在有限资源下实现最大产出。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 资源分配与优先级排序（功能、客户、市场）
-- 问题根因筛选（哪些原因贡献了大部分问题）
-- 质量管理中的缺陷分析
-- 销售/收入分析（哪些客户/产品贡献了大部分收入）
-- 时间管理（哪些活动产生了最大价值）
-
-⚠️ **慎用**
-- 所有项目影响相近、不存在帕累托分布时（强行 80/20 会失真）
-- 需要根因分析时（帕累托只识别"是什么影响大"，不回答"为什么"）
-- 数据量太少时（不足 10 项无法形成有意义的排序）
+> Not all problems deserve equal attention. Seize the vital few, discard the trivial many, to maximize output with limited resources.
 
 ---
 
-## 执行步骤
+## When to Use
 
-### Step 1：列出所有项目
+✅ **Best suited for**
+- Resource allocation and prioritization (features, customers, markets)
+- Root cause filtering (which causes contribute the most to the problem)
+- Defect analysis in quality management
+- Sales/revenue analysis (which customers/products contribute the most revenue)
+- Time management (which activities produce the most value)
 
-将待分析的对象（问题、原因、功能、客户等）完整列出：
+⚠️ **Use with caution**
+- All items have similar impact, no Pareto distribution exists (forcing 80/20 will distort results)
+- Root cause analysis is needed (Pareto only identifies "what has large impact," not "why")
+- Data set is too small (fewer than 10 items cannot form a meaningful ranking)
+
+---
+
+## Execution Steps
+
+### Step 1: List All Items
+
+Comprehensively list the items to analyze (problems, causes, features, customers, etc.):
 
 ```
-项目列表：
-  1. [项目A]
-  2. [项目B]
-  3. [项目C]
+Item list:
+  1. [Item A]
+  2. [Item B]
+  3. [Item C]
   ...
 ```
 
-确保不遗漏重要项，但也不要把明显无关的项混入。
+Ensure no important items are omitted, but don't mix in obviously irrelevant ones.
 
-### Step 2：度量每项的影响
+### Step 2: Measure Impact for Each Item
 
-选择与决策目标一致的度量指标，为每项赋值：
+Choose a metric aligned with your decision objective, and assign a value to each item:
 
 ```
-度量指标：[如：收入 / 频次 / 成本 / 用户投诉数]
-  项目A：[数值]
-  项目B：[数值]
-  项目C：[数值]
+Metric: [e.g., Revenue / Frequency / Cost / Number of complaints]
+  Item A: [value]
+  Item B: [value]
+  Item C: [value]
   ...
 ```
 
-**关键**：度量指标必须与决策目标对齐。优化收入用金额，优化质量用缺陷数，优化效率用工时。
+**Key**: The metric must align with the decision objective. Use dollar amount for revenue optimization, defect count for quality, labor hours for efficiency.
 
-### Step 3：按影响降序排列
+### Step 3: Sort by Impact Descending
 
-将所有项目从大到小排列，计算每项占总量的百分比：
-
-```
-项目 | 影响值 | 占比
-  A   |  4000  | 40%
-  B   |  2500  | 25%
-  C   |  1500  | 15%
-  D   |  1000  | 10%
-  E   |   600  |  6%
-  F   |   400  |  4%
-```
-
-### Step 4：计算累积百分比
-
-逐项累加占比，标记 80% 分界线：
+Arrange all items from largest to smallest, calculating each item's percentage of the total:
 
 ```
-项目 | 影响值 | 占比 | 累积占比
-  A   |  4000  | 40%  |  40%
-  B   |  2500  | 25%  |  65%
-  C   |  1500  | 15%  |  80%  ← 80% 分界线
-  D   |  1000  | 10%  |  90%
-  E   |   600  |  6%  |  96%
-  F   |   400  |  4%  | 100%
+Item | Impact Value | Percentage
+  A  |    4000      | 40%
+  B  |    2500      | 25%
+  C  |    1500      | 15%
+  D  |    1000      | 10%
+  E  |     600      | 6%
+  F  |     400      | 4%
 ```
 
-### Step 5：划定关键少数
+### Step 4: Calculate Cumulative Percentage
 
-累积占比达到 80% 的项目即为**关键少数**（Vital Few），其余为**琐碎多数**（Trivial Many）。
-
-> 注意：80% 是经验值，实际分界可能在 70%-90% 之间。关键是找到曲线的"拐点"——影响急剧下降的位置。
-
-### Step 6：聚焦关键少数，制定行动
+Accumulate percentages item by item, marking the 80% threshold:
 
 ```
-关键少数（聚焦资源）：
-  - [项目A]：行动 [...]
-  - [项目B]：行动 [...]
-  - [项目C]：行动 [...]
-
-琐碎多数（降低投入 / 暂缓 / 删除）：
-  - [项目D/E/F]：处理策略 [...]
+Item | Impact Value | Percentage | Cumulative %
+  A  |    4000      | 40%        | 40%
+  B  |    2500      | 25%        | 65%
+  C  |    1500      | 15%        | 80%  ← 80% threshold
+  D  |    1000      | 10%        | 90%
+  E  |     600      | 6%         | 96%
+  F  |     400      | 4%         | 100%
 ```
 
----
+### Step 5: Identify the Vital Few
 
-## 输出模板
+Items whose cumulative percentage reaches 80% are the **vital few**; the rest are the **trivial many**.
+
+> Note: 80% is a rule of thumb; the actual threshold may fall between 70%-90%. The key is to find the "inflection point" on the curve — where impact drops sharply.
+
+### Step 6: Focus on the Vital Few, Define Actions
 
 ```
-帕累托分析报告
+Vital few (focus resources):
+  - [Item A]: Action [...]
+  - [Item B]: Action [...]
+  - [Item C]: Action [...]
 
-分析目标：[如：识别贡献 80% 收入的核心客户]
-度量指标：[如：年度消费金额]
-数据来源：[...]
-数据时间范围：[...]
-
-排序结果：
-  项目 | 影响值 | 占比 | 累积占比 | 分类
-  [A]  | [...]  | [...] | [...]   | 关键少数
-  [B]  | [...]  | [...] | [...]   | 关键少数
-  [C]  | [...]  | [...] | [...]   | 关键少数 ← 80% 分界
-  [D]  | [...]  | [...] | [...]   | 琐碎多数
-  [...] | [...]  | [...] | [...]   | 琐碎多数
-
-关键少数（[N] 项，贡献 [X]% 影响）：
-  1. [项目] — 行动：[...]
-  2. [项目] — 行动：[...]
-
-琐碎多数（[N] 项，贡献 [X]% 影响）：
-  处理策略：[降低投入 / 标准化处理 / 暂缓 / 删除]
-
-资源再分配建议：
-  从琐碎多数释放的资源 → 投入关键少数的 [...]
+Trivial many (reduce investment / defer / remove):
+  - [Item D/E/F]: Strategy [...]
 ```
 
 ---
 
-## 执行示例
-
-**场景**：分析客服工单来源，找出主要问题以集中优化
+## Output Template
 
 ```
-分析目标：识别产生 80% 工单的问题类型
-度量指标：月度工单数量
-数据时间范围：2024-05
+Pareto Analysis Report
 
-排序结果：
-  问题类型       | 工单数 | 占比  | 累积占比 | 分类
-  支付失败       |  420   | 35%   |  35%    | 关键少数
-  账号登录异常   |  300   | 25%   |  60%    | 关键少数
-  订单状态不同步 |  180   | 15%   |  75%    | 关键少数
-  退款进度查询   |  120   | 10%   |  85%    | 关键少数 ← 80% 分界
-  地址修改       |   90   |  7%   |  92%    | 琐碎多数
-  优惠券使用     |   60   |  5%   |  97%    | 琐碎多数
-  其他           |   30   |  3%   | 100%    | 琐碎多数
+Analysis objective: [e.g., Identify core customers contributing 80% of revenue]
+Metric: [e.g., Annual spending amount]
+Data source: [...]
+Data time range: [...]
 
-关键少数（4 项，贡献 85% 工单）：
-  1. 支付失败 — 行动：接入支付通道监控 + 自动重试机制
-  2. 账号登录异常 — 行动：优化 OAuth 流程 + 增加一键修复入口
-  3. 订单状态不同步 — 行动：增加消息队列重试 + 状态推送
-  4. 退款进度查询 — 行动：退款状态页实时展示 + 进度短信通知
+Ranked results:
+  Item | Impact Value | Percentage | Cumulative % | Category
+  [A]  | [...]        | [...]      | [...]        | Vital few
+  [B]  | [...]        | [...]      | [...]        | Vital few
+  [C]  | [...]        | [...]      | [...]        | Vital few ← 80% threshold
+  [D]  | [...]        | [...]      | [...]        | Trivial many
+  [...] | [...]       | [...]      | [...]        | Trivial many
 
-琐碎多数（3 项，贡献 15% 工单）：
-  处理策略：地址修改和优惠券使用接入自助 FAQ，其他走自动回复
+Vital few ([N] items, contributing [X]% of impact):
+  1. [Item] — Action: [...]
+  2. [Item] — Action: [...]
 
-资源再分配：从 FAQ 维护释放 1 名客服 → 投入支付通道专项优化
+Trivial many ([N] items, contributing [X]% of impact):
+  Strategy: [reduce investment / standardize handling / defer / remove]
+
+Resource reallocation:
+  Resources freed from trivial many → invest in vital few's [...]
 ```
 
 ---
 
-## 常见陷阱
+## Worked Example
 
-| 陷阱 | 说明 | 避免方式 |
-|------|------|---------|
-| 度量指标选错 | 用错误的指标排序，导致聚焦方向偏移 | 指标必须与决策目标直接对齐，先明确"我要优化什么" |
-| 强行套用 80/20 | 数据本身没有帕累托分布，各项目影响相近 | 先看累积曲线是否有明显拐点；没有拐点时帕累托分析不适用 |
-| 忽视琐碎多数的累积效应 | 单项影响小但总量可观，完全忽略可能出错 | 评估琐碎多数的总量占比，若超 30% 需考虑标准化批量处理 |
-| 静态分析 | 只做一次帕累托分析，忽略影响随时间变化 | 定期重新排序，尤其在业务环境变化后 |
-| 混淆相关与因果 | 影响大不等于根因，帕累托只排序不解释 | 对关键少数用 5 Whys 追问根因 |
+**Scenario**: Analyze customer service ticket sources to identify main problems for focused optimization
+
+```
+Analysis objective: Identify problem types generating 80% of tickets
+Metric: Monthly ticket volume
+Data time range: 2024-05
+
+Ranked results:
+  Problem type          | Tickets | %    | Cumulative % | Category
+  Payment failure       | 420     | 35%  | 35%          | Vital few
+  Account login issue   | 300     | 25%  | 60%          | Vital few
+  Order status mismatch | 180     | 15%  | 75%          | Vital few
+  Refund status inquiry | 120     | 10%  | 85%          | Vital few ← 80% threshold
+  Address change        | 90      | 7%   | 92%          | Trivial many
+  Coupon usage          | 60      | 5%   | 97%          | Trivial many
+  Other                 | 30      | 3%   | 100%         | Trivial many
+
+Vital few (4 items, contributing 85% of tickets):
+  1. Payment failure — Action: Integrate payment channel monitoring + auto-retry mechanism
+  2. Account login issue — Action: Optimize OAuth flow + add one-click fix entry
+  3. Order status mismatch — Action: Add message queue retry + status push notifications
+  4. Refund status inquiry — Action: Real-time refund status page + progress SMS notifications
+
+Trivial many (3 items, contributing 15% of tickets):
+  Strategy: Route address changes and coupon usage to self-service FAQ; auto-reply for others
+
+Resource reallocation: Free 1 customer service rep from FAQ maintenance → Invest in dedicated payment channel optimization
+```
 
 ---
 
-## 与其他方法论的关系
+## Common Pitfalls
 
-- **搭配 5 Whys**：帕累托识别"哪些问题影响最大"，5 Whys 追问"为什么这些问题会发生"
-- **搭配 Fishbone**：帕累托排序后，对关键少数用 Fishbone 展开因果全貌
-- **输入 RICE**：关键少数的项目优先级更高，可作为 RICE 中 Impact 的量化依据
-- **输入 Eisenhower Matrix**：帕累托的"关键少数"对应重要维度，再结合紧急度排入执行矩阵
-- **搭配 OKR**：关键少数的行动项可转化为 OKR 的 Key Result
+| Pitfall | Description | How to Avoid |
+|---------|-------------|-------------|
+| Wrong metric selected | Ranking by wrong metric leads to misaligned focus | Metric must directly align with decision objective; first clarify "what am I optimizing" |
+| Forcing 80/20 | Data itself has no Pareto distribution, items have similar impact | Check if the cumulative curve has a clear inflection point first; if no inflection, Pareto analysis is not applicable |
+| Ignoring trivial many's cumulative effect | Individual items small but total is significant, ignoring completely can lead to errors | Assess the total share of trivial many; if over 30%, consider standardized batch processing |
+| Static analysis | Running Pareto analysis only once, ignoring impact changes over time | Re-rank periodically, especially after business environment changes |
+| Confusing correlation with causation | Large impact ≠ root cause; Pareto only ranks, doesn't explain | Apply 5 Whys to the vital few to investigate root causes |
+
+---
+
+## Relationship with Other Methodologies
+
+- **Combined with 5 Whys**: Pareto identifies "which problems have the most impact"; 5 Whys investigates "why these problems occur"
+- **Combined with Fishbone**: After Pareto ranking, use Fishbone to expand the full causal picture for the vital few
+- **Feeds into RICE**: Vital few items have higher priority, serving as quantitative basis for Impact in RICE
+- **Feeds into Eisenhower Matrix**: Pareto's "vital few" corresponds to the important dimension, then combine with urgency to place in the execution matrix
+- **Combined with OKR**: Action items from the vital few can be converted into Key Results for OKR

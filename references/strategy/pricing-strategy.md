@@ -1,23 +1,23 @@
-# Pricing Strategy · 定价策略
+# Pricing Strategy
 
-## 核心思想
-定价是产品战略的一部分，不是工程上线后的附属决策。通过 Van Westendorp 价格敏感度计量找出可接受价格区间，结合价值计量单位（value metric）与分层设计（tier design），让定价同时反映用户价值与商业目标。
+## Core Concept
+Pricing is part of product strategy, not an afterthought once engineering ships. Use Van Westendorp Price Sensitivity Meter to find the acceptable price range, combined with value metric and tier design, so pricing reflects both user value and business objectives.
 
-## 适用场景
-- 新产品定价/老产品调价
-- 不知道用户愿意付多少
-- 现有定价与用户感知价值脱节
+## Use Cases
+- New product pricing / existing product repricing
+- Don't know what users are willing to pay
+- Existing pricing disconnected from user perceived value
 
-## 关键步骤
-1. 选定价值计量单位（value metric）：用户每多用一单位就多获得一单位价值（如 API 调用数、座位数、存储量）
-2. 用 Van Westendorp Price Sensitivity Meter 调研 4 个问题：
-   - 太便宜（怀疑质量）的价格
-   - 便宜（划算）的价格
-   - 贵（仍会考虑）的价格
-   - 太贵（不会买）的价格
-3. 交叉分析得出 4 个价格点：可接受下限/上限 + 最优价格点/无差异价格点
-4. 设计分层：Free / Basic / Pro / Enterprise，每层对应明确的 value metric 阈值与功能边界
-5. 验证：用 pretotype 或 A/B 测试真实付费转化率，不要只信问卷
+## Key Steps
+1. Select a value metric: Users get one more unit of value for each unit used (e.g., API calls, seats, storage)
+2. Use Van Westendorp Price Sensitivity Meter to research 4 questions:
+   - Too cheap (suspicious of quality) price
+   - Cheap (good deal) price
+   - Expensive (still would consider) price
+   - Too expensive (wouldn't buy) price
+3. Cross-analyze to derive 4 price points: Acceptable lower/upper limit + Optimal price point / Indifference price point
+4. Design tiers: Free / Basic / Pro / Enterprise, each with clear value metric thresholds and feature boundaries
+5. Validate: Use pretotype or A/B testing for real conversion rates, don't just trust surveys
 
-## 来源
-综合：Van Westendorp（1976）PSM 方法 + OpenView Pricing Framework + April Dunford 定价思想
+## Source
+Synthesis: Van Westendorp (1976) PSM method + OpenView Pricing Framework + April Dunford pricing thinking

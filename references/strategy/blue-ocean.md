@@ -1,209 +1,209 @@
-# Blue Ocean Strategy · 蓝海战略
+# Blue Ocean Strategy
 
-## 核心理念
+## Core Concept
 
-不在现有市场中厮杀（红海），而是通过**价值创新**开创无人竞争的市场空间——同时追求差异化**和**低成本，打破"差异化必然高成本"的传统权衡。核心工具是战略画布（Strategy Canvas）和四步动作框架（Eliminate-Reduce-Raise-Create）。
+Instead of competing in existing markets (red ocean), create uncontested market space through **value innovation** — simultaneously pursuing differentiation **and** low cost, breaking the traditional trade-off that "differentiation must be costly." Core tools are the Strategy Canvas and the Four Actions Framework (Eliminate-Reduce-Raise-Create).
 
-> 红海思维问"如何打败对手"；蓝海思维问"如何让对手变得无关紧要"。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 行业竞争白热化、同质化严重，需要突破性差异化
-- 新市场/新品类创建（从 0 到 1 的战略设计）
-- 产品定位重新定义（寻找非客户群体）
-- 商业模式创新
-
-⚠️ **慎用**
-- 需要在现有市场中竞争优化时（用 Porter's Five Forces）
-- 执行层面的战术决策（蓝海是战略级工具）
-- 资源极度受限无法同时做 Eliminate 和 Create 时
-- 行业尚处早期、竞争格局未形成时（本身就在蓝海中）
+> Red ocean thinking asks "how to beat competitors"; blue ocean thinking asks "how to make competitors irrelevant."
 
 ---
 
-## 执行步骤
+## Use Cases
 
-### Step 1：绘制当前战略画布
+✅ **Best for**
+- Industry competition is white-hot with severe homogenization, needing breakthrough differentiation
+- New market/category creation (0-to-1 strategy design)
+- Redefining product positioning (finding non-customer groups)
+- Business model innovation
 
-画出行业当前的**战略画布**——横轴为行业关键竞争因素，纵轴为提供水平，标出自身和竞争对手的价值曲线：
-
-```
-竞争因素：[价格] [功能数] [服务] [品牌] [渠道] [...]
-我方：       3     7      5      4      6
-竞品A：      5     6      7      8      5
-竞品B：      7     4      6      3      7
-```
-
-识别：所有竞争者的价值曲线是否高度趋同？如果是，说明行业处于红海。
-
-### Step 2：应用四步动作框架
-
-对每个竞争因素，逐一回答四个问题：
-
-**Eliminate（剔除）**：哪些行业习以为常的竞争因素可以完全剔除？
-
-```
-剔除因素：
-  - [因素1]：[为什么行业默认需要但实际可以不要]
-  - [因素2]：[...]
-```
-
-**Reduce（减少）**：哪些因素应该远低于行业标准？
-
-```
-减少因素：
-  - [因素3]：当前行业标准 [...] → 降低到 [...]
-  - [因素4]：[...]
-```
-
-**Raise（提升）**：哪些因素应该远高于行业标准？
-
-```
-提升因素：
-  - [因素5]：当前行业标准 [...] → 提升到 [...]
-  - [因素6]：[...]
-```
-
-**Create（创造）**：哪些行业从未提供的因素应该被创造出来？
-
-```
-创造因素：
-  - [因素7]：[全新价值点，行业从未提供]
-  - [因素8]：[...]
-```
-
-### Step 3：重绘战略画布
-
-基于四步动作的结果，画出**新的价值曲线**，与旧曲线对比：
-
-```
-竞争因素：[价格] [功能数] [服务] [品牌] [渠道] [新因素X]
-旧曲线：    3     7      5      4      6      —
-新曲线：    6     3      8      2      4      9
-```
-
-新曲线应与旧曲线**明显不同**——如果形状相似，说明没有实现价值创新。
-
-### Step 4：检验新价值曲线
-
-用三个问题检验：
-
-```
-1. 聚焦检验：新曲线是否聚焦于少数关键因素？（而非面面俱到）
-2. 差异化检验：新曲线与竞争对手是否有明显差异？
-3. 强力标语检验：能否用一句话清晰传达新价值主张？
-```
-
-### Step 5：验证目标非客户
-
-蓝海的核心是吸引**非客户**。识别三类非客户并验证：
-
-```
-第一层（即将非客户）：知道行业但尽量少用 → 为什么？
-第二层（拒绝型非客户）：拒绝使用行业产品 → 为什么？
-第三层（未探索非客户）：从未考虑过行业产品 → 为什么？
-```
+⚠️ **Use with caution**
+- When competing and optimizing within existing markets (use Porter's Five Forces)
+- Execution-level tactical decisions (blue ocean is a strategic tool)
+- Severely limited resources unable to simultaneously do Eliminate and Create
+- Industry still in early stage with unformed competitive landscape (already in a blue ocean)
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Draw the Current Strategy Canvas
+
+Draw the industry's current **Strategy Canvas** — horizontal axis for key competitive factors, vertical axis for offering level, marking your own and competitors' value curves:
 
 ```
-蓝海战略分析
+Competitive factors: [Price] [Features] [Service] [Brand] [Channels] [...]
+Us:                3     7      5      4      6
+Competitor A:      5     6      7      8      5
+Competitor B:      7     4      6      3      7
+```
 
-一、当前战略画布
-  行业关键竞争因素：[...]
-  我方价值曲线：[...]
-  竞品价值曲线：[...]
-  红海程度评估：高 / 中 / 低
+Identify: Are all competitors' value curves highly convergent? If so, the industry is in a red ocean.
 
-二、四步动作框架
-  Eliminate（剔除）：
-    - [因素]：[理由]
-  Reduce（减少）：
-    - [因素]：[从 X 降到 Y] — [理由]
-  Raise（提升）：
-    - [因素]：[从 X 升到 Y] — [理由]
-  Create（创造）：
-    - [因素]：[全新价值描述]
+### Step 2: Apply the Four Actions Framework
 
-三、新价值曲线
-  [重绘后的价值曲线描述]
+For each competitive factor, answer four questions:
 
-四、检验结果
-  聚焦检验：通过 / 未通过 — [说明]
-  差异化检验：通过 / 未通过 — [说明]
-  强力标语：[一句话价值主张]
+**Eliminate**: Which industry-default competitive factors can be completely eliminated?
 
-五、目标非客户
-  核心非客户群：[第X层] — [描述]
-  他们未被满足的需求：[...]
-  新曲线如何吸引他们：[...]
+```
+Factors to eliminate:
+  - [Factor 1]: [Why the industry defaults to it but it can actually be removed]
+  - [Factor 2]: [...]
+```
+
+**Reduce**: Which factors should be reduced well below the industry standard?
+
+```
+Factors to reduce:
+  - [Factor 3]: Current industry standard [...] → Reduce to [...]
+  - [Factor 4]: [...]
+```
+
+**Raise**: Which factors should be raised well above the industry standard?
+
+```
+Factors to raise:
+  - [Factor 5]: Current industry standard [...] → Raise to [...]
+  - [Factor 6]: [...]
+```
+
+**Create**: Which factors never offered by the industry should be created?
+
+```
+Factors to create:
+  - [Factor 7]: [Entirely new value point, never offered by the industry]
+  - [Factor 8]: [...]
+```
+
+### Step 3: Redraw the Strategy Canvas
+
+Based on the four actions, draw the **new value curve** and compare with the old:
+
+```
+Competitive factors: [Price] [Features] [Service] [Brand] [Channels] [New Factor X]
+Old curve:           3     7      5      4      6       —
+New curve:           6     3      8      2      4       9
+```
+
+The new curve should be **clearly different** from the old — if the shapes are similar, value innovation hasn't been achieved.
+
+### Step 4: Test the New Value Curve
+
+Validate with three tests:
+
+```
+1. Focus test: Does the new curve focus on a few key factors? (Not trying to be everything)
+2. Divergence test: Is the new curve clearly different from competitors?
+3. Compelling tagline test: Can the new value proposition be communicated in one sentence?
+```
+
+### Step 5: Validate Target Non-Customers
+
+The core of blue ocean is attracting **non-customers**. Identify three tiers of non-customers and validate:
+
+```
+Tier 1 (Soon-to-be non-customers): Know the industry but use it minimally → Why?
+Tier 2 (Refusing non-customers): Reject using industry products → Why?
+Tier 3 (Unexplored non-customers): Never considered industry products → Why?
 ```
 
 ---
 
-## 执行示例
-
-**场景**：在线教育平台在高度同质化市场中寻找蓝海
+## Output Template
 
 ```
-一、当前战略画布
-  竞争因素：价格  课程数量  名师  证书  社区  直播
-  我方：     4      7       5     6     3     5
-  竞品A：    4      8       7     7     4     6
-  竞品B：    5      6       6     5     5     7
-  红海程度：高（所有曲线高度趋同，都在拼课程数量和名师）
+Blue Ocean Strategy Analysis
 
-二、四步动作框架
-  Eliminate：
-    - 证书：职场人更看重实战能力而非纸面证书
-  Reduce：
-    - 课程数量：从 500+ 降到 50 精品 — 减少选择焦虑
-    - 名师依赖：从明星讲师转向实战导师 — 降低成本
-  Raise：
-    - 实战项目：从理论为主转为项目驱动 — 学完即可产出作品集
-    - 社区：从弱连接转为同行业学习小组 — 提升完课率
-  Create：
-    - 企业真实项目对接：学完直接获得企业内推机会
+I. Current Strategy Canvas
+  Industry key competitive factors: [...]
+  Our value curve: [...]
+  Competitor value curves: [...]
+  Red ocean severity: High / Medium / Low
 
-三、新价值曲线
-  竞争因素：价格  课程数量  名师  证书  社区  直播  企业对接
-  旧曲线：  4      7       5     6     3     5     —
-  新曲线：  6      2       3     0     8     3     9
+II. Four Actions Framework
+  Eliminate:
+    - [Factor]: [Rationale]
+  Reduce:
+    - [Factor]: [From X to Y] — [Rationale]
+  Raise:
+    - [Factor]: [From X to Y] — [Rationale]
+  Create:
+    - [Factor]: [New value description]
 
-四、检验结果
-  聚焦检验：通过 — 聚焦实战+社区+企业对接三个核心
-  差异化检验：通过 — 完全不同于"拼课程数量"的行业惯例
-  强力标语：学完即上岗，项目比证书更有说服力
+III. New Value Curve
+  [Description of redrawn value curve]
 
-五、目标非客户
-  核心非客户群：第二层（拒绝型）— 在职转行者
-  他们未被满足的需求：不想花时间看几百门课，需要快速证明能力
-  新曲线如何吸引他们：精简课程+实战项目+企业对接，直通就业
+IV. Test Results
+  Focus test: Pass / Fail — [Explanation]
+  Divergence test: Pass / Fail — [Explanation]
+  Compelling tagline: [One-sentence value proposition]
+
+V. Target Non-Customers
+  Core non-customer group: [Tier X] — [Description]
+  Their unmet needs: [...]
+  How the new curve attracts them: [...]
 ```
 
 ---
 
-## 常见陷阱
+## Execution Example
 
-| 陷阱 | 说明 | 避免方式 |
+**Scenario**: Online education platform seeking blue ocean in a highly homogenized market
+
+```
+I. Current Strategy Canvas
+  Competitive factors: Price  Course quantity  Celebrity teachers  Certificates  Community  Live streaming
+  Us:                  4      7               5                  6            3         5
+  Competitor A:        4      8               7                  7            4         6
+  Competitor B:        5      6               6                  5            5         7
+  Red ocean severity: High (all curves highly convergent, competing on course quantity and celebrity teachers)
+
+II. Four Actions Framework
+  Eliminate:
+    - Certificates: Working professionals value practical ability over paper certificates
+  Reduce:
+    - Course quantity: From 500+ to 50 curated courses — Reduce choice anxiety
+    - Celebrity teacher dependency: From star lecturers to practical mentors — Lower costs
+  Raise:
+    - Practical projects: From theory-focused to project-driven — Complete with portfolio
+    - Community: From weak connections to same-industry study groups — Improve completion rates
+  Create:
+    - Real enterprise project matching: Direct access to enterprise referral opportunities upon completion
+
+III. New Value Curve
+  Competitive factors: Price  Course quantity  Celebrity teachers  Certificates  Community  Live streaming  Enterprise matching
+  Old curve:           4      7               5                  6            3         5              —
+  New curve:           6      2               3                  0            8         3              9
+
+IV. Test Results
+  Focus test: Pass — Focused on three core elements: practical + community + enterprise matching
+  Divergence test: Pass — Completely different from industry norm of "competing on course quantity"
+  Compelling tagline: Graduate job-ready; projects speak louder than certificates
+
+V. Target Non-Customers
+  Core non-customer group: Tier 2 (Refusing) — Career changers currently employed
+  Their unmet needs: Don't want to spend time on hundreds of courses, need quick ability validation
+  How the new curve attracts them: Curated courses + practical projects + enterprise matching → Direct path to employment
+```
+
+---
+
+## Common Pitfalls
+
+| Pitfall | Description | How to Avoid |
 |------|------|---------|
-| 只做差异化不做低成本 | Eliminate/Reduce 不够，新曲线虽不同但成本更高 | 四步动作必须同时使用，尤其 Eliminate 和 Reduce 不能跳过 |
-| 创造了无人需要的因素 | Create 出的因素只是"新颖"但不解决真实需求 | 用 JTBD 验证非客户的真实任务和痛点 |
-| 忽视执行可行性 | 战略画布很漂亮但组织能力无法支撑 | 搭配 McKinsey 7S 检查组织是否具备执行条件 |
-| 把蓝海当一次性事件 | 蓝海最终会被模仿变成红海 | 持续迭代四步动作框架，定期重绘战略画布 |
-| Eliminate 不够彻底 | 保留太多行业默认因素，新曲线与旧曲线差异不大 | 对每个因素追问"如果完全去掉会怎样"，敢于做减法 |
+| Only differentiating without lowering costs | Eliminate/Reduce insufficient; new curve is different but more expensive | Four actions must be used simultaneously; especially Eliminate and Reduce cannot be skipped |
+| Creating factors nobody needs | Created factors are merely "novel" but don't solve real needs | Use JTBD to validate non-customers' real tasks and pain points |
+| Ignoring execution feasibility | Strategy canvas looks beautiful but organizational capability can't support it | Combine with McKinsey 7S to check organizational execution readiness |
+| Treating blue ocean as a one-time event | Blue ocean eventually gets imitated and becomes red ocean | Continuously iterate the four actions framework, regularly redraw strategy canvas |
+| Insufficient Eliminate | Retaining too many industry-default factors, new curve not different enough from old | Ask "what if we completely removed this" for each factor; dare to subtract |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **搭配 Porter's Five Forces**：五力分析判断红海竞争格局，蓝海战略是跳出红海的路径
-- **搭配 JTBD**：用 JTBD 理解非客户的真实任务，为 Create 提供方向
-- **搭配 Value Proposition Canvas**：蓝海确定战略方向后，用价值主张画布细化客户价值匹配
-- **搭配 McKinsey 7S**：蓝海战略需要组织能力支撑，7S 检查执行就绪度
-- **搭配 PESTLE**：宏观趋势变化可能创造新的蓝海机会（如政策变化、技术突破）
+- **Combined with Porter's Five Forces**: Five forces assess red ocean competitive landscape; Blue Ocean is the path out of red ocean
+- **Combined with JTBD**: Use JTBD to understand non-customers' real tasks, providing direction for Create
+- **Combined with Value Proposition Canvas**: After Blue Ocean defines strategic direction, use Value Proposition Canvas to refine customer value matching
+- **Combined with McKinsey 7S**: Blue Ocean strategy needs organizational capability support; 7S checks execution readiness
+- **Combined with PESTLE**: Macro trend changes may create new blue ocean opportunities (e.g., policy changes, technology breakthroughs)

@@ -1,153 +1,153 @@
-# Ansoff Matrix · 安索夫矩阵
+# Ansoff Matrix
 
-## 核心理念
+## Core Concept
 
-由伊戈尔·安索夫于 1957 年提出，通过**产品维度**（现有/新）与**市场维度**（现有/新）的交叉，形成 2×2 矩阵，提供四条清晰的**增长战略方向**。核心洞察：风险从左上到右下递增，企业应在不同风险层级上组合配置资源。
+Proposed by Igor Ansoff in 1957, this framework uses the intersection of **product dimension** (existing/new) and **market dimension** (existing/new) to form a 2×2 matrix, providing four clear **growth strategy directions**. Core insight: risk increases from upper-left to lower-right; firms should allocate resources across different risk levels.
 
 ```mermaid
 quadrantChart
-    title Ansoff 矩阵
-    x-axis 现有市场 --> 新市场
-    y-axis 新产品 --> 现有产品
-    quadrant-1 市场开发（Development）
-    quadrant-2 市场渗透（Penetration）
-    quadrant-3 产品开发（Development）
-    quadrant-4 多元化（Diversification）
+    title Ansoff Matrix
+    x-axis Existing market --> New market
+    y-axis New product --> Existing product
+    quadrant-1 Market Development
+    quadrant-2 Market Penetration
+    quadrant-3 Product Development
+    quadrant-4 Diversification
 ```
 
-| 象限 | 战略 | 核心逻辑 | 风险 |
+| Quadrant | Strategy | Core Logic | Risk |
 |------|------|---------|------|
-| 现有产品 × 现有市场 | **市场渗透** | 卖更多给现有客户 | ★☆☆☆☆ |
-| 现有产品 × 新市场 | **市场开发** | 把现有产品卖给新客户 | ★★☆☆☆ |
-| 新产品 × 现有市场 | **产品开发** | 向现有客户卖新产品 | ★★★☆☆ |
-| 新产品 × 新市场 | **多元化** | 向新客户卖新产品 | ★★★★★ |
+| Existing Product × Existing Market | **Market Penetration** | Sell more to existing customers | ★☆☆☆☆ |
+| Existing Product × New Market | **Market Development** | Sell existing products to new customers | ★★☆☆☆ |
+| New Product × Existing Market | **Product Development** | Sell new products to existing customers | ★★★☆☆ |
+| New Product × New Market | **Diversification** | Sell new products to new customers | ★★★★★ |
 
 ---
 
-## 适用场景
+## Use Cases
 
-✅ **最适合**
-- 企业/产品增长战略方向选择
-- 年度/三年规划中的增长路径设计
-- 评估不同增长选项的风险-收益权衡
-- 资源有限时确定增长优先级
+✅ **Best for**
+- Enterprise/product growth strategy direction selection
+- Growth path design in annual/three-year planning
+- Risk-reward trade-off assessment of different growth options
+- Setting growth priorities when resources are limited
 
-⚠️ **慎用**
-- 需要具体执行方案时（安索夫是方向性框架，不提供战术细节）
-- 市场/产品边界模糊时（"新市场"界定不清会导致误分类）
-- 单一产品初创企业（只有市场渗透一个选项）
-- 快速变化的行业（"现有"定义可能迅速过时）
-
----
-
-## 执行步骤
-
-### Step 1：界定当前产品和市场范围
-
-```
-现有产品范围：[核心产品/服务描述]
-现有市场范围：[目标客户群 + 地域 + 渠道]
-```
-
-### Step 2：填充四象限战略选项
-
-对每个象限列出 2-5 个具体增长选项：
-
-```
-市场渗透选项（低风险）：
-  - 提升市场份额（促销、降价、增加渠道覆盖）
-  - 提高使用频率（会员体系、习惯培养）
-  - 竞争对手客户转化
-
-市场开发选项（中风险）：
-  - 地理扩张（国内→海外、一线→下沉市场）
-  - 新客户细分（B2C→B2B、年轻人→中老年）
-  - 新渠道开拓（线下→线上、直营→分销）
-
-产品开发选项（中风险）：
-  - 产品线延伸（高端线/入门线）
-  - 新功能/新版本（基于用户反馈迭代）
-  - 捆绑/打包（组合现有产品形成新方案）
-
-多元化选项（高风险）：
-  - 同心多元化（基于现有技术/能力延伸）
-  - 水平多元化（面向现有客户的新品类）
-  - 综合多元化（与现有业务完全无关的新领域）
-```
-
-### Step 3：评估风险与资源需求
-
-```
-评估维度：
-  市场风险：需求不确定性（高/中/低）
-  技术风险：实现可行性（高/中/低）
-  资源需求：投入规模（大/中/小）
-  见效周期：时间跨度（长/中/短）
-  协同效应：与现有业务的协同度（高/中/低）
-```
-
-### Step 4：选择主增长战略
-
-基于风险偏好和资源能力，确定主战略和辅助战略：
-
-```
-战略组合：
-  主战略：[象限] — [具体策略]
-  辅助战略 1：[象限] — [具体策略]
-  观望储备：[象限] — [具体策略]
-```
-
-### Step 5：转化为执行计划
-
-将增长战略转化为 OKR / RICE 可执行的路线图。
+⚠️ **Use with caution**
+- When specific execution plans are needed (Ansoff is a directional framework, not tactical)
+- When market/product boundaries are blurry ("new market" poorly defined leads to misclassification)
+- Single-product startups (only market penetration is an option)
+- Rapidly changing industries ("existing" definitions may quickly become outdated)
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Define Current Product and Market Scope
 
 ```
-分析主体：[公司/产品]  时间范围：[年度/三年期]
+Existing product scope: [Core product/service description]
+Existing market scope: [Target customer segment + geography + channels]
+```
 
-市场渗透（现有产品 × 现有市场）：
-  选项 1：[策略] — 风险：低 — 预期增长：[%]
-  选项 2：[策略] — 风险：低 — 预期增长：[%]
+### Step 2: Fill in Four Quadrant Strategic Options
 
-市场开发（现有产品 × 新市场）：
-  选项 1：[策略] — 风险：中 — 目标市场：[...]
-  选项 2：[策略] — 风险：中 — 目标市场：[...]
+List 2-5 specific growth options for each quadrant:
 
-产品开发（新产品 × 现有市场）：
-  选项 1：[策略] — 风险：中 — 目标客户：[现有客户]
+```
+Market Penetration Options (Low risk):
+  - Increase market share (promotions, price cuts, expanded channel coverage)
+  - Increase usage frequency (membership systems, habit formation)
+  - Convert competitor customers
 
-多元化（新产品 × 新市场）：
-  选项 1：[策略] — 风险：高 — 协同度：[...]
+Market Development Options (Medium risk):
+  - Geographic expansion (domestic→overseas, tier-1→lower-tier markets)
+  - New customer segments (B2C→B2B, young→middle-aged/elderly)
+  - New channel development (offline→online, direct→distribution)
 
-战略选择：
-  主增长战略：[象限] — [策略] — 理由：[...]
-  辅助战略：[象限] — [策略] — 理由：[...]
+Product Development Options (Medium risk):
+  - Product line extension (premium line/entry-level line)
+  - New features/versions (iterating based on user feedback)
+  - Bundling/packaging (combining existing products into new solutions)
 
-资源分配：渗透 [%] / 市场开发 [%] / 产品开发 [%] / 多元化 [%]
+Diversification Options (High risk):
+  - Concentric diversification (extending based on existing technology/capabilities)
+  - Horizontal diversification (new categories for existing customers)
+  - Conglomerate diversification (completely new fields unrelated to existing business)
+```
+
+### Step 3: Assess Risk and Resource Requirements
+
+```
+Assessment dimensions:
+  Market risk: Demand uncertainty (High/Medium/Low)
+  Technical risk: Implementation feasibility (High/Medium/Low)
+  Resource requirements: Investment scale (Large/Medium/Small)
+  Time to results: Time horizon (Long/Medium/Short)
+  Synergy: Degree of synergy with existing business (High/Medium/Low)
+```
+
+### Step 4: Select Primary Growth Strategy
+
+Based on risk appetite and resource capabilities, determine primary and supporting strategies:
+
+```
+Strategy portfolio:
+  Primary strategy: [Quadrant] — [Specific strategy]
+  Supporting strategy 1: [Quadrant] — [Specific strategy]
+  Watchlist reserve: [Quadrant] — [Specific strategy]
+```
+
+### Step 5: Convert to Execution Plan
+
+Convert growth strategy into OKR/RICE executable roadmap.
+
+---
+
+## Output Template
+
+```
+Analysis subject: [Company/Product]  Time horizon: [Annual/Three-year]
+
+Market Penetration (Existing Product × Existing Market):
+  Option 1: [Strategy] — Risk: Low — Expected growth: [%]
+  Option 2: [Strategy] — Risk: Low — Expected growth: [%]
+
+Market Development (Existing Product × New Market):
+  Option 1: [Strategy] — Risk: Medium — Target market: [...]
+  Option 2: [Strategy] — Risk: Medium — Target market: [...]
+
+Product Development (New Product × Existing Market):
+  Option 1: [Strategy] — Risk: Medium — Target customers: [Existing customers]
+
+Diversification (New Product × New Market):
+  Option 1: [Strategy] — Risk: High — Synergy: [...]
+
+Strategic Selection:
+  Primary growth strategy: [Quadrant] — [Strategy] — Rationale: [...]
+  Supporting strategy: [Quadrant] — [Strategy] — Rationale: [...]
+
+Resource allocation: Penetration [%] / Market Development [%] / Product Development [%] / Diversification [%]
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 避免方式 |
+| Pitfall | How to Avoid |
 |------|---------|
-| 四个象限都选主战略 | 资源有限，主战略 1 个 + 辅助 1-2 个 |
-| 低估多元化风险 | 多元化失败率最高，需用 Lean BML 小规模验证 |
-| "现有市场"定义过宽 | 明确客户画像、地域、渠道的边界 |
-| 忽视象限间动态演进 | 市场开发成功后可转为市场渗透，需定期重评估 |
-| 只看增长不看防御 | 安索夫是增长框架，需配合 SWOT 的 W×T 防御策略 |
+| Selecting primary strategy in all four quadrants | Resources are limited; 1 primary + 1-2 supporting strategies |
+| Underestimating diversification risk | Diversification has the highest failure rate; validate with Lean BML at small scale |
+| "Existing market" definition too broad | Define clear customer profiles, geography, and channel boundaries |
+| Ignoring dynamic evolution across quadrants | Successful market development can transition to market penetration; reassess regularly |
+| Only looking at growth, not defense | Ansoff is a growth framework; complement with SWOT's W×T defensive strategies |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **前置 SWOT**：SWOT 识别优势和机遇，为安索夫象限选择提供依据
-- **配合 PESTLE**：PESTLE 扫描宏观环境，判断"新市场"的外部可行性
-- **配合 Porter's Five Forces**：五力分析评估目标市场的竞争强度
-- **后接 OKR**：安索夫确定增长方向，OKR 拆解为可量化的季度目标
-- **后接 Lean BML**：特别是多元化象限，用 BML 循环验证后再大规模投入
-- **配合 RICE**：每个象限内的多个选项用 RICE 量化排序
+- **Preceded by SWOT**: SWOT identifies strengths and opportunities, providing basis for Ansoff quadrant selection
+- **Combined with PESTLE**: PESTLE scans macro environment, assessing external feasibility of "new markets"
+- **Combined with Porter's Five Forces**: Five forces assess competitive intensity of target markets
+- **Followed by OKR**: Ansoff determines growth direction; OKR breaks it down into quantifiable quarterly targets
+- **Followed by Lean BML**: Especially for the diversification quadrant, validate with BML cycles before large-scale investment
+- **Combined with RICE**: Multiple options within each quadrant are quantitatively ranked using RICE

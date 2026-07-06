@@ -1,127 +1,127 @@
-# Porter Diamond Model · 波特钻石模型
+# Porter Diamond Model
 
-## 核心理念
+## Core Concept
 
-解释**国家为何能在某一产业取得国际竞争优势**的分析框架。迈克尔·波特认为，国家竞争优势源于四个核心要素的相互作用，外加两个变数的影响。这四要素构成一个"钻石"系统：生产要素、需求条件、相关与支持性产业、企业战略/结构/同业竞争。
+An analytical framework explaining **why nations achieve international competitive advantage in certain industries**. Michael Porter argues that national competitive advantage stems from the interaction of four core factors, plus the influence of two contingencies. These four factors form a "diamond" system: Factor Conditions, Demand Conditions, Related and Supporting Industries, Firm Strategy/Structure/Rivalry.
 
-> 竞争优势不是先天禀赋，而是钻石四要素**系统性强化**的结果。任一要素的优势会传导并放大其他要素。
+> Competitive advantage is not innate endowment but the result of **systematic strengthening** of the four diamond factors. Advantage in any one factor transmits to and amplifies others.
 
-| 要素 | 核心问题 |
+| Factor | Core Question |
 |------|---------|
-| 生产要素 | 国家在劳动力/资本/基础设施/知识上的禀赋 |
-| 需求条件 | 本国市场对该产业的需求结构 |
-| 相关与支持性产业 | 是否有国际竞争力的上下游产业 |
-| 企业战略/结构/竞争 | 企业组织形态与国内同业竞争强度 |
-| 机遇 | 突发事件（技术突破/战争/汇率）打断既有格局 |
-| 政府 | 政策如何影响上述四要素 |
+| Factor Conditions | The nation's endowment in labor/capital/infrastructure/knowledge |
+| Demand Conditions | Domestic market demand structure for the industry |
+| Related and Supporting Industries | Presence of internationally competitive upstream/downstream industries |
+| Firm Strategy/Structure/Rivalry | Firm organizational form and domestic industry rivalry intensity |
+| Chance | Sudden events (technology breakthroughs/war/exchange rate) disrupting existing patterns |
+| Government | How policies affect the four factors above |
 
 ---
 
-## 适用场景
+## Use Cases
 
-✅ **最适合**
-- 跨国投资选址与产能布局
-- 产业政策制定与国家竞争力评估
-- 评估某国某产业的可持续竞争优势
-- 企业全球供应链与研发中心选址
+✅ **Best for**
+- Cross-national investment site selection and capacity layout
+- Industrial policy formulation and national competitiveness assessment
+- Assessing sustainable competitive advantage of a nation's industry
+- Global supply chain and R&D center site selection
 
-⚠️ **慎用**
-- 单一企业竞争分析（应用 Porter's Five Forces 或 Value Chain）
-- 短期投资决策（钻石模型解释长期优势形成）
-- 发展中国家要素市场扭曲严重时（需补充制度分析）
-
----
-
-## 执行步骤
-
-### Step 1：评估四个核心要素
-
-**生产要素** — 区分基础要素（自然资源/地理位置/初级劳动力）与高级要素（受过高等教育的专业人才/科研基础设施/数字基础设施）。高级要素才是可持续优势来源。
-
-```
-生产要素评估：
-  基础要素：[土地/能源/初级劳动力成本] — 强/中/弱
-  高级要素：[科研机构/专业人才/数字基建] — 强/中/弱
-  要素创造能力：[教育体系/R&D 投入] — 强/中/弱
-```
-
-**需求条件** — 本国市场的需求规模、复杂度、增长性。本国需求挑剔且成熟，会倒逼企业升级。
-
-**相关与支持性产业** — 是否存在具有国际竞争力的上游供应商和下游产业，形成产业集群效应。
-
-**企业战略/结构/同业竞争** — 本国企业治理结构、管理惯例，以及国内同业竞争强度（激烈竞争是升级的最大动力）。
-
-### Step 2：评估两大变数
-
-- **机遇**：识别可能重塑格局的突发事件（技术范式转移、地缘冲突、汇率剧烈波动、重大政策转向）。
-- **政府**：政府政策如何影响四要素（补贴/教育投资/反垄断/采购/规制）。政府本身不直接创造优势，而是通过影响四要素起作用。
-
-### Step 3：综合诊断钻石系统的强化效应
-
-判断四要素是相互**强化**还是相互**抵消**：
-
-```
-钻石系统诊断：
-  要素间强化：[如：需求复杂 → 倒逼高级要素投入 → 产业集群形成]
-  要素间抵消：[如：高级要素强 → 但国内竞争垄断 → 升级动力不足]
-  系统成熟度：[初级形成 / 成熟强化 / 衰退松动]
-```
-
-> 孤立的要素优势难以持续。钻石模型的核心价值是识别要素之间的**互动机制**。
-
-### Step 4：输出政策与战略建议
-
-- 国家层面：哪些要素需要政府投资补强，哪些需要放松管制激发竞争。
-- 企业层面：选址是否落在钻石系统强化的国家/区域；如何利用当地产业集群。
+⚠️ **Use with caution**
+- Single-firm competitive analysis (use Porter's Five Forces or Value Chain instead)
+- Short-term investment decisions (diamond model explains long-term advantage formation)
+- Developing nations with severely distorted factor markets (need supplementary institutional analysis)
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Evaluate the Four Core Factors
+
+**Factor Conditions** — Distinguish basic factors (natural resources/geographic location/unskilled labor) from advanced factors (highly educated professionals/research infrastructure/digital infrastructure). Advanced factors are the source of sustainable advantage.
 
 ```
-波特钻石模型分析
+Factor Conditions Assessment:
+  Basic factors: [Land/Energy/Unskilled labor cost] — Strong/Medium/Weak
+  Advanced factors: [Research institutions/Professional talent/Digital infrastructure] — Strong/Medium/Weak
+  Factor creation capability: [Education system/R&D investment] — Strong/Medium/Weak
+```
 
-分析对象：[国家/区域] — [目标产业]
+**Demand Conditions** — Domestic market demand scale, complexity, and growth potential. Demanding and sophisticated domestic demand forces firms to upgrade.
 
-一、四要素评估
-  生产要素：基础[强/中/弱] / 高级[强/中/弱] / 关键短板：[...]
-  需求条件：规模[...] / 复杂度[...] / 增长性[...]
-  相关支持产业：集群[有/无] / 国际竞争力[强/中/弱]
-  企业战略与竞争：治理[...] / 同业竞争强度[...]
+**Related and Supporting Industries** — Presence of internationally competitive upstream suppliers and downstream industries, creating industry cluster effects.
 
-二、两大变数
-  机遇：[识别到的潜在机遇事件]
-  政府：[政策对四要素的影响方向]
+**Firm Strategy/Structure/Rivalry** — Domestic firm governance structures, management practices, and domestic industry rivalry intensity (intense rivalry is the biggest driver of upgrading).
 
-三、钻石系统诊断
-  强化机制：[...]
-  抵消机制：[...]
-  系统成熟度：[...]
+### Step 2: Evaluate the Two Contingencies
 
-四、竞争优势判断
-  可持续优势：[是/否] — 主要支撑要素：[...]
+- **Chance**: Identify sudden events that could reshape the landscape (technology paradigm shifts, geopolitical conflicts, sharp exchange rate fluctuations, major policy shifts).
+- **Government**: How government policies affect the four factors (subsidies/education investment/antitrust/procurement/regulation). Government does not directly create advantage but works through influencing the four factors.
 
-五、建议
-  国家/政策侧：[...]
-  企业选址/布局侧：[...]
+### Step 3: Holistically Diagnose the Diamond System's Strengthening Effects
+
+Determine whether the four factors **reinforce** or **offset** each other:
+
+```
+Diamond System Diagnosis:
+  Inter-factor reinforcement: [e.g., Complex demand → Forces advanced factor investment → Industry cluster formation]
+  Inter-factor offset: [e.g., Strong advanced factors → But domestic competition is monopolistic → Insufficient upgrade motivation]
+  System maturity: [Initial formation / Mature reinforcement / Declining loosening]
+```
+
+> Isolated factor advantages are hard to sustain. The core value of the diamond model is identifying the **interaction mechanisms** between factors.
+
+### Step 4: Output Policy and Strategic Recommendations
+
+- National level: Which factors need government investment to strengthen, which need deregulation to stimulate competition.
+- Enterprise level: Whether site selection falls in a nation/region where the diamond system is reinforced; how to leverage local industry clusters.
+
+---
+
+## Output Template
+
+```
+Porter Diamond Model Analysis
+
+Analysis subject: [Nation/Region] — [Target industry]
+
+I. Four-Factor Assessment
+  Factor Conditions: Basic[Strong/Medium/Weak] / Advanced[Strong/Medium/Weak] / Key bottleneck: [...]
+  Demand Conditions: Scale[...] / Complexity[...] / Growth potential[...]
+  Related & Supporting Industries: Cluster[Yes/No] / International competitiveness[Strong/Medium/Weak]
+  Firm Strategy & Rivalry: Governance[...] / Domestic rivalry intensity[...]
+
+II. Two Contingencies
+  Chance: [Identified potential chance events]
+  Government: [Policy direction of influence on four factors]
+
+III. Diamond System Diagnosis
+  Reinforcement mechanisms: [...]
+  Offset mechanisms: [...]
+  System maturity: [...]
+
+IV. Competitive Advantage Judgment
+  Sustainable advantage: [Yes/No] — Key supporting factors: [...]
+
+V. Recommendations
+  National/Policy side: [...]
+  Enterprise site selection/Layout side: [...]
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 避免方式 |
+| Pitfall | How to Avoid |
 |------|---------|
-| 只看单一要素强弱，忽视要素互动 | 必须分析四要素的强化/抵消机制 |
-| 把基础要素当核心优势 | 重点评估高级要素及要素创造能力 |
-| 政府当成独立第六要素 | 政府通过影响四要素起作用，不独立创造优势 |
-| 忽视产业集群效应 | 评估相关产业时必须看上下游集群，不只是单个供应商 |
+| Only looking at single factor strength, ignoring factor interactions | Must analyze reinforcement/offset mechanisms across the four factors |
+| Treating basic factors as core advantages | Focus on evaluating advanced factors and factor creation capability |
+| Treating government as an independent sixth factor | Government works through influencing the four factors, not by creating advantage independently |
+| Ignoring industry cluster effects | When evaluating related industries, must look at upstream/downstream clusters, not just individual suppliers |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **搭配 Porter's Five Forces**：钻石模型分析国家层面优势，五力分析具体行业的竞争结构
-- **搭配 Value Chain Analysis**：钻石模型识别选址优势，价值链分析定位企业内部活动
-- **后接 PESTLE**：PESTLE 扫描宏观环境，钻石模型聚焦产业竞争优势形成机制
-- **搭配 Strategic Group Mapping**：钻石模型看国家优势，战略群组图看行业内企业群组竞争
+- **Combined with Porter's Five Forces**: Diamond model analyzes national-level advantage; five forces analyze specific industry competitive structure
+- **Combined with Value Chain Analysis**: Diamond model identifies site selection advantages; value chain analyzes internal firm activities
+- **Followed by PESTLE**: PESTLE scans the macro environment; diamond model focuses on industry competitive advantage formation mechanisms
+- **Combined with Strategic Group Mapping**: Diamond model looks at national advantage; strategic group maps look at intra-industry firm group competition

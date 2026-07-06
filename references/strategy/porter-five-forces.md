@@ -1,184 +1,184 @@
-# Porter's Five Forces · 波特五力模型
+# Porter's Five Forces
 
-## 核心理念
+## Core Concept
 
-行业盈利能力由**五种竞争力量**共同决定。通过分析这五力，判断进入一个行业是否有吸引力、以及在其中如何建立竞争优势。
+Industry profitability is jointly determined by **five competitive forces**. By analyzing these five forces, determine whether entering an industry is attractive and how to build competitive advantage within it.
 
 ```
-              新进入者威胁
-                  ↓
-供应商议价能力 → [行业竞争激烈程度] → 买方议价能力
-                  ↑
-              替代品威胁
+              Threat of New Entrants
+                   ↓
+Supplier Bargaining Power → [Industry Rivalry] → Buyer Bargaining Power
+                   ↑
+              Threat of Substitutes
 ```
 
-| 力量 | 核心问题 |
+| Force | Core Question |
 |------|---------|
-| **行业内竞争** | 现有竞争者之间有多激烈？ |
-| **新进入者威胁** | 新对手进入这个行业有多容易？ |
-| **替代品威胁** | 用户能多容易地用其他产品替代我们？ |
-| **供应商议价能力** | 供应商能在多大程度上压缩我们的利润？ |
-| **买方议价能力** | 客户能在多大程度上压低我们的价格？ |
+| **Industry Rivalry** | How intense is competition among existing rivals? |
+| **Threat of New Entrants** | How easy is it for new competitors to enter this industry? |
+| **Threat of Substitutes** | How easily can users substitute us with other products? |
+| **Supplier Bargaining Power** | How much can suppliers squeeze our margins? |
+| **Buyer Bargaining Power** | How much can customers drive down our prices? |
 
 ---
 
-## 适用场景
+## Use Cases
 
-✅ **最适合**
-- 评估是否进入一个新行业/市场
-- 分析竞争格局，寻找差异化定位
-- 投资尽职调查的行业分析
-- 商业计划书的市场分析部分
+✅ **Best for**
+- Assessing whether to enter a new industry/market
+- Analyzing competitive landscape, finding differentiation positioning
+- Investment due diligence industry analysis
+- Market analysis section of business plans
 
-⚠️ **慎用**
-- 单一产品的功能决策（粒度太粗）
-- 快速变化的科技细分市场（五力格局变化快，需频繁更新）
-
----
-
-## 执行步骤
-
-### Step 1：界定行业边界
-
-明确分析的是**哪个行业/市场**。边界太宽（"互联网行业"）或太窄（"XX App"）都会失效。
-
-### Step 2：逐力评估
-
-对每种力量，回答：
-- 这个力量**强度如何**（强/中/弱）？
-- **关键决定因素**是什么？
-- 对行业整体**盈利能力的影响**是什么？
+⚠️ **Use with caution**
+- Single-product feature decisions (too coarse)
+- Rapidly changing tech sub-markets (five-force landscape shifts fast, needs frequent updates)
 
 ---
 
-### 力量一：行业内竞争强度
+## Execution Steps
 
-**强度指标：**
-- 竞争者数量和规模分布（集中 vs 分散）
-- 行业增速（高增速→竞争缓和；低增速→存量博弈）
-- 产品差异化程度（同质化→价格战）
-- 退出壁垒高低（高退出壁垒→竞争者不会离开）
-- 固定成本占比（高固定成本→必须提高产量→价格战）
+### Step 1: Define Industry Boundaries
 
-### 力量二：新进入者威胁
+Clarify which **industry/market** is being analyzed. Boundaries too broad ("internet industry") or too narrow ("XX App") will both fail.
 
-**进入壁垒越高，威胁越低：**
-- 规模经济（大公司有成本优势）
-- 品牌忠诚度 / 转换成本
-- 技术/专利壁垒
-- 资本需求
-- 渠道准入限制
-- 政策/监管门槛
+### Step 2: Assess Each Force
 
-### 力量三：替代品威胁
-
-**替代品威胁越强，行业吸引力越低：**
-- 替代品性价比是否接近甚至超越
-- 用户切换到替代品的成本/摩擦
-- 替代品的改进速度
-
-### 力量四：供应商议价能力
-
-**供应商议价能力强的条件：**
-- 供应商数量少，集中度高
-- 供应商产品差异化，难以替代
-- 对供应商的切换成本高
-- 供应商有能力前向整合（直接做你的生意）
-
-### 力量五：买方议价能力
-
-**买方议价能力强的条件：**
-- 买方集中度高（少数大客户）
-- 买方购买量大，占供应商收入比例高
-- 产品标准化，买方可轻松切换
-- 买方有能力后向整合（自己做供应商的事）
-
-### Step 3：综合判断行业吸引力
-
-汇总五力强度，判断：
-- 行业**整体盈利能力**如何？
-- 哪些力量是**主要威胁**？
-- 在这个格局下，我们的**差异化定位**应该是什么？
+For each force, answer:
+- How **intense** is this force (Strong/Medium/Weak)?
+- What are the **key determining factors**?
+- What is the **impact on overall industry profitability**?
 
 ---
 
-## 输出模板
+### Force One: Industry Rivalry
+
+**Intensity indicators:**
+- Number and size distribution of competitors (concentrated vs fragmented)
+- Industry growth rate (high growth → rivalry moderate; low growth → zero-sum game)
+- Degree of product differentiation (homogeneous → price wars)
+- Exit barrier height (high exit barriers → competitors won't leave)
+- Fixed cost proportion (high fixed costs → must increase volume → price wars)
+
+### Force Two: Threat of New Entrants
+
+**The higher the entry barriers, the lower the threat:**
+- Economies of scale (large companies have cost advantages)
+- Brand loyalty / Switching costs
+- Technology/Patent barriers
+- Capital requirements
+- Channel access restrictions
+- Policy/Regulatory thresholds
+
+### Force Three: Threat of Substitutes
+
+**The stronger the substitute threat, the lower the industry attractiveness:**
+- Whether substitute cost-performance approaches or exceeds
+- User switching cost/friction to substitutes
+- Speed of substitute improvement
+
+### Force Four: Supplier Bargaining Power
+
+**Conditions where supplier bargaining power is strong:**
+- Few suppliers, high concentration
+- Supplier products are differentiated, hard to replace
+- High switching costs for suppliers
+- Supplier capability for forward integration (doing your business directly)
+
+### Force Five: Buyer Bargaining Power
+
+**Conditions where buyer bargaining power is strong:**
+- High buyer concentration (few large customers)
+- Large purchase volume, high proportion of supplier revenue
+- Standardized products, buyers can easily switch
+- Buyer capability for backward integration (doing supplier's work themselves)
+
+### Step 3: Holistically Assess Industry Attractiveness
+
+Summarize five-force intensity to determine:
+- How is the industry's **overall profitability**?
+- Which forces are the **primary threats**?
+- Given this landscape, what should our **differentiation positioning** be?
+
+---
+
+## Output Template
 
 ```
-行业/市场边界：[明确定义]
+Industry/Market boundary: [Clear definition]
 
-五力分析：
+Five Forces Analysis:
 
-1. 行业内竞争：强 / 中 / 弱
-   关键因素：[...]
-   影响：[...]
+1. Industry Rivalry: Strong / Medium / Weak
+   Key factors: [...]
+   Impact: [...]
 
-2. 新进入者威胁：强 / 中 / 弱
-   关键壁垒：[...]
-   影响：[...]
+2. Threat of New Entrants: Strong / Medium / Weak
+   Key barriers: [...]
+   Impact: [...]
 
-3. 替代品威胁：强 / 中 / 弱
-   主要替代品：[...]
-   影响：[...]
+3. Threat of Substitutes: Strong / Medium / Weak
+   Main substitutes: [...]
+   Impact: [...]
 
-4. 供应商议价能力：强 / 中 / 弱
-   关键因素：[...]
-   影响：[...]
+4. Supplier Bargaining Power: Strong / Medium / Weak
+   Key factors: [...]
+   Impact: [...]
 
-5. 买方议价能力：强 / 中 / 弱
-   关键因素：[...]
-   影响：[...]
+5. Buyer Bargaining Power: Strong / Medium / Weak
+   Key factors: [...]
+   Impact: [...]
 
-综合判断：
-  行业吸引力：高 / 中 / 低
-  核心威胁来自：[...]
-  差异化机会在：[...]
-  战略建议：[...]
-```
-
----
-
-## 执行示例
-
-**场景**：评估进入国内 AI 代码辅助工具市场
-
-```
-行业边界：国内企业级 AI 代码辅助工具市场
-
-1. 行业内竞争：强
-   因素：字节 MarsCode、阿里通义灵码、百度 Comate 等已在场，均有巨头背书
-   影响：价格战压力，用户获取成本高
-
-2. 新进入者威胁：中
-   壁垒：需要大模型底座（高资本）、IDE 插件生态建设（高工程量）
-   但：海外 Cursor/Copilot 已证明路径，资本持续涌入
-   影响：竞争者仍会持续增加
-
-3. 替代品威胁：低（短期）
-   替代品：传统代码补全（IntelliSense）、搜索引擎
-   切换成本：AI 辅助工具的效率优势已被广泛认可，替代难度大
-   影响：较低
-
-4. 供应商议价能力：高
-   供应商：大模型 API 提供商（OpenAI/Claude/自研）
-   因素：技术依赖度高，底座切换成本高
-   影响：模型成本直接影响毛利
-
-5. 买方议价能力：中→高
-   因素：企业采购部门趋于集中谈判，竞品充足使比价容易
-   影响：定价权有限，服务差异化是关键
-
-综合判断：
-  行业吸引力：中（短期竞争激烈，长期代码工具需求确定性高）
-  核心威胁：巨头资源优势 + 供应商成本
-  差异化机会：垂直行业深度适配（金融/法律等）、企业私有化部署
-  战略建议：避免正面价格战，专注垂直行业深度集成
+Overall Assessment:
+  Industry attractiveness: High / Medium / Low
+  Core threats from: [...]
+  Differentiation opportunities in: [...]
+  Strategic recommendations: [...]
 ```
 
 ---
 
-## 与其他方法论的关系
+## Execution Example
 
-- **配合 PESTLE**：PESTLE 看宏观，五力看行业中观竞争格局
-- **输入 SWOT**：五力分析结果填入 SWOT 的 O/T 象限
-- **前置 JTBD**：理解行业后，用 JTBD 找用户未被满足的任务缺口
+**Scenario**: Assessing entry into the domestic AI code assistant tool market
+
+```
+Industry boundary: Domestic enterprise-level AI code assistant tool market
+
+1. Industry Rivalry: Strong
+   Factors: ByteDance MarsCode, Alibaba Tongyi Lingma, Baidu Comate already present, all backed by tech giants
+   Impact: Price war pressure, high customer acquisition cost
+
+2. Threat of New Entrants: Medium
+   Barriers: Requires large model foundation (high capital), IDE plugin ecosystem building (high engineering effort)
+   But: Overseas Cursor/Copilot have proven the path, capital continues flowing in
+   Impact: Competitors will continue to increase
+
+3. Threat of Substitutes: Low (short-term)
+   Substitutes: Traditional code completion (IntelliSense), search engines
+   Switching cost: AI assistant efficiency advantage is widely recognized, difficult to substitute
+   Impact: Relatively low
+
+4. Supplier Bargaining Power: High
+   Suppliers: Large model API providers (OpenAI/Claude/self-developed)
+   Factors: High technology dependency, high foundation model switching cost
+   Impact: Model cost directly affects gross margin
+
+5. Buyer Bargaining Power: Medium → High
+   Factors: Enterprise procurement departments trend toward consolidated negotiation, abundant competitors make price comparison easy
+   Impact: Limited pricing power, service differentiation is key
+
+Overall Assessment:
+  Industry attractiveness: Medium (intense short-term competition, high long-term certainty of code tool demand)
+  Core threats: Giant resource advantages + Supplier costs
+  Differentiation opportunities: Vertical industry deep adaptation (finance/legal etc.), enterprise private deployment
+  Strategic recommendations: Avoid direct price wars, focus on vertical industry deep integration
+```
+
+---
+
+## Relationship with Other Methodologies
+
+- **Combined with PESTLE**: PESTLE looks at macro; Five Forces look at industry competitive landscape
+- **Input to SWOT**: Five forces analysis results fill SWOT's O/T quadrants
+- **Precedes JTBD**: After understanding the industry, use JTBD to find unmet user task gaps

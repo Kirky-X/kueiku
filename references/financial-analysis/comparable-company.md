@@ -1,133 +1,133 @@
-# Comparable Company Analysis · 可比公司分析
+# Comparable Company Analysis
 
-## 核心理念
+## Core Concept
 
-通过相似公司的估值倍数推断目标公司价值。
+Inferring target company value through valuation multiples of similar companies.
 
-可比公司分析（CCA）基于"相似资产应相似定价"的原则，通过筛选与目标公司在行业、规模、增长、风险上相似的可比公司，用其市场交易倍数推断目标公司价值。它是市场法，反映当前市场定价，但依赖市场有效性。
+Comparable Company Analysis (CCA) is based on the principle that "similar assets should be priced similarly." By screening for comparable companies similar to the target in industry, size, growth, and risk, and using their market transaction multiples, CCA infers the target company's value. It is a market-based approach that reflects current market pricing but depends on market efficiency.
 
-> **核心理念**：CCA 反映"市场愿意为相似公司付多少"，不是"公司值多少"。
-> 市场法 vs 内在价值法（DCF）需交叉验证——若两者差异大，需解释原因。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- IPO 定价（参照已上市公司）
-- 并购定价（快速市场参照）
-- 行业估值水平对比
-- 私募股权退出估值
-
-⚠️ **慎用**
-- 独特商业模式（无可比公司）
-- 市场极端状态（泡沫/恐慌时倍数失真）
-- 跨地域/跨监管环境对比（需调整）
-- 小样本（可比公司 < 3 家时可靠性低）
+> **Core Concept**: CCA reflects "what the market is willing to pay for similar companies," not "what a company is worth."
+> The market approach vs. intrinsic value approach (DCF) requires cross-validation — if there's a large discrepancy, the reason must be explained.
 
 ---
 
-## 执行步骤
+## Applicable Scenarios
 
-### Step 1：筛选可比公司
+✅ **Best suited for**
+- IPO pricing (referencing listed companies)
+- M&A pricing (quick market reference)
+- Industry valuation level comparison
+- Private equity exit valuation
 
-筛选标准（按重要性排序）：
-- **行业**：同行业或相近业务模式
-- **规模**：营收/资产/市值量级相近
-- **增长**：增长率相近
-- **盈利能力**：利润率相近
-- **地理**：主要市场相近
-- **风险**：杠杆、波动性相近
-
-> 理想可比公司 5-10 家，最少 3 家。筛选理由需记录，不可事后挑选。
-
-### Step 2：选择估值倍数
-
-根据公司特征选择合适倍数：
-- **EV/EBITDA**：跨资本结构可比，最常用
-- **P/E**：盈利稳定企业
-- **EV/Revenue**：高增长未盈利企业
-- **P/B**：金融行业、重资产行业
-- **EV/EBIT**：跨杠杆可比，剔除资本结构影响
-
-> 倍数选择需匹配公司特征，不可机械套用 P/E。
-
-### Step 3：计算中位数
-
-对可比公司群计算倍数统计量：
-- 中位数（首选，抗异常值）
-- 均值（参考）
-- 25 / 75 分位数（区间）
-- 剔除明显异常值并记录理由
-
-### Step 4：调整差异
-
-目标公司与可比公司群的差异需调整：
-- 增长率差异 → 增长溢价/折价
-- 规模差异 → 规模折价（小公司流动性差）
-- 盈利能力差异 → 利润率调整
-- 流动性差异 → 流动性折价（私募/非上市）
-
-> 调整需有依据，不可为达成目标估值而人为调整。
+⚠️ **Use with caution**
+- Unique business models (no comparable companies)
+- Extreme market conditions (bubble/panic distorting multiples)
+- Cross-region/cross-regulatory environment comparisons (require adjustments)
+- Small sample sizes (fewer than 3 comparable companies reduces reliability)
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Screen Comparable Companies
+
+Screening criteria (ordered by importance):
+- **Industry**: Same industry or similar business model
+- **Size**: Similar revenue/asset/market capitalization magnitude
+- **Growth**: Similar growth rates
+- **Profitability**: Similar profit margins
+- **Geography**: Similar primary markets
+- **Risk**: Similar leverage, volatility
+
+> Ideal number of comparable companies is 5-10, minimum 3. Screening rationale must be documented; no post-hoc cherry-picking.
+
+### Step 2: Select Valuation Multiples
+
+Choose appropriate multiples based on company characteristics:
+- **EV/EBITDA**: Cross-capital-structure comparable, most commonly used
+- **P/E**: Stable profitability companies
+- **EV/Revenue**: High-growth unprofitable companies
+- **P/B**: Financial industry, asset-heavy industries
+- **EV/EBIT**: Cross-leverage comparable, removes capital structure effects
+
+> Multiple selection must match company characteristics; do not mechanically apply P/E.
+
+### Step 3: Calculate Median
+
+Compute statistical measures for the comparable company group:
+- Median (preferred, robust to outliers)
+- Mean (reference)
+- 25th / 75th percentile (range)
+- Exclude obvious outliers with documented rationale
+
+### Step 4: Adjust for Differences
+
+Adjust for differences between the target company and the comparable group:
+- Growth rate differences → Growth premium/discount
+- Size differences → Size discount (smaller companies have lower liquidity)
+- Profitability differences → Margin adjustments
+- Liquidity differences → Liquidity discount (private/unlisted companies)
+
+> Adjustments must be evidence-based; do not manipulate adjustments to reach a desired valuation.
+
+---
+
+## Output Template
 
 ```
-分析对象：[目标公司]
-估值日期：[日期]
+Analysis Subject: [Target Company]
+Valuation Date: [Date]
 
-可比公司筛选：
-  | 公司 | 行业 | 营收 | 增长率 | 利润率 | 规模 | 筛选结果 |
+Comparable Company Screening:
+  | Company | Industry | Revenue | Growth | Margin | Size | Screening Result |
   |------|------|------|--------|--------|------|---------|
-  | A    | ...  | ...  | ...    | ...    | ...  | 纳入/剔除 |
-  | B    | ...  | ...  | ...    | ...    | ...  | 纳入/剔除 |
-  剔除理由记录：[...]
+  | A    | ...  | ...  | ...    | ...    | ...  | Include/Exclude |
+  | B    | ...  | ...  | ...    | ...    | ...  | Include/Exclude |
+  Exclusion Rationale: [...]
 
-估值倍数计算：
-  | 公司 | EV/EBITDA | P/E | EV/Revenue | P/B |
+Valuation Multiples:
+  | Company | EV/EBITDA | P/E | EV/Revenue | P/B |
   |------|-----------|-----|------------|-----|
   | A    | X         | X   | X          | X   |
   | B    | X         | X   | X          | X   |
-  | 中位数 | X       | X   | X          | X   |
-  | 25分位 | X       | X   | X          | X   |
-  | 75分位 | X       | X   | X          | X   |
+  | Median | X       | X   | X          | X   |
+  | 25th Percentile | X | X | X        | X   |
+  | 75th Percentile | X | X | X        | X   |
 
-差异调整：
-  | 调整项 | 目标公司 | 可比公司群中位 | 调整方向 | 调整幅度 |
+Difference Adjustments:
+  | Adjustment Item | Target Company | Comparable Median | Direction | Magnitude |
   |--------|---------|--------------|---------|---------|
-  | 增长率 | X%      | Y%           | 溢价/折价 | ±Z% |
-  | 规模   | X       | Y            | 折价     | -Z% |
-  | 流动性 | 上市/非上市 | 上市      | 折价     | -Z% |
+  | Growth Rate | X%      | Y%           | Premium/Discount | ±Z% |
+  | Size   | X       | Y            | Discount     | -Z% |
+  | Liquidity | Listed/Unlisted | Listed      | Discount     | -Z% |
 
-估值结果：
-  - 选用倍数：[EV/EBITDA 等]
-  - 调整后倍数：[X]
-  - 目标公司对应指标：[Y]
-  - 估值区间：[保守 ~ 乐观]
-  - 与 DCF 对比：[一致/差异 X%，原因：...]
+Valuation Results:
+  - Selected Multiple: [EV/EBITDA etc.]
+  - Adjusted Multiple: [X]
+  - Target Company Metric: [Y]
+  - Valuation Range: [Conservative ~ Optimistic]
+  - Comparison with DCF: [Consistent/Divergence X%, Reason: ...]
 
-估值结论：[描述]
+Valuation Conclusion: [Description]
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 避免方式 |
+| Pitfall | Avoidance Method |
 |------|---------|
-| 可比公司挑选有偏向性 | 筛选标准预先设定，记录剔除理由 |
-| 机械套用 P/E | 倍数选择需匹配公司特征 |
-| 不调整差异直接套用 | 增长/规模/流动性差异必须调整 |
-| 市场极端期倍数失真 | 结合历史倍数中位数，不只用当前 |
-| 小样本当作可靠估值 | < 3 家可比公司需声明可靠性低 |
-| 只用市场法不交叉验证 | 与 DCF 交叉验证，差异大需解释 |
+| Biased comparable company selection | Pre-establish screening criteria, document exclusion rationale |
+| Mechanical P/E application | Multiple selection must match company characteristics |
+| Applying multiples without adjusting for differences | Growth/size/liquidity differences must be adjusted |
+| Distorted multiples during extreme market periods | Combine with historical median multiples, not just current |
+| Treating small sample as reliable valuation | < 3 comparable companies requires reliability disclosure |
+| Using market approach without cross-validation | Cross-validate with DCF; large discrepancies require explanation |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **互补 DCF**：CCA 是市场法，DCF 是内在价值法，交叉验证
-- **前置 DuPont Analysis**：杜邦诊断财务质量，筛选可比公司
-- **对照 EVA**：CCA 估值，EVA 验证后续价值创造能力
+- **Complementary DCF**: CCA is the market approach; DCF is the intrinsic value approach — cross-validate
+- **Upstream DuPont Analysis**: DuPont diagnoses financial quality for comparable company screening
+- **Cross-reference EVA**: CCA for valuation; EVA validates subsequent value creation capability

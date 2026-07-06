@@ -1,143 +1,144 @@
-# STP Analysis · STP 分析（Segmentation-Targeting-Positioning）
+# STP Analysis (Segmentation-Targeting-Positioning)
 
-## 核心理念
+## Core Concept
 
-STP 是市场营销的三步法框架：**细分市场（Segmentation）→ 选择目标市场（Targeting）→ 建立市场定位（Positioning）**。它从"大众市场"思维转向"聚焦目标客群 + 差异化定位"思维，是现代营销的底层逻辑。
+STP is a three-step marketing framework: **Segmentation → Targeting → Positioning**. It shifts from "mass market" thinking to "focus on target customer groups + differentiated positioning" thinking, forming the underlying logic of modern marketing.
 
-> STP 的核心是承认"无法服务所有人"。先切分市场，再选你能赢的战场，最后在那个战场占据一个独特心智位置。
-
-```
-Segmentation（细分）   Targeting（选择）     Positioning（定位）
-   市场切成 N 段    →    选 1-3 段作为目标   →   在目标段占据独特心智
-```
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 新产品/新品牌上市前的市场进入策略
-- 产品定位调整与重新定位
-- 营销策略与传播诉求制定
-- 资源有限的创业公司聚焦客群选择
-
-⚠️ **慎用**
-- 已有清晰目标客群的成熟产品（重复做 STP 价值低）
-- 市场细分维度数据缺失（凭空切分无意义）
-- 平台型业务（多边市场 STP 需分别对每边做）
-- 极早期 PMF 验证阶段（先验证需求，再做 STP）
-
----
-
-## 执行步骤
-
-### Step 1：细分市场（Segmentation）
-
-用 2-4 个维度将市场切成若干互斥的细分段：
+> The core of STP is admitting "you cannot serve everyone." First divide the market, then choose the battlefield you can win, and finally occupy a unique mental position in that battlefield.
 
 ```
-常见细分维度（选 2-4 个，避免过多）：
-  - 地理：区域/城市层级/气候
-  - 人口：年龄/性别/收入/职业/家庭阶段
-  - 心理：价值观/生活方式/态度
-  - 行为：使用频率/忠诚度/购买场景/JTBD
-  - 需求：功能需求/情感需求/未满足需求
-```
-
-```
-细分段清单（示例）：
-  段 A：[描述] — 规模 [X] — 增长 [Y%] — 核心需求 [...]
-  段 B：[描述] — 规模 [X] — 增长 [Y%] — 核心需求 [...]
-  段 C：[描述] — 规模 [X] — 增长 [Y%] — 核心需求 [...]
-```
-
-> 有效细分的标准：可识别、可衡量、可触达、足够大、需求差异显著。
-
-### Step 2：选择目标市场（Targeting）
-
-评估每个细分段的吸引力与我方匹配度，选出 1-3 个目标段：
-
-```
-目标段评估表：
-  段    规模  增长  竞争强度  我方匹配度  综合吸引力
-  A     [大]  [高]  [低]      [高]        [★★★★★]
-  B     [中]  [中]  [高]      [中]        [★★★]
-  C     [小]  [高]  [低]      [低]        [★★]
-```
-
-匹配度评估要考虑：我方资源/能力/品牌延展性/渠道触达。
-
-> 不要贪多。资源有限时聚焦 1 个核心段做透，比同时打 3 个段更有效。
-
-### Step 3：建立市场定位（Positioning）
-
-在目标段占据一个独特的心智位置：
-
-```
-定位陈述模板：
-  对于 [目标段客户]，他们有 [核心需求/痛点]，
-  [产品名] 是一个 [品类]，
-  能 [核心利益]，
-  不同于 [主要替代方案]，我们 [差异化点]。
-```
-
-定位建立的工具：
-- **定位图**：用两个关键维度绘制竞品与自身的相对位置（详见 Perceptual Mapping）
-- **定位声明**：一句话说清"为谁/解决什么/为何选我"
-- **定位支撑点**：列出 3-5 个支撑定位的产品特性/证据
-
-> 定位不是口号，是客户心智中的相对位置。定位必须在目标段客户的感知中被验证。
-
----
-
-## 输出模板
-
-```
-STP 分析报告
-
-一、市场细分（Segmentation）
-  细分维度：[维度 1] × [维度 2]
-  细分段清单：
-    段 A：[描述] — 规模 [X] — 核心需求 [...]
-    段 B：[描述] — 规模 [X] — 核心需求 [...]
-    段 C：[描述] — 规模 [X] — 核心需求 [...]
-
-二、目标市场选择（Targeting）
-  评估表：[规模/增长/竞争/匹配度/综合吸引力]
-  选定目标段：[段 X] — 选择理由：[...]
-  次要目标段：[段 Y] — 选择理由：[...]
-
-三、市场定位（Positioning）
-  定位声明：[对于...，他们有...，XX 是...，能...，不同于...，我们...]
-  差异化点：[3-5 个支撑定位的特性]
-  定位图：[二维图，标注竞品与自身位置]
-
-四、营销组合对齐
-  产品：[如何体现定位]
-  价格：[定价如何支撑定位]
-  渠道：[触达目标段的渠道]
-  传播：[传递定位的核心信息]
+Segmentation              Targeting                Positioning
+   Divide market into N    →  Select 1-3 segments  →  Occupy unique mental
+   segments                  as targets               position in target segment
 ```
 
 ---
 
-## 常见陷阱
+## Applicable Scenarios
 
-| 陷阱 | 避免方式 |
+✅ **Best suited for**
+- Market entry strategy before new product/new brand launch
+- Product positioning adjustment and repositioning
+- Marketing strategy and communication message formulation
+- Startup companies with limited resources focusing on customer segment selection
+
+⚠️ **Use with caution**
+- Mature products with clear target customer segments (repeating STP has low value)
+- Missing market segmentation dimension data (dividing without basis is meaningless)
+- Platform businesses (multi-sided markets require STP for each side separately)
+- Very early PMF validation stage (validate demand first, then do STP)
+
+---
+
+## Execution Steps
+
+### Step 1: Market Segmentation
+
+Use 2-4 dimensions to divide the market into several mutually exclusive segments:
+
+```
+Common segmentation dimensions (select 2-4, avoid too many):
+  - Geographic: Region/City tier/Climate
+  - Demographic: Age/Gender/Income/Occupation/Family stage
+  - Psychographic: Values/Lifestyle/Attitudes
+  - Behavioral: Usage frequency/Loyalty/Purchase occasion/JTBD
+  - Needs-based: Functional needs/Emotional needs/Unmet needs
+```
+
+```
+Segment list (example):
+  Segment A: [Description] — Scale [X] — Growth [Y%] — Core needs [...]
+  Segment B: [Description] — Scale [X] — Growth [Y%] — Core needs [...]
+  Segment C: [Description] — Scale [X] — Growth [Y%] — Core needs [...]
+```
+
+> Criteria for effective segmentation: Identifiable, measurable, reachable, sufficiently large, significant need differences.
+
+### Step 2: Target Market Selection
+
+Evaluate each segment's attractiveness and fit with your capabilities, then select 1-3 target segments:
+
+```
+Target segment evaluation table:
+  Segment    Scale  Growth  Competition  Our Fit  Overall Attractiveness
+  A          [Large] [High]  [Low]       [High]   [★★★★★]
+  B          [Medium] [Medium] [High]     [Medium] [★★★]
+  C          [Small] [High]  [Low]       [Low]    [★★]
+```
+
+Fit assessment should consider: Our resources/capabilities/brand extensibility/channel reach.
+
+> Don't be greedy. When resources are limited, focusing deeply on 1 core segment is more effective than attacking 3 segments simultaneously.
+
+### Step 3: Establish Market Positioning
+
+Occupy a unique mental position in the target segment:
+
+```
+Positioning statement template:
+  For [target segment customers], who have [core need/pain point],
+  [Product Name] is a [category]
+  that [core benefit],
+  unlike [main alternative], we [differentiation point].
+```
+
+Tools for establishing positioning:
+- **Positioning map**: Use two key dimensions to plot competitors and your own relative positions (see Perceptual Mapping for details)
+- **Positioning statement**: One sentence clearly stating "for whom / solving what / why choose us"
+- **Positioning proof points**: List 3-5 product features/evidence supporting the positioning
+
+> Positioning is not a slogan, but a relative position in customers' minds. Positioning must be validated in the perception of target segment customers.
+
+---
+
+## Output Template
+
+```
+STP Analysis Report
+
+I. Market Segmentation
+  Segmentation dimensions: [Dimension 1] × [Dimension 2]
+  Segment list:
+    Segment A: [Description] — Scale [X] — Core needs [...]
+    Segment B: [Description] — Scale [X] — Core needs [...]
+    Segment C: [Description] — Scale [X] — Core needs [...]
+
+II. Target Market Selection
+  Evaluation table: [Scale/Growth/Competition/Fit/Overall Attractiveness]
+  Selected target segment: [Segment X] — Selection rationale: [...]
+  Secondary target segment: [Segment Y] — Selection rationale: [...]
+
+III. Market Positioning
+  Positioning statement: [For... who have..., XX is... that..., unlike..., we...]
+  Differentiation points: [3-5 features supporting positioning]
+  Positioning map: [Two-dimensional chart, annotating competitors and own position]
+
+IV. Marketing Mix Alignment
+  Product: [How positioning is reflected]
+  Price: [How pricing supports positioning]
+  Channels: [Channels to reach target segment]
+  Communication: [Core messages conveying positioning]
+```
+
+---
+
+## Common Pitfalls
+
+| Pitfall | How to Avoid |
 |------|---------|
-| 细分维度过多导致碎片化 | 限制 2-4 个维度，段数控制在 3-7 个 |
-| 目标段选太多稀释资源 | 资源有限时聚焦 1 个核心段 |
-| 定位只写口号不验证 | 用调研/访谈验证目标段客户的实际感知 |
-| 定位与产品特性脱节 | 每个定位点必须有产品特性支撑 |
-| 跳过细分直接定位 | 无细分依据的定位是拍脑袋 |
-| 忽视竞品已有定位 | 定位图上必须标注主要竞品，避免撞定位 |
+| Too many segmentation dimensions causing fragmentation | Limit to 2-4 dimensions, keep segment count at 3-7 |
+| Selecting too many target segments diluting resources | When resources are limited, focus on 1 core segment |
+| Positioning only as a slogan without validation | Use surveys/interviews to validate target segment customers' actual perception |
+| Positioning disconnected from product features | Every positioning point must be supported by product features |
+| Skipping segmentation and jumping to positioning | Positioning without segmentation basis is guesswork |
+| Ignoring competitors' existing positioning | The positioning map must annotate main competitors to avoid positioning collisions |
 
 ---
 
-## 与其他方法论的关系
+## Relationships with Other Methodologies
 
-- **前置 Market Segmentation**：STP 的 S 步骤可调用更细的市场细分方法论
-- **搭配 Perceptual Mapping**：感知图是 STP 定位步骤的核心工具
-- **搭配 User Personas**：Persona 是目标段的具象化，支撑定位落地
-- **搭配 Value Proposition Canvas**：定位声明可进一步用价值主张画布细化
-- **后接 4P/营销组合**：定位确定后，营销组合必须对齐定位
+- **Preceded by Market Segmentation**: The S step in STP can invoke more detailed market segmentation methodologies
+- **Combined with Perceptual Mapping**: Perceptual mapping is the core tool for the positioning step in STP
+- **Combined with User Personas**: Personas are the concrete representation of target segments, supporting positioning implementation
+- **Combined with Value Proposition Canvas**: Positioning statements can be further refined using the Value Proposition Canvas
+- **Followed by 4P/Marketing Mix**: After positioning is determined, the marketing mix must align with positioning

@@ -1,238 +1,238 @@
-# MECE + Pyramid Principle · 结构化思维双剑客
+# MECE + Pyramid Principle · The Structured Thinking Power Couple
 
-## 两个工具，一个目标
+## Two Tools, One Goal
 
-**MECE**（麦肯锡核心分析工具）：如何**分解问题**
-**金字塔原则**（Barbara Minto，麦肯锡顾问）：如何**组织和表达结论**
+**MECE** (McKinsey core analysis tool): How to **decompose problems**
+**Pyramid Principle** (Barbara Minto, McKinsey consultant): How to **organize and express conclusions**
 
-这两个工具共同解决：分析不遗漏、表达不混乱。
+Together, these two tools address: no gaps in analysis, no chaos in expression.
 
 ---
 
 ## Part 1 · MECE
 
-### 核心定义
+### Core Definition
 
-**Mutually Exclusive（相互独立）**：各部分之间没有重叠
-**Collectively Exhaustive（完全穷尽）**：各部分加在一起覆盖全部情况
+**Mutually Exclusive**: No overlap between parts
+**Collectively Exhaustive**: Parts together cover all cases
 
 ```mermaid
 flowchart TD
-    subgraph 好["好的 MECE 分解"]
-        G1["用户"] --> G2["新用户"]
-        G1 --> G3["留存用户"]
-        G1 --> G4["流失用户"]
+    subgraph good["Good MECE Decomposition"]
+        G1["Users"] --> G2["New Users"]
+        G1 --> G3["Retained Users"]
+        G1 --> G4["Churned Users"]
     end
-    subgraph 差["差的分解"]
-        B1["用户"] --> B2["活跃用户"]
-        B1 --> B3["付费用户"]
-        B1 --> B4["新用户"]
+    subgraph bad["Bad Decomposition"]
+        B1["Users"] --> B2["Active Users"]
+        B1 --> B3["Paying Users"]
+        B1 --> B4["New Users"]
     end
-    G1 -.- GNote["✅ 相互独立（三类不重叠）<br/>✅ 完全穷尽（所有用户都在其中一类）"]
-    B1 -.- BNote["❌ 不独立（付费用户可以同时是新用户）<br/>❌ 不穷尽（留存但未付费的老用户不在分类中）"]
+    G1 -.- GNote["✅ Mutually Exclusive (three categories don't overlap)<br/>✅ Collectively Exhaustive (all users fall into one category)"]
+    B1 -.- BNote["❌ Not Exclusive (paying users can also be new users)<br/>❌ Not Exhaustive (retained but non-paying old users not in any category)"]
 ```
 
-### 为什么 MECE 重要
+### Why MECE Matters
 
-- **不遗漏**：避免分析时盲区
-- **不重复**：避免重复计算或重复讨论
-- **结构清晰**：让受众可以跟着逻辑走，不会迷失
+- **No gaps**: Prevents blind spots in analysis
+- **No overlap**: Avoids double-counting or redundant discussion
+- **Clear structure**: Allows the audience to follow the logic without getting lost
 
-### 常用 MECE 分解框架
+### Common MECE Decomposition Frameworks
 
-**时间维度**：短期 / 中期 / 长期（注意定义清晰的时间边界）
+**Time dimension**: Short-term / Medium-term / Long-term (define clear time boundaries)
 
-**流程维度**：按业务流程阶段分解（获客 → 激活 → 留存）
+**Process dimension**: Decompose by business process stages (Acquisition → Activation → Retention)
 
-**用户维度**：用户生命周期（新用户 / 活跃用户 / 休眠用户 / 流失用户）
+**User dimension**: User lifecycle (New users / Active users / Dormant users / Churned users)
 
-**地理维度**：国内 / 海外；一线城市 / 二线城市 / 其他
+**Geographic dimension**: Domestic / Overseas; Tier-1 cities / Tier-2 cities / Other
 
-**业务维度**：收入来源分解（订阅收入 + 一次性收入 + 服务收入）
+**Business dimension**: Revenue source breakdown (Subscription revenue + One-time revenue + Service revenue)
 
-**原因维度（5C）**：公司内部 / 竞争对手 / 客户 / 渠道 / 宏观环境
+**Cause dimension (5C)**: Company internal / Competitors / Customers / Channels / Macro environment
 
-**影响因素（产品）**：功能 / 体验 / 性能 / 稳定性 / 安全性
+**Impact factors (Product)**: Features / Experience / Performance / Stability / Security
 
-### 检验 MECE 的两个问题
+### Two Questions to Test MECE
 
-1. **独立性检验**："各个分类之间有没有重叠？一个元素能同时属于两个分类吗？"
-2. **穷尽性检验**："是否有什么情况/元素没有被覆盖？"
+1. **Exclusivity test**: "Is there overlap between categories? Can a single element belong to two categories?"
+2. **Exhaustiveness test**: "Is there any situation/element not covered?"
 
 ---
 
-## Part 2 · 金字塔原则
+## Part 2 · Pyramid Principle
 
-### 核心理念
+### Core Idea
 
-**结论先行**：先告诉对方你的核心观点，再支撑论据。对立于"铺垫式"讲述（先讲背景→分析→最后才有结论）。
+**Conclusion first**: Lead with your core point, then provide supporting evidence. This is the opposite of "buildup" storytelling (background → analysis → conclusion at the end).
 
 ```mermaid
 flowchart TD
-    T["核心结论"] --> A["论点A"]
-    T --> B["论点B"]
-    T --> C["论点C"]
-    A --> A1["证据"]
-    A --> A2["证据"]
-    B --> B1["证据"]
-    B --> B2["证据"]
-    C --> C1["证据"]
-    C --> C2["证据"]
+    T["Core Conclusion"] --> A["Argument A"]
+    T --> B["Argument B"]
+    T --> C["Argument C"]
+    A --> A1["Evidence"]
+    A --> A2["Evidence"]
+    B --> B1["Evidence"]
+    B --> B2["Evidence"]
+    C --> C1["Evidence"]
+    C --> C2["Evidence"]
 ```
 
-**三原则：**
-1. **任何层级的要点，必须是其下方要素的综合或推论**
-2. **每组要点之间，必须满足 MECE**
-3. **每组要点，必须以同一类逻辑顺序组织**
+**Three principles:**
+1. **Any point at any level must be a synthesis or inference of the elements below it**
+2. **Each group of points must satisfy MECE**
+3. **Each group of points must be organized in the same type of logical order**
 
-### 逻辑顺序类型
+### Logical Order Types
 
-**演绎顺序**（三段论）：
+**Deductive order** (syllogism):
 ```
-大前提 → 小前提 → 结论
-例：所有做 B2B SaaS 的公司都需要强大的客户成功团队
-    我们是 B2B SaaS 公司
-    → 我们需要建立强大的客户成功团队
-```
-
-**归纳顺序**（并列论据支撑结论）：
-```
-结论：我们的增长出了问题
-论据1：Q3 新用户注册下降 30%
-论据2：付费转化率从 8% 降至 5%
-论据3：用户 NPS 从 42 降至 31
+Major premise → Minor premise → Conclusion
+Example: All B2B SaaS companies need a strong customer success team
+    We are a B2B SaaS company
+    → We need to build a strong customer success team
 ```
 
-**时间顺序**（步骤/过程）：
+**Inductive order** (parallel arguments supporting conclusion):
 ```
-结论：推荐三步骤解决该问题
-步骤1：...
-步骤2：...
-步骤3：...
+Conclusion: Our growth has a problem
+Argument 1: Q3 new user registrations dropped 30%
+Argument 2: Paid conversion rate fell from 8% to 5%
+Argument 3: User NPS dropped from 42 to 31
+```
+
+**Chronological order** (steps/process):
+```
+Conclusion: Recommended three steps to solve this problem
+Step 1: ...
+Step 2: ...
+Step 3: ...
 ```
 
 ---
 
-## 联合使用：分析 + 表达
+## Combined Use: Analysis + Expression
 
-### 典型工作流
+### Typical Workflow
 
 ```mermaid
 flowchart TD
-    Start["问题"] --> Stage1["阶段 1（分析）：用 MECE 分解问题空间"]
-    Stage1 --> Q1["MECE 子问题 1"]
-    Stage1 --> Q2["子问题 2"]
-    Stage1 --> Q3["子问题 3"]
-    Q1 --> Stage2["阶段 2（结构化输出）：用金字塔原则组织结论"]
+    Start["Problem"] --> Stage1["Phase 1 (Analysis): Use MECE to decompose the problem space"]
+    Stage1 --> Q1["MECE Sub-problem 1"]
+    Stage1 --> Q2["Sub-problem 2"]
+    Stage1 --> Q3["Sub-problem 3"]
+    Q1 --> Stage2["Phase 2 (Structured output): Use Pyramid Principle to organize conclusions"]
     Q2 --> Stage2
     Q3 --> Stage2
-    Stage2 --> S1["找到核心结论"]
-    S1 --> S2["识别支撑核心结论的 2-4 个论点（MECE）"]
-    S2 --> S3["为每个论点找到 2-3 条证据"]
-    S3 --> Stage3["阶段 3（表达）：从金字塔顶部向下讲"]
-    Stage3 --> T1["先说核心结论"]
-    T1 --> T2["再给论点"]
-    T2 --> T3["最后呈现证据（按需）"]
+    Stage2 --> S1["Find core conclusion"]
+    S1 --> S2["Identify 2-4 arguments supporting core conclusion (MECE)"]
+    S2 --> S3["Find 2-3 pieces of evidence for each argument"]
+    S3 --> Stage3["Phase 3 (Expression): Present from the top of the pyramid downward"]
+    Stage3 --> T1["State core conclusion first"]
+    T1 --> T2["Then give arguments"]
+    T2 --> T3["Finally present evidence (as needed)"]
 ```
 
 ---
 
-## 执行步骤（综合运用）
+## Execution Steps (Integrated Use)
 
-### Step 1：定义核心问题
+### Step 1: Define the Core Problem
 
-用一个清晰的问句表达要解决的问题，这是整个分析的"北极星"。
+Express the problem to solve as a clear question — this is the "North Star" of the entire analysis.
 
-### Step 2：MECE 分解问题空间
+### Step 2: MECE Decompose the Problem Space
 
-将核心问题分解为几个 MECE 的子问题，确保：
-- 子问题之间不重叠
-- 子问题合并能完整覆盖原问题
+Break the core problem into several MECE sub-problems, ensuring:
+- No overlap between sub-problems
+- Sub-problems combined fully cover the original problem
 
-### Step 3：逐子问题分析
+### Step 3: Analyze Each Sub-problem
 
-对每个 MECE 子问题，收集数据、形成观点。
+For each MECE sub-problem, collect data and form viewpoints.
 
-### Step 4：综合形成核心结论
+### Step 4: Synthesize into Core Conclusion
 
-从子问题的分析结论出发，归纳出顶层核心结论。
+From the sub-problem analysis conclusions, inductively derive the top-level core conclusion.
 
-### Step 5：按金字塔结构组织输出
+### Step 5: Organize Output in Pyramid Structure
 
-按"结论 → 论点 → 证据"的顺序组织所有内容。
+Organize all content in the order of "Conclusion → Arguments → Evidence."
 
 ---
 
-## 输出模板
+## Output Template
 
 ```
-核心问题：[一句话问句]
+Core problem: [One-sentence question]
 
-MECE 分解：
-  子问题 A：[...]  分析结论：[...]  证据：[...]
-  子问题 B：[...]  分析结论：[...]  证据：[...]
-  子问题 C：[...]  分析结论：[...]  证据：[...]
+MECE Decomposition:
+  Sub-problem A: [...]  Analysis conclusion: [...]  Evidence: [...]
+  Sub-problem B: [...]  Analysis conclusion: [...]  Evidence: [...]
+  Sub-problem C: [...]  Analysis conclusion: [...]  Evidence: [...]
 
-[独立性检验：A/B/C 之间是否重叠？]
-[穷尽性检验：是否有遗漏情况？]
+[Exclusivity test: Is there overlap between A/B/C?]
+[Exhaustiveness test: Are there missed cases?]
 
 ---
-金字塔输出（表达层）：
+Pyramid output (expression layer):
 
-核心结论：[最重要的一句话]
+Core conclusion: [The most important sentence]
 
-论点 1：[支撑结论的第一个论点]
-  证据 1.1：[数据/案例/逻辑]
-  证据 1.2：[...]
+Argument 1: [First argument supporting the conclusion]
+  Evidence 1.1: [Data / case / logic]
+  Evidence 1.2: [...]
 
-论点 2：[支撑结论的第二个论点]
-  证据 2.1：[...]
+Argument 2: [Second argument supporting the conclusion]
+  Evidence 2.1: [...]
 
-论点 3：[...]
+Argument 3: [...]
   ...
 
-（以上论点之间满足 MECE：[验证说明]）
+(The above arguments satisfy MECE: [Verification explanation])
 ```
 
 ---
 
-## 执行示例
+## Execution Example
 
-**核心问题**：为什么我们的企业客户续费率在过去两个季度下降了 15%？
+**Core problem**: Why has our enterprise customer renewal rate dropped by 15% over the past two quarters?
 
 ```
-MECE 分解（原因维度）：
-  子问题 A：产品层面是否有问题？
-    → 分析：核心功能使用率下降 20%，3 个高频用的功能在 Q2 出现稳定性问题
-    → 结论：产品稳定性是主因
+MECE Decomposition (cause dimension):
+  Sub-problem A: Is there a product issue?
+    → Analysis: Core feature usage dropped 20%; 3 high-frequency features had stability issues in Q2
+    → Conclusion: Product stability is the primary cause
 
-  子问题 B：客户成功运营是否有问题？
-    → 分析：客户成功团队在 Q2 规模缩减，人均负责客户数从 15 升至 28
-    → 结论：客户成功资源不足导致主动干预减少
+  Sub-problem B: Is there a customer success operations issue?
+    → Analysis: Customer success team was downsized in Q2; customers per rep increased from 15 to 28
+    → Conclusion: Insufficient customer success resources led to reduced proactive intervention
 
-  子问题 C：外部市场是否有变化？
-    → 分析：主要竞品 Q2 推出更低价格方案，3 个流失客户明确提及竞品
-    → 结论：竞品压力是次要因素
+  Sub-problem C: Have external market conditions changed?
+    → Analysis: Key competitor launched lower-priced plans in Q2; 3 churned customers explicitly mentioned competitors
+    → Conclusion: Competitive pressure is a secondary factor
 
-金字塔输出：
+Pyramid output:
 
-核心结论：企业客户续费率下降主要由两个内部原因导致：产品稳定性问题 + 客户成功资源不足；外部竞品压力是放大因素。
+Core conclusion: The decline in enterprise customer renewal rate is primarily caused by two internal factors: product stability issues + insufficient customer success resources; external competitive pressure is an amplifier.
 
-论点 1：产品稳定性问题直接损害用户信任
-  证据：3 个核心功能在 Q2 有稳定性事故，核心功能 MAU 下降 20%
+Argument 1: Product stability issues directly erode user trust
+  Evidence: 3 core features had stability incidents in Q2; core feature MAU dropped 20%
 
-论点 2：客户成功资源严重不足，丧失主动干预机会
-  证据：人均负责客户数增加 87%，主动外展频率从每月 2 次降至 0.5 次
+Argument 2: Customer success resources are severely insufficient, losing proactive intervention opportunities
+  Evidence: Customers per rep increased by 87%; proactive outreach frequency dropped from 2/month to 0.5/month
 
-论点 3：竞品低价方案在客户不满时提供了退出理由
-  证据：流失调查：3/8 流失客户提及竞品，但均已有使用不满在先
+Argument 3: Competitor low-price plans provided an exit reason when customers were dissatisfied
+  Evidence: Churn survey: 3/8 churned customers mentioned competitors, but all had existing dissatisfaction
 ```
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **配合 5 Whys / Fishbone**：5 Whys 找根因，MECE 确保分析不遗漏
-- **配合所有输出性工作**：任何需要清晰表达分析结论的场景都可用金字塔原则
-- **配合 Design Thinking**：在 Define 阶段用 MECE 确保问题分解完整
-- **配合 OKR**：用 MECE 检验 Key Results 是否覆盖了目标的全部维度
+- **Works with 5 Whys / Fishbone**: 5 Whys find root causes; MECE ensures analysis has no gaps
+- **Works with all output-oriented work**: Any scenario requiring clear expression of analysis conclusions can use the Pyramid Principle
+- **Works with Design Thinking**: Use MECE in the Define phase to ensure complete problem decomposition
+- **Works with OKR**: Use MECE to verify that Key Results cover all dimensions of the objective

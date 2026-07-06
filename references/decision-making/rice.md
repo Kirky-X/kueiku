@@ -1,193 +1,193 @@
-# RICE Scoring · 优先级评分模型
+# RICE Scoring
 
-## 核心理念
+## Core Concept
 
-通过四个维度量化评估，计算每个需求/项目的优先级分数，将主观排序变为**可辩护的结构化决策**。
+Through quantitative evaluation across four dimensions, calculate the priority score for each requirement/project, transforming subjective ranking into a **defensible structured decision**.
 
 ```
-RICE 分数 = (Reach × Impact × Confidence) ÷ Effort
+RICE Score = (Reach × Impact × Confidence) ÷ Effort
 ```
 
-| 维度 | 含义 | 单位 |
+| Dimension | Meaning | Unit |
 |------|------|------|
-| **Reach** 覆盖度 | 在评估周期内，影响到多少用户/事件 | 人数/次数（每月/季度） |
-| **Impact** 影响力 | 对每个用户的影响有多大 | 0.25 / 0.5 / 1 / 2 / 3 |
-| **Confidence** 信心度 | 对 R 和 I 估算的把握程度 | % (100% / 80% / 50%) |
-| **Effort** 工作量 | 完成所需的人月/人周 | 人月 |
+| **Reach** coverage | How many users/events are affected within the evaluation period | Number of people/times (per month/quarter) |
+| **Impact** impact | How much impact per affected user | 0.25 / 0.5 / 1 / 2 / 3 |
+| **Confidence** confidence | Degree of certainty in R and I estimates | % (100% / 80% / 50%) |
+| **Effort** effort | Person-months/weeks required to complete | Person-months |
 
 ---
 
-## 适用场景
+## Applicable Scenarios
 
-✅ **最适合**
-- 产品功能/需求的优先级排序（Roadmap 规划）
-- 比较多个改进方案的价值
-- 跨团队对齐优先级（量化依据减少主观争议）
-- 季度规划前的需求池清理
+✅ **Best suited for**
+- Priority ranking of product features/requirements (Roadmap planning)
+- Comparing the value of multiple improvement proposals
+- Cross-team priority alignment (quantified basis reduces subjective disputes)
+- Requirement pool cleanup before quarterly planning
 
-⚠️ **慎用**
-- 战略方向选择（RICE 适合战术层，不适合战略层）
-- 没有足够信息做合理估算时（会产生虚假精确感）
-- 完全新的市场探索（Reach/Impact 无法估算）
+⚠️ **Use with caution**
+- Strategic direction selection (RICE is suitable for tactical level, not strategic level)
+- When insufficient information exists for reasonable estimation (creates false sense of precision)
+- Completely new market exploration (Reach/Impact cannot be estimated)
 
 ---
 
-## 各维度评估指南
+## Dimension Evaluation Guide
 
-### Reach（覆盖度）
+### Reach (Coverage)
 
-在**特定时间段**（通常每月）内，受到这个功能影响的**独立用户数**或**事件数**。
+The **number of unique users** or **events** affected by this feature within a **specific time period** (typically monthly).
 
-估算方法：
-- 查看相关功能的现有 DAU/MAU
-- 估算目标用户群在总用户中的比例
-- 查看相关页面/流程的流量数据
+Estimation methods:
+- Review existing DAU/MAU for related features
+- Estimate the proportion of target user group in total users
+- Review traffic data for related pages/processes
 
 ```
-例：付款流程改进
-  每月付款用户：50,000 人
+Example: Payment process improvement
+  Monthly payment users: 50,000
   Reach = 50,000
 ```
 
 ---
 
-### Impact（影响力）
+### Impact
 
-对**每个被影响用户**的影响程度。使用固定刻度避免主观膨胀：
+Degree of impact on **each affected user**. Use fixed scale to avoid subjective inflation:
 
-| 分值 | 含义 |
+| Score | Meaning |
 |------|------|
-| 3 | 大幅提升（核心转化率/留存的显著改善）|
-| 2 | 较大提升（明显可测量的正向影响）|
-| 1 | 中等提升（适度改善，可感知但不显著）|
-| 0.5 | 小幅提升（细微改善）|
-| 0.25 | 最小影响（边际改善）|
+| 3 | Significant improvement (substantial improvement in core conversion/retention) |
+| 2 | Major improvement (clearly measurable positive impact) |
+| 1 | Moderate improvement (moderate improvement, noticeable but not significant) |
+| 0.5 | Minor improvement (slight improvement) |
+| 0.25 | Minimal impact (marginal improvement) |
 
-评估原则：直接影响核心指标（转化/留存/收入）的功能得分高；间接影响得分低。
+Evaluation principle: Features that directly impact core metrics (conversion/retention/revenue) score high; indirect impact scores low.
 
 ---
 
-### Confidence（信心度）
+### Confidence
 
-对 Reach 和 Impact 估算的把握程度：
+Degree of certainty in Reach and Impact estimates:
 
-| 信心度 | 含义 |
+| Confidence | Meaning |
 |--------|------|
-| 100% | 有数据验证（A/B 测试结果、用户研究结论）|
-| 80% | 有部分数据支撑（类似功能历史数据、定性研究）|
-| 50% | 主要基于直觉或类比，数据支撑弱 |
+| 100% | Data verified (A/B test results, user research conclusions) |
+| 80% | Partially data-supported (historical data from similar features, qualitative research) |
+| 50% | Primarily based on intuition or analogy, weak data support |
 
-当信心度为 50% 时，RICE 分数自动减半，内置了不确定性惩罚。
-
----
-
-### Effort（工作量）
-
-完成这个功能所需的**全部人力投入**（设计 + 前端 + 后端 + 测试 + PM），单位为**人月**（或人周，保持一致即可）。
-
-估算建议：
-- 不要低估：加入缓冲系数（实际经验×1.2-1.5）
-- 计算全员工作量，不只是工程师
-- 包含代码上线后的监控和修复成本
+When confidence is 50%, RICE score automatically halves, built-in uncertainty penalty.
 
 ---
 
-## 执行步骤
+### Effort
 
-### Step 1：建立需求池
+**Total human effort** required to complete this feature (design + frontend + backend + testing + PM), in **person-months** (or person-weeks, consistent units).
 
-列出所有待评估的需求/功能/项目。
+Estimation suggestions:
+- Don't underestimate: Add buffer coefficient (actual experience × 1.2-1.5)
+- Calculate full team effort, not just engineers
+- Include monitoring and fixing costs after code launch
 
-### Step 2：逐条评估四维度
+---
 
-对每个需求填入 R、I、C、E 的估算值。
+## Execution Steps
 
-**效率技巧**：
-- 先让团队独立打分，再对齐讨论分歧
-- 对同一类型的功能设立参考标杆（锚定避免漂移）
+### Step 1: Build Requirement Pool
 
-### Step 3：计算 RICE 分数
+List all requirements/features/projects to be evaluated.
+
+### Step 2: Evaluate Four Dimensions Item by Item
+
+For each requirement, fill in estimated values for R, I, C, E.
+
+**Efficiency tips**:
+- First have team members score independently, then align on discussions
+- Establish reference benchmarks for similar feature types (anchor to avoid drift)
+
+### Step 3: Calculate RICE Score
 
 ```
 RICE = (R × I × C) ÷ E
 ```
 
-### Step 4：排序 + 健全性检查
+### Step 4: Ranking + Sanity Check
 
-按 RICE 分数从高到低排序，然后做健全性检查：
-- 战略重要性：有没有战略上必须做但分数低的项目？
-- 依赖关系：某些低分项目是否是高分项目的前置条件？
-- 多样性：全是同类型功能？是否需要补充平衡？
+Sort by RICE score from high to low, then perform sanity check:
+- Strategic importance: Are there strategically required items with low scores?
+- Dependencies: Are some low-score items prerequisites for high-score items?
+- Diversity: All same type of features? Need to add balance?
 
-调整后确定最终优先级。
+Adjust and finalize priority.
 
 ---
 
-## 输出模板
+## Output Template
 
 ```
-评估时间范围：[月/季度]
-评估维度说明：Reach 单位=[人/月]，Effort 单位=[人周]
+Evaluation time range: [Month/Quarter]
+Evaluation dimension explanation: Reach unit=[people/month], Effort unit=[person-weeks]
 
-需求优先级排序表：
+Requirement priority ranking table:
 
-| 需求名称 | Reach | Impact | Confidence | Effort | RICE 分 |
+| Requirement Name | Reach | Impact | Confidence | Effort | RICE Score |
 |---------|-------|--------|------------|--------|---------|
-| 功能 A  | 50000 | 2      | 80%        | 2      | 40000   |
-| 功能 B  | 20000 | 3      | 50%        | 1      | 30000   |
-| 功能 C  | 80000 | 0.5    | 100%       | 4      | 10000   |
-| 功能 D  | 5000  | 2      | 50%        | 0.5    | 10000   |
+| Feature A  | 50000 | 2      | 80%        | 2      | 40000   |
+| Feature B  | 20000 | 3      | 50%        | 1      | 30000   |
+| Feature C  | 80000 | 0.5    | 100%       | 4      | 10000   |
+| Feature D  | 5000  | 2      | 50%        | 0.5    | 10000   |
 
-评估备注：
-  - 功能 A 的信心度基于：[数据来源]
-  - 功能 B 需注意：[依赖关系/风险]
+Evaluation notes:
+  - Feature A's confidence based on: [Data source]
+  - Feature B needs attention: [Dependencies/Risks]
 
-最终优先级：
-  Q1 必做：[功能 A, B]
-  Q1 目标：[功能 C]
-  待排期：[功能 D]
-  搁置：[...]
+Final priority:
+  Q1 must-do: [Feature A, B]
+  Q1 target: [Feature C]
+  To be scheduled: [Feature D]
+  Shelved: [...]
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 避免方式 |
+| Pitfall | How to Avoid |
 |------|---------|
-| Impact 分数普遍虚高（都给 2-3）| 强制使用相对排序，大多数功能应该是 1 |
-| Effort 长期低估 | 建立历史校准数据，实际/估算比例定期复盘 |
-| 只看 RICE 分数，忽视战略权重 | 加入"战略重要性"调整项 |
-| 信心度统一填 80%，失去区分意义 | 明确定义每个级别的证据要求 |
+| Impact scores generally inflated (all 2-3) | Force relative ranking, most features should be 1 |
+| Effort consistently underestimated | Establish historical calibration data, regularly review actual/estimated ratio |
+| Only looking at RICE score, ignoring strategic weight | Add "strategic importance" adjustment item |
+| Confidence uniformly set to 80%, losing differentiation | Clearly define evidence requirements for each level |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **前置 AARRR**：AARRR 识别增长瓶颈层，RICE 对该层的改进方案排优先级
-- **前置 JTBD**：JTBD 识别高机会 Job，转化为功能后用 RICE 排序
-- **配合 OKR**：RICE 高分项目对应 OKR 的 Key Results
-- **替代场景**：比 MoSCoW 更量化；比纯主观讨论更可辩护
+- **Precedes AARRR**: AARRR identifies growth bottleneck layers, RICE prioritizes improvement proposals for that layer
+- **Precedes JTBD**: JTBD identifies high-opportunity Jobs, convert to features then use RICE for ranking
+- **Combined with OKR**: High RICE score items correspond to OKR Key Results
+- **Alternative scenarios**: More quantitative than MoSCoW; more defensible than pure subjective discussion
 
 ---
 
-## ICE vs RICE vs Opportunity Score 对比
+## ICE vs RICE vs Opportunity Score Comparison
 
-三者均为优先级评分框架，但适用阶段与数据需求不同：
+All three are priority scoring frameworks, but suitable stages and data requirements differ:
 
-| 框架 | 维度 | 最适合 | 数据需求 | 主要弱点 |
+| Framework | Dimensions | Best for | Data Requirements | Main Weaknesses |
 |------|------|--------|---------|---------|
-| **ICE** | Impact × Confidence × Ease | 大量想法的初筛（30 分钟内） | 几乎无数据需求，凭直觉打分 | 无 Reach 维度；主观性强；无法横向与历史对比 |
-| **RICE** | Reach × Impact × Confidence ÷ Effort | 详细路线图排序 | 需要 Reach 数据 + Effort 估算 | Effort 估算争议大；早期产品 Reach 不可靠 |
-| **Opportunity Score** | Importance × (1 − Satisfaction) | 找未满足需求（产品机会地图） | 需要用户调研数据（重要度+满意度） | 不考虑实现成本；只看需求侧不看执行侧 |
+| **ICE** | Impact × Confidence × Ease | Initial screening of large idea pools (within 30 minutes) | Almost no data requirements, intuition-based scoring | No Reach dimension; highly subjective; cannot compare horizontally with history |
+| **RICE** | Reach × Impact × Confidence ÷ Effort | Detailed roadmap ranking | Requires Reach data + Effort estimation | Effort estimation controversial; early product Reach unreliable |
+| **Opportunity Score** | Importance × (1 − Satisfaction) | Finding unmet needs (product opportunity map) | Requires user research data (importance + satisfaction) | Doesn't consider implementation cost; only looks at demand side, not execution side |
 
-**选型决策树**：
-- 想法池 > 20 个、需快速筛 → **ICE** 初筛
-- 入围想法需精排、有数据支撑 → **RICE** 精排
-- 已有用户调研、需识别"高重要低满意"机会 → **Opportunity Score**
-- 三者可串联：ICE 筛 → RICE 排 → Opportunity Score 验证需求侧
+**Selection decision tree**:
+- Idea pool > 20, need quick screening → **ICE** initial screening
+- Shortlisted ideas need detailed ranking, data available → **RICE** detailed ranking
+- Existing user research, need to identify "high importance, low satisfaction" opportunities → **Opportunity Score**
+- All three can be chained: ICE screen → RICE rank → Opportunity Score validates demand side
 
-**关键差异**：
-- ICE/RICE 是"供给侧"评分（这个想法值不值得做）
-- Opportunity Score 是"需求侧"评分（这个需求有没有机会）
-- 完整决策应同时看两侧：高 Opportunity Score 的需求 + 高 RICE 分的方案 = 优先投入
+**Key differences**:
+- ICE/RICE are "supply-side" scoring (is this idea worth doing)
+- Opportunity Score is "demand-side" scoring (is there an opportunity for this need)
+- Complete decision should look at both sides: High Opportunity Score need + High RICE score solution = Priority investment

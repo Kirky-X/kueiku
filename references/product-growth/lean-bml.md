@@ -1,158 +1,157 @@
 # Lean Build-Measure-Learn · 精益创业循环
 
-## 核心理念
+## Core Concept
 
-由 Eric Ries 在《精益创业》中提出。核心主张：**创业（或产品开发）本质上是一个在极端不确定性下学习的过程**。
+Proposed by Eric Ries in *The Lean Startup*. Core thesis: **entrepreneurship (or product development) is fundamentally a process of learning under extreme uncertainty**.
 
-最小化"将假设转变为知识"的周期时间，而不是最大化"功能交付量"。
+Minimize the cycle time for "turning hypotheses into knowledge," not maximize "feature delivery volume."
 
 ```
-      构建
+      Build
     ↗      ↘
-想法          产品
+Ideas          Product
     ↖      ↙
-      测量   ← 数据
-          ↓
-         学习
+      Measure  ← Data
+           ↓
+          Learn
 ```
 
-> 不是"越快越好地构建产品"，而是"越快越好地**验证或推翻假设**"。
+> Not "build the product as fast as possible," but "validate or invalidate hypotheses as fast as possible."
 
 ---
 
-## 核心概念
+## Core Concepts
 
-### MVP（最小可行产品）
+### MVP (Minimum Viable Product)
 
-用**最少资源**验证**最关键假设**的版本。
+A version that uses **minimum resources** to validate the **most critical hypothesis**.
 
-MVP 不是：功能不完整的产品、beta 版本、"先做小的再做大的"
+MVP is NOT: an incomplete product, a beta version, "start small and grow later"
 
-MVP 是：一个**专门设计用来验证单一最关键假设**的实验装置
+MVP IS: an **experiment designed to validate a single most critical hypothesis**
 
-MVP 类型：
-| 类型 | 描述 | 适用验证 |
+MVP Types:
+| Type | Description | Suitable for Validating |
 |------|------|---------|
-| 烟雾测试（Smoke Test）| 上线落地页收集注册，但产品还不存在 | 用户是否有需求 |
-| Wizard of Oz | 后端是人工操作，用户以为是自动化 | 产品自动化前验证流程 |
-| 手工服务 MVP | 完全人工服务，验证服务价值 | Concierge MVP |
-| 视频 MVP | 一段解释产品的视频（如 Dropbox） | 需求验证 |
-| 落地页 + 付款 MVP | 要求用户付费，观察转化率 | 付费意愿 |
-| 功能 MVP | 只有核心路径，其余全删 | 核心价值验证 |
+| Smoke Test | Launch landing page to collect signups, but product doesn't exist yet | Whether demand exists |
+| Wizard of Oz | Backend is manual; user thinks it's automated | Validate process before automation |
+| Concierge MVP | Fully manual service, validating service value | Concierge MVP |
+| Video MVP | An explanatory product video (e.g., Dropbox) | Demand validation |
+| Landing Page + Payment MVP | Require user payment, observe conversion | Willingness to pay |
+| Feature MVP | Core path only; everything else stripped | Core value validation |
 
-### 关键假设识别
+### Key Hypothesis Identification
 
-在 Build 之前，先明确：
-- **风险最高的假设是什么**（如果这个假设是错的，整个产品就崩了）？
-- 如何设计实验来快速验证/推翻它？
+Before Build, clarify:
+- **What is the highest-risk hypothesis** (if this hypothesis is wrong, the entire product collapses)?
+- How to design an experiment to quickly validate/invalidate it?
 
-假设类型：
-- **价值假设**：用户是否认为产品有价值？
-- **增长假设**：产品是否会以预期方式增长？
-- **可行性假设**：我们能技术实现吗？
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 产品早期验证阶段（0→1）
-- 新功能方向探索（是否值得完整开发）
-- 重大产品方向转型前的验证
-- 增长假设测试（AARRR 某层的改进方案）
-
-⚠️ **慎用**
-- 已验证产品的工程执行阶段（该优化效率，不该再做假设测试）
-- 监管严格领域（金融/医疗，MVP 可能有合规风险）
+Hypothesis types:
+- **Value Hypothesis**: Does the user find the product valuable?
+- **Growth Hypothesis**: Will the product grow in the expected way?
+- **Feasibility Hypothesis**: Can we technically implement it?
 
 ---
 
-## 执行步骤
+## Applicable Scenarios
 
-### Step 1：明确当前最关键假设
+✅ **Best For**
+- Early-stage product validation (0→1)
+- New feature direction exploration (is it worth full development?)
+- Validation before major product direction pivots
+- Growth hypothesis testing (improvement plans for a layer in AARRR)
+
+⚠️ **Use with Caution**
+- Engineering execution for already-validated products (should optimize efficiency, not run hypothesis tests)
+- Highly regulated industries (finance/healthcare — MVPs may have compliance risks)
+
+---
+
+## Execution Steps
+
+### Step 1: Clarify the Current Most Critical Hypothesis
 
 ```
-我们相信：[用户/市场/技术假设]
-我们将通过：[什么指标]
-来验证这个假设。
-如果验证周期内 [指标] 达到 [目标值]，说明假设成立。
+We believe: [User/Market/Technology hypothesis]
+We will validate this through: [What metric]
+If [metric] reaches [target] within the validation period, the hypothesis holds.
 ```
 
-### Step 2：设计 MVP
+### Step 2: Design the MVP
 
-选择**最小化工作量**且**能有效验证假设**的 MVP 类型：
-- 不要"多准备一点，以防万一"
-- 每个 MVP 只验证一个核心假设
+Choose the MVP type that **minimizes effort** while **effectively validating the hypothesis**:
+- Don't "prepare extra, just in case"
+- Each MVP validates only one core hypothesis
 
-### Step 3：Build（构建）
+### Step 3: Build
 
-按最小必要范围执行，设定明确的时间限制（通常 1-2 周）。
+Execute with minimum necessary scope, with a clear time limit (typically 1-2 weeks).
 
-### Step 4：Measure（测量）
+### Step 4: Measure
 
-定义**先行指标（Leading Indicators）**，而非只看滞后指标：
+Define **leading indicators**, not just lagging metrics:
 
-| 指标类型 | 描述 | 例子 |
+| Metric Type | Description | Examples |
 |---------|------|------|
-| 先行指标 | 预示未来结果的行为指标 | 功能点击率、创建内容率 |
-| 滞后指标 | 结果性指标，反应慢 | 月活、收入 |
+| Leading indicators | Behavioral metrics that predict future outcomes | Feature click rate, content creation rate |
+| Lagging indicators | Outcome metrics, slow to respond | MAU, revenue |
 
-避免虚荣指标（Vanity Metrics）：
-- 🚫 下载量（不反映是否使用）
-- 🚫 注册用户数（不反映是否留存）
-- ✅ 7日活跃率、核心功能使用率、NPS
+Avoid vanity metrics:
+- 🚫 Download count (doesn't reflect whether it's used)
+- 🚫 Registered users (doesn't reflect retention)
+- ✅ 7-day active rate, core feature usage rate, NPS
 
-### Step 5：Learn（学习）
+### Step 5: Learn
 
-回答三个问题：
-1. 假设是否成立？（根据数据，不是感觉）
-2. 如果成立 → **继续（Persevere）**，下一个最关键假设是什么？
-3. 如果不成立 → **转向（Pivot）**，调整哪个维度？
+Answer three questions:
+1. Does the hypothesis hold? (Based on data, not feelings)
+2. If yes → **Persevere**: what is the next most critical hypothesis?
+3. If no → **Pivot**: which dimension to adjust?
 
-**Pivot 类型（常见）：**
-- 用户细分 Pivot：同样产品，换一类目标用户
-- 问题 Pivot：解决同一用户的不同问题
-- 商业模式 Pivot：同样产品，换变现方式
-- 渠道 Pivot：同样产品，换获客渠道
-- 平台 Pivot：从应用变为平台（或反向）
-
----
-
-## 输出模板
-
-```
-当前循环 #[N]
-
-假设：
-  我们相信：[具体假设陈述]
-  验证指标：[指标名] 达到 [目标值]
-  验证期限：[日期]
-  失败条件：[什么结果说明假设错误]
-
-Build：
-  MVP 类型：[类型]
-  构建范围：[...]
-  时间限制：[N 天/周]
-
-Measure：
-  核心指标：[指标] = [实际值] vs 目标 [目标值]
-  辅助数据：[...]
-  定性反馈：[...]
-
-Learn：
-  假设成立？是 / 否 / 部分
-  关键洞察：[...]
-  决策：
-    □ Persevere — 下一个假设：[...]
-    □ Pivot — 调整方向：[...]
-    □ Stop — 原因：[...]
-```
+**Common Pivot Types:**
+- Customer Segment Pivot: Same product, different target audience
+- Problem Pivot: Solve a different problem for the same users
+- Business Model Pivot: Same product, different monetization method
+- Channel Pivot: Same product, different acquisition channel
+- Platform Pivot: From application to platform (or vice versa)
 
 ---
 
-## 与其他方法论的关系
+## Output Template
 
-- **前置 Design Thinking**：设计思维产出概念方向，BML 循环验证和迭代概念
-- **配合 AARRR**：AARRR 定位瓶颈层，BML 循环测试改进方案
-- **配合 RICE**：BML 循环运行前，用 RICE 决定测试哪个假设
-- **使用 5 Whys**：BML 循环测试失败后，用 5 Whys 分析失败原因
+```
+Current Loop #[N]
+
+Hypothesis:
+  We believe: [Specific hypothesis statement]
+  Validation metric: [Metric name] reaching [target]
+  Validation deadline: [Date]
+  Failure condition: [What outcome indicates the hypothesis is wrong]
+
+Build:
+  MVP type: [Type]
+  Build scope: [...]
+  Time limit: [N days/weeks]
+
+Measure:
+  Core metric: [Metric] = [Actual value] vs Target [target]
+  Supporting data: [...]
+  Qualitative feedback: [...]
+
+Learn:
+  Hypothesis validated? Yes / No / Partially
+  Key insight: [...]
+  Decision:
+    □ Persevere — Next hypothesis: [...]
+    □ Pivot — Adjust direction: [...]
+    □ Stop — Reason: [...]
+```
+
+---
+
+## Relationships with Other Methodologies
+
+- **Preceded by Design Thinking**: Design thinking produces conceptual direction; BML loops validate and iterate on concepts
+- **Combined with AARRR**: AARRR locates bottleneck layers; BML loops test improvement plans
+- **Combined with RICE**: Before running BML loops, use RICE to decide which hypothesis to test
+- **Uses 5 Whys**: After BML loop tests fail, use 5 Whys to analyze failure causes

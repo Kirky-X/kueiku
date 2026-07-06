@@ -1,186 +1,186 @@
-# Decision Matrix · 决策矩阵（Pugh Matrix）
+# Decision Matrix (Pugh Matrix)
 
-## 核心理念
+## Core Concept
 
-当面临**多个备选方案**且评估标准不统一时，通过加权打分将主观判断转化为可比较的量化结论。适合「标准多、权重差异大」的方案选择场景。
+When facing **multiple alternatives** with non-uniform evaluation criteria, transform subjective judgments into comparable quantitative conclusions through weighted scoring. Suitable for option selection scenarios with "many criteria and large weight differences."
 
-> RICE 是产品需求优先级的公式；决策矩阵是任意多方案、多标准的通用选择工具——两者互补。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 技术选型（框架/供应商/架构方案）
-- 策略方案选择（多个战略选项）
-- 招聘候选人评估
-- 任何「3个以上方案 + 3个以上评估标准」的决策
-
-⚠️ **慎用**
-- 只有 2 个方案且标准明确（直接对比即可）
-- 产品需求优先级排序（改用 RICE，更轻量）
-- 决策高度依赖情感/价值观因素（矩阵数字可能掩盖真实判断）
+> RICE is a formula for product requirement prioritization; the decision matrix is a general-purpose selection tool for any multiple options and criteria — they complement each other.
 
 ---
 
-## 执行步骤
+## Applicable Scenarios
 
-### Step 1：列出备选方案
+✅ **Best suited for**
+- Technology selection (framework/vendor/architecture solution)
+- Strategy option selection (multiple strategic alternatives)
+- Hiring candidate evaluation
+- Any decision with "3+ options + 3+ evaluation criteria"
 
-```
-方案 A：[...]
-方案 B：[...]
-方案 C：[...]
-（建议 3-7 个，太少不需要矩阵，太多难以评估）
-```
+⚠️ **Use with caution**
+- Only 2 options with clear criteria (direct comparison suffices)
+- Product requirement prioritization (use RICE instead, lighter weight)
+- Decision heavily dependent on emotional/values factors (matrix numbers may mask true judgment)
 
-### Step 2：确定评估标准
+---
 
-穷举所有相关标准，然后合并重叠项，保留 5-8 个核心标准：
+## Execution Steps
 
-```
-标准候选：[...]
-最终标准：[标准1, 标准2, 标准3, ...]
-```
-
-**示例标准**：成本、实施难度、可扩展性、用户体验、风险、交付速度、团队熟悉度
-
-### Step 3：分配权重
-
-各标准权重之和 = 100%（或 1.0）：
+### Step 1: List Alternative Options
 
 ```
-标准1：[x%]
-标准2：[x%]
+Option A: [...]
+Option B: [...]
+Option C: [...]
+(Recommended 3-7 options; too few doesn't need matrix, too many hard to evaluate)
+```
+
+### Step 2: Determine Evaluation Criteria
+
+Exhaustively list all relevant criteria, then merge overlapping items, keeping 5-8 core criteria:
+
+```
+Candidate criteria: [...]
+Final criteria: [Criterion 1, Criterion 2, Criterion 3, ...]
+```
+
+**Example criteria**: Cost, implementation difficulty, scalability, user experience, risk, delivery speed, team familiarity
+
+### Step 3: Assign Weights
+
+Sum of all criteria weights = 100% (or 1.0):
+
+```
+Criterion 1: [x%]
+Criterion 2: [x%]
 ...
 ```
 
-权重设定原则：
-- 与核心目标最直接相关的标准权重最高
-- 让所有决策参与者对权重达成共识（权重分歧本身是重要信息）
+Weight setting principles:
+- Criteria most directly related to core goals get highest weights
+- All decision participants reach consensus on weights (weight disagreements themselves are important information)
 
-### Step 4：逐方案打分
+### Step 4: Score Each Option
 
-每个方案在每个标准上打分（1-5 分或 1-10 分，保持一致）：
+Score each option on each criterion (1-5 or 1-10 scale, consistent):
 
 ```
-| 标准         | 权重 | 方案A | 方案B | 方案C |
+| Criterion         | Weight | Option A | Option B | Option C |
 |--------------|------|-------|-------|-------|
-| [标准1]      | 30%  |   4   |   3   |   5   |
-| [标准2]      | 25%  |   5   |   4   |   3   |
-| [标准3]      | 20%  |   3   |   5   |   4   |
-| [标准4]      | 15%  |   4   |   4   |   3   |
-| [标准5]      | 10%  |   5   |   3   |   4   |
+| [Criterion 1]      | 30%  |   4   |   3   |   5   |
+| [Criterion 2]      | 25%  |   5   |   4   |   3   |
+| [Criterion 3]      | 20%  |   3   |   5   |   4   |
+| [Criterion 4]      | 15%  |   4   |   4   |   3   |
+| [Criterion 5]      | 10%  |   5   |   3   |   4   |
 ```
 
-打分规则：
-- 相对打分（对比各方案）比绝对打分更准确
-- 同一标准下，先确定哪个方案得最高分，再给其他方案打分
+Scoring rules:
+- Relative scoring (comparing options) is more accurate than absolute scoring
+- Under same criterion, first determine which option gets highest score, then score others
 
-### Step 5：计算加权总分
-
-```
-方案A总分 = Σ (每项得分 × 权重)
-```
-
-示例：
-```
-方案A = 4×30% + 5×25% + 3×20% + 4×15% + 5×10% = 4.10
-方案B = 3×30% + 4×25% + 5×20% + 4×15% + 3×10% = 3.80
-方案C = 5×30% + 3×25% + 4×20% + 3×15% + 4×10% = 3.90
-```
-
-### Step 6：敏感性分析（可选但重要）
-
-改变 1-2 个关键权重，看结论是否改变：
+### Step 5: Calculate Weighted Total Score
 
 ```
-如果将 [标准1] 权重从 30% 降至 15%，结论是否改变？
+Option A total score = Σ (each score × weight)
 ```
 
-结论稳定 → 决策可信度高
-结论随权重变化 → 权重设定本身是决策的关键，需重新讨论
+Example:
+```
+Option A = 4×30% + 5×25% + 3×20% + 4×15% + 5×10% = 4.10
+Option B = 3×30% + 4×25% + 5×20% + 4×15% + 3×10% = 3.80
+Option C = 5×30% + 3×25% + 4×20% + 3×15% + 4×10% = 3.90
+```
 
-### Step 7：解读与决策
+### Step 6: Sensitivity Analysis (Optional but Important)
+
+Change 1-2 key weights to see if conclusion changes:
 
 ```
-数字最高的方案：[...]
-但需要检验：
-  ✓ 结论是否符合直觉？（若不符合，检查打分或权重）
-  ✓ 某方案是否在某关键标准上得分极低（一票否决项）？
-  ✓ 第一名和第二名分差有多大？（分差小说明两方案势均力敌）
+If [Criterion 1] weight is reduced from 30% to 15%, does the conclusion change?
+```
+
+Conclusion stable → Decision reliability high
+Conclusion changes with weights → Weight setting itself is key to decision, needs re-discussion
+
+### Step 7: Interpretation and Decision
+
+```
+Option with highest score: [...]
+But need to verify:
+  ✓ Does conclusion align with intuition? (If not, check scoring or weights)
+  ✓ Does any option score extremely low on a key criterion (veto item)?
+  ✓ How large is the gap between first and second place? (Small gap indicates two options are evenly matched)
 ```
 
 ---
 
-## 输出模板
+## Output Template
 
 ```
-决策问题：[...]
+Decision problem: [...]
 
-备选方案：[A] / [B] / [C]
+Alternative options: [A] / [B] / [C]
 
-评估矩阵：
-| 标准       | 权重 | 方案A | 方案B | 方案C |
+Evaluation matrix:
+| Criterion       | Weight | Option A | Option B | Option C |
 |------------|------|-------|-------|-------|
-| [标准1]    | xx%  |       |       |       |
-| [标准2]    | xx%  |       |       |       |
+| [Criterion 1]    | xx%  |       |       |       |
+| [Criterion 2]    | xx%  |       |       |       |
 | ...        |      |       |       |       |
-| **总分**   |      | x.xx  | x.xx  | x.xx  |
+| **Total Score**   |      | x.xx  | x.xx  | x.xx  |
 
-敏感性测试：调整[关键标准]权重后，结论[不变/改变为方案X]
+Sensitivity test: After adjusting [key criterion] weight, conclusion [unchanged/changed to Option X]
 
-推荐方案：[...] — 主要优势：[...] — 主要风险：[...]
-次选方案：[...] — 适用条件：[...]（若[某条件变化]，改选此方案）
+Recommended option: [...] — Main advantage: [...] — Main risk: [...]
+Alternative option: [...] — Applicable conditions: [...] (If [certain condition changes], switch to this option)
 ```
 
 ---
 
-## 执行示例
+## Execution Example
 
-**场景**：选择后端框架（Node.js vs Go vs Rust）用于新服务
+**Scenario**: Selecting backend framework (Node.js vs Go vs Rust) for new service
 
 ```
-标准与权重：
-  开发效率      30%（团队当前瓶颈）
-  运行时性能    25%（新服务为高频接口）
-  团队熟悉度    20%（学习成本影响交付）
-  生态完整度    15%
-  长期维护性    10%
+Criteria and weights:
+  Development efficiency      30% (current team bottleneck)
+  Runtime performance    25% (new service is high-frequency interface)
+  Team familiarity    20% (learning cost affects delivery)
+  Ecosystem completeness    15%
+  Long-term maintainability    10%
 
-打分（1-5）：
-| 标准       | 权重 | Node.js | Go | Rust |
+Scoring (1-5):
+| Criterion       | Weight | Node.js | Go | Rust |
 |------------|------|---------|----|------|
-| 开发效率   | 30%  |    5    |  4 |  2   |
-| 性能       | 25%  |    3    |  5 |  5   |
-| 熟悉度     | 20%  |    5    |  3 |  1   |
-| 生态       | 15%  |    5    |  4 |  3   |
-| 维护性     | 10%  |    3    |  5 |  4   |
+| Development efficiency   | 30%  |    5    |  4 |  2   |
+| Performance       | 25%  |    3    |  5 |  5   |
+| Familiarity     | 20%  |    5    |  3 |  1   |
+| Ecosystem       | 15%  |    5    |  4 |  3   |
+| Maintainability     | 10%  |    3    |  5 |  4   |
 
-总分：Node.js = 4.30 | Go = 4.15 | Rust = 2.90
+Total score: Node.js = 4.30 | Go = 4.15 | Rust = 2.90
 
-敏感性：若性能权重提至40%，Go反超Node.js（4.45 vs 4.10）
+Sensitivity: If performance weight increased to 40%, Go surpasses Node.js (4.45 vs 4.10)
 
-推荐：Node.js（当前约束下）
-次选：Go（若性能成为首要约束时切换）
+Recommendation: Node.js (under current constraints)
+Alternative: Go (switch when performance becomes primary constraint)
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 说明 | 避免方式 |
+| Pitfall | Description | How to Avoid |
 |------|------|---------|
-| 权重倒推打分 | 先知道想要哪个方案，再调权重 | 先定权重，再打分，顺序不能反 |
-| 忽视一票否决项 | 某方案在关键标准上得1分但总分还高 | 设定「最低分门槛」，低于门槛直接淘汰 |
-| 伪精确 | 算出 4.32 vs 4.28 就认为前者更好 | 分差 < 0.3 视为势均力敌，做敏感性分析 |
-| 标准重叠 | 「速度」和「响应时间」本质相同 | 建立标准前先合并同类项 |
+| Backward scoring from weights | Knowing which option you want first, then adjusting weights | Set weights first, then score; order cannot be reversed |
+| Ignoring veto items | An option scores 1 on a key criterion but total score still high | Set "minimum score threshold," items below threshold are directly eliminated |
+| False precision | Calculating 4.32 vs 4.28 and assuming former is better | Gaps < 0.3 considered evenly matched, do sensitivity analysis |
+| Overlapping criteria | "Speed" and "response time" are essentially the same | Merge similar items before establishing criteria |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **前置 MECE**：确保评估标准不重叠、不遗漏
-- **配合 Pre-mortem**：决策后用 Pre-mortem 验证选中方案的风险
-- **与 RICE 的边界**：产品需求优先级用 RICE；方案选择用决策矩阵
-- **配合六顶思考帽**：打分前用六帽确保从多角度评估，避免单一视角偏差
+- **Precedes MECE**: Ensure evaluation criteria are non-overlapping and exhaustive
+- **Combined with Pre-mortem**: After decision, use Pre-mortem to verify risks of selected option
+- **Boundary with RICE**: Product requirement prioritization uses RICE; option selection uses decision matrix
+- **Combined with Six Thinking Hats**: Before scoring, use six hats to ensure multi-angle evaluation, avoiding single-perspective bias

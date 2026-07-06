@@ -1,173 +1,173 @@
-# Reframe and Elevate · 重构与升维
+# Reframe and Elevate · Reframe and Elevate
 
-## 核心理念
+## Core Idea
 
-当问题卡壳时，往往是**问题框架本身**限制了思路。重构（Reframe）是改变问题的表述框架，升维（Elevate）是提升抽象层次。两者让思考者跳出当前视角，找到新解空间。
+When a problem is stuck, it is often the **problem framework itself** that limits thinking. Reframing changes the problem's framing, while elevating raises the abstraction level. Together, they help thinkers break out of the current perspective and find new solution spaces.
 
-> "你无法在产生问题的同一思维层次解决问题。"——爱因斯坦。重构与升维就是切换思维层次的方法。
-
-```
-当前框架：如何在 X 约束下做 Y？  ← 卡壳
-  ↓ 重构
-新框架：如何让 X 约束不再相关？   ← 新解空间
-  ↓ 升维
-更高层：Y 真的是我们要的目标吗？  ← 重新定义问题
-```
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 问题卡壳、常规思路穷尽时
-- 创新突破与战略重定位
-- 困境决策（两难选择需引入新维度）
-- 发现"在解错的问题"时
-
-⚠️ **慎用**
-- 执行层具体问题（重构会脱离落地）
-- 时间紧急（重构需要思考时间）
-- 问题清晰且解法明确（无需重构，直接执行）
-- 团队未对齐目标时（先对齐再重构，否则重构方向分歧）
-
----
-
-## 执行步骤
-
-### Step 1：识别当前框架
-
-显性化当前如何框定问题：
+> "You cannot solve a problem with the same thinking that created it." — Einstein. Reframing and elevating are methods for switching thinking levels.
 
 ```
-当前问题框架识别：
-  问题表述：[当前如何描述这个问题]
-  隐含假设：[这个表述默认了什么]
-  约束条件：[哪些被视为不可改变]
-  目标定义：[当前认为要达成什么]
-  评估标准：[当前用什么衡量成功]
-```
-
-> 多数卡壳源于隐含假设未被发现。识别隐含假设是重构的前提。
-
-### Step 2：列出替代框架
-
-用以下技法生成替代问题框架：
-
-```
-重构技法：
-  1. 反转目标：从"如何达成 X"转为"如何让 X 自然发生"
-  2. 转换主体：从"我们如何"转为"用户如何/对手如何/系统如何"
-  3. 改变约束：把硬约束变软约束，或反之
-  4. 重定义问题：从表层问题挖到深层需求
-  5. 切换视角：技术视角 ↔ 商业视角 ↔ 用户视角
-  6. 时间拉伸：从短期框架拉到长期，或反之
-
-示例：
-  原框架："如何降低获客成本？"
-  重构 1（反转）："如何让现有客户带来新客户？"
-  重构 2（重定义）："如何提高客户终身价值，让获客成本占比下降？"
-  重构 3（转换主体）："如何让产品自传播，摆脱对获客的依赖？"
-```
-
-### Step 3：评估框架有效性
-
-并非所有重构都有价值，需评估：
-
-```
-有效性评估：
-  □ 新框架是否打开了原框架无法触及的解空间？
-  □ 新框架是否更接近问题的本质？
-  □ 新框架下的解法是否可执行？
-  □ 新框架是否引入了新的不可接受的约束？
-  □ 新框架是否被利益相关者接受？
-```
-
-> 为重构而重构是陷阱。重构必须产生新解空间，否则只是换个说法。
-
-### Step 4：升维到更高抽象
-
-如果重构仍不够，提升抽象层次：
-
-```
-升维提问：
-  - 这个问题属于哪一类更高层问题？
-  - 当前目标服务于什么更高目标？
-  - 这个约束在更高层次是否还成立？
-  - 如果资源无限，这个问题还存在吗？
-  - 这个问题在 5 年后还重要吗？
-
-升维示例：
-  原层：如何提高这个功能的转化率？
-  升维 1：这个功能是否值得做？（功能层 → 产品层）
-  升维 2：这个产品是否在正确的赛道？（产品层 → 战略层）
-  升维 3：我们的赛道定义是否正确？（战略层 → 愿景层）
-```
-
-> 升维要适度。升得太高会脱离可执行性，"如何让世界更好"无法指导产品决策。
-
-### Step 5：在新框架下重新求解
-
-```
-新框架求解：
-  选定框架：[重构后的问题表述]
-  新约束：[...]
-  新目标：[...]
-  新解空间：[列出原框架无法触及的解]
-  选定解法：[...] — 为何在新框架下这是最优
+Current framework: How to do Y under constraint X?  ← Stuck
+  ↓ Reframe
+New framework: How to make constraint X irrelevant?   ← New solution space
+  ↓ Elevate
+Higher level: Is Y really the goal we want?  ← Redefine the problem
 ```
 
 ---
 
-## 输出模板
+## Applicable Scenarios
+
+✅ **Best suited for**
+- When a problem is stuck and conventional approaches are exhausted
+- Innovation breakthroughs and strategic repositioning
+- Dilemma decisions (difficult choices requiring new dimensions)
+- When you discover you're "solving the wrong problem"
+
+⚠️ **Use with caution**
+- Execution-level specific problems (reframing disconnects from implementation)
+- Time-sensitive situations (reframing requires thinking time)
+- When the problem and solution are clear (no reframing needed, just execute)
+- When team goals are misaligned (align first, then reframe; otherwise direction diverges)
+
+---
+
+## Execution Steps
+
+### Step 1: Identify the Current Framework
+
+Make explicit how the problem is currently framed:
 
 ```
-重构与升维分析
+Current problem framework identification:
+  Problem statement: [How the problem is currently described]
+  Hidden assumptions: [What this framing takes for granted]
+  Constraints: [What is considered unchangeable]
+  Goal definition: [What is currently believed to be achieved]
+  Evaluation criteria: [What is currently used to measure success]
+```
 
-一、当前框架识别
-  问题表述：[...]
-  隐含假设：[...]
-  约束条件：[...]
-  卡壳点：[...]
+> Most roadblocks stem from undiscovered hidden assumptions. Identifying hidden assumptions is a prerequisite for reframing.
 
-二、替代框架清单
-  重构 1：[技法] → [新表述] — 打开的解空间：[...]
-  重构 2：[技法] → [新表述] — 打开的解空间：[...]
-  重构 3：[技法] → [新表述] — 打开的解空间：[...]
+### Step 2: List Alternative Frameworks
 
-三、框架有效性评估
-  [对每个重构走有效性清单]
-  选定框架：[...] — 选择理由：[...]
+Use the following techniques to generate alternative problem frameworks:
 
-四、升维（如需）
-  当前抽象层：[...]
-  升维后抽象层：[...]
-  升维理由：[重构后仍不够，需更高视角]
+```
+Reframing techniques:
+  1. Reverse the goal: From "how to achieve X" to "how to make X happen naturally"
+  2. Shift the subject: From "how do we" to "how do users / competitors / the system"
+  3. Change constraints: Turn hard constraints into soft ones, or vice versa
+  4. Redefine the problem: Dig from surface problem to deeper needs
+  5. Switch perspective: Technical perspective ↔ Business perspective ↔ User perspective
+  6. Time stretch: From short-term framework to long-term, or vice versa
 
-五、新框架下的解
-  新解空间：[...]
-  选定解法：[...] — 与原框架解法的差异：[...]
-  执行要点：[...]
+Examples:
+  Original framework: "How to reduce customer acquisition cost?"
+  Reframe 1 (reverse): "How to make existing customers bring in new customers?"
+  Reframe 2 (redefine): "How to increase customer lifetime value so that acquisition cost ratio decreases?"
+  Reframe 3 (shift subject): "How to make the product self-propagating, reducing dependence on acquisition?"
+```
+
+### Step 3: Evaluate Framework Effectiveness
+
+Not all reframes are valuable — evaluate each:
+
+```
+Effectiveness evaluation:
+  □ Does the new framework open solution spaces unreachable by the original?
+  □ Is the new framework closer to the essence of the problem?
+  □ Are solutions under the new framework executable?
+  □ Does the new framework introduce new unacceptable constraints?
+  □ Is the new framework accepted by stakeholders?
+```
+
+> Reframing for its own sake is a trap. Reframing must produce new solution spaces; otherwise it's just rewording.
+
+### Step 4: Elevate to Higher Abstraction
+
+If reframing is still not enough, raise the abstraction level:
+
+```
+Elevation questions:
+  - What higher-level problem category does this problem belong to?
+  - What higher goal does the current goal serve?
+  - Does this constraint still hold at a higher level?
+  - If resources were unlimited, would this problem still exist?
+  - Would this problem still matter in 5 years?
+
+Elevation examples:
+  Original level: How to improve this feature's conversion rate?
+  Elevation 1: Is this feature worth building? (Feature level → Product level)
+  Elevation 2: Is this product on the right track? (Product level → Strategy level)
+  Elevation 3: Is our track definition correct? (Strategy level → Vision level)
+```
+
+> Elevate in moderation. Elevating too high detaches from executability — "how to make the world better" cannot guide product decisions.
+
+### Step 5: Solve Within the New Framework
+
+```
+New framework solution:
+  Selected framework: [Reframed problem statement]
+  New constraints: [...]
+  New goals: [...]
+  New solution space: [List solutions unreachable by the original framework]
+  Selected solution: [...] — Why this is optimal under the new framework
 ```
 
 ---
 
-## 常见陷阱
+## Output Template
 
-| 陷阱 | 避免方式 |
-|------|---------|
-| 为重构而重构，无新解空间 | 必须验证新框架打开了原框架无法触及的解 |
-| 升维过度脱离可执行 | 升维后必须能降维回可执行的解 |
-| 忽视隐含假设 | 重构前必须显性化所有隐含假设 |
-| 重构方向与团队目标冲突 | 重构前对齐更高层目标 |
-| 把重构当拖延执行的借口 | 设定重构时限，到点必须收敛到解 |
-| 一次重构就定论 | 列多个替代框架对比，选最优 |
+```
+Reframe and Elevate Analysis
+
+I. Current Framework Identification
+  Problem statement: [...]
+  Hidden assumptions: [...]
+  Constraints: [...]
+  Roadblock point: [...]
+
+II. Alternative Framework List
+  Reframe 1: [Technique] → [New statement] — Solution space opened: [...]
+  Reframe 2: [Technique] → [New statement] — Solution space opened: [...]
+  Reframe 3: [Technique] → [New statement] — Solution space opened: [...]
+
+III. Framework Effectiveness Evaluation
+  [Run effectiveness checklist for each reframe]
+  Selected framework: [...] — Selection rationale: [...]
+
+IV. Elevation (if needed)
+  Current abstraction level: [...]
+  Elevated abstraction level: [...]
+  Elevation rationale: [Reframing still insufficient, needs higher perspective]
+
+V. Solution Under New Framework
+  New solution space: [...]
+  Selected solution: [...] — Difference from original framework solution: [...]
+  Key execution points: [...]
+```
 
 ---
 
-## 与其他方法论的关系
+## Common Pitfalls
 
-- **搭配 First Principles**：第一性原理是重构的一种（剥离假设重推导）
-- **搭配 Socratic Questioning**：苏格拉底追问是识别隐含假设的工具
-- **搭配 Framework Selection**：框架都不奏效时，先重构问题再选框架
-- **搭配 Connecting Dots**：重构后的新框架可能更容易识别跨领域连接
-- **搭配 Second-Order Thinking**：升维后需评估二阶效应
+| Pitfall | How to Avoid |
+|---------|-------------|
+| Reframing for its own sake, no new solution space | Must verify that the new framework opens solutions unreachable by the original |
+| Elevating too high, losing executability | After elevation, must be able to descend back to executable solutions |
+| Ignoring hidden assumptions | Must make all explicit before reframing |
+| Reframing direction conflicts with team goals | Align on higher-level goals before reframing |
+| Using reframing as an excuse to delay execution | Set a time limit for reframing; must converge on a solution by deadline |
+| Accepting the first reframe as final | List multiple alternative frameworks for comparison, select the best |
+
+---
+
+## Relationship with Other Methodologies
+
+- **Complements First Principles**: First principles is a form of reframing (strip assumptions and deduce from scratch)
+- **Complements Socratic Questioning**: Socratic questioning is a tool for identifying hidden assumptions
+- **Complements Framework Selection**: When no framework works, reframe the problem first, then select a framework
+- **Complements Connecting Dots**: The new framework after reframing may make it easier to identify cross-domain connections
+- **Complements Second-Order Thinking**: After elevating, evaluate the second-order effects

@@ -1,232 +1,232 @@
-# FMEA · 失效模式与影响分析
+# FMEA · Failure Mode and Effects Analysis
 
-## 核心理念
+## Core Concept
 
-系统化识别潜在失效模式，对每种失效按**严重度（S）× 频度（O）× 探测度（D）**评分，计算**风险优先数 RPN = S × O × D**。按 RPN 从高到低排序，对高风险项设计预防措施，再重新计算 RPN 验证改善效果。
+Systematically identify potential failure modes, score each failure by **Severity (S) × Occurrence (O) × Detection (D)**, calculate **Risk Priority Number RPN = S × O × D**. Sort by RPN from high to low, design preventive measures for high-risk items, then recalculate RPN to verify improvement.
 
-> 与其事后救火，不如事前防火。FMEA 把"可能出什么错"的思考从被动变为主动、从随意变为系统。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 产品设计阶段的风险预防（Design FMEA）
-- 生产/服务流程的质量控制（Process FMEA）
-- 安全关键系统的风险识别（医疗、航空、汽车）
-- 新流程上线前的风险评估
-- 供应链关键节点的故障预防
-
-⚠️ **慎用**
-- 战略级风险（用 Pre-mortem 更合适）
-- 需要快速风险概览时（FMEA 太细太慢）
-- 已发生的故障复盘（用 5 Whys + Fishbone）
-- 创意发散阶段（FMEA 是收敛型工具，不适合早期发散）
+> Rather than firefighting afterward, it's better to prevent fires in advance. FMEA transforms "what could go wrong" thinking from reactive to proactive, from ad hoc to systematic.
 
 ---
 
-## 执行步骤
+## Applicable Scenarios
 
-### Step 1：定义分析对象并分解
+✅ **Best suited for**
+- Risk prevention during product design (Design FMEA)
+- Quality control in production/service processes (Process FMEA)
+- Risk identification in safety-critical systems (medical, aviation, automotive)
+- Risk assessment before new process launch
+- Failure prevention at critical supply chain nodes
 
-明确分析范围，将系统/流程分解为可分析的组件或步骤：
+⚠️ **Use with caution**
+- Strategic-level risks (Pre-mortem is more appropriate)
+- When quick risk overview is needed (FMEA is too detailed and slow)
+- Retrospective analysis of failures that have occurred (use 5 Whys + Fishbone)
+- Creative ideation phase (FMEA is a convergent tool, not suitable for early divergence)
+
+---
+
+## Execution Steps
+
+### Step 1: Define Analysis Object and Break Down
+
+Clarify analysis scope, break down system/process into analyzable components or steps:
 
 ```
-分析对象：[系统/流程名称]
-分析类型：Design FMEA / Process FMEA
+Analysis object: [System/Process name]
+Analysis type: Design FMEA / Process FMEA
 
-组件/步骤分解：
-  1. [组件A / 步骤1]
-  2. [组件B / 步骤2]
-  3. [组件C / 步骤3]
+Component/Step breakdown:
+  1. [Component A / Step 1]
+  2. [Component B / Step 2]
+  3. [Component C / Step 3]
   ...
 ```
 
-### Step 2：识别潜在失效模式
+### Step 2: Identify Potential Failure Modes
 
-对每个组件/步骤，列出**所有可能的失效方式**：
-
-```
-组件：[组件A]
-  失效模式1：[如：连接超时]
-  失效模式2：[如：返回错误数据]
-  失效模式3：[如：完全无响应]
-```
-
-> 关键：不要只列"坏了"，要具体到"怎么坏了"——不同的失效模式影响和概率完全不同。
-
-### Step 3：描述失效影响并评定严重度（S）
-
-对每种失效模式，描述其对系统/用户的影响，并按 1-10 评分：
+For each component/step, list **all possible failure modes**:
 
 ```
-严重度评分标准：
-  1  — 几乎无影响，用户不会注意到
-  2-3 — 轻微影响，用户可自行恢复
-  4-5 — 中等影响，功能降级但可继续使用
-  6-7 — 严重影响，核心功能不可用
-  8-9 — 极严重影响，安全风险或数据丢失
-  10 — 灾难性，系统崩溃或人员伤害
+Component: [Component A]
+  Failure mode 1: [e.g., Connection timeout]
+  Failure mode 2: [e.g., Returning incorrect data]
+  Failure mode 3: [e.g., Complete non-response]
 ```
 
-### Step 4：评定频度（O）
+> Key: Don't just list "broken" — specify "how it breaks" — different failure modes have completely different impacts and probabilities.
 
-评估该失效模式发生的概率，按 1-10 评分：
+### Step 3: Describe Failure Effects and Assess Severity (S)
 
-```
-频度评分标准：
-  1  — 极不可能发生（<1/100000）
-  2-3 — 很少发生（1/10000 ~ 1/1000）
-  4-5 — 偶尔发生（1/1000 ~ 1/100）
-  6-7 — 较常发生（1/100 ~ 1/10）
-  8-9 — 频繁发生（1/10 ~ 1/2）
-  10 — 几乎必然发生（>1/2）
-```
-
-### Step 5：评定探测度（D）
-
-评估**在影响发生前**能否检测到该失效，按 1-10 评分：
+For each failure mode, describe its impact on system/user, and score from 1-10:
 
 ```
-探测度评分标准：
-  1  — 几乎必然能探测到（自动监控+告警）
-  2-3 — 很可能探测到（定期检查+明显症状）
-  4-5 — 可能探测到（有检测手段但不完善）
-  6-7 — 较难探测到（依赖人工巡检）
-  8-9 — 很难探测到（无有效检测手段）
-  10 — 几乎不可能探测到（隐蔽失效）
+Severity scoring criteria:
+  1  — Almost no impact, user won't notice
+  2-3 — Minor impact, user can recover themselves
+  4-5 — Moderate impact, degraded function but still usable
+  6-7 — Serious impact, core function unavailable
+  8-9 — Extremely serious, safety risk or data loss
+  10 — Catastrophic, system crash or personnel injury
 ```
 
-> 注意：D 越高越危险——意味着失效发生了你还不知道。
+### Step 4: Assess Occurrence (O)
 
-### Step 6：计算 RPN 并排序
+Evaluate the probability of this failure mode occurring, score from 1-10:
+
+```
+Occurrence scoring criteria:
+  1  — Extremely unlikely (<1/100,000)
+  2-3 — Rare (1/10,000 ~ 1/1,000)
+  4-5 — Occasional (1/1,000 ~ 1/100)
+  6-7 — Moderate (1/100 ~ 1/10)
+  8-9 — Frequent (1/10 ~ 1/2)
+  10 — Almost certain (>1/2)
+```
+
+### Step 5: Assess Detection (D)
+
+Evaluate **whether the failure can be detected before impact occurs**, score from 1-10:
+
+```
+Detection scoring criteria:
+  1  — Almost certainly detectable (automated monitoring + alerts)
+  2-3 — Very likely detectable (regular checks + obvious symptoms)
+  4-5 — Possibly detectable (detection methods exist but imperfect)
+  6-7 — Difficult to detect (relies on manual inspection)
+  8-9 — Very difficult to detect (no effective detection methods)
+  10 — Almost impossible to detect (hidden failure)
+```
+
+> Note: Higher D is more dangerous — it means the failure has occurred and you don't know about it.
+
+### Step 6: Calculate RPN and Sort
 
 ```
 RPN = S × O × D
 
-组件 | 失效模式 | S | O | D | RPN
-[A]  | [模式1] | 8 | 4 | 6 | 192
-[A]  | [模式2] | 5 | 3 | 3 |  45
-[B]  | [模式1] | 9 | 3 | 8 | 216
-[C]  | [模式1] | 6 | 5 | 4 | 120
+Component | Failure mode | S | O | D | RPN
+[A]  | [Mode 1] | 8 | 4 | 6 | 192
+[A]  | [Mode 2] | 5 | 3 | 3 |  45
+[B]  | [Mode 1] | 9 | 3 | 8 | 216
+[C]  | [Mode 1] | 6 | 5 | 4 | 120
 ```
 
-### Step 7：针对高 RPN 项设计预防措施
+### Step 7: Design Preventive Measures for High RPN Items
 
-优先处理 RPN 最高的项目（通常 RPN > 100 或 Top 3）：
-
-```
-高 RPN 项：[组件B-模式1] RPN=216
-  预防措施（降低 O）：[...]
-  探测措施（降低 D）：[...]
-  责任人/时限：[...]
-```
-
-### Step 8：重新计算 RPN 验证改善
+Prioritize items with highest RPN (typically RPN > 100 or Top 3):
 
 ```
-组件 | 失效模式 | S | O | D | RPN | S'| O'| D'| RPN'
-[B]  | [模式1] | 9 | 3 | 8 | 216 | 9 | 2 | 3 |  54
+High RPN item: [Component B-Mode 1] RPN=216
+  Preventive measures (reduce O): [...]
+  Detection measures (reduce D): [...]
+  Responsible person/Deadline: [...]
 ```
 
-RPN 显著下降说明措施有效。
+### Step 8: Recalculate RPN to Verify Improvement
+
+```
+Component | Failure mode | S | O | D | RPN | S'| O'| D'| RPN'
+[B]  | [Mode 1] | 9 | 3 | 8 | 216 | 9 | 2 | 3 |  54
+```
+
+Significant RPN reduction indicates measures are effective.
 
 ---
 
-## 输出模板
+## Output Template
 
 ```
-FMEA 分析报告
+FMEA Analysis Report
 
-分析对象：[...]
-分析类型：Design / Process
-分析日期：[...]
-团队：[...]
+Analysis object: [...]
+Analysis type: Design / Process
+Analysis date: [...]
+Team: [...]
 
-FMEA 工作表：
+FMEA Worksheet:
 
-序号 | 组件 | 失效模式 | 影响 | S | 原因 | O | 现有控制 | D | RPN
- 1   | [...] | [...]   | [...] |[S]| [...] |[O]| [...]   |[D]| [RPN]
- 2   | [...] | [...]   | [...] |[S]| [...] |[O]| [...]   |[D]| [RPN]
- ...
+Item | Component | Failure mode | Effect | S | Cause | O | Current controls | D | RPN
+  1   | [...] | [...]   | [...] |[S]| [...] |[O]| [...]   |[D]| [RPN]
+  2   | [...] | [...]   | [...] |[S]| [...] |[O]| [...]   |[D]| [RPN]
+  ...
 
-高风险项（RPN > [阈值]）：
+High-risk items (RPN > [threshold]):
 
-  ① [组件-失效模式] RPN=[...] — 预防措施：[...] — 探测措施：[...] — 责任人：[...]
-  ② [组件-失效模式] RPN=[...] — 预防措施：[...] — 探测措施：[...] — 责任人：[...]
+  ① [Component-Failure mode] RPN=[...] — Preventive measures: [...] — Detection measures: [...] — Responsible person: [...]
+  ② [Component-Failure mode] RPN=[...] — Preventive measures: [...] — Detection measures: [...] — Responsible person: [...]
 
-措施后 RPN 验证：
+Post-measure RPN verification:
 
-序号 | 原RPN | 措施 | S'| O'| D'| 新RPN | 改善率
- 1   | [...]  | [...] |[S']|[O']|[D']| [...]  | [X]%
- 2   | [...]  | [...] |[S']|[O']|[D']| [...]  | [X]%
+Item | Original RPN | Measure | S'| O'| D'| New RPN | Improvement rate
+  1   | [...]  | [...] |[S']|[O']|[D']| [...]  | [X]%
+  2   | [...]  | [...] |[S']|[O']|[D']| [...]  | [X]%
 
-结论与建议：[...]
-```
-
----
-
-## 执行示例
-
-**场景**：在线支付流程的 Process FMEA
-
-```
-分析对象：用户在线支付流程
-分析类型：Process FMEA
-
-FMEA 工作表：
-
-序号 | 步骤     | 失效模式       | 影响              | S | 原因          | O | 现有控制    | D | RPN
- 1   | 发起支付 | 支付通道超时   | 用户无法完成支付   | 8 | 通道负载高    | 5 | 无          | 8 | 320
- 2   | 发起支付 | 重复扣款      | 用户被多扣款      | 9 | 幂等未实现    | 2 | 对账检查    | 5 | 90
- 3   | 验证签名 | 签名校验失败   | 合法支付被拒绝    | 6 | 证书过期      | 3 | 证书监控    | 4 | 72
- 4   | 回调通知 | 通知丢失      | 订单状态不同步    | 7 | 消息队列故障  | 4 | 无          | 7 | 196
- 5   | 回调通知 | 通知延迟      | 用户等待焦虑      | 5 | 处理队列积压  | 6 | 无          | 6 | 180
-
-高风险项（RPN > 100）：
-
-  ① 发起支付-通道超时 RPN=320
-    预防措施：接入备用支付通道，主通道超时自动切换
-    探测措施：支付通道响应时间实时监控，>2s 告警
-    责任人：支付组 / 2周内
-
-  ② 回调通知-通知丢失 RPN=196
-    预防措施：消息队列持久化 + 至少一次投递 + 消费端幂等
-    探测措施：订单状态与支付状态定时对账，5min 间隔
-    责任人：订单组 / 1周内
-
-  ③ 回调通知-通知延迟 RPN=180
-    预防措施：增加消费者实例数，设置积压告警
-    探测措施：队列深度监控，>1000 告警
-    责任人：基础架构组 / 1周内
-
-措施后 RPN 验证：
-
-序号 | 原RPN | 措施              | S'| O'| D'| 新RPN | 改善率
- 1   | 320   | 备用通道+监控告警  | 8 | 2 | 2 |  32   | 90%
- 4   | 196   | 持久化+对账       | 7 | 2 | 2 |  28   | 86%
- 5   | 180   | 扩容+深度监控     | 5 | 3 | 2 |  30   | 83%
+Conclusions and recommendations: [...]
 ```
 
 ---
 
-## 常见陷阱
+## Execution Example
 
-| 陷阱 | 说明 | 避免方式 |
+**Scenario**: Process FMEA for online payment process
+
+```
+Analysis object: User online payment process
+Analysis type: Process FMEA
+
+FMEA Worksheet:
+
+Item | Step     | Failure mode       | Effect              | S | Cause          | O | Current controls    | D | RPN
+  1   | Initiate payment | Payment channel timeout   | User cannot complete payment   | 8 | High channel load    | 5 | None          | 8 | 320
+  2   | Initiate payment | Duplicate deduction      | User overcharged      | 9 | Idempotency not implemented    | 2 | Reconciliation check    | 5 | 90
+  3   | Verify signature | Signature verification failure   | Legitimate payment rejected    | 6 | Certificate expired      | 3 | Certificate monitoring    | 4 | 72
+  4   | Callback notification | Notification lost      | Order status out of sync    | 7 | Message queue failure  | 4 | None          | 7 | 196
+  5   | Callback notification | Notification delayed      | User anxiety waiting      | 5 | Processing queue backlog  | 6 | None          | 6 | 180
+
+High-risk items (RPN > 100):
+
+  ① Initiate payment - Channel timeout RPN=320
+    Preventive measures: Connect backup payment channel, auto-switch when main channel times out
+    Detection measures: Real-time monitoring of payment channel response time, alert when >2s
+    Responsible person: Payment team / Within 2 weeks
+
+  ② Callback notification - Notification lost RPN=196
+    Preventive measures: Message queue persistence + at-least-once delivery + consumer-side idempotency
+    Detection measures: Scheduled reconciliation between order status and payment status, 5min interval
+    Responsible person: Order team / Within 1 week
+
+  ③ Callback notification - Notification delayed RPN=180
+    Preventive measures: Increase consumer instance count, set backlog alerts
+    Detection measures: Queue depth monitoring, alert when >1000
+    Responsible person: Infrastructure team / Within 1 week
+
+Post-measure RPN verification:
+
+Item | Original RPN | Measure              | S'| O'| D'| New RPN | Improvement rate
+  1   | 320   | Backup channel + monitoring alerts  | 8 | 2 | 2 |  32   | 90%
+  4   | 196   | Persistence + reconciliation       | 7 | 2 | 2 |  28   | 86%
+  5   | 180   | Capacity expansion + depth monitoring     | 5 | 3 | 2 |  30   | 83%
+```
+
+---
+
+## Common Pitfalls
+
+| Pitfall | Description | How to Avoid |
 |------|------|---------|
-| 失效模式太泛 | "系统故障"不是失效模式，"支付通道超时"才是 | 每种失效必须具体到可观察的现象 |
-| 评分不一致 | 不同人对同一失效打分差异大 | 团队共同评分，用评分标准表对齐 |
-| 只降 O 不降 D | 只关注预防，忽略探测能力提升 | 措施必须同时考虑降低 O 和 D |
-| RPN 阈值一刀切 | 不同行业的合理阈值不同 | 根据行业惯例和风险容忍度设定阈值 |
-| 做完不更新 | FMEA 是活文档，系统变更后不更新 | 每次系统/流程变更后更新对应 FMEA 项 |
-| 忽视低 S 高 D 项 | 严重度低但探测度高的失效容易被忽视 | 高 D 意味着隐蔽风险，单独关注 |
+| Failure modes too vague | "System failure" is not a failure mode, "payment channel timeout" is | Each failure must be specific to observable phenomena |
+| Inconsistent scoring | Different people score the same failure with large differences | Team scores together, use scoring criteria table for alignment |
+| Only reducing O not D | Only focusing on prevention, ignoring detection capability improvement | Measures must consider reducing both O and D |
+| RPN threshold | Different industries have different reasonable thresholds | Set thresholds based on industry conventions and risk tolerance |
+| Not updating after completion | FMEA is a living document, not updated after system changes | Update corresponding FMEA items after each system/process change |
+| Ignoring low S high D items | Low severity but high detection failures easily overlooked | High D means hidden risk, pay special attention |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **搭配 5 Whys**：FMEA 识别"可能出什么错"，5 Whys 追问"为什么会出错"
-- **搭配 Fishbone**：FMEA 列失效模式，Fishbone 展开每个失效的因果链
-- **搭配 Pre-mortem**：Pre-mortem 做战略级风险预判，FMEA 做执行级风险量化
-- **输入 RICE**：高 RPN 项的预防措施可作为 RICE 评估的候选任务
-- **搭配 Pareto Analysis**：用帕累托验证是否少数失效模式贡献了大部分风险
+- **Combined with 5 Whys**: FMEA identifies "what could go wrong," 5 Whys asks "why did it go wrong"
+- **Combined with Fishbone**: FMEA lists failure modes, Fishbone expands each failure's causal chain
+- **Combined with Pre-mortem**: Pre-mortem does strategic-level risk forecasting, FMEA does execution-level risk quantification
+- **Input to RICE**: Preventive measures for high RPN items can be candidate tasks for RICE evaluation
+- **Combined with Pareto Analysis**: Use Pareto to verify if a few failure modes contribute most of the risk

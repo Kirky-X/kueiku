@@ -1,20 +1,20 @@
-# Ideal Customer Profile · 理想客户画像 (ICP)
+# Ideal Customer Profile (ICP)
 
-## 核心思想
-ICP 不是泛泛的"目标用户"，而是"最有可能成功签约、长期留存、并带来正向口碑"的那类客户的精准描述。用 4 维结构化定义，避免销售/市场/产品三方各执一词。
+## Core Idea
+An ICP is not a vague "target user" but a precise description of the type of customer most likely to successfully sign, retain long-term, and generate positive word-of-mouth. Use a 4-dimension structured definition to prevent sales, marketing, and product teams from each having their own interpretation.
 
-## 适用场景
-- 销售线索质量参差，转化率低
-- 市场投放"广撒网"导致 CAC 居高不下
-- 产品功能被"长尾客户"牵着走，偏离核心价值
+## Applicable Scenarios
+- Lead quality is inconsistent, conversion rates are low
+- Marketing's "spray and pray" approach keeps CAC high
+- Product features get pulled by "long-tail customers," drifting away from core value
 
-## 关键步骤
-1. Demographics（属性）：公司规模/行业/地域/融资阶段/技术栈等可观察属性
-2. Behaviors（行为）：购买模式/决策流程/使用频率/扩展路径
-3. JTBD（要完成的任务）：他们雇佣产品来完成什么 Job——必须具体
-4. Needs（必须满足的需求）：成功使用产品所必需的功能/集成/合规要求
-5. 反向验证：从已有 Top 10% 留存客户反推 ICP，与上述定义对齐修正
-6. 用 ICP 给线索打分，市场投放与销售优先级都基于此
+## Key Steps
+1. Demographics: Observable attributes such as company size/industry/geography/funding stage/tech stack
+2. Behaviors: Buying patterns/decision-making process/usage frequency/expansion path
+3. JTBD (Jobs to Be Done): What job do they hire the product to accomplish — must be specific
+4. Needs: Required features/compliance/integrations for successful product usage
+5. Reverse validation: Back into the ICP from your existing top 10% retaining customers, align with and refine the definition above
+6. Use the ICP to score leads; both marketing investment and sales prioritization are based on this
 
-## 来源
-综合：SaaS GTM 标准实践（Turner/Slack 等）+ Product Compass 推广
+## Source
+Synthesis: Standard SaaS GTM practices (Turner/Slack, etc.) + promoted by Product Compass

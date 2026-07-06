@@ -1,24 +1,24 @@
-# Execution · 执行
+# Execution
 
-**适用场景**：结果导向路线图、战略红队、敏捷需求
+**Use cases**: outcome-oriented roadmaps, strategy red teams, agile requirements
 
-| 方法论 | 一句话描述 | 最佳场景 | Reference |
+| Methodology | One-line description | Best for | Reference |
 | --- | --- | --- | --- |
-| **Outcome Roadmap** | Enable[segment] to[customer outcome] so that[business impact] | 路线图从 output 转 outcome | `outcome-roadmap.md` |
-| **Strategy Red Team** | Steelman-then-attack + rank by impact×likelihood×cheapness | 战略拍板前压力测试 | `strategy-red-team.md` |
-| **User Stories** | 3 C's (Card/Conversation/Confirmation) + INVEST 六准则 | 敏捷 backlog 管理 | `user-stories.md` |
-| **Job Stories** | When[situation], I want[motivation], so I can[outcome] | 情境化需求、避免 persona 偏见 | `job-stories.md` |
+| **Outcome Roadmap** | Enable[segment] to[customer outcome] so that[business impact] | Shifting roadmaps from output to outcome | `outcome-roadmap.md` |
+| **Strategy Red Team** | Steelman-then-attack + rank by impact×likelihood×cheapness | Stress-testing strategy before final decisions | `strategy-red-team.md` |
+| **User Stories** | 3 C's (Card/Conversation/Confirmation) + INVEST criteria | Agile backlog management | `user-stories.md` |
+| **Job Stories** | When[situation], I want[motivation], so I can[outcome] | Contextual requirements, avoiding persona bias | `job-stories.md` |
 
-## 各方法论最低信息需求
+## Minimum Information Required per Methodology
 
-- **Outcome Roadmap**：需要现有 roadmap 条目 + segment/outcome 思考
-- **Strategy Red Team**：需要待 challenge 的战略命题
-- **User Stories**：需要 backlog + 验收条件定义能力
-- **Job Stories**：需要情境/动机/outcome 的场景认知
+- **Outcome Roadmap**: Existing roadmap items + segment/outcome thinking
+- **Strategy Red Team**: A strategic proposition to challenge
+- **User Stories**: Backlog + acceptance criteria definition capability
+- **Job Stories**: Awareness of situation/motivation/outcome scenarios
 
-## 路由触发信号
+## Routing Trigger Signals
 
-- "结果导向路线图" → Outcome Roadmap（主）
-- "战略红队/Steelman-then-attack" → Strategy Red Team（主）
-- "敏捷需求/User Story" → User Stories（主）
-- "情境化需求/Job Story" → Job Stories（主）
+- "Outcome-oriented roadmap" → Outcome Roadmap (primary)
+- "Strategy red team / Steelman-then-attack" → Strategy Red Team (primary)
+- "Agile requirements / User Story" → User Stories (primary)
+- "Contextual requirements / Job Story" → Job Stories (primary)

@@ -1,23 +1,23 @@
-# Competitive Battlecard · 竞争对战卡
+# Competitive Battlecard
 
-## 核心思想
-销售面对竞品时最怕"我不知道该怎么回答"。Battlecard 把对每个主要竞品的应战逻辑浓缩成一页纸，让一线销售能在客户质疑时秒级响应，而不是临场编话术。
+## Core Idea
+Salespeople fear facing competitors with "I don't know what to say." A Battlecard distills the competitive response logic for each major competitor onto a single page, enabling frontline sales to respond instantly when a customer raises objections — instead of improvising scripts on the spot.
 
-## 适用场景
-- 销售与竞品正面交锋频繁
-- 销售反馈"客户问 X 我们怎么应对"无人系统回答
-- 新销售入职需要快速掌握竞品应战逻辑
+## Applicable Scenarios
+- Sales frequently face head-to-head competition with rivals
+- Sales feedback like "How do we respond when customers ask X?" goes unanswered systematically
+- New sales hires need to quickly master competitive response logic
 
-## 关键步骤
-1. 对每个竞品产出一份 battlecard，4 个核心模块：
-   - Where We Win：我们在哪些场景/能力上明确优于对方（带客户案例）
-   - Where They Win：诚实承认对方强项——避免销售被打脸失去信任
-   - Objection Handling：客户常抛出的 5–10 个具体质疑 + 标准回应话术
-   - Landmines：可主动抛给对方的"陷阱问题"（让对方答不上来或答了暴露弱点）
-2. 每条论断必须有据可查（产品对比数据/客户证言/独立评测），避免虚构
-3. 定期更新（竞品发版后 1 周内更新对应 battlecard）
-4. 销售用后反馈命中率，迭代话术
-5. 培训新销售时通过 role-play 验证掌握度
+## Key Steps
+1. Produce one battlecard per competitor with 4 core modules:
+   - Where We Win: In which scenarios/capabilities we clearly outperform them (with customer case studies)
+   - Where They Win: Honestly acknowledge their strengths — prevents salespeople from being caught off guard and losing credibility
+   - Objection Handling: 5–10 specific objections customers commonly raise + standard response scripts
+   - Landmines: "Trap questions" you can proactively pose to them (that they either can't answer or expose weaknesses when they do)
+2. Every claim must be verifiable (product comparison data / customer testimonials / independent reviews) — no fabrications
+3. Regular updates (update corresponding battlecard within 1 week of competitor releases)
+4. Salespeople report hit rates after use; iterate on scripts
+5. Validate mastery through role-play when training new salespeople
 
-## 来源
-标准 sales enablement 实践（Gong/Clari 等推广）
+## Source
+Standard sales enablement practice (promoted by Gong/Clari and others)

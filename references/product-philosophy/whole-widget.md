@@ -1,116 +1,116 @@
-# Whole Widget · 垂直整合产品架构
+# Whole Widget
 
-## 核心理念
+## Core Philosophy
 
-端到端负责（硬件 + 软件 + 服务），关键决策不外包。
+End-to-end responsibility (hardware + software + services), with key decisions kept in-house.
 
-垂直整合意味着产品链路上的关键决策点必须由自己掌控——不是"什么都自己做"，而是"决定产品体验的关键环节自己做"。外包的代价不是金钱，而是对关键决策的失控：当你把决定用户体验的环节交给第三方，你就失去了迭代速度和差异化能力。
+Vertical integration means that key decision points along the product chain must be under your own control — not "build everything yourself," but "build the key components that determine product experience yourself." The cost of outsourcing is not money, but loss of control over key decisions: when you hand over the component that determines user experience to a third party, you lose iteration speed and differentiation capability.
 
-> **关键区分**：Whole Widget ≠ 什么都自研。
-> - 自研：决定产品体验差异化的关键环节（如 OS、芯片、核心算法）
-> - 外包：标准化、不影响体验差异化的环节（如电源、标准件、通用工具）
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 产品架构决策：哪些环节自研、哪些外包/采购
-- 垂直整合 vs 水平分工的战略选择
-- 已有外包环节出现体验瓶颈或迭代受阻
-- 进入新领域时的"自建 vs 采购"决策
-
-⚠️ **慎用**
-- 资源严重不足的早期团队（先验证再整合）
-- 标准化程度高、无差异化空间的环节（采购更高效）
-- 短期项目（整合是长期投入）
+> **Key Distinction**: Whole Widget ≠ building everything in-house.
+> - **In-house**: Key components that determine product experience differentiation (e.g., OS, chips, core algorithms)
+> - **Outsource**: Standardized components that don't affect experience differentiation (e.g., power supplies, standard parts, general-purpose tools)
 
 ---
 
-## 执行步骤
+## Applicable Scenarios
 
-### Step 1：识别关键决策点
+✅ **Best For**
+- Product architecture decisions: which components to build in-house vs. outsource/purchase
+- Strategic choice between vertical integration and horizontal specialization
+- When an outsourced component becomes an experience bottleneck or iteration blocker
+- "Build vs. buy" decisions when entering a new domain
 
-列出产品从输入到交付的完整链路，逐环节标注：
-- 这个环节是否影响用户体验的关键差异？
-- 这个环节的能力是否是产品的核心壁垒？
-- 如果外包，能否快速迭代？
-
-**判定标准**：影响差异化 + 是核心壁垒 + 需要快速迭代 = 关键决策点，应自研。
-
-### Step 2：评估外包成本
-
-对每个候选外包环节，量化评估：
-- **直接成本**：采购价格 vs 自研成本（含人力/时间）
-- **隐性成本**：沟通协调成本、迭代延迟、信息不对称
-- **机会成本**：外包后失去的能力积累和壁垒构建
-- **退出成本**：切换供应商/回收自研的难度
-
-> 隐性成本和退出成本常被低估，是外包决策失败的主因。
-
-### Step 3：整合策略选择
-
-根据关键决策点分布，选择整合策略：
-- **全垂直整合**：关键决策点多且分散（如 Apple 硬件+OS+芯片+服务）
-- **关键环节整合**：关键决策点集中（如多数 SaaS 产品核心算法自研+云服务采购）
-- **平台化整合**：自建平台层，上层生态合作（如 iOS + App Store）
-
-### Step 4：整合度评估
-
-定期评估整合效果：
-- 关键决策点的迭代速度是否达标？
-- 外包环节是否成为体验瓶颈？
-- 整合的边际收益是否仍大于边际成本？
-
-> 整合不是一次性决策，需要随产品阶段动态调整。
+⚠️ **Use With Caution**
+- Early-stage teams with severely limited resources (validate first, then integrate)
+- Highly standardized components with no differentiation space (purchasing is more efficient)
+- Short-term projects (integration is a long-term investment)
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Identify Key Decision Points
+
+List the complete product chain from input to delivery, and annotate each component:
+- Does this component affect key differentiation in user experience?
+- Is this component's capability a core moat of the product?
+- If outsourced, can iteration remain rapid?
+
+**Decision Criteria**: Affects differentiation + is a core moat + requires rapid iteration = key decision point, should be built in-house.
+
+### Step 2: Evaluate Outsourcing Costs
+
+For each candidate outsourced component, conduct a quantitative assessment:
+- **Direct cost**: Purchase price vs. in-house cost (including labor/time)
+- **Hidden cost**: Communication and coordination costs, iteration delays, information asymmetry
+- **Opportunity cost**: Loss of capability accumulation and moat building after outsourcing
+- **Exit cost**: Difficulty of switching suppliers or bringing development in-house
+
+> Hidden costs and exit costs are often underestimated, and are the main cause of outsourcing decision failures.
+
+### Step 3: Choose an Integration Strategy
+
+Based on the distribution of key decision points, select an integration strategy:
+- **Full vertical integration**: Key decision points are numerous and distributed (e.g., Apple hardware + OS + chips + services)
+- **Key component integration**: Key decision points are concentrated (e.g., most SaaS products build core algorithms in-house + purchase cloud services)
+- **Platform-based integration**: Build a platform layer, with ecosystem collaboration above (e.g., iOS + App Store)
+
+### Step 4: Assess Integration Level
+
+Regularly evaluate integration effectiveness:
+- Is the iteration speed of key decision points meeting targets?
+- Are outsourced components becoming experience bottlenecks?
+- Are the marginal benefits of integration still greater than the marginal costs?
+
+> Integration is not a one-time decision — it needs to be dynamically adjusted as the product matures.
+
+---
+
+## Output Template
 
 ```
-分析对象：[产品/业务]
-分析时间：[日期]
+Analysis Target: [Product/Business]
+Analysis Date: [Date]
 
-产品链路环节清单：
-  1. [环节名] | 影响差异化：高/中/低 | 核心壁垒：是/否 | 迭代频率：高/低
+Product Chain Component Inventory:
+  1. [Component Name] | Affects Differentiation: High/Medium/Low | Core Moat: Yes/No | Iteration Frequency: High/Low
   2. [...]
 
-关键决策点（应自研）：
-  1. [环节名] — 理由：[...]
+Key Decision Points (should be in-house):
+  1. [Component Name] — Rationale: [...]
   2. [...]
 
-外包成本评估表：
-  | 环节 | 直接成本 | 隐性成本 | 机会成本 | 退出成本 | 决策 |
-  |------|---------|---------|---------|---------|------|
-  | ...  | ...     | ...     | ...     | ...     | 自研/外包 |
+Outsourcing Cost Assessment Table:
+  | Component | Direct Cost | Hidden Cost | Opportunity Cost | Exit Cost | Decision |
+  |-----------|------------|-------------|-----------------|-----------|----------|
+  | ...       | ...        | ...         | ...             | ...       | In-house/Outsource |
 
-整合策略选择：[全垂直 / 关键环节 / 平台化]
-理由：[...]
+Integration Strategy: [Full vertical / Key component / Platform-based]
+Rationale: [...]
 
-整合度评估指标：
-  - 关键决策点迭代速度：[目标值]
-  - 外包环节体验瓶颈：[监控项]
-  - 边际收益/成本比：[评估周期]
+Integration Level Assessment Metrics:
+  - Key decision point iteration speed: [Target value]
+  - Outsourced component experience bottlenecks: [Monitoring items]
+  - Marginal benefit/cost ratio: [Evaluation period]
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 避免方式 |
-|------|---------|
-| 把"什么都自研"等同于垂直整合 | 只自研关键决策点，标准化环节采购更高效 |
-| 只算直接成本，忽略隐性/退出成本 | 四类成本必须全评估 |
-| 一次性决策不再回顾 | 整合度需定期评估，随产品阶段调整 |
-| 为了"掌控感"自研非关键环节 | 掌控感 ≠ 差异化，避免 NIH 综合征 |
-| 外包后失去能力积累 | 即使外包也要保留技术判断力 |
+| Pitfall | How to Avoid |
+|---------|-------------|
+| Equating "build everything yourself" with vertical integration | Only build in-house the key decision points; standardizing components for purchase is more efficient |
+| Only calculating direct costs, ignoring hidden/exit costs | All four types of costs must be fully assessed |
+| Making a one-time decision without revisiting | Integration level needs regular assessment and adjustment as the product matures |
+| Building non-key components in-house for "sense of control" | Sense of control ≠ differentiation; avoid NIH syndrome |
+| Losing capability accumulation after outsourcing | Even when outsourcing, maintain technical judgment capability |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **前置 Focus as No**：聚焦"做什么"之后，再决定"怎么做"
-- **互补 Technology Meets Humanities**：整合决策需兼顾技术可行性和人文体验
-- **后接 Invisible Perfection**：自研环节需要工艺标准保证质量
-- **对照 VRIO Framework**：用 VRIO 评估自研环节是否构成可持续竞争优势
+- **Preceded by Focus as No**: After focusing on "what to do," then decide "how to do it"
+- **Complementary to Technology Meets Humanities**: Integration decisions must consider both technical feasibility and human experience
+- **Followed by Invisible Perfection**: In-house components need craft standards to ensure quality
+- **Contrasted with VRIO Framework**: Use VRIO to assess whether in-house components constitute a sustainable competitive advantage

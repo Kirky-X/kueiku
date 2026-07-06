@@ -1,138 +1,138 @@
-# GE-McKinsey Matrix · GE 麦肯锡矩阵
+# GE-McKinsey Matrix
 
-## 核心理念
+## Core Concept
 
-用**行业吸引力**（高/中/低）× **业务实力**（强/中/弱）构成 3×3 九格矩阵，对多元化业务组合进行评估与资源分配。是 BCG 矩阵的升级版：BCG 只用两个维度（增长率/份额），GE 矩阵允许每个维度由多个加权因素复合得出，粒度更细。
+Uses **Industry Attractiveness** (High/Medium/Low) × **Business Strength** (Strong/Medium/Weak) to form a 3×3 nine-cell matrix for evaluating diversified business portfolios and allocating resources. It's an upgraded version of the BCG Matrix: BCG uses only two dimensions (growth rate/share), while GE allows each dimension to be derived from multiple weighted factors for finer granularity.
 
-> 九格分为三个区域：**投资增长区**（左上三格）、**选择性区**（对角线三格）、**收割/退出区**（右下三格）。
+> The nine cells are divided into three zones: **Invest/Grow** (upper-left three cells), **Selectivity** (diagonal three cells), and **Harvest/Divest** (lower-right three cells).
 
 ```
-              业务实力
-         强    中    弱
-行业  高 [投资] [投资] [选择]
-吸引力 中 [投资] [选择] [收割]
-       低 [选择] [收割] [退出]
+              Business Strength
+         Strong   Medium   Weak
+Industry Attractiveness High [Invest] [Invest] [Select]
+                      Medium [Invest] [Select] [Harvest]
+                      Low [Select] [Harvest] [Divest]
 ```
 
 ---
 
-## 适用场景
+## Use Cases
 
-✅ **最适合**
-- 多元化企业的业务组合管理
-- 战略业务单元（SBU）资源分配
-- 投资优先级排序与退出决策
-- 跨业务线预算分配
+✅ **Best for**
+- Diversified enterprise business portfolio management
+- Strategic Business Unit (SBU) resource allocation
+- Investment priority ranking and exit decisions
+- Cross-business-line budget allocation
 
-⚠️ **慎用**
-- 单一业务公司（无组合可言）
-- 评估维度数据缺失严重时（加权评分会失真）
-- 业务间高度耦合（独立评估会忽视协同）
+⚠️ **Use with caution**
+- Single-business companies (no portfolio to speak of)
+- Severely missing evaluation dimension data (weighted scoring will be distorted)
+- Highly coupled businesses (independent evaluation ignores synergies)
 
 ---
 
-## 执行步骤
+## Execution Steps
 
-### Step 1：评估行业吸引力
+### Step 1: Evaluate Industry Attractiveness
 
-选取影响行业吸引力的因素并加权评分（通常 5-7 个因素）：
+Select factors influencing industry attractiveness and weight them (typically 5-7 factors):
 
 ```
-行业吸引力因素（示例，按项目调整）：
-  - 市场规模         权重 [0.20]  评分 [1-5]
-  - 市场增长率       权重 [0.25]  评分 [1-5]
-  - 行业利润率       权重 [0.20]  评分 [1-5]
-  - 竞争强度         权重 [0.15]  评分 [1-5]（反向）
-  - 技术稳定性       权重 [0.10]  评分 [1-5]
-  - 监管/政策环境    权重 [0.10]  评分 [1-5]
+Industry Attractiveness Factors (examples, adjust per project):
+  - Market size             Weight [0.20]  Score [1-5]
+  - Market growth rate      Weight [0.25]  Score [1-5]
+  - Industry profit margin  Weight [0.20]  Score [1-5]
+  - Competitive intensity   Weight [0.15]  Score [1-5] (inverse)
+  - Technology stability    Weight [0.10]  Score [1-5]
+  - Regulatory/Policy environment Weight [0.10] Score [1-5]
   ----------------------------------------
-  加权总分 = Σ(权重 × 评分) → 映射到 高/中/低
+  Weighted total = Σ(Weight × Score) → Map to High/Medium/Low
 ```
 
-### Step 2：评估业务实力
+### Step 2: Evaluate Business Strength
 
-同样用加权因素评估每个 SBU 在该行业的相对实力：
+Similarly use weighted factors to evaluate each SBU's relative strength in the industry:
 
 ```
-业务实力因素（示例）：
-  - 相对市场份额     权重 [0.25]  评分 [1-5]
-  - 品牌力           权重 [0.15]  评分 [1-5]
-  - 技术/产品能力    权重 [0.20]  评分 [1-5]
-  - 成本竞争力       权重 [0.15]  评分 [1-5]
-  - 渠道/客户关系    权重 [0.15]  评分 [1-5]
-  - 管理团队         权重 [0.10]  评分 [1-5]
+Business Strength Factors (examples):
+  - Relative market share     Weight [0.25]  Score [1-5]
+  - Brand strength            Weight [0.15]  Score [1-5]
+  - Technology/Product capability Weight [0.20] Score [1-5]
+  - Cost competitiveness      Weight [0.15]  Score [1-5]
+  - Channel/Customer relationships Weight [0.15] Score [1-5]
+  - Management team           Weight [0.10]  Score [1-5]
   ----------------------------------------
-  加权总分 → 映射到 强/中/弱
+  Weighted total → Map to Strong/Medium/Weak
 ```
 
-### Step 3：将每个业务定位到九格
+### Step 3: Position Each Business in the Nine Cells
 
 ```
-GE 矩阵定位：
-              业务实力
-         强      中      弱
-行业  高 [SBU-A] [SBU-B] [SBU-C]
-吸引力 中 [SBU-D] [SBU-E] [SBU-F]
-       低 [SBU-G] [SBU-H] [SBU-I]
+GE Matrix Positioning:
+              Business Strength
+         Strong      Medium      Weak
+Industry Attractiveness High [SBU-A] [SBU-B] [SBU-C]
+                      Medium [SBU-D] [SBU-E] [SBU-F]
+                      Low [SBU-G] [SBU-H] [SBU-I]
 ```
 
-圆圈大小与业务收入/利润成正比，箭头表示预期吸引力/实力变化方向。
+Circle size is proportional to business revenue/profit; arrows indicate expected attractiveness/strength change direction.
 
-### Step 4：制定投资策略
+### Step 4: Formulate Investment Strategy
 
-按所在区域给出策略方向：
+Provide strategy direction based on the zone:
 
-| 区域 | 策略 | 资源动作 |
+| Zone | Strategy | Resource Action |
 |------|------|---------|
-| 投资增长区（左上三格） | 建设与增长 | 优先投入，扩大份额 |
-| 选择性区（对角线三格） | 选择性投资 | 聚焦细分优势，谨慎投入 |
-| 收割/退出区（右下三格） | 收割或剥离 | 减少投入，回收现金或退出 |
+| Invest/Grow (upper-left three cells) | Build and grow | Prioritize investment, expand share |
+| Selectivity (diagonal three cells) | Selective investment | Focus on niche advantages, invest cautiously |
+| Harvest/Divest (lower-right three cells) | Harvest or divest | Reduce investment, recoup cash or exit |
 
-> 对角线附近业务需逐个判断：有上升潜力 → 投资；趋势下行 → 收割。
-
----
-
-## 输出模板
-
-```
-GE 麦肯锡矩阵分析
-
-一、行业吸引力评分
-  [列出因素/权重/评分] → 总分 [X] → [高/中/低]
-
-二、各 SBU 业务实力评分
-  SBU-A：[因素评分] → 总分 [X] → [强/中/弱]
-  SBU-B：...
-
-三、九格定位
-  [矩阵图，标注各 SBU 位置与圆圈大小]
-
-四、投资策略
-  SBU-A（投资区）：建设 — [具体动作]
-  SBU-B（选择性区）：聚焦 — [判断依据]
-  SBU-C（收割区）：收割/退出 — [时间表]
-
-五、资源再分配
-  从 [收割区业务] 释放 [X] 资源 → 投入 [投资区业务]
-```
+> Businesses near the diagonal need individual assessment: upward potential → invest; downward trend → harvest.
 
 ---
 
-## 常见陷阱
+## Output Template
 
-| 陷阱 | 避免方式 |
+```
+GE-McKinsey Matrix Analysis
+
+I. Industry Attractiveness Scoring
+  [List factors/weights/scores] → Total [X] → [High/Medium/Low]
+
+II. SBU Business Strength Scoring
+  SBU-A: [Factor scores] → Total [X] → [Strong/Medium/Weak]
+  SBU-B: ...
+
+III. Nine-Cell Positioning
+  [Matrix chart, marking each SBU's position and circle size]
+
+IV. Investment Strategy
+  SBU-A (Invest zone): Build — [Specific actions]
+  SBU-B (Selectivity zone): Focus — [Judgment basis]
+  SBU-C (Harvest zone): Harvest/Exit — [Timeline]
+
+V. Resource Reallocation
+  Release [X] resources from [Harvest zone businesses] → Invest in [Invest zone businesses]
+```
+
+---
+
+## Common Pitfalls
+
+| Pitfall | How to Avoid |
 |------|---------|
-| 因素权重拍脑袋 | 用团队对齐 + 历史数据校准权重，记录加权理由 |
-| 评分居中（都打 3 分）| 强制分布或要求每分附具体证据 |
-| 忽视趋势只看当前 | 加一列"未来 3 年预期方向"，用箭头标注 |
-| 业务间协同未考虑 | 单独标注协同价值，避免对耦合业务做退出决策 |
-| 与 BCG 混用导致结论冲突 | 选定一个为主框架，另一个作交叉验证 |
+| Weighting factors by gut feel | Use team alignment + historical data to calibrate weights, document weighting rationale |
+| Scores clustered in the middle (all 3s) | Force distribution or require specific evidence for each score |
+| Ignoring trends, only looking at current state | Add a "3-year expected direction" column, mark with arrows |
+| Not considering inter-business synergies | Separately note synergy value, avoid exit decisions for coupled businesses |
+| Conflicting conclusions from mixing with BCG | Choose one as the primary framework, use the other for cross-validation |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **BCG Matrix 的升级版**：BCG 是 GE 矩阵的简化（两维度 vs 多因素加权），复杂组合优先用 GE
-- **搭配 Ansoff Matrix**：GE 看现有组合，Ansoff 判断新增长方向
-- **搭配 Value Chain Analysis**：GE 定位业务实力来源，价值链深入分析优势环节
-- **后接 OKR/RICE**：投资区业务的目标转化为 OKR，执行任务用 RICE 排序
+- **Upgraded version of BCG Matrix**: BCG is a simplified GE matrix (two dimensions vs multi-factor weighted); use GE for complex portfolios
+- **Combined with Ansoff Matrix**: GE evaluates existing portfolio; Ansoff determines new growth directions
+- **Combined with Value Chain Analysis**: GE positions business strength sources; value chain deeply analyzes advantageous links
+- **Followed by OKR/RICE**: Investment zone business targets convert to OKRs; execution tasks use RICE for prioritization

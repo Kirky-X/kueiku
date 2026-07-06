@@ -1,168 +1,168 @@
-# Systematic Research Process · 系统化研究流程
+# Systematic Research Process
 
-## 核心理念
+## Core Philosophy
 
-研究不是搜索的堆砌，而是"提问→检索→评估→综合→输出"的闭环。
+Research is not a pile of search results, but a closed loop of "question → search → evaluate → synthesize → output".
 
-有效研究的核心不是"找到多少信息"，而是"能否回答研究问题"。搜索引擎能堆砌信息，但无法判断信息的可信度、识别共识与争议、综合出有支撑的结论。系统化研究流程把研究拆解为五个明确步骤，每步有标准、有产出、可检验。
+The core of effective research is not "how much information you find" but "whether you can answer the research question". Search engines can pile up information, but they cannot judge the credibility of information, identify consensus and controversy, or synthesize well-supported conclusions. The systematic research process breaks research down into five clear steps, each with standards, deliverables, and verifiability.
 
-> **核心理念**：研究质量 = 问题清晰度 × 来源可信度 × 综合深度。
-> 任何一环薄弱，结论都不可靠。禁止跳过"来源评估"直接综合——垃圾进，垃圾出。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 复杂问题调研（行业趋势、技术成熟度、市场结构）
-- 需要多源交叉验证的结论
-- 技术选型、竞品深度调研
-- 投资决策前的尽职调查
-
-⚠️ **慎用**
-- 简单事实查询（直接搜索即可）
-- 实时性极强的新闻（研究流程有延迟）
-- 内部数据为主的决策（研究流程针对外部信息）
+> **Core Philosophy**: Research Quality = Question Clarity × Source Credibility × Synthesis Depth.
+> If any link is weak, the conclusion is unreliable. Never skip "source evaluation" and jump directly to synthesis — garbage in, garbage out.
 
 ---
 
-## 执行步骤
+## Applicable Scenarios
 
-### Step 1：问题定义
+✅ **Best suited for**
+- Complex problem research (industry trends, technology maturity, market structure)
+- Conclusions requiring cross-validation from multiple sources
+- Technology selection, in-depth competitive research
+- Due diligence before investment decisions
 
-把模糊的研究主题拆解为可搜索的子问题：
-- 核心问题：一句话明确"要回答什么"
-- 子问题：拆解为可独立检索的小问题
-- 关键词：每个子问题对应搜索关键词
-- 边界：明确时间范围、地理范围、行业范围
+⚠️ **Use with caution**
+- Simple factual queries (direct search is sufficient)
+- Highly time-sensitive news (research process has delays)
+- Decisions primarily based on internal data (research process targets external information)
 
-> 模糊的问题导致无效的搜索。花 20% 时间定义问题，能省 80% 的检索时间。
+---
 
-### Step 2：来源检索
+## Execution Steps
 
-多源交叉，禁止依赖单一来源：
-- 学术：Google Scholar、arXiv、SSRN
-- 行业：行业报告（Gartner/IDC/麦肯锡等）、白皮书
-- 媒体：主流财经媒体、专业媒体
-- 一手：公司财报、招股书、官网、专利
-- 专家：行业专家访谈、会议演讲
+### Step 1: Problem Definition
 
-> 每个子问题至少 3 个独立来源，避免单一来源的偏见。
+Break down a vague research topic into searchable sub-questions:
+- Core question: Clearly state "what needs to be answered" in one sentence
+- Sub-questions: Break down into small questions that can be independently searched
+- Keywords: Each sub-question maps to search keywords
+- Boundaries: Clearly define time scope, geographic scope, and industry scope
 
-### Step 3：来源评估
+> Vague questions lead to ineffective searches. Spending 20% of your time defining the problem can save 80% of your search time.
 
-对每个来源按 5 级评估可信度：
+### Step 2: Source Search
 
-| 等级 | 来源类型 | 可信度 |
+Cross-reference multiple sources — never rely on a single source:
+- Academic: Google Scholar, arXiv, SSRN
+- Industry: Industry reports (Gartner/IDC/McKinsey, etc.), white papers
+- Media: Mainstream financial media, professional media
+- Primary: Company financial reports, prospectuses, official websites, patents
+- Expert: Industry expert interviews, conference presentations
+
+> Each sub-question requires at least 3 independent sources to avoid bias from a single source.
+
+### Step 3: Source Evaluation
+
+Evaluate the credibility of each source on a 5-level scale:
+
+| Level | Source Type | Credibility |
 |------|---------|--------|
-| L1 | 同行评审学术论文（peer-reviewed） | 最高 |
-| L2 | 专业机构报告（Gartner/IDC/四大等） | 高 |
-| L3 | 主流权威媒体（FT/WSJ/Reuters 等） | 中高 |
-| L4 | 行业博客、自媒体、厂商白皮书 | 中 |
-| L5 | 社交媒体、未署名内容 | 低 |
+| L1 | Peer-reviewed academic papers | Highest |
+| L2 | Professional institution reports (Gartner/IDC/Big Four, etc.) | High |
+| L3 | Mainstream authoritative media (FT/WSJ/Reuters, etc.) | Medium-High |
+| L4 | Industry blogs, self-media, vendor white papers | Medium |
+| L5 | Social media, unsigned content | Low |
 
-评估维度：
-- 利益相关性（厂商白皮书可能有偏向）
-- 时效性（数据是否过时）
-- 方法论透明度（结论如何得出）
-- 可重复性（他人能否验证）
+Evaluation dimensions:
+- Conflict of interest (vendor white papers may be biased)
+- Timeliness (is the data outdated?)
+- Methodology transparency (how was the conclusion reached?)
+- Reproducibility (can others verify it?)
 
-> L4-L5 来源可作为线索，但关键结论需 L1-L3 支撑。
+> L4-L5 sources can serve as leads, but key conclusions require L1-L3 support.
 
-### Step 4：信息综合
+### Step 4: Information Synthesis
 
-辩证分析，区分共识与争议：
+Dialectical analysis — distinguish consensus from controversy:
 
-**共识分析**：
-- 哪些观点多个独立来源一致认同？
-- 共识的证据强度（多少 L1-L3 来源支撑）
+**Consensus Analysis**:
+- Which viewpoints are consistently agreed upon by multiple independent sources?
+- Strength of evidence for consensus (how many L1-L3 sources support it)
 
-**争议分析**：
-- 哪些观点存在分歧？
-- 争议的实质是什么（数据差异？方法论差异？利益冲突？）
-- 各方论据的强度对比
+**Controversy Analysis**:
+- Which viewpoints have disagreements?
+- What is the nature of the controversy (data differences? methodology differences? conflicts of interest?)
+- Strength comparison of arguments from each side
 
-> 争议不是"研究失败"，而是"识别不确定性"。明确争议比假装共识更有价值。
+> Controversy is not "research failure" but "identifying uncertainty". Clarifying controversy is more valuable than pretending there is consensus.
 
-### Step 5：结构化输出
+### Step 5: Structured Output
 
-输出包含：
-- **结论**：直接回答研究问题
-- **证据**：支撑结论的关键证据及来源等级
-- **置信度**：高/中/低，基于来源等级和共识程度
-- **待研究项**：未解决的问题、信息缺口
+Output includes:
+- **Conclusion**: Directly answers the research question
+- **Evidence**: Key evidence supporting the conclusion with source levels
+- **Confidence Level**: High/Medium/Low, based on source levels and degree of consensus
+- **Open Items**: Unresolved questions, information gaps
 
-> 置信度是必填项。"我不确定"比"虚假的确定"更有价值。
+> Confidence level is mandatory. "I'm not sure" is more valuable than "false certainty".
 
 ---
 
-## 输出模板
+## Output Template
 
 ```
-研究主题：[一句话]
-研究日期：[日期]
-研究者：[姓名/团队]
+Research Topic: [One sentence]
+Research Date: [Date]
+Researcher: [Name/Team]
 
-研究问题拆解：
-  核心问题：[...]
-  子问题：
-    1. [子问题1] — 关键词：[...]
-    2. [子问题2] — 关键词：[...]
-  研究边界：时间[...] / 地理[...] / 行业[...]
+Research Question Breakdown:
+  Core Question: [...]
+  Sub-questions:
+    1. [Sub-question 1] — Keywords: [...]
+    2. [Sub-question 2] — Keywords: [...]
+  Research Boundaries: Time[...] / Geography[...] / Industry[...]
 
-检索策略：
-  - 学术源：[检索平台及关键词]
-  - 行业源：[报告机构]
-  - 媒体源：[媒体清单]
-  - 一手源：[财报/招股书等]
+Search Strategy:
+  - Academic Sources: [Search platforms and keywords]
+  - Industry Sources: [Report institutions]
+  - Media Sources: [Media list]
+  - Primary Sources: [Financial reports/prospectuses, etc.]
 
-来源等级表：
-  | 来源 | 类型 | 等级 | 时效 | 利益相关 | 用于支撑 |
+Source Level Table:
+  | Source | Type | Level | Timeliness | Conflict of Interest | Supporting |
   |------|------|------|------|---------|---------|
-  | ...  | ...  | L1-L5 | 新/旧 | 是/否   | [子问题] |
+  | ...  | ...  | L1-L5 | New/Old | Yes/No   | [Sub-question] |
 
-综合分析：
+Synthesis Analysis:
 
-  共识（多源一致）：
-    1. [观点] — 支撑来源：[L1 x N, L2 x M]
-    2. [观点] — 支撑来源：[...]
+  Consensus (consistent across multiple sources):
+    1. [Viewpoint] — Supporting sources: [L1 x N, L2 x M]
+    2. [Viewpoint] — Supporting sources: [...]
 
-  争议（存在分歧）：
-    1. [争议点]
-       - 方 A 观点：[...] 论据：[...] 来源：[等级]
-       - 方 B 观点：[...] 论据：[...] 来源：[等级]
-       - 争议实质：[数据差异/方法论/利益]
+  Controversy (disagreement exists):
+    1. [Point of controversy]
+       - Side A viewpoint: [...] Arguments: [...] Source: [Level]
+       - Side B viewpoint: [...] Arguments: [...] Source: [Level]
+       - Nature of controversy: [Data difference/Methodology/Interest]
     2. [...]
 
-结论：
-  - [直接回答核心问题]
-  - 关键证据：[Top 3 证据及来源等级]
-  - 置信度：[高/中/低] — 理由：[...]
+Conclusion:
+  - [Direct answer to core question]
+  - Key evidence: [Top 3 evidence and source levels]
+  - Confidence Level: [High/Medium/Low] — Reason: [...]
 
-待研究项：
-  - [未解决的问题1]
-  - [信息缺口1]
+Open Items:
+  - [Unresolved question 1]
+  - [Information gap 1]
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 避免方式 |
+| Pitfall | How to Avoid |
 |------|---------|
-| 单一来源依赖 | 每个子问题至少 3 个独立来源 |
-| 确认偏误（只找支持自己观点的证据） | 主动搜索反方证据，记录争议 |
-| 忽略反方证据 | 争议分析是必做项，不可跳过 |
-| 不区分来源等级 | 每个来源必须标注 L1-L5 |
-| 跳过问题定义直接搜索 | 先拆解问题，再检索 |
-| 结论给出虚假确定性 | 必须标注置信度，"不确定"是合法结论 |
-| 厂商白皮书当独立来源 | 标注利益相关性，需独立来源交叉验证 |
+| Single source dependency | At least 3 independent sources per sub-question |
+| Confirmation bias (only seeking evidence that supports your view) | Actively search for opposing evidence, record controversies |
+| Ignoring opposing evidence | Controversy analysis is mandatory, cannot be skipped |
+| Not distinguishing source levels | Every source must be labeled L1-L5 |
+| Skipping problem definition and searching directly | Break down the problem first, then search |
+| Giving false certainty in conclusions | Must label confidence level; "uncertain" is a valid conclusion |
+| Treating vendor white papers as independent sources | Label conflict of interest, require cross-validation from independent sources |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **后接 Industry Value Chain**：研究流程收集信息，价值链分析产业结构
-- **后接 Gartner Hype Cycle**：研究流程收集技术信息，Hype Cycle 判断成熟度
-- **互补 SWOT**：研究流程提供外部信息，SWOT 做战略评估
-- **对照 First Principles**：研究流程自下而上收集证据，First Principles 自上而下拆解本质
+- **Followed by Industry Value Chain**: Research process collects information, value chain analyzes industry structure
+- **Followed by Gartner Hype Cycle**: Research process collects technology information, Hype Cycle assesses maturity
+- **Complementary to SWOT**: Research process provides external information, SWOT does strategic assessment
+- **Compared with First Principles**: Research process collects evidence bottom-up, First Principles deconstructs essence top-down

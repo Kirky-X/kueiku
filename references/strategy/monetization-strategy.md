@@ -1,26 +1,26 @@
-# Monetization Strategy · 变现策略
+# Monetization Strategy
 
-## 核心思想
-把"怎么赚钱"拆为 7 种可对比的模型，强迫团队从用户价值与商业模式匹配的角度选型，而不是默认"做 SaaS 订阅"。模型选择会反过来影响产品形态与定价。
+## Core Concept
+Decompose "how to make money" into 7 comparable models, forcing the team to select based on user value and business model fit rather than defaulting to "SaaS subscription." Model selection feeds back into product form and pricing.
 
-## 适用场景
-- 新产品立项，需确定商业模式
-- 已有产品但变现效率低，考虑切换/叠加模型
-- 投资人/董事会要求说明 monetization 路径
+## Use Cases
+- New product launch requiring business model determination
+- Existing product with low monetization efficiency, considering model switch/overlay
+- Investors/board requesting monetization path explanation
 
-## 关键步骤
-1. 列出 7 种候选模型并评估适配度：
-   - Freemium：免费版获客，付费版变现（适合边际成本低的产品）
-   - Subscription：周期订阅（适合持续价值产品）
-   - Usage-based：按用量计费（适合成本与用量强相关）
-   - Enterprise-seat：按席位（适合 B2B 协同工具）
-   - One-time：买断（适合工具型，但 LTV 低）
-   - Marketplace：双边抽佣（需供需平衡）
-   - Advertising：广告（需规模流量）
-2. 对每种评估：单位经济、对产品体验的影响、扩展性
-3. 主选一种 + 可叠加 1–2 种辅助
-4. 验证假设：用户是否真的接受这种付费方式
-5. 设计从免费到付费的转化路径与时间表
+## Key Steps
+1. List 7 candidate models and assess fit:
+   - Freemium: Free version for acquisition, paid version for monetization (suited for low marginal cost products)
+   - Subscription: Periodic subscription (suited for continuous value products)
+   - Usage-based: Billing by usage (suited when cost strongly correlates with usage)
+   - Enterprise-seat: Per-seat pricing (suited for B2B collaboration tools)
+   - One-time: One-time purchase (suited for tool-type, but low LTV)
+   - Marketplace: Two-sided commission (requires supply-demand balance)
+   - Advertising: Ads (requires scale traffic)
+2. For each, assess: Unit economics, impact on product experience, scalability
+3. Primary selection of one model + optional overlay of 1-2 supporting models
+4. Validate assumptions: Do users truly accept this payment method
+5. Design the conversion path and timeline from free to paid
 
-## 来源
-Product Compass（Monetization Strategy 框架）
+## Source
+Product Compass (Monetization Strategy framework)

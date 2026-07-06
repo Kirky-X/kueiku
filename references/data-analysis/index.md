@@ -1,29 +1,29 @@
-# Data Analysis · 数据分析
+# Data Analysis · Data Analysis
 
-**适用场景**：留存分析、A/B 测试、指标体系
+**Applicable Scenarios**: Retention analysis, A/B testing, metric systems
 
-| 方法论 | 一句话描述 | 最佳场景 | Reference |
+| Methodology | One‑sentence description | Best scenario | Reference |
 | --- | --- | --- | --- |
-| **Cohort Analysis** | 同期群留存曲线 + drop-off 模式 + engagement 趋势 | 留存是否在改善、PMF 判断 | `cohort-analysis.md` |
-| **A/B Test Analysis** | 样本量+统计显著性+Ship/Extend/Stop/Investigate+SRM 检测 | A/B 测试设计与决策 | `ab-test-analysis.md` |
-| **Lean Analytics Metrics** | 4 准则+8 种指标类型+NSM 四层 | 指标体系选型、好指标准则 | `lean-analytics-metrics.md` |
-| **RFM Model** | Recency/Frequency/Monetary 三维度用户细分 | 用户分层、精准营销、流失预警、用户价值评估 | `rfm-model.md` |
+| **Cohort Analysis** | Cohort retention curves + drop‑off patterns + engagement trends | Whether retention is improving, PMF judgment | `cohort-analysis.md` |
+| **A/B Test Analysis** | Sample size + statistical significance + Ship/Extend/Stop/Investigate + SRM detection | A/B test design and decision‑making | `ab-test-analysis.md` |
+| **Lean Analytics Metrics** | 4 criteria + 8 metric types + NSM four‑level framework | Metric system selection, good‑metric criteria | `lean-analytics-metrics.md` |
+| **RFM Model** | Recency/Frequency/Monetary three‑dimension user segmentation | User stratification, precision marketing, churn prediction, user value assessment | `rfm-model.md` |
 
-## 各方法论最低信息需求
+## Minimum Information Requirements for Each Methodology
 
-- **Cohort Analysis**：需要按时间分组的用户留存数据
-- **A/B Test Analysis**：需要 A/B 测试平台 + 统计学基础
-- **Lean Analytics Metrics**：需要 dashboard 数据 + NSM 候选
-- **RFM Model**：需要用户交易数据（最近购买日期/购买次数/消费金额）
+- **Cohort Analysis**: Requires time‑grouped user retention data
+- **A/B Test Analysis**: Requires an A/B testing platform + statistical fundamentals
+- **Lean Analytics Metrics**: Requires dashboard data + NSM candidates
+- **RFM Model**: Requires user transaction data (last purchase date / purchase count / spending amount)
 
-## 路由触发信号
+## Routing Trigger Signals
 
-- "同期群留存分析" → Cohort Analysis（主）
-- "A/B 测试设计与决策" → A/B Test Analysis（主）
-- "指标体系选型/好指标准则" → Lean Analytics Metrics（主）
-- "用户分层/精准营销/流失预警/用户价值评估" → RFM Model（主）
+- "Cohort retention analysis" → Cohort Analysis (primary)
+- "A/B test design and decision‑making" → A/B Test Analysis (primary)
+- "Metric system selection / good‑metric criteria" → Lean Analytics Metrics (primary)
+- "User stratification / precision marketing / churn prediction / user value assessment" → RFM Model (primary)
 
-## 常见组合
+## Common Combinations
 
-- **用户价值运营**：RFM Model（分层）→ Cohort Analysis（留存演变）→ A/B Test（策略验证）
-- **增长分析**：Lean Analytics Metrics（选指标）→ Cohort Analysis（看留存）→ RFM Model（分层运营）
+- **User value operations**: RFM Model (stratification) → Cohort Analysis (retention evolution) → A/B Test (strategy validation)
+- **Growth analysis**: Lean Analytics Metrics (select metrics) → Cohort Analysis (observe retention) → RFM Model (stratified operations)

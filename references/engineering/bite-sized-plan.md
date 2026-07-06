@@ -1,26 +1,26 @@
-# Bite-Sized Plan · 小步可执行计划
+# Bite-Sized Plan · Bite-Sized Executable Plans
 
-## 核心思想
-让 agent / 人类工程师都能照着执行的计划——每步 2–5 分钟可完成、无占位符（No Placeholders）、明确到文件路径、每步带 Self-Review 三查。避免"宏伟但无法执行"的计划文档。
+## Core Idea
+Plans that both agents and human engineers can follow — each step completable in 2–5 minutes, no placeholders (No Placeholders), explicit down to file paths, with a Self-Review triple check at each step. Avoid "grand but unexecutable" plan documents.
 
-## 适用场景
-- 计划写得高大上但无人能照做
-- AI agent 执行计划时频繁卡在"我下一步该做什么"
-- 任务跨多文件但缺乏执行顺序
+## Use Cases
+- Plans look impressive but no one can follow them
+- AI agents frequently get stuck on "what do I do next" when executing plans
+- Tasks span multiple files but lack execution order
 
-## 关键步骤
-1. 把任务拆为 2–5 分钟可完成的原子步骤
-2. 每步包含 4 要素：
-   - exact file path（绝对路径或相对项目根的明确路径）
-   - 具体动作（创建/编辑/删除/运行命令）
-   - 预期结果（可见的验证点）
-   - 失败处理（这一步出错怎么办，不是"重试"）
-3. No Placeholders 规则：禁止"在 X 处填入 Y"这类占位——要么给出具体值，要么明确"由 agent 在上下文中查询"
-4. Self-Review 三查（每步完成后）：
-   - 是否产生预期结果？
-   - 是否影响未声明的文件/函数？
-   - 下一步的前置条件是否就绪？
-5. 步骤间显式串行/并行标记，避免 agent 顺序错误
+## Key Steps
+1. Decompose the task into atomic steps completable in 2–5 minutes
+2. Each step contains 4 elements:
+   - exact file path (absolute path or explicit path relative to project root)
+   - specific action (create/edit/delete/run command)
+   - expected result (visible verification point)
+   - failure handling (what to do if this step fails — not just "retry")
+3. No Placeholders rule: Prohibit placeholders like "fill in Y at X" — either provide a specific value or explicitly state "to be queried by the agent in context"
+4. Self-Review triple check (after each step completes):
+   - Did it produce the expected result?
+   - Did it affect undeclared files/functions?
+   - Are prerequisites for the next step ready?
+5. Explicit serial/parallel markers between steps to prevent agent ordering errors
 
-## 来源
-writing-plans 实践（Anthropic Claude Code patterns、Trae writing-plans skill）
+## Source
+writing-plans practice (Anthropic Claude Code patterns, Trae writing-plans skill)

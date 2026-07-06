@@ -1,189 +1,189 @@
 # Value Proposition Canvas · 价值主张画布
 
-## 核心理念
+## Core Concept
 
-系统验证**产品功能**与**用户需求**之间的契合度（Product-Market Fit 的微观版本）。由 Osterwalder 提出，是 Business Model Canvas 中「价值主张」模块的深度展开工具。
+Systematically validate the fit between **product features** and **user needs** (a micro version of Product-Market Fit). Proposed by Osterwalder, it is a deep-dive tool for the "Value Proposition" module in the Business Model Canvas.
 
-> JTBD 挖掘用户任务；VPC 检验你的产品是否真正回应了那些任务。
+> JTBD uncovers user tasks; VPC checks whether your product truly responds to those tasks.
 
-**两个半圆：**
-- **右半圆（用户画像）**：客户任务 / 痛点 / 收益期望
-- **左半圆（价值地图）**：产品功能 / 痛点消除 / 收益创造
+**Two Half-Circles:**
+- **Right Half (Customer Profile)**: Customer Jobs / Pains / Gain Expectations
+- **Left Half (Value Map)**: Products & Services / Pain Relievers / Gain Creators
 
-契合度 = 左半圆能系统回应右半圆的程度。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 产品功能优先级决策（哪些功能真正解决用户痛点）
-- 新产品/新功能上线前验证契合度
-- 发现现有产品与用户需求的错位
-- 与竞品做差异化定位分析
-
-⚠️ **慎用**
-- 尚未与真实用户做过任何接触（先去做 JTBD 访谈）
-- 商业模式整体评估（改用 Business Model Canvas）
+Fit = the degree to which the left half systematically responds to the right half.
 
 ---
 
-## 执行步骤
+## Applicable Scenarios
 
-### 右半圆：用户画像
+✅ **Best For**
+- Product feature priority decisions (which features truly address user pains)
+- Validating fit before launching new products/features
+- Discovering misalignment between existing products and user needs
+- Differentiation positioning analysis against competitors
 
-#### Step 1：客户任务（Customer Jobs）
-
-用户在使用你的产品/服务时试图完成什么？分三类：
-
-```
-功能性任务：[实际要做的事，如「管理团队的工作进度」]
-情感性任务：[使用过程中想要的感受，如「感到掌控感」]
-社会性任务：[希望在他人眼中的形象，如「被认为是高效的管理者」]
-```
-
-优先级排序：哪些任务对用户最重要？
-
-#### Step 2：用户痛点（Pains）
-
-完成任务时遇到的阻碍、风险、负面体验：
-
-```
-障碍：[让任务更难完成的因素]
-风险：[可能产生的不好结果]
-摩擦：[不爽、麻烦、浪费时间的地方]
-```
-
-用严重程度排序（极度痛苦 → 轻微不便）。
-
-#### Step 3：收益期望（Gains）
-
-用户期望得到的好处（超出基本需求的「惊喜」）：
-
-```
-必要收益：[最基本的期望，不满足就不用]
-期望收益：[希望有但不强制]
-意外收益：[超出预期的惊喜]
-```
+⚠️ **Use with Caution**
+- No prior contact with real users yet (do JTBD interviews first)
+- Overall business model evaluation (use Business Model Canvas instead)
 
 ---
 
-### 左半圆：价值地图
+## Execution Steps
 
-#### Step 4：产品功能（Products & Services）
+### Right Half: Customer Profile
 
-列出你提供的所有功能/服务（事实清单，不是宣传语）：
+#### Step 1: Customer Jobs
 
-```
-功能列表：[...]
-```
-
-#### Step 5：痛点消除（Pain Relievers）
-
-你的产品如何具体消除右半圆中的痛点？
+What is the user trying to accomplish with your product/service? Three categories:
 
 ```
-痛点 [X] → 通过 [功能Y] 解决，方式：[...]
+Functional job: [What they actually need to do, e.g., "manage team's work progress"]
+Emotional job: [How they want to feel during the process, e.g., "feel in control"]
+Social job: [How they want to be perceived by others, e.g., "be seen as an efficient manager"]
 ```
 
-一一对应，不匹配的痛点标注「未覆盖」。
+Prioritize: which jobs matter most to the user?
 
-#### Step 6：收益创造（Gain Creators）
+#### Step 2: Pains
 
-你的产品如何满足或超越用户的收益期望？
+Obstacles, risks, and negative experiences encountered when completing jobs:
 
 ```
-收益期望 [X] → 通过 [功能Y] 实现，方式：[...]
+Obstacles: [Factors that make the job harder]
+Risks: [Potential negative outcomes]
+Friction: [Annoyances, hassles, time-wasters]
+```
+
+Rank by severity (extreme pain → mild inconvenience).
+
+#### Step 3: Gain Expectations
+
+Benefits the user expects to receive (beyond basic needs — "delighters"):
+
+```
+Required gains: [Minimum expectations; won't use if not met]
+Expected gains: [Desired but not mandatory]
+Unexpected gains: [Surprises beyond expectations]
 ```
 
 ---
 
-### 契合度分析
+### Left Half: Value Map
 
-#### Step 7：评估契合缺口
+#### Step 4: Products & Services
 
-```
-已覆盖的核心痛点：[...]
-未覆盖的核心痛点：[...]（← 最重要的信息）
-已创造的关键收益：[...]
-被忽视的重要收益期望：[...]
-```
-
-**契合度判断：**
-- 核心痛点（最严重的前3个）是否都被覆盖？
-- 必要收益是否都被满足？
-- 是否有「无痛点对应的功能」（无用功能）？
-
----
-
-## 输出模板
+List all features/services you provide (factual inventory, not marketing copy):
 
 ```
-目标客群：[...]
+Feature list: [...]
+```
 
-【用户画像】
-核心任务：[最重要的1-3个任务]
-严重痛点：[按严重程度排序]
-关键收益期望：[必要收益 + 最高优先级期望收益]
+#### Step 5: Pain Relievers
 
-【价值地图】
-核心功能：[...]
-痛点覆盖：
-  ✅ [痛点] → [功能] → 解决方式
-  ❌ [痛点] → 未覆盖
-收益创造：
-  ✅ [收益期望] → [功能] → 实现方式
-  ❌ [收益期望] → 未满足
+How does your product specifically eliminate pains from the right half?
 
-【契合度评估】
-契合强度：[强/中/弱]
-最大缺口：[...]
-建议优先补足的功能/改进方向：[...]
+```
+Pain [X] → Addressed through [Feature Y], method: [...]
+```
+
+Map one-to-one; mark unmatched pains as "Not covered."
+
+#### Step 6: Gain Creators
+
+How does your product meet or exceed user gain expectations?
+
+```
+Gain expectation [X] → Delivered through [Feature Y], method: [...]
 ```
 
 ---
 
-## 常见陷阱
+### Fit Analysis
 
-| 陷阱 | 说明 | 避免方式 |
+#### Step 7: Assess Fit Gaps
+
+```
+Covered core pains: [...]
+Uncovered core pains: [...] (← most important insight)
+Key gains created: [...]
+Ignored important gain expectations: [...]
+```
+
+**Fit Assessment:**
+- Are the core pains (top 3 most severe) all covered?
+- Are all required gains met?
+- Are there "features with no pain correspondence" (useless features)?
+
+---
+
+## Output Template
+
+```
+Target Customer Segment: [...]
+
+【Customer Profile】
+Core Jobs: [Top 1-3 jobs]
+Severe Pains: [Ranked by severity]
+Key Gain Expectations: [Required gains + highest-priority expected gains]
+
+【Value Map】
+Core Features: [...]
+Pain Coverage:
+  ✅ [Pain] → [Feature] → Resolution method
+  ❌ [Pain] → Not covered
+Gain Creation:
+  ✅ [Gain expectation] → [Feature] → Delivery method
+  ❌ [Gain expectation] → Not met
+
+【Fit Assessment】
+Fit strength: [Strong/Medium/Weak]
+Biggest gap: [...]
+Recommended priority features/improvements: [...]
+```
+
+---
+
+## Common Pitfalls
+
+| Pitfall | Description | How to Avoid |
 |------|------|---------|
-| 用假设替代用户数据 | 凭主观填写右半圆 | 右半圆的输入必须来自真实用户访谈或数据 |
-| 左右半圆分开做 | 先做价值地图，再「凑」用户画像 | 始终从右半圆（用户）出发，左半圆是回应 |
-| 功能列表 = 价值地图 | 把功能当价值主张 | 每个功能必须对应一个具体痛点或收益期望 |
-| 忽视未覆盖的痛点 | 只关注已覆盖的部分 | 缺口分析才是最有价值的输出 |
+| Using assumptions instead of user data | Filling right half subjectively | Right half inputs must come from real user interviews or data |
+| Working on left and right halves separately | Building value map first, then "fitting" the customer profile | Always start from the right half (user); left half is the response |
+| Feature list = Value Map | Treating features as value propositions | Every feature must correspond to a specific pain or gain expectation |
+| Ignoring uncovered pains | Focusing only on covered areas | Gap analysis is the most valuable output |
 
 ---
 
-## 与其他方法论的关系
+## Relationships with Other Methodologies
 
-- **前置 JTBD**：用 JTBD 深度挖掘客户任务，直接输入右半圆
-- **配合 Business Model Canvas**：VPC 是 BMC 价值主张模块的展开
-- **输出接 RICE**：契合缺口（未覆盖痛点）转化为待开发功能，用 RICE 排优先级
-- **输出接 Lean BML**：最大缺口转化为下一轮 Build-Measure-Learn 的假设验证目标
+- **Preceded by JTBD**: Use JTBD to deeply uncover customer jobs, directly feeding the right half
+- **Combined with Business Model Canvas**: VPC is the expansion of the BMC value proposition module
+- **Output feeds RICE**: Fit gaps (uncovered pains) become features to develop, prioritized via RICE
+- **Output feeds Lean BML**: The largest gap becomes the hypothesis validation target for the next Build-Measure-Learn cycle
 
 ---
 
-## 与 6-Part JTBD 价值主张对比
+## Comparison with 6-Part JTBD Value Proposition
 
-VPC 与 [6-Part JTBD 价值主张](jdb-value-proposition.md) 都用于厘清价值主张，但视角与产出形态不同：
+VPC and [6-Part JTBD Value Proposition](jdb-value-proposition.md) both clarify value propositions, but differ in perspective and output format:
 
-| 维度 | Value Proposition Canvas | 6-Part JTBD Value Proposition |
+| Dimension | Value Proposition Canvas | 6-Part JTBD Value Proposition |
 |------|--------------------------|-------------------------------|
-| 视角 | 描述性（用户有什么痛点/收益，我们如何对应） | 行动性（客户要完成什么 Job，相对替代品的差异化） |
-| 结构 | 左右半圆 6 字段（Customer Jobs/Pains/Gains × Products/Pain Relievers/Gain Creators） | 6 段模板（Who/Why/What before/How/What after/Alternatives） |
-| 焦点 | 产品与用户需求的契合度（fit） | 产品相对替代品的差异化（differentiation） |
-| 输出 | 缺口清单（哪些痛点未覆盖） | 一段可对外传播的价值主张文案 |
-| 适合阶段 | PMF 验证阶段（产品还在打磨） | GTM 阶段（要写销售材料/官网） |
+| Perspective | Descriptive (what pains/gains users have, how we respond) | Action-oriented (what Job the customer needs done, differentiation vs alternatives) |
+| Structure | Left/right half-circles with 6 fields (Customer Jobs/Pains/Gains × Products/Pain Relievers/Gain Creators) | 6-section template (Who/Why/What before/How/What after/Alternatives) |
+| Focus | Fit between product and user needs | Differentiation vs alternatives |
+| Output | Gap list (which pains are uncovered) | A externally communicable value proposition statement |
+| Best stage | PMF validation (product still being refined) | GTM stage (writing sales materials/website) |
 
-**组合使用**：先用 VPC 做内部缺口分析，确认 fit 后再用 6-Part JTBD 提炼对外价值主张文案。
+**Combined usage**: Use VPC first for internal gap analysis; once fit is confirmed, use 6-Part JTBD to craft external value proposition messaging.
 
 ---
 
-## VPC 的 4 项结构缺陷
+## 4 Structural Weaknesses of VPC
 
-VPC 在实践中暴露出 4 项结构性弱点，使用时需主动补偿：
+VPC reveals 4 structural weaknesses in practice that require proactive compensation:
 
-1. **静态视角**：VPC 是快照，不展示价值如何随用户旅程/产品阶段演化——需配合 [Customer Journey Map](customer-journey.md) 补时间维度
-2. **无优先级机制**：所有 Pains/Gains 在画布上同等权重，但实际"严重痛点"与"轻微不便"权重差异巨大——需强制做 Top 3 排序
-3. **无替代品对比**：VPC 只对比"用户现状 vs 你的产品"，不对比竞品——需配合 [Positioning Strategy](positioning-strategy.md) 补竞争维度
-4. **方案偏置**：左半圆（你的产品）容易反过来影响右半圆（用户画像）的填写——先填右半圆并 freeze，再填左半圆可缓解
+1. **Static perspective**: VPC is a snapshot, not showing how value evolves across the user journey/product stages — pair with [Customer Journey Map](customer-journey.md) to add the time dimension
+2. **No prioritization mechanism**: All Pains/Gains have equal weight on the canvas, but "severe pain" and "mild inconvenience" differ vastly in actual weight — enforce Top 3 ranking
+3. **No competitor comparison**: VPC only compares "user's current state vs your product," not competitors — pair with [Positioning Strategy](positioning-strategy.md) to add competitive dimension
+4. **Solution bias**: The left half (your product) canin turn influence how you fill the right half (customer profile) — fill and freeze the right half first, then fill the left half to mitigate

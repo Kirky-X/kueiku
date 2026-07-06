@@ -1,233 +1,233 @@
-# McKinsey 7S Framework · 麦肯锡7S模型
+# McKinsey 7S Framework
 
-## 核心理念
+## Core Concept
 
-组织有效性由**7 个相互依存的要素**共同决定，任何一个要素的变动都会影响其他要素。硬 S（Strategy、Structure、Systems）有形可量化；软 S（Shared Values、Skills、Style、Staff）无形难度量。**共同价值观**居于中心，是其他六个要素的根基。任何两个 S 之间的错位都预示着组织问题。
+Organizational effectiveness is jointly determined by **7 interdependent elements**, where any change in one element affects the others. Hard S's (Strategy, Structure, Systems) are tangible and quantifiable; Soft S's (Shared Values, Skills, Style, Staff) are intangible and hard to measure. **Shared Values** sits at the center as the foundation for the other six elements. Any misalignment between any two S's signals an organizational problem.
 
-> 组织不是机器，而是有机体。改了战略不改结构，等于换了方向没换引擎——只会原地打转。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 组织诊断：为什么战略执行不到位？
-- 并购后整合：两个组织的 7S 如何对齐？
-- 战略转型：变革需要哪些配套调整？
-- 新领导上任：快速理解组织现状
-- 绩效持续低于预期：寻找系统性原因
-
-⚠️ **慎用**
-- 问题纯粹来自外部环境时（用 PESTLE）
-- 需要竞争分析时（用 Porter's Five Forces）
-- 纯粹的技术/产品决策（7S 是组织级工具）
-- 快速决策场景（7S 分析需要时间和组织洞察）
+> Organizations are not machines but organisms. Changing strategy without changing structure is like changing direction without changing the engine — you'll just spin in place.
 
 ---
 
-## 执行步骤
+## Use Cases
 
-### Step 1：逐项描绘当前状态
+✅ **Best for**
+- Organizational diagnosis: Why isn't strategy being executed?
+- Post-M&A integration: How to align two organizations' 7S?
+- Strategic transformation: What supporting adjustments does change require?
+- New leader onboarding: Quickly understand organizational current state
+- Performance consistently below expectations: Find systemic causes
 
-对每个 S，用事实和数据描述现状，而非主观评价：
-
-**Strategy（战略）**
-```
-当前战略：[组织如何竞争/创造价值]
-战略目标：[...]
-核心假设：[...]
-```
-
-**Structure（结构）**
-```
-组织架构：[层级/部门划分/汇报关系]
-决策权分布：[集权/分权]
-跨部门协作方式：[...]
-```
-
-**Systems（系统/制度）**
-```
-核心流程：[如：绩效评估、预算审批、人才晋升]
-IT 系统：[...]
-奖励机制：[...]
-信息流转方式：[...]
-```
-
-**Shared Values（共同价值观）**
-```
-宣称的价值观：[...]
-实际行为体现的价值观：[...]  ← 两者可能不同
-组织文化特征：[...]
-```
-
-**Skills（技能）**
-```
-组织核心能力：[...]
-关键人才储备：[...]
-能力缺口：[...]
-```
-
-**Style（风格）**
-```
-领导风格：[权威型/参与型/放权型]
-管理行为模式：[...]
-沟通方式：[自上而下/双向/网络化]
-```
-
-**Staff（人员）**
-```
-人员构成：[规模/结构/多样性]
-人才吸引力：[...]
-员工敬业度：[...]
-关键岗位空缺：[...]
-```
-
-### Step 2：描绘期望未来状态
-
-对每个 S，描述变革后的目标状态：
-
-```
-         | 当前状态 | 期望状态 | 差距
-Strategy |  [...]  |  [...]  | [...]
-Structure|  [...]  |  [...]  | [...]
-Systems  |  [...]  |  [...]  | [...]
-Values   |  [...]  |  [...]  | [...]
-Skills   |  [...]  |  [...]  | [...]
-Style    |  [...]  |  [...]  | [...]
-Staff    |  [...]  |  [...]  | [...]
-```
-
-### Step 3：分析对齐度
-
-检查每对 S 之间是否存在错位，重点关注：
-
-```
-硬-软错位（最常见且最危险）：
-  Strategy ↔ Skills：战略需要的能力组织是否具备？
-  Strategy ↔ Structure：组织架构是否支撑战略执行？
-  Strategy ↔ Systems：流程制度是否引导正确行为？
-  Strategy ↔ Values：员工价值观是否与战略方向一致？
-
-软-软错位：
-  Style ↔ Values：领导行为是否与宣称的价值观一致？
-  Skills ↔ Staff：现有人员是否具备所需技能？
-```
-
-### Step 4：按影响优先排序错位
-
-```
-错位项 | 影响程度（高/中/低）| 修复难度（高/中/低）| 优先级
-[Strategy ↔ Skills]  | 高 | 中 | P0
-[Structure ↔ Systems]| 中 | 低 | P1
-[Values ↔ Style]     | 高 | 高 | P2
-```
-
-### Step 5：设计过渡方案
-
-针对高优先级错位，制定调整计划：
-
-```
-错位：[Strategy ↔ Skills]
-  当前：战略要求 AI 能力，但团队以传统开发为主
-  过渡行动：
-    1. [短期] 外部招聘 2 名 AI 工程师
-    2. [中期] 现有团队 AI 培训计划
-    3. [长期] 调整招聘标准，AI 能力成为必选项
-  成功标志：[...]
-```
+⚠️ **Use with caution**
+- When problems are purely external (use PESTLE)
+- When competitive analysis is needed (use Porter's Five Forces)
+- Pure technology/product decisions (7S is an organizational-level tool)
+- Rapid decision-making scenarios (7S analysis requires time and organizational insight)
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Describe Current State for Each S
+
+For each S, describe the current state using facts and data, not subjective assessments:
+
+**Strategy**
+```
+Current strategy: [How the organization competes/creates value]
+Strategic objectives: [...]
+Core assumptions: [...]
+```
+
+**Structure**
+```
+Organizational structure: [Hierarchy/Department divisions/Reporting relationships]
+Decision authority distribution: [Centralized/Decentralized]
+Cross-departmental collaboration methods: [...]
+```
+
+**Systems**
+```
+Core processes: [e.g., Performance evaluation, Budget approval, Talent promotion]
+IT systems: [...]
+Reward mechanisms: [...]
+Information flow methods: [...]
+```
+
+**Shared Values**
+```
+Stated values: [...]
+Values demonstrated in actual behavior: [...]  ← These two may differ
+Organizational culture characteristics: [...]
+```
+
+**Skills**
+```
+Organizational core capabilities: [...]
+Key talent pipeline: [...]
+Capability gaps: [...]
+```
+
+**Style**
+```
+Leadership style: [Authoritative/Participative/Delegative]
+Management behavior patterns: [...]
+Communication methods: [Top-down/Bidirectional/Networked]
+```
+
+**Staff**
+```
+Workforce composition: [Size/Structure/Diversity]
+Talent attraction: [...]
+Employee engagement: [...]
+Critical position vacancies: [...]
+```
+
+### Step 2: Describe Desired Future State
+
+For each S, describe the target state after change:
 
 ```
-McKinsey 7S 组织诊断报告
+         | Current State | Desired State | Gap
+Strategy |  [...]        |  [...]        | [...]
+Structure|  [...]        |  [...]        | [...]
+Systems  |  [...]        |  [...]        | [...]
+Values   |  [...]        |  [...]        | [...]
+Skills   |  [...]        |  [...]        | [...]
+Style    |  [...]        |  [...]        | [...]
+Staff    |  [...]        |  [...]        | [...]
+```
 
-一、当前状态
-  Strategy：[...]
-  Structure：[...]
-  Systems：[...]
-  Shared Values：[宣称] vs [实际]
-  Skills：[...]
-  Style：[...]
-  Staff：[...]
+### Step 3: Analyze Alignment
 
-二、期望状态
-  Strategy：[...]
-  Structure：[...]
-  Systems：[...]
-  Shared Values：[...]
-  Skills：[...]
-  Style：[...]
-  Staff：[...]
+Check for misalignment between each pair of S's, focusing on:
 
-三、对齐度分析
-  ✅ 已对齐：[S 对] — [说明]
-  ⚠️ 轻度错位：[S 对] — [说明]
-  ❌ 严重错位：[S 对] — [说明]
+```
+Hard-Soft misalignment (most common and most dangerous):
+  Strategy ↔ Skills: Does the organization have the capabilities strategy requires?
+  Strategy ↔ Structure: Does organizational structure support strategy execution?
+  Strategy ↔ Systems: Do processes and systems guide correct behavior?
+  Strategy ↔ Values: Are employee values aligned with strategic direction?
 
-四、优先修复项
-  P0：[错位] — 影响：[...] — 行动：[...]
-  P1：[错位] — 影响：[...] — 行动：[...]
-  P2：[错位] — 影响：[...] — 行动：[...]
+Soft-Soft misalignment:
+  Style ↔ Values: Are leadership behaviors consistent with stated values?
+  Skills ↔ Staff: Do existing personnel possess the required skills?
+```
 
-五、过渡路线图
-  阶段1（[时间]）：[...]
-  阶段2（[时间]）：[...]
-  阶段3（[时间]）：[...]
+### Step 4: Prioritize Misalignments by Impact
+
+```
+Misalignment | Impact (High/Medium/Low) | Repair Difficulty (High/Medium/Low) | Priority
+[Strategy ↔ Skills]  | High | Medium | P0
+[Structure ↔ Systems]| Medium | Low | P1
+[Values ↔ Style]     | High | High | P2
+```
+
+### Step 5: Design Transition Plan
+
+For high-priority misalignments, develop adjustment plans:
+
+```
+Misalignment: [Strategy ↔ Skills]
+  Current: Strategy requires AI capability, but team is primarily traditional development
+  Transition actions:
+    1. [Short-term] Externally recruit 2 AI engineers
+    2. [Medium-term] AI training program for existing team
+    3. [Long-term] Adjust hiring standards, make AI capability a requirement
+  Success indicator: [...]
 ```
 
 ---
 
-## 执行示例
-
-**场景**：一家传统软件公司转型 SaaS，战略已定但执行困难
+## Output Template
 
 ```
-一、当前状态
-  Strategy：从项目制转向 SaaS 订阅制
-  Structure：按项目团队划分，每个团队服务 2-3 个客户
-  Systems：绩效按项目交付考核，无续费率指标
-  Shared Values：宣称"客户成功"，实际行为是"签单为王"
-  Skills：擅长定制开发，缺乏产品化和运营能力
-  Style：CTO 事必躬亲，技术决策高度集中
-  Staff：80% 定制开发工程师，0 运营人员
+McKinsey 7S Organizational Diagnosis Report
 
-二、关键错位
-  ❌ Strategy ↔ Structure：SaaS 需要产品团队，当前是项目团队
-  ❌ Strategy ↔ Systems：考核项目交付而非续费率
-  ❌ Strategy ↔ Skills：缺产品化和运营能力
-  ⚠️ Strategy ↔ Values：嘴上说客户成功，行为上追逐新签单
+I. Current State
+  Strategy: [...]
+  Structure: [...]
+  Systems: [...]
+  Shared Values: [Stated] vs [Actual]
+  Skills: [...]
+  Style: [...]
+  Staff: [...]
 
-三、优先修复
-  P0：Systems → 将续费率纳入核心 KPI，调整奖金结构
-  P1：Structure → 组建独立产品团队，与项目团队并行
-  P2：Skills → 招聘产品经理和运营，内部转岗培训
+II. Desired State
+  Strategy: [...]
+  Structure: [...]
+  Systems: [...]
+  Shared Values: [...]
+  Skills: [...]
+  Style: [...]
+  Staff: [...]
 
-四、过渡路线
-  Q1：调整考核体系 + 组建产品团队
-  Q2：发布第一个标准化产品版本
-  Q3：项目团队逐步缩减，人员向产品团队迁移
+III. Alignment Analysis
+  ✅ Aligned: [S pair] — [Description]
+  ⚠️ Mild misalignment: [S pair] — [Description]
+  ❌ Severe misalignment: [S pair] — [Description]
+
+IV. Priority Fixes
+  P0: [Misalignment] — Impact: [...] — Action: [...]
+  P1: [Misalignment] — Impact: [...] — Action: [...]
+  P2: [Misalignment] — Impact: [...] — Action: [...]
+
+V. Transition Roadmap
+  Phase 1 ([Timeline]): [...]
+  Phase 2 ([Timeline]): [...]
+  Phase 3 ([Timeline]): [...]
 ```
 
 ---
 
-## 常见陷阱
+## Execution Example
 
-| 陷阱 | 说明 | 避免方式 |
+**Scenario**: A traditional software company transitioning to SaaS, strategy defined but execution difficult
+
+```
+I. Current State
+  Strategy: From project-based to SaaS subscription
+  Structure: Organized by project teams, each serving 2-3 clients
+  Systems: Performance evaluated by project delivery, no renewal rate metrics
+  Shared Values: Stated "customer success," actual behavior is "signing deals is king"
+  Skills: Strong in custom development, lacking productization and operations capability
+  Style: CTO hands-on, highly centralized technical decisions
+  Staff: 80% custom development engineers, 0 operations staff
+
+II. Key Misalignments
+  ❌ Strategy ↔ Structure: SaaS needs product teams, currently project teams
+  ❌ Strategy ↔ Systems: Evaluating project delivery, not renewal rates
+  ❌ Strategy ↔ Skills: Lacking productization and operations capability
+  ⚠️ Strategy ↔ Values: Saying customer success, but chasing new deals in practice
+
+III. Priority Fixes
+  P0: Systems → Include renewal rate in core KPIs, adjust bonus structure
+  P1: Structure → Build independent product teams, run parallel to project teams
+  P2: Skills → Recruit product managers and operations, internal rotation training
+
+IV. Transition Roadmap
+  Q1: Adjust evaluation system + build product teams
+  Q2: Launch first standardized product version
+  Q3: Gradually reduce project teams, migrate personnel to product teams
+```
+
+---
+
+## Common Pitfalls
+
+| Pitfall | Description | How to Avoid |
 |------|------|---------|
-| 只改硬 S 不改软 S | 调了结构和制度，但价值观和行为没变 | 变革必须 7S 联动，尤其 Shared Values 是核心 |
-| 忽视宣称价值观与实际行为的差距 | 写在墙上的和实际做的完全不同 | 通过行为观察和员工访谈验证真实价值观 |
-| 分析瘫痪 | 7S 互相影响太复杂，陷入无限分析 | 聚焦 2-3 个最关键的错位，先行动再迭代 |
-| 把 7S 当一次性工具 | 变革后不再检查对齐度 | 定期复查，尤其变革推进 3-6 个月后 |
-| 跳过 Shared Values | 认为价值观太虚不重要 | Shared Values 是其他 6S 的锚点，跳过必翻车 |
+| Only changing Hard S's, not Soft S's | Adjusted structure and systems, but values and behaviors unchanged | Change must involve all 7S; Shared Values is the core |
+| Ignoring gap between stated values and actual behavior | What's on the wall differs completely from practice | Verify real values through behavioral observation and employee interviews |
+| Analysis paralysis | 7S mutual influence too complex, leading to infinite analysis | Focus on 2-3 most critical misalignments; act first, iterate later |
+| Treating 7S as a one-time tool | Not checking alignment after change | Periodic review, especially 3-6 months into change implementation |
+| Skipping Shared Values | Thinking values are too vague and unimportant | Shared Values is the anchor for the other 6S; skipping it guarantees failure |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **搭配 Blue Ocean Strategy**：蓝海战略确定新方向后，用 7S 检查组织是否具备执行条件
-- **搭配 PESTLE**：PESTLE 分析外部环境变化，7S 评估内部组织就绪度
-- **搭配 SWOT**：7S 的内部错位对应 SWOT 的 W（劣势），外部威胁用 PESTLE 补充
-- **输出接 OKR**：7S 识别的优先修复项可转化为 OKR 的 Key Result
-- **搭配 Kotter 变革八步**：7S 诊断"需要改什么"，Kotter 提供"如何推动变革"
+- **Combined with Blue Ocean Strategy**: After Blue Ocean defines new direction, use 7S to check if organization has execution capability
+- **Combined with PESTLE**: PESTLE analyzes external environment changes; 7S evaluates internal organizational readiness
+- **Combined with SWOT**: 7S internal misalignments correspond to SWOT's W (Weaknesses); external threats supplemented by PESTLE
+- **Output feeds OKR**: Priority fixes identified by 7S can be converted to OKR Key Results
+- **Combined with Kotter's 8-Step Change**: 7S diagnoses "what needs to change"; Kotter provides "how to drive change"

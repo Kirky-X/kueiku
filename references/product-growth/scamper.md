@@ -1,189 +1,189 @@
-# SCAMPER · 系统创意触发清单
+# SCAMPER · Systematic Creative Trigger Checklist
 
-## 核心理念
+## Core Concept
 
-通过 7 个强制视角对现有事物进行系统性变形，触发创意。SCAMPER 不从零创造，而是**在已有基础上找到尚未被发现的改进或创新方向**。
+Systematically transform existing things through 7 forced perspectives to trigger creativity. SCAMPER doesn't create from scratch — it **finds undiscovered improvement or innovation directions on top of what already exists**.
 
-> First Principles 从零重建；SCAMPER 在已有事物上做系统变形——两者互补，分别适用于「革命」和「进化」场景。
+> First Principles rebuilds from scratch; SCAMPER applies systematic transformation on existing things — the two complement each other, suited for "revolution" and "evolution" scenarios respectively.
 
-**7个视角：**
+**7 Perspectives:**
 
-| 字母 | 操作 | 核心问题 |
+| Letter | Operation | Core Question |
 |------|------|---------|
-| **S** — Substitute | 替换 | 能替换哪个组件/材料/流程/人？ |
-| **C** — Combine | 合并 | 能把哪两样东西合并成一个？ |
-| **A** — Adapt | 借鉴 | 有什么其他领域的解法可以借用？ |
-| **M** — Modify / Magnify / Minify | 改变 | 放大/缩小/改变某个属性会怎样？ |
-| **P** — Put to other uses | 转用 | 能用在其他场景或人群中吗？ |
-| **E** — Eliminate | 删减 | 去掉哪个部分反而更好？ |
-| **R** — Reverse / Rearrange | 反转 | 颠倒顺序或反转逻辑会怎样？ |
+| **S** — Substitute | Replace | What component/material/process/person can be replaced? |
+| **C** — Combine | Merge | What two things can be combined into one? |
+| **A** — Adapt | Borrow | What solutions from other fields can be borrowed? |
+| **M** — Modify / Magnify / Minify | Change | What happens if you amplify/scale/alter an attribute? |
+| **P** — Put to other uses | Repurpose | Can it be used in other scenarios or for other audiences? |
+| **E** — Eliminate | Remove | What part could be removed to make it better? |
+| **R** — Reverse / Rearrange | Flip | What happens if you reverse the order or flip the logic? |
 
 ---
 
-## 适用场景
+## Applicable Scenarios
 
-✅ **最适合**
-- 现有产品/服务的迭代创新
-- 头脑风暴陷入枯竭时强制发散
-- 功能重设计、用户体验优化
-- 商业模式微创新（对现有模式做 SCAMPER）
+✅ **Best For**
+- Iterative innovation for existing products/services
+- Forced divergence when brainstorming runs dry
+- Feature redesign, user experience optimization
+- Business model micro-innovation (apply SCAMPER to existing models)
 
-⚠️ **慎用**
-- 需要颠覆性创新（改用 First Principles）
-- 问题尚未定义清楚（先用苏格拉底提问澄清）
-- 创意阶段后需要立即做严格筛选（SCAMPER 是发散工具，收敛需另行评估）
-
----
-
-## 执行步骤
-
-### Step 1：定义分析对象
-
-明确要创新/改进的对象，并拆解其基本组成：
-
-```
-分析对象：[产品/服务/流程/体验]
-核心组件：[列出主要部分，3-7项]
-当前主要问题/改进目标：[...]
-```
-
-### Step 2：逐项 SCAMPER 发散
-
-对每个视角提问，每个视角至少产出 2-3 个想法。**不评判，先列出。**
-
-#### S — Substitute（替换）
-
-```
-问：这个组件/材料/步骤/角色能被什么替换？
-  → 替换 [组件X] 为 [...] 会怎样？
-  → 如果把 [人工流程] 换成 [自动化] 呢？
-```
-
-#### C — Combine（合并）
-
-```
-问：哪两个功能/步骤/产品可以合并？
-  → 把 [A] 和 [B] 合并成一个体验会怎样？
-  → 能把 [这个产品] 和 [另一个产品] 捆绑吗？
-```
-
-#### A — Adapt（借鉴）
-
-```
-问：哪个其他行业/领域解决过类似问题？
-  → [行业X] 是如何处理 [类似挑战] 的？
-  → 能把 [其他领域的方案] 移植过来吗？
-```
-
-#### M — Modify / Magnify / Minify（改变比例或属性）
-
-```
-问：放大/缩小/加速/减慢某个属性会怎样？
-  → 如果把 [功能X] 做到极致会怎样？
-  → 如果把 [流程Y] 压缩到最简会怎样？
-  → 改变 [颜色/形态/频率/价格] 呢？
-```
-
-#### P — Put to other uses（转用）
-
-```
-问：这个产品/能力能用在其他场景/人群吗？
-  → [当前产品] 对 [新人群] 会有价值吗？
-  → [核心能力] 能用于 [新场景] 吗？
-```
-
-#### E — Eliminate（删减）
-
-```
-问：去掉哪个部分反而更好？
-  → 如果去掉 [步骤/功能/要求]，用户会更满意吗？
-  → 最精简的版本是什么样的？
-```
-
-#### R — Reverse / Rearrange（反转/重排）
-
-```
-问：颠倒顺序、角色或逻辑会怎样？
-  → 如果让 [用户] 做 [我们做的事] 呢？
-  → 把 [流程步骤] 的顺序反过来呢？
-  → 如果把 [收费时机] 从前置改为后置呢？
-```
-
-### Step 3：筛选高潜力想法
-
-从发散列表中筛选：
-
-```
-筛选标准：
-  ✓ 解决了真实的用户痛点
-  ✓ 在现有资源下可行
-  ✓ 与竞品有明显差异
-```
-
-### Step 4：深化前 3 个想法
-
-对每个高潜力想法描述：来源视角、具体实现方式、需要验证的假设。
+⚠️ **Use with Caution**
+- When disruptive innovation is needed (use First Principles instead)
+- When the problem is not yet clearly defined (use Socratic questioning first)
+- When rigorous filtering is needed immediately after ideation (SCAMPER is a divergence tool; convergence requires separate evaluation)
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Define the Subject
+
+Clarify what you want to innovate/improve and decompose its basic components:
 
 ```
-分析对象：[...]
-核心组件：[...]
-
-SCAMPER 发散结果：
-  S（替换）：① [...] ② [...] ③ [...]
-  C（合并）：① [...] ② [...] ③ [...]
-  A（借鉴）：① [...] ② [...] ③ [...]
-  M（改变）：① [...] ② [...] ③ [...]
-  P（转用）：① [...] ② [...] ③ [...]
-  E（删减）：① [...] ② [...] ③ [...]
-  R（反转）：① [...] ② [...] ③ [...]
-
-高潜力想法（TOP 3）：
-  ① [想法] — 来源：[视角] — 实现路径：[...] — 待验证假设：[...]
-  ② [想法] — 来源：[视角] — 实现路径：[...] — 待验证假设：[...]
-  ③ [想法] — 来源：[视角] — 实现路径：[...] — 待验证假设：[...]
+Subject: [Product/Service/Process/Experience]
+Core components: [List main parts, 3-7 items]
+Current main problem/improvement goal: [...]
 ```
+
+### Step 2: SCAMPER Divergence by Perspective
+
+Question each perspective, generating at least 2-3 ideas per perspective. **Don't evaluate — just list.**
+
+#### S — Substitute
+
+```
+Question: What can this component/material/step/role be replaced with?
+  → Replace [Component X] with [...]
+  → What if we replaced [manual process] with [automation]?
+```
+
+#### C — Combine
+
+```
+Question: Which two features/steps/products can be merged?
+  → What if we combined [A] and [B] into one experience?
+  → Can we bundle [this product] with [another product]?
+```
+
+#### A — Adapt
+
+```
+Question: Which other industry/field has solved a similar problem?
+  → How does [Industry X] handle [similar challenge]?
+  → Can we transplant [solution from another field]?
+```
+
+#### M — Modify / Magnify / Minify
+
+```
+Question: What happens if we amplify/speed up/slow down an attribute?
+  → What if we pushed [Feature X] to the extreme?
+  → What if we compressed [Process Y] to its simplest form?
+  → What about changing [color/form/frequency/price]?
+```
+
+#### P — Put to other uses
+
+```
+Question: Can this product/capability be used in other scenarios/audiences?
+  → Would [current product] be valuable for [new audience]?
+  → Can [core capability] be applied to [new scenario]?
+```
+
+#### E — Eliminate
+
+```
+Question: What part could be removed to make it better?
+  → If we removed [step/feature/requirement], would users be more satisfied?
+  → What would the most minimal version look like?
+```
+
+#### R — Reverse / Rearrange
+
+```
+Question: What happens if we reverse the order, roles, or logic?
+  → What if we let [users] do [what we do]?
+  → What if we reversed the [process steps]?
+  → What if we changed [payment timing] from upfront to post-payment?
+```
+
+### Step 3: Filter High-Potential Ideas
+
+Screen from the divergence list:
+
+```
+Filtering criteria:
+  ✓ Addresses a real user pain point
+  ✓ Feasible with current resources
+  ✓ Clearly different from competitors
+```
+
+### Step 4: Deepen the Top 3 Ideas
+
+For each high-potential idea, describe: source perspective, specific implementation approach, hypotheses to validate.
 
 ---
 
-## 执行示例
-
-**场景**：优化一个 SaaS 产品的新用户 onboarding 流程（当前完成率 23%）
+## Output Template
 
 ```
-S（替换）：把文字教程替换为互动式任务引导；把「跳过」按钮替换为「稍后提醒」
-C（合并）：把注册流程和首次核心操作合并为一步（边注册边体验）
-A（借鉴）：借鉴游戏「新手村」设计——给任务、给反馈、给奖励
-M（改变）：把 onboarding 从10步压缩到3步（极简版）；或做成渐进式（用到时才提示）
-P（转用）：把 onboarding 模块开放给 B 端客户自定义，用于培训员工
-E（删减）：去掉所有非必须的信息填写；去掉「功能介绍」纯看改为「直接操作」
-R（反转）：不主动 onboarding，等用户卡住时再介入帮助
+Subject: [...]
+Core components: [...]
 
-高潜力 TOP 3：
-  ① 借鉴游戏新手村 — A视角 — 设计3个核心任务+完成徽章 — 假设：游戏化能提升参与度
-  ② 压缩到3步极简版 — M视角 — 识别真正必须的3步 — 假设：当前10步中有7步非必要
-  ③ 卡住时介入 — R视角 — 行为触发式提示，而非线性流程 — 假设：用户更愿意主动触发帮助
+SCAMPER Divergence Results:
+  S (Substitute): ① [...] ② [...] ③ [...]
+  C (Combine): ① [...] ② [...] ③ [...]
+  A (Adapt): ① [...] ② [...] ③ [...]
+  M (Modify): ① [...] ② [...] ③ [...]
+  P (Put to other uses): ① [...] ② [...] ③ [...]
+  E (Eliminate): ① [...] ② [...] ③ [...]
+  R (Reverse): ① [...] ② [...] ③ [...]
+
+High-Potential Ideas (TOP 3):
+  ① [Idea] — Source: [Perspective] — Implementation path: [...] — Hypotheses to validate: [...]
+  ② [Idea] — Source: [Perspective] — Implementation path: [...] — Hypotheses to validate: [...]
+  ③ [Idea] — Source: [Perspective] — Implementation path: [...] — Hypotheses to validate: [...]
 ```
 
 ---
 
-## 常见陷阱
+## Execution Example
 
-| 陷阱 | 说明 | 避免方式 |
+**Scenario**: Optimize a SaaS product's new user onboarding flow (current completion rate: 23%)
+
+```
+S (Substitute): Replace text tutorials with interactive task guidance; replace "Skip" button with "Remind me later"
+C (Combine): Merge registration and first core action into one step (learn while signing up)
+A (Adapt): Borrow from game "starter village" design — give tasks, give feedback, give rewards
+M (Modify): Compress onboarding from 10 steps to 3 (minimal version); or make it progressive (prompt only when needed)
+P (Put to other uses): Open the onboarding module to B2B customers for custom employee training
+E (Eliminate): Remove all non-essential information fields; replace "feature introduction" with "direct hands-on"
+R (Reverse): Don't proactively onboard; intervene only when the user gets stuck
+
+High-Potential TOP 3:
+  ① Borrow game starter village — A perspective — Design 3 core tasks + completion badges — Hypothesis: gamification boosts engagement
+  ② Compress to 3-step minimal version — M perspective — Identify the truly essential 3 steps — Hypothesis: 7 of the current 10 steps are unnecessary
+  ③ Intervene when stuck — R perspective — Behavior-triggered prompts, not linear flow — Hypothesis: users prefer triggering help proactively
+```
+
+---
+
+## Common Pitfalls
+
+| Pitfall | Description | How to Avoid |
 |------|------|---------|
-| 每个视角只产出1个想法 | 发散不充分 | 强制每个视角至少2-3个，不评判直接列 |
-| 跳过E（删减）视角 | 惯性认为「加」比「减」更有价值 | E 往往产出最有价值的洞察，必须认真做 |
-| 发散后不收敛 | 列了20个想法但不知道做哪个 | Step 3 筛选是必须步骤，不能省 |
-| 只在产品功能层面发散 | 忽略商业模式、流程、渠道层面 | 明确分析对象可以是功能/流程/模式，各自做一轮 |
+| Only generating 1 idea per perspective | Insufficient divergence | Force at least 2-3 per perspective; list without judging |
+| Skipping E (Eliminate) perspective | Inertia assumes "adding" is more valuable than "removing" | E often produces the most valuable insights; must be done seriously |
+| Diverging without converging | Listed 20 ideas but don't know which to pursue | Step 3 filtering is mandatory; cannot be skipped |
+| Only diverging at feature level | Ignoring business model, process, and channel levels | Clarify that the subject can be features/processes/models; do a round for each |
 
 ---
 
-## 与其他方法论的关系
+## Relationships with Other Methodology
 
-- **前置 Design Thinking 或 JTBD**：有明确用户痛点后再做 SCAMPER，方向更准
-- **与六顶思考帽配合**：绿帽阶段产出的想法用 SCAMPER 系统深化
-- **输出接 RICE**：筛选出的高潜力想法用 RICE 评估优先级
-- **输出接 Lean BML**：TOP 想法转化为下一轮 Build-Measure-Learn 的假设
+- **Preceded by Design Thinking or JTBD**: Do SCAMPER after identifying clear user pains for more precise direction
+- **Combined with Six Thinking Hats**: Ideas generated in the Green Hat phase are deepened systematically with SCAMPER
+- **Output feeds RICE**: Filtered high-potential ideas are evaluated for priority via RICE
+- **Output feeds Lean BML**: Top ideas become hypotheses for the next Build-Measure-Learn cycle

@@ -1,212 +1,214 @@
 # Empathy Map · 同理心地图
 
-## 核心理念
+## Core Concept
 
-从**四个维度**系统整理对特定用户的观察和理解，帮助团队真正"站在用户的角度"看问题，避免基于假设设计产品。
+Systematically organize observations and understanding of a specific user across **four dimensions**, helping teams truly "see from the user's perspective" and avoid designing products based on assumptions.
 
-由 XPLANE 创始人 Dave Gray 创立，广泛应用于 Design Thinking 的 Empathize 阶段。
+Founded by Dave Gray, founder of XPLANE, widely used in the Empathize phase of Design Thinking.
 
 ```mermaid
 flowchart TD
     subgraph R1[" "]
         direction LR
-        Says["说 (Says)"]
-        Does["做 (Does)"]
+        Says["Says"]
+        Does["Does"]
     end
     subgraph R2[" "]
         direction LR
-        Thinks["想 (Thinks)"]
-        Feels["感 (Feels)"]
+        Thinks["Thinks"]
+        Feels["Feels"]
     end
-    Persona["用户画像"]
+    Persona["User Persona"]
     subgraph R3[" "]
         direction LR
-        Pains["痛点 (Pains)"]
-        Gains["收获 (Gains)"]
+        Pains["Pains"]
+        Gains["Gains"]
     end
     R1 --> Persona
     R2 --> Persona
     Persona --> R3
 ```
 
-**四维度 + 两底层：**
-- **Says（说什么）**：用户在访谈/评论中说的话（直接引语）
-- **Does（做什么）**：观察到的用户行为、操作、习惯
-- **Thinks（想什么）**：用户未必说出口的内心想法、疑虑、关注点
-- **Feels（感受什么）**：用户的情绪状态、情感
+**Four Dimensions + Two Foundations:**
+- **Says**: What the user explicitly states in interviews / reviews (direct quotes)
+- **Does**: Observed user behaviors, actions, habits
+- **Thinks**: What the user may not say aloud — inner thoughts, concerns, focus areas
+- **Feels**: The user's emotional state, feelings
 
-底层汇总：
-- **Pains（痛点）**：让用户感到阻力、恐惧、沮丧的事
-- **Gains（收获）**：用户想要获得的好处、成功标准
+Foundation summary:
+- **Pains**: Things that create friction, fear, or frustration for the user
+- **Gains**: Benefits the user wants to obtain, success criteria
 
 ---
 
-## 与 Persona 的区别
+## Difference from Persona
 
-| 工具 | 关注点 | 输出 |
+| Tool | Focus | Output |
 |------|--------|------|
-| Persona | 用户是谁（人口统计、背景、目标）| 用户档案卡 |
-| Empathy Map | 用户的当下体验（怎么想、怎么感受）| 体验维度地图 |
+| Persona | Who the user is (demographics, background, goals) | User profile card |
+| Empathy Map | The user's current experience (what they think, feel) | Experience dimension map |
 
-Empathy Map 是 Persona 的**体验层补充**，二者配合使用。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- Design Thinking Empathize 阶段的成果整理
-- 团队对"我们真正理解用户吗"进行校准
-- 将用户访谈数据结构化
-- 新产品方向探索前的用户理解对齐
-
-⚠️ **慎用**
-- 作为量化工具（同理心地图是定性工具）
-- 没有真实用户数据时填写（会变成团队假设的投影）
+Empathy Map is an **experience-layer supplement** to Personas; use them together.
 
 ---
 
-## 数据收集方法
+## Applicable Scenarios
 
-在填写同理心地图前，需要原始数据：
+✅ **Best Suited For**
+- Organizing outputs from the Design Thinking Empathize phase
+- Calibrating team understanding of "do we truly understand the user?"
+- Structuring user interview data
+- Aligning user understanding before exploring new product directions
 
-**首选：直接用户研究**
-- 用户访谈（30-60 分钟，开放式问题）
-- 实地观察 / 情境研究
-- 日记研究
-
-**辅助：间接数据**
-- 客服工单和用户反馈
-- 社交媒体评论、App Store 评论
-- 用户论坛帖子
-- NPS 定性回复
-
-**关键采集原则**：
-- 收集**直接引语**，不是团队的总结
-- 记录**观察到的行为**，不是推测
-- 区分用户说的（表面）和研究者推断的（深层）
+⚠️ **Use with Caution**
+- As a quantitative tool (Empathy Map is qualitative)
+- Filling it without real user data (becomes a projection of team assumptions)
 
 ---
 
-## 执行步骤
+## Data Collection Methods
 
-### Step 1：明确用户对象
+Before filling in the Empathy Map, you need raw data:
 
-选择一个具体的用户类型或 Persona，同理心地图针对**单一用户类型**，不是所有用户。
+**Primary: Direct User Research**
+- User interviews (30-60 minutes, open-ended questions)
+- Field observation / contextual inquiry
+- Diary studies
 
-### Step 2：填充 Says & Does（直接证据层）
+**Secondary: Indirect Data**
+- Customer service tickets and user feedback
+- Social media comments, App Store reviews
+- User forum posts
+- NPS qualitative responses
 
-从用户访谈记录、观察笔记中提取：
-- **Says**：用户的原话引语，不改写
-- **Does**：观察到的行为，描述动作而非意图
-
-### Step 3：填充 Thinks & Feels（推断层）
-
-基于 Says 和 Does 推断用户的内心世界：
-- **Thinks**：用户没有说出口，但行为暗示的想法；未表达的疑虑、关注点
-- **Feels**：情绪状态，用情感词描述（不安、期待、困惑、骄傲等）
-
-标注这是**推断**，而非直接证据。
-
-### Step 4：提炼 Pains & Gains
-
-汇总四象限的发现：
-- **Pains**：从 Thinks/Feels/Says 中提取负面内容，分类为障碍、恐惧、风险
-- **Gains**：用户的期待状态、成功标准、渴望的收获
-
-### Step 5：团队对齐与补充
-
-将同理心地图展示给团队，讨论：
-- 哪些洞察让团队感到意外？
-- 哪些维度信息不足，需要进一步研究？
-- 是否识别出了设计机遇？
+**Key collection principles**:
+- Collect **direct quotes**, not team summaries
+- Record **observed behaviors**, not inferences
+- Distinguish between what users say (surface) and what researchers infer (deep)
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Define the User Subject
+
+Select a specific user type or Persona — the Empathy Map targets a **single user type**, not all users.
+
+### Step 2: Fill in Says & Does (Direct Evidence Layer)
+
+Extract from user interview notes and observation notes:
+- **Says**: User's verbatim quotes, unedited
+- **Does**: Observed behaviors, describe actions not intentions
+
+### Step 3: Fill in Thinks & Feels (Inference Layer)
+
+Infer the user's inner world based on Says and Does:
+- **Thinks**: What the user didn't say but behaviors imply; unexpressed concerns and focus areas
+- **Feels**: Emotional state, described with emotion words (anxiety, anticipation, confusion, pride, etc.)
+
+Note that these are **inferences**, not direct evidence.
+
+### Step 4: Distill Pains & Gains
+
+Synthesize findings from all four quadrants:
+- **Pains**: Extract negative content from Thinks/Feels/Says; categorize as obstacles, fears, risks
+- **Gains**: User's desired states, success criteria, hoped-for outcomes
+
+### Step 5: Team Alignment and Supplementation
+
+Present the Empathy Map to the team for discussion:
+- Which insights surprised the team?
+- Which dimensions lack information, requiring further research?
+- Have design opportunities been identified?
+
+---
+
+## Output Template
 
 ```
-用户类型：[Persona 名称或用户描述]
-研究来源：[访谈 N 人、观察 N 次、评论分析等]
+User type: [Persona name or user description]
+Research source: [N interviews, N observations, review analysis, etc.]
 
-SAYS（用户说的话）：
-  "[直接引语 1]"
-  "[直接引语 2]"
+SAYS (What the user said):
+  "[Direct quote 1]"
+  "[Direct quote 2]"
   "[...]"
 
-DOES（观察到的行为）：
-  - [行为 1]
-  - [行为 2]
+DOES (Observed behaviors):
+  - [Behavior 1]
+  - [Behavior 2]
   - [...]
 
-THINKS（内心想法，推断）：
-  - [想法/疑虑 1]
-  - [想法/疑虑 2]
+THINKS (Inner thoughts, inferred):
+  - [Thought/concern 1]
+  - [Thought/concern 2]
   - [...]
-  （注：以下为推断，非直接引语）
+  (Note: The following are inferred, not direct quotes)
 
-FEELS（情绪状态，推断）：
-  - [情绪词 1]：背景/原因
-  - [情绪词 2]：背景/原因
-  - [...]
-
----
-汇总：
-
-PAINS（痛点）：
-  - [痛点 1：障碍/恐惧/风险]
-  - [...]
-
-GAINS（收获/期待）：
-  - [收获 1：希望得到的好处]
+FEELS (Emotional state, inferred):
+  - [Emotion word 1]: Context/reason
+  - [Emotion word 2]: Context/reason
   - [...]
 
 ---
-关键洞察：
-  最令人惊讶的发现：[...]
-  最需要进一步研究的问题：[...]
-  设计机遇：[...]
+
+Summary:
+
+PAINS (Pain points):
+  - [Pain 1: Obstacle/fear/risk]
+  - [...]
+
+GAINS (Gains/expectations):
+  - [Gain 1: Desired benefit]
+  - [...]
+
+---
+
+Key insights:
+  Most surprising finding: [...]
+  Question requiring further research: [...]
+  Design opportunity: [...]
 ```
 
 ---
 
-## 执行示例（片段）
+## Execution Example (Excerpt)
 
-**用户类型**：独立软件开发者，使用 AI 代码助手的早期用户
+**User type**: Independent software developer, early adopter of AI coding assistants
 
 ```
-SAYS：
-  "我不知道它给我的建议是对的还是错的，有时候我直接就用了"
-  "最讨厌它给我解释一堆，我只要代码就好"
-  "有时候建议很好，有时候完全不对，很难预测"
+SAYS:
+  "I don't know if its suggestions are right or wrong, sometimes I just use them directly"
+  "I hate when it explains a bunch of stuff — I just want the code"
+  "Sometimes the suggestions are great, sometimes completely wrong, hard to predict"
 
-DOES：
-  - 快速复制粘贴 AI 建议，不逐行阅读
-  - 只在卡住时才使用 AI，不是每行代码都用
-  - 遇到建议奇怪时，用 Google 验证，而非继续追问 AI
+DOES:
+  - Quickly copies and pastes AI suggestions without reading line by line
+  - Only uses AI when stuck, not for every line of code
+  - When suggestions seem weird, uses Google to verify instead of asking AI further
 
-THINKS（推断）：
-  - "我需要快速判断这个建议是否可信，但我没有好方法"
-  - "我担心自己的代码水平因为过度依赖 AI 而退步"
+THINKS (Inferred):
+  - "I need a quick way to judge if a suggestion is trustworthy, but I don't have a good method"
+  - "I worry my coding skills are declining because of over-reliance on AI"
 
-FEELS（推断）：
-  - 不确定感：对 AI 建议可靠性持续存在疑虑
-  - 效率压力：想快，但知道不应该盲目信任
+FEELS (Inferred):
+  - Uncertainty: Persistent doubts about AI suggestion reliability
+  - Efficiency pressure: Wants to move fast but knows blind trust is unwise
 
-PAINS：
-  - 无法快速判断 AI 建议的可靠性
-  - 对使用 AI 的"正确方式"缺乏信心
+PAINS:
+  - Cannot quickly judge AI suggestion reliability
+  - Lacks confidence in the "correct way" to use AI
 
-GAINS：
-  - 希望 AI 能让自己在陌生领域也能快速推进
-  - 希望 AI 像"有经验的搭档"，而不只是"快速打字员"
+GAINS:
+  - Hopes AI can help make rapid progress even in unfamiliar domains
+  - Wants AI to be like "an experienced partner," not just "a fast typist"
 ```
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **输入 Design Thinking**：Empathy Map 是 Empathize 阶段的输出，直接用于 Define 阶段的 HMW 陈述
-- **补充 Persona**：Persona 是背景，Empathy Map 是当下体验
-- **输入 JTBD**：Empathy Map 的 Pains + Gains 帮助识别用户未被满足的 Job
-- **配合 Customer Journey Map**：旅程地图描述体验路径，Empathy Map 深化特定阶段的用户理解
+- **Feeds into Design Thinking**: Empathy Map is the output of the Empathize phase, directly used for HMW statements in the Define phase
+- **Supplements Personas**: Personas are background; Empathy Map captures current experience
+- **Feeds into JTBD**: Empathy Map's Pains + Gains help identify unmet user Jobs
+- **Pairs with Customer Journey Map**: Journey Map describes the experience path; Empathy Map deepens user understanding at specific stages

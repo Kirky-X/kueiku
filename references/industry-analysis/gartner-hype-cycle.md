@@ -1,140 +1,140 @@
-# Gartner Hype Cycle · Gartner 技术成熟度曲线
+# Gartner Hype Cycle
 
-## 核心理念
+## Core Concept
 
-技术从触发到成熟的 5 阶段：触发 → 期望膨胀 → 幻灭低谷 → 复苏 → 生产成熟。
+The 5 stages from trigger to maturity: Trigger → Peak of Inflated Expectations → Trough of Disillusionment → Slope of Enlightenment → Plateau of Productivity.
 
-Gartner Hype Cycle 揭示了新技术采用的普遍规律：技术出现初期被过度炒作（期望膨胀），随后因落地困难跌入幻灭低谷，再随务实应用逐步复苏，最终进入生产成熟期。不同阶段的风险和机会完全不同——在期望膨胀期押注可能血本无归，在复苏期布局性价比最高。
+The Gartner Hype Cycle reveals a universal pattern for new technology adoption: initially overhyped (Peak of Inflated Expectations), then falling into the Trough of Disillusionment due to implementation difficulties, gradually recovering with practical applications, and finally entering the Plateau of Productivity. Risks and opportunities vary significantly across stages—betting during the Peak may lead to total loss, while investing during the Slope offers the best cost-effectiveness.
 
-> **核心理念**：技术成熟度 ≠ 技术先进性。
-> 先进的技术可能在幻灭低谷，成熟的（但不再"酷"的）技术才是生产可用的。采用时机比技术本身更影响成败。
+> **Core Insight**: Technological maturity ≠ Technological advancement.
+> Advanced technology may be in the Trough, while mature (but no longer "cool") technology is production-ready. Timing of adoption influences success more than the technology itself.
 
-| 阶段 | 特征 | 风险 | 机会 |
-|------|------|------|------|
-| 触发期 | 报道增多，原型出现 | 极高（多数夭折） | 早期学习 |
-| 期望膨胀期 | 过度炒作，资本涌入 | 高（泡沫破裂） | 品牌曝光、融资 |
-| 幻灭低谷期 | 落地困难，关注度下降 | 中（被遗忘） | 低价布局、深耕 |
-| 复苏期 | 务实应用出现 | 中低 | 最佳布局时机 |
-| 生产成熟期 | 规模化应用 | 低 | 跟进、优化 |
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 技术投资时机判断（何时进入）
-- 新技术采用决策（是否采用、何时采用）
-- 技术路线图制定（多技术组合的时间安排）
-- 创新预算分配（不同阶段技术的资源比例）
-
-⚠️ **慎用**
-- 非 Gartner 覆盖的小众技术（需自行评估阶段）
-- 技术投资决策的唯一依据（需结合价值链和 DCF）
-- 已成熟技术的迭代决策（Hype Cycle 适用于新技术的首次成熟过程）
+| Stage | Characteristics | Risks | Opportunities |
+|-------|----------------|-------|---------------|
+| Trigger | Increased reports, prototypes emerge | Extremely high (many die out) | Early learning |
+| Peak of Inflated Expectations | Overhype, capital inflow | High (bubble burst) | Brand exposure, fundraising |
+| Trough of Disillusionment | Implementation difficulties, declining attention | Medium (forgotten) | Low-cost investment, deep cultivation |
+| Slope of Enlightenment | Practical applications emerge | Medium-low | Best timing for investment |
+| Plateau of Productivity | Scaled adoption | Low | Follow-up, optimization |
 
 ---
 
-## 执行步骤
+## Applicable Scenarios
 
-### Step 1：定位技术所处阶段
+✅ **Best suited for**
+- Timing technology investments (when to enter)
+- New technology adoption decisions (whether and when to adopt)
+- Technology roadmap planning (scheduling multiple technologies)
+- Innovation budget allocation (resource proportions for different stage technologies)
 
-判断目标技术当前处于哪个阶段：
-- **触发期**：学术/实验室突破，媒体开始报道，无规模化产品
-- **期望膨胀期**：资本涌入、创业公司密集成立、媒体过度宣传、POC 多但生产少
-- **幻灭低谷期**：关注度下降、部分公司倒闭、负面案例增多、但务实应用开始萌芽
-- **复苏期**：务实用例出现、ROI 可量化、行业 leader 开始规模化采用
-- **生产成熟期**：主流采用、成本下降、最佳实践成熟
-
-> 定位依据：Gartner 当年报告 + 媒体声量曲线 + 投融资数据 + 落地案例数量。
-
-### Step 2：评估阶段风险
-
-不同阶段的核心风险不同：
-- 触发期：技术可能夭折、方向可能被推翻
-- 期望膨胀期：泡沫破裂、估值崩塌、过度投入
-- 幻灭低谷期：被市场遗忘、资源被撤、人才流失
-- 复苏期：选错技术路线（多个竞争方案未收敛）
-- 生产成熟期：错失先发优势、被替代技术威胁
-
-### Step 3：制定采用策略
-
-根据所处阶段和风险偏好制定策略：
-- **触发期**：监测、学习、小规模 POC，不重资产投入
-- **期望膨胀期**：警惕跟风、避免 FOMO 投入、选择性布局
-- **幻灭低谷期**：低价布局、深度投入研发、招揽低谷期流失人才
-- **复苏期**：规模化投入、抢占先发、构建能力壁垒
-- **生产成熟期**：跟进采用、优化效率、避免重复造轮子
-
-> 复苏期是性价比最高的布局时机——技术已验证可行，市场尚未充分反应。
-
-### Step 4：监控阶段转换信号
-
-建立监控机制识别阶段转换：
-- 触发 → 膨胀：媒体声量激增、资本大额融资出现
-- 膨胀 → 低谷：负面案例增多、明星公司暴雷、资本退潮
-- 低谷 → 复苏：务实 ROI 案例出现、主流厂商入场
-- 复苏 → 成熟：成本降至主流可接受、标准化出现
-
-> 阶段转换是策略调整的触发点，需定期（季度）复核技术所处阶段。
+⚠️ **Use with caution**
+- Niche technologies not covered by Gartner (requires self-assessment of stage)
+- Sole basis for technology investment decisions (should be combined with value chain and DCF)
+- Iterative decisions for already mature technologies (Hype Cycle applies to the first maturation process of new technologies)
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Locate the Technology's Current Stage
+
+Determine which stage the target technology is currently in:
+- **Trigger**: Academic/lab breakthroughs, media coverage begins, no scaled products
+- **Peak of Inflated Expectations**: Capital inflow, numerous startups, media overhype, many POCs but few production implementations
+- **Trough of Disillusionment**: Declining attention, some companies fail, negative cases increase, but practical applications begin to emerge
+- **Slope of Enlightenment**: Practical use cases emerge, ROI can be quantified, industry leaders start scaled adoption
+- **Plateau of Productivity**: Mainstream adoption, cost reduction, best practices mature
+
+> Basis for localization: Gartner annual reports + media hype curve + investment data + number of implementation cases.
+
+### Step 2: Assess Stage Risks
+
+Core risks differ by stage:
+- Trigger: Technology may die out, direction may be overturned
+- Peak of Inflated Expectations: Bubble burst, valuation collapse, over-investment
+- Trough of Disillusionment: Forgotten by the market, resources withdrawn, talent drain
+- Slope of Enlightenment: Choosing the wrong technology path (multiple competing solutions not converging)
+- Plateau of Productivity: Missing first-mover advantage, threat from alternative technologies
+
+### Step 3: Develop Adoption Strategy
+
+Formulate strategies based on the stage and risk appetite:
+- **Trigger**: Monitor, learn, small-scale POC, no heavy asset investment
+- **Peak of Inflated Expectations**: Avoid bandwagoning, prevent FOMO investments, selective positioning
+- **Trough of Disillusionment**: Low-cost investment, deep R&D investment, recruit talent lost during the trough
+- **Slope of Enlightenment**: Scaled investment, seize first-mover advantage, build capability barriers
+- **Plateau of Productivity**: Follow-up adoption, optimize efficiency, avoid reinventing the wheel
+
+> The Slope of Enlightenment offers the best cost-effectiveness—the technology is proven viable, but the market hasn't fully reacted yet.
+
+### Step 4: Monitor Stage Transition Signals
+
+Establish monitoring mechanisms to identify stage transitions:
+- Trigger → Peak: Media hype surges, large capital financing appears
+- Peak → Trough: Negative cases increase, star companies collapse, capital retreats
+- Trough → Slope: Practical ROI cases emerge, mainstream vendors enter
+- Slope → Plateau: Costs become acceptable to the mainstream, standardization emerges
+
+> Stage transitions are trigger points for strategy adjustments; regularly (quarterly) reassess the technology's stage.
+
+---
+
+## Output Template
 
 ```
-分析对象：[技术名称]
-分析日期：[日期]
+Analysis Target: [Technology Name]
+Analysis Date: [Date]
 
-阶段定位：
-  - 当前阶段：[触发 / 膨胀 / 低谷 / 复苏 / 成熟]
-  - 定位依据：
-    - Gartner 报告：[年份及定位]
-    - 媒体声量：[趋势描述]
-    - 投融资数据：[趋势描述]
-    - 落地案例：[数量及规模]
+Stage Location:
+  - Current Stage: [Trigger / Peak / Trough / Slope / Plateau]
+  - Basis for Localization:
+    - Gartner Report: [Year and positioning]
+    - Media Hype: [Trend description]
+    - Investment Data: [Trend description]
+    - Implementation Cases: [Number and scale]
 
-阶段风险评估：
-  - 核心风险：[...]
-  - 风险等级：[高/中/低]
-  - 风险缓解措施：[...]
+Stage Risk Assessment:
+  - Core Risks: [...]
+  - Risk Level: [High/Medium/Low]
+  - Risk Mitigation Measures: [...]
 
-采用策略：
-  - 策略类型：[监测 / 警惕 / 低价布局 / 规模投入 / 跟进优化]
-  - 投入规模：[描述]
-  - 时间安排：[立即 / X 季度后 / X 年后]
-  - 退出/调整条件：[...]
+Adoption Strategy:
+  - Strategy Type: [Monitor / Caution / Low-cost Investment / Scaled Investment / Follow-up Optimization]
+  - Investment Scale: [Description]
+  - Timeline: [Immediate / In X quarters / In X years]
+  - Exit/Adjustment Conditions: [...]
 
-阶段转换监控：
-  - 监控指标：[媒体声量 / 融资额 / 落地案例数 / 成本曲线]
-  - 复核频率：[季度/半年]
-  - 转换信号清单：
-    - 下一阶段信号：[...]
-    - 触发动作：[策略调整方向]
+Stage Transition Monitoring:
+  - Monitoring Indicators: [Media Hype / Financing Amount / Implementation Case Count / Cost Curve]
+  - Review Frequency: [Quarterly/Semi-annually]
+  - Transition Signal List:
+    - Next Stage Signals: [...]
+    - Trigger Action: [Strategy Adjustment Direction]
 
-技术组合建议（若多技术评估）：
-  | 技术 | 阶段 | 策略 | 投入比例 |
-  |------|------|------|---------|
-  | ...  | ...  | ...  | X%      |
+Technology Portfolio Recommendations (if evaluating multiple technologies):
+  | Technology | Stage | Strategy | Investment Proportion |
+  |------------|-------|----------|-----------------------|
+  | ...        | ...   | ...      | X%                    |
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 避免方式 |
-|------|---------|
-| 在期望膨胀期 FOMO 跟风 | 警惕媒体声量，依据落地案例而非融资额判断 |
-| 错过复苏期的布局窗口 | 建立阶段转换监控，低谷末期即开始评估 |
-| 把技术先进性等同于可生产性 | 区分"先进"和"成熟"，生产采用看成熟度 |
-| 单一技术 All in | 多技术组合分散阶段风险 |
-| 阶段定位后不再复核 | 至少季度复核，阶段转换需及时调整策略 |
-| 机械套用 Gartner 报告 | Gartner 是参考，需结合自身行业落地情况 |
+| Pitfall | Avoidance Method |
+|---------|------------------|
+| FOMO bandwagoning during the Peak | Be wary of media hype, judge based on implementation cases rather than financing amounts |
+| Missing the investment window during the Slope | Establish stage transition monitoring, start assessment at the end of the trough |
+| Equating technological advancement with production readiness | Distinguish between "advanced" and "mature"; production adoption depends on maturity |
+| All-in on a single technology | Diversify technology portfolio to spread stage risks |
+| Not reassessing after stage localization | Review at least quarterly, adjust strategies promptly upon stage transitions |
+| Mechanical application of Gartner reports | Gartner is a reference; must be combined with your own industry implementation context |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **前置 Systematic Research Process**：研究流程收集技术信息支撑阶段定位
-- **互补 Industry Value Chain**：Hype Cycle 判断技术时机，价值链判断价值分布
-- **后接 DCF**：技术采用决策需 DCF 评估投入产出
-- **对照 Whole Widget**：Hype Cycle 判断技术成熟度，Whole Widget 决定自研 vs 采购
+- **Preceding Systematic Research Process**: Research process collects technology information to support stage localization
+- **Complementary Industry Value Chain**: Hype Cycle determines technology timing, value chain determines value distribution
+- **Subsequent DCF**: Technology adoption decisions require DCF to assess input-output
+- **Comparison with Whole Widget**: Hype Cycle determines technology maturity, Whole Widget decides between self-development vs. procurement

@@ -1,163 +1,163 @@
-# PESTLE Analysis · 宏观环境分析
+# PESTLE Analysis
 
-## 核心理念
+## Core Concept
 
-扫描影响组织/产品的**六维外部宏观环境因素**，识别机遇与威胁，为战略决策提供外部视角。
+Scan the **six-dimension external macro-environment factors** affecting an organization/product, identify opportunities and threats, and provide an external perspective for strategic decisions.
 
-| 维度 | 英文 | 关注内容 |
+| Dimension | English | Focus Areas |
 |------|------|---------|
-| **P** | Political（政治） | 政策、法规、政府稳定性、贸易协定 |
-| **E** | Economic（经济） | GDP、利率、通胀、消费能力、汇率 |
-| **S** | Social（社会） | 人口结构、文化趋势、生活方式变化 |
-| **T** | Technological（技术） | 新技术涌现、自动化、研发投入 |
-| **L** | Legal（法律） | 劳动法、数据隐私法、反垄断、IPO 要求 |
-| **E** | Environmental（环境） | 气候政策、ESG、碳排放、可持续要求 |
+| **P** | Political | Policies, regulations, government stability, trade agreements |
+| **E** | Economic | GDP, interest rates, inflation, purchasing power, exchange rates |
+| **S** | Social | Demographics, cultural trends, lifestyle changes |
+| **T** | Technological | Emerging technologies, automation, R&D investment |
+| **L** | Legal | Labor law, data privacy, antitrust, IPO requirements |
+| **E** | Environmental | Climate policy, ESG, carbon emissions, sustainability requirements |
 
-> PESTLE 只分析**外部**环境，不可控因素。内部分析用 SWOT 的 S/W 部分。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 进入新市场/新国家前的外部环境评估
-- 行业趋势研究与年度战略规划
-- 政策影响分析（如数据隐私法变化对产品的影响）
-- 投资可行性研究
-
-⚠️ **慎用**
-- 不需要进行内部分析（配合 SWOT 使用）
-- 需要精确数据支撑的决策（PESTLE 产出是方向性洞察）
+> PESTLE only analyzes the **external** environment — uncontrollable factors. Internal analysis uses the S/W portions of SWOT.
 
 ---
 
-## 执行步骤
+## Use Cases
 
-### Step 1：界定分析范围
+✅ **Best for**
+- External environment assessment before entering new markets/countries
+- Industry trend research and annual strategic planning
+- Policy impact analysis (e.g., impact of data privacy law changes on products)
+- Investment feasibility studies
 
-- 分析主体：哪个产品/业务/公司？
-- 地理范围：哪个国家/市场？
-- 时间维度：短期（1年）、中期（3年）、长期（5年+）？
-
-### Step 2：逐维度扫描
-
-对每个维度，回答：
-1. 当前状态：这个维度的现状是什么？
-2. 趋势方向：它在向哪个方向变化？
-3. 业务影响：对我们的产品/业务有什么直接影响？
-4. 机遇/威胁：这是机遇还是威胁？影响程度如何（高/中/低）？
-
-### Step 3：优先级评估
-
-并非所有因素都同等重要。对识别的因素评估：
-- **影响程度**：高 / 中 / 低
-- **发生概率**：高 / 中 / 低
-- **时间紧迫性**：紧迫 / 中期 / 长期
-
-将高影响+高概率的因素标记为**关键因素**。
-
-### Step 4：转化为 SWOT 输入
-
-将 PESTLE 产出的外部因素直接填入 SWOT 的 **Opportunities（机遇）** 和 **Threats（威胁）** 象限。
+⚠️ **Use with caution**
+- When internal analysis is not needed (use in conjunction with SWOT)
+- When decisions require precise data support (PESTLE outputs directional insights)
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Define Analysis Scope
+
+- Analysis subject: Which product/business/company?
+- Geographic scope: Which country/market?
+- Time dimension: Short-term (1 year), medium-term (3 years), long-term (5+ years)?
+
+### Step 2: Scan Each Dimension
+
+For each dimension, answer:
+1. Current state: What is the current status of this dimension?
+2. Trend direction: Which direction is it changing?
+3. Business impact: What direct impact does it have on our product/business?
+4. Opportunity/Threat: Is this an opportunity or threat? Impact level (High/Medium/Low)?
+
+### Step 3: Prioritize
+
+Not all factors are equally important. Assess identified factors:
+- **Impact level**: High / Medium / Low
+- **Probability**: High / Medium / Low
+- **Time urgency**: Urgent / Medium-term / Long-term
+
+Mark high-impact + high-probability factors as **key factors**.
+
+### Step 4: Convert to SWOT Input
+
+Directly fill PESTLE's external factor outputs into SWOT's **Opportunities** and **Threats** quadrants.
+
+---
+
+## Output Template
 
 ```
-分析主体：[产品/公司]
-地理范围：[中国市场 / 全球 / 特定区域]
-时间范围：[1年 / 3年 / 5年]
+Analysis subject: [Product/Company]
+Geographic scope: [China market / Global / Specific region]
+Time horizon: [1 year / 3 years / 5 years]
 
-PESTLE 因素扫描：
+PESTLE Factor Scan:
 
-Political（政治）：
-  现状：[...]
-  趋势：[...]
-  业务影响：[...]
-  判断：机遇 / 威胁，影响度：高/中/低
+Political:
+  Current state: [...]
+  Trend: [...]
+  Business impact: [...]
+  Assessment: Opportunity / Threat, Impact: High/Medium/Low
 
-Economic（经济）：
-  [同上格式]
+Economic:
+  [Same format as above]
 
-Social（社会）：
-  [同上格式]
+Social:
+  [Same format as above]
 
-Technological（技术）：
-  [同上格式]
+Technological:
+  [Same format as above]
 
-Legal（法律）：
-  [同上格式]
+Legal:
+  [Same format as above]
 
-Environmental（环境）：
-  [同上格式]
+Environmental:
+  [Same format as above]
 
-关键因素（高影响×高概率）：
-  1. [因素] — [具体影响]
+Key factors (High impact × High probability):
+  1. [Factor] — [Specific impact]
   2. [...]
 
-输入 SWOT：
-  Opportunities：[从 PESTLE 提取的机遇]
-  Threats：[从 PESTLE 提取的威胁]
+SWOT Input:
+  Opportunities: [Extracted from PESTLE]
+  Threats: [Extracted from PESTLE]
 ```
 
 ---
 
-## 执行示例
+## Execution Example
 
-**场景**：某 SaaS 产品评估是否进入欧洲市场（时间范围：2年）
+**Scenario**: A SaaS product evaluating whether to enter the European market (time horizon: 2 years)
 
 ```
-Political：
-  现状：欧盟数字单一市场政策持续推进
-  趋势：监管趋严，数字服务税讨论中
-  影响：需要本地化合规，增加运营成本
-  判断：威胁（中），机遇（低）
+Political:
+  Current state: EU digital single market policy continues advancing
+  Trend: Regulation tightening, digital services tax under discussion
+  Impact: Requires localized compliance, increasing operational costs
+  Assessment: Threat (Medium), Opportunity (Low)
 
-Economic：
-  现状：欧洲主要经济体增速放缓，企业IT预算收紧
-  趋势：通胀高位，SaaS 续费率承压
-  影响：销售周期延长，客户对 ROI 要求更高
-  判断：威胁（中）
+Economic:
+  Current state: Major European economies slowing, enterprise IT budgets tightening
+  Trend: High inflation, SaaS renewal rates under pressure
+  Impact: Sales cycles lengthening, clients demanding higher ROI
+  Assessment: Threat (Medium)
 
-Social：
-  现状：欧洲企业数字化转型需求强劲
-  趋势：远程工作常态化，协作工具采购增加
-  影响：目标市场规模扩大
-  判断：机遇（高）
+Social:
+  Current state: Strong enterprise digital transformation demand in Europe
+  Trend: Remote work normalizing, increased procurement of collaboration tools
+  Impact: Target market size expanding
+  Assessment: Opportunity (High)
 
-Technological：
-  现状：AI 工具渗透率快速上升
-  趋势：客户期望产品内嵌 AI 功能
-  影响：需要加快 AI feature roadmap
-  判断：机遇（高）+ 威胁（高，如不跟进则落后）
+Technological:
+  Current state: AI tool penetration rising rapidly
+  Trend: Customers expect embedded AI features in products
+  Impact: Need to accelerate AI feature roadmap
+  Assessment: Opportunity (High) + Threat (High, falling behind if not keeping up)
 
-Legal：
-  现状：GDPR 已实施，执法力度逐步加强
-  趋势：AI Act 即将落地，对 AI 产品有专项要求
-  影响：需要专项法律合规投入，数据存储本地化
-  判断：威胁（高）
+Legal:
+  Current state: GDPR implemented, enforcement gradually strengthening
+  Trend: AI Act about to take effect, with specific requirements for AI products
+  Impact: Requires dedicated legal compliance investment, data storage localization
+  Assessment: Threat (High)
 
-Environmental：
-  现状：欧洲 ESG 要求高，采购决策关注供应商碳排放
-  趋势：绿色数据中心成为标配要求
-  影响：需要声明和执行碳中和路线图
-  判断：中等威胁
+Environmental:
+  Current state: High ESG requirements in Europe, procurement decisions consider supplier carbon emissions
+  Trend: Green data centers becoming standard requirement
+  Impact: Need to declare and execute carbon neutrality roadmap
+  Assessment: Medium threat
 
-关键因素：
-  1. GDPR + AI Act 合规要求高 → 需要专项法律和工程投入
-  2. 企业数字化转型需求强 → 目标市场规模可期
-  3. AI 功能期望快速上升 → 产品 roadmap 需调整
+Key factors:
+  1. GDPR + AI Act compliance requirements are high → Need dedicated legal and engineering investment
+  2. Enterprise digital transformation demand is strong → Target market size is promising
+  3. AI feature expectations rising rapidly → Product roadmap needs adjustment
 
-输入 SWOT：
-  Opportunities：数字化转型需求、AI 功能差异化
-  Threats：GDPR/AI Act 合规成本、经济放缓下预算收紧
+SWOT Input:
+  Opportunities: Digital transformation demand, AI feature differentiation
+  Threats: GDPR/AI Act compliance costs, budget tightening amid economic slowdown
 ```
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **后接 SWOT**：PESTLE 的输出直接填入 SWOT 的外部两象限
-- **配合 Porter's Five Forces**：PESTLE 看宏观环境，五力模型看行业竞争格局
-- **前置战略规划**：PESTLE 是战略规划的环境扫描阶段
+- **Followed by SWOT**: PESTLE outputs directly fill SWOT's external quadrants
+- **Combined with Porter's Five Forces**: PESTLE looks at macro environment; Five Forces looks at industry competitive landscape
+- **Precedes strategic planning**: PESTLE is the environment scanning phase of strategic planning

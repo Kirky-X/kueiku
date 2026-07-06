@@ -1,119 +1,119 @@
-# Focus as No · 激进减法
+# Focus as No
 
-## 核心理念
+## Core Philosophy
 
-聚焦不是说"是"，而是说"不"。真正决定产品形态的不是"加了什么"，而是"砍了什么"。
+Focus is not about saying "yes" — it's about saying "no." What truly defines a product's shape is not "what was added," but "what was cut."
 
-本方法论反对"问用户要什么，然后照做"的被动响应模式——用户研究是必要的，但用户的表层诉求往往只是他们已见过的东西的组合，难以产生突破性创新。主张深度理解任务本质（job-to-be-done），主动剔除一切非核心的诱惑项。
+This methodology opposes the passive response model of "ask users what they want, then comply" — user research is necessary, but users' surface-level requests are often just combinations of things they've already seen, making it difficult to produce breakthrough innovation. It advocates deeply understanding the essence of the task (job-to-be-done) and proactively eliminating all non-core temptations.
 
-> **边界标注（重要）**
-> - 本方法论反对"问要什么然后照做"，**不反对**"深度理解任务"。
-> - 在工程任务中不要误用为"不听用户需求"——工程任务的需求是契约，不是产品臃肿。
-> - 适用：产品功能取舍、范围扩张诱惑。
-> - 不适用：明确的需求契约履行、bug 修复范围、合规要求。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 产品功能膨胀、什么都想做的阶段
-- 资源有限、必须做取舍的早期产品
-- 已有功能清单需要"瘦身"的产品迭代
-- "用户提了很多需求，要不要都做"的讨论
-
-⚠️ **慎用**
-- 工程任务的需求裁剪（需求是契约，非臃肿）
-- 合规/安全要求（不能"砍"）
-- Bug 修复范围（修复是义务）
+> **Boundary Annotation (Important)**
+> - This methodology opposes "ask what they want, then comply." It does **not** oppose "deeply understanding the task."
+> - In engineering tasks, do not misapply this as "don't listen to user requirements" — engineering requirements are contracts, not product bloat.
+> - Applicable: Product feature trade-offs, scope expansion temptations.
+> - Not applicable: Clear requirement contract fulfillment, bug fix scope, compliance requirements.
 
 ---
 
-## 执行步骤
+## Applicable Scenarios
 
-### Step 1：识别诱惑项
+✅ **Best For**
+- Product feature bloat, wanting to do everything
+- Early-stage products with limited resources that must make trade-offs
+- Product iterations where existing feature lists need "trimming"
+- Discussions about "users have raised many requests, should we do all of them?"
 
-列出当前所有"想要做"的功能/需求，逐项标注：
-- 来源（用户反馈 / 竞品跟进 / 内部想当然 / 老板拍板）
-- 是否对应一个真实可观测的任务（JTBD）
-- 如果不做，谁会受影响、影响多严重
-
-**判定标准**：无法对应真实任务、或"不做也没人真受影响"的，标记为"诱惑项"。
-
-### Step 2：候选剔除清单
-
-把所有诱惑项放入候选剔除清单，每项写明：
-- 功能名
-- 表面诉求（用户说"我要 X"）
-- 真实任务（用户其实在做什么）
-- 现有方案能不能覆盖这个任务
-
-> 若现有方案能覆盖，则该功能是冗余而非创新，剔除候选。
-
-### Step 3：评估剔除后果
-
-对每个候选剔除项做"反向验证"：
-- 剔除后，多少用户会受影响？（量化或估算）
-- 受影响用户是否有替代路径？
-- 剔除带来的简化收益（维护成本/认知负担/聚焦度）是多少？
-
-只有当"简化收益 > 影响成本"时才确认剔除。
-
-### Step 4：锁定最小集
-
-明确写出**锁定集**（保留功能）+ **剔除集**（确认砍掉），并为锁定集设定**升级触发条件**：
-- 什么数据指标出现时，考虑把某个剔除项重新纳入？
-- 什么用户行为信号说明判断错了？
-
-> 没有升级触发条件的剔除，等于赌一次性决策，无法纠偏。
+⚠️ **Use With Caution**
+- Requirement trimming in engineering tasks (requirements are contracts, not bloat)
+- Compliance/security requirements (cannot be "cut")
+- Bug fix scope (fixing is an obligation)
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Identify Temptations
+
+List all features/requirements that are "wanted to be built," and annotate each:
+- Source (user feedback / competitor following / internal assumptions / executive decision)
+- Whether it corresponds to a real, observable task (JTBD)
+- If not built, who would be affected and how severely
+
+**Decision Criteria**: Items that cannot correspond to a real task, or "nobody would be truly affected if not built," are marked as "temptations."
+
+### Step 2: Candidate Elimination List
+
+Place all temptations in a candidate elimination list, specifying for each:
+- Feature name
+- Surface request (user says "I want X")
+- Real task (what the user is actually trying to do)
+- Whether existing solutions can cover this task
+
+> If existing solutions can cover it, then the feature is redundant rather than innovative — it's a candidate for elimination.
+
+### Step 3: Evaluate Elimination Consequences
+
+Conduct "reverse validation" for each candidate elimination item:
+- After elimination, how many users would be affected? (Quantify or estimate)
+- Do affected users have alternative paths?
+- What is the simplification benefit from elimination (maintenance cost / cognitive load / focus)?
+
+Elimination is only confirmed when "simplification benefit > impact cost."
+
+### Step 4: Lock in the Minimal Set
+
+Clearly define the **locked set** (retained features) + **elimination set** (confirmed cuts), and set **escalation trigger conditions** for the locked set:
+- What data metrics would trigger reconsidering a previously eliminated item?
+- What user behavior signals indicate the judgment was wrong?
+
+> Elimination without escalation trigger conditions is a one-time bet with no mechanism for course correction.
+
+---
+
+## Output Template
 
 ```
-分析对象：[产品/功能模块]
-分析时间：[日期]
+Analysis Target: [Product/Feature Module]
+Analysis Date: [Date]
 
-候选诱惑项清单：
-  1. [功能名] | 来源：[用户/竞品/内部] | 对应任务：[有/无] | 影响范围：[描述]
+Candidate Temptation List:
+  1. [Feature Name] | Source: [User/Competitor/Internal] | Corresponding Task: [Yes/No] | Impact Scope: [Description]
   2. [...]
 
-剔除决策表：
-  | 功能 | 表面诉求 | 真实任务 | 现有方案覆盖? | 剔除后果 | 决策 |
-  |------|---------|---------|--------------|---------|------|
-  | ...  | ...     | ...     | 是/否        | ...     | 剔除/保留 |
+Elimination Decision Table:
+  | Feature | Surface Request | Real Task | Existing Solution Covers? | Elimination Consequence | Decision |
+  |---------|----------------|-----------|--------------------------|------------------------|----------|
+  | ...     | ...            | ...       | Yes/No                   | ...                    | Eliminate/Retain |
 
-锁定集（保留功能）：
-  1. [功能名] — 保留理由：[...]
+Locked Set (Retained Features):
+  1. [Feature Name] — Retention Rationale: [...]
   2. [...]
 
-剔除集（确认砍掉）：
-  1. [功能名] — 剔除理由：[...]
+Elimination Set (Confirmed Cuts):
+  1. [Feature Name] — Elimination Rationale: [...]
   2. [...]
 
-升级触发条件：
-  - 若 [指标X] 达到 [阈值]，重新评估 [剔除项Y]
-  - 若 [用户行为Z] 出现，重新评估 [剔除项W]
+Escalation Trigger Conditions:
+  - If [Metric X] reaches [Threshold], re-evaluate [Eliminated Item Y]
+  - If [User Behavior Z] appears, re-evaluate [Eliminated Item W]
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 避免方式 |
-|------|---------|
-| 误把核心功能也砍掉（为减而减） | 每个剔除项必须经过"真实任务 + 现有方案覆盖"双重验证 |
-| 把"用户没提"当成"用户不需要" | 主动验证：是没需求，还是没表达？ |
-| 剔除后无纠偏机制 | 必须设定升级触发条件，避免一次性赌注 |
-| 在工程任务上误用此方法论 | 工程需求是契约，不属于产品范围取舍范畴 |
-| 用"乔布斯也说不"为独断辩护 | "说不"基于任务分析，不是基于个人偏好 |
+| Pitfall | How to Avoid |
+|---------|-------------|
+| Accidentally cutting core features (cutting for the sake of cutting) | Each elimination item must pass dual validation: "real task + existing solution coverage" |
+| Treating "user didn't mention it" as "user doesn't need it" | Proactively verify: is it a lack of need, or a lack of expression? |
+| No correction mechanism after elimination | Must set escalation trigger conditions to avoid one-time bets |
+| Misapplying this methodology in engineering tasks | Engineering requirements are contracts, not product scope trade-offs |
+| Using "Jobs said no too" to justify arbitrary decisions | "Saying no" should be based on task analysis, not personal preference |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **前置 JDB Value Proposition**：用 JTBD 识别真实任务，判断功能是否冗余
-- **后接 RICE**：锁定集内部用 RICE 排序执行优先级
-- **后接 Invisible Perfection**：聚焦后对保留功能做工艺打磨
-- **互补 Whole Widget**：聚焦"做什么"，Whole Widget 聚焦"怎么做"
+- **Preceded by JDB Value Proposition**: Use JTBD to identify real tasks and determine if features are redundant
+- **Followed by RICE**: Use RICE within the locked set to prioritize execution
+- **Followed by Invisible Perfection**: After focusing, polish the craft of retained features
+- **Complementary to Whole Widget**: Focus as No focuses on "what to do"; Whole Widget focuses on "how to do it"

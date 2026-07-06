@@ -1,171 +1,171 @@
-# RFM Model · RFM 模型
+# RFM Model · RFM Model
 
-## 核心理念
+## Core Concept
 
-用**Recency**（最近购买时间）、**Frequency**（购买频率）、**Monetary**（消费金额）三个维度对用户进行细分，识别高价值用户、流失风险用户、新用户等群体，支撑精准运营。RFM 是用户分层的经典量化模型，比单纯按消费金额分层更能刻画用户状态。
+Use **Recency** (last purchase time), **Frequency** (purchase frequency), and **Monetary** (spending amount) three dimensions to segment users, identify high‑value users, churn‑risk users, new users, etc., to support precision operations. RFM is a classic quantitative model for user stratification, which better captures user state than simple monetary‑based segmentation.
 
-> RFM 的优势：只用交易数据即可计算，无需复杂用户画像；三个维度共同刻画"用户当前价值 + 未来倾向"。
+> RFM's advantage: can be calculated using only transaction data, no complex user profiles needed; the three dimensions together depict "user's current value + future tendency".
 
 ```
-              M (消费金额)
-              高
-              │   ★ 重要价值用户 (R高F高M高)
-              │   ★ 重要保持用户 (R低F高M高)
+              M (Spending Amount)
+              High
+              │   ★ High‑value users (R high F high M high)
+              │   ★ High‑retention users (R low F high M high)
               │
-              │   ★ 重要发展用户 (R高F低M高)
-              │   ★ 重要挽留用户 (R低F低M高)
-              ┼────────────── F (购买频率)
+              │   ★ High‑growth users (R high F low M high)
+              │   ★ High‑win‑back users (R low F low M high)
+              ┼────────────── F (Purchase Frequency)
               │
-              │   ★ 一般价值用户 (R高F高M低)
-              │   ★ 一般保持用户 (R低F高M低)
+              │   ★ General‑value users (R high F high M low)
+              │   ★ General‑retention users (R low F high M low)
               │
-              │   ★ 一般发展用户 (R高F低M低)
-              │   ★ 一般挽留用户 (R低F低M低)
-              低
-              低 R(最近购买) 高
+              │   ★ General‑growth users (R high F low M low)
+              │   ★ General‑win‑back users (R low F low M low)
+              Low
+              Low R (Recency) High
 ```
 
 ---
 
-## 适用场景
+## Applicable Scenarios
 
-✅ **最适合**
-- 用户分层与精准营销
-- 用户价值评估与运营资源分配
-- 流失预警与召回
-- 会员体系/忠诚度计划设计
+✅ **Most Suitable**
+- User stratification and precision marketing
+- User value assessment and operational resource allocation
+- Churn prediction and win‑back
+- Membership/loyalty program design
 
-⚠️ **慎用**
-- 低频高客单业务（如汽车/房产，Frequency 失效）
-- 无复购模式业务（如婚礼服务，RFM 退化为 M 单维度）
-- 冷启动期产品（交易数据不足以分层）
-- 非交易型产品（用活跃度替代 RFM，如 RAF 模型）
+⚠️ **Use with Caution**
+- Low‑frequency, high‑ticket businesses (e.g., automobiles/real estate, Frequency becomes ineffective)
+- Non‑repeat‑purchase businesses (e.g., wedding services, RFM degrades to single M dimension)
+- Cold‑start products (insufficient transaction data for stratification)
+- Non‑transactional products (use activity instead of RFM, e.g., RAF model)
 
 ---
 
-## 执行步骤
+## Execution Steps
 
-### Step 1：收集 RFM 数据
+### Step 1: Collect RFM Data
 
-从交易系统中提取每位用户的三个原始指标：
+Extract the three raw metrics for each user from the transaction system:
 
 ```
-数据提取：
-  用户 ID | 最近购买日期 | 累计购买次数 | 累计消费金额
-  U001    | 2026-06-15   | 12           | ¥4,800
-  U002    | 2025-03-02   | 2            | ¥600
+Data extraction:
+  User ID | Last Purchase Date | Cumulative Purchase Count | Cumulative Spending Amount
+  U001    | 2026-06-15         | 12                         | ¥4,800
+  U002    | 2025-03-02         | 2                          | ¥600
   ...
 
-R 转换：R = 分析日期 − 最近购买日期（天数，越小越好）
+R conversion: R = Analysis date − Last purchase date (days, smaller is better)
 ```
 
-数据清洗要点：剔除测试账号、合并同一用户多账号、统一金额币种。
+Data cleaning key points: remove test accounts, merge multiple accounts of the same user, unify currency.
 
-### Step 2：划分等级
+### Step 2: Assign Levels
 
-将每个维度的连续值分为若干等级（常用 5 等或 3 等）：
-
-```
-分等方法（任选其一）：
-  - 等距分等：按数值范围均分（适合分布均匀）
-  - 等频分等：按分位数均分（适合分布偏斜，推荐）
-  - 业务阈值：按业务经验设定阈值（如 R≤30天=5分）
-
-5 等分示例（等频）：
-  R：[0-30天]=5 / [31-90]=4 / [91-180]=3 / [181-365]=2 / [>365]=1
-  F：[≥12次]=5 / [8-11]=4 / [5-7]=3 / [2-4]=2 / [1次]=1
-  M：[≥¥5000]=5 / [¥3000-4999]=4 / ... / [<¥500]=1
-```
-
-> 等频分等比等距更稳健，避免被极端值扭曲。每个等级用户数大致相等。
-
-### Step 3：用户分群
-
-按 R/F/M 等级组合为有运营意义的群体：
+Divide each dimension's continuous values into several levels (commonly 5 or 3 levels):
 
 ```
-八大用户群（按 R 高低 × F 高低 × M 高低 组合）：
-  重要价值用户   R高 F高 M高 — 刚买过、买得多、花得多 → VIP 维护
-  重要保持用户   R低 F高 M高 — 曾经高频高价值，近期没买 → 流失预警/召回
-  重要发展用户   R高 F低 M高 — 最近买过且金额高，但频次低 → 提频
-  重要挽留用户   R低 F低 M高 — 历史高价值但近期沉默 → 高优召回
-  一般价值用户   R高 F高 M低 — 活跃但金额低 → 提客单
-  一般保持用户   R低 F高 M低 — 曾经活跃现已沉默 → 低优召回
-  一般发展用户   R高 F低 M低 — 新客或低频低额 → 培养
-  一般挽留用户   R低 F低 M低 — 低价值流失 → 放弃/低成本触达
+Leveling method (choose one):
+  - Equal‑interval leveling: divide by value range (suitable for uniform distribution)
+  - Quantile leveling: divide by quantiles (suitable for skewed distribution, recommended)
+  - Business thresholds: set thresholds based on business experience (e.g., R ≤ 30 days = 5 points)
+
+5‑level example (quantile):
+  R: [0‑30 days] = 5 / [31‑90] = 4 / [91‑180] = 3 / [181‑365] = 2 / [>365] = 1
+  F: [≥12 times] = 5 / [8‑11] = 4 / [5‑7] = 3 / [2‑4] = 2 / [1 time] = 1
+  M: [≥¥5000] = 5 / [¥3000‑4999] = 4 / ... / [<¥500] = 1
 ```
 
-也可用 R+F+M 总分排序做整体分层（如 13-15 分=头部，9-12=腰部，5-8=尾部）。
+> Quantile leveling is more robust than equal‑interval, avoiding distortion by extreme values. Each level has roughly equal user counts.
 
-### Step 4：制定运营策略
+### Step 3: User Segmentation
 
-针对每个用户群匹配运营动作：
+Combine R/F/M levels into operationally meaningful groups:
 
 ```
-运营策略矩阵：
-  用户群          运营目标    关键动作                  预期指标
-  重要价值用户    维持忠诚    专属权益/优先服务/感谢    续费率/留存
-  重要保持用户    防流失      召回优惠/调研原因/重新激活 召回率
-  重要发展用户    提频        交叉销售/订阅/复购激励    频次提升
-  重要挽留用户    高优召回    高触达/大额优惠/人工介入  召回率/LTV
-  一般价值用户    提客单      满减/升级/关联推荐        客单价提升
-  一般发展用户    培养        新手任务/教育/小额激励    频次+金额
-  一般保持/挽留   低本触达    自动化邮件/Push/放弃      ROI 控制
+Eight major user groups (by R high/low × F high/low × M high/low combinations):
+  High‑value users      R high F high M high — just purchased, frequent, high spend → VIP maintenance
+  High‑retention users  R low F high M high — previously high‑frequency high‑value, recently inactive → churn prediction/win‑back
+  High‑growth users     R high F low M high — recently purchased high amount, but low frequency → increase frequency
+  High‑win‑back users   R low F low M high — historically high value but recently silent → high‑priority win‑back
+  General‑value users   R high F high M low — active but low spend → increase average order value
+  General‑retention users R low F high M low — previously active now silent → low‑priority win‑back
+  General‑growth users  R high F low M low — new or low‑frequency low‑spend → nurture
+  General‑win‑back users R low F low M low — low‑value churn → abandon/low‑cost reach
 ```
 
-> 策略需匹配 ROI。重要挽留用户的召回成本上限 = 该群历史 LTV × 召回概率。
+You can also use the total R+F+M score for overall stratification (e.g., 13‑15 points = top, 9‑12 = middle, 5‑8 = tail).
+
+### Step 4: Formulate Operation Strategies
+
+Match operational actions to each user group:
+
+```
+Operation strategy matrix:
+  User group          Operation goal   Key actions                     Expected metrics
+  High‑value users    Maintain loyalty exclusive benefits/priority service/thank‑you renewal rate/retention
+  High‑retention users prevent churn    win‑back offers/survey reasons/reactivate win‑back rate
+  High‑growth users   increase frequency cross‑sell/subscription/repeat‑purchase incentives frequency lift
+  High‑win‑back users high‑priority win‑back high‑touch/large discount/manual intervention win‑back rate/LTV
+  General‑value users increase AOV     full‑amount reduction/upgrade/recommendations AOV lift
+  General‑growth users nurture         onboarding tasks/education/small incentives frequency + amount
+  General‑retention/win‑back low‑cost reach automated email/Push/abandon ROI control
+```
+
+> Strategies must align with ROI. The win‑back cost ceiling for high‑win‑back users = that group's historical LTV × win‑back probability.
 
 ---
 
-## 输出模板
+## Output Template
 
 ```
-RFM 用户分层报告
+RFM User Stratification Report
 
-一、数据概览
-  分析日期：[...]
-  用户总数：[N]
-  数据时间窗：[过去 X 个月]
+I. Data Overview
+  Analysis date: [...]
+  Total users: [N]
+  Data time window: [past X months]
 
-二、分等标准
-  R：[5 等阈值]
-  F：[5 等阈值]
-  M：[5 等阈值]
+II. Leveling Criteria
+  R: [5‑level thresholds]
+  F: [5‑level thresholds]
+  M: [5‑level thresholds]
 
-三、用户分群结果
-  重要价值用户：[N 人，占比 X%] — 平均 LTV [¥]
-  重要保持用户：[N 人] — 召回价值 [¥]
-  重要发展用户：[N 人]
-  重要挽留用户：[N 人]
-  一般价值/保持/发展/挽留：[各 N 人]
+III. User Segmentation Results
+  High‑value users: [N people, X% share] — average LTV [¥]
+  High‑retention users: [N people] — win‑back value [¥]
+  High‑growth users: [N people]
+  High‑win‑back users: [N people]
+  General‑value/retention/growth/win‑back: [N people each]
 
-四、运营策略
-  [按上表列出各群目标/动作/指标]
+IV. Operation Strategies
+  [List each group's goal/actions/metrics as per the table above]
 
-五、效果追踪
-  复测频率：[月度]
-  关键指标：[各群留存率/召回率/客单价变化]
+V. Effect Tracking
+  Re‑test frequency: [monthly]
+  Key metrics: [each group's retention/win‑back rate/AOV change]
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 避免方式 |
-|------|---------|
-| 用等距分等被极端值扭曲 | 优先用等频（分位数）分等 |
-| 分等阈值长期不变 | 定期复算阈值，适配业务增长 |
-| 只看总分不看组合 | R+F+M 总分会掩盖用户群特征，必须看组合 |
-| 忽视业务低频特性 | 低频业务降低 F 权重或改用 RAF 模型 |
-| 运营动作无 ROI 控制 | 每个群设定触达成本上限 |
-| 把 RFM 当静态分层 | 用户会在群间流动，需动态追踪迁移 |
+| Pitfall | Avoidance Method |
+|---------|------------------|
+| Equal‑interval leveling distorted by extreme values | Prefer quantile leveling |
+| Level thresholds unchanged over time | Periodically recalculate thresholds to adapt to business growth |
+| Looking only at total score, not combinations | R+F+M total score masks group characteristics; must examine combinations |
+| Ignoring low‑frequency business characteristics | Reduce F weight or use RAF model for low‑frequency businesses |
+| Operational actions lacking ROI control | Set reach cost ceilings for each group |
+| Treating RFM as static stratification | Users move between groups; need dynamic tracking of migration |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **搭配 User Segmentation**：RFM 是基于交易行为的细分，可与行为/需求细分叠加
-- **搭配 Cohort Analysis**：RFM 看当前分层，Cohort 看同期群留存演变
-- **搭配 Customer Journey Map**：RFM 识别关键群，旅程图设计触达动作
-- **搭配 Lean Analytics Metrics**：RFM 是留存与 LTV 指标的下钻维度
-- **后接 A/B Test**：运营策略用 A/B 测试验证效果
+- **Combined with User Segmentation**: RFM is transaction‑based segmentation, can be overlaid with behavioral/needs segmentation
+- **Combined with Cohort Analysis**: RFM shows current stratification, Cohort shows cohort retention evolution
+- **Combined with Customer Journey Map**: RFM identifies key groups, journey map designs reach actions
+- **Combined with Lean Analytics Metrics**: RFM is a drill‑down dimension for retention and LTV metrics
+- **Followed by A/B Test**: Operation strategies validated via A/B testing

@@ -1,20 +1,20 @@
-# Job Stories · 任务故事
+# Job Stories
 
-## 核心思想
-User Stories 用角色（"As a PM"）开篇，容易引导团队按用户身份思考；Job Stories 改用情境开篇，强制团队聚焦"在什么情况下，用户因为什么动机，想达成什么结果"——更贴近 JTBD 思想，避免 persona 偏见。
+## Core Idea
+User Stories start with a role ("As a PM"), which tends to lead teams to think by user identity. Job Stories start with a situation instead, forcing teams to focus on "under what circumstances, driven by what motivation, the user wants to achieve what outcome" — aligning more closely with JTBD thinking and avoiding persona bias.
 
-## 适用场景
-- User Stories 写得像功能清单（"作为用户，我要一个导出按钮"）
-- 同一功能被不同 persona 反复提，但本质是同一 Job
-- 需求讨论陷入"用户是谁"而非"用户在什么情境下要做什么"
+## Use Cases
+- User Stories read like feature checklists ("As a user, I want an export button")
+- The same feature is repeatedly requested by different personas, but is essentially the same Job
+- Requirements discussions get stuck on "who is the user" instead of "what does the user want to do in this situation"
 
-## 关键步骤
-1. 用模板写：When [situation], I want to [motivation], so I can [expected outcome]
-2. situation 要具体到场景（不是"作为管理员"，而是"当批量处理超过 1000 条记录时"）
-3. motivation 是用户的内在动机，不是产品功能（不是"我要一个批量按钮"，而是"我想一次完成避免重复操作"）
-4. expected outcome 是用户视角的成功（"节省时间"而非"系统返回 200"）
-5. 每个 job story 拆出多个候选解决方案，避免锁定单一实现
-6. 验收条件围绕 outcome 是否达成，而非功能是否实现
+## Key Steps
+1. Write using the template: When [situation], I want to [motivation], so I can [expected outcome]
+2. Situation must be specific to a scenario (not "as an admin", but "when batch processing more than 1000 records")
+3. Motivation is the user's intrinsic drive, not a product feature (not "I want a batch button", but "I want to complete it in one go to avoid repetitive actions")
+4. Expected outcome is the user's perspective of success ("save time" rather than "system returns 200")
+5. Each job story should yield multiple candidate solutions, avoiding lock-in to a single implementation
+6. Acceptance criteria should focus on whether the outcome is achieved, not whether the feature is implemented
 
-## 来源
-Paul Adams（Intercom）；起源见 Alan Klement《When Coffee and Kale Compete》
+## Source
+Paul Adams (Intercom); originated from Alan Klement's "When Coffee and Kale Compete"

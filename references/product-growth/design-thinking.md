@@ -1,175 +1,174 @@
 # Design Thinking · 设计思维
 
-## 核心理念
+## Core Concept
 
-以**人为中心**的创新方法论，通过深度理解用户需求来驱动解决方案设计。由 IDEO 和斯坦福 d.school 系统化，包含五个迭代阶段。
+A **human-centered** innovation methodology that drives solution design through deep understanding of user needs. Systematized by IDEO and Stanford d.school, it consists of five iterative phases.
 
 ```
 Empathize → Define → Ideate → Prototype → Test
-  同理        定义      构思      原型        测试
 ```
 
-**与传统设计的区别：**
-- 传统：我们有什么技术/资源 → 能做什么产品 → 用户会喜欢吗？
-- 设计思维：用户真正需要什么 → 理想解决方案是什么 → 我们能怎么实现？
+**Difference from Traditional Design:**
+- Traditional: What technology/resources do we have → What product can we build → Will users like it?
+- Design Thinking: What do users truly need → What is the ideal solution → How can we implement it?
 
 ---
 
-## 适用场景
+## Applicable Scenarios
 
-✅ **最适合**
-- 全新产品/服务从 0 到 1 的设计
-- 解决用户体验中的痛点（定性问题）
-- 服务设计和流程再造
-- 创新工作坊和团队对齐
+✅ **Best For**
+- Designing entirely new products/services from 0 to 1
+- Solving pain points in user experience (qualitative problems)
+- Service design and process reengineering
+- Innovation workshops and team alignment
 
-⚠️ **慎用**
-- 时间极度紧张的快速决策
-- 技术限制已经非常明确的场景（直接做工程方案）
-- 纯数据驱动的优化（A/B 测试更有效）
-
----
-
-## 五阶段详解
-
-### Phase 1 · Empathize（同理 / 共情）
-
-**目标**：深入理解用户，而非假设用户需要什么。
-
-方法：
-- **用户访谈**：开放式问题，探索行为和动机
-- **情境观察（Shadowing）**：在真实环境中观察用户行为
-- **体验日记**：让用户记录日常使用产品的体验
-- **极端用户访谈**：访谈最深度用户和最不喜欢产品的用户（洞察更极端明显）
-
-产出：
-- 用户故事、引语集合
-- 行为观察笔记
-- 同理心地图（见 `empathy-map.md`）
-
-关键原则：**放下假设，像人类学家一样观察**
+⚠️ **Use with Caution**
+- Rapid decisions under extreme time pressure
+- When technical constraints are already very clear (just do the engineering)
+- Pure data-driven optimization (A/B testing is more effective)
 
 ---
 
-### Phase 2 · Define（定义）
+## Five Phases Explained
 
-**目标**：将 Empathize 阶段的发散信息，聚焦为一个**清晰、有意义的问题定义**。
+### Phase 1 · Empathize
 
-核心工具：**How Might We（HMW）陈述**
+**Goal**: Deeply understand users, rather than assuming what they need.
+
+Methods:
+- **User Interviews**: Open-ended questions exploring behavior and motivation
+- **Contextual Shadowing**: Observe user behavior in real environments
+- **Experience Diaries**: Have users record daily product usage experiences
+- **Extreme User Interviews**: Interview power users and users who dislike the product most (insights are more extreme and obvious)
+
+Outputs:
+- User stories, quote collections
+- Behavioral observation notes
+- Empathy map (see `empathy-map.md`)
+
+Key principle: **Set aside assumptions, observe like an anthropologist**
+
+---
+
+### Phase 2 · Define
+
+**Goal**: Focus the divergent information from Empathize into a **clear, meaningful problem definition**.
+
+Core tool: **How Might We (HMW) Statement**
 
 ```
-格式：我们如何帮助 [用户] 实现 [目标]，同时/尽管 [约束/张力]？
+Format: How might we help [user] achieve [goal], while/although [constraint/tension]?
 
-例：我们如何帮助 独居老人 保持与家人的连接感，
-   同时 不让他们感到自己是"被监控"的？
+Example: How might we help elderly people living alone maintain connection with family,
+    while not making them feel "monitored"?
 ```
 
-**HMW 的范围控制**：
-- 太宽："我们如何改善老人生活？" → 无法执行
-- 太窄："我们如何让老人学会用视频通话？" → 限制了创新空间
-- 刚好："我们如何帮助老人自然地分享日常生活给家人？" ✅
+**HMW Scope Control**:
+- Too broad: "How might we improve elderly life?" → Not actionable
+- Too narrow: "How might we teach elderly to use video calls?" → Limits innovation space
+- Just right: "How might we help elderly naturally share daily life with family?" ✅
 
-产出：
-- 用户画像（Persona）
-- 核心问题陈述（Point of View）
-- HMW 问题清单
-
----
-
-### Phase 3 · Ideate（构思）
-
-**目标**：针对 HMW 问题，尽可能多地产生创意，延迟评判。
-
-主要方法：
-- **脑暴（Brainstorm）**：先求量，20分钟内产生50+想法
-- **SCAMPER**：替换/组合/改编/修改/他用/消除/重排
-- **逆向思维**：怎么让问题变得更糟？→ 反转得到解决方案
-- **类比借鉴**：其他行业如何解决类似问题？
-
-聚焦方法（发散后聚焦）：
-- 投票贴纸（每人有限票数，选最有潜力的想法）
-- 2×2 矩阵（可行性 vs 影响力）
-- RICE 评分（见 `rice.md`）
-
-产出：
-- 创意清单（分类整理）
-- Top 3-5 概念方向
+Outputs:
+- User persona
+- Core problem statement (Point of View)
+- HMW question list
 
 ---
 
-### Phase 4 · Prototype（原型）
+### Phase 3 · Ideate
 
-**目标**：快速构建**低成本、可测试**的原型，将抽象想法变为可见可触摸的形式。
+**Goal**: Generate as many ideas as possible for the HMW question, deferring judgment.
 
-原型类型（按保真度）：
+Main methods:
+- **Brainstorm**: Quantity first, 50+ ideas in 20 minutes
+- **SCAMPER**: Substitute/Combine/Adapt/Modify/Put-to-other-uses/Eliminate/Rearrange
+- **Reverse thinking**: How could we make the problem worse? → Invert to get solutions
+- **Analogous borrowing**: How do other industries solve similar problems?
 
-| 类型 | 材料 | 目的 |
+Focusing methods (after divergence):
+- Voting stickers (limited votes per person, select most promising ideas)
+- 2×2 matrix (feasibility vs impact)
+- RICE scoring (see `rice.md`)
+
+Outputs:
+- Idea inventory (organized by category)
+- Top 3-5 concept directions
+
+---
+
+### Phase 4 · Prototype
+
+**Goal**: Quickly build **low-cost, testable** prototypes to turn abstract ideas into visible, tangible forms.
+
+Prototype types (by fidelity):
+
+| Type | Materials | Purpose |
 |------|------|------|
-| 纸原型 | 纸、笔、剪刀 | 测试流程和概念 |
-| 线框图 / Mockup | Figma/Sketch | 测试交互和布局 |
-| 功能原型 | 真实代码（部分） | 测试技术可行性 |
-| 服务角色扮演 | 人工模拟 | 测试服务流程 |
-| 视频原型 | 短视频 | 测试价值主张理解 |
+| Paper prototype | Paper, pen, scissors | Test process and concept |
+| Wireframe / Mockup | Figma/Sketch | Test interaction and layout |
+| Functional prototype | Real code (partial) | Test technical feasibility |
+| Service role-play | Manual simulation | Test service process |
+| Video prototype | Short video | Test value proposition understanding |
 
-**关键原则：先保真度低，快速迭代。原型不是最终产品，是学习工具。**
-
----
-
-### Phase 5 · Test（测试）
-
-**目标**：将原型给真实用户使用，收集反馈，学习并迭代。
-
-测试原则：
-- **让用户操作，你只观察**：不要解释怎么用
-- **问"为什么"而非"你喜欢吗"**：避免礼貌性正面反馈
-- **关注行为，而非言辞**：用户说"好"但操作卡壳更有参考价值
-- **快速失败**：测试的目的是发现问题，不是验证自己是对的
-
-迭代判断：
-- 测试后回到哪个阶段？（可能是 Define，可能是 Ideate，也可能是微调 Prototype）
-- 什么时候可以推进到开发？（核心假设被验证，关键痛点已解决）
+**Key principle: Start low-fidelity, iterate quickly. Prototypes are not final products — they are learning tools.**
 
 ---
 
-## 输出模板（工作坊版）
+### Phase 5 · Test
+
+**Goal**: Put prototypes in front of real users, collect feedback, learn and iterate.
+
+Testing principles:
+- **Let users operate, you just observe**: Don't explain how to use it
+- **Ask "why" not "do you like it"**: Avoid polite positive feedback
+- **Focus on behavior, not words**: A user saying "good" but getting stuck is more informative
+- **Fail fast**: The purpose of testing is to discover problems, not to prove yourself right
+
+Iteration judgment:
+- After testing, return to which phase? (Could be Define, could be Ideate, could be tweaking Prototype)
+- When is it ready to move to development? (Core hypotheses validated, key pain points resolved)
+
+---
+
+## Output Template (Workshop Version)
 
 ```
-项目：[产品/服务]
+Project: [Product/Service]
 
-Phase 1 · Empathize：
-  访谈用户：[N 人，特征描述]
-  关键观察：[...]
-  惊喜发现：[...]
+Phase 1 · Empathize:
+  Users interviewed: [N people, characteristics]
+  Key observations: [...]
+  Surprising discoveries: [...]
 
-Phase 2 · Define：
-  用户画像：[...]
-  核心 POV：[用户] 需要 [需求]，因为 [洞察/原因]
-  HMW 问题：[最终选定的 HMW 陈述]
+Phase 2 · Define:
+  User persona: [...]
+  Core POV: [User] needs [need] because [insight/reason]
+  HMW statement: [Final selected HMW]
 
-Phase 3 · Ideate：
-  生成创意数量：[N]
-  Top 概念：
-    1. [名称] — [一句话描述]
+Phase 3 · Ideate:
+  Number of ideas generated: [N]
+  Top concepts:
+    1. [Name] — [One-line description]
     2. [...]
     3. [...]
 
-Phase 4 · Prototype：
-  原型类型：[纸原型/线框/功能原型]
-  原型描述：[...]
-  关键测试假设：[...]
+Phase 4 · Prototype:
+  Prototype type: [Paper/Wireframe/Functional]
+  Prototype description: [...]
+  Key hypotheses to test: [...]
 
-Phase 5 · Test：
-  测试用户：[N 人]
-  关键发现：[...]
-  需要修改的点：[...]
-  下一步：[回到哪个阶段迭代 / 准备开发]
+Phase 5 · Test:
+  Test users: [N people]
+  Key findings: [...]
+  Points needing modification: [...]
+  Next step: [Return to which phase for iteration / Ready for development]
 ```
 
 ---
 
-## 与其他方法论的关系
+## Relationships with Other Methodologies
 
-- **前置 JTBD**：JTBD 挖掘用户真实 Job，作为 Empathize + Define 阶段的输入
-- **后接 Lean BML**：设计思维做出原型概念，BML 循环执行产品迭代
-- **配合 Customer Journey Map**：旅程地图是 Empathize 阶段的核心工具
-- **配合 RICE**：Ideate 阶段聚焦时，用 RICE 排创意优先级
+- **Preceded by JTBD**: JTBD uncovers real user Jobs as input for Empathize + Define phases
+- **Followed by Lean BML**: Design thinking produces prototype concepts; BML loops execute product iteration
+- **Combined with Customer Journey Map**: Journey map is a core tool for the Empathize phase
+- **Combined with RICE**: When focusing in the Ideate phase, use RICE to prioritize creative ideas

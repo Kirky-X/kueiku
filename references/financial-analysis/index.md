@@ -1,30 +1,30 @@
-# Financial Analysis · 财务分析
+# Financial Analysis
 
-**适用场景**：需要对企业财务表现、估值、价值创造做量化判断
+**Applicable Scenarios**: When quantitative judgment is needed on enterprise financial performance, valuation, or value creation.
 
-| 方法论 | 一句话描述 | 最佳场景 | Reference |
+| Methodology | One-Line Description | Best Scenario | Reference |
 | --- | --- | --- | --- |
-| **DuPont Analysis** | ROE = 净利率 × 资产周转率 × 权益乘数 三因素拆解 | 财务诊断、同业对比、ROE 异动分析 | `dupont.md` |
-| **DCF** | 企业价值 = 未来自由现金流现值之和 | 企业估值、投资决策、并购定价 | `dcf.md` |
-| **Comparable Company** | 通过相似公司估值倍数推断目标公司价值 | IPO 定价、并购、行业对比 | `comparable-company.md` |
-| **EVA** | EVA = NOPAT - 资本成本 × 投入资本，衡量真实价值创造 | 绩效评估、投资决策、价值管理 | `eva.md` |
+| **DuPont Analysis** | ROE = Net Profit Margin × Asset Turnover × Equity Multiplier — three-factor decomposition | Financial diagnostics, peer comparison, ROE fluctuation analysis | `dupont.md` |
+| **DCF** | Enterprise Value = Sum of present values of future free cash flows | Enterprise valuation, investment decisions, M&A pricing | `dcf.md` |
+| **Comparable Company** | Inferring target company value through valuation multiples of similar companies | IPO pricing, M&A, industry comparison | `comparable-company.md` |
+| **EVA** | EVA = NOPAT - Capital Cost × Invested Capital, measuring true value creation | Performance evaluation, investment decisions, value management | `eva.md` |
 
-## 各方法论最低信息需求
+## Minimum Information Requirements
 
-- **DuPont Analysis**：目标公司三因素数据 + 同业对比数据
-- **DCF**：未来现金流预测 + WACC 估算 + 终值假设
-- **Comparable Company**：可比公司清单 + 估值倍数数据
-- **EVA**：NOPAT + 资本成本 + 投入资本数据
+- **DuPont Analysis**: Target company three-factor data + peer comparison data
+- **DCF**: Future cash flow projections + WACC estimation + terminal value assumptions
+- **Comparable Company**: Comparable company list + valuation multiples data
+- **EVA**: NOPAT + Capital cost + Invested capital data
 
-## 路由触发信号
+## Routing Trigger Signals
 
-- "ROE 异动原因/财务诊断/盈利能力拆解" → DuPont Analysis（主）
-- "企业估值/投资决策/并购定价" → DCF（主）
-- "IPO 定价/行业估值对比/可比公司" → Comparable Company（主）
-- "真实价值创造/绩效评估/资本效率" → EVA（主）
+- "ROE fluctuation causes / Financial diagnostics / Profitability decomposition" → DuPont Analysis (primary)
+- "Enterprise valuation / Investment decisions / M&A pricing" → DCF (primary)
+- "IPO pricing / Industry valuation comparison / Comparable companies" → Comparable Company (primary)
+- "True value creation / Performance evaluation / Capital efficiency" → EVA (primary)
 
-## 常见组合
+## Common Combinations
 
-- **企业估值**：DCF（内在价值）+ Comparable Company（市场参照）交叉验证
-- **财务诊断**：DuPont Analysis（ROE 拆解）→ EVA（价值创造验证）
-- **投资决策**：DuPont Analysis（质量评估）→ DCF（估值）→ EVA（持有期价值创造）
+- **Enterprise Valuation**: DCF (intrinsic value) + Comparable Company (market reference) — cross-validate
+- **Financial Diagnostics**: DuPont Analysis (ROE decomposition) → EVA (value creation validation)
+- **Investment Decisions**: DuPont Analysis (quality assessment) → DCF (valuation) → EVA (holding period value creation)

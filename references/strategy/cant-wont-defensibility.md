@@ -1,21 +1,21 @@
-# Can't-Won't Defensibility · 不可复制性策略
+# Can't-Won't Defensibility
 
-## 核心思想
-真正的护城河不是"做得比竞品好"，而是建立竞品"做不到（can't）"或"不愿做（won't）"的壁垒。把防御性从模糊概念拆解为可主动设计的策略集，明确每条护城河属于哪一类。
+## Core Concept
+True moats aren't about "being better than competitors" but building barriers that competitors "can't do" or "won't do." Decompose defensibility from a vague concept into an actively designable strategy set, clearly identifying which category each moat belongs to.
 
-## 适用场景
-- 投资人问"竞品抄你怎么办"
-- 战略制定阶段需要明确可持续优势来源
-- 现有优势正在被竞品追赶，需要建立新护城河
+## Use Cases
+- Investors asking "what if competitors copy you"
+- Strategic formulation phase requiring clear sustainable advantage sources
+- Existing advantages being chased by competitors, needing new moats built
 
-## 关键步骤
-1. 列出当前所有潜在护城河候选：网络效应/规模经济/数据壁垒/品牌/切换成本/专利/独家资源/合规优势
-2. 对每条评估属于哪类：
-   - Can't：竞品客观上做不到（如独家数据/专利/合规牌照）
-   - Won't：竞品能做但不愿做（如会冲击其现有商业模式——颠覆性创新原理）
-3. 验证每条护城河的真实性：是否真的需要 3 年以上才能追上？
-4. 对 can't 类：持续加固（数据飞轮、专利组合、合规关系）
-5. 对 won't 类：明确"竞品放弃的代价"，监控其是否改变主意
+## Key Steps
+1. List all current potential moat candidates: network effects/economies of scale/data barriers/brand/switching costs/patents/unique resources/compliance advantages
+2. For each, assess which category it belongs to:
+   - Can't: Competitors objectively can't do it (e.g., exclusive data/patents/compliance licenses)
+   - Won't: Competitors can do it but won't (e.g., it would cannibalize their existing business model — disruptive innovation principle)
+3. Verify each moat's authenticity: Does it truly take 3+ years to catch up?
+4. For Can't category: Continuously strengthen (data flywheel, patent portfolio, compliance relationships)
+5. For Won't category: Clarify "the cost of competitor abandonment," monitor whether they change their mind
 
-## 来源
-Paweł Huryn（Product Compass）；理论根基见 Clayton Christensen 颠覆性创新 + Hamilton Helmer 7 Powers
+## Source
+Paweł Huryn (Product Compass); theoretical foundations in Clayton Christensen's disruptive innovation + Hamilton Helmer's 7 Powers

@@ -1,19 +1,19 @@
-# Opportunity Solution Tree · 机会解决方案树
+# Opportunity Solution Tree
 
-## 核心思想
-通过四层结构把业务结果与发现工作对齐：Outcome → Opportunities → Solutions → Experiments。在每层强制聚焦"机会"（用户痛点/需求）而非直接跳到方案，避免"做出来没人用"。
+## Core Idea
+Align business outcomes with discovery work through a four-layer structure: Outcome → Opportunities → Solutions → Experiments. Each layer forces focus on "opportunities" (user pain points/needs) rather than jumping directly to solutions, preventing "building something nobody uses."
 
-## 适用场景
-- 持续产品发现，需要把团队工作与业务目标对齐
-- 避免 PM 直接拍方案、跳过用户机会挖掘
-- 多方案需并行实验时，统一规划发现工作
+## Use Cases
+- Continuous product discovery, need to align team work with business goals
+- Prevent PM from jumping straight to solutions, skipping user opportunity exploration
+- When multiple solutions require parallel experiments, unify discovery work planning
 
-## 关键步骤
-1. 定义期望 Outcome（业务结果，非功能产出），如"提升新用户首周留存 20%"
-2. 通过用户访谈挖掘 Opportunities（用户在此目标下的痛点/需求/未满足场景），按优先级分层
-3. 为每个优先 Opportunity 设计多个 Solution 候选（鼓励发散，至少 3 个）
-4. 为每个 Solution 设计最小 Experiment（first-click/fake door/prototype 等）验证假设
-5. 周会沿树自下而上回溯：实验结果 → 决策方案 → 覆盖机会 → 推进 Outcome
+## Key Steps
+1. Define the desired Outcome (business result, not feature output), e.g., "Increase new user first-week retention by 20%"
+2. Mine Opportunities through user interviews (user pain points/needs/unmet scenarios under this goal), prioritize and layer them
+3. Design multiple Solution candidates for each prioritized Opportunity (encourage divergence, at least 3)
+4. Design minimal Experiments for each Solution (first-click/fake door/prototype etc.) to validate assumptions
+5. Weekly meetings trace back up the tree bottom-up: Experiment results → Solution decisions → Covered opportunities → Outcome progress
 
-## 来源
-Teresa Torres《Continuous Discovery Habits》（2021）
+## Source
+Teresa Torres, *Continuous Discovery Habits* (2021)

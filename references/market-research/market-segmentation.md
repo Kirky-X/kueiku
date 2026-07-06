@@ -1,21 +1,21 @@
-# Market Segmentation · 市场细分
+# Market Segmentation
 
-## 核心思想
-把"所有人都是我的用户"拆为 3–5 个 non-overlapping 的细分市场，每个 segment 用 behavior + JTBD + needs 三维定义——而非传统的"按行业/规模"人口学切分。后者表面清晰但与购买决策无关。
+## Core Concept
+Break "everyone is my user" into 3–5 non-overlapping market segments, each defined by behavior + JTBD + needs three dimensions — rather than traditional "by industry/scale" demographic segmentation. The latter appears clear but is unrelated to purchasing decisions.
 
-## 适用场景
-- 产品/市场战略制定初期需明确服务谁
-- 现有 segment 定义停留在"中小企业/大企业"这类无差别切分
-- 不同 segment 实际使用行为差异显著却被一视同仁
+## Applicable Scenarios
+- Need to clarify who to serve during early product/market strategy formulation
+- Existing segment definitions stuck at undifferentiated divisions like "SME/large enterprise"
+- Different segments have significantly different actual usage behavior but are treated identically
 
-## 关键步骤
-1. 收集客户数据：行为数据（功能使用/频率）+ 访谈数据（JTBD/痛点）+ 需求清单
-2. 按三维聚类：behavior 模式 + JTBD 类型 + 必须满足的 needs
-3. 形成 3–5 个 segment，验证 non-overlapping：
-   - 任一客户应能被归入唯一 segment（如可同时归入多个，说明切分维度不准）
-   - 每个 segment 内部同质、segment 之间异质
-4. 对每个 segment 评估：规模、付费意愿、获客成本、竞争强度
-5. 选定主攻 segment（参考 beachhead-segment.md 的 4 准则）
+## Key Steps
+1. Collect customer data: Behavior data (feature usage/frequency) + interview data (JTBD/pain points) + needs list
+2. Cluster by three dimensions: Behavior patterns + JTBD types + Must-have needs
+3. Form 3–5 segments, validate non-overlapping:
+   - Any customer should be assignable to only one segment (if assignable to multiple, segmentation dimensions are inaccurate)
+   - Homogeneous within each segment, heterogeneous between segments
+4. For each segment, assess: scale, willingness to pay, acquisition cost, competition intensity
+5. Select primary target segment (reference beachhead-segment.md's 4 criteria)
 
-## 来源
-Product Compass（Market Segmentation 框架）
+## Source
+Product Compass (Market Segmentation framework)

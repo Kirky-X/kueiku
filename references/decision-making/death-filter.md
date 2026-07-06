@@ -1,149 +1,149 @@
-# Death Filter · 存在主义决策过滤器
+# Death Filter
 
-## 核心理念
+## Core Concept
 
-用**"如果这是我最后一个决策，我会怎么选？"** 作为过滤器，剥离短期噪音、他人期待、沉没成本，让真正重要的考虑浮出水面。这是存在主义视角的决策工具：面对有限性，看清什么是真正值得的。
+Use **"If this were my last decision, what would I choose?"** as a filter to strip away short-term noise, others' expectations, and sunk costs, allowing what truly matters to surface. This is an existential decision-making tool: facing finitude, clarifying what is truly worthwhile.
 
-> 死亡过滤器不是悲观工具，而是**澄清工具**。它通过引入"有限性"这一终极约束，把决策从短期情绪和外部期待中解放出来。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 重大人生决策（婚姻/生育/重大健康选择）
-- 职业方向选择（转行/创业/接受 offer）
-- 创业方向与项目选择
-- 价值观冲突的两难决策
-
-⚠️ **局限标注 — 不适用于以下场景**
-- 日常运营决策（会过度严肃化，导致决策瘫痪）
-- 必须快速决策的紧急场景（如生产事故、危机响应）
-- 纯客观的技术选型（无价值观成分，过滤器无意义）
-- 涉及他人重大利益但本人非决策主体（代入感失真）
+> The death filter is not a pessimistic tool, but a **clarifying tool**. By introducing the ultimate constraint of "finitude," it liberates decisions from short-term emotions and external expectations.
 
 ---
 
-## 执行步骤
+## Applicable Scenarios
 
-### Step 1：识别决策重要性
+✅ **Best suited for**
+- Major life decisions (marriage/childbearing/major health choices)
+- Career direction choices (career change/starting a business/accepting an offer)
+- Startup direction and project selection
+- Dilemma decisions involving value conflicts
 
-先判断这个决策是否值得用死亡过滤器（避免滥用）：
-
-```
-决策重要性检查：
-  □ 影响时长：[短期/中期/长期/终身]
-  □ 可逆性：[易逆/难逆/不可逆]
-  □ 价值负荷：[纯技术/含价值观/核心价值]
-  □ 情感纠缠：[低/中/高]
-
-适用判断：
-  长期 + 难逆/不可逆 + 含价值观 + 情感纠缠 → 适用
-  短期 + 易逆 + 纯技术 → 不适用，用常规决策法
-```
-
-> 滥用是最大风险。把日常决策上升到存在主义层面，会导致决策瘫痪与精力耗竭。
-
-### Step 2：应用死亡过滤器
-
-对每个候选选项，问以下问题：
-
-```
-死亡过滤提问（对每个选项逐一问）：
-  1. 如果这是我最后一个决策，我还会选这个吗？
-  2. 如果生命只剩 [N 年]，这个选项还重要吗？
-  3. 这个选择是出于我真正想要的，还是出于他人期待/社会规范/沉没成本？
-  4. 10 年后回看，我会后悔没选哪个？会后悔选了哪个？
-  5. 如果这个决策的后果由我独自承担（无人知晓无人评判），我还会这样选吗？
-  6. 这个选择让我的生活更接近还是更远离"我真正想成为的人"？
-
-记录每个选项在每个问题下的真实反应（不是理性答案，是直觉反应）。
-```
-
-> 过滤器的价值在于暴露被噪音掩盖的真实倾向。诚实面对直觉反应，而非编造理性答案。
-
-### Step 3：评估剩余选项
-
-经过过滤后，哪些选项"活下来"了：
-
-```
-剩余选项评估：
-  选项 A：通过 [N/6] 个过滤问题 — 真实倾向：[...]
-  选项 B：通过 [N/6] 个过滤问题 — 真实倾向：[...]
-  选项 C：通过 [N/6] 个过滤问题 — 真实倾向：[...]
-
-被过滤掉的选项：
-  选项 X：被过滤原因：[主要受他人期待/沉没成本/短期情绪驱动]
-```
-
-如果所有选项都被过滤（都不通过），说明问题不在选项，而在**问题本身需要重构**（参考 Reframe and Elevate）。
-
-### Step 4：决策并承担
-
-```
-最终决策：
-  选定：[选项]
-  核心理由：[基于过滤后真实倾向，而非理性化]
-  我将放弃的：[选定 A 意味着放弃 B/C，明确承认放弃]
-  我将承担的：[可能的最坏后果 + 应对预案]
-  承诺：[这是我的选择，我为后果负责，不归咎于他人或环境]
-```
-
-> 死亡过滤器的终点是"承担"。看清真实倾向后，决策并为之负责，是其完整闭环。过滤后仍犹豫不决，是未真正承担。
+⚠️ **Limitations — Not suitable for the following scenarios**
+- Daily operational decisions (may become overly serious, leading to decision paralysis)
+- Urgent scenarios requiring quick decisions (e.g., production incidents, crisis response)
+- Purely objective technical selection (no value component, filter meaningless)
+- Involving others' significant interests but not being the decision-maker (misaligned empathy)
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Identify Decision Importance
+
+First, determine whether this decision is worth using the death filter (to avoid misuse):
 
 ```
-存在主义决策过滤分析
+Decision Importance Check:
+  □ Impact duration: [Short-term/Mid-term/Long-term/Lifetime]
+  □ Reversibility: [Easily reversible/Hard to reverse/Irreversible]
+  □ Value load: [Pure technical/Contains values/Core values]
+  □ Emotional entanglement: [Low/Medium/High]
 
-一、决策重要性
-  决策内容：[...]
-  影响时长：[...] / 可逆性：[...] / 价值负荷：[...] / 情感纠缠：[...]
-  适用性判断：[适用/不适用] — 理由：[...]
+Applicability judgment:
+  Long-term + Hard to reverse/Irreversible + Contains values + High emotional entanglement → Applicable
+  Short-term + Easily reversible + Pure technical → Not applicable, use regular decision methods
+```
 
-二、候选选项
-  选项 A：[...]
-  选项 B：[...]
-  选项 C：[...]
+> Misuse is the greatest risk. Elevating daily decisions to an existential level leads to decision paralysis and energy depletion.
 
-三、死亡过滤
-  [对每个选项记录 6 个过滤问题的真实反应]
-  通过情况：[A: N/6 / B: N/6 / C: N/6]
-  被过滤项及原因：[...]
+### Step 2: Apply the Death Filter
 
-四、剩余选项评估
-  活下来的选项：[...]
-  真实倾向：[...]
+For each candidate option, ask the following questions:
 
-五、最终决策
-  选定：[...]
-  核心理由：[...]
-  放弃的：[...]
-  承担的后果与预案：[...]
-  承诺声明：[...]
+```
+Death filter questions (ask each question for each option):
+  1. If this were my last decision, would I still choose this?
+  2. If life had only [N years] left, would this option still matter?
+  3. Is this choice based on what I truly want, or on others' expectations/social norms/sunk costs?
+  4. Looking back in 10 years, would I regret not choosing which option? Would I regret choosing which option?
+  5. If I had to bear the consequences of this decision alone (no one knowing or judging), would I still choose this way?
+  6. Does this choice bring my life closer to or further from "the person I truly want to be"?
+
+Record each option's genuine reaction to each question (not rational answers, but intuitive responses).
+```
+
+> The filter's value lies in exposing true inclinations masked by noise. Honestly face intuitive responses, not fabricate rational answers.
+
+### Step 3: Evaluate Remaining Options
+
+After filtering, which options "survived":
+
+```
+Remaining options evaluation:
+  Option A: Passed [N/6] filter questions — True inclination: [...]
+  Option B: Passed [N/6] filter questions — True inclination: [...]
+  Option C: Passed [N/6] filter questions — True inclination: [...]
+
+Filtered out options:
+  Option X: Filter reason: [Primarily driven by others' expectations/sunk costs/short-term emotions]
+```
+
+If all options are filtered out (none pass), the problem is not with the options, but with **the problem itself needing reframing** (refer to Reframe and Elevate).
+
+### Step 4: Decide and Commit
+
+```
+Final decision:
+  Selected: [Option]
+  Core reason: [Based on post-filter true inclination, not rationalization]
+  What I will give up: [Selecting A means giving up B/C, explicitly acknowledge]
+  What I will bear: [Possible worst consequences + response plan]
+  Commitment: [This is my choice, I take responsibility for consequences, not blaming others or circumstances]
+```
+
+> The endpoint of the death filter is "commitment." After seeing the true inclination, deciding and taking responsibility is its complete loop. Hesitation after filtering indicates not truly committing.
+
+---
+
+## Output Template
+
+```
+Existential Decision Filter Analysis
+
+I. Decision Importance
+  Decision content: [...]
+  Impact duration: [...] / Reversibility: [...] / Value load: [...] / Emotional entanglement: [...]
+  Applicability judgment: [Applicable/Not applicable] — Reason: [...]
+
+II. Candidate Options
+  Option A: [...]
+  Option B: [...]
+  Option C: [...]
+
+III. Death Filter
+  [Record genuine reactions to 6 filter questions for each option]
+  Pass status: [A: N/6 / B: N/6 / C: N/6]
+  Filtered items and reasons: [...]
+
+IV. Remaining Options Evaluation
+  Survived options: [...]
+  True inclination: [...]
+
+V. Final Decision
+  Selected: [...]
+  Core reason: [...]
+  What is given up: [...]
+  Consequences to bear and response plan: [...]
+  Commitment statement: [...]
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 避免方式 |
+| Pitfall | How to Avoid |
 |------|---------|
-| 滥用于日常决策导致瘫痪 | 严格走重要性检查，只用于重大不可逆决策 |
-| 用理性答案替代直觉反应 | 记录第一直觉反应，而非编造的合理化 |
-| 过滤后仍犹豫不决 | 设定决策截止时间，到期必须承担选定项 |
-| 忽视对他人的影响 | 过滤器聚焦"我"，但重大决策须兼顾利益相关者 |
-| 把过滤器当逃避工具 | 过滤器用于看清真实倾向，不是用于合理化冲动 |
-| 一次决策定终身 | 重大决策可分期验证，非一次性 all-in |
+| Misuse in daily decisions causing paralysis | Strictly follow importance check, only use for major irreversible decisions |
+| Replacing intuitive responses with rational answers | Record first intuitive responses, not fabricated rationalizations |
+| Hesitating after filtering | Set a decision deadline, must commit by the deadline |
+| Ignoring impact on others | Filter focuses on "I," but major decisions must consider stakeholders |
+| Using the filter as an escape tool | Filter is for seeing true inclinations, not rationalizing impulses |
+| One decision for life | Major decisions can be verified in phases, not one-time all-in |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **搭配 Pre-mortem**：死亡过滤器选方向，Pre-mortem 预演选定方向的失败风险
-- **搭配 Decision Matrix**：Decision Matrix 处理可量化决策，Death Filter 处理价值决策
-- **搭配 Reframe and Elevate**：所有选项都被过滤时，需重构问题本身
-- **搭配 Socratic Questioning**：苏格拉底追问帮助识别决策中的隐含价值观
-- **搭配 Second-Order Thinking**：选定后用二阶思维评估长期连锁效应
+- **Combined with Pre-mortem**: Death filter selects direction, Pre-mortem rehearses failure risks of the selected direction
+- **Combined with Decision Matrix**: Decision Matrix handles quantifiable decisions, Death Filter handles value-based decisions
+- **Combined with Reframe and Elevate**: When all options are filtered, the problem itself needs reframing
+- **Combined with Socratic Questioning**: Socratic questioning helps identify implicit values in decisions
+- **Combined with Second-Order Thinking**: After selection, use second-order thinking to evaluate long-term chain effects

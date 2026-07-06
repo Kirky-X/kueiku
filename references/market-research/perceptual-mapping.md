@@ -1,168 +1,168 @@
-# Perceptual Mapping · 感知图
+# Perceptual Mapping
 
-## 核心理念
+## Core Concept
 
-用**二维坐标图**展示消费者对品牌/产品的感知定位，横纵轴代表消费者判断品牌的关键维度。感知图让"心智位置"可视化，用于诊断定位差距、识别市场空白、调整品牌定位。
+Uses a **two-dimensional coordinate chart** to display consumer perception of brand/product positioning, with horizontal and vertical axes representing the key dimensions consumers use to judge brands. Perceptual mapping visualizes "mental positioning" for diagnosing positioning gaps, identifying market white spaces, and adjusting brand positioning.
 
-> 感知图回答的不是"产品客观上是什么"，而是"消费者主观上认为它是什么"。客观属性与主观感知的差距，往往是定位问题的根源。
+> Perceptual mapping answers not "what the product objectively is" but "what consumers subjectively believe it is." The gap between objective attributes and subjective perception is often the root cause of positioning problems.
 
 ```
-        维度 B（如：传统 ↔ 创新）
-        创新 ↑
-             |   ★ 竞品 X
-             |       ★ 自身
+        Dimension B (e.g., Traditional ↔ Innovative)
+        Innovative ↑
+             |   ★ Competitor X
+             |       ★ Own brand
              |
-        ─────┼─────→ 维度 A（如：低价 ↔ 高端）
+        ─────┼─────→ Dimension A (e.g., Low-price ↔ Premium)
              |
-             |   ★ 竞品 Y
-        传统 ↓
-             低价           高端
+             |   ★ Competitor Y
+        Traditional ↓
+             Low-price           Premium
 ```
 
 ---
 
-## 适用场景
+## Applicable Scenarios
 
-✅ **最适合**
-- 品牌定位诊断与重新定位
-- 竞品感知对比
-- 识别市场空白与定位机会
-- 品牌延伸决策（延伸后感知是否漂移）
+✅ **Best suited for**
+- Brand positioning diagnosis and repositioning
+- Competitor perception comparison
+- Identifying market white spaces and positioning opportunities
+- Brand extension decisions (whether perception drifts after extension)
 
-⚠️ **慎用**
-- 无感知数据纯靠拍脑袋画图（图会失真）
-- 维度选择主观无依据（图无法指导决策）
-- 市场品牌过少（少于 5 个品牌难以判断空白）
-- B2B 复杂采购决策（单一感知图难以刻画多决策者）
+⚠️ **Use with caution**
+- No perception data, purely drawing from guesswork (chart will be distorted)
+- Dimension selection is subjective and unfounded (chart cannot guide decisions)
+- Too few brands in the market (fewer than 5 brands makes it hard to identify white spaces)
+- B2B complex purchasing decisions (single perceptual map cannot capture multiple decision-makers)
 
 ---
 
-## 执行步骤
+## Execution Steps
 
-### Step 1：确定维度
+### Step 1: Determine Dimensions
 
-选择消费者真正用来判断品类的两个关键维度。维度来源：
-
-```
-维度发现方法：
-  - 用户访谈：让用户描述"为什么选 A 不选 B"，提炼高频词
-  - 因子分析：从多个属性评分中统计出主要因子
-  - 专家判断：行业经验 + 竞品差异点
-  - 文本挖掘：从评价/社交媒体提取高频评价维度
-
-常见维度组合（示例）：
-  - 价格 ↔ 品质
-  - 传统 ↔ 创新
-  - 功能性 ↔ 情感性
-  - 大众 ↔ 小众
-  - 专业 ↔ 休闲
-  - 简约 ↔ 丰富
-```
-
-> 维度选择决定图的洞察力。选错维度会得到"图很漂亮但无用"的结果。两个维度应尽量正交（独立）。
-
-### Step 2：收集感知数据
-
-多方法获取消费者对各品牌的感知评分：
+Select the two key dimensions consumers truly use to judge the category. Sources for dimensions:
 
 ```
-数据收集方法：
-  - 直接评分：让目标用户对每个品牌在两个维度上打分（1-7 分）
-  - 语义差异量表：用对立词对（如传统↔创新）评分
-  - 多维标定（MDS）：从品牌间相似度反推坐标
-  - 既有调研：复用品牌健康度追踪数据
+Dimension discovery methods:
+  - User interviews: Ask users to describe "why choose A over B," extract high-frequency terms
+  - Factor analysis: Statistically derive main factors from multiple attribute ratings
+  - Expert judgment: Industry experience + competitor differentiators
+  - Text mining: Extract high-frequency evaluation dimensions from reviews/social media
 
-样本要求：
-  - 至少 50-100 个目标段用户
-  - 每个用户评估所有品牌（同一参照系）
-  - 标注用户所属细分段
+Common dimension combinations (examples):
+  - Price ↔ Quality
+  - Traditional ↔ Innovative
+  - Functional ↔ Emotional
+  - Mass market ↔ Niche
+  - Professional ↔ Casual
+  - Simple ↔ Rich
 ```
 
-### Step 3：绘制感知图
+> Dimension selection determines the chart's insight value. Wrong dimensions yield "beautiful but useless" results. The two dimensions should be as orthogonal (independent) as possible.
+
+### Step 2: Collect Perception Data
+
+Use multiple methods to gather consumer perception ratings for each brand:
 
 ```
-感知图（以 价格 × 创新度 为例）：
+Data collection methods:
+  - Direct rating: Ask target users to rate each brand on two dimensions (1-7 scale)
+  - Semantic differential scale: Rate using opposing word pairs (e.g., traditional↔innovative)
+  - Multidimensional Scaling (MDS): Derive coordinates from brand similarity data
+  - Existing research: Reuse brand health tracking data
 
-  创新 ↑     ◆ 品牌D
-       |        ◆ 品牌A（自身）
-       |  ◆ 品牌C
+Sample requirements:
+  - At least 50-100 target segment users
+  - Each user evaluates all brands (same reference frame)
+  - Label which segment each user belongs to
+```
+
+### Step 3: Draw the Perceptual Map
+
+```
+Perceptual map (using Price × Innovation as example):
+
+  Innovative ↑     ◆ BrandD
+       |        ◆ BrandA (Own brand)
+       |  ◆ BrandC
        |
-  ─────┼──────────────→ 高端
+  ─────┼──────────────→ Premium
        |
-       |    ◆ 品牌B
-       |        ◆ 品牌E
-  传统 ↓
-       低价
+       |    ◆ BrandB
+       |        ◆ BrandE
+  Traditional ↓
+       Low-price
 ```
 
-- 每个点代表一个品牌在消费者心智中的平均位置
-- 点的散布反映感知差异程度
-- 标注点的置信区间，避免过度解读细微差异
+- Each point represents a brand's average position in consumers' minds
+- Point scatter reflects the degree of perception difference
+- Annotate confidence intervals to avoid over-interpreting minor differences
 
-### Step 4：解读定位差距
+### Step 4: Interpret Positioning Gaps
 
 ```
-解读清单：
-  □ 市场空白：哪个象限/区域无品牌占据？是否是真机会？
-  □ 拥挤区：哪些品牌感知相近？竞争最激烈
-  □ 自身位置：是否在目标定位点上？偏移方向？
-  □ 理想点：目标段用户"理想品牌"的位置在哪？我方距离？
-  □ 趋势：对比历史感知图，位置如何变化？
+Interpretation checklist:
+  □ Market white space: Which quadrant/area has no brand occupying it? Is it a real opportunity?
+  □ Crowded area: Which brands have similar perceptions? Most intense competition
+  □ Own position: Is it at the target positioning point? Direction of deviation?
+  □ Ideal point: Where is the target segment's "ideal brand"? How far are we?
+  □ Trend: Compared to historical perceptual maps, how has the position changed?
 ```
 
-> 空白区不等于机会。需验证：该区域是否有足够需求？我方能否触达？壁垒如何？
+> White space does not equal opportunity. Validation needed: Is there sufficient demand in that area? Can we reach it? What are the barriers?
 
 ---
 
-## 输出模板
+## Output Template
 
 ```
-感知图分析报告
+Perceptual Mapping Analysis Report
 
-一、维度选择
-  维度 A：[名称] — 选择依据：[...]
-  维度 B：[名称] — 选择依据：[...]
-  正交性检查：[两个维度是否独立]
+I. Dimension Selection
+  Dimension A: [Name] — Selection rationale: [...]
+  Dimension B: [Name] — Selection rationale: [...]
+  Orthogonality check: [Are the two dimensions independent]
 
-二、数据收集
-  方法：[直接评分/MDS/...]
-  样本：[N 个目标段用户]
-  品牌列表：[A, B, C, D, E]
+II. Data Collection
+  Method: [Direct rating/MDS/...]
+  Sample: [N target segment users]
+  Brand list: [A, B, C, D, E]
 
-三、感知图
-  [二维图，标注各品牌位置 + 自身 + 理想点]
+III. Perceptual Map
+  [Two-dimensional chart, annotating each brand's position + own brand + ideal point]
 
-四、定位差距解读
-  市场空白区：[...] — 机会评估：[真机会/伪机会]
-  拥挤区：[...] — 竞争强度：[...]
-  自身位置：[...] — 与目标定位偏差：[...]
-  理想点距离：[...]
+IV. Positioning Gap Interpretation
+  Market white space: [...] — Opportunity assessment: [Real opportunity/False opportunity]
+  Crowded area: [...] — Competition intensity: [...]
+  Own position: [...] — Deviation from target positioning: [...]
+  Ideal point distance: [...]
 
-五、定位调整建议
-  目标位置：[...]
-  调整路径：[产品/传播/渠道动作]
-  验证方式：[N 个月后复测感知图]
+V. Positioning Adjustment Recommendations
+  Target position: [...]
+  Adjustment path: [Product/Communication/Channel actions]
+  Validation method: [Reassess perceptual map after N months]
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 避免方式 |
+| Pitfall | How to Avoid |
 |------|---------|
-| 维度主观拍脑袋 | 用用户访谈或因子分析确定维度 |
-| 样本量不足或非目标段 | 至少 50+ 目标段用户，避免用便利样本 |
-| 忽视置信区间过度解读细微差异 | 标注误差范围，差异在误差内不解读 |
-| 把空白区当机会 | 验证空白区是否有需求与可触达性 |
-| 只画一次不做趋势对比 | 定期复测，跟踪定位漂移 |
-| 用客观属性替代感知 | 感知图是主观感知，不是客观参数对比 |
+| Subjective dimension selection | Use user interviews or factor analysis to determine dimensions |
+| Insufficient sample size or non-target segment | At least 50+ target segment users, avoid convenience samples |
+| Ignoring confidence intervals, over-interpreting minor differences | Annotate error ranges, do not interpret differences within error margins |
+| Treating white space as opportunity | Validate whether the white space has demand and reachability |
+| Drawing only once without trend comparison | Regularly reassess to track positioning drift |
+| Using objective attributes instead of perception | Perceptual maps are about subjective perception, not objective parameter comparison |
 
 ---
 
-## 与其他方法论的关系
+## Relationships with Other Methodologies
 
-- **STP Analysis 的核心工具**：感知图是 STP 定位步骤的可视化工具
-- **搭配 User Personas**：不同 persona 的感知图可能不同，可分别绘制
-- **搭配 Brand Positioning**：感知图诊断现状，定位声明定义目标
-- **搭配 Competitive Analysis**：感知图是竞品感知对比的核心呈现
-- **后接 Brand Tracking**：定位调整后用品牌追踪持续监测感知变化
+- **Core tool of STP Analysis**: Perceptual mapping is the visualization tool for the positioning step in STP
+- **Combined with User Personas**: Different personas may have different perceptual maps; draw them separately
+- **Combined with Brand Positioning**: Perceptual mapping diagnoses the current state; positioning statements define the goal
+- **Combined with Competitive Analysis**: Perceptual mapping is the core presentation of competitor perception comparison
+- **Followed by Brand Tracking**: After positioning adjustments, use brand tracking to continuously monitor perception changes

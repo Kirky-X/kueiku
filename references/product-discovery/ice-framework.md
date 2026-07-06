@@ -1,22 +1,22 @@
-# ICE Framework · ICE 评分
+# ICE Framework
 
-## 核心思想
-RICE 的轻量替代——只用 Impact / Confidence / Ease 三维，去掉 Reach（覆盖度）。牺牲精确度换执行效率，适合早期产品或需快速筛选大量想法时使用。
+## Core Idea
+A lightweight alternative to RICE — uses only Impact / Confidence / Ease dimensions, dropping Reach. Sacrifices precision for execution speed, ideal for early-stage products or when quickly screening a large number of ideas.
 
-## 适用场景
-- 想法池大、需要 30 分钟内完成初筛
-- 早期产品 Reach 数据不可靠
-- 团队对 RICE 的 Effort 估算争议大，简化为更直觉的 Ease
+## Use Cases
+- Large idea pool, need initial screening within 30 minutes
+- Early-stage products where Reach data is unreliable
+- Team disagreements over RICE's Effort estimation, simplified to the more intuitive Ease
 
-## 关键步骤
-1. 列出候选想法/功能池
-2. 对每条打分（1–10）：
-   - Impact：对核心指标的影响
-   - Confidence：估算把握程度
-   - Ease：实现难度反向（越容易分越高）
-3. ICE 分 = Impact × Confidence × Ease，或简单平均
-4. 按分数降序取 top N 进入详细评估
-5. 入围项再走 RICE / Opportunity Score 做精排
+## Key Steps
+1. List candidate ideas/feature pool
+2. Score each one (1–10):
+   - Impact: Effect on core metrics
+   - Confidence: Degree of certainty in the estimate
+   - Ease: Inverse of implementation difficulty (easier = higher score)
+3. ICE score = Impact × Confidence × Ease, or simple average
+4. Take top N by descending score for detailed evaluation
+5. Finalists then go through RICE / Opportunity Score for fine-ranking
 
-## 来源
-Product Compass；ICE 早期由 Sean Ellis 在 growth hacking 圈推广。
+## Source
+Product Compass; ICE was popularized by Sean Ellis in the growth hacking community.

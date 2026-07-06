@@ -1,43 +1,43 @@
-# Decision Making · 决策制定
+# Decision Making
 
-**适用场景**：需要在多个选项中做出可辩护的决定
+**Applicable scenarios**: Making defensible decisions when multiple options are available
 
-| 方法论 | 一句话描述 | 最佳场景 | Reference |
+| Methodology | One-sentence description | Best scenario | Reference |
 | --- | --- | --- | --- |
-| **RICE Scoring** | Reach×Impact×Confidence÷Effort 量化优先级 | 产品路线图排序、需求优先级 | `rice.md` |
-| **Eisenhower Matrix** | 重要性×紧迫性 四象限时间管理 | 个人/团队任务管理、资源分配 | `eisenhower.md` |
-| **OKR** | Objectives + Key Results 目标拆解体系 | 季度/年度目标制定、团队对齐 | `okr.md` |
-| **Pre-mortem & Counterfactual** | 逆向想象失败场景，预演风险并识别关键变量 | 重大决策前、项目启动、投资评估 | `premortem-counterfactual.md` |
-| **Decision Matrix** | 多方案多标准加权评分，将选择量化 | 技术选型、策略选择、候选人评估 | `decision-matrix.md` |
-| **MoSCoW Method** | Must/Should/Could/Won't 四级需求裁剪 | 范围管理、需求分类、Sprint规划 | `moscow.md` |
-| **FMEA** | 严重度×频度×探测度 排序失效风险 | 产品/流程风险识别、质量工程、安全关键系统 | `fmea.md` |
-| **Death Filter** | "如果这是最后一个决策"存在主义过滤器 | 重大人生决策、职业选择、创业方向选择 | `death-filter.md` |
+| **RICE Scoring** | Quantify priorities via Reach×Impact×Confidence÷Effort | Product roadmap ranking, requirement prioritization | `rice.md` |
+| **Eisenhower Matrix** | Four-quadrant time management by Importance×Urgency | Personal/team task management, resource allocation | `eisenhower.md` |
+| **OKR** | Objectives + Key Results goal decomposition system | Quarterly/annual goal setting, team alignment | `okr.md` |
+| **Pre-mortem & Counterfactual** | Imagine failure scenarios in reverse to rehearse risks and identify key variables | Before major decisions, project initiation, investment evaluation | `premortem-counterfactual.md` |
+| **Decision Matrix** | Weighted scoring for multiple options across multiple criteria to quantify choices | Technical selection, strategy choice, candidate evaluation | `decision-matrix.md` |
+| **MoSCoW Method** | Must/Should/Could/Won't four-level requirement trimming | Scope management, requirement classification, Sprint planning | `moscow.md` |
+| **FMEA** | Rank failure risks via Severity×Occurrence×Detection | Product/process risk identification, quality engineering, safety-critical systems | `fmea.md` |
+| **Death Filter** | "If this were the last decision" existential filter | Major life decisions, career choices, startup direction | `death-filter.md` |
 
-## 各方法论最低信息需求
+## Minimum Information Requirements for Each Methodology
 
-- **RICE**：需要候选项列表 + 基本量级认知
-- **OKR**：需要明确的时间周期和负责主体
-- **Pre-mortem**：需要已有明确计划/决策方案
-- **Decision Matrix**：需要至少 3 个备选方案 + 评估标准列表
-- **MoSCoW**：需要需求列表 + 利益相关者参与
-- **FMEA**：需要系统/流程的组件分解
-- **Death Filter**：需要重大不可逆决策 + 候选选项（不适用于日常/紧急决策）
-- **Eisenhower Matrix**：需要待分类的任务清单（个人/团队任务管理）
+- **RICE**: Requires candidate list + basic magnitude awareness
+- **OKR**: Requires clear time period and responsible entity
+- **Pre-mortem**: Requires existing clear plan/decision proposal
+- **Decision Matrix**: Requires at least 3 alternative options + evaluation criteria list
+- **MoSCoW**: Requires requirement list + stakeholder participation
+- **FMEA**: Requires component breakdown of system/process
+- **Death Filter**: Requires major irreversible decision + candidate options (not for routine/urgent decisions)
+- **Eisenhower Matrix**: Requires task list to classify (personal/team task management)
 
-## 路由触发信号
+## Routing Trigger Signals
 
-- "功能/需求优先级排序" → RICE Scoring（主）
-- "个人/团队任务管理" → Eisenhower Matrix（主）
-- "目标制定与追踪" → OKR（主）
-- "重大决策前风险预演" → Pre-mortem & Counterfactual（主）
-- "多方案多标准选型" → Decision Matrix（主）
-- "需求裁剪/范围管理" → MoSCoW Method（主）
-- "系统性风险识别/失效模式分析" → FMEA（主）
-- "重大人生决策/职业选择/创业方向（价值型决策）" → Death Filter（主）
+- "Feature/requirement prioritization" → RICE Scoring (primary)
+- "Personal/team task management" → Eisenhower Matrix (primary)
+- "Goal setting and tracking" → OKR (primary)
+- "Risk rehearsal before major decisions" → Pre-mortem & Counterfactual (primary)
+- "Multi-option, multi-criteria selection" → Decision Matrix (primary)
+- "Requirement trimming/scope management" → MoSCoW Method (primary)
+- "Systematic risk identification/failure mode analysis" → FMEA (primary)
+- "Major life decisions/career choices/startup direction (value-based decisions)" → Death Filter (primary)
 
-## 常见组合
+## Common Combinations
 
-- **重大决策**：苏格拉底提问（澄清假设）→ Decision Matrix → Pre-mortem（风险审查）
-- **需求全流程管理**：Kano（分类性质）→ MoSCoW（裁剪范围）→ RICE（排优先级）
-- **风险全面评估**：FMEA（系统化识别）→ Pre-mortem（想象式补充）→ Second-Order Thinking（连锁效应）
-- **重大人生/创业决策**：Death Filter（过滤真实倾向）→ Pre-mortem（预演选定方向风险）→ Second-Order Thinking（长期效应）
+- **Major decisions**: Socratic questioning (clarify assumptions) → Decision Matrix → Pre-mortem (risk review)
+- **End-to-end requirement management**: Kano (classification) → MoSCoW (scope trimming) → RICE (prioritization)
+- **Comprehensive risk assessment**: FMEA (systematic identification) → Pre-mortem (imaginative supplementation) → Second-Order Thinking (chain effects)
+- **Major life/startup decisions**: Death Filter (filter true inclinations) → Pre-mortem (rehearse selected direction risks) → Second-Order Thinking (long-term effects)

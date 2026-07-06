@@ -1,160 +1,160 @@
-# Business Model Canvas · 商业模式画布
+# Business Model Canvas
 
-## 核心理念
+## Core Concept
 
-用 9 个模块可视化一个完整的商业模式，揭示价值如何被**创造、传递、和变现**。由 Alexander Osterwalder 提出，是商业模式设计与重构的标准工具。
+Visualize a complete business model through 9 modules, revealing how value is **created, delivered, and captured**. Proposed by Alexander Osterwalder, it is the standard tool for business model design and restructuring.
 
-> 策略是方向，商业模式是机制——它回答的是「我们靠什么赚钱、为谁创造价值、怎么运转」。
+> Strategy is direction; business model is mechanism — it answers "how we make money, for whom we create value, how it operates."
 
-**9个模块总览：**
-
-```
-[关键伙伴] [关键活动] [价值主张] [客户关系] [客户细分]
-           [关键资源]            [渠道通路]
-                    [成本结构]  [收入来源]
-```
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 创业初期设计商业模式
-- 评估现有业务是否存在结构性问题
-- 分析竞争对手的商业模式
-- 商业模式转型/重构（如从产品型转向平台型）
-
-⚠️ **慎用**
-- 已有清晰商业模式、只需执行层优化（改用 OKR 或 RICE）
-- 单纯分析外部竞争环境（改用 Porter's Five Forces + PESTLE）
-
----
-
-## 执行步骤
-
-### Step 1：定位客户细分（Customer Segments）
-
-回答：**我们为谁创造价值？**
-
-- 列出目标客群，区分主要/次要客户
-- 明确客群特征：规模、需求、行为、购买力
-- 若有多个客群，判断是否服务同一价值主张
-
-### Step 2：提炼价值主张（Value Propositions）
-
-回答：**我们为客户解决什么问题、满足什么需求？**
-
-- 对每个客群写出 1-3 条核心价值
-- 用「我们帮助 [客群] 实现 [目标]，通过 [差异化方式]」格式检验
-- 识别是功能型（省时省钱）、情感型（安全感）还是社会型（身份认同）
-
-### Step 3：填充渠道通路（Channels）
-
-回答：**如何触达客户、传递价值？**
-
-- 覆盖阶段：认知 → 评估 → 购买 → 交付 → 售后
-- 区分自有渠道（官网、App）vs 合作渠道（代理商、平台）
-
-### Step 4：定义客户关系（Customer Relationships）
-
-回答：**与客户建立什么类型的关系？**
-
-- 自助服务 / 专属服务 / 社区 / 共创
-- 重点：获取新客 vs 留存老客 vs 提升客单价，各靠什么关系模式
-
-### Step 5：规划收入来源（Revenue Streams）
-
-回答：**客户愿意为什么付钱？怎么付？**
-
-- 一次性交易 / 订阅 / 使用费 / 授权 / 广告
-- 估算各收入流占比，识别核心收入流
-
-### Step 6：盘点关键资源（Key Resources）
-
-回答：**交付价值主张需要哪些核心资产？**
-
-- 实体资源（设备、场地）/ 知识资源（专利、数据）/ 人力资源 / 财务资源
-- 重点标出稀缺资源和竞争壁垒来源
-
-### Step 7：梳理关键活动（Key Activities）
-
-回答：**必须做好哪些核心动作？**
-
-- 生产型 / 平台型 / 问题解决型
-- 与价值主张对应：每项核心价值由哪些活动支撑
-
-### Step 8：识别关键伙伴（Key Partnerships）
-
-回答：**哪些事情外包或合作更好？**
-
-- 战略联盟 / 供应商 / 合资 / 买断许可
-- 与伙伴合作的目的：优化成本 / 降低风险 / 获取资源
-
-### Step 9：核算成本结构（Cost Structure）
-
-回答：**运营这个商业模式最主要的成本是什么？**
-
-- 固定成本 vs 可变成本
-- 成本驱动型（极致效率）vs 价值驱动型（高端体验）
-- 标出与关键活动和关键资源对应的最大成本项
-
----
-
-## 输出模板
+**9 Modules Overview:**
 
 ```
-客户细分：[主要客群 1] / [主要客群 2]
-价值主张：[客群1对应价值] / [客群2对应价值]
-渠道通路：[触达和交付方式]
-客户关系：[关系类型及目标]
-收入来源：[收入模式] — 预估占比：[x%]
-
-关键资源：[核心资产，标注壁垒]
-关键活动：[核心动作，标注优先级]
-关键伙伴：[合作方及合作目的]
-成本结构：[主要成本项] — 成本/价值驱动型：[xxx]
-
-核心矛盾/风险：[画布中存在的不匹配或薄弱环节]
+[Key Partners] [Key Activities] [Value Propositions] [Customer Relationships] [Customer Segments]
+               [Key Resources]              [Channels]
+                        [Cost Structure]  [Revenue Streams]
 ```
 
 ---
 
-## 执行示例
+## Use Cases
 
-**场景**：评估一个 B2B SaaS 产品的商业模式
+✅ **Best for**
+- Business model design at startup inception
+- Assessing whether existing businesses have structural problems
+- Analyzing competitors' business models
+- Business model transformation/restructuring (e.g., from product-based to platform-based)
+
+⚠️ **Use with caution**
+- When a clear business model already exists and only execution-level optimization is needed (use OKR or RICE instead)
+- When purely analyzing the external competitive environment (use Porter's Five Forces + PESTLE)
+
+---
+
+## Execution Steps
+
+### Step 1: Define Customer Segments
+
+Answer: **For whom do we create value?**
+
+- List target customer groups, distinguish primary/secondary customers
+- Define customer group characteristics: scale, needs, behaviors, purchasing power
+- If multiple customer groups exist, determine whether they serve the same value proposition
+
+### Step 2: Articulate Value Propositions
+
+Answer: **What problems do we solve and what needs do we satisfy for customers?**
+
+- Write 1-3 core values for each customer group
+- Validate using the format: "We help [customer group] achieve [goal] through [differentiated method]"
+- Identify whether functional (saving time/money), emotional (sense of security), or social (identity)
+
+### Step 3: Fill in Channels
+
+Answer: **How do we reach customers and deliver value?**
+
+- Coverage stages: Awareness → Evaluation → Purchase → Delivery → After-sales
+- Distinguish owned channels (website, App) vs partner channels (distributors, platforms)
+
+### Step 4: Define Customer Relationships
+
+Answer: **What type of relationships do we build with customers?**
+
+- Self-service / Dedicated service / Community / Co-creation
+- Focus: Customer acquisition vs retention vs ARPU increase — which relationship model supports each
+
+### Step 5: Plan Revenue Streams
+
+Answer: **What are customers willing to pay for? How do they pay?**
+
+- One-time transaction / Subscription / Usage fees / Licensing / Advertising
+- Estimate each revenue stream's proportion, identify core revenue streams
+
+### Step 6: Inventory Key Resources
+
+Answer: **What core assets are needed to deliver the value proposition?**
+
+- Physical resources (equipment, facilities) / Knowledge resources (patents, data) / Human resources / Financial resources
+- Highlight scarce resources and competitive barrier sources
+
+### Step 7: Outline Key Activities
+
+Answer: **What core actions must we excel at?**
+
+- Production-type / Platform-type / Problem-solving-type
+- Map to value propositions: Which activities support each core value
+
+### Step 8: Identify Key Partnerships
+
+Answer: **What is better outsourced or done through collaboration?**
+
+- Strategic alliances / Suppliers / Joint ventures / Licensing deals
+- Purpose of partner collaboration: Optimize costs / Reduce risks / Acquire resources
+
+### Step 9: Calculate Cost Structure
+
+Answer: **What are the main costs of operating this business model?**
+
+- Fixed costs vs Variable costs
+- Cost-driven (extreme efficiency) vs Value-driven (premium experience)
+- Mark the largest cost items corresponding to key activities and key resources
+
+---
+
+## Output Template
 
 ```
-客户细分：100-500人规模的科技公司HR团队
-价值主张：将招聘流程从30天缩短到10天，减少60%筛选人工
+Customer Segments: [Primary group 1] / [Primary group 2]
+Value Propositions: [Value for group 1] / [Value for group 2]
+Channels: [Reach and delivery methods]
+Customer Relationships: [Relationship type and goals]
+Revenue Streams: [Revenue model] — Estimated share: [x%]
 
-渠道通路：官网SEO + 内容营销 + 销售顾问（企业版）
-客户关系：自助试用（PLG）→ 成交后CSM跟进
-收入来源：订阅制（按席位）— 核心收入流 85%
+Key Resources: [Core assets, mark barriers]
+Key Activities: [Core actions, mark priority]
+Key Partners: [Partners and collaboration purpose]
+Cost Structure: [Main cost items] — Cost/Value-driven: [xxx]
 
-关键资源：招聘算法模型（知识壁垒）+ 简历数据库
-关键活动：算法迭代 + 客户成功 + 内容营销
-关键伙伴：HRIS系统集成伙伴（Workday/SAP）
-成本结构：研发人力（55%）+ 云计算（20%）+ 销售（15%）
-
-核心矛盾：PLG与企业销售两套动作并行，资源分散——需决定主攻方向
+Core contradictions/Risks: [Mismatches or weak links in the canvas]
 ```
 
 ---
 
-## 常见陷阱
+## Execution Example
 
-| 陷阱 | 说明 | 避免方式 |
+**Scenario**: Assessing a B2B SaaS product's business model
+
+```
+Customer Segments: HR teams at tech companies with 100-500 employees
+Value Propositions: Reduce hiring cycle from 30 days to 10 days, cut 60% of screening labor
+
+Channels: Website SEO + Content marketing + Sales consultants (Enterprise edition)
+Customer Relationships: Self-service trial (PLG) → Post-sale CSM follow-up
+Revenue Streams: Subscription (per-seat) — Core revenue stream 85%
+
+Key Resources: Hiring algorithm model (knowledge barrier) + Resume database
+Key Activities: Algorithm iteration + Customer success + Content marketing
+Key Partners: HRIS system integration partners (Workday/SAP)
+Cost Structure: R&D headcount (55%) + Cloud computing (20%) + Sales (15%)
+
+Core contradiction: PLG and enterprise sales running in parallel, resources scattered — need to decide primary direction
+```
+
+---
+
+## Common Pitfalls
+
+| Pitfall | Description | How to Avoid |
 |------|------|---------|
-| 9格都填满但互不关联 | 画布是系统，各模块需内在逻辑一致 | 填完后检验：每条价值主张能被关键活动+资源支撑吗？ |
-| 价值主张写成功能列表 | "功能多"不是价值主张 | 改写成「帮助[客群]解决[痛点]/实现[目标]」句式 |
-| 收入来源和成本结构缺乏数量级 | 定性描述无法判断商业模式可行性 | 至少估算各项占比或量级 |
-| 忽视商业模式内的张力 | 比如：高端定位却走低价渠道 | 画完后专门找矛盾点，矛盾往往是最重要的洞察 |
+| All 9 cells filled but unrelated to each other | Canvas is a system; modules need internal logical consistency | After filling, test: Can each value proposition be supported by key activities + resources? |
+| Value propositions written as feature lists | "Many features" is not a value proposition | Rewrite as "Help [customer group] solve [pain point] / achieve [goal]" |
+| Revenue streams and cost structure lack order-of-magnitude estimates | Qualitative descriptions can't judge business model feasibility | At least estimate proportions or magnitudes for each item |
+| Ignoring tensions within the business model | E.g., premium positioning but low-price channels | After drawing, specifically look for contradictions — they are often the most important insights |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **前置 PESTLE/SWOT**：先了解外部环境和自身现状，再设计商业模式
-- **配合 JTBD**：用 JTBD 挖掘客户真实任务，直接输入「价值主张」模块
-- **配合 Value Proposition Canvas**：对「价值主张」模块做深度展开
-- **输出接 OKR**：商业模式确定后，关键活动转化为团队 OKR
+- **Preceded by PESTLE/SWOT**: Understand external environment and current state first, then design business model
+- **Combined with JTBD**: Use JTBD to discover customer real tasks, directly input to the "Value Propositions" module
+- **Combined with Value Proposition Canvas**: Deep-dive into the "Value Propositions" module
+- **Output feeds OKR**: After business model is confirmed, key activities convert to team OKRs

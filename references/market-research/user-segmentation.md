@@ -1,22 +1,22 @@
-# User Segmentation · 用户细分
+# User Segmentation
 
-## 核心思想
-Market Segmentation 关注客户群体（购买者），User Segmentation 关注使用者——从反馈数据（使用行为/调研/支持工单）按 behavior / JTBD / needs 聚类，找出"同一客户群内部的不同使用模式"。两者互补不冲突。
+## Core Concept
+Market Segmentation focuses on customer groups (buyers), while User Segmentation focuses on users — clustering from feedback data (usage behavior/surveys/support tickets) by behavior / JTBD / needs to identify "different usage patterns within the same customer group." The two complement each other without conflict.
 
-## 适用场景
-- 同一付费客户群内部使用率差异巨大
-- 产品功能取舍受困于"不同用户想要相反的东西"
-- 用户研究数据散落各处，未形成可行动的洞察
+## Applicable Scenarios
+- Huge usage rate differences within the same paying customer group
+- Product feature trade-offs paralyzed by "different users want opposite things"
+- User research data scattered everywhere, not forming actionable insights
 
-## 关键步骤
-1. 汇聚反馈数据源：产品分析（功能使用/频率/路径）+ 调研问卷 + 支持工单 + NPS 评论 + 销售访谈纪要
-2. 按三维聚类：
-   - Behavior：高频/低频/功能子集使用模式
-   - JTBD：要完成的核心 Job 不同
-   - Needs：必须满足的功能/集成/性能要求
-3. 识别 3–7 个 user segment，每个 segment 有明确的"使用画像"
-4. 对每个 segment 评估：占比、留存差异、付费转化差异、对路线图的影响权重
-5. 把高价值 segment 的需求反馈到产品/路线图，避免被低价值 segment 噪声淹没
+## Key Steps
+1. Aggregate feedback data sources: Product analytics (feature usage/frequency/paths) + survey questionnaires + support tickets + NPS comments + sales interview notes
+2. Cluster by three dimensions:
+   - Behavior: High-frequency/low-frequency/feature subset usage patterns
+   - JTBD: Different core Jobs to be completed
+   - Needs: Must-have features/integrations/performance requirements
+3. Identify 3–7 user segments, each with a clear "usage profile"
+4. For each segment, assess: proportion, retention differences, payment conversion differences, impact weight on roadmap
+5. Feed high-value segment needs back to product/roadmap, avoid being overwhelmed by low-value segment noise
 
-## 来源
-Product Compass（User Segmentation 框架）
+## Source
+Product Compass (User Segmentation framework)

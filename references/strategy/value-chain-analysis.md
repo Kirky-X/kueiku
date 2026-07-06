@@ -1,153 +1,153 @@
-# Value Chain Analysis · 价值链分析
+# Value Chain Analysis
 
-## 核心理念
+## Core Concept
 
-迈克尔·波特提出，企业的活动可分为**主活动**（直接创造价值的环节）和**支持活动**（支撑主活动的基础职能）。通过逐环节分析成本与价值驱动，识别竞争优势的来源：是**成本领先**还是**差异化**。
+Proposed by Michael Porter, a firm's activities can be divided into **primary activities** (activities that directly create value) and **support activities** (foundational functions that support primary activities). By analyzing cost and value drivers link by link, you identify the source of competitive advantage: **cost leadership** or **differentiation**.
 
-> 价值链不是流程图，而是**价值创造解剖图**。竞争优势来自某些环节做得比对手明显更好或更便宜。
+> The value chain is not a process map but a **value creation anatomy**. Competitive advantage comes from certain links being significantly better or cheaper than competitors.
 
 ```
-支持活动  ┌─────────────────────────────────────┐
-          │  企业基础设施（财务/法务/规划/质量）   │
-          ├─────────────────────────────────────┤
-          │  人力资源管理（招聘/培训/薪酬/留存）   │
-          ├─────────────────────────────────────┤
-          │  技术开发（R&D/工艺/IT/数字化）       │
-          ├─────────────────────────────────────┤
-          │  采购（原材料/设备/服务采购）         │
-          ├─────────────────────────────────────┤
-主活动    │ 进货 → 生产 → 发货 → 营销销售 → 服务  │
-          └─────────────────────────────────────┘
-                              ↓
-                          利润 = 总价值 − 总成本
+Support Activities  ┌─────────────────────────────────────┐
+                    │  Firm Infrastructure (Finance/Legal/Planning/Quality)   │
+                    ├─────────────────────────────────────┤
+                    │  Human Resource Management (Recruiting/Training/Compensation/Retention)   │
+                    ├─────────────────────────────────────┤
+                    │  Technology Development (R&D/Processes/IT/Digitalization)       │
+                    ├─────────────────────────────────────┤
+                    │  Procurement (Raw materials/Equipment/Service procurement)         │
+                    ├─────────────────────────────────────┤
+Primary Activities  │ Inbound → Operations → Outbound → Marketing & Sales → Service  │
+                    └─────────────────────────────────────┘
+                                      ↓
+                              Margin = Total Value − Total Cost
 ```
 
 ---
 
-## 适用场景
+## Use Cases
 
-✅ **最适合**
-- 竞争优势诊断（成本领先 or 差异化）
-- 成本结构优化与降本项目定位
-- 差异化策略制定（识别可强化价值环节）
-- 流程优化与外包决策
+✅ **Best for**
+- Competitive advantage diagnosis (cost leadership or differentiation)
+- Cost structure optimization and cost reduction project positioning
+- Differentiation strategy formulation (identifying value-enhancing links)
+- Process optimization and outsourcing decisions
 
-⚠️ **慎用**
-- 纯数字产品（价值链偏向价值网络，需调整模型）
-- 平台/生态型业务（多边网络效应价值链难以线性刻画）
-- 缺乏成本数据时（成本驱动分析无依据）
+⚠️ **Use with caution**
+- Pure digital products (value chain leans toward value network, model needs adjustment)
+- Platform/ecosystem businesses (multi-sided network effects make linear value chain depiction difficult)
+- When lacking cost data (cost driver analysis has no basis)
 
 ---
 
-## 执行步骤
+## Execution Steps
 
-### Step 1：绘制本企业价值链
+### Step 1: Map Your Firm's Value Chain
 
-列出主活动和支持活动的每个环节，明确投入产出：
-
-```
-主活动：
-  进货物流：[仓储/库存/入库流程]
-  生产运营：[制造/服务交付流程]
-  发货物流：[订单/配送/交付]
-  营销销售：[获客/转化/渠道]
-  售后服务：[支持/维修/续费]
-
-支持活动：
-  采购：[供应商管理/议价]
-  技术开发：[研发/工艺/系统]
-  人力资源管理：[招聘/培训/激励]
-  企业基础设施：[财务/法务/管理]
-```
-
-### Step 2：识别成本驱动
-
-逐环节分析成本占比与驱动因素：
+List every link in primary and support activities, clarifying inputs and outputs:
 
 ```
-成本驱动分析：
-  环节         成本占比  主要驱动因素        vs 主要对手
-  进货物流     [X%]      [仓储规模/运输距离]  [高/平/低]
-  生产运营     [X%]      [规模/良率/人工]    [高/平/低]
-  营销销售     [X%]      [CAC/渠道佣金]      [高/平/低]
+Primary Activities:
+  Inbound Logistics: [Warehousing/Inventory/Receiving processes]
+  Operations: [Manufacturing/Service delivery processes]
+  Outbound Logistics: [Orders/Delivery/Fulfillment]
+  Marketing & Sales: [Acquisition/Conversion/Channels]
+  After-sales Service: [Support/Maintenance/Renewals]
+
+Support Activities:
+  Procurement: [Supplier management/Negotiation]
+  Technology Development: [R&D/Processes/Systems]
+  Human Resource Management: [Recruiting/Training/Incentives]
+  Firm Infrastructure: [Finance/Legal/Management]
+```
+
+### Step 2: Identify Cost Drivers
+
+Analyze cost proportions and driving factors link by link:
+
+```
+Cost Driver Analysis:
+  Link              Cost Share  Key Drivers           vs Major Competitor
+  Inbound Logistics [X%]        [Warehouse scale/Transport distance]  [High/Equal/Low]
+  Operations        [X%]        [Scale/Yield/Labor]   [High/Equal/Low]
+  Marketing & Sales [X%]        [CAC/Channel commission]  [High/Equal/Low]
   ...
 ```
 
-识别成本劣势环节，并追问根因（规模不足？效率低？结构问题？）。
+Identify cost-disadvantaged links and drill into root causes (insufficient scale? Low efficiency? Structural issues?).
 
-### Step 3：识别价值驱动
+### Step 3: Identify Value Drivers
 
-逐环节分析对客户价值的贡献与差异化机会：
+Analyze each link's contribution to customer value and differentiation opportunities:
 
 ```
-价值驱动分析：
-  环节         客户感知价值  差异化潜力  vs 主要对手
-  生产运营     [高/中/低]    [高/中/低]  [领先/平/落后]
-  营销销售     [高/中/低]    [高/中/低]  [领先/平/落后]
-  售后服务     [高/中/低]    [高/中/低]  [领先/平/落后]
+Value Driver Analysis:
+  Link              Customer Perceived Value  Differentiation Potential  vs Major Competitor
+  Operations        [High/Medium/Low]         [High/Medium/Low]          [Leading/Equal/Lagging]
+  Marketing & Sales [High/Medium/Low]         [High/Medium/Low]          [Leading/Equal/Lagging]
+  After-sales Service [High/Medium/Low]       [High/Medium/Low]          [Leading/Equal/Lagging]
   ...
 ```
 
-> 客户感知价值高且对手弱的环节，是差异化的最佳切入点。
+> Links with high customer perceived value and weak competitors are the best entry points for differentiation.
 
-### Step 4：制定优势策略
+### Step 4: Formulate Advantage Strategy
 
-基于成本与价值分析，选择竞争策略：
+Based on cost and value analysis, select a competitive strategy:
 
-| 策略类型 | 适用条件 | 行动方向 |
+| Strategy Type | Applicable Conditions | Action Direction |
 |---------|---------|---------|
-| 成本领先 | 多个环节成本可降且可持续 | 在高占比环节系统降本，建立规模/效率壁垒 |
-| 差异化 | 存在客户高感知价值且对手薄弱环节 | 强化该环节投入，建立不可复制优势 |
-| 聚焦 | 资源有限 | 在特定环节或细分市场做到极致 |
-| 外包/重构 | 某环节既无成本优势也无价值贡献 | 外包给专业方，重构价值链 |
+| Cost Leadership | Multiple links have reducible and sustainable costs | Systematically reduce costs in high-share links, build scale/efficiency barriers |
+| Differentiation | Links exist with high customer perceived value and weak competitors | Strengthen investment in those links, build irreplicable advantages |
+| Focus | Limited resources | Excel in specific links or market segments |
+| Outsource/Restructure | A link has neither cost advantage nor value contribution | Outsource to specialists, restructure the value chain |
 
 ---
 
-## 输出模板
+## Output Template
 
 ```
-价值链分析报告
+Value Chain Analysis Report
 
-一、价值链绘制
-  主活动：[5 个环节，每个环节简述]
-  支持活动：[4 个环节，每个环节简述]
+I. Value Chain Mapping
+  Primary Activities: [5 links, brief description of each]
+  Support Activities: [4 links, brief description of each]
 
-二、成本驱动分析
-  [表格：环节 / 成本占比 / 驱动因素 / 对比对手]
-  成本劣势环节：[...] — 根因：[...]
+II. Cost Driver Analysis
+  [Table: Link / Cost share / Drivers / Competitor comparison]
+  Cost-disadvantaged links: [...] — Root cause: [...]
 
-三、价值驱动分析
-  [表格：环节 / 客户感知价值 / 差异化潜力 / 对比对手]
-  差异化机会环节：[...] — 理由：[...]
+III. Value Driver Analysis
+  [Table: Link / Customer perceived value / Differentiation potential / Competitor comparison]
+  Differentiation opportunity links: [...] — Rationale: [...]
 
-四、竞争优势来源诊断
-  当前优势类型：[成本领先 / 差异化 / 混合 / 无明显优势]
-  优势支撑环节：[...]
+IV. Competitive Advantage Source Diagnosis
+  Current advantage type: [Cost leadership / Differentiation / Hybrid / No clear advantage]
+  Advantage-supporting links: [...]
 
-五、策略建议
-  降本环节：[...] — 目标 [X%] — 路径 [...]
-  强化差异化环节：[...] — 投入 [...] — 预期 [...]
-  外包/重构环节：[...] — 决策依据 [...]
+V. Strategy Recommendations
+  Cost reduction links: [...] — Target [X%] — Path [...]
+  Differentiation strengthening links: [...] — Investment [...] — Expected [...]
+  Outsource/restructure links: [...] — Decision basis [...]
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 避免方式 |
+| Pitfall | How to Avoid |
 |------|---------|
-| 只列环节不分析驱动 | 每个环节必须给成本/价值驱动及对手对比 |
-| 忽视支持活动 | 支持活动（如 IT/人力）常是隐性优势来源 |
-| 成本与价值割裂分析 | 联合看：降本是否损害价值？差异化是否成本失控？|
-| 静态分析忽视趋势 | 加一列"未来 2 年变化方向"，预判优势是否可持续 |
-| 平台/数字业务硬套线性链 | 改用价值网络或价值商店模型，不要强行适配 |
+| Listing links without analyzing drivers | Every link must include cost/value drivers and competitor comparison |
+| Ignoring support activities | Support activities (e.g., IT/HR) are often hidden advantage sources |
+| Analyzing cost and value in isolation | Jointly assess: Does cost reduction damage value? Does differentiation cause cost overruns? |
+| Static analysis ignoring trends | Add a "2-year future direction" column to assess whether advantages are sustainable |
+| Force-fitting linear chains to platform/digital businesses | Switch to value network or value store models instead of force-fitting |
 
 ---
 
-## 与其他方法论的关系
+## Relationship with Other Methodologies
 
-- **搭配 Porter's Five Forces**：五力分析外部竞争，价值链分析内部优势来源
-- **搭配 Porter Diamond Model**：钻石模型选选址国家，价值链分析企业内活动
-- **搭配 Benchmarking**：价值链识别劣势环节，标杆管理学习该环节最佳实践
-- **搭配 VRIO**：价值链找出关键环节，VRIO 评估该环节资源是否可持续
-- **后接 OKR**：降本/差异化目标转化为 OKR
+- **Combined with Porter's Five Forces**: Five forces analyze external competition; value chain analyzes internal advantage sources
+- **Combined with Porter Diamond Model**: Diamond model selects location country; value chain analyzes internal activities
+- **Combined with Benchmarking**: Value chain identifies weak links; benchmarking learns best practices for those links
+- **Combined with VRIO**: Value chain identifies key links; VRIO assesses whether those link resources are sustainable
+- **Followed by OKR**: Cost reduction/differentiation targets are converted into OKRs

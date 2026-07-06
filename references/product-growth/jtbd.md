@@ -1,159 +1,159 @@
 # JTBD · Jobs to Be Done（用户任务框架）
 
-## 核心理念
+## Core Concept
 
-用户购买/使用产品，是为了**完成某项任务（Job）**，而不是因为喜欢这个产品本身。竞争对手不只是同类产品，而是任何能完成同一个 Job 的方案。
+Users buy/use products to **complete a specific Job**, not because they like the product itself. Competitors are not just similar products, but any solution that can complete the same Job.
 
-> 经典案例：人们买的不是 1/4 英寸的钻头，而是 1/4 英寸的洞。更深层的 Job 是：在墙上挂一幅画，让家里更有美感。
+> Classic example: People don't buy a 1/4-inch drill bit — they buy a 1/4-inch hole. The deeper Job is: hanging a picture on the wall to make the home more beautiful.
 
-**Job 的三个维度：**
-- **功能维度（Functional）**：任务本身要实现的目标
-- **情感维度（Emotional）**：用户完成任务时想要的感受
-- **社会维度（Social）**：用户希望在他人眼中的形象
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 理解用户**真实需求**而非表面需求
-- 发现竞品替换机会（用户从什么旧方案"雇用"了我们？）
-- 产品定位和价值主张设计
-- 新功能方向探索（未被满足的 Job）
-- 竞争分析（真正的竞争对手是谁？）
-
-⚠️ **慎用**
-- 需要大规模定量数据的场景（JTBD 是定性框架）
-- 已有充分用户研究数据，只需执行的阶段
+**Three Dimensions of a Job:**
+- **Functional**: The goal the task itself aims to achieve
+- **Emotional**: How the user wants to feel when completing the task
+- **Social**: How the user wants to be perceived by others
 
 ---
 
-## 核心概念
+## Applicable Scenarios
 
-### Job Statement 格式
+✅ **Best For**
+- Understanding users' **real needs** vs surface needs
+- Discovering competitive replacement opportunities (what old solution did users "hire" us from?)
+- Product positioning and value proposition design
+- Exploring new feature directions (unmet Jobs)
+- Competitive analysis (who are the real competitors?)
 
-```
-当 [情境/场景]，
-我想要 [动机/目标]，
-以便 [预期结果/更深层需求]。
-```
-
-例：
-```
-当 我下班很晚回家（情境），
-我想要 快速准备一顿体面的晚餐（动机），
-以便 照顾好自己又不感到愧疚（深层需求）。
-```
-
-### 雇用与解雇
-
-- **雇用（Hire）**：用户选择用某个产品/方案来完成 Job
-- **解雇（Fire）**：用户放弃一个方案，转向另一个
-- 研究"用户为什么解雇旧方案"往往比"为什么选择我们"更有洞察力
-
-### 竞争对手的重新定义
-
-从 Job 视角看竞争对手 ≠ 功能相似的产品。
-
-例：奶昔案例（Clayton Christensen）
-- 表面竞争对手：可乐、果汁、水
-- 真实 Job：早晨通勤时让手有事做、打发无聊时间，同时不太快饿
-- 真实竞争对手：香蕉、麦饼干、咖啡
+⚠️ **Use with Caution**
+- Scenarios requiring large-scale quantitative data (JTBD is a qualitative framework)
+- When sufficient user research data already exists and only execution is needed
 
 ---
 
-## 执行步骤
+## Core Concepts
 
-### Step 1：情境访谈
+### Job Statement Format
 
-与真实用户进行深度访谈，重点挖掘：
-1. **购买/选择时的场景**："当时你在什么情况下开始寻找这类产品/方案？"
-2. **之前用什么方案**："在用我们之前，你用什么方法完成这件事？"
-3. **解雇触发点**："什么让你决定换掉之前的方案？"
-4. **进展阻力**："使用过程中什么让你感到不顺畅？"
-5. **成功标准**："什么样的结果会让你觉得这件事'完成了'？"
+```
+When [situation/context],
+I want to [motivation/goal],
+So that [expected outcome/deeper need].
+```
 
-访谈关键原则：
-- 问**具体行为**，不问抽象偏好（"上次你是怎么做的？"而非"你喜欢什么？"）
-- 关注**时间线**（触发→搜索→评估→选择→使用→结果）
-- 探索**情感和社会维度**，不只是功能
+Example:
+```
+When I get home late from work (situation),
+I want to quickly prepare a decent dinner (motivation),
+So that I take care of myself without feeling guilty (deeper need).
+```
 
-### Step 2：撰写 Job Statement
+### Hiring and Firing
 
-综合访谈洞察，用标准格式写出核心 Job Statement。一个产品通常对应 2-5 个不同的 Job。
+- **Hire**: User chooses a product/solution to complete a Job
+- **Fire**: User abandons one solution in favor of another
+- Studying "why users fire the old solution" is often more insightful than "why they chose us"
 
-### Step 3：量化 Job 重要性 vs 满足度
+### Redefining Competitors
 
-通过问卷调查（ODI 方法，Outcome-Driven Innovation）：
-- 对每个 Job，用户打分：**重要性（1-10）** 和 **当前满足度（1-10）**
-- 机会分数 = 重要性 + Max(重要性 - 满足度, 0)
-- 机会分数 > 10 是**高价值未被满足的 Job**
+From a Job perspective, competitors ≠ feature-similar products.
 
-### Step 4：竞品映射
-
-对每个高价值 Job，识别：
-- 用户当前在用什么方案完成这个 Job？
-- 这些方案的满足度弱点是什么？
-- 我们的方案能在哪里做得更好？
-
-### Step 5：转化为产品决策
-
-将高价值 + 低满足度的 Job 转化为：
-- 核心功能方向
-- 价值主张措辞
-- 营销/定位策略
+Example: The milkshake case (Clayton Christensen)
+- Surface competitors: cola, juice, water
+- Real Job: keep hands busy and pass time during morning commute without getting hungry too quickly
+- Real competitors: bananas, cereal bars, coffee
 
 ---
 
-## 输出模板
+## Execution Steps
+
+### Step 1: Contextual Interviews
+
+Conduct deep interviews with real users, focusing on:
+1. **Purchase/selection context**: "What situation led you to start looking for this type of product/solution?"
+2. **Previous solution**: "Before us, what method did you use to accomplish this?"
+3. **Firing trigger**: "What made you decide to switch from the previous solution?"
+4. **Progress friction**: "What felt frustrating or cumbersome during the process?"
+5. **Success criteria**: "What outcome would make you feel this Job is 'done'?"
+
+Key interview principles:
+- Ask about **specific behaviors**, not abstract preferences ("What did you do last time?" not "What do you like?")
+- Focus on the **timeline** (trigger → search → evaluate → choose → use → outcome)
+- Explore **emotional and social dimensions**, not just functional
+
+### Step 2: Write Job Statements
+
+Synthesize interview insights and write core Job Statements in standard format. A product typically corresponds to 2-5 different Jobs.
+
+### Step 3: Quantify Job Importance vs Satisfaction
+
+Through survey (ODI method, Outcome-Driven Innovation):
+- For each Job, users rate: **Importance (1-10)** and **Current Satisfaction (1-10)**
+- Opportunity score = Importance + Max(Importance - Satisfaction, 0)
+- Opportunity score > 10 indicates a **high-value unmet Job**
+
+### Step 4: Competitive Mapping
+
+For each high-value Job, identify:
+- What solution are users currently using to complete this Job?
+- What are the satisfaction weaknesses of those solutions?
+- Where can our solution do better?
+
+### Step 5: Translate to Product Decisions
+
+Convert high-opportunity + low-satisfaction Jobs into:
+- Core feature direction
+- Value proposition wording
+- Marketing/positioning strategy
+
+---
+
+## Output Template
 
 ```
-研究背景：[产品/功能，研究方法，样本量]
+Research context: [Product/feature, research method, sample size]
 
-核心 Job Statements：
+Core Job Statements:
 
-Job 1：
-  情境：[...]
-  动机：[...]
-  深层需求：[...]
-  功能维度：[...]
-  情感维度：[...]
-  社会维度：[...]
+Job 1:
+  Context: [...]
+  Motivation: [...]
+  Deeper need: [...]
+  Functional dimension: [...]
+  Emotional dimension: [...]
+  Social dimension: [...]
 
-Job 2：[...]
+Job 2: [...]
 
-Job 重要性 vs 满足度矩阵：
-  Job        | 重要性 | 满足度 | 机会分 | 优先级
-  -----------|--------|--------|--------|-------
-  Job 1      |  [N]   |  [N]   |  [N]   |  高
-  Job 2      |  [N]   |  [N]   |  [N]   |  中
+Job Importance vs Satisfaction Matrix:
+  Job        | Importance | Satisfaction | Opportunity Score | Priority
+  -----------|------------|--------------|-------------------|---------
+  Job 1      |    [N]     |     [N]      |       [N]         |  High
+  Job 2      |    [N]     |     [N]      |       [N]         |  Medium
 
-竞品分析（从 Job 视角）：
-  Job 1 当前主要解决方案：[...] 弱点：[...]
-  Job 2 当前主要解决方案：[...] 弱点：[...]
+Competitive Analysis (Job perspective):
+  Job 1 current primary solution: [...] Weakness: [...]
+  Job 2 current primary solution: [...] Weakness: [...]
 
-产品洞察：
-  最高机会 Job：[...]
-  建议产品方向：[...]
-  价值主张建议：[...]
+Product Insights:
+  Highest opportunity Job: [...]
+  Recommended product direction: [...]
+  Value proposition recommendation: [...]
 ```
 
 ---
 
-## 常见陷阱
+## Common Pitfalls
 
-| 陷阱 | 说明 |
+| Pitfall | Description |
 |------|------|
-| Job 写成功能描述 | "我想要一个搜索功能" ≠ Job，继续问"为了做什么？" |
-| 忽视情感/社会维度 | 纯功能 Job 往往不是真正的购买驱动力 |
-| 只看当前用户 | 要研究"非客户"和"已流失客户"，洞察更深 |
-| Job 粒度不一致 | "我想生活得更好"太宏观；"我想用 Word 加粗文字"太微观 |
+| Writing Jobs as feature descriptions | "I want a search function" ≠ Job; keep asking "To do what?" |
+| Ignoring emotional/social dimensions | Purely functional Jobs are rarely the real purchase driver |
+| Only looking at current users | Research "non-customers" and "churned customers" for deeper insights |
+| Inconsistent Job granularity | "I want to live better" is too macro; "I want to bold text in Word" is too micro |
 
 ---
 
-## 与其他方法论的关系
+## Relationships with Other Methodologies
 
-- **前置 Design Thinking**：JTBD 定义用户真实 Job，Design Thinking 设计解决方案
-- **输入 AARRR**：用 JTBD 解释各漏斗层的流失原因
-- **配合 Customer Journey Map**：JTBD 是"为什么"，旅程地图是"如何完成 Job 的过程"
-- **配合 RICE**：高机会分的 Job 转化为功能，用 RICE 排优先级
+- **Preceded by Design Thinking**: JTBD defines the real user Job; Design Thinking designs the solution
+- **Input to AARRR**: Use JTBD to explain drop-off reasons at each funnel layer
+- **Combined with Customer Journey Map**: JTBD is the "why"; the journey map is the "how the Job gets done"
+- **Combined with RICE**: High-opportunity Jobs become features, prioritized via RICE
