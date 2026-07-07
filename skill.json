@@ -1,19 +1,19 @@
 {
-  "name": "kueiku",
-  "description": "Methodology navigation map for agents. Index of 35 methodologies, selection routing, calling protocol, information insufficiency degradation path, and framework correction mechanism. Covers 6 major categories: Problem Diagnosis/Strategic Analysis/Product Growth/Decision Making/User Research/Structured Thinking.",
-  "license": "MIT",
-  "version": "0.1.1",
-  "author": "Kirky-X",
-  "repo": "https://github.com/Kirky-X/kueiku",
-  "homepage": "https://github.com/Kirky-X/kueiku",
-  "tag": [
-    "methodology",
-    "framework",
-    "decision-making",
-    "strategy",
-    "root-cause",
-    "prioritization",
-    "structured-thinking",
-    "user-research"
-  ]
+    "name": "kueiku",
+    "description": "方法论导航地图，先选对框架再做事。触发：分析/策略/决策/用户研究/结构化思考/产品发现/上市/优先级/技术选型/TDD",
+    "license": "MIT",
+    "version": "0.1.1",
+    "author": "Kirky-X",
+    "repo": "https://github.com/Kirky-X/kueiku",
+    "homepage": "https://github.com/Kirky-X/kueiku",
+    "tag": [
+        "methodology",
+        "framework",
+        "decision-making",
+        "strategy",
+        "root-cause",
+        "prioritization",
+        "structured-thinking",
+        "user-research"
+    ]
 }
