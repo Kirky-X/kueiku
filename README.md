@@ -1,7 +1,8 @@
 # Kueiku (鬼谷子) —— 方法论指南针技能
 
-[![GitHub Release](https://img.shields.io/github/v/release/Kirky-X/kueiku?style=flat-square)](https://github.com/Kirky-X/kueiku/releases)
-[![GitHub License](https://img.shields.io/github/license/Kirky-X/kueiku?style=flat-square)](LICENSE)
+[English](README_EN.md)
+
+[![GitHub Release](https://img.shields.io/github/v/release/Kirky-X/kueiku?style=flat-square)](https://github.com/Kirky-X/kueiku/releases) [![GitHub License](https://img.shields.io/github/license/Kirky-X/kueiku?style=flat-square)](LICENSE)
 
 Kueiku 是一个面向 AI agent 的工作方法论导航 skill，采用 Google Labs agent-first 格式（YAML frontmatter + Markdown 路由表）。它不是又一个分析工具，而是一张**方法论索引地图**：指导 agent 在分析问题、制定策略、做决策、设计产品、研究用户、组织思维之前，**先选择正确的框架，再正确地使用框架**。
 
