@@ -79,7 +79,7 @@ AGENTS=(
 ALL_AGENT_NAMES=(claude cursor windsurf trae gemini copilot opencode roocode qoder)
 
 # 排除项（相对 skill 源目录的顶层条目）
-EXCLUDE_PATTERNS=(.git .venv node_modules __pycache__ temp .gitnexus .claude)
+EXCLUDE_PATTERNS=(.git .venv node_modules __pycache__ temp .codenexus .claude)
 
 # ---------- 用法 ----------
 usage() {

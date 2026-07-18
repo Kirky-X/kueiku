@@ -3,7 +3,7 @@ specmark/
 .venv
 openspec/
 temp
-.gitnexus
+.codenexus
 
 # OS
 .DS_Store
