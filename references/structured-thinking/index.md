@@ -40,11 +40,6 @@
 
 ## 常见组合
 
-- **重大决策**：苏格拉底提问（澄清假设）→ Decision Matrix → Pre-mortem（风险审查）
-- **系统创意**：六顶思考帽（绿帽）→ SCAMPER → RICE（筛选）
-- **组织变革**：Stakeholder Mapping → 六顶思考帽 → OKR
-- **风险全面评估**：FMEA → Pre-mortem → Second-Order Thinking
-- **增长策略制定**：Cynefin（判断问题域）→ Ansoff Matrix → Blue Ocean
 - **框架选择与重构**：Framework Selection（选框架）→ 若框架都不奏效 → Reframe and Elevate（重构问题）
 - **创新突破**：Reframe and Elevate（重构视角）→ Connecting Dots（跨域连接）→ Six Thinking Hats（绿帽发散）
 - **复杂问题诊断**：Systems Thinking（反馈环路+杠杆点）→ Second-Order Thinking（连锁效应）→ Cynefin（问题域判断）

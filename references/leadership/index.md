@@ -25,3 +25,5 @@
 ## 常见组合
 
 - **团队突破**：A-Player Density（确保人才密度）→ Reality Distortion Field（推动突破）→ Change Management（固化成果）
+- **组织扩张**：A-Player Density（招聘标准）→ McKinsey 7S（组织一致性）
+- **组织变革**：Stakeholder Mapping（利益相关方分析）→ Change Management（Kotter 8 步推动）→ OKR（变革目标追踪）
