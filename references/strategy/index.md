@@ -27,6 +27,7 @@
 | **Benchmarking** | 对标行业/跨行业最佳实践识别差距 | 绩效提升、流程改进、最佳实践学习 | `benchmarking.md` |
 | **Product Life Cycle** | 导入/成长/成熟/衰退 4 阶段匹配策略 | 产品策略、投资时机、组合管理 | `product-life-cycle.md` |
 | **VRIO Framework** | 价值性/稀缺性/不可模仿性/组织化 四问资源观 | 资源能力评估、可持续竞争优势识别 | `vrio.md` |
+| **Wardley Mapping** | 价值链（纵轴）× 演化阶段（横轴）的战略地形图 | 战略演化感知、Build/Buy/Outsource 决策、竞品动态分析 | `wardley-mapping.md` |
 
 ## 各方法论最低信息需求
 
@@ -51,6 +52,7 @@
 - **Benchmarking**：需要可获取的标杆对象数据（至少 2 个独立来源）
 - **Product Life Cycle**：需要产品销售/竞争/客户构成趋势数据
 - **VRIO Framework**：L1：企业的资源/能力清单；L2：竞争对手对比数据
+- **Wardley Mapping**：需要价值链组件分解 + 各组件演化阶段判断 + 主要竞品对比
 
 ## 路由触发信号
 
@@ -77,6 +79,7 @@
 - "竞争优势来源/成本领先或差异化" → Value Chain Analysis（主）
 - "对标最佳实践/绩效差距分析" → Benchmarking（主）
 - "产品阶段策略/投资时机判断" → Product Life Cycle（主）
+- "战略演化感知/价值链可视化/Build vs Buy" → Wardley Mapping（主）
 
 ## 常见组合
 
@@ -91,3 +94,5 @@
 - **多元化组合管理**：BCG Matrix（初筛）→ GE-McKinsey Matrix（深度评估）→ Ansoff（增长方向）
 - **行业竞争结构分析**：Porter's Five Forces（整体）→ Strategic Group Mapping（内部群组）→ Blue Ocean（突围方向）
 - **产品阶段策略**：Product Life Cycle（定位阶段）→ BCG Matrix（组合配比）→ OKR（阶段目标）
+- **战略演化感知**：Wardley Mapping（价值链×演化阶段）→ Blue Ocean（差异化方向）→ Value Chain Analysis（竞争优势诊断）
+- **技术投资战略**：Wardley Mapping（组件演化定位）→ Gartner Hype Cycle（技术成熟度）→ DCF（投入产出评估）
