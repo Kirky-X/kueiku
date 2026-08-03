@@ -6,16 +6,17 @@
 
 Kueiku 是一个面向 AI agent 的工作方法论导航 skill，采用 Google Labs agent-first 格式（YAML frontmatter + Markdown 路由表）。它不是又一个分析工具，而是一张**方法论索引地图**：指导 agent 在分析问题、制定策略、做决策、设计产品、研究用户、组织思维之前，**先选择正确的框架，再正确地使用框架**。
 
-skill 提供 35 种方法论的索引、快速路由表（任务类型 → 推荐方法论）、调用协议（宣告 → 读 reference → 收集输入 → 执行 → 门控输出）、信息不足时的 4 级降级路径，以及框架选错时的纠偏机制。完整路由表、组合规则与使用协议见 [SKILL.md](SKILL.md)。
+skill 提供 95 个方法论的索引、快速路由表（任务类型 → 推荐方法论）、调用协议（宣告 → 读 reference → 收集输入 → 执行 → 门控输出）、信息不足时的 4 级降级路径，以及框架选错时的纠偏机制。完整路由表、组合规则与使用协议见 [SKILL.md](SKILL.md)。
 
 ## 功能特性
 
-- **35 种方法论 · 6 大类** —— 覆盖问题诊断 / 战略分析 / 产品增长 / 决策制定 / 用户研究 / 结构化思维
+- **95 个方法论 · 18 类** —— 覆盖问题诊断 / 战略分析 / 产品增长 / 决策制定 / 用户研究 / 结构化思维 / 产品发现 / 上市策略 / 市场研究 / 数据分析 / AI 交付 / 执行 / 编程与架构 / 产品哲学 / 领导力 / 财务分析 / 研究方法论 / 行业分析
 - **快速路由表** —— 30 秒内从任务类型匹配到主框架 + 备选框架
 - **调用协议** —— 5 步标准流程，让框架使用过程显性化、可追溯
 - **组合规则** —— 14 种常见方法论组合（如战略规划 PESTLE → SWOT → OKR）
 - **降级路径** —— 信息不足分 4 级处理，绝不强行套框架
 - **纠偏机制** —— 执行中发现框架不适用，立即停止并重新路由
+- **自动化脚本** —— 5 个计算密集型方法论的 CLI 工具（RICE / 决策矩阵 / 风险矩阵 / 杜邦 / 帕累托）
 
 ## 安装
 
@@ -68,58 +69,55 @@ Kueiku 作为 skill 被 agent 加载后，通过自然语言意图触发，无�
 
 ## 能力概览
 
-### 6 大类 · 35 种方法论
+### 18 类 · 95 个方法论
 
-| 类别 | 方法论 | 适用场景 |
-| ---- | ------ | -------- |
-| 🔍 问题诊断 | 5 Whys / Fishbone / First Principles / Pareto | 已知问题，需找根本原因 |
-| 📊 战略分析 | SWOT / PESTLE / Porter's Five Forces / BMC / Stakeholder / Ansoff / Blue Ocean / McKinsey 7S / BCG | 评估形势，制定方向 |
-| 🚀 产品增长 | AARRR / JTBD / Design Thinking / Lean BML / VPC / SCAMPER / Kano / North Star | 产品设计、用户增长、需求验证 |
-| ⚖️ 决策制定 | RICE / Eisenhower / OKR / Pre-mortem / Decision Matrix / MoSCoW / FMEA | 多选项中做可辩护决定 |
-| 👥 用户研究 | Customer Journey / Empathy Map | 深度理解用户需求与痛点 |
-| 🧠 结构化思维 | MECE+Pyramid / Six Thinking Hats / Socratic / Cynefin / Second-Order Thinking | 组织复杂信息，澄清假设 |
+| 类别 | 数量 | 适用场景 |
+| ---- | ---- | -------- |
+| 🔍 问题诊断 | 4 | 找根因、颠覆性思考、80/20 聚焦 |
+| 📊 战略分析 | 23 | 现状评估、竞争格局、商业模式、定价护城河、价值链、战略演化 |
+| 🚀 产品与增长 | 8 | 用户需求、增长瓶颈、产品创新、指标体系 |
+| ⚖️ 决策制定 | 9 | 优先级排序、目标制定、风险预演、选型、风险评估 |
+| 👥 用户研究 | 4 | 用户旅程、同理心画像、决策旅程、需求层次 |
+| 🧠 结构化思维 | 9 | MECE 表达、多视角评估、假设澄清、框架选择、系统思考 |
+| 🔬 产品发现 | 8 | 持续发现、假设验证、用户访谈、实验设计 |
+| 🚩 上市策略 | 7 | 滩头堡、ICP、GTM、增长飞轮、定位 |
+| 📈 市场研究 | 7 | 市场规模、细分、用户画像、STP、感知图、技术采用 |
+| 📉 数据分析 | 4 | 同期群、A/B 测试、指标体系、RFM |
+| 🤖 AI 交付 | 2 | 交付物标准、文档代码 drift |
+| 🏃 执行 | 4 | 结果导向路线图、战略红队、敏捷需求 |
+| 💻 编程与架构 | 4 | TDD、小步计划、服务契约、Agent DX |
+| 🎯 产品哲学 | 4 | 激进减法、垂直整合、科技人文、隐形完美 |
+| 👑 领导力 | 3 | 现实扭曲力场、A 级人才密度、变革管理 |
+| 💰 财务分析 | 4 | 杜邦、DCF、可比公司、EVA |
+| 📚 研究方法论 | 1 | 系统化研究流程 |
+| 🏭 行业分析 | 2 | 行业价值链、技术成熟度曲线 |
 
-### `references/` —— 35 个方法论参考文件
+完整方法论列表与路由见 [SKILL.md 类别总览](./SKILL.md)。
 
-每个方法论对应一个 `references/xxx.md`，包含执行步骤与输出模板。仅在需要时读取对应文件，不预加载全部。
+### `references/` —— 95 个方法论参考文件
+
+每个方法论对应一个 `references/<category>/<methodology>.md`，包含执行步骤与输出模板。仅在需要时读取对应文件，不预加载全部。
 
 ```
 references/
-├── five-whys.md                  5 Whys 根因分析
-├── fishbone.md                   鱼骨图 / 因果图
-├── first-principles.md           第一性原理
-├── pareto.md                     帕累托分析
-├── swot.md                       SWOT 分析
-├── pestle.md                     PESTLE 宏观环境分析
-├── porter-five-forces.md         波特五力模型
-├── business-model-canvas.md      商业模式画布
-├── stakeholder-mapping.md        利益相关者分析
-├── ansoff-matrix.md              安索夫矩阵
-├── blue-ocean.md                 蓝海战略
-├── mckinsey-7s.md                麦肯锡 7S 模型
-├── bcg-matrix.md                 波士顿矩阵
-├── aarrr.md                      AARRR 增长漏斗
-├── jtbd.md                       JTBD 用户任务框架
-├── design-thinking.md            设计思维
-├── lean-bml.md                   精益 Build-Measure-Learn
-├── value-proposition-canvas.md   价值主张画布
-├── scamper.md                    SCAMPER 创意触发
-├── kano.md                       狩野模型
-├── north-star.md                 北极星框架
-├── rice.md                       RICE 优先级评分
-├── eisenhower.md                 艾森豪威尔矩阵
-├── okr.md                        OKR 目标与关键结果
-├── premortem-counterfactual.md   逆向规划与反事实思维
-├── decision-matrix.md            决策矩阵
-├── moscow.md                     莫斯科法
-├── fmea.md                       失效模式与影响分析
-├── customer-journey.md           客户旅程地图
-├── empathy-map.md                同理心地图
-├── mece-pyramid.md               MECE + 金字塔原则
-├── six-thinking-hats.md          六顶思考帽
-├── socratic-questioning.md       苏格拉底式提问
-├── cynefin.md                    肯尼芬框架
-└── second-order-thinking.md      二阶思维
+├── problem-diagnosis/        (4)  5 Whys / Fishbone / First Principles / Pareto
+├── strategy/                 (23) SWOT / PESTLE / Porter's / BMC / Ansoff / Blue Ocean / Wardley Mapping ...
+├── product-growth/            (8) AARRR / JTBD / Design Thinking / Lean BML / VPC / SCAMPER / Kano / North Star
+├── decision-making/           (9) RICE / Eisenhower / OKR / Pre-mortem / Decision Matrix / MoSCoW / FMEA / Risk Matrix
+├── user-research/             (4) Customer Journey / Empathy Map / Consumer Decision Journey / Maslow
+├── structured-thinking/       (9) MECE+Pyramid / Six Hats / Socratic / Cynefin / Second-Order / Systems Thinking ...
+├── product-discovery/         (8) OST / Mom Test / ICE / Opportunity Score / Pretotypes / Assumption Mapping ...
+├── go-to-market/              (7) Beachhead / ICP / GTM Motions / GTM Strategy / Growth Loops / Battlecard / Positioning
+├── market-research/           (7) Market Sizing / Segmentation / User Personas / STP / Perceptual Mapping ...
+├── data-analysis/             (4) Cohort / A/B Test / Lean Analytics / RFM
+├── ai-delivery/               (2) Shipping Artifacts / Intended vs Implemented
+├── execution/                 (4) Outcome Roadmap / Strategy Red Team / User Stories / Job Stories
+├── engineering/               (4) TDD / Bite-Sized Plan / Typed Service Contracts / Agent DX
+├── product-philosophy/        (4) Focus as No / Whole Widget / Technology Meets Humanities / Invisible Perfection
+├── leadership/                (3) Reality Distortion Field / A-Player Density / Change Management
+├── financial-analysis/        (4) DuPont / DCF / Comparable Company / EVA
+├── research-methodology/      (1) Systematic Research Process
+└── industry-analysis/         (2) Industry Value Chain / Gartner Hype Cycle
 ```
 
 ## 调用协议

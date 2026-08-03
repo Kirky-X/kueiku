@@ -6,16 +6,17 @@
 
 Kueiku is a methodology navigation skill for AI agents, built in the Google Labs agent-first format (YAML frontmatter + Markdown routing table). It is not yet another analysis tool — it is a **methodology index map**: it guides agents to **choose the right framework first, then use it correctly** before analyzing problems, crafting strategy, making decisions, designing products, researching users, or organizing thinking.
 
-The skill provides an index of 35 methodologies, a quick routing table (task type → recommended methodology), a calling protocol (declare → read reference → gather inputs → execute → gated output), a 4-level degradation path for insufficient information, and a correction mechanism for when a framework turns out to be a poor fit. The full routing table, combination rules, and usage protocol are in [SKILL.md](SKILL.md).
+The skill provides an index of 95 methodologies, a quick routing table (task type → recommended methodology), a calling protocol (declare → read reference → gather inputs → execute → gated output), a 4-level degradation path for insufficient information, and a correction mechanism for when a framework turns out to be a poor fit. The full routing table, combination rules, and usage protocol are in [SKILL.md](SKILL.md).
 
 ## Features
 
-- **35 methodologies · 6 categories** — covering Problem Diagnosis / Strategic Analysis / Product & Growth / Decision Making / User Research / Structured Thinking
+- **95 methodologies · 18 categories** — covering Problem Diagnosis / Strategic Analysis / Product & Growth / Decision Making / User Research / Structured Thinking / Product Discovery / Go-to-Market / Market Research / Data Analysis / AI Delivery / Execution / Engineering / Product Philosophy / Leadership / Financial Analysis / Research Methodology / Industry Analysis
 - **Quick routing table** — match a task type to a primary + backup framework in under 30 seconds
 - **Calling protocol** — a 5-step standard flow that makes framework usage explicit and traceable
 - **Combination rules** — 14 common methodology combos (e.g. strategic planning: PESTLE → SWOT → OKR)
 - **Degradation path** — 4 levels of handling for insufficient information; never force a framework
 - **Correction mechanism** — stop immediately and re-route when a framework turns out to be a poor fit
+- **Automation tools** — CLI tool for 5 computation-heavy methodologies (RICE / Decision Matrix / Risk Matrix / DuPont / Pareto)
 
 ## Installation
 
@@ -68,58 +69,55 @@ Once loaded as a skill, Kueiku is triggered by natural-language intent — no ex
 
 ## Capability Overview
 
-### 6 categories · 35 methodologies
+### 18 categories · 95 methodologies
 
-| Category | Methodologies | When to use |
-| -------- | ------------- | ----------- |
-| 🔍 Problem Diagnosis | 5 Whys / Fishbone / First Principles / Pareto | Known problem, need root cause |
-| 📊 Strategic Analysis | SWOT / PESTLE / Porter's Five Forces / BMC / Stakeholder / Ansoff / Blue Ocean / McKinsey 7S / BCG | Assess situation, set direction |
-| 🚀 Product & Growth | AARRR / JTBD / Design Thinking / Lean BML / VPC / SCAMPER / Kano / North Star | Product design, growth, validation |
-| ⚖️ Decision Making | RICE / Eisenhower / OKR / Pre-mortem / Decision Matrix / MoSCoW / FMEA | Defensible choices among options |
-| 👥 User Research | Customer Journey / Empathy Map | Deeply understand user needs and pain points |
-| 🧠 Structured Thinking | MECE+Pyramid / Six Thinking Hats / Socratic / Cynefin / Second-Order Thinking | Organize complex info, clarify assumptions |
+| Category | Count | When to use |
+| -------- | ----- | ----------- |
+| 🔍 Problem Diagnosis | 4 | Find root cause, disruptive thinking, 80/20 focus |
+| 📊 Strategic Analysis | 23 | Situation assessment, competition, business model, pricing, value chain, strategic evolution |
+| 🚀 Product & Growth | 8 | User needs, growth bottleneck, product innovation, metrics |
+| ⚖️ Decision Making | 9 | Prioritization, goal setting, risk rehearsal, selection, risk assessment |
+| 👥 User Research | 4 | User journey, empathy mapping, decision journey, needs hierarchy |
+| 🧠 Structured Thinking | 9 | MECE expression, multi-perspective, assumption clarification, framework selection, systems thinking |
+| 🔬 Product Discovery | 8 | Continuous discovery, hypothesis validation, user interviews, experiment design |
+| 🚩 Go-to-Market | 7 | Beachhead, ICP, GTM, growth loops, positioning |
+| 📈 Market Research | 7 | Market sizing, segmentation, personas, STP, perceptual mapping, tech adoption |
+| 📉 Data Analysis | 4 | Cohort, A/B testing, metrics, RFM |
+| 🤖 AI Delivery | 2 | Shipping artifacts, doc-code drift |
+| 🏃 Execution | 4 | Outcome roadmap, strategy red team, agile requirements |
+| 💻 Engineering | 4 | TDD, bite-sized plan, service contracts, Agent DX |
+| 🎯 Product Philosophy | 4 | Radical focus, vertical integration, tech+humanities, invisible perfection |
+| 👑 Leadership | 3 | Reality distortion field, A-player density, change management |
+| 💰 Financial Analysis | 4 | DuPont, DCF, comparable company, EVA |
+| 📚 Research Methodology | 1 | Systematic research process |
+| 🏭 Industry Analysis | 2 | Industry value chain, Gartner Hype Cycle |
 
-### `references/` — 35 methodology reference files
+Full methodology list and routing: see [SKILL.md category overview](./SKILL.md).
 
-Each methodology has a corresponding `references/xxx.md` containing execution steps and output templates. Read only the relevant file when needed; do not preload all of them.
+### `references/` — 95 methodology reference files
+
+Each methodology has a corresponding `references/<category>/<methodology>.md` containing execution steps and output templates. Read only the relevant file when needed; do not preload all of them.
 
 ```
 references/
-├── five-whys.md                  5 Whys root-cause analysis
-├── fishbone.md                   Fishbone / Ishikawa diagram
-├── first-principles.md           First Principles thinking
-├── pareto.md                     Pareto analysis
-├── swot.md                       SWOT analysis
-├── pestle.md                     PESTLE macro-environmental analysis
-├── porter-five-forces.md         Porter's Five Forces
-├── business-model-canvas.md      Business Model Canvas
-├── stakeholder-mapping.md        Stakeholder mapping
-├── ansoff-matrix.md              Ansoff Matrix
-├── blue-ocean.md                 Blue Ocean Strategy
-├── mckinsey-7s.md                McKinsey 7S framework
-├── bcg-matrix.md                 BCG Matrix
-├── aarrr.md                      AARRR growth funnel
-├── jtbd.md                       Jobs-to-be-Done
-├── design-thinking.md            Design Thinking
-├── lean-bml.md                   Lean Build-Measure-Learn
-├── value-proposition-canvas.md   Value Proposition Canvas
-├── scamper.md                    SCAMPER creativity triggers
-├── kano.md                       Kano Model
-├── north-star.md                 North Star Framework
-├── rice.md                       RICE prioritization scoring
-├── eisenhower.md                 Eisenhower Matrix
-├── okr.md                        OKR (Objectives & Key Results)
-├── premortem-counterfactual.md   Pre-mortem & Counterfactual thinking
-├── decision-matrix.md            Decision Matrix
-├── moscow.md                     MoSCoW method
-├── fmea.md                       FMEA (Failure Mode & Effects Analysis)
-├── customer-journey.md           Customer Journey Map
-├── empathy-map.md                Empathy Map
-├── mece-pyramid.md               MECE + Pyramid Principle
-├── six-thinking-hats.md          Six Thinking Hats
-├── socratic-questioning.md       Socratic Questioning
-├── cynefin.md                    Cynefin framework
-└── second-order-thinking.md      Second-Order Thinking
+├── problem-diagnosis/        (4)  5 Whys / Fishbone / First Principles / Pareto
+├── strategy/                 (23) SWOT / PESTLE / Porter's / BMC / Ansoff / Blue Ocean / Wardley Mapping ...
+├── product-growth/            (8) AARRR / JTBD / Design Thinking / Lean BML / VPC / SCAMPER / Kano / North Star
+├── decision-making/           (9) RICE / Eisenhower / OKR / Pre-mortem / Decision Matrix / MoSCoW / FMEA / Risk Matrix
+├── user-research/             (4) Customer Journey / Empathy Map / Consumer Decision Journey / Maslow
+├── structured-thinking/       (9) MECE+Pyramid / Six Hats / Socratic / Cynefin / Second-Order / Systems Thinking ...
+├── product-discovery/         (8) OST / Mom Test / ICE / Opportunity Score / Pretotypes / Assumption Mapping ...
+├── go-to-market/              (7) Beachhead / ICP / GTM Motions / GTM Strategy / Growth Loops / Battlecard / Positioning
+├── market-research/           (7) Market Sizing / Segmentation / User Personas / STP / Perceptual Mapping ...
+├── data-analysis/             (4) Cohort / A/B Test / Lean Analytics / RFM
+├── ai-delivery/               (2) Shipping Artifacts / Intended vs Implemented
+├── execution/                 (4) Outcome Roadmap / Strategy Red Team / User Stories / Job Stories
+├── engineering/               (4) TDD / Bite-Sized Plan / Typed Service Contracts / Agent DX
+├── product-philosophy/        (4) Focus as No / Whole Widget / Technology Meets Humanities / Invisible Perfection
+├── leadership/                (3) Reality Distortion Field / A-Player Density / Change Management
+├── financial-analysis/        (4) DuPont / DCF / Comparable Company / EVA
+├── research-methodology/      (1) Systematic Research Process
+└── industry-analysis/         (2) Industry Value Chain / Gartner Hype Cycle
 ```
 
 ## Calling Protocol

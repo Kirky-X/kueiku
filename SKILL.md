@@ -24,7 +24,7 @@ flowchart TD
     I -- 否 --> K["完成"]
 ```
 
-**能力概览**：18 个类别 × 104 个方法论。每个类别的方法论清单、最佳场景、最低信息需求均在该类别的 `index.md` 中。
+**能力概览**：18 个类别 × 95 个方法论。每个类别的方法论清单、最佳场景、最低信息需求均在该类别的 `index.md` 中。
 
 ## 核心原则
 
@@ -36,16 +36,16 @@ flowchart TD
 
 ---
 
-## 类别总览（18 类 × 104 个方法论）
+## 类别总览（18 类 × 95 个方法论）
 
 | # | 类别 | 适用任务类型 | 数量 | 索引路径 |
 | --- | --- | --- | --- | --- |
 | 1 | 问题诊断 | 找根因、颠覆性思考、80/20 聚焦 | 4 | `references/problem-diagnosis/index.md` |
-| 2 | 战略分析 | 现状评估、竞争格局、商业模式、定价护城河、价值链、标杆、资源能力评估 | 23 | `references/strategy/index.md` |
+| 2 | 战略分析 | 现状评估、竞争格局、商业模式、定价护城河、价值链、标杆、资源能力评估、战略演化 | 23 | `references/strategy/index.md` |
 | 3 | 产品与增长 | 用户需求、增长瓶颈、产品创新、指标体系 | 8 | `references/product-growth/index.md` |
-| 4 | 决策制定 | 优先级排序、目标制定、风险预演、选型、存在主义决策 | 8 | `references/decision-making/index.md` |
+| 4 | 决策制定 | 优先级排序、目标制定、风险预演、选型、存在主义决策、风险评估 | 9 | `references/decision-making/index.md` |
 | 5 | 用户研究 | 用户旅程、同理心画像、决策旅程、需求层次 | 4 | `references/user-research/index.md` |
-| 6 | 结构化思维 | MECE 表达、多视角评估、假设澄清、框架选择、连点思维 | 8 | `references/structured-thinking/index.md` |
+| 6 | 结构化思维 | MECE 表达、多视角评估、假设澄清、框架选择、连点思维、系统思考 | 9 | `references/structured-thinking/index.md` |
 | 7 | 产品发现 | 持续发现、假设验证、用户访谈、实验设计 | 8 | `references/product-discovery/index.md` |
 | 8 | 上市策略 | 滩头堡、ICP、GTM、增长飞轮、定位 | 7 | `references/go-to-market/index.md` |
 | 9 | 市场研究 | 市场规模、细分、用户画像、STP、感知图、技术采用 | 7 | `references/market-research/index.md` |
@@ -54,7 +54,7 @@ flowchart TD
 | 12 | 执行 | 结果导向路线图、战略红队、敏捷需求 | 4 | `references/execution/index.md` |
 | 13 | 编程与架构 | TDD、小步计划、服务契约、Agent DX | 4 | `references/engineering/index.md` |
 | 14 | 产品哲学 | 激进减法、垂直整合、科技人文、隐形完美 | 4 | `references/product-philosophy/index.md` |
-| 15 | 领导力 | 现实扭曲力场、A 级人才密度 | 2 | `references/leadership/index.md` |
+| 15 | 领导力 | 现实扭曲力场、A 级人才密度、变革管理 | 3 | `references/leadership/index.md` |
 | 16 | 财务分析 | 杜邦、DCF、可比公司、EVA | 4 | `references/financial-analysis/index.md` |
 | 17 | 研究方法论 | 系统化研究流程 | 1 | `references/research-methodology/index.md` |
 | 18 | 行业分析 | 行业价值链、技术成熟度曲线 | 2 | `references/industry-analysis/index.md` |
@@ -66,11 +66,11 @@ flowchart TD
 按类别分组，列出该类别覆盖的核心用户意图 → 主方法论。完整备选方法论见各 `index.md` 的"路由触发信号"章节。
 
 **问题诊断** — 找根因→5 Whys；颠覆性思考→First Principles；80/20 聚焦→Pareto；多因素成因→Fishbone
-**战略分析** — 现状评估→SWOT；竞争格局→Porter's Five Forces；外部环境→PESTLE；商业模式→Business Model Canvas；多方对齐→Stakeholder Mapping；增长方向→Ansoff；价值创新→Blue Ocean；组织诊断→McKinsey 7S；产品组合→BCG Matrix；战略显性化→Product Strategy Canvas；早期创业验证→Lean Canvas；战略与盈利分离→Startup Canvas；价值主张文案→JDB Value Proposition；变现模型→Monetization Strategy；定价→Pricing Strategy；护城河→Can't-Won't Defensibility；资源能力评估→VRIO；国家竞争优势→Porter Diamond Model；业务组合管理→GE 麦肯锡矩阵；战略群组→Strategic Group Mapping；价值链→Value Chain Analysis；最佳实践→Benchmarking；产品生命周期→Product Life Cycle
+**战略分析** — 现状评估→SWOT；竞争格局→Porter's Five Forces；外部环境→PESTLE；商业模式→Business Model Canvas；多方对齐→Stakeholder Mapping；增长方向→Ansoff；价值创新→Blue Ocean；组织诊断→McKinsey 7S；产品组合→BCG Matrix；战略显性化→Product Strategy Canvas；早期创业验证→Lean Canvas；战略与盈利分离→Startup Canvas；价值主张文案→JDB Value Proposition；变现模型→Monetization Strategy；定价→Pricing Strategy；护城河→Can't-Won't Defensibility；资源能力评估→VRIO；国家竞争优势→Porter Diamond Model；业务组合管理→GE 麦肯锡矩阵；战略群组→Strategic Group Mapping；价值链→Value Chain Analysis；最佳实践→Benchmarking；产品生命周期→Product Life Cycle；战略演化感知→Wardley Mapping
 **产品与增长** — 用户真实需求→JTBD；增长瓶颈→AARRR；从0到1→Design Thinking；迭代验证→Lean BML；契合度验证→Value Proposition Canvas；系统化创意→SCAMPER；需求性质分类→Kano；指标体系→North Star
-**决策制定** — 优先级排序→RICE；任务管理→Eisenhower；目标制定→OKR；风险预演→Pre-mortem；多标准选型→Decision Matrix；需求裁剪→MoSCoW；失效风险→FMEA；存在主义决策→Death Filter
+**决策制定** — 优先级排序→RICE；任务管理→Eisenhower；目标制定→OKR；风险预演→Pre-mortem；多标准选型→Decision Matrix；需求裁剪→MoSCoW；失效风险→FMEA；存在主义决策→Death Filter；快速风险评估→Risk Matrix
 **用户研究** — 用户旅程→Customer Journey Map；同理心画像→Empathy Map；消费者决策旅程→Consumer Decision Journey；需求层次→Maslow Hierarchy
-**结构化思维** — 结构化表达→MECE+Pyramid；多视角评估→Six Thinking Hats；澄清假设→Socratic Questioning；问题域判断→Cynefin；二阶效应→Second-Order Thinking；框架选择→Framework Selection；连点思维→Connecting Dots；重构升维→Reframe and Elevate
+**结构化思维** — 结构化表达→MECE+Pyramid；多视角评估→Six Thinking Hats；澄清假设→Socratic Questioning；问题域判断→Cynefin；二阶效应→Second-Order Thinking；框架选择→Framework Selection；连点思维→Connecting Dots；重构升维→Reframe and Elevate；系统思考→Systems Thinking
 **产品发现** — 持续发现→Opportunity Solution Tree；用户访谈→The Mom Test；想法初筛→ICE；未满足需求→Opportunity Score；实验选型→Experiment Design Library；假设识别→Assumption Mapping；最小可行原型→Pretotypes；产品团队协作→Product Trio
 **上市策略** — 滩头堡→Beachhead Segment；理想客户→ICP；GTM动作→GTM Motions；发布计划→GTM Strategy；增长飞轮→Growth Loops；竞品应战→Competitive Battlecard；定位→Positioning Strategy
 **市场研究** — 市场规模→Market Sizing；市场细分→Market Segmentation；用户细分→User Segmentation；用户画像→User Personas；STP 分析→STP Analysis；品牌感知→Perceptual Mapping；技术采用→Technology Adoption Lifecycle
@@ -79,7 +79,7 @@ flowchart TD
 **执行** — 结果导向路线图→Outcome Roadmap；战略红队→Strategy Red Team；敏捷需求→User Stories；情境化需求→Job Stories
 **编程与架构** — 测试驱动→TDD；小步计划→Bite-Sized Plan；服务契约→Typed Service Contracts；Agent友好度→Agent DX/CLI Scale
 **产品哲学** — 激进减法→Focus as No；垂直整合→Whole Widget；科技人文→Technology Meets Humanities；隐形完美→Invisible Perfection
-**领导力** — 现实扭曲力场→Reality Distortion Field；A 级人才密度→A-Player Density
+**领导力** — 现实扭曲力场→Reality Distortion Field；A 级人才密度→A-Player Density；组织变革→Change Management
 **财务分析** — ROE 拆解→DuPont；企业估值→DCF；可比公司→Comparable Company；价值创造→EVA
 **研究方法论** — 系统化研究→Systematic Research Process
 **行业分析** — 行业价值链→Industry Value Chain；技术成熟度→Gartner Hype Cycle
@@ -134,6 +134,34 @@ flowchart TD
 2. 说明：已完成部分 + 为何判断此框架不适合
 3. 从快速路由表重新选择，说明切换理由
 4. 已完成部分如有价值可保留作为输入
+
+---
+
+## 自动化脚本工具
+
+`scripts/tools/kueiku-calc.py` 提供 5 个高计算密度方法论的自动化计算，纯 Python 标准库实现，无外部依赖。
+
+| 子命令 | 方法论 | 功能 | CSV 输入 |
+| --- | --- | --- | --- |
+| `rice` | RICE Scoring | 优先级评分 + 排序 + 分层建议 | name,reach,impact,confidence,effort |
+| `dmatrix` | Decision Matrix | 多方案加权评分 + 敏感性分析 | option,criterion,weight,score |
+| `risk` | Risk Matrix | 概率×影响评估 + 四区分类 | name,probability,impact[,category] |
+| `dupont` | DuPont Analysis | 三因素分解 + 连环替代法 | period,revenue,net_income,total_assets,equity |
+| `pareto` | Pareto Analysis | 排序 + 累积百分比 + 关键少数识别 | name,value |
+
+```bash
+# 用法
+python scripts/tools/kueiku-calc.py rice    -i items.csv [-o report.md] [--json]
+python scripts/tools/kueiku-calc.py dmatrix -i scores.csv [-o report.md] [--json]
+python scripts/tools/kueiku-calc.py risk    -i risks.csv  [-o report.md] [--json]
+python scripts/tools/kueiku-calc.py dupont  -i finance.csv [-o report.md] [--json]
+python scripts/tools/kueiku-calc.py pareto  -i items.csv  [-o report.md] [--json]
+
+# 示例数据
+ls scripts/tools/examples/
+```
+
+每个子命令支持 `--help` 查看完整 CSV 格式说明。支持 Markdown 报告输出（默认）和 JSON 格式（`--json`）。
 
 ---
 
