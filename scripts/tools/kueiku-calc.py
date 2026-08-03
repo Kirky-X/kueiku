@@ -1,15 +1,22 @@
 #!/usr/bin/env python3
 """kueiku-calc — Kueiku 方法论计算工具集
 
-将 5 个高计算密度方法论自动化：RICE / Decision Matrix / Risk Matrix / DuPont / Pareto。
+将 15 个高计算密度方法论自动化：RICE / Decision Matrix / Risk Matrix / DuPont / Pareto /
+FMEA / ICE / Opportunity Score / DCF / EVA / A/B Test / RFM / Cohort / BCG / GE-McKinsey。
 纯 Python 标准库实现，无外部依赖。
 
 用法:
-  python kueiku-calc.py rice       -i items.csv [-o report.md]
-  python kueiku-calc.py dmatrix    -i scores.csv [-o report.md]
-  python kueiku-calc.py risk       -i risks.csv  [-o report.md]
-  python kueiku-calc.py dupont     -i finance.csv [-o report.md]
-  python kueiku-calc.py pareto     -i items.csv  [-o report.md]
+  python kueiku-calc.py <subcommand> -i <input.csv> [-o report.md] [--json]
+
+子命令:
+  rice       RICE 优先级评分          dmatrix  决策矩阵（Pugh Matrix）
+  risk       风险矩阵                  dupont   杜邦分析
+  pareto     帕累托分析                fmea     FMEA 失效模式分析
+  ice        ICE 评分                  oppscore 机会评分
+  dcf        现金流折现估值            eva      经济增加值
+  abtest     A/B 测试显著性分析        rfm      RFM 用户分层
+  cohort     同期群留存分析            bcg      BCG 矩阵
+  gemckinsey GE-McKinsey 矩阵
 
 每个子命令支持 --help 查看 CSV 格式要求。
 """
@@ -18,6 +25,7 @@ import argparse
 import csv
 import io
 import json
+import math
 import sys
 from pathlib import Path
 
@@ -650,49 +658,992 @@ def cmd_pareto(args):
         write_output("\n".join(lines), args.output)
 
 
+# ───────────────────────── FMEA ─────────────────────────
+
+FMEA_HELP = """
+FMEA 失效模式与影响分析: RPN = 严重度(S) × 频度(O) × 探测度(D)
+
+CSV 格式:
+  name,severity,occurrence,detection,category
+
+  name      : 失效模式描述
+  severity  : 严重度 (1-10)
+  occurrence: 频度 (1-10)
+  detection : 探测度 (1-10, 1=必能检出, 10=无法检出)
+  category  : 类别（可选）
+
+示例:
+  name,severity,occurrence,detection,category
+  电源过载,8,4,3,硬件
+  数据丢失,9,3,5,软件
+"""
+
+
+def cmd_fmea(args):
+    rows = read_csv(args.input)
+    required = {"name", "severity", "occurrence", "detection"}
+    if not required.issubset(rows[0].keys()):
+        print(f"CSV 缺少列: {required - set(rows[0].keys())}", file=sys.stderr)
+        sys.exit(1)
+
+    items = []
+    for r in rows:
+        s, o, d = int(r["severity"]), int(r["occurrence"]), int(r["detection"])
+        rpn = s * o * d
+        if rpn >= 200:
+            zone, action = "极高", "立即采取纠正措施"
+        elif rpn >= 100:
+            zone, action = "高", "尽快制定缓解方案"
+        elif rpn >= 50:
+            zone, action = "中", "纳入监控并计划改善"
+        else:
+            zone, action = "低", "常规监控"
+        items.append({"name": r["name"], "s": s, "o": o, "d": d, "rpn": rpn,
+                       "zone": zone, "action": action, "category": r.get("category", "")})
+
+    items.sort(key=lambda x: x["rpn"], reverse=True)
+
+    lines = ["# FMEA 失效模式分析报告\n"]
+    lines.append(f"失效模式数: {len(items)}\n")
+    lines.append("## 风险优先数排序\n")
+    headers = ["排名", "失效模式", "S", "O", "D", "RPN", "风险等级", "应对策略"]
+    trows = [[i+1, it["name"], it["s"], it["o"], it["d"], it["rpn"], it["zone"], it["action"]] for i, it in enumerate(items)]
+    lines.append(md_table(headers, trows))
+
+    high = [it for it in items if it["rpn"] >= 100]
+    if high:
+        lines.append("## 需优先处理的失效模式\n")
+        for it in high:
+            lines.append(f"- **{it['name']}** (RPN={it['rpn']}, {it['zone']}) → {it['action']}")
+
+    if args.json:
+        write_output(json.dumps(items, ensure_ascii=False, indent=2), args.output)
+    else:
+        write_output("\n".join(lines), args.output)
+
+
+# ───────────────────────── ICE Framework ─────────────────────────
+
+ICE_HELP = """
+ICE 评分: Score = Impact × Confidence × Ease
+
+CSV 格式:
+  name,impact,confidence,ease
+
+  name       : 想法/功能名称
+  impact     : 影响力 (1-10)
+  confidence : 信心度 (1-10)
+  ease       : 容易度 (1-10, 越容易分越高)
+
+示例:
+  name,impact,confidence,ease
+  用户推荐,8,7,9
+  付费墙优化,6,5,4
+"""
+
+
+def cmd_ice(args):
+    rows = read_csv(args.input)
+    required = {"name", "impact", "confidence", "ease"}
+    if not required.issubset(rows[0].keys()):
+        print(f"CSV 缺少列: {required - set(rows[0].keys())}", file=sys.stderr)
+        sys.exit(1)
+
+    items = []
+    for r in rows:
+        i, c, e = float(r["impact"]), float(r["confidence"]), float(r["ease"])
+        score = i * c * e
+        items.append({"name": r["name"], "impact": i, "confidence": c, "ease": e, "score": score})
+
+    items.sort(key=lambda x: x["score"], reverse=True)
+
+    lines = ["# ICE 评分报告\n"]
+    lines.append(f"评估项数: {len(items)}\n")
+    lines.append("## 排序结果\n")
+    headers = ["排名", "名称", "Impact", "Confidence", "Ease", "ICE 分"]
+    trows = [[i+1, it["name"], it["impact"], it["confidence"], it["ease"], fmt_num(it["score"], 0)] for i, it in enumerate(items)]
+    lines.append(md_table(headers, trows))
+
+    if len(items) >= 3:
+        top = max(1, len(items) // 3)
+        lines.append("## 分层建议\n")
+        lines.append(f"- **必做 (Top {top})**: {', '.join(it['name'] for it in items[:top])}")
+        lines.append(f"- **候选**: {', '.join(it['name'] for it in items[top:])}")
+
+    if args.json:
+        write_output(json.dumps(items, ensure_ascii=False, indent=2), args.output)
+    else:
+        write_output("\n".join(lines), args.output)
+
+
+# ───────────────────────── Opportunity Score ─────────────────────────
+
+OPPSCORE_HELP = """
+机会评分: Opportunity = Importance × (1 - Satisfaction)
+
+CSV 格式:
+  name,importance,satisfaction
+
+  name         : 需求/功能名称
+  importance   : 重要度 (1-5)
+  satisfaction : 当前满意度 (1-5)
+
+示例:
+  name,importance,satisfaction
+  快速响应,5,2
+  界面美观,3,4
+"""
+
+
+def cmd_oppscore(args):
+    rows = read_csv(args.input)
+    required = {"name", "importance", "satisfaction"}
+    if not required.issubset(rows[0].keys()):
+        print(f"CSV 缺少列: {required - set(rows[0].keys())}", file=sys.stderr)
+        sys.exit(1)
+
+    items = []
+    for r in rows:
+        imp, sat = float(r["importance"]), float(r["satisfaction"])
+        imp_n = (imp - 1) / 4  # 归一化到 0-1
+        sat_n = (sat - 1) / 4
+        opp = imp_n * (1 - sat_n)
+        items.append({"name": r["name"], "importance": imp, "satisfaction": sat,
+                       "imp_norm": imp_n, "sat_norm": sat_n, "opportunity": opp})
+
+    items.sort(key=lambda x: x["opportunity"], reverse=True)
+
+    lines = ["# 机会评分报告\n"]
+    lines.append(f"评估需求数: {len(items)}\n")
+    lines.append("## 排序结果\n")
+    headers = ["排名", "需求", "重要度", "满意度", "机会分"]
+    trows = [[i+1, it["name"], it["importance"], it["satisfaction"], f"{it['opportunity']:.3f}"] for i, it in enumerate(items)]
+    lines.append(md_table(headers, trows))
+
+    # 分类
+    opportunities = [it for it in items if it["opportunity"] >= 0.5]
+    satisfied = [it for it in items if it["satisfaction"] >= 4 and it["importance"] >= 4]
+    low_priority = [it for it in items if it["importance"] <= 2]
+
+    lines.append("## 分类建议\n")
+    if opportunities:
+        lines.append(f"### 蓝海机会（{len(opportunities)} 项）\n")
+        for it in opportunities:
+            lines.append(f"- **{it['name']}** — 重要度 {it['importance']}, 满意度 {it['satisfaction']}, 机会分 {it['opportunity']:.3f}")
+    if satisfied:
+        lines.append(f"\n### 已满足的高重要需求（{len(satisfied)} 项）\n")
+        for it in satisfied:
+            lines.append(f"- {it['name']} — 维持现状即可")
+    if low_priority:
+        lines.append(f"\n### 低优先级（{len(low_priority)} 项）\n")
+        for it in low_priority:
+            lines.append(f"- {it['name']} — 不值得投入")
+
+    if args.json:
+        write_output(json.dumps(items, ensure_ascii=False, indent=2), args.output)
+    else:
+        write_output("\n".join(lines), args.output)
+
+
+# ───────────────────────── DCF ─────────────────────────
+
+DCF_HELP = """
+DCF 现金流折现: 企业价值 = Σ FCF/(1+r)^t + 终值/(1+r)^n
+
+CSV 格式:
+  year,fcf
+
+  year : 年份标识 (1, 2, 3, ...)
+  fcf  : 自由现金流
+
+额外参数通过命令行传入:
+  --rate       折现率 (WACC), 如 0.10 表示 10%
+  --growth     永续增长率, 如 0.03 表示 3%
+  --shares     流通股数（可选，用于计算每股价值）
+
+示例:
+  python kueiku-calc.py dcf -i cashflows.csv --rate 0.10 --growth 0.03 --shares 1000000
+"""
+
+
+def cmd_dcf(args):
+    rows = read_csv(args.input)
+    required = {"year", "fcf"}
+    if not required.issubset(rows[0].keys()):
+        print(f"CSV 缺少列: {required - set(rows[0].keys())}", file=sys.stderr)
+        sys.exit(1)
+
+    rate = float(args.rate) if hasattr(args, 'rate') and args.rate else 0.10
+    growth = float(args.growth) if hasattr(args, 'growth') and args.growth else 0.03
+    shares = float(args.shares) if hasattr(args, 'shares') and args.shares else 0
+
+    cashflows = []
+    for r in rows:
+        cashflows.append({"year": int(r["year"]), "fcf": float(r["fcf"])})
+    cashflows.sort(key=lambda x: x["year"])
+
+    if not cashflows:
+        print("无现金流数据", file=sys.stderr)
+        sys.exit(1)
+
+    # 折现计算
+    pv_items = []
+    total_pv = 0
+    for cf in cashflows:
+        t = cf["year"]
+        pv = cf["fcf"] / ((1 + rate) ** t)
+        total_pv += pv
+        pv_items.append({"year": t, "fcf": cf["fcf"], "pv": pv, "discount_factor": 1 / ((1 + rate) ** t)})
+
+    # 终值 (Gordon Growth Model)
+    last_fcf = cashflows[-1]["fcf"]
+    n = cashflows[-1]["year"]
+    terminal_value = last_fcf * (1 + growth) / (rate - growth)
+    terminal_pv = terminal_value / ((1 + rate) ** n)
+    enterprise_value = total_pv + terminal_pv
+
+    per_share = enterprise_value / shares if shares > 0 else 0
+
+    # 敏感性分析
+    sensitivity = []
+    for dr in [rate - 0.02, rate - 0.01, rate, rate + 0.01, rate + 0.02]:
+        if dr <= growth:
+            continue
+        tv = last_fcf * (1 + growth) / (dr - growth)
+        tpv = tv / ((1 + dr) ** n)
+        spv = sum(cf["fcf"] / ((1 + dr) ** cf["year"]) for cf in cashflows)
+        ev = spv + tpv
+        sensitivity.append({"discount_rate": dr, "enterprise_value": ev,
+                            "per_share": ev / shares if shares > 0 else 0})
+
+    lines = ["# DCF 现金流折现估值报告\n"]
+    lines.append(f"折现率: {pct(rate*100)} | 永续增长率: {pct(growth*100)} | 预测期: {n} 年\n")
+
+    lines.append("## 现金流折现\n")
+    headers = ["年份", "自由现金流", "折现因子", "现值"]
+    trows = [[it["year"], fmt_num(it["fcf"], 0), f"{it['discount_factor']:.4f}", fmt_num(it["pv"], 0)] for it in pv_items]
+    lines.append(md_table(headers, trows))
+
+    lines.append("## 估值汇总\n")
+    lines.append(f"- 预测期现值合计: **{fmt_num(total_pv, 0)}**")
+    lines.append(f"- 终值 (Gordon): **{fmt_num(terminal_value, 0)}**")
+    lines.append(f"- 终值现值: **{fmt_num(terminal_pv, 0)}**")
+    lines.append(f"- **企业价值**: **{fmt_num(enterprise_value, 0)}**")
+    if shares > 0:
+        lines.append(f"- 流通股数: {fmt_num(shares, 0)}")
+        lines.append(f"- **每股价值**: **{fmt_num(per_share)}**")
+
+    lines.append(f"\n## 敏感性分析（折现率变动）\n")
+    s_headers = ["折现率", "企业价值"] + (["每股价值"] if shares > 0 else [])
+    s_rows = [[pct(s["discount_rate"]*100), fmt_num(s["enterprise_value"], 0)] + ([fmt_num(s["per_share"])] if shares > 0 else []) for s in sensitivity]
+    lines.append(md_table(s_headers, s_rows))
+
+    if args.json:
+        result = {"rate": rate, "growth": growth, "pv_items": pv_items,
+                   "terminal_value": terminal_value, "terminal_pv": terminal_pv,
+                   "enterprise_value": enterprise_value, "per_share": per_share, "sensitivity": sensitivity}
+        write_output(json.dumps(result, ensure_ascii=False, indent=2), args.output)
+    else:
+        write_output("\n".join(lines), args.output)
+
+
+# ───────────────────────── EVA ─────────────────────────
+
+EVA_HELP = """
+EVA 经济增加值: EVA = NOPAT - WACC × 投入资本
+
+CSV 格式:
+  period,ebit,tax_rate,invested_capital,wacc
+
+  period          : 期间标识
+  ebit            : 息税前利润
+  tax_rate        : 税率 (小数, 如 0.25)
+  invested_capital: 投入资本
+  wacc            : 加权平均资本成本 (小数, 如 0.10)
+
+示例:
+  period,ebit,tax_rate,invested_capital,wacc
+  2023,500000,0.25,3000000,0.10
+  2024,600000,0.25,3200000,0.09
+"""
+
+
+def cmd_eva(args):
+    rows = read_csv(args.input)
+    required = {"period", "ebit", "tax_rate", "invested_capital", "wacc"}
+    if not required.issubset(rows[0].keys()):
+        print(f"CSV 缺少列: {required - set(rows[0].keys())}", file=sys.stderr)
+        sys.exit(1)
+
+    items = []
+    for r in rows:
+        ebit = float(r["ebit"])
+        tax = float(r["tax_rate"])
+        ic = float(r["invested_capital"])
+        wacc = float(r["wacc"])
+        nopat = ebit * (1 - tax)
+        capital_charge = wacc * ic
+        eva = nopat - capital_charge
+        roic = nopat / ic if ic > 0 else 0
+        spread = roic - wacc
+        items.append({"period": r["period"], "ebit": ebit, "tax_rate": tax,
+                       "invested_capital": ic, "wacc": wacc, "nopat": nopat,
+                       "capital_charge": capital_charge, "eva": eva, "roic": roic, "spread": spread})
+
+    lines = ["# EVA 经济增加值分析报告\n"]
+    lines.append(f"分析期间数: {len(items)}\n")
+
+    lines.append("## 核心指标\n")
+    headers = ["期间", "NOPAT", "资本成本", "EVA", "ROIC", "Spread"]
+    trows = [[it["period"], fmt_num(it["nopat"], 0), fmt_num(it["capital_charge"], 0),
+              fmt_num(it["eva"], 0), pct(it["roic"]*100), pct(it["spread"]*100)] for it in items]
+    lines.append(md_table(headers, trows))
+
+    lines.append("## 原始数据\n")
+    h2 = ["期间", "EBIT", "税率", "投入资本", "WACC"]
+    t2 = [[it["period"], fmt_num(it["ebit"], 0), pct(it["tax_rate"]*100),
+           fmt_num(it["invested_capital"], 0), pct(it["wacc"]*100)] for it in items]
+    lines.append(md_table(h2, t2))
+
+    # 诊断
+    lines.append("## 诊断\n")
+    for it in items:
+        if it["eva"] > 0:
+            lines.append(f"- **{it['period']}**: EVA > 0，创造价值 (Spread = {pct(it['spread']*100)})")
+        else:
+            lines.append(f"- **{it['period']}**: EVA < 0，毁灭价值！ROIC ({pct(it['roic']*100)}) < WACC ({pct(it['wacc']*100)})")
+
+    if args.json:
+        write_output(json.dumps(items, ensure_ascii=False, indent=2), args.output)
+    else:
+        write_output("\n".join(lines), args.output)
+
+
+# ───────────────────────── A/B Test Analysis ─────────────────────────
+
+ABTEST_HELP = """
+A/B 测试分析: 统计显著性检验 + SRM 检测 + 决策矩阵
+
+CSV 格式:
+  variant,users,conversions
+
+  variant     : 变体名称 (control / treatment)
+  users       : 用户数
+  conversions : 转化数
+
+示例:
+  variant,users,conversions
+  control,10000,500
+  treatment,10200,550
+"""
+
+
+def _z_test(p1, n1, p2, n2):
+    """双比例 z 检验，返回 (z_stat, p_value_approx)。"""
+    p_pool = (n1 * p1 + n2 * p2) / (n1 + n2)
+    se = math.sqrt(p_pool * (1 - p_pool) * (1/n1 + 1/n2))
+    if se == 0:
+        return 0, 1.0
+    z = (p2 - p1) / se
+    # 近似 p-value (two-tailed)
+    p_val = 2 * (1 - _norm_cdf(abs(z)))
+    return z, p_val
+
+
+def _norm_cdf(x):
+    """标准正态分布 CDF 近似。"""
+    # Abramowitz & Stegun 近似
+    a1, a2, a3, a4, a5 = 0.254829592, -0.284496736, 1.421413741, -1.453152027, 1.061405429
+    p = 0.3275911
+    sign = 1 if x >= 0 else -1
+    x = abs(x) / math.sqrt(2)
+    t = 1.0 / (1.0 + p * x)
+    y = 1.0 - (((((a5*t + a4)*t) + a3)*t + a2)*t + a1)*t * math.exp(-x*x)
+    return 0.5 * (1.0 + sign * y)
+
+
+def cmd_abtest(args):
+    rows = read_csv(args.input)
+    required = {"variant", "users", "conversions"}
+    if not required.issubset(rows[0].keys()):
+        print(f"CSV 缺少列: {required - set(rows[0].keys())}", file=sys.stderr)
+        sys.exit(1)
+
+    variants = {}
+    for r in rows:
+        u, c = int(r["users"]), int(r["conversions"])
+        variants[r["variant"]] = {"users": u, "conversions": c, "rate": c / u if u > 0 else 0}
+
+    if len(variants) < 2:
+        print("至少需要 2 个变体", file=sys.stderr)
+        sys.exit(1)
+
+    names = list(variants.keys())
+    ctrl_name = names[0]
+    treat_name = names[1]
+    ctrl = variants[ctrl_name]
+    treat = variants[treat_name]
+
+    # SRM 检测
+    expected_ratio = ctrl["users"] / (ctrl["users"] + treat["users"])
+    actual_ratio = ctrl["users"] / (ctrl["users"] + treat["users"])
+    total_users = ctrl["users"] + treat["users"]
+    expected_ctrl = total_users * 0.5  # 假设 1:1 分配
+    srm_chi2 = (ctrl["users"] - expected_ctrl)**2 / expected_ctrl + (treat["users"] - expected_ctrl)**2 / expected_ctrl
+    srm_detected = abs(ctrl["users"] - treat["users"]) / total_users > 0.01
+
+    # z 检验
+    z, p_val = _z_test(ctrl["rate"], ctrl["users"], treat["rate"], treat["users"])
+    significant = p_val < 0.05
+    lift = (treat["rate"] - ctrl["rate"]) / ctrl["rate"] * 100 if ctrl["rate"] > 0 else 0
+
+    # MDE (Minimum Detectable Effect)
+    alpha = 0.05
+    z_alpha = 1.96
+    z_beta = 0.84  # power = 0.8
+    p_pool = (ctrl["conversions"] + treat["conversions"]) / (ctrl["users"] + treat["users"])
+    mde = z_alpha * math.sqrt(2 * p_pool * (1 - p_pool) / min(ctrl["users"], treat["users"]))
+
+    # 决策
+    if srm_detected:
+        decision = "⚠️ INVALID — SRM 检测到样本比例失衡，结果不可信"
+    elif significant and lift > 0:
+        decision = "✅ Ship — 显著正向，建议上线"
+    elif significant and lift < 0:
+        decision = "❌ Stop — 显著负向，停止实验"
+    elif not significant:
+        decision = "🔍 Investigate — 不显著，需拆分 segment 分析"
+    else:
+        decision = "🤷 无法判断"
+
+    lines = ["# A/B 测试分析报告\n"]
+    lines.append(f"对照组: {ctrl_name} | 实验组: {treat_name}\n")
+
+    lines.append("## 基础数据\n")
+    headers = ["变体", "用户数", "转化数", "转化率"]
+    trows = [[ctrl_name, fmt_num(ctrl["users"], 0), ctrl["conversions"], pct(ctrl["rate"]*100)],
+             [treat_name, fmt_num(treat["users"], 0), treat["conversions"], pct(treat["rate"]*100)]]
+    lines.append(md_table(headers, trows))
+
+    lines.append(f"**提升幅度**: {lift:+.2f}%\n")
+
+    lines.append("## 统计检验\n")
+    lines.append(f"- z 统计量: {z:.4f}")
+    lines.append(f"- p 值: {p_val:.6f}")
+    lines.append(f"- 显著性水平 α: {alpha}")
+    lines.append(f"- 结论: {'显著 (p < 0.05)' if significant else '不显著 (p ≥ 0.05)'}")
+    lines.append(f"- MDE (最小可检测效应): {pct(mde*100)}\n")
+
+    lines.append("## SRM 检测\n")
+    lines.append(f"- 样本比例差异: {abs(ctrl['users'] - treat['users']) / total_users * 100:.2f}%")
+    lines.append(f"- SRM 状态: {'⚠️ 检测到失衡' if srm_detected else '✅ 正常'}")
+    lines.append(f"- χ² = {srm_chi2:.4f}\n")
+
+    lines.append(f"## 决策: {decision}")
+
+    if args.json:
+        result = {"control": ctrl, "treatment": treat, "z": z, "p_value": p_val,
+                   "significant": significant, "lift": lift, "srm_detected": srm_detected,
+                   "mde": mde, "decision": decision}
+        write_output(json.dumps(result, ensure_ascii=False, indent=2), args.output)
+    else:
+        write_output("\n".join(lines), args.output)
+
+
+# ───────────────────────── RFM Model ─────────────────────────
+
+RFM_HELP = """
+RFM 用户分层: Recency × Frequency × Monetary → 8 段分类
+
+CSV 格式:
+  customer_id,recency,frequency,monetary
+
+  customer_id : 客户标识
+  recency     : 距上次购买天数
+  frequency   : 购买次数
+  monetary    : 消费总额
+
+示例:
+  customer_id,recency,frequency,monetary
+  C001,5,20,5000
+  C002,90,3,300
+  C003,15,10,2000
+"""
+
+
+def _quintile_score(values, reverse=False):
+    """将值映射到 1-5 分位。reverse=True 表示值越小分越高（如 recency）。"""
+    sorted_vals = sorted(values)
+    n = len(sorted_vals)
+    scores = {}
+    for i, v in enumerate(sorted_vals):
+        q = min(4, int(i / n * 5))
+        scores[v] = (5 - q) if reverse else (q + 1)
+    return [scores[v] for v in values]
+
+
+def cmd_rfm(args):
+    rows = read_csv(args.input)
+    required = {"customer_id", "recency", "frequency", "monetary"}
+    if not required.issubset(rows[0].keys()):
+        print(f"CSV 缺少列: {required - set(rows[0].keys())}", file=sys.stderr)
+        sys.exit(1)
+
+    data = []
+    for r in rows:
+        data.append({"id": r["customer_id"], "recency": float(r["recency"]),
+                      "frequency": float(r["frequency"]), "monetary": float(r["monetary"])})
+
+    r_vals = [d["recency"] for d in data]
+    f_vals = [d["frequency"] for d in data]
+    m_vals = [d["monetary"] for d in data]
+
+    r_scores = _quintile_score(r_vals, reverse=True)
+    f_scores = _quintile_score(f_vals)
+    m_scores = _quintile_score(m_vals)
+
+    for i, d in enumerate(data):
+        d["r"] = r_scores[i]
+        d["f"] = f_scores[i]
+        d["m"] = m_scores[i]
+        # 8 段分类
+        r_hi = d["r"] >= 4
+        f_hi = d["f"] >= 4
+        m_hi = d["m"] >= 4
+        if r_hi and f_hi and m_hi:
+            d["segment"] = "重要价值用户"
+        elif not r_hi and f_hi and m_hi:
+            d["segment"] = "重要保持用户"
+        elif r_hi and not f_hi and m_hi:
+            d["segment"] = "重要发展用户"
+        elif not r_hi and not f_hi and m_hi:
+            d["segment"] = "重要挽留用户"
+        elif r_hi and f_hi and not m_hi:
+            d["segment"] = "一般价值用户"
+        elif not r_hi and f_hi and not m_hi:
+            d["segment"] = "一般保持用户"
+        elif r_hi and not f_hi and not m_hi:
+            d["segment"] = "一般发展用户"
+        else:
+            d["segment"] = "一般挽留用户"
+
+    # 统计各段
+    segments = {}
+    for d in data:
+        seg = d["segment"]
+        if seg not in segments:
+            segments[seg] = []
+        segments[seg].append(d)
+
+    lines = ["# RFM 用户分层报告\n"]
+    lines.append(f"客户总数: {len(data)}\n")
+
+    lines.append("## 分层统计\n")
+    headers = ["分层", "人数", "占比", "平均 R", "平均 F", "平均 M"]
+    seg_order = ["重要价值用户", "重要保持用户", "重要发展用户", "重要挽留用户",
+                  "一般价值用户", "一般保持用户", "一般发展用户", "一般挽留用户"]
+    trows = []
+    for seg in seg_order:
+        if seg in segments:
+            members = segments[seg]
+            avg_r = sum(m["recency"] for m in members) / len(members)
+            avg_f = sum(m["frequency"] for m in members) / len(members)
+            avg_m = sum(m["monetary"] for m in members) / len(members)
+            trows.append([seg, len(members), pct(len(members)/len(data)*100),
+                           f"{avg_r:.0f}", f"{avg_f:.1f}", fmt_num(avg_m, 0)])
+    lines.append(md_table(headers, trows))
+
+    lines.append("## 客户明细（前 20）\n")
+    headers2 = ["客户", "R", "F", "M", "Recency", "Frequency", "Monetary", "分层"]
+    trows2 = [[d["id"], d["r"], d["f"], d["m"], f"{d['recency']:.0f}",
+               f"{d['frequency']:.0f}", fmt_num(d["monetary"], 0), d["segment"]] for d in data[:20]]
+    lines.append(md_table(headers2, trows2))
+
+    if args.json:
+        write_output(json.dumps(data, ensure_ascii=False, indent=2), args.output)
+    else:
+        write_output("\n".join(lines), args.output)
+
+
+# ───────────────────────── Cohort Analysis ─────────────────────────
+
+COHORT_HELP = """
+同期群留存分析: 按时间分组追踪留存率
+
+CSV 格式:
+  cohort,period,active,initial
+
+  cohort  : 同期群标识 (如 2024-01, 2024-02)
+  period  : 期数 (0=初始, 1=第1期, 2=第2期, ...)
+  active  : 活跃用户数
+  initial : 初始用户数
+
+示例:
+  cohort,period,active,initial
+  2024-01,0,1000,1000
+  2024-01,1,600,1000
+  2024-01,2,400,1000
+  2024-02,0,800,800
+  2024-02,1,500,800
+"""
+
+
+def cmd_cohort(args):
+    rows = read_csv(args.input)
+    required = {"cohort", "period", "active", "initial"}
+    if not required.issubset(rows[0].keys()):
+        print(f"CSV 缺少列: {required - set(rows[0].keys())}", file=sys.stderr)
+        sys.exit(1)
+
+    cohorts = {}
+    max_period = 0
+    for r in rows:
+        c = r["cohort"]
+        p = int(r["period"])
+        a = int(r["active"])
+        ini = int(r["initial"])
+        if c not in cohorts:
+            cohorts[c] = {}
+        cohorts[c][p] = {"active": a, "initial": ini, "retention": a / ini if ini > 0 else 0}
+        max_period = max(max_period, p)
+
+    cohort_names = sorted(cohorts.keys())
+    periods = list(range(max_period + 1))
+
+    lines = ["# 同期群留存分析报告\n"]
+    lines.append(f"同期群数: {len(cohort_names)} | 最大期数: {max_period}\n")
+
+    # 留存矩阵
+    lines.append("## 留存率矩阵\n")
+    headers = ["Cohort", "初始"] + [f"P{p}" for p in periods if p > 0]
+    trows = []
+    for c in cohort_names:
+        ini = cohorts[c].get(0, {}).get("initial", 0)
+        row = [c, str(ini)]
+        for p in periods:
+            if p == 0:
+                continue
+            if p in cohorts[c]:
+                row.append(pct(cohorts[c][p]["retention"] * 100))
+            else:
+                row.append("-")
+        trows.append(row)
+    lines.append(md_table(headers, trows))
+
+    # 平均留存
+    lines.append("## 各期平均留存率\n")
+    avg_headers = ["期数"] + [f"P{p}" for p in periods if p > 0]
+    avg_row = ["平均"]
+    for p in periods:
+        if p == 0:
+            continue
+        vals = [cohorts[c][p]["retention"] * 100 for c in cohort_names if p in cohorts[c]]
+        avg_row.append(pct(sum(vals)/len(vals)) if vals else "-")
+    lines.append(md_table(avg_headers, [avg_row]))
+
+    # PMF 判断
+    lines.append("## PMF 信号\n")
+    for p in periods:
+        if p == 0:
+            continue
+        vals = [cohorts[c][p]["retention"] * 100 for c in cohort_names if p in cohorts[c]]
+        if vals:
+            avg = sum(vals) / len(vals)
+            trend = "稳定" if avg > 30 else "偏低"
+            lines.append(f"- P{p} 平均留存: {pct(avg)} — {trend}")
+
+    if args.json:
+        result = {"cohorts": {c: {str(p): cohorts[c][p] for p in cohorts[c]} for c in cohort_names}}
+        write_output(json.dumps(result, ensure_ascii=False, indent=2), args.output)
+    else:
+        write_output("\n".join(lines), args.output)
+
+
+# ───────────────────────── BCG Matrix ─────────────────────────
+
+BCG_HELP = """
+BCG 矩阵: 市场增长率 × 相对市场份额 → 4 象限分类
+
+CSV 格式:
+  product,market_growth,relative_share,revenue
+
+  product        : 产品/业务名称
+  market_growth  : 市场增长率 (小数, 如 0.15 表示 15%)
+  relative_share : 相对市场份额 (小数, 如 1.5 表示市场领先)
+  revenue        : 收入（可选，用于气泡大小）
+
+示例:
+  product,market_growth,relative_share,revenue
+  产品A,0.25,1.8,5000
+  产品B,0.05,2.5,8000
+  产品C,0.30,0.6,2000
+  产品D,0.02,0.4,1000
+"""
+
+
+def cmd_bcg(args):
+    rows = read_csv(args.input)
+    required = {"product", "market_growth", "relative_share"}
+    if not required.issubset(rows[0].keys()):
+        print(f"CSV 缺少列: {required - set(rows[0].keys())}", file=sys.stderr)
+        sys.exit(1)
+
+    growth_threshold = 0.10  # 10% 作为高/低增长分界
+    share_threshold = 1.0    # 1.0 作为高/低份额分界
+
+    items = []
+    for r in rows:
+        g = float(r["market_growth"])
+        s = float(r["relative_share"])
+        rev = float(r.get("revenue", 0))
+        if g >= growth_threshold and s >= share_threshold:
+            quadrant = "⭐ 明星 (Star)"
+        elif g < growth_threshold and s >= share_threshold:
+            quadrant = "💰 现金牛 (Cash Cow)"
+        elif g >= growth_threshold and s < share_threshold:
+            quadrant = "❓ 问号 (Question Mark)"
+        else:
+            quadrant = "🐕 瘦狗 (Dog)"
+        items.append({"product": r["product"], "growth": g, "share": s,
+                       "revenue": rev, "quadrant": quadrant})
+
+    # 统计
+    quads = {}
+    for it in items:
+        q = it["quadrant"]
+        if q not in quads:
+            quads[q] = []
+        quads[q].append(it)
+
+    lines = ["# BCG 矩阵分析报告\n"]
+    lines.append(f"产品/业务数: {len(items)} | 增长阈值: {pct(growth_threshold*100)} | 份额阈值: {share_threshold}\n")
+
+    lines.append("## 分类结果\n")
+    headers = ["产品", "市场增长", "相对份额", "收入", "象限"]
+    trows = [[it["product"], pct(it["growth"]*100), f"{it['share']:.2f}",
+              fmt_num(it["revenue"], 0) if it["revenue"] else "-", it["quadrant"]] for it in items]
+    lines.append(md_table(headers, trows))
+
+    lines.append("## 战略建议\n")
+    for q_name, members in quads.items():
+        lines.append(f"### {q_name}（{len(members)} 项）\n")
+        for m in members:
+            lines.append(f"- **{m['product']}** — 增长 {pct(m['growth']*100)}, 份额 {m['share']:.2f}")
+        if "Star" in q_name:
+            lines.append("→ 策略: 加大投资，维持增长\n")
+        elif "Cash Cow" in q_name:
+            lines.append("→ 策略: 收割利润，减少投资\n")
+        elif "Question" in q_name:
+            lines.append("→ 策略: 选择性投资，或放弃\n")
+        else:
+            lines.append("→ 策略: 考虑退出或重组\n")
+
+    if args.json:
+        write_output(json.dumps(items, ensure_ascii=False, indent=2), args.output)
+    else:
+        write_output("\n".join(lines), args.output)
+
+
+# ───────────────────────── GE-McKinsey Matrix ─────────────────────────
+
+GEMCKINSEY_HELP = """
+GE-McKinsey 矩阵: 行业吸引力 × 竞争实力 → 9 格分类
+
+CSV 格式:
+  business,attractiveness,strength,revenue
+
+  business       : 业务/产品名称
+  attractiveness : 行业吸引力评分 (1-5)
+  strength       : 竞争实力评分 (1-5)
+  revenue        : 收入（可选）
+
+示例:
+  business,attractiveness,strength,revenue
+  业务A,4.5,4.0,5000
+  业务B,2.0,3.5,3000
+  业务C,3.8,2.0,2000
+"""
+
+
+def cmd_gemckinsey(args):
+    rows = read_csv(args.input)
+    required = {"business", "attractiveness", "strength"}
+    if not required.issubset(rows[0].keys()):
+        print(f"CSV 缺少列: {required - set(rows[0].keys())}", file=sys.stderr)
+        sys.exit(1)
+
+    items = []
+    for r in rows:
+        a = float(r["attractiveness"])
+        s = float(r["strength"])
+        rev = float(r.get("revenue", 0))
+        # 9 格分类
+        if a >= 3.67 and s >= 3.67:
+            cell = "投资/成长"
+        elif a >= 3.67 and s >= 2.33:
+            cell = "选择性投资"
+        elif a >= 3.67:
+            cell = "选择性投资"
+        elif a >= 2.33 and s >= 3.67:
+            cell = "选择性投资"
+        elif a >= 2.33 and s >= 2.33:
+            cell = "选择性维持"
+        elif a >= 2.33:
+            cell = "收割"
+        elif s >= 3.67:
+            cell = "选择性维持"
+        elif s >= 2.33:
+            cell = "收割"
+        else:
+            cell = "退出/剥离"
+        items.append({"business": r["business"], "attractiveness": a,
+                       "strength": s, "revenue": rev, "cell": cell})
+
+    # 统计
+    cells = {}
+    for it in items:
+        c = it["cell"]
+        if c not in cells:
+            cells[c] = []
+        cells[c].append(it)
+
+    lines = ["# GE-McKinsey 矩阵分析报告\n"]
+    lines.append(f"业务数: {len(items)}\n")
+
+    lines.append("## 分类结果\n")
+    headers = ["业务", "行业吸引力", "竞争实力", "收入", "策略区域"]
+    trows = [[it["business"], f"{it['attractiveness']:.1f}", f"{it['strength']:.1f}",
+              fmt_num(it["revenue"], 0) if it["revenue"] else "-", it["cell"]] for it in items]
+    lines.append(md_table(headers, trows))
+
+    # 3x3 矩阵可视化
+    lines.append("## 矩阵视图\n")
+    lines.append("```")
+    lines.append("              竞争实力")
+    lines.append("              强(>3.67)  中(2.33-3.67)  弱(<2.33)")
+    for a_label, a_range in [("高(>3.67)", (3.67, 5.01)), ("中(2.33-3.67)", (2.33, 3.67)), ("低(<2.33)", (0, 2.33))]:
+        lines.append(f"吸引力 {a_label}")
+        for s_label, s_range in [("强", (3.67, 5.01)), ("中", (2.33, 3.67)), ("弱", (0, 2.33))]:
+            in_cell = [it for it in items if a_range[0] <= it["attractiveness"] < a_range[1]
+                        and s_range[0] <= it["strength"] < s_range[1]]
+            names = ", ".join(it["business"][:6] for it in in_cell) if in_cell else "·"
+            lines.append(f"              {names:<20}")
+    lines.append("```\n")
+
+    lines.append("## 战略建议\n")
+    for cell_name, members in cells.items():
+        lines.append(f"### {cell_name}（{len(members)} 项）\n")
+        for m in members:
+            lines.append(f"- **{m['business']}** — 吸引力 {m['attractiveness']:.1f}, 实力 {m['strength']:.1f}")
+        if cell_name == "投资/成长":
+            lines.append("→ 积极投资，扩大市场份额\n")
+        elif cell_name == "选择性投资":
+            lines.append("→ 有针对性地投资，聚焦优势领域\n")
+        elif cell_name == "选择性维持":
+            lines.append("→ 维持现状，控制成本\n")
+        elif cell_name == "收割":
+            lines.append("→ 最大化现金流，减少新投资\n")
+        else:
+            lines.append("→ 考虑退出或剥离\n")
+
+    if args.json:
+        write_output(json.dumps(items, ensure_ascii=False, indent=2), args.output)
+    else:
+        write_output("\n".join(lines), args.output)
+
+
 # ───────────────────────── CLI 入口 ─────────────────────────
 
 def main():
     parser = argparse.ArgumentParser(
         prog="kueiku-calc",
-        description="Kueiku 方法论计算工具集 — 5 个高计算密度方法论自动化",
+        description="Kueiku 方法论计算工具集 — 15 个高计算密度方法论自动化",
     )
     subparsers = parser.add_subparsers(dest="command", help="子命令")
 
+    # 公共参数辅助函数
+    def add_common_args(p):
+        p.add_argument("-i", "--input", required=True, help="CSV 文件路径（- 表示 stdin）")
+        p.add_argument("-o", "--output", help="输出文件路径（默认 stdout）")
+        p.add_argument("--json", action="store_true", help="输出 JSON 格式")
+
     # rice
-    p_rice = subparsers.add_parser("rice", help="RICE 优先级评分", description=RICE_HELP,
-                                    formatter_class=argparse.RawDescriptionHelpFormatter)
-    p_rice.add_argument("-i", "--input", required=True, help="CSV 文件路径（- 表示 stdin）")
-    p_rice.add_argument("-o", "--output", help="输出文件路径（默认 stdout）")
-    p_rice.add_argument("--json", action="store_true", help="输出 JSON 格式")
+    p = subparsers.add_parser("rice", help="RICE 优先级评分", description=RICE_HELP,
+                               formatter_class=argparse.RawDescriptionHelpFormatter)
+    add_common_args(p)
 
     # dmatrix
-    p_dm = subparsers.add_parser("dmatrix", help="决策矩阵（Pugh Matrix）", description=DMATRIX_HELP,
-                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    p_dm.add_argument("-i", "--input", required=True, help="CSV 文件路径")
-    p_dm.add_argument("-o", "--output", help="输出文件路径")
-    p_dm.add_argument("--json", action="store_true", help="输出 JSON 格式")
+    p = subparsers.add_parser("dmatrix", help="决策矩阵（Pugh Matrix）", description=DMATRIX_HELP,
+                               formatter_class=argparse.RawDescriptionHelpFormatter)
+    add_common_args(p)
 
     # risk
-    p_risk = subparsers.add_parser("risk", help="风险矩阵", description=RISK_HELP,
-                                    formatter_class=argparse.RawDescriptionHelpFormatter)
-    p_risk.add_argument("-i", "--input", required=True, help="CSV 文件路径")
-    p_risk.add_argument("-o", "--output", help="输出文件路径")
-    p_risk.add_argument("--json", action="store_true", help="输出 JSON 格式")
+    p = subparsers.add_parser("risk", help="风险矩阵", description=RISK_HELP,
+                               formatter_class=argparse.RawDescriptionHelpFormatter)
+    add_common_args(p)
 
     # dupont
-    p_dp = subparsers.add_parser("dupont", help="杜邦分析", description=DUPONT_HELP,
-                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    p_dp.add_argument("-i", "--input", required=True, help="CSV 文件路径")
-    p_dp.add_argument("-o", "--output", help="输出文件路径")
-    p_dp.add_argument("--json", action="store_true", help="输出 JSON 格式")
+    p = subparsers.add_parser("dupont", help="杜邦分析", description=DUPONT_HELP,
+                               formatter_class=argparse.RawDescriptionHelpFormatter)
+    add_common_args(p)
 
     # pareto
-    p_pa = subparsers.add_parser("pareto", help="帕累托分析", description=PARETO_HELP,
-                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    p_pa.add_argument("-i", "--input", required=True, help="CSV 文件路径")
-    p_pa.add_argument("-o", "--output", help="输出文件路径")
-    p_pa.add_argument("--json", action="store_true", help="输出 JSON 格式")
+    p = subparsers.add_parser("pareto", help="帕累托分析", description=PARETO_HELP,
+                               formatter_class=argparse.RawDescriptionHelpFormatter)
+    add_common_args(p)
+
+    # fmea
+    p = subparsers.add_parser("fmea", help="FMEA 失效模式分析", description=FMEA_HELP,
+                               formatter_class=argparse.RawDescriptionHelpFormatter)
+    add_common_args(p)
+
+    # ice
+    p = subparsers.add_parser("ice", help="ICE 评分", description=ICE_HELP,
+                               formatter_class=argparse.RawDescriptionHelpFormatter)
+    add_common_args(p)
+
+    # oppscore
+    p = subparsers.add_parser("oppscore", help="机会评分", description=OPPSCORE_HELP,
+                               formatter_class=argparse.RawDescriptionHelpFormatter)
+    add_common_args(p)
+
+    # dcf
+    p = subparsers.add_parser("dcf", help="现金流折现估值", description=DCF_HELP,
+                               formatter_class=argparse.RawDescriptionHelpFormatter)
+    add_common_args(p)
+    p.add_argument("--rate", type=float, default=0.10, help="折现率 (WACC), 默认 0.10")
+    p.add_argument("--growth", type=float, default=0.03, help="永续增长率, 默认 0.03")
+    p.add_argument("--shares", type=float, default=0, help="流通股数（可选）")
+
+    # eva
+    p = subparsers.add_parser("eva", help="经济增加值", description=EVA_HELP,
+                               formatter_class=argparse.RawDescriptionHelpFormatter)
+    add_common_args(p)
+
+    # abtest
+    p = subparsers.add_parser("abtest", help="A/B 测试显著性分析", description=ABTEST_HELP,
+                               formatter_class=argparse.RawDescriptionHelpFormatter)
+    add_common_args(p)
+
+    # rfm
+    p = subparsers.add_parser("rfm", help="RFM 用户分层", description=RFM_HELP,
+                               formatter_class=argparse.RawDescriptionHelpFormatter)
+    add_common_args(p)
+
+    # cohort
+    p = subparsers.add_parser("cohort", help="同期群留存分析", description=COHORT_HELP,
+                               formatter_class=argparse.RawDescriptionHelpFormatter)
+    add_common_args(p)
+
+    # bcg
+    p = subparsers.add_parser("bcg", help="BCG 矩阵", description=BCG_HELP,
+                               formatter_class=argparse.RawDescriptionHelpFormatter)
+    add_common_args(p)
+
+    # gemckinsey
+    p = subparsers.add_parser("gemckinsey", help="GE-McKinsey 矩阵", description=GEMCKINSEY_HELP,
+                               formatter_class=argparse.RawDescriptionHelpFormatter)
+    add_common_args(p)
 
     args = parser.parse_args()
     if not args.command:
@@ -700,11 +1651,11 @@ def main():
         sys.exit(1)
 
     commands = {
-        "rice": cmd_rice,
-        "dmatrix": cmd_dmatrix,
-        "risk": cmd_risk,
-        "dupont": cmd_dupont,
-        "pareto": cmd_pareto,
+        "rice": cmd_rice, "dmatrix": cmd_dmatrix, "risk": cmd_risk,
+        "dupont": cmd_dupont, "pareto": cmd_pareto, "fmea": cmd_fmea,
+        "ice": cmd_ice, "oppscore": cmd_oppscore, "dcf": cmd_dcf,
+        "eva": cmd_eva, "abtest": cmd_abtest, "rfm": cmd_rfm,
+        "cohort": cmd_cohort, "bcg": cmd_bcg, "gemckinsey": cmd_gemckinsey,
     }
     commands[args.command](args)
 
