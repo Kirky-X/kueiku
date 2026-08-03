@@ -4,7 +4,7 @@ import json
 import math
 import sys
 
-from .utils import read_csv, write_output, md_table, fmt_num, pct, z_test, quintile_score
+from utils import read_csv, write_output, md_table, fmt_num, pct, z_test, quintile_score
 
 # ───────────────────────── A/B Test Analysis ─────────────────────────
 

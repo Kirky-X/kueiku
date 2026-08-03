@@ -154,18 +154,18 @@ flowchart TD
 
 ## 自动化脚本工具
 
-`scripts/tools/kueiku-calc.py` 提供 19 个高计算密度方法论的自动化计算，纯 Python 标准库实现，无外部依赖。代码按主题拆分至 `scripts/tools/kueiku_calc/` 包：
+`scripts/tools/kueiku-calc.py` 提供 19 个高计算密度方法论的自动化计算，纯 Python 标准库实现，无外部依赖。代码按主题拆分至 `scripts/` 目录：
 
 | 模块 | 文件 | 子命令 |
 | --- | --- | --- |
-| 公共工具 | `kueiku_calc/utils.py` | — |
-| 决策与优先级 | `kueiku_calc/decision.py` | `rice`, `dmatrix`, `ice` |
-| 风险评估 | `kueiku_calc/risk.py` | `risk`, `fmea`, `pareto` |
-| 财务分析 | `kueiku_calc/financial.py` | `dupont`, `dcf`, `eva` |
-| 数据分析 | `kueiku_calc/data.py` | `abtest`, `rfm`, `cohort` |
-| 战略矩阵 | `kueiku_calc/strategy.py` | `oppscore`, `bcg`, `gemckinsey` |
-| 量化投资 | `kueiku_calc/quant.py` | `factor`, `momentum`, `riskparity`, `perf` |
-| CLI 入口 | `kueiku_calc/main.py` | 全部 19 个子命令 |
+| 公共工具 | `scripts/utils.py` | — |
+| 决策与优先级 | `scripts/decision.py` | `rice`, `dmatrix`, `ice` |
+| 风险评估 | `scripts/risk.py` | `risk`, `fmea`, `pareto` |
+| 财务分析 | `scripts/financial.py` | `dupont`, `dcf`, `eva` |
+| 数据分析 | `scripts/data.py` | `abtest`, `rfm`, `cohort` |
+| 战略矩阵 | `scripts/strategy.py` | `oppscore`, `bcg`, `gemckinsey` |
+| 量化投资 | `scripts/quant.py` | `factor`, `momentum`, `riskparity`, `perf` |
+| CLI 入口 | `scripts/main.py` | 全部 19 个子命令 |
 
 ### 子命令一览
 

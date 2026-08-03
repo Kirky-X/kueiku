@@ -3,13 +3,13 @@
 import argparse
 import sys
 
-from .decision import RICE_HELP, DMATRIX_HELP, ICE_HELP, cmd_rice, cmd_dmatrix, cmd_ice
-from .risk import RISK_HELP, FMEA_HELP, PARETO_HELP, cmd_risk, cmd_fmea, cmd_pareto
-from .financial import DUPONT_HELP, DCF_HELP, EVA_HELP, cmd_dupont, cmd_dcf, cmd_eva
-from .data import ABTEST_HELP, RFM_HELP, COHORT_HELP, cmd_abtest, cmd_rfm, cmd_cohort
-from .strategy import OPPSCORE_HELP, BCG_HELP, GEMCKINSEY_HELP, cmd_oppscore, cmd_bcg, cmd_gemckinsey
-from .quant import FACTOR_HELP, MOMENTUM_HELP, RISKPARITY_HELP, PERF_HELP
-from .quant import cmd_factor, cmd_momentum, cmd_riskparity, cmd_perf
+from decision import RICE_HELP, DMATRIX_HELP, ICE_HELP, cmd_rice, cmd_dmatrix, cmd_ice
+from risk import RISK_HELP, FMEA_HELP, PARETO_HELP, cmd_risk, cmd_fmea, cmd_pareto
+from financial import DUPONT_HELP, DCF_HELP, EVA_HELP, cmd_dupont, cmd_dcf, cmd_eva
+from data import ABTEST_HELP, RFM_HELP, COHORT_HELP, cmd_abtest, cmd_rfm, cmd_cohort
+from strategy import OPPSCORE_HELP, BCG_HELP, GEMCKINSEY_HELP, cmd_oppscore, cmd_bcg, cmd_gemckinsey
+from quant import FACTOR_HELP, MOMENTUM_HELP, RISKPARITY_HELP, PERF_HELP
+from quant import cmd_factor, cmd_momentum, cmd_riskparity, cmd_perf
 
 
 def main():

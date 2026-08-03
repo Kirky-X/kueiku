@@ -4,7 +4,7 @@ import json
 import math
 import sys
 
-from .utils import (read_csv, write_output, md_table, fmt_num, pct,
+from utils import (read_csv, write_output, md_table, fmt_num, pct,
                     mat_mult, quad_form, spearman_ic)
 
 # ───────────────────────── Factor Analysis ─────────────────────────

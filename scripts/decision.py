@@ -3,7 +3,7 @@
 import json
 import sys
 
-from .utils import read_csv, write_output, md_table, fmt_num
+from utils import read_csv, write_output, md_table, fmt_num
 
 # ───────────────────────── RICE Scoring ─────────────────────────
 
