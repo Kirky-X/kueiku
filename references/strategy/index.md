@@ -27,6 +27,7 @@
 | **Benchmarking** | 对标行业/跨行业最佳实践识别差距 | 绩效提升、流程改进、最佳实践学习 | `benchmarking.md` |
 | **Product Life Cycle** | 导入/成长/成熟/衰退 4 阶段匹配策略 | 产品策略、投资时机、组合管理 | `product-life-cycle.md` |
 | **VRIO Framework** | 价值性/稀缺性/不可模仿性/组织化 四问资源观 | 资源能力评估、可持续竞争优势识别 | `vrio.md` |
+| **Wardley Mapping** | 价值链（纵轴）× 演化阶段（横轴）的战略地形图 | 战略演化感知、Build/Buy/Outsource 决策、竞品动态分析 | `wardley-mapping.md` |
 
 ## 各方法论最低信息需求
 
@@ -51,12 +52,13 @@
 - **Benchmarking**：需要可获取的标杆对象数据（至少 2 个独立来源）
 - **Product Life Cycle**：需要产品销售/竞争/客户构成趋势数据
 - **VRIO Framework**：L1：企业的资源/能力清单；L2：竞争对手对比数据
+- **Wardley Mapping**：需要价值链组件分解 + 各组件演化阶段判断 + 主要竞品对比
 
 ## 路由触发信号
 
-- "战略现状评估" → SWOT（主）
-- "竞争格局分析" → Porter's Five Forces（主）
-- "外部环境扫描" → PESTLE（主）
+- "内部+外部综合现状评估" → SWOT（主）⚡ 若只需分析行业竞争结构→用 Porter's；若只需宏观环境扫描→用 PESTLE
+- "行业竞争结构/进入壁垒/五力分析" → Porter's Five Forces（主）⚡ 若需综合内外部评估→用 SWOT；若需行业内部群组对比→用 Strategic Group Mapping
+- "宏观六维环境扫描（政治/经济/社会/技术/法律/环境）" → PESTLE（主）⚡ 若需综合内外部评估→用 SWOT
 - "商业模式设计/评估/重构" → Business Model Canvas（主）
 - "多方对齐/推动组织变革" → Stakeholder Mapping（主）
 - "增长策略选择/市场扩张方向" → Ansoff Matrix（主）
@@ -64,19 +66,20 @@
 - "组织能力评估/内部一致性诊断" → McKinsey 7S（主）
 - "产品组合管理/投资平衡" → BCG Matrix（主）
 - "战略显性化/9 段式战略画布" → Product Strategy Canvas（主）
-- "早期创业商业模式验证" → Lean Canvas（主）
-- "战略与盈利分离" / "创业画布" → Startup Canvas（主）
+- "早期创业 30 分钟快速验证问题-方案匹配" → Lean Canvas（主）⚡ 若需同时独立迭代战略与盈利模式→用 Startup Canvas
+- "战略选择与盈利模式同步设计且需独立迭代" → Startup Canvas（主）⚡ 若只需快速验证问题-方案匹配→用 Lean Canvas
 - "价值主张文案/6 段 JTBD 模板" → JDB Value Proposition（主）
 - "变现模型选型" → Monetization Strategy（主）
 - "定价/价格敏感度测算" → Pricing Strategy（主）
 - "护城河/竞品不可复制性设计" → Can't-Won't Defensibility（主）
-- "资源能力评估" / "竞争优势来源" → VRIO Framework（主）
+- "资源/能力评估/可持续竞争优势识别" → VRIO Framework（主）⚡ 若需分析各环节价值创造→用 Value Chain Analysis
 - "国家竞争优势/跨国选址/产业政策" → Porter Diamond Model（主）
 - "多元化业务组合/SBU 资源分配" → GE-McKinsey Matrix（主）
 - "行业内部竞争结构/战略群组" → Strategic Group Mapping（主）
-- "竞争优势来源/成本领先或差异化" → Value Chain Analysis（主）
+- "价值链各环节成本与差异化分析/活动级竞争优势诊断" → Value Chain Analysis（主）⚡ 若需评估资源本身是否构成优势→用 VRIO
 - "对标最佳实践/绩效差距分析" → Benchmarking（主）
 - "产品阶段策略/投资时机判断" → Product Life Cycle（主）
+- "战略演化感知/价值链可视化/Build vs Buy" → Wardley Mapping（主）
 
 ## 常见组合
 
@@ -91,3 +94,15 @@
 - **多元化组合管理**：BCG Matrix（初筛）→ GE-McKinsey Matrix（深度评估）→ Ansoff（增长方向）
 - **行业竞争结构分析**：Porter's Five Forces（整体）→ Strategic Group Mapping（内部群组）→ Blue Ocean（突围方向）
 - **产品阶段策略**：Product Life Cycle（定位阶段）→ BCG Matrix（组合配比）→ OKR（阶段目标）
+- **战略演化感知**：Wardley Mapping（价值链×演化阶段）→ Blue Ocean（差异化方向）→ Value Chain Analysis（竞争优势诊断）
+- **技术投资战略**：Wardley Mapping（组件演化定位）→ Gartner Hype Cycle（技术成熟度）→ DCF（投入产出评估）
+
+## 方法论互斥与先后约束
+
+| 约束对 | 规则 | 原因 |
+| --- | --- | --- |
+| Lean Canvas ↔ Startup Canvas | **二选一**，不要同时使用 | 输出高度重叠，均基于 BMC 改造面向早期创业 |
+| PESTLE → SWOT | **PESTLE 先于 SWOT** | PESTLE 是 SWOT 中 O/T 维度的展开，先用 PESTLE 再做 SWOT 可避免外部分析遗漏 |
+| Porter's Five Forces → SWOT | **Porter's 先于 SWOT**（竞争分析场景） | Porter's 提供行业结构深度分析，作为 SWOT 的输入更完整 |
+| Value Chain Analysis → VRIO | **先 Value Chain 后 VRIO**（竞争优势诊断场景） | 先识别各环节价值来源，再评估资源是否可持续 |
+| SWOT vs Porter's Five Forces | **按分析对象选择**：单一企业综合现状→SWOT；行业竞争结构→Porter's | SWOT 是四象限综合评估，Porter's 是行业五力深度分析，维度不同 |

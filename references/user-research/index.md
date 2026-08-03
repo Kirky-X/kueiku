@@ -19,8 +19,8 @@
 ## 路由触发信号
 
 - "用户旅程梳理" → Customer Journey Map（主）
-- "理解用户真实需求"（备选） → Empathy Map + Customer Journey
-- "用户画像"（备选） → Empathy Map（作为 persona 补充）
+- "理解用户感受/痛点共情" → Empathy Map（主）⚡ 若需挖掘用户要完成的"任务"→用 JTBD（产品与增长类）
+- "用户画像"（备选） → Empathy Map（作为 persona 补充）⚡ 若需完整用户 archetype 描述→用 User Personas（市场研究类）
 - "决策旅程优化/触点设计/流失分析" → Consumer Decision Journey（主）
 - "用户需求挖掘/营销诉求设计/需求层次" → Maslow Hierarchy（主）
 
@@ -30,3 +30,10 @@
 - **服务优化**：Customer Journey → SCAMPER（创意改进）
 - **需求层次定位**：Empathy Map → Maslow Hierarchy → User Personas
 - **决策旅程优化**：Consumer Decision Journey → RFM Model（识别关键群）→ A/B Test（触点验证）
+
+## 方法论互斥与先后约束
+
+| 约束对 | 规则 | 原因 |
+| --- | --- | --- |
+| Empathy Map → JTBD | **先 Empathy Map 后 JTBD**（需求挖掘场景） | Empathy Map 建立用户共情基础，JTBD 再深入挖掘功能性/情感性任务 |
+| Empathy Map vs User Personas | **Empathy Map 是 User Personas 的输入补充**，不是替代 | Empathy Map 聚焦感受共情，Personas 聚焦完整画像，输出目的不同 |

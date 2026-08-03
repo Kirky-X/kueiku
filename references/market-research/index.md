@@ -27,7 +27,7 @@
 - "市场规模测算" → Market Sizing（主）
 - "市场细分/3-5 个 non-overlapping" → Market Segmentation（主）
 - "用户细分/使用行为聚类" → User Segmentation（主）
-- "用户画像/3 个 persona" → User Personas（主）
+- "用户画像/3 个 persona/团队用户认知对齐" → User Personas（主）⚡ 若需挖掘用户要完成的“任务”→用 JTBD（产品与增长类）；若需共情理解用户感受→用 Empathy Map（用户研究类）
 - "市场进入/产品定位/营销策略制定" → STP Analysis（主）
 - "品牌定位/竞品感知对比/定位调整" → Perceptual Mapping（主）
 - "技术产品营销/跨越鸿沟/目标客户段选择" → Technology Adoption Lifecycle（主）
@@ -37,3 +37,11 @@
 - **市场进入策略**：Market Sizing → Market Segmentation → STP Analysis → Perceptual Mapping
 - **新产品上市**：STP Analysis → Technology Adoption Lifecycle → Pricing Strategy
 - **品牌定位优化**：Perceptual Mapping → STP Analysis（重新定位）
+
+## 方法论互斥与先后约束
+
+| 约束对 | 规则 | 原因 |
+| --- | --- | --- |
+| Market Segmentation → User Personas | **先 Segmentation 后 Personas** | 先明确市场细分，再为每个目标段构建用户画像，避免画像无细分基础 |
+| User Personas vs JTBD | **按目标选择**：描述典型用户完整画像→Personas；挖掘用户要完成的“任务”→JTBD | 输入数据可重叠但输出目的不同 |
+| User Segmentation vs RFM Model | **按数据基础选择**：需行为/JTBD/needs 聚类→User Segmentation；需交易数据三维度分层→RFM Model | User Segmentation 更广泛，RFM 聚焦交易数据 |

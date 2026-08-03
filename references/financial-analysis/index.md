@@ -28,3 +28,10 @@
 - **企业估值**：DCF（内在价值）+ Comparable Company（市场参照）交叉验证
 - **财务诊断**：DuPont Analysis（ROE 拆解）→ EVA（价值创造验证）
 - **投资决策**：DuPont Analysis（质量评估）→ DCF（估值）→ EVA（持有期价值创造）
+
+## 与量化投资的关系
+
+- **DCF → Factor Investing**：DCF 估值结果可构建价值因子（EP、BP），作为因子投资输入
+- **DCF → Portfolio Optimization**：DCF 内在价值估计可作为 MVO/Black-Litterman 的预期收益输入
+- **DuPont → ML Stock Selection**：杜邦分析的财务指标可作为机器学习选股的特征
+- **EVA → Factor Investing**：EVA 衡量的价值创造可构建质量因子

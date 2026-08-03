@@ -12,6 +12,7 @@
 | **Framework Selection** | 5 原则+决策树的框架选择元方法论 | 选框架时的元决策、避免框架误用、团队框架对齐 | `framework-selection.md` |
 | **Connecting Dots** | 跨领域知识连接激发创新 | 创新激发、跨界思考、个人成长规划 | `connecting-dots.md` |
 | **Reframe and Elevate** | 重构问题框架+提升抽象层次找新视角 | 问题卡壳、创新突破、战略重定位、困境决策 | `reframe-and-elevate.md` |
+| **Systems Thinking** | 反馈环路+因果回路图+杠杆点分析，理解非线性动态 | 反复出现的问题、解决方案短期有效长期恶化、复杂系统分析 | `systems-thinking.md` |
 
 ## 各方法论最低信息需求
 
@@ -23,6 +24,7 @@
 - **Framework Selection**：需要明确的问题陈述 + 候选框架列表
 - **Connecting Dots**：需要跨领域知识储备 + 明确问题
 - **Reframe and Elevate**：需要当前问题框架 + 卡壳点
+- **Systems Thinking**：需要明确的问题描述 + 系统边界 + 关键变量列表
 
 ## 路由触发信号
 
@@ -34,13 +36,11 @@
 - "选哪个框架/框架误用/元决策" → Framework Selection（主）
 - "创新激发/跨界思考/连点" → Connecting Dots（主）
 - "问题卡壳/重构问题/升维思考" → Reframe and Elevate（主）
+- "反复出现的问题/反馈环路/非线性动态" → Systems Thinking（主）
 
 ## 常见组合
 
-- **重大决策**：苏格拉底提问（澄清假设）→ Decision Matrix → Pre-mortem（风险审查）
-- **系统创意**：六顶思考帽（绿帽）→ SCAMPER → RICE（筛选）
-- **组织变革**：Stakeholder Mapping → 六顶思考帽 → OKR
-- **风险全面评估**：FMEA → Pre-mortem → Second-Order Thinking
-- **增长策略制定**：Cynefin（判断问题域）→ Ansoff Matrix → Blue Ocean
 - **框架选择与重构**：Framework Selection（选框架）→ 若框架都不奏效 → Reframe and Elevate（重构问题）
 - **创新突破**：Reframe and Elevate（重构视角）→ Connecting Dots（跨域连接）→ Six Thinking Hats（绿帽发散）
+- **复杂问题诊断**：Systems Thinking（反馈环路+杠杆点）→ Second-Order Thinking（连锁效应）→ Cynefin（问题域判断）
+- **增长飞轮分析**：Systems Thinking（增强回路识别）→ Growth Loops（飞轮设计）→ AARRR（漏斗验证）
