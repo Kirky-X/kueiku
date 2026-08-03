@@ -1,27 +1,20 @@
-# Lean Analytics Metrics · 精益分析指标
+# Lean Analytics Metrics
 
-## 核心思想
-Ben Yoskovitz 提出选指标的 4 条准则 + 8 种指标类型 + NSM 四层，避免团队陷入"看一堆 dashboard 但不知道业务是否健康"的状态。一个真正的好指标能直接驱动决策。
+## Core Concept
+Framework for selecting the right metrics using 4 criteria + 8 metric types + North Star Metric (NSM) 4 layers. Helps teams avoid vanity metrics and focus on actionable, leading indicators.
 
-## 适用场景
-- dashboard 指标爆炸但无人能回答"业务是否健康"
-- 团队对"看哪个数字"无法对齐
-- 不同阶段选错指标（早期看收入、成熟期看激活率）
+## Applicable Scenarios
+✅ **Best for**
+- Metrics framework selection
+- Defining what "good" looks like for your product
+- Aligning team around actionable metrics
 
-## 关键步骤
-1. 用 4 准则筛指标：
-   - 可比较（跨时间/群体/竞品可对比）
-   - 可理解（团队能解释含义）
-   - 可行动（变化能直接触发行动）
-   - 可量化（有明确数字，非"满意度高"）
-2. 识别指标类型（8 种）：人均收入/获客成本/活跃度/参与度/留存率/转化率/任务成功率/流失率
-3. 选定 NSM（North Star Metric）并按四层拆解：
-   - L1：NSM（北极星）
-   - L2：NSM 的核心驱动因素
-   - L3：每个驱动因素的输入指标
-   - L4：可被团队直接影响的行动指标
-4. 每个阶段只看 1 个核心指标 + 3–5 个辅助指标（参考 lean-bml.md 的阶段划分）
-5. 月度复盘：指标是否仍反映业务真实状态，失效则换
+## Key Steps
+1. Apply the 4 criteria: Is it actionable? Accessible? Auditable? (4th: is it relevant?)
+2. Identify which of the 8 metric types applies: Trending, Ranked, Ratio, Percentage, Average, Median, NPS, etc.
+3. Define your NSM across 4 layers: Input metrics → Throughput metrics → Output metrics → Outcome metrics
+4. Validate: does the metric drive decisions? Is it leading or lagging?
+5. Build a metrics dashboard aligned to the NSM hierarchy
 
-## 来源
-Ben Yoskovitz & Alistair Croll《Lean Analytics》（2013）
+## Source
+Alistair Croll & Benjamin Yoskovitz, *Lean Analytics* (2013).

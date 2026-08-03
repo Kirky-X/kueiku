@@ -1,75 +1,21 @@
-# Incident Response & Postmortem · 故障响应与无责复盘
+# Incident Response & Postmortem
 
-## 核心思想
-故障不可避免，但响应速度和复盘质量决定了系统韧性。故障时先缓解再根因——不要在生产环境"debug"；复盘时聚焦系统缺陷而非个人失误——无责（Blameless）才能让真相浮出水面。每次故障都是一次改进系统的机会，前提是认真复盘并落实修复。
+## Core Concept
+Detection → Response → Mitigation → Resolution + blameless postmortem + Action Item closure. Structured incident management that learns from failures without blaming individuals.
 
-## 适用场景
-- 生产环境故障的应急响应
-- 故障后的系统性复盘
-- 建立 On-Call 和故障响应流程
-- 将故障经验转化为系统改进
+## Applicable Scenarios
+✅ **Best for**
+- Production incident emergency response
+- On-Call process building
+- Experience capture and learning
 
-## 关键步骤
+## Key Steps
+1. **Detect**: alert fires; on-call is paged
+2. **Respond**: acknowledge; assemble incident team; start incident channel
+3. **Mitigate**: take action to reduce user impact (rollback, failover, etc.)
+4. **Resolve**: fix the root cause; verify recovery
+5. **Postmortem**: within 48h, write blameless postmortem (timeline, impact, root cause, action items)
+6. **Action Items**: assign owners and deadlines; track to completion
 
-### 一、故障响应（Incident Response）
-
-**时间线驱动**
-
-1. **检测（Detect）** — 目标 < 5 分钟
-   - 监控告警触发 / 用户报告
-   - 确认故障范围和影响面
-   - 定义严重级别：
-     - **SEV-1**：核心功能不可用，影响大量用户
-     - **SEV-2**：核心功能降级，影响部分用户
-     - **SEV-3**：非核心功能异常
-
-2. **响应（Respond）** — 立即
-   - 指定 Incident Commander（IC）统一协调
-   - 建立沟通频道（Slack/钉钉 War Room）
-   - SEV-1/2 立即通知相关干系人
-
-3. **缓解（Mitigate）** — 目标 < 30 分钟
-   - **先缓解，后根因**——不要在生产环境 debug
-   - 常见缓解手段：
-     - 回滚最近的部署
-     - 扩容 / 限流 / 降级
-     - 切换备用链路 / 灾备切换
-     - 关闭问题功能（Feature Flag）
-   - 确认缓解有效：监控指标恢复
-
-4. **根因修复（Root Cause Fix）** — 故障后 24-72 小时
-   - 在测试环境复现 → 定位根因 → 修复 → 验证 → 发布
-
-### 二、无责复盘（Blameless Postmortem）
-
-**在故障解决后 48 小时内完成**
-
-Postmortem 文档结构：
-
-1. **摘要**：一段话概述故障和影响
-2. **影响**：
-   - 持续时间（从检测到缓解）
-   - 用户影响范围和程度
-   - 业务影响（收入/数据/声誉损失）
-3. **时间线**：精确到分钟的响应时间线
-4. **根因分析**：
-   - 直接原因（触发故障的具体事件）
-   - 贡献因素（为什么这个事件能导致故障）
-   - 根本原因（系统设计/流程中的缺陷）
-   - 使用 5 Whys 深挖到系统层面
-5. **做得好的**：响应中值得保持的做法
-6. **做得差的**：响应中的不足和改进点
-7. **行动项（Action Items）**：
-   - 每项有明确的 Owner + 截止日期
-   - 分为：预防措施 / 检测改进 / 响应流程改进
-   - 行动项必须可验证（不是"加强监控"而是"为 X 服务添加 Y 指标的 P99 告警"）
-
-### 三、复盘文化原则
-1. **Blameless**：聚焦系统和流程缺陷，不追究个人责任
-2. **数据驱动**：所有结论基于日志/监控/代码证据
-3. **透明**：Postmortem 全公司可见，不隐藏
-4. **闭环**：每个 Action Item 有跟踪直到完成
-5. **知识共享**：定期回顾 Postmortem 库，避免同类故障重现
-
-## 来源
-Google《Site Reliability Engineering》Chapter on Postmortem Culture；Atlassian Blameless Postmortem Guide；PagerDuty Incident Response 最佳实践
+## Source
+Google SRE methodology; PagerDuty incident response best practices.

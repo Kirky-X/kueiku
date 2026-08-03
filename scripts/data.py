@@ -1,4 +1,4 @@
-"""数据分析方法论 — A/B Test / RFM / Cohort"""
+"""Data analysis methodologies — A/B Test / RFM / Cohort"""
 
 import json
 import math
@@ -9,16 +9,16 @@ from utils import read_csv, write_output, md_table, fmt_num, pct, z_test, quinti
 # ───────────────────────── A/B Test Analysis ─────────────────────────
 
 ABTEST_HELP = """
-A/B 测试分析: 统计显著性检验 + SRM 检测 + 决策矩阵
+A/B Test Analysis: Statistical significance testing + SRM detection + Decision matrix
 
-CSV 格式:
+CSV Format:
   variant,users,conversions
 
-  variant     : 变体名称 (control / treatment)
-  users       : 用户数
-  conversions : 转化数
+  variant     : Variant name (control / treatment)
+  users       : Number of users
+  conversions : Number of conversions
 
-示例:
+Example:
   variant,users,conversions
   control,10000,500
   treatment,10200,550
@@ -29,7 +29,7 @@ def cmd_abtest(args):
     rows = read_csv(args.input)
     required = {"variant", "users", "conversions"}
     if not required.issubset(rows[0].keys()):
-        print(f"CSV 缺少列: {required - set(rows[0].keys())}", file=sys.stderr)
+        print(f"CSV missing columns: {required - set(rows[0].keys())}", file=sys.stderr)
         sys.exit(1)
 
     variants = {}
@@ -38,7 +38,7 @@ def cmd_abtest(args):
         variants[r["variant"]] = {"users": u, "conversions": c, "rate": c / u if u > 0 else 0}
 
     if len(variants) < 2:
-        print("至少需要 2 个变体", file=sys.stderr)
+        print("At least 2 variants required", file=sys.stderr)
         sys.exit(1)
 
     names = list(variants.keys())
@@ -47,13 +47,13 @@ def cmd_abtest(args):
     ctrl = variants[ctrl_name]
     treat = variants[treat_name]
 
-    # SRM 检测
+    # SRM detection
     total_users = ctrl["users"] + treat["users"]
     expected_ctrl = total_users * 0.5
     srm_chi2 = (ctrl["users"] - expected_ctrl) ** 2 / expected_ctrl + (treat["users"] - expected_ctrl) ** 2 / expected_ctrl
     srm_detected = abs(ctrl["users"] - treat["users"]) / total_users > 0.01
 
-    # z 检验
+    # z-test
     z, p_val = z_test(ctrl["rate"], ctrl["users"], treat["rate"], treat["users"])
     significant = p_val < 0.05
     lift = (treat["rate"] - ctrl["rate"]) / ctrl["rate"] * 100 if ctrl["rate"] > 0 else 0
@@ -65,40 +65,40 @@ def cmd_abtest(args):
     mde = z_alpha * math.sqrt(2 * p_pool * (1 - p_pool) / min(ctrl["users"], treat["users"]))
 
     if srm_detected:
-        decision = "⚠️ INVALID — SRM 检测到样本比例失衡，结果不可信"
+        decision = "⚠️ INVALID — SRM detected sample ratio mismatch, results unreliable"
     elif significant and lift > 0:
-        decision = "✅ Ship — 显著正向，建议上线"
+        decision = "✅ Ship — Significant positive result, recommend launch"
     elif significant and lift < 0:
-        decision = "❌ Stop — 显著负向，停止实验"
+        decision = "❌ Stop — Significant negative result, stop experiment"
     elif not significant:
-        decision = "🔍 Investigate — 不显著，需拆分 segment 分析"
+        decision = "🔍 Investigate — Not significant, segment analysis needed"
     else:
-        decision = "🤷 无法判断"
+        decision = "🤷 Indeterminate"
 
-    lines = ["# A/B 测试分析报告\n"]
-    lines.append(f"对照组: {ctrl_name} | 实验组: {treat_name}\n")
+    lines = ["# A/B Test Analysis Report\n"]
+    lines.append(f"Control: {ctrl_name} | Treatment: {treat_name}\n")
 
-    lines.append("## 基础数据\n")
-    headers = ["变体", "用户数", "转化数", "转化率"]
+    lines.append("## Basic Data\n")
+    headers = ["Variant", "Users", "Conversions", "Conversion Rate"]
     trows = [[ctrl_name, fmt_num(ctrl["users"], 0), ctrl["conversions"], pct(ctrl["rate"] * 100)],
              [treat_name, fmt_num(treat["users"], 0), treat["conversions"], pct(treat["rate"] * 100)]]
     lines.append(md_table(headers, trows))
 
-    lines.append(f"**提升幅度**: {lift:+.2f}%\n")
+    lines.append(f"**Lift**: {lift:+.2f}%\n")
 
-    lines.append("## 统计检验\n")
-    lines.append(f"- z 统计量: {z:.4f}")
-    lines.append(f"- p 值: {p_val:.6f}")
-    lines.append(f"- 显著性水平 α: {alpha}")
-    lines.append(f"- 结论: {'显著 (p < 0.05)' if significant else '不显著 (p ≥ 0.05)'}")
-    lines.append(f"- MDE (最小可检测效应): {pct(mde * 100)}\n")
+    lines.append("## Statistical Test\n")
+    lines.append(f"- z Statistic: {z:.4f}")
+    lines.append(f"- p Value: {p_val:.6f}")
+    lines.append(f"- Significance level α: {alpha}")
+    lines.append(f"- Conclusion: {'Significant (p < 0.05)' if significant else 'Not significant (p ≥ 0.05)'}")
+    lines.append(f"- MDE (Minimum Detectable Effect): {pct(mde * 100)}\n")
 
-    lines.append("## SRM 检测\n")
-    lines.append(f"- 样本比例差异: {abs(ctrl['users'] - treat['users']) / total_users * 100:.2f}%")
-    lines.append(f"- SRM 状态: {'⚠️ 检测到失衡' if srm_detected else '✅ 正常'}")
+    lines.append("## SRM Check\n")
+    lines.append(f"- Sample ratio difference: {abs(ctrl['users'] - treat['users']) / total_users * 100:.2f}%")
+    lines.append(f"- SRM Status: {'⚠️ Mismatch detected' if srm_detected else '✅ Normal'}")
     lines.append(f"- χ² = {srm_chi2:.4f}\n")
 
-    lines.append(f"## 决策: {decision}")
+    lines.append(f"## Decision: {decision}")
 
     if args.json:
         result = {"control": ctrl, "treatment": treat, "z": z, "p_value": p_val,
@@ -112,17 +112,17 @@ def cmd_abtest(args):
 # ───────────────────────── RFM Model ─────────────────────────
 
 RFM_HELP = """
-RFM 用户分层: Recency × Frequency × Monetary → 8 段分类
+RFM User Segmentation: Recency × Frequency × Monetary → 8 segments
 
-CSV 格式:
+CSV Format:
   customer_id,recency,frequency,monetary
 
-  customer_id : 客户标识
-  recency     : 距上次购买天数
-  frequency   : 购买次数
-  monetary    : 消费总额
+  customer_id : Customer identifier
+  recency     : Days since last purchase
+  frequency   : Number of purchases
+  monetary    : Total spend
 
-示例:
+Example:
   customer_id,recency,frequency,monetary
   C001,5,20,5000
   C002,90,3,300
@@ -134,7 +134,7 @@ def cmd_rfm(args):
     rows = read_csv(args.input)
     required = {"customer_id", "recency", "frequency", "monetary"}
     if not required.issubset(rows[0].keys()):
-        print(f"CSV 缺少列: {required - set(rows[0].keys())}", file=sys.stderr)
+        print(f"CSV missing columns: {required - set(rows[0].keys())}", file=sys.stderr)
         sys.exit(1)
 
     data = []
@@ -158,21 +158,21 @@ def cmd_rfm(args):
         f_hi = d["f"] >= 4
         m_hi = d["m"] >= 4
         if r_hi and f_hi and m_hi:
-            d["segment"] = "重要价值用户"
+            d["segment"] = "Champions"
         elif not r_hi and f_hi and m_hi:
-            d["segment"] = "重要保持用户"
+            d["segment"] = "Loyal Customers"
         elif r_hi and not f_hi and m_hi:
-            d["segment"] = "重要发展用户"
+            d["segment"] = "Potential Loyalists"
         elif not r_hi and not f_hi and m_hi:
-            d["segment"] = "重要挽留用户"
+            d["segment"] = "At Risk"
         elif r_hi and f_hi and not m_hi:
-            d["segment"] = "一般价值用户"
+            d["segment"] = "Promising"
         elif not r_hi and f_hi and not m_hi:
-            d["segment"] = "一般保持用户"
+            d["segment"] = "Need Attention"
         elif r_hi and not f_hi and not m_hi:
-            d["segment"] = "一般发展用户"
+            d["segment"] = "New Customers"
         else:
-            d["segment"] = "一般挽留用户"
+            d["segment"] = "Lost"
 
     segments = {}
     for d in data:
@@ -181,13 +181,13 @@ def cmd_rfm(args):
             segments[seg] = []
         segments[seg].append(d)
 
-    lines = ["# RFM 用户分层报告\n"]
-    lines.append(f"客户总数: {len(data)}\n")
+    lines = ["# RFM User Segmentation Report\n"]
+    lines.append(f"Total customers: {len(data)}\n")
 
-    lines.append("## 分层统计\n")
-    headers = ["分层", "人数", "占比", "平均 R", "平均 F", "平均 M"]
-    seg_order = ["重要价值用户", "重要保持用户", "重要发展用户", "重要挽留用户",
-                  "一般价值用户", "一般保持用户", "一般发展用户", "一般挽留用户"]
+    lines.append("## Segment Statistics\n")
+    headers = ["Segment", "Count", "Percentage", "Avg R", "Avg F", "Avg M"]
+    seg_order = ["Champions", "Loyal Customers", "Potential Loyalists", "At Risk",
+                  "Promising", "Need Attention", "New Customers", "Lost"]
     trows = []
     for seg in seg_order:
         if seg in segments:
@@ -199,8 +199,8 @@ def cmd_rfm(args):
                            f"{avg_r:.0f}", f"{avg_f:.1f}", fmt_num(avg_m, 0)])
     lines.append(md_table(headers, trows))
 
-    lines.append("## 客户明细（前 20）\n")
-    headers2 = ["客户", "R", "F", "M", "Recency", "Frequency", "Monetary", "分层"]
+    lines.append("## Customer Details (top 20)\n")
+    headers2 = ["Customer", "R", "F", "M", "Recency", "Frequency", "Monetary", "Segment"]
     trows2 = [[d["id"], d["r"], d["f"], d["m"], f"{d['recency']:.0f}",
                f"{d['frequency']:.0f}", fmt_num(d["monetary"], 0), d["segment"]] for d in data[:20]]
     lines.append(md_table(headers2, trows2))
@@ -214,17 +214,17 @@ def cmd_rfm(args):
 # ───────────────────────── Cohort Analysis ─────────────────────────
 
 COHORT_HELP = """
-同期群留存分析: 按时间分组追踪留存率
+Cohort retention analysis: Track retention rates by time group
 
-CSV 格式:
+CSV Format:
   cohort,period,active,initial
 
-  cohort  : 同期群标识 (如 2024-01, 2024-02)
-  period  : 期数 (0=初始, 1=第1期, 2=第2期, ...)
-  active  : 活跃用户数
-  initial : 初始用户数
+  cohort  : Cohort identifier (e.g. 2024-01, 2024-02)
+  period  : Period (0=initial, 1=period 1, 2=period 2, ...)
+  active  : Active users
+  initial : Initial users
 
-示例:
+Example:
   cohort,period,active,initial
   2024-01,0,1000,1000
   2024-01,1,600,1000
@@ -238,7 +238,7 @@ def cmd_cohort(args):
     rows = read_csv(args.input)
     required = {"cohort", "period", "active", "initial"}
     if not required.issubset(rows[0].keys()):
-        print(f"CSV 缺少列: {required - set(rows[0].keys())}", file=sys.stderr)
+        print(f"CSV missing columns: {required - set(rows[0].keys())}", file=sys.stderr)
         sys.exit(1)
 
     cohorts = {}
@@ -256,11 +256,11 @@ def cmd_cohort(args):
     cohort_names = sorted(cohorts.keys())
     periods = list(range(max_period + 1))
 
-    lines = ["# 同期群留存分析报告\n"]
-    lines.append(f"同期群数: {len(cohort_names)} | 最大期数: {max_period}\n")
+    lines = ["# Cohort Retention Analysis Report\n"]
+    lines.append(f"Cohorts: {len(cohort_names)} | Max period: {max_period}\n")
 
-    lines.append("## 留存率矩阵\n")
-    headers = ["Cohort", "初始"] + [f"P{p}" for p in periods if p > 0]
+    lines.append("## Retention Rate Matrix\n")
+    headers = ["Cohort", "Initial"] + [f"P{p}" for p in periods if p > 0]
     trows = []
     for c in cohort_names:
         ini = cohorts[c].get(0, {}).get("initial", 0)
@@ -275,9 +275,9 @@ def cmd_cohort(args):
         trows.append(row)
     lines.append(md_table(headers, trows))
 
-    lines.append("## 各期平均留存率\n")
-    avg_headers = ["期数"] + [f"P{p}" for p in periods if p > 0]
-    avg_row = ["平均"]
+    lines.append("## Average Retention Rate by Period\n")
+    avg_headers = ["Period"] + [f"P{p}" for p in periods if p > 0]
+    avg_row = ["Average"]
     for p in periods:
         if p == 0:
             continue
@@ -285,15 +285,15 @@ def cmd_cohort(args):
         avg_row.append(pct(sum(vals) / len(vals)) if vals else "-")
     lines.append(md_table(avg_headers, [avg_row]))
 
-    lines.append("## PMF 信号\n")
+    lines.append("## PMF Signal\n")
     for p in periods:
         if p == 0:
             continue
         vals = [cohorts[c][p]["retention"] * 100 for c in cohort_names if p in cohorts[c]]
         if vals:
             avg = sum(vals) / len(vals)
-            trend = "稳定" if avg > 30 else "偏低"
-            lines.append(f"- P{p} 平均留存: {pct(avg)} — {trend}")
+            trend = "stable" if avg > 30 else "low"
+            lines.append(f"- P{p} Avg Retention: {pct(avg)} — {trend}")
 
     if args.json:
         result = {"cohorts": {c: {str(p): cohorts[c][p] for p in cohorts[c]} for c in cohort_names}}

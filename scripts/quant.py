@@ -1,4 +1,4 @@
-"""量化投资方法论 — Factor / Momentum / Risk Parity / Backtesting Performance"""
+"""Quantitative investment methodologies — Factor / Momentum / Risk Parity / Backtesting Performance"""
 
 import json
 import math
@@ -10,17 +10,17 @@ from utils import (read_csv, write_output, md_table, fmt_num, pct,
 # ───────────────────────── Factor Analysis ─────────────────────────
 
 FACTOR_HELP = """
-因子分析: IC/IC_IR 计算 + 分组收益 + 单调性检验
+Factor Analysis: IC/IC_IR calculation + Group return + Monotonicity test
 
-CSV 格式（长表，每行一个资产-截面）:
+CSV Format (long table, one asset per cross-section):
   date,asset,factor_value,forward_return
 
-  date           : 截面日期
-  asset          : 资产标识
-  factor_value   : 因子值
-  forward_return : 前瞻收益率（小数）
+  date           : Cross-section date
+  asset          : Asset identifier
+  factor_value   : Factor value
+  forward_return : Forward return rate (decimal)
 
-示例:
+Example:
   date,asset,factor_value,forward_return
   2024-01,A001,0.5,0.03
   2024-01,A002,-0.2,-0.01
@@ -33,7 +33,7 @@ def cmd_factor(args):
     rows = read_csv(args.input)
     required = {"date", "asset", "factor_value", "forward_return"}
     if not required.issubset(rows[0].keys()):
-        print(f"CSV 缺少列: {required - set(rows[0].keys())}", file=sys.stderr)
+        print(f"CSV missing columns: {required - set(rows[0].keys())}", file=sys.stderr)
         sys.exit(1)
 
     dates = {}
@@ -49,7 +49,7 @@ def cmd_factor(args):
 
     sorted_dates = sorted(dates.keys())
     if len(sorted_dates) < 2:
-        print("至少需要 2 个截面日期", file=sys.stderr)
+        print("At least 2 cross-section dates required", file=sys.stderr)
         sys.exit(1)
 
     ic_series = []
@@ -93,30 +93,30 @@ def cmd_factor(args):
     monotonic = all(group_avg[i] <= group_avg[i + 1] for i in range(1, 5))
     ls_avg = sum(ls_returns) / len(ls_returns) if ls_returns else 0
 
-    lines = ["# 因子分析报告\n"]
-    lines.append(f"截面数: {len(ic_series)} | 每截面资产数: ~{len(rows) // max(len(sorted_dates), 1)}\n")
+    lines = ["# Factor Analysis Report\n"]
+    lines.append(f"Cross-sections: {len(ic_series)} | Assets per cross-section: ~{len(rows) // max(len(sorted_dates), 1)}\n")
 
-    lines.append("## IC 统计\n")
-    lines.append(f"- IC 均值: **{ic_mean:.4f}**")
-    lines.append(f"- IC 标准差: {ic_std:.4f}")
+    lines.append("## IC Statistics\n")
+    lines.append(f"- IC Mean: **{ic_mean:.4f}**")
+    lines.append(f"- IC Std Dev: {ic_std:.4f}")
     lines.append(f"- IC_IR: **{ic_ir:.4f}**")
-    lines.append(f"- IC > 0 占比: {pct(ic_positive_rate * 100)}")
-    lines.append(f"- 因子有效性: {'✅ 有效 (|IC| > 0.03)' if abs(ic_mean) > 0.03 else '⚠️ 弱 (|IC| ≤ 0.03)'}")
-    lines.append(f"- IC_IR 质量: {'✅ 优秀 (>0.5)' if ic_ir > 0.5 else ('⚠️ 一般' if ic_ir > 0.3 else '❌ 较差 (<0.3)')}\n")
+    lines.append(f"- IC > 0 ratio: {pct(ic_positive_rate * 100)}")
+    lines.append(f"- Factor Effectiveness: {'✅ Effective (|IC| > 0.03)' if abs(ic_mean) > 0.03 else '⚠️ Weak (|IC| ≤ 0.03)'}")
+    lines.append(f"- IC_IR Quality: {'✅ Excellent (>0.5)' if ic_ir > 0.5 else ('⚠️ Average' if ic_ir > 0.3 else '❌ Poor (<0.3)')}\n")
 
-    lines.append("## 分组收益（平均前瞻收益）\n")
-    headers = ["分组", "平均收益", "年化"]
+    lines.append("## Group Return (avg forward return)\n")
+    headers = ["Group", "Avg Return", "Annualized"]
     trows = []
     for g in range(1, 6):
         label = f"G{g}" + (" (Bottom)" if g == 1 else " (Top)" if g == 5 else "")
         trows.append([label, pct(group_avg[g] * 100), pct(group_avg[g] * 252 * 100)])
-    trows.append(["多空 (Top-Bottom)", pct(ls_avg * 100), pct(ls_avg * 252 * 100)])
+    trows.append(["Long-Short (Top-Bottom)", pct(ls_avg * 100), pct(ls_avg * 252 * 100)])
     lines.append(md_table(headers, trows))
 
-    lines.append(f"\n## 单调性检验: {'✅ 完美单调' if monotonic else '⚠️ 非完美单调'}\n")
+    lines.append(f"\n## Monotonicity Test: {'✅ Perfect monotonic' if monotonic else '⚠️ Non-perfect monotonic'}\n")
 
-    lines.append("## IC 时序（最近 10 期）\n")
-    ic_headers = ["日期", "IC"]
+    lines.append("## IC Time Series (last 10 periods)\n")
+    ic_headers = ["Date", "IC"]
     ic_trows = [[x["date"], f"{x['ic']:.4f}"] for x in ic_series[-10:]]
     lines.append(md_table(ic_headers, ic_trows))
 
@@ -133,15 +133,15 @@ def cmd_factor(args):
 # ───────────────────────── Momentum Analysis ─────────────────────────
 
 MOMENTUM_HELP = """
-动量信号分析: 多期收益计算 + 截面排名 + 分组收益
+Momentum signal analysis: Multi-period return calculation + Cross-section ranking + Group return
 
-CSV 格式（宽表，每行一个日期，各列资产价格）:
+CSV Format (wide table, one date per row, asset prices as columns):
   date,asset1,asset2,asset3,...
 
-  date  : 日期
-  assetN: 资产价格（收盘价）
+  date  : Date
+  assetN: Asset price (closing price)
 
-示例:
+Example:
   date,A001,A002,A003
   2024-01-01,100,50,200
   2024-01-02,102,49,203
@@ -152,12 +152,12 @@ CSV 格式（宽表，每行一个日期，各列资产价格）:
 def cmd_momentum(args):
     rows = read_csv(args.input)
     if len(rows) < 2:
-        print("至少需要 2 行数据", file=sys.stderr)
+        print("At least 2 rows of data required", file=sys.stderr)
         sys.exit(1)
 
     assets = [k for k in rows[0].keys() if k != "date"]
     if len(assets) < 3:
-        print("至少需要 3 个资产", file=sys.stderr)
+        print("At least 3 assets required", file=sys.stderr)
         sys.exit(1)
 
     dates = []
@@ -181,11 +181,11 @@ def cmd_momentum(args):
             rets[a] = (p_now - p_prev) / p_prev if p_prev != 0 else 0
         returns_by_lb[lb] = rets
 
-    lines = ["# 动量信号分析报告\n"]
-    lines.append(f"资产数: {len(assets)} | 数据点数: {n_dates} | 日期范围: {dates[0]} ~ {dates[-1]}\n")
+    lines = ["# Momentum Signal Analysis Report\n"]
+    lines.append(f"Assets: {len(assets)} | Data points: {n_dates} | Date range: {dates[0]} ~ {dates[-1]}\n")
 
-    lines.append("## 多期收益率\n")
-    headers = ["资产"] + [f"{lb}期" for lb in returns_by_lb.keys()]
+    lines.append("## Multi-Period Returns\n")
+    headers = ["Asset"] + [f"{lb} periods" for lb in returns_by_lb.keys()]
     trows = []
     for a in assets:
         row = [a]
@@ -199,8 +199,8 @@ def cmd_momentum(args):
         rets = returns_by_lb[main_lb]
         ranked = sorted(assets, key=lambda a: rets.get(a, 0), reverse=True)
 
-        lines.append(f"## 截面排名（{main_lb} 期动量）\n")
-        r_headers = ["排名", "资产", "收益率", "分位"]
+        lines.append(f"## Cross-Section Ranking ({main_lb} period momentum)\n")
+        r_headers = ["Rank", "Asset", "Return", "Quintile"]
         r_trows = []
         for i, a in enumerate(ranked, 1):
             q = "Top" if i <= len(ranked) * 0.2 else ("Bottom" if i > len(ranked) * 0.8 else "Mid")
@@ -208,8 +208,8 @@ def cmd_momentum(args):
         lines.append(md_table(r_headers, r_trows))
 
         n = len(ranked)
-        lines.append("## 分组收益\n")
-        g_headers = ["分组", "资产数", "平均收益"]
+        lines.append("## Group Return\n")
+        g_headers = ["Group", "Assets", "Avg Return"]
         g_trows = []
         for g in range(5):
             start = g * n // 5
@@ -220,11 +220,11 @@ def cmd_momentum(args):
             g_trows.append([label, len(group), pct(avg * 100)])
         top_avg = sum(rets.get(a, 0) for a in ranked[:max(1, n // 5)]) / max(1, n // 5)
         bot_avg = sum(rets.get(a, 0) for a in ranked[-max(1, n // 5):]) / max(1, n // 5)
-        g_trows.append(["多空 (Top-Bottom)", "-", pct((top_avg - bot_avg) * 100)])
+        g_trows.append(["Long-Short (Top-Bottom)", "-", pct((top_avg - bot_avg) * 100)])
         lines.append(md_table(g_headers, g_trows))
 
     if n_dates > 21:
-        lines.append("## 滚动动量信号\n")
+        lines.append("## Rolling Momentum Signal\n")
         lb_ts = min(21, n_dates - 1)
         skip = 1
         eff_lb = lb_ts + skip
@@ -249,11 +249,11 @@ def cmd_momentum(args):
             vol = math.sqrt(sum((r - avg_ret) ** 2 for r in portfolio_rets) / len(portfolio_rets)) if len(portfolio_rets) > 1 else 0
             sharpe = (avg_ret * 252) / (vol * math.sqrt(252)) if vol > 0 else 0
             win_rate = sum(1 for r in portfolio_rets if r > 0) / len(portfolio_rets)
-            lines.append(f"- 回看期: {lb_ts} 期, 跳过近 {skip} 期")
-            lines.append(f"- 等权 Top 20% 组合日均收益: {pct(avg_ret * 100)}")
-            lines.append(f"- 年化波动率: {pct(vol * math.sqrt(252) * 100)}")
-            lines.append(f"- 年化夏普: {sharpe:.2f}")
-            lines.append(f"- 日胜率: {pct(win_rate * 100)}")
+            lines.append(f"- Lookback period: {lb_ts} periods, skip last {skip} period")
+            lines.append(f"- Equal-weight Top 20% Portfolio avg daily return: {pct(avg_ret * 100)}")
+            lines.append(f"- Annualized volatility: {pct(vol * math.sqrt(252) * 100)}")
+            lines.append(f"- Annualized Sharpe: {sharpe:.2f}")
+            lines.append(f"- Daily win rate: {pct(win_rate * 100)}")
 
     if args.json:
         result = {"assets": assets, "n_dates": n_dates,
@@ -266,15 +266,15 @@ def cmd_momentum(args):
 # ───────────────────────── Risk Parity ─────────────────────────
 
 RISKPARITY_HELP = """
-风险平价权重: 迭代求解风险贡献均等权重 + 风险分解
+Risk Parity Weighting: Iterative risk contribution equal weighting + Risk decomposition
 
-CSV 格式（宽表，每行一期，各列为资产收益率）:
+CSV Format (wide table, one period per row, asset returns as columns):
   period,asset1,asset2,asset3,...
 
-  period : 期间标识
-  assetN : 该期收益率（小数）
+  period : Period identifier
+  assetN : Period return (decimal)
 
-示例:
+Example:
   period,stocks,bonds,commodities,reits
   2020-01,0.02,-0.01,0.03,0.01
   2020-02,-0.03,0.02,-0.01,-0.02
@@ -287,7 +287,7 @@ def cmd_riskparity(args):
     assets = [k for k in rows[0].keys() if k != "period"]
     n_assets = len(assets)
     if n_assets < 2:
-        print("至少需要 2 个资产", file=sys.stderr)
+        print("At least 2 assets required", file=sys.stderr)
         sys.exit(1)
 
     returns = []
@@ -295,7 +295,7 @@ def cmd_riskparity(args):
         returns.append([float(r[a]) for a in assets])
     n_obs = len(returns)
     if n_obs < n_assets + 1:
-        print(f"数据点不足: {n_obs} 期，建议至少 {n_assets + 1} 期", file=sys.stderr)
+        print(f"Insufficient data: {n_obs} periods, recommend at least {n_assets + 1} periods", file=sys.stderr)
 
     means = [sum(returns[t][i] for t in range(n_obs)) / n_obs for i in range(n_assets)]
     cov = [[0.0] * n_assets for _ in range(n_assets)]
@@ -304,7 +304,7 @@ def cmd_riskparity(args):
             s = sum((returns[t][i] - means[i]) * (returns[t][j] - means[j]) for t in range(n_obs))
             cov[i][j] = s / (n_obs - 1) * 252
 
-    # 波动率倒数加权作为初始值
+    # Volatility-inverse weighting as initial value
     asset_vols_init = [math.sqrt(max(cov[i][i], 1e-12)) for i in range(n_assets)]
     w = [1.0 / v for v in asset_vols_init]
     total = sum(w)
@@ -353,39 +353,39 @@ def cmd_riskparity(args):
     sigma_eq = math.sqrt(quad_form(w_eq, cov))
     asset_vols = [math.sqrt(cov[i][i]) for i in range(n_assets)]
 
-    lines = ["# 风险平价配置报告\n"]
-    lines.append(f"资产数: {n_assets} | 数据期数: {n_obs}\n")
+    lines = ["# Risk Parity Configuration Report\n"]
+    lines.append(f"Assets: {n_assets} | Data periods: {n_obs}\n")
 
-    lines.append("## 资产波动率\n")
-    v_headers = ["资产", "年化波动率"]
+    lines.append("## Asset Volatility\n")
+    v_headers = ["Asset", "Annualized Volatility"]
     v_trows = [[assets[i], pct(asset_vols[i] * 100)] for i in range(n_assets)]
     lines.append(md_table(v_headers, v_trows))
 
-    lines.append("## 风险平价权重\n")
-    headers = ["资产", "RP 权重", "风险贡献", "风险贡献占比", "边际风险"]
+    lines.append("## Risk Parity Weights\n")
+    headers = ["Asset", "RP Weight", "Risk Contribution", "Risk Contribution %", "Marginal Risk"]
     trows = []
     for i in range(n_assets):
         trows.append([
             assets[i], pct(w[i] * 100), f"{rc_final[i]:.4f}",
             pct(rc_pct[i]), f"{mrc[i]:.4f}"
         ])
-    trows.append(["合计", pct(sum(w) * 100), f"{sigma_p_final:.4f}", pct(sum(rc_pct)), "-"])
+    trows.append(["Total", pct(sum(w) * 100), f"{sigma_p_final:.4f}", pct(sum(rc_pct)), "-"])
     lines.append(md_table(headers, trows))
 
     div_rp = sigma_eq / sigma_p_final if sigma_p_final > 0 else 1
-    lines.append("## 对比分析\n")
-    c_headers = ["方案", "组合波动率", "分散化比率"]
+    lines.append("## Comparison Analysis\n")
+    c_headers = ["Approach", "Portfolio Volatility", "Diversification Ratio"]
     c_trows = [
-        ["风险平价", pct(sigma_p_final * 100), f"{div_rp:.2f}x"],
-        ["等权", pct(sigma_eq * 100), "1.00x"],
+        ["Risk Parity", pct(sigma_p_final * 100), f"{div_rp:.2f}x"],
+        ["Equal Weight", pct(sigma_eq * 100), "1.00x"],
     ]
     lines.append(md_table(c_headers, c_trows))
 
-    lines.append("## 风险均衡检验\n")
+    lines.append("## Risk Balance Check\n")
     max_dev = max(abs(rc_pct[i] - 100 / n_assets) for i in range(n_assets))
-    lines.append(f"- 目标风险贡献: {pct(100 / n_assets)}（每个资产）")
-    lines.append(f"- 最大偏差: {pct(max_dev)}")
-    lines.append(f"- 均衡状态: {'✅ 收敛' if max_dev < 1 else '⚠️ 未完全收敛'}")
+    lines.append(f"- Target risk contribution: {pct(100 / n_assets)} (per asset)")
+    lines.append(f"- Max deviation: {pct(max_dev)}")
+    lines.append(f"- Balance status: {'✅ Converged' if max_dev < 1 else '⚠️ Not fully converged'}")
 
     if args.json:
         result = {
@@ -403,18 +403,18 @@ def cmd_riskparity(args):
 # ───────────────────────── Strategy Performance ─────────────────────────
 
 PERF_HELP = """
-策略绩效指标: Sharpe / Sortino / Calmar / 最大回撤 / VaR / 胜率
+Strategy Performance Metrics: Sharpe / Sortino / Calmar / Max Drawdown / VaR / Win Rate
 
-CSV 格式:
+CSV Format:
   date,return
 
-  date   : 日期
-  return : 期间收益率（小数）
+  date   : Date
+  return : Period return (decimal)
 
-可选列:
-  benchmark : 基准收益率（小数，用于计算信息比率/超额收益）
+Optional column:
+  benchmark : Benchmark return (decimal, for information ratio/excess return)
 
-示例:
+Example:
   date,return,benchmark
   2024-01-02,0.005,0.003
   2024-01-03,-0.002,0.001
@@ -426,7 +426,7 @@ def cmd_perf(args):
     rows = read_csv(args.input)
     required = {"date", "return"}
     if not required.issubset(rows[0].keys()):
-        print(f"CSV 缺少列: {required - set(rows[0].keys())}", file=sys.stderr)
+        print(f"CSV missing columns: {required - set(rows[0].keys())}", file=sys.stderr)
         sys.exit(1)
 
     has_benchmark = "benchmark" in rows[0].keys()
@@ -441,7 +441,7 @@ def cmd_perf(args):
 
     n = len(rets)
     if n < 5:
-        print("至少需要 5 期数据", file=sys.stderr)
+        print("At least 5 periods of data required", file=sys.stderr)
         sys.exit(1)
 
     mean_ret = sum(rets) / n
@@ -525,67 +525,67 @@ def cmd_perf(args):
             "excess_ann": excess_ann, "te": te, "ir": ir,
         }
 
-    lines = ["# 策略绩效分析报告\n"]
-    lines.append(f"数据期数: {n} | 日期范围: {dates[0]} ~ {dates[-1]}\n")
+    lines = ["# Strategy Performance Analysis Report\n"]
+    lines.append(f"Data periods: {n} | Date range: {dates[0]} ~ {dates[-1]}\n")
 
-    lines.append("## 收益指标\n")
-    lines.append(f"- 累计收益: **{pct(total_ret * 100)}**")
-    lines.append(f"- 年化收益: **{pct(ann_ret * 100)}**")
-    lines.append(f"- 日均收益: {pct(mean_ret * 100)}")
+    lines.append("## Return Metrics\n")
+    lines.append(f"- Cumulative return: **{pct(total_ret * 100)}**")
+    lines.append(f"- Annualized return: **{pct(ann_ret * 100)}**")
+    lines.append(f"- Daily avg return: {pct(mean_ret * 100)}")
     if has_benchmark:
-        lines.append(f"- 基准累计收益: {pct(excess_data['bench_total'] * 100)}")
-        lines.append(f"- 年化超额收益: {pct(excess_data['excess_ann'] * 100)}")
+        lines.append(f"- Benchmark cumulative return: {pct(excess_data['bench_total'] * 100)}")
+        lines.append(f"- Annualized excess return: {pct(excess_data['excess_ann'] * 100)}")
     lines.append("")
 
-    lines.append("## 风险指标\n")
-    lines.append(f"- 年化波动率: {pct(ann_vol * 100)}")
-    lines.append(f"- 最大回撤: **{pct(max_dd * 100)}**")
-    lines.append(f"- 回撤区间: {dates[dd_start]} ~ {dates[dd_end]}（{dd_duration} 期）")
+    lines.append("## Risk Metrics\n")
+    lines.append(f"- Annualized volatility: {pct(ann_vol * 100)}")
+    lines.append(f"- Max drawdown: **{pct(max_dd * 100)}**")
+    lines.append(f"- Drawdown period: {dates[dd_start]} ~ {dates[dd_end]} ({dd_duration} periods)")
     lines.append(f"- VaR (95%): {pct(var_95 * 100)}")
     lines.append(f"- CVaR (95%): {pct(cvar_95 * 100)}")
     lines.append(f"- VaR (99%): {pct(var_99 * 100)}")
     lines.append("")
 
-    lines.append("## 风险调整收益\n")
-    lines.append(f"- Sharpe 比率: **{sharpe:.2f}**")
-    lines.append(f"- Sortino 比率: **{sortino:.2f}**")
-    lines.append(f"- Calmar 比率: **{calmar:.2f}**")
+    lines.append("## Risk-Adjusted Return\n")
+    lines.append(f"- Sharpe ratio: **{sharpe:.2f}**")
+    lines.append(f"- Sortino ratio: **{sortino:.2f}**")
+    lines.append(f"- Calmar ratio: **{calmar:.2f}**")
     if has_benchmark:
-        lines.append(f"- 信息比率: **{excess_data['ir']:.2f}**")
-        lines.append(f"- 跟踪误差: {pct(excess_data['te'] * 100)}")
+        lines.append(f"- Information ratio: **{excess_data['ir']:.2f}**")
+        lines.append(f"- Tracking error: {pct(excess_data['te'] * 100)}")
     lines.append("")
 
-    lines.append("## 交易统计\n")
-    lines.append(f"- 胜率: {pct(win_rate * 100)}")
-    lines.append(f"- 盈亏比: {pl_ratio:.2f}")
-    lines.append(f"- 平均盈利: {pct(avg_win * 100)}")
-    lines.append(f"- 平均亏损: {pct(avg_loss * 100)}")
-    lines.append(f"- 最大单日盈利: {pct(max(rets) * 100)}")
-    lines.append(f"- 最大单日亏损: {pct(min(rets) * 100)}")
+    lines.append("## Trading Statistics\n")
+    lines.append(f"- Win rate: {pct(win_rate * 100)}")
+    lines.append(f"- Profit/loss ratio: {pl_ratio:.2f}")
+    lines.append(f"- Avg win: {pct(avg_win * 100)}")
+    lines.append(f"- Avg loss: {pct(avg_loss * 100)}")
+    lines.append(f"- Max single-day gain: {pct(max(rets) * 100)}")
+    lines.append(f"- Max single-day loss: {pct(min(rets) * 100)}")
     lines.append("")
 
-    lines.append("## 分布特征\n")
-    lines.append(f"- 偏度: {skew:.3f}")
-    lines.append(f"- 超额峰度: {kurt:.3f}")
-    lines.append(f"- 正偏态表示右尾较长；高峰度表示极端事件概率高于正态")
+    lines.append("## Distribution Features\n")
+    lines.append(f"- Skewness: {skew:.3f}")
+    lines.append(f"- Excess kurtosis: {kurt:.3f}")
+    lines.append("- Positive skew indicates longer right tail; high kurtosis indicates extreme events more likely than normal")
 
-    lines.append("\n## 质量评级\n")
+    lines.append("\n## Quality Rating\n")
     if sharpe >= 2:
-        lines.append("- Sharpe: ✅ 优秀 (≥2)")
+        lines.append("- Sharpe: ✅ Excellent (≥2)")
     elif sharpe >= 1:
-        lines.append("- Sharpe: ⚠️ 合格 (1-2)")
+        lines.append("- Sharpe: ⚠️ Acceptable (1-2)")
     else:
-        lines.append("- Sharpe: ❌ 较差 (<1)")
+        lines.append("- Sharpe: ❌ Poor (<1)")
     if max_dd < 0.10:
-        lines.append("- 最大回撤: ✅ 可控 (<10%)")
+        lines.append("- Max drawdown: ✅ Controllable (<10%)")
     elif max_dd < 0.20:
-        lines.append("- 最大回撤: ⚠️ 中等 (10-20%)")
+        lines.append("- Max drawdown: ⚠️ Moderate (10-20%)")
     else:
-        lines.append("- 最大回撤: ❌ 严重 (>20%)")
+        lines.append("- Max drawdown: ❌ Severe (>20%)")
     if win_rate >= 0.55:
-        lines.append("- 胜率: ✅ 良好 (≥55%)")
+        lines.append("- Win rate: ✅ Good (≥55%)")
     else:
-        lines.append("- 胜率: ⚠️ 偏低 (<55%)")
+        lines.append("- Win rate: ⚠️ Low (<55%)")
 
     if args.json:
         result = {

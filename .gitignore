@@ -37,23 +37,23 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# 环境变量
+# Environment variables
 .env
 .env.local
 .env.*.local
 
-# 日志
+# Logs
 *.log
 
 # Meta
 .meta
 
-# 测试代码（开发期使用，不入仓库）
+# Test code (development use, not in repo)
 tests/
 **/tests/
 **/test/
 
-# Darwin skill 优化产物（开发期使用，不入仓库）
+# Darwin skill optimization artifacts (development use, not in repo)
 results.tsv
 test-prompts.json
 darwin-result-card.png

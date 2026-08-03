@@ -1,65 +1,22 @@
-# CI/CD Pipeline Design · 持续集成与持续部署流水线设计
+# CI/CD Pipeline Design
 
-## 核心思想
-将代码从提交到生产的全过程自动化为一条流水线，每个阶段有明确的门禁（Gate）和回滚策略。核心目标：快速反馈（提交后 <10 分钟知道是否破坏）、安全发布（灰度/蓝绿/金丝雀）、可审计（每次部署可追溯）。
+## Core Concept
+7-stage pipeline: Trigger → Build → Test → Security → Quality → Deploy → Post-Deploy. Each stage has gates that must pass before proceeding. Includes rollback strategies.
 
-## 适用场景
-- 新项目搭建 CI/CD 流水线
-- 现有流水线优化（构建慢/部署频繁失败/回滚困难）
-- 多环境（dev/staging/prod）发布策略设计
-- 团队协作中的质量门禁标准化
+## Applicable Scenarios
+✅ **Best for**
+- Pipeline setup
+- Release strategy design
+- Quality gates
 
-## 关键步骤
+## Key Steps
+1. **Trigger**: define what starts the pipeline (push, PR, schedule)
+2. **Build**: compile, package, containerize
+3. **Test**: unit → integration → e2e (fast to slow)
+4. **Security**: SAST, dependency scanning, secret detection
+5. **Quality**: coverage gates, lint, static analysis
+6. **Deploy**: blue-green / canary / rolling; environment promotion
+7. **Post-Deploy**: smoke tests, monitoring, rollback triggers
 
-### 流水线阶段
-
-1. **Trigger（触发）**
-   - Push / PR 触发流水线
-   - 触发条件显式定义（分支、路径过滤、标签）
-
-2. **Build（构建）**
-   - 依赖安装 → 编译 → 产物打包
-   - 缓存策略（依赖缓存、层缓存）控制构建时间
-   - 产物版本化（git sha / semver / build number）
-
-3. **Test（测试）**
-   - 单元测试（快速，<3 分钟）→ 集成测试 → E2E 测试
-   - 并行执行无依赖的测试套件
-   - 覆盖率门禁（≥85% 或项目约定）
-   - 测试失败立即阻断，不进入下一阶段
-
-4. **Security Gate（安全门禁）**
-   - SAST 静态扫描（Semgrep / CodeQL）
-   - 依赖漏洞扫描（Snyk / Trivy / Dependabot）
-   - 密钥泄露检测（gitleaks / trufflehog）
-   - CRITICAL 漏洞阻断流水线
-
-5. **Quality Gate（质量门禁）**
-   - 代码风格 lint
-   - 架构规则检查（依赖方向、模块边界）
-   - 性能基准测试（可选，用于关键路径）
-   - 文档同步检查（API 文档 vs 代码）
-
-6. **Deploy（部署）**
-   - 部署策略选择：
-     - **Rolling Update**：逐批替换，简单但回滚慢
-     - **Blue-Green**：双环境切换，回滚秒级但资源翻倍
-     - **Canary**：小流量验证，逐步放量，风险最小
-   - 健康检查 + 就绪探针确认
-   - 数据库迁移与代码部署的先后顺序策略
-
-7. **Post-Deploy（部署后验证）**
-   - Smoke Test 自动执行
-   - 监控告警观察期（≥15 分钟）
-   - 自动回滚条件定义（错误率 > X% / P99 延迟 > Y ms）
-
-### 设计原则
-1. **快速反馈**：从提交到测试结果 < 10 分钟
-2. **幂等性**：同一 commit 重复构建结果一致
-3. **不可变产物**：构建一次，多环境部署同一产物
-4. **Fail Fast**：任何阶段失败立即停止，不浪费后续资源
-5. **可回滚**：任何阶段的部署都能在 < 5 分钟内回滚
-6. **审计追溯**：每次部署记录 commit、构建日志、部署时间、操作人
-
-## 来源
-Jez Humble《Continuous Delivery》(2010)；Gene Kim《The Phoenix Project》(2013)；GitHub Actions / GitLab CI / CircleCI 最佳实践
+## Source
+Jez Humble & David Farley, *Continuous Delivery* (2010); modern CI/CD practices.

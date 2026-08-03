@@ -1,37 +1,37 @@
-# Financial Analysis · 财务分析
+# Financial Analysis
 
-**适用场景**：需要对企业财务表现、估值、价值创造做量化判断
+**When to use**: Need quantitative judgment on corporate financial performance, valuation, value creation
 
-| 方法论 | 一句话描述 | 最佳场景 | Reference |
+| Methodology | One-line description | Best scenario | Reference |
 | --- | --- | --- | --- |
-| **DuPont Analysis** | ROE = 净利率 × 资产周转率 × 权益乘数 三因素拆解 | 财务诊断、同业对比、ROE 异动分析 | `dupont.md` |
-| **DCF** | 企业价值 = 未来自由现金流现值之和 | 企业估值、投资决策、并购定价 | `dcf.md` |
-| **Comparable Company** | 通过相似公司估值倍数推断目标公司价值 | IPO 定价、并购、行业对比 | `comparable-company.md` |
-| **EVA** | EVA = NOPAT - 资本成本 × 投入资本，衡量真实价值创造 | 绩效评估、投资决策、价值管理 | `eva.md` |
+| **DuPont Analysis** | ROE = Net Margin × Asset Turnover × Equity Multiplier 3-factor decomposition | Financial diagnostics, peer comparison, ROE anomaly analysis | `dupont.md` |
+| **DCF** | Enterprise value = sum of future free cash flow present values | Enterprise valuation, investment decisions, M&A pricing | `dcf.md` |
+| **Comparable Company** | Infer target company value from similar companies' valuation multiples | IPO pricing, M&A, industry comparison | `comparable-company.md` |
+| **EVA** | EVA = NOPAT - capital cost × invested capital, measuring true value creation | Performance evaluation, investment decisions, value management | `eva.md` |
 
-## 各方法论最低信息需求
+## Minimum Information Requirements per Methodology
 
-- **DuPont Analysis**：目标公司三因素数据 + 同业对比数据
-- **DCF**：未来现金流预测 + WACC 估算 + 终值假设
-- **Comparable Company**：可比公司清单 + 估值倍数数据
-- **EVA**：NOPAT + 资本成本 + 投入资本数据
+- **DuPont Analysis**: Target company 3-factor data + peer comparison data
+- **DCF**: Future cash flow projections + WACC estimate + terminal value assumptions
+- **Comparable Company**: Comparable company list + valuation multiple data
+- **EVA**: NOPAT + capital cost + invested capital data
 
-## 路由触发信号
+## Routing Trigger Signals
 
-- "ROE 异动原因/财务诊断/盈利能力拆解" → DuPont Analysis（主）
-- "企业估值/投资决策/并购定价" → DCF（主）
-- "IPO 定价/行业估值对比/可比公司" → Comparable Company（主）
-- "真实价值创造/绩效评估/资本效率" → EVA（主）
+- "ROE anomaly cause / financial diagnostics / profitability decomposition" → DuPont Analysis (primary)
+- "Enterprise valuation / investment decision / M&A pricing" → DCF (primary)
+- "IPO pricing / industry valuation comparison / comparable companies" → Comparable Company (primary)
+- "True value creation / performance evaluation / capital efficiency" → EVA (primary)
 
-## 常见组合
+## Common Combinations
 
-- **企业估值**：DCF（内在价值）+ Comparable Company（市场参照）交叉验证
-- **财务诊断**：DuPont Analysis（ROE 拆解）→ EVA（价值创造验证）
-- **投资决策**：DuPont Analysis（质量评估）→ DCF（估值）→ EVA（持有期价值创造）
+- **Enterprise valuation**: DCF (intrinsic value) + Comparable Company (market reference) cross-validation
+- **Financial diagnostics**: DuPont Analysis (ROE decomposition) → EVA (value creation verification)
+- **Investment decision**: DuPont Analysis (quality assessment) → DCF (valuation) → EVA (holding period value creation)
 
-## 与量化投资的关系
+## Relationship with Quantitative Investment
 
-- **DCF → Factor Investing**：DCF 估值结果可构建价值因子（EP、BP），作为因子投资输入
-- **DCF → Portfolio Optimization**：DCF 内在价值估计可作为 MVO/Black-Litterman 的预期收益输入
-- **DuPont → ML Stock Selection**：杜邦分析的财务指标可作为机器学习选股的特征
-- **EVA → Factor Investing**：EVA 衡量的价值创造可构建质量因子
+- **DCF → Factor Investing**: DCF valuation results can build value factors (EP, BP) as factor investing input
+- **DCF → Portfolio Optimization**: DCF intrinsic value estimates can serve as expected return input for MVO/Black-Litterman
+- **DuPont → ML Stock Selection**: Financial ratios from DuPont analysis can serve as features for ML stock selection
+- **EVA → Factor Investing**: Value creation measured by EVA can build quality factors

@@ -1,4 +1,4 @@
-"""公共工具函数 — CSV 读写、格式化、矩阵运算、统计辅助。"""
+"""Utility functions — CSV I/O, formatting, matrix operations, statistical helpers."""
 
 import csv
 import io
@@ -7,10 +7,10 @@ import sys
 from pathlib import Path
 
 
-# ───────────────────────── I/O 工具 ─────────────────────────
+# ───────────────────────── I/O Tool ─────────────────────────
 
 def read_csv(source):
-    """从文件路径或 stdin 读取 CSV，返回 list[dict]。"""
+    """Read CSV from file path or stdin, return list[dict]."""
     if source == "-" or source is None:
         text = sys.stdin.read()
     else:
@@ -20,20 +20,20 @@ def read_csv(source):
 
 
 def write_output(content, output_path=None):
-    """输出到文件或 stdout。"""
+    """Output to file or stdout."""
     if output_path:
         Path(output_path).write_text(content, encoding="utf-8")
-        print(f"报告已写入: {output_path}", file=sys.stderr)
+        print(f"Report written: {output_path}", file=sys.stderr)
     else:
         print(content)
 
 
-# ───────────────────────── 格式化工具 ─────────────────────────
+# ───────────────────────── FormatTool ─────────────────────────
 
 def md_table(headers, rows):
-    """生成 Markdown 表格字符串。"""
+    """Generate Markdown table string."""
     if not rows:
-        return "(空表)\n"
+        return "(empty table)\n"
     col_widths = [len(h) for h in headers]
     for row in rows:
         for i, cell in enumerate(row):
@@ -47,7 +47,7 @@ def md_table(headers, rows):
 
 
 def fmt_num(n, decimals=2):
-    """格式化数字，千分位 + 小数。"""
+    """Format number with thousands separator and decimal places."""
     if isinstance(n, int):
         return f"{n:,}"
     if abs(n) >= 1000:
@@ -59,10 +59,10 @@ def pct(n, decimals=1):
     return f"{n:.{decimals}f}%"
 
 
-# ───────────────────────── 矩阵工具（量化投资用） ─────────────────────────
+# ───────────────────────── Matrix Tools (for quantitative investment) ─────────────────────────
 
 def mat_mult(A, B):
-    """矩阵乘法 A(m×n) × B(n×p)。"""
+    """Matrix multiplication A(m×n) × B(n×p)."""
     n = len(A)
     m = len(B[0])
     k = len(B)
@@ -70,7 +70,7 @@ def mat_mult(A, B):
 
 
 def mat_inv(M):
-    """高斯-约当消元法矩阵求逆（部分主元）。"""
+    """Gauss-Jordan elimination matrix inverse (partial pivoting)."""
     n = len(M)
     aug = [row[:] + [1.0 if i == j else 0.0 for j in range(n)] for i, row in enumerate(M)]
     for col in range(n):
@@ -88,20 +88,20 @@ def mat_inv(M):
 
 
 def mat_transpose(M):
-    """矩阵转置。"""
+    """Matrix transpose."""
     return [list(row) for row in zip(*M)]
 
 
 def quad_form(w, M):
-    """二次型 w'Mw。"""
+    """Quadratic form w'Mw."""
     n = len(w)
     return sum(w[i] * M[i][j] * w[j] for i in range(n) for j in range(n))
 
 
-# ───────────────────────── 统计工具 ─────────────────────────
+# ───────────────────────── Statistical Tools ─────────────────────────
 
 def rank_data(values):
-    """排名（1-based，平均处理平局）。"""
+    """Rank data (1-based, average tie-breaking)."""
     indexed = sorted(enumerate(values), key=lambda x: x[1])
     ranks = [0.0] * len(values)
     i = 0
@@ -117,7 +117,7 @@ def rank_data(values):
 
 
 def spearman_ic(x, y):
-    """Spearman 秩相关（IC）。"""
+    """Spearman rank correlation (IC)."""
     rx = rank_data(x)
     ry = rank_data(y)
     n = len(x)
@@ -134,7 +134,7 @@ def spearman_ic(x, y):
 
 
 def norm_cdf(x):
-    """标准正态分布 CDF 近似（Abramowitz & Stegun）。"""
+    """Standard normal CDF approximation (Abramowitz & Stegun)."""
     a1, a2, a3, a4, a5 = 0.254829592, -0.284496736, 1.421413741, -1.453152027, 1.061405429
     p = 0.3275911
     sign = 1 if x >= 0 else -1
@@ -145,7 +145,7 @@ def norm_cdf(x):
 
 
 def z_test(p1, n1, p2, n2):
-    """双比例 z 检验，返回 (z_stat, p_value_approx)。"""
+    """Two-proportion z-test, return (z_stat, p_value_approx)."""
     p_pool = (n1 * p1 + n2 * p2) / (n1 + n2)
     se = math.sqrt(p_pool * (1 - p_pool) * (1 / n1 + 1 / n2))
     if se == 0:
@@ -156,7 +156,7 @@ def z_test(p1, n1, p2, n2):
 
 
 def quintile_score(values, reverse=False):
-    """将值映射到 1-5 分位。reverse=True 表示值越小分越高（如 recency）。"""
+    """Map values to 1-5 quintile scores. reverse=True means lower value gets higher score (e.g. recency)."""
     sorted_vals = sorted(values)
     n = len(sorted_vals)
     scores = {}

@@ -1,201 +1,201 @@
 ---
 name: kueiku
-description: "工作方法论导航地图。触发：分析/策略/决策/用户研究/结构化思考/产品发现/上市策略/市场研究/数据分析/编程/架构优化/根因分析/优先级排序/风险预演/技术选型/TDD/量化投资/因子选股/组合优化/回测/代码审查/重构/CI-CD/可观测性/DDD/性能优化/安全设计/API设计/数据库设计/故障响应/Git工作流/依赖管理/微服务"
+description: "Methodology navigation map for AI agents. Triggers: analysis/strategy/decision/user research/structured thinking/product discovery/go-to-market/market research/data analysis/engineering/architecture optimization/root cause analysis/prioritization/risk rehearsal/tech selection/TDD/quantitative investing/factor investing/portfolio optimization/backtesting/code review/refactoring/CI-CD/observability/DDD/performance optimization/security design/API design/database design/incident response/Git workflow/dependency management/microservices"
 license: MIT
 ---
 
-# Methodology Compass · 方法论指南针
+# Methodology Compass
 
-Agent 的工作必须有方法论支撑。本 skill 是方法论索引地图，指导 agent **选择正确的框架、正确地使用框架**。详细方法论列表在各 `references/<category>/index.md`。
+Every agent task requires methodology support. This skill is a methodology index map that guides agents to **choose the right framework, then use it correctly**. The detailed methodology list for each category is in the respective `references/<category>/index.md`.
 
-## TL;DR · 30秒速查
+## TL;DR — 30-Second Quick Reference
 
 ```mermaid
 flowchart TD
-    A["收到任务"] --> B{"简单/用户要直接答？"}
-    B -- 是 --> C["不用框架，直接回答"]
-    B -- 否 --> D{"信息严重不足？"}
-    D -- 是 --> E["提问补充，不强行套框架"]
-    D -- 否 --> F{"需要分析/策略/决策/研究？"}
-    F -- 是 --> G["查下方路由表选类别 → 读 index.md 选具体方法论"]
-    G --> H["执行：宣告 → 读reference → 收集输入 → 执行 → 门控输出"]
-    H --> I{"执行中框架不适用？"}
-    I -- 是 --> J["立即停止，重新路由"]
-    I -- 否 --> K["完成"]
+    A["Receive task"] --> B{"Simple / user wants direct answer?"}
+    B -- Yes --> C["Skip framework, answer directly"]
+    B -- No --> D{"Information severely insufficient?"}
+    D -- Yes --> E["Ask clarifying questions, don't force a framework"]
+    D -- No --> F{"Needs analysis/strategy/decision/research?"}
+    F -- Yes --> G["Check routing table below → pick category → read index.md → select methodology"]
+    G --> H["Execute: declare → read reference → gather inputs → execute → gated output"]
+    H --> I{"Framework turns out to be a poor fit during execution?"}
+    I -- Yes --> J["Stop immediately, re-route"]
+    I -- No --> K["Done"]
 ```
 
-**能力概览**：19 个类别 × 116 个方法论。每个类别的方法论清单、最佳场景、最低信息需求均在该类别的 `index.md` 中。
+**Capability overview**: 19 categories × 116 methodologies. Each category's methodology list, best-use scenarios, and minimum information requirements are in that category's `index.md`.
 
-## 核心原则
+## Core Principles
 
-1. **先选框架，后展开工作** — 拿到任务先判断适用哪种方法论；选框架耗时应 < 30秒
-2. **框架是工具，不是目的** — 根据情境灵活组合，不生搬硬套
-3. **显性化使用** — 告知用户正在使用哪种方法论及原因，让分析过程可追溯
-4. **输出结构化且可验证** — 输出应包含可操作建议 + 验证标准
-5. **框架适配度自检** — 选框架后一句话验证：「[框架名] 能直接回答 [用户的核心问题] 吗？」不能则重新选择
+1. **Choose the framework first, then do the work** — When receiving a task, first determine which methodology applies; framework selection should take < 30 seconds
+2. **Frameworks are tools, not goals** — Combine flexibly based on context; don't force-fit
+3. **Make usage explicit** — Tell the user which methodology is being used and why, making the analysis process traceable
+4. **Structured and verifiable output** — Output should include actionable recommendations + verification criteria
+5. **Framework fitness self-check** — After selecting a framework, verify in one sentence: "Can [framework name] directly answer [the user's core question]?" If not, re-select
 
 ---
 
-## 类别总览（19 类 × 116 个方法论）
+## Category Overview (19 categories × 116 methodologies)
 
-| # | 类别 | 适用任务类型 | 数量 | 索引路径 |
+| # | Category | Task types | Count | Index path |
 | --- | --- | --- | --- | --- |
-| 1 | 问题诊断 | 找根因、颠覆性思考、80/20 聚焦 | 4 | `references/problem-diagnosis/index.md` |
-| 2 | 战略分析 | 现状评估、竞争格局、商业模式、定价护城河、价值链、标杆、资源能力评估、战略演化 | 23 | `references/strategy/index.md` |
-| 3 | 产品与增长 | 用户需求、增长瓶颈、产品创新、指标体系 | 8 | `references/product-growth/index.md` |
-| 4 | 决策制定 | 优先级排序、目标制定、风险预演、选型、存在主义决策、风险评估 | 9 | `references/decision-making/index.md` |
-| 5 | 用户研究 | 用户旅程、同理心画像、决策旅程、需求层次 | 4 | `references/user-research/index.md` |
-| 6 | 结构化思维 | MECE 表达、多视角评估、假设澄清、框架选择、连点思维、系统思考 | 9 | `references/structured-thinking/index.md` |
-| 7 | 产品发现 | 持续发现、假设验证、用户访谈、实验设计 | 8 | `references/product-discovery/index.md` |
-| 8 | 上市策略 | 滩头堡、ICP、GTM、增长飞轮、定位 | 7 | `references/go-to-market/index.md` |
-| 9 | 市场研究 | 市场规模、细分、用户画像、STP、感知图、技术采用 | 7 | `references/market-research/index.md` |
-| 10 | 数据分析 | 同期群、A/B 测试、指标体系、RFM | 4 | `references/data-analysis/index.md` |
-| 11 | AI 交付 | 交付物标准、文档代码 drift | 2 | `references/ai-delivery/index.md` |
-| 12 | 执行 | 结果导向路线图、战略红队、敏捷需求 | 4 | `references/execution/index.md` |
-| 13 | 编程与架构 | TDD、小步计划、服务契约、Agent DX、代码审查、重构、架构设计、CI/CD、可观测性、DDD、性能优化、安全设计、API 设计、数据库设计、故障响应、Git 工作流、依赖管理、微服务 | 18 | `references/engineering/index.md` |
-| 14 | 产品哲学 | 激进减法、垂直整合、科技人文、隐形完美 | 4 | `references/product-philosophy/index.md` |
-| 15 | 领导力 | 现实扭曲力场、A 级人才密度、变革管理 | 3 | `references/leadership/index.md` |
-| 16 | 财务分析 | 杜邦、DCF、可比公司、EVA | 4 | `references/financial-analysis/index.md` |
-| 17 | 研究方法论 | 系统化研究流程 | 1 | `references/research-methodology/index.md` |
-| 18 | 行业分析 | 行业价值链、技术成熟度曲线 | 2 | `references/industry-analysis/index.md` |
-| 19 | 量化投资 | 因子选股、组合优化、风险平价、动量策略、统计套利、回测验证、ML 选股 | 7 | `references/quantitative-investment/index.md` |
+| 1 | Problem Diagnosis | Root cause analysis, disruptive thinking, 80/20 focus | 4 | `references/problem-diagnosis/index.md` |
+| 2 | Strategic Analysis | Situation assessment, competitive landscape, business model, pricing moat, value chain, benchmarking, resource/capability assessment, strategic evolution | 23 | `references/strategy/index.md` |
+| 3 | Product & Growth | User needs, growth bottleneck, product innovation, metrics | 8 | `references/product-growth/index.md` |
+| 4 | Decision Making | Prioritization, goal setting, risk rehearsal, technology selection, existential decision, risk assessment | 9 | `references/decision-making/index.md` |
+| 5 | User Research | User journey, empathy mapping, decision journey, needs hierarchy | 4 | `references/user-research/index.md` |
+| 6 | Structured Thinking | MECE expression, multi-perspective assessment, assumption clarification, framework selection, connecting dots, systems thinking | 9 | `references/structured-thinking/index.md` |
+| 7 | Product Discovery | Continuous discovery, hypothesis validation, user interviews, experiment design | 8 | `references/product-discovery/index.md` |
+| 8 | Go-to-Market | Beachhead, ICP, GTM, growth loops, positioning | 7 | `references/go-to-market/index.md` |
+| 9 | Market Research | Market sizing, segmentation, user personas, STP, perceptual mapping, technology adoption | 7 | `references/market-research/index.md` |
+| 10 | Data Analysis | Cohort, A/B testing, metrics, RFM | 4 | `references/data-analysis/index.md` |
+| 11 | AI Delivery | Shipping artifacts standards, doc-code drift | 2 | `references/ai-delivery/index.md` |
+| 12 | Execution | Outcome roadmap, strategy red team, agile requirements | 4 | `references/execution/index.md` |
+| 13 | Engineering | TDD, bite-sized plan, service contracts, Agent DX, code review, refactoring, architecture design, CI/CD, observability, DDD, performance optimization, security design, API design, database design, incident response, Git workflow, dependency management, microservices | 18 | `references/engineering/index.md` |
+| 14 | Product Philosophy | Radical focus, vertical integration, tech meets humanities, invisible perfection | 4 | `references/product-philosophy/index.md` |
+| 15 | Leadership | Reality distortion field, A-player density, change management | 3 | `references/leadership/index.md` |
+| 16 | Financial Analysis | DuPont, DCF, comparable company, EVA | 4 | `references/financial-analysis/index.md` |
+| 17 | Research Methodology | Systematic research process | 1 | `references/research-methodology/index.md` |
+| 18 | Industry Analysis | Industry value chain, Gartner Hype Cycle | 2 | `references/industry-analysis/index.md` |
+| 19 | Quantitative Investment | Factor investing, portfolio optimization, risk parity, momentum strategy, statistical arbitrage, backtesting, ML stock selection | 7 | `references/quantitative-investment/index.md` |
 
 ---
 
-## 用户意图 → 类别快速路由
+## User Intent → Category Quick Routing
 
-按类别分组，列出该类别覆盖的核心用户意图 → 主方法论。完整备选方法论见各 `index.md` 的"路由触发信号"章节。
+Grouped by category, listing the core user intents covered → primary methodology. See each `index.md` "Routing Trigger Signals" section for the full list of alternative methodologies.
 
-**问题诊断** — 找根因→5 Whys；颠覆性思考→First Principles；80/20 聚焦→Pareto；多因素成因→Fishbone
-**战略分析** — 现状评估→SWOT；竞争格局→Porter's Five Forces；外部环境→PESTLE；商业模式→Business Model Canvas；多方对齐→Stakeholder Mapping；增长方向→Ansoff；价值创新→Blue Ocean；组织诊断→McKinsey 7S；产品组合→BCG Matrix；战略显性化→Product Strategy Canvas；早期创业验证→Lean Canvas；战略与盈利分离→Startup Canvas；价值主张文案→JDB Value Proposition；变现模型→Monetization Strategy；定价→Pricing Strategy；护城河→Can't-Won't Defensibility；资源能力评估→VRIO；国家竞争优势→Porter Diamond Model；业务组合管理→GE 麦肯锡矩阵；战略群组→Strategic Group Mapping；价值链→Value Chain Analysis；最佳实践→Benchmarking；产品生命周期→Product Life Cycle；战略演化感知→Wardley Mapping
-**产品与增长** — 用户要完成的核心任务→JTBD；增长瓶颈→AARRR；从0到1→Design Thinking；迭代验证→Lean BML；契合度验证→Value Proposition Canvas；系统化创意→SCAMPER；需求性质分类→Kano；指标体系→North Star
-**决策制定** — 优先级排序→RICE；任务管理→Eisenhower；目标制定→OKR；风险预演→Pre-mortem；多标准选型→Decision Matrix；需求裁剪→MoSCoW；失效风险→FMEA；存在主义决策→Death Filter；快速风险评估→Risk Matrix
-**用户研究** — 用户旅程→Customer Journey Map；同理心画像→Empathy Map；消费者决策旅程→Consumer Decision Journey；需求层次→Maslow Hierarchy
-**结构化思维** — 结构化表达→MECE+Pyramid；多视角评估→Six Thinking Hats；澄清假设→Socratic Questioning；问题域判断→Cynefin；二阶效应→Second-Order Thinking；框架选择→Framework Selection；连点思维→Connecting Dots；重构升维→Reframe and Elevate；系统思考→Systems Thinking
-**产品发现** — 持续发现→Opportunity Solution Tree；用户访谈→The Mom Test；想法初筛→ICE；未满足需求→Opportunity Score；实验选型→Experiment Design Library；假设识别→Assumption Mapping；最小可行原型→Pretotypes；产品团队协作→Product Trio
-**上市策略** — 滩头堡→Beachhead Segment；理想客户→ICP；GTM动作→GTM Motions；发布计划→GTM Strategy；增长飞轮→Growth Loops；竞品应战→Competitive Battlecard；定位→Positioning Strategy
-**市场研究** — 市场规模→Market Sizing；市场细分→Market Segmentation；用户细分→User Segmentation；用户画像→User Personas；STP 分析→STP Analysis；品牌感知→Perceptual Mapping；技术采用→Technology Adoption Lifecycle
-**数据分析** — 留存分析→Cohort Analysis；A/B测试→A/B Test Analysis；指标选型→Lean Analytics Metrics；用户价值分层→RFM Model
-**AI 交付** — 交付物标准→Shipping Artifacts；drift检测→Intended vs Implemented
-**执行** — 结果导向路线图→Outcome Roadmap；战略红队→Strategy Red Team；敏捷需求→User Stories；情境化需求→Job Stories
-**编程与架构** — 测试驱动→TDD；小步计划→Bite-Sized Plan；服务契约→Typed Service Contracts；Agent友好度→Agent DX/CLI Scale；代码审查→Code Review Checklist；重构→Refactoring Patterns；架构设计→Clean Architecture；领域建模→DDD；微服务→Microservices Patterns；API设计→API Design；数据库设计→Database Schema Design；CI/CD→CI/CD Pipeline Design；安全设计→Security by Design；可观测性→Observability；性能优化→Performance Optimization；故障响应→Incident Response & Postmortem；Git工作流→Git Workflow Strategies；依赖管理→Dependency Management
-**产品哲学** — 激进减法→Focus as No；垂直整合→Whole Widget；科技人文→Technology Meets Humanities；隐形完美→Invisible Perfection
-**领导力** — 现实扭曲力场→Reality Distortion Field；A 级人才密度→A-Player Density；组织变革→Change Management
-**财务分析** — ROE 拆解→DuPont；企业估值→DCF；可比公司→Comparable Company；价值创造→EVA
-**研究方法论** — 系统化研究→Systematic Research Process
-**行业分析** — 行业价值链→Industry Value Chain；技术成熟度→Gartner Hype Cycle
-**量化投资** — 因子选股→Factor Investing；组合优化→Portfolio Optimization；风险预算→Risk Parity；趋势跟踪→Momentum Strategy；配对交易→Statistical Arbitrage；策略回测→Backtesting Framework；AI 选股→ML Stock Selection
+**Problem Diagnosis** — Find root cause→5 Whys; Disruptive thinking→First Principles; 80/20 focus→Pareto; Multi-factor causation→Fishbone
+**Strategic Analysis** — Situation assessment→SWOT; Competitive landscape→Porter's Five Forces; External environment→PESTLE; Business model→Business Model Canvas; Multi-stakeholder alignment→Stakeholder Mapping; Growth direction→Ansoff; Value innovation→Blue Ocean; Org diagnosis→McKinsey 7S; Product portfolio→BCG Matrix; Strategy visualization→Product Strategy Canvas; Early-stage startup validation→Lean Canvas; Strategy & monetization separation→Startup Canvas; Value proposition copy→JDB Value Proposition; Monetization model→Monetization Strategy; Pricing→Pricing Strategy; Moat→Can't-Won't Defensibility; Resource/capability assessment→VRIO; National competitive advantage→Porter Diamond Model; Business portfolio management→GE-McKinsey Matrix; Strategic groups→Strategic Group Mapping; Value chain→Value Chain Analysis; Best practices→Benchmarking; Product life cycle→Product Life Cycle; Strategic evolution awareness→Wardley Mapping
+**Product & Growth** — Core job users want done→JTBD; Growth bottleneck→AARRR; Zero-to-one→Design Thinking; Iterative validation→Lean BML; Fit validation→Value Proposition Canvas; Systematic creativity→SCAMPER; Need type classification→Kano; Metrics→North Star
+**Decision Making** — Prioritization→RICE; Task management→Eisenhower; Goal setting→OKR; Risk rehearsal→Pre-mortem; Multi-criteria selection→Decision Matrix; Scope trimming→MoSCoW; Failure risk→FMEA; Existential decision→Death Filter; Quick risk assessment→Risk Matrix
+**User Research** — User journey→Customer Journey Map; Empathy mapping→Empathy Map; Consumer decision journey→Consumer Decision Journey; Needs hierarchy→Maslow Hierarchy
+**Structured Thinking** — Structured expression→MECE+Pyramid; Multi-perspective assessment→Six Thinking Hats; Clarify assumptions→Socratic Questioning; Problem domain identification→Cynefin; Second-order effects→Second-Order Thinking; Framework selection→Framework Selection; Connecting dots→Connecting Dots; Reframe & elevate→Reframe and Elevate; Systems thinking→Systems Thinking
+**Product Discovery** — Continuous discovery→Opportunity Solution Tree; User interviews→The Mom Test; Idea screening→ICE; Unmet needs→Opportunity Score; Experiment selection→Experiment Design Library; Assumption identification→Assumption Mapping; Minimum viable prototype→Pretotypes; Product team collaboration→Product Trio
+**Go-to-Market** — Beachhead→Beachhead Segment; Ideal customer→ICP; GTM actions→GTM Motions; Launch plan→GTM Strategy; Growth flywheel→Growth Loops; Competitive response→Competitive Battlecard; Positioning→Positioning Strategy
+**Market Research** — Market sizing→Market Sizing; Market segmentation→Market Segmentation; User segmentation→User Segmentation; User personas→User Personas; STP analysis→STP Analysis; Brand perception→Perceptual Mapping; Technology adoption→Technology Adoption Lifecycle
+**Data Analysis** — Retention analysis→Cohort Analysis; A/B testing→A/B Test Analysis; Metrics selection→Lean Analytics Metrics; User value segmentation→RFM Model
+**AI Delivery** — Shipping artifacts standards→Shipping Artifacts; Drift detection→Intended vs Implemented
+**Execution** — Outcome roadmap→Outcome Roadmap; Strategy red team→Strategy Red Team; Agile requirements→User Stories; Contextualized requirements→Job Stories
+**Engineering** — Test-driven→TDD; Bite-sized plan→Bite-Sized Plan; Service contracts→Typed Service Contracts; Agent friendliness→Agent DX/CLI Scale; Code review→Code Review Checklist; Refactoring→Refactoring Patterns; Architecture design→Clean Architecture; Domain modeling→DDD; Microservices→Microservices Patterns; API design→API Design; Database design→Database Schema Design; CI/CD→CI/CD Pipeline Design; Security design→Security by Design; Observability→Observability; Performance optimization→Performance Optimization; Incident response→Incident Response & Postmortem; Git workflow→Git Workflow Strategies; Dependency management→Dependency Management
+**Product Philosophy** — Radical focus→Focus as No; Vertical integration→Whole Widget; Tech meets humanities→Technology Meets Humanities; Invisible perfection→Invisible Perfection
+**Leadership** — Reality distortion field→Reality Distortion Field; A-player density→A-Player Density; Org change→Change Management
+**Financial Analysis** — ROE decomposition→DuPont; Enterprise valuation→DCF; Comparable company→Comparable Company; Value creation→EVA
+**Research Methodology** — Systematic research→Systematic Research Process
+**Industry Analysis** — Industry value chain→Industry Value Chain; Technology maturity→Gartner Hype Cycle
+**Quantitative Investment** — Factor investing→Factor Investing; Portfolio optimization→Portfolio Optimization; Risk budgeting→Risk Parity; Trend following→Momentum Strategy; Pairs trading→Statistical Arbitrage; Strategy backtesting→Backtesting Framework; AI stock selection→ML Stock Selection
 
 ---
 
-## 调用协议
+## Calling Protocol
 
 ```
-0. 前置检查：确认任务类型匹配上表某一行；确认信息充分度 ≥ Level 1；两个框架都适合则选主+备并说明选主理由
-1. 宣告框架："我将使用 [方法论名] 分析。选择原因：[路由对应]；所需输入：[列出]；预期输出：[格式]"
-2. 读 reference：打开 references/<category>/<methodology>.md 提取执行步骤和输出模板
-3. 收集输入：按框架所需逐项确认；缺失项按降级路径处理
-4. 执行框架：按 reference 步骤逐一输出，每步标注信息来源（事实/推断/假设）
-5. 输出结论（质量门控）：
-   ✓ 直接回答用户原始问题
-   ✓ 包含至少一条可立即执行的行动建议
-   ✓ 标注置信度（高/中/低）及主要不确定因素
-   ✗ 如结论只是重复框架内容而无增量洞察，重新提炼
+0. Pre-check: Confirm the task type matches a row in the table above; confirm information sufficiency ≥ Level 1; if two frameworks both fit, pick primary + backup and explain why primary is primary
+1. Declare framework: "I will use [methodology name] for this analysis. Reason: [routing correspondence]; Required inputs: [list]; Expected output: [format]"
+2. Read reference: Open references/<category>/<methodology>.md to extract execution steps and output template
+3. Gather inputs: Confirm each item as required by the framework; handle missing items via the degradation path
+4. Execute framework: Output step by step per the reference, tagging each piece of information as fact/inference/assumption
+5. Output conclusion (quality gate):
+   ✓ Directly answers the user's original question
+   ✓ Includes at least one immediately actionable recommendation
+   ✓ Labels confidence (High/Medium/Low) and key uncertainties
+   ✗ If the conclusion merely restates the framework without incremental insight, refine further
 ```
 
-### 何时不使用框架
+### When NOT to use a framework
 
-- 任务简单明确，框架会增加不必要复杂性
-- 用户明确要求直接回答
-- 框架所需信息严重缺失（见降级路径 Level 3+）
+- The task is simple and clear; a framework would add unnecessary complexity
+- The user explicitly asks for a direct answer
+- Information required by the framework is severely missing (see Degradation Path Level 3+)
 
-### 组合使用规则
+### Combination rules
 
-部分任务需要方法论组合。常见组合在各 `index.md` 的"常见组合"章节。每个框架执行完毕后，进入下一框架前确认：①上一框架核心结论是否已明确？②下一框架是否需要上一框架输出作为输入？③用户对上一框架结论有无异议？
+Some tasks require a methodology combination. Common combinations are listed in each `index.md` under "Common Combinations". After each framework completes, before moving to the next, confirm: ① Is the core conclusion from the previous framework clear? ② Does the next framework need the previous one's output as input? ③ Does the user have any objections to the previous framework's conclusion?
 
-### 方法论互斥与先后约束
+### Methodology mutual exclusion and ordering constraints
 
-部分方法论存在互斥或先后依赖关系，组合使用时必须遵守：
+Some methodologies have mutual exclusion or ordering dependencies. When combining, these must be observed:
 
-| 约束对 | 规则 | 原因 |
+| Constraint pair | Rule | Reason |
 | --- | --- | --- |
-| Lean Canvas ↔ Startup Canvas | **二选一**，不要同时使用 | 输出高度重叠，均基于 BMC 改造面向早期创业 |
-| RICE ↔ ICE | **ICE 粗筛后→RICE 精排**，不要并行使用 | ICE 是 RICE 的简化版，并行使用产生冗余输出 |
-| PESTLE → SWOT | **PESTLE 先于 SWOT** | PESTLE 是 SWOT 中 O/T 维度的展开，先做可避免外部分析遗漏 |
-| SWOT vs Porter's Five Forces | **按分析对象选择**：单一企业综合现状→SWOT；行业竞争结构→Porter's | 维度不同，同时使用需明确各自输入边界 |
-| JTBD vs User Personas | **按目标选择**：挖掘任务→JTBD；描述用户 archetype→Personas | 输入数据可重叠但输出目的不同 |
+| Lean Canvas ↔ Startup Canvas | **Pick one**, don't use both simultaneously | Output overlaps heavily; both are BMC adaptations for early-stage startups |
+| RICE ↔ ICE | **ICE for rough screening → RICE for fine ranking**, don't use in parallel | ICE is a simplified version of RICE; parallel use produces redundant output |
+| PESTLE → SWOT | **PESTLE before SWOT** | PESTLE expands the O/T dimensions of SWOT; doing it first avoids external analysis omissions |
+| SWOT vs Porter's Five Forces | **Choose by analysis target**: comprehensive single-enterprise assessment→SWOT; industry competitive structure→Porter's | Different dimensions; if using both, clarify input boundaries for each |
+| JTBD vs User Personas | **Choose by goal**: uncover jobs→JTBD; describe user archetype→Personas | Input data may overlap but output purposes differ |
 
 ---
 
-## 信息不足降级路径
+## Insufficient Information Degradation Path
 
-| Level | 状态 | 动作 |
+| Level | State | Action |
 | --- | --- | --- |
-| L1 | 信息基本充分 | 正常执行框架 |
-| L2 | 信息部分缺失 | 明确标注哪些维度是假设而非事实；用 `[需补充数据]` 占位，输出后列出待收集项 |
-| L3 | 核心信息缺失（无法产出有效结论） | 停止执行，向用户提出 1-3 个最关键问题；说明缺少什么信息、为何影响输出质量 |
-| L4 | 信息严重不足（连框架选择都无法判断） | 优先使用 Cynefin 或 Framework Selection 判断问题性质和适用框架；若仍无法确定，退化为「直接最佳判断」，不套框架；说明当前判断的置信度和依赖假设 |
+| L1 | Information mostly sufficient | Execute framework normally |
+| L2 | Partial information missing | Clearly label which dimensions are assumptions vs facts; use `[data needed]` placeholders; list to-collect items after output |
+| L3 | Core information missing (cannot produce valid conclusion) | Stop execution; ask the user 1-3 most critical questions; explain what information is missing and why it affects output quality |
+| L4 | Information severely insufficient (cannot even determine framework selection) | Use Cynefin or Framework Selection first to determine problem nature and applicable framework; if still uncertain, fall back to "direct best judgment" without a framework; state confidence level and dependent assumptions |
 
-各框架最低信息需求详见各 `index.md` 的"各方法论最低信息需求"章节。
+See each `index.md` "Minimum Information Requirements per Methodology" section for each framework's minimum information needs.
 
 ---
 
-## 框架选错时的纠偏
+## Framework Correction Mechanism
 
-执行中若发现框架不适用（关键维度无法填充且非信息问题、分析结论与用户问题脱节、用户反馈"方向不对"），不要强行完成：
+If during execution you find the framework is a poor fit (key dimensions cannot be filled and it's not an information issue, the analysis conclusion drifts from the user's question, the user says "wrong direction"), don't force completion:
 
-1. 立即停止当前框架执行
-2. 说明：已完成部分 + 为何判断此框架不适合
-3. 从快速路由表重新选择，说明切换理由
-4. 已完成部分如有价值可保留作为输入
-5. 记录纠偏原因（触发信号不准确 / 信息不匹配 / 场景不适用），用于优化路由表
+1. Stop executing the current framework immediately
+2. Explain: what has been completed + why this framework is judged unsuitable
+3. Re-select from the quick routing table, explaining the switch reason
+4. If any completed portion has value, retain it as input
+5. Record the correction reason (inaccurate trigger signal / information mismatch / scenario inapplicable) to optimize the routing table
 
 ---
 
-## 自动化脚本工具
+## Automation Script Tools
 
-`scripts/main.py` 提供 19 个高计算密度方法论的自动化计算：
+`scripts/main.py` provides automated computation for 19 computation-heavy methodologies:
 
-| 模块 | 文件 | 子命令 |
+| Module | File | Subcommands |
 | --- | --- | --- |
-| 公共工具 | `scripts/utils.py` | — |
-| 决策与优先级 | `scripts/decision.py` | `rice`, `dmatrix`, `ice` |
-| 风险评估 | `scripts/risk.py` | `risk`, `fmea`, `pareto` |
-| 财务分析 | `scripts/financial.py` | `dupont`, `dcf`, `eva` |
-| 数据分析 | `scripts/data.py` | `abtest`, `rfm`, `cohort` |
-| 战略矩阵 | `scripts/strategy.py` | `oppscore`, `bcg`, `gemckinsey` |
-| 量化投资 | `scripts/quant.py` | `factor`, `momentum`, `riskparity`, `perf` |
-| CLI 入口 | `scripts/main.py` | 全部 19 个子命令 |
+| Utilities | `scripts/utils.py` | — |
+| Decision & Prioritization | `scripts/decision.py` | `rice`, `dmatrix`, `ice` |
+| Risk Assessment | `scripts/risk.py` | `risk`, `fmea`, `pareto` |
+| Financial Analysis | `scripts/financial.py` | `dupont`, `dcf`, `eva` |
+| Data Analysis | `scripts/data.py` | `abtest`, `rfm`, `cohort` |
+| Strategy Matrices | `scripts/strategy.py` | `oppscore`, `bcg`, `gemckinsey` |
+| Quantitative Investment | `scripts/quant.py` | `factor`, `momentum`, `riskparity`, `perf` |
+| CLI Entry | `scripts/main.py` | All 19 subcommands |
 
-### 子命令一览
+### Subcommand Reference
 
-| 子命令 | 方法论 | 功能 | CSV 输入 |
+| Subcommand | Methodology | Function | CSV Input |
 | --- | --- | --- | --- |
-| `rice` | RICE Scoring | 优先级评分 + 排序 + 分层建议 | name,reach,impact,confidence,effort |
-| `dmatrix` | Decision Matrix | 多方案加权评分 + 敏感性分析 | option,criterion,weight,score |
-| `risk` | Risk Matrix | 概率×影响评估 + 四区分类 | name,probability,impact[,category] |
-| `dupont` | DuPont Analysis | 三因素分解 + 连环替代法 | period,revenue,net_income,total_assets,equity |
-| `pareto` | Pareto Analysis | 排序 + 累积百分比 + 关键少数识别 | name,value |
-| `fmea` | FMEA | RPN=S×O×D + 风险等级分类 | name,severity,occurrence,detection[,category] |
-| `ice` | ICE Framework | Impact×Confidence×Ease 评分 | name,impact,confidence,ease |
-| `oppscore` | Opportunity Score | Importance×(1-Satisfaction) 机会识别 | name,importance,satisfaction |
-| `dcf` | DCF 现金流折现 | NPV + 终值 + 敏感性分析 | year,fcf + --rate --growth [--shares] |
-| `eva` | EVA 经济增加值 | NOPAT-WACC×IC + 价值创造诊断 | period,ebit,tax_rate,invested_capital,wacc |
-| `abtest` | A/B Test Analysis | z检验 + SRM检测 + 决策矩阵 | variant,users,conversions |
-| `rfm` | RFM Model | R/F/M分位评分 → 8段用户分类 | customer_id,recency,frequency,monetary |
-| `cohort` | Cohort Analysis | 同期群留存率矩阵 + PMF信号 | cohort,period,active,initial |
-| `bcg` | BCG Matrix | 增长率×份额 → 4象限战略建议 | product,market_growth,relative_share[,revenue] |
-| `gemckinsey` | GE-McKinsey | 吸引力×实力 → 9格分类 | business,attractiveness,strength[,revenue] |
-| `factor` | Factor Investing | IC/IC_IR + 5 分组收益 + 单调性检验 | date,asset,factor_value,forward_return |
-| `momentum` | Momentum Strategy | 多期收益 + 截面排名 + 分组收益 + 滚动动量 | date,asset1,asset2,... |
-| `riskparity` | Risk Parity | 迭代求解风险平价权重 + 风险分解 | period,asset1,asset2,... |
-| `perf` | Backtesting Framework | Sharpe/Sortino/Calmar/回撤/VaR/胜率/分布 | date,return[,benchmark] |
+| `rice` | RICE Scoring | Priority scoring + ranking + tiered recommendations | name,reach,impact,confidence,effort |
+| `dmatrix` | Decision Matrix | Multi-option weighted scoring + sensitivity analysis | option,criterion,weight,score |
+| `risk` | Risk Matrix | Probability×Impact assessment + 4-zone classification | name,probability,impact[,category] |
+| `dupont` | DuPont Analysis | 3-factor decomposition + chain substitution | period,revenue,net_income,total_assets,equity |
+| `pareto` | Pareto Analysis | Ranking + cumulative percentage + vital few identification | name,value |
+| `fmea` | FMEA | RPN=S×O×D + risk level classification | name,severity,occurrence,detection[,category] |
+| `ice` | ICE Framework | Impact×Confidence×Ease scoring | name,impact,confidence,ease |
+| `oppscore` | Opportunity Score | Importance×(1-Satisfaction) opportunity identification | name,importance,satisfaction |
+| `dcf` | DCF | NPV + terminal value + sensitivity analysis | year,fcf + --rate --growth [--shares] |
+| `eva` | EVA | NOPAT-WACC×IC + value creation diagnostics | period,ebit,tax_rate,invested_capital,wacc |
+| `abtest` | A/B Test Analysis | z-test + SRM detection + decision matrix | variant,users,conversions |
+| `rfm` | RFM Model | R/F/M quantile scoring → 8-segment user classification | customer_id,recency,frequency,monetary |
+| `cohort` | Cohort Analysis | Cohort retention matrix + PMF signals | cohort,period,active,initial |
+| `bcg` | BCG Matrix | Growth rate×share → 4-quadrant strategic recommendations | product,market_growth,relative_share[,revenue] |
+| `gemckinsey` | GE-McKinsey | Attractiveness×strength → 9-cell classification | business,attractiveness,strength[,revenue] |
+| `factor` | Factor Investing | IC/IC_IR + 5-group returns + monotonicity test | date,asset,factor_value,forward_return |
+| `momentum` | Momentum Strategy | Multi-period returns + cross-sectional ranking + group returns + rolling momentum | date,asset1,asset2,... |
+| `riskparity` | Risk Parity | Iterative risk parity weight solving + risk decomposition | period,asset1,asset2,... |
+| `perf` | Backtesting Framework | Sharpe/Sortino/Calmar/drawdown/VaR/win rate/distribution | date,return[,benchmark] |
 
 ```bash
-# 用法
+# Usage
 python scripts/main.py <subcommand> -i <input.csv> [-o report.md] [--json]
 
-# 示例
+# Examples
 python scripts/main.py fmea     -i failures.csv
 python scripts/main.py dcf      -i cashflows.csv --rate 0.10 --growth 0.03 --shares 1000000
 python scripts/main.py abtest   -i experiment.csv
@@ -208,12 +208,12 @@ python scripts/main.py riskparity -i asset-returns.csv
 python scripts/main.py perf     -i strategy-returns.csv
 ```
 
-支持 Markdown 报告输出（默认）和 JSON 格式（`--json`）。
+Supports Markdown report output (default) and JSON format (`--json`).
 
 ---
 
-## 维护说明
+## Maintenance Notes
 
-- 新增方法论：更新该类别 `index.md` 的表格、最低信息需求、路由触发信号
-- 新增类别：在类别总览表追加一行，创建对应 `index.md`
-- **读取原则**：仅在需要时读取对应的 reference 文件，不要预加载全部文件
+- Adding a methodology: update the category's `index.md` table, minimum information requirements, and routing trigger signals
+- Adding a category: add a row to the category overview table and create the corresponding `index.md`
+- **Reading principle**: only read the corresponding reference file when needed; do not preload all files

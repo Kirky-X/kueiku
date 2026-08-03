@@ -1,120 +1,20 @@
-# Invisible Perfection · 看不见的完美主义
+# Invisible Perfection
 
-## 核心理念
+## Core Concept
+Internal craft quality determines external user experience. The unseen parts (code quality, internal tools, infrastructure) must be polished to the same standard as user-facing features. Users may never see the internals, but they feel the difference.
 
-内部工艺质量决定外部体验，即使看不见的地方也要打磨。
+## Applicable Scenarios
+✅ **Best for**
+- Code quality standards
+- Internal tool investment decisions
+- Craft standard setting
 
-用户看到的只是产品表面，但表面体验由无数看不见的内部环节支撑：代码结构、数据管道、错误处理、日志规范、构建流程。这些"看不见"的部分一旦腐化，外部体验必然衰退——bug 增多、性能下降、迭代变慢、新功能难加。
+## Key Steps
+1. List all "invisible" quality points: code quality, test coverage, internal tools, documentation, infrastructure
+2. For each, assess: does this affect the user experience (directly or indirectly)?
+3. Set quality standards for invisible items equal to visible items
+4. Invest in internal tooling with the same rigor as external products
+5. Monitor: are invisible quality points degrading?
 
-> **关键判断**：内部工艺不是"锦上添花"，而是"地基"。
-> 地基烂了，上面的楼盖不高。但地基打磨要有标准、有自动化、有持续投入，不能靠个人觉悟。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 代码质量标准制定与执行
-- 内部工具和基础设施的工艺提升
-- 团队工艺文化建立
-- 技术债务系统性治理
-
-⚠️ **慎用**
-- 交付截止前的紧急功能（先交付再打磨）
-- 一次性脚本/原型（不值得投入工艺）
-- 资源严重不足的早期阶段（聚焦核心工艺，不追求全面完美）
-
----
-
-## 执行步骤
-
-### Step 1：识别内部工艺点
-
-盘点产品链路上的内部工艺点：
-- 代码层：架构清晰度、模块边界、命名规范、测试覆盖
-- 数据层：数据质量、管道稳定性、Schema 规范
-- 流程层：CI/CD、代码审查、发布流程、监控告警
-- 文档层：API 文档、架构文档、决策记录
-
-> 不是所有工艺点都同等重要，按"对外部体验的影响"排序。
-
-### Step 2：制定标准
-
-对每个关键工艺点制定可量化的标准：
-- 代码：圈复杂度阈值、测试覆盖率下限、lint 规则
-- 数据：延迟上限、错误率阈值、Schema 兼容性
-- 流程：CI 必须通过检查项、代码审查要求
-- 文档：关键 API 必须有文档、重大决策必须记录
-
-> 标准必须可机器检查，依赖人工自觉的标准会逐渐失效。
-
-### Step 3：自动化检查
-
-将标准转化为自动化检查：
-- CI 集成 lint、测试、覆盖率检查
-- Pre-commit 钩子拦截低质量提交
-- 监控仪表盘展示工艺指标趋势
-- 定期报告工艺债务变化
-
-> 没有自动化的标准等于没有标准。
-
-### Step 4：持续打磨
-
-建立持续打磨机制：
-- 每个迭代预留工艺债偿还时间（如 20%）
-- 工艺债务可视化（技术债看板）
-- 工艺改进的 ROI 评估（避免过度打磨）
-- 工艺文化传承（新人培训、代码审查文化）
-
-> 持续打磨 ≠ 无限打磨。每个工艺点有"足够好"的阈值，超过即边际收益递减。
-
----
-
-## 输出模板
-
-```
-分析对象：[产品/系统]
-分析时间：[日期]
-
-内部工艺点清单：
-  | 工艺点 | 类别 | 对外部体验影响 | 当前状态 | 优先级 |
-  |--------|------|--------------|---------|--------|
-  | ...    | 代码/数据/流程/文档 | 高/中/低 | 好/中/差 | P0/P1/P2 |
-
-工艺标准定义：
-  1. [工艺点] — 标准：[可量化指标] — 检查方式：[自动化工具]
-  2. [...]
-
-自动化检查清单：
-  - [ ] CI 集成：[lint/test/coverage 具体配置]
-  - [ ] Pre-commit 钩子：[拦截规则]
-  - [ ] 监控仪表盘：[指标及告警阈值]
-  - [ ] 定期报告：[频率和内容]
-
-持续打磨计划：
-  - 每迭代工艺债偿还时间占比：[X%]
-  - 当前工艺债务 Top 3：[...]
-  - 下一阶段打磨重点：[...]
-```
-
----
-
-## 常见陷阱
-
-| 陷阱 | 避免方式 |
-|------|---------|
-| 为打磨而打磨，边际收益递减不知止损 | 每个工艺点设"足够好"阈值，超过即停止 |
-| 标准依赖人工自觉 | 标准必须可机器检查、CI 强制 |
-| 只关注代码，忽略数据/流程/文档 | 四类工艺点都要盘点 |
-| 紧急交付时彻底放弃工艺 | 区分核心工艺（不可妥协）和可延后工艺 |
-| 工艺债看不见所以不偿还 | 工艺债可视化，纳入迭代规划 |
-| 新人不知道工艺标准 | 标准文档化 + 代码审查传承 |
-
----
-
-## 与其他方法论的关系
-
-- **前置 Focus as No**：聚焦后对保留功能做工艺打磨
-- **前置 Whole Widget**：自研环节需要工艺标准保证质量
-- **对照 Technology Meets Humanities**：内部工艺支撑人文维度的高分
-- **后接 Engineering 类方法论**：具体工艺实践可参考 engineering 类别
+## Source
+Pixar's philosophy: "The art challenges the technology, and the technology inspires the art." Applied to software engineering.

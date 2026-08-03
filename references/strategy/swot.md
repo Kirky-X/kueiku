@@ -1,136 +1,21 @@
-# SWOT Analysis · SWOT 分析
+# SWOT Analysis
 
-## 核心理念
+## Core Concept
+4-quadrant assessment: internal Strengths/Weaknesses × external Opportunities/Threats. A comprehensive but simple framework for situation assessment and strategic direction.
 
-在**内部能力**（Strengths/Weaknesses）与**外部环境**（Opportunities/Threats）两个维度上，系统评估当前处境，为战略决策提供结构化依据。
+## Applicable Scenarios
+✅ **Best for**
+- Annual planning
+- Product launch assessment
+- Strategic transformation
 
-| | 内部（可控） | 外部（不可控） |
-|--|------------|--------------|
-| **正面** | Strengths 优势 | Opportunities 机遇 |
-| **负面** | Weaknesses 劣势 | Threats 威胁 |
+## Key Steps
+1. Define the analysis target (product/company/market)
+2. List internal Strengths (what we do well, unique resources)
+3. List internal Weaknesses (what we lack, competitive disadvantages)
+4. List external Opportunities (market trends, unmet needs)
+5. List external Threats (competitors, regulations, market shifts)
+6. Generate strategies: S-O (leverage strengths for opportunities), W-O (fix weaknesses to capture opportunities), S-T (use strengths against threats), W-T (minimize weaknesses to avoid threats)
 
-> SWOT 的价值不在于填满四个象限，而在于**基于 SWOT 得出策略方向**。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 年度/季度战略规划启动
-- 新产品/业务上市前评估
-- 进入新市场的可行性分析
-- 重大战略转型前的现状盘点
-
-⚠️ **慎用**
-- 作为独立工具做竞争分析（补充 Porter's Five Forces）
-- 需要精确量化的决策（SWOT 是定性框架）
-- 团队信息不对称时（需要先对齐信息）
-
----
-
-## 执行步骤
-
-### Step 1：界定分析主体和范围
-
-明确分析的是：产品/业务线/公司/个人？时间范围是多久？对比的参照物（竞品/行业）是什么？
-
-### Step 2：填充四象限
-
-**Strengths（内部优势）** — 我们比竞争对手强在哪里？
-- 独特资源（技术、数据、品牌、团队）
-- 有竞争力的能力或流程
-- 用户认可度高的特性
-
-**Weaknesses（内部劣势）** — 我们在哪里相对较弱？
-- 资源缺口（资金、人才、技术）
-- 流程低效或质量问题
-- 用户反馈的负面点
-
-**Opportunities（外部机遇）** — 外部环境给我们带来什么机会？
-- 市场趋势（用户需求变化）
-- 技术变革带来的新可能
-- 竞争格局变化（对手的弱点）
-- 政策/监管利好
-
-**Threats（外部威胁）** — 外部环境对我们有什么潜在威胁？
-- 新竞争者进入
-- 替代品/技术的崛起
-- 用户需求转移
-- 政策/监管风险
-
-### Step 3：SWOT 交叉分析（关键步骤，常被跳过）
-
-真正有价值的战略洞察来自四象限的**交叉组合**：
-
-| 组合 | 策略类型 | 核心问题 |
-|------|---------|---------|
-| S × O | **进攻策略** | 用我们的优势把握机遇 |
-| W × O | **追赶策略** | 补足劣势以抓住机遇 |
-| S × T | **防御策略** | 用优势对抗威胁 |
-| W × T | **规避策略** | 在劣势区域规避威胁 |
-
-### Step 4：提炼战略优先项
-
-从交叉分析中选出 Top 3-5 个最重要的战略方向，每条需要：
-- 明确对应哪个 SWOT 交叉
-- 简要说明逻辑
-- 配合 OKR 或 RICE 转化为可执行计划
-
----
-
-## 输出模板
-
-```
-分析主体：[产品/公司/业务]
-时间范围：[近期/中期]
-参照物：[竞品/行业基准]
-
-SWOT 四象限：
-
-Strengths（优势）：
-  1. [...]
-  2. [...]
-
-Weaknesses（劣势）：
-  1. [...]
-  2. [...]
-
-Opportunities（机遇）：
-  1. [...]
-  2. [...]
-
-Threats（威胁）：
-  1. [...]
-  2. [...]
-
-交叉分析 → 战略方向：
-  S×O 进攻：[基于优势X利用机遇Y，做...]
-  W×O 追赶：[通过补足劣势X以抓住机遇Y...]
-  S×T 防御：[用优势X应对威胁Y...]
-  W×T 规避：[在劣势X叠加威胁Y的区域，策略是...]
-
-Top 战略优先项：
-  1. [...]
-  2. [...]
-  3. [...]
-```
-
----
-
-## 常见陷阱
-
-| 陷阱 | 避免方式 |
-|------|---------|
-| 四象限填满就完事，没有交叉分析 | 必须做 S×O、W×T 等交叉 |
-| 优势/劣势写得过于主观，缺乏数据支撑 | 每条都配以数据或具体案例 |
-| 内外部混淆（把外部机遇当内部优势）| 严格区分内部（可控）vs 外部（不可控）|
-| 威胁写得过于宏观（"市场竞争激烈"）| 具体化：哪个竞品、哪个趋势、什么时间线 |
-
----
-
-## 与其他方法论的关系
-
-- **前置 PESTLE**：先用 PESTLE 做宏观环境扫描，再填充 SWOT 的 O 和 T 部分
-- **前置 Porter's Five Forces**：用五力分析补充竞争维度的 T 和 O
-- **后接 OKR**：SWOT 交叉分析的进攻策略转化为 OKR 目标
-- **后接 RICE**：战略方向转化为可排优先级的执行任务
+## Source
+Albert Humphrey (1960s); Stanford Research Institute.

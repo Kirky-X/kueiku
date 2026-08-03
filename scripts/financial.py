@@ -1,4 +1,4 @@
-"""财务分析方法论 — DuPont / DCF / EVA"""
+"""Financial analysis methodologies — DuPont / DCF / EVA"""
 
 import json
 import sys
@@ -8,18 +8,18 @@ from utils import read_csv, write_output, md_table, fmt_num, pct
 # ───────────────────────── DuPont Analysis ─────────────────────────
 
 DUPONT_HELP = """
-杜邦分析: ROE = 净利率 × 资产周转率 × 权益乘数
+DuPont Analysis: ROE = Net Profit Margin × Asset Turnover × Equity Multiplier
 
-CSV 格式:
+CSV Format:
   period,revenue,net_income,total_assets,equity
 
-  period       : 期间标识（如 2023, 2024, Q1-2024）
-  revenue      : 营业收入
-  net_income   : 净利润
-  total_assets : 总资产
-  equity       : 股东权益
+  period       : Period identifier (e.g. 2023, 2024, Q1-2024)
+  revenue      : Revenue
+  net_income   : Net Income
+  total_assets : Total Assets
+  equity       : Shareholders' Equity
 
-示例:
+Example:
   period,revenue,net_income,total_assets,equity
   2023,1000000,150000,2000000,800000
   2024,1200000,180000,2200000,900000
@@ -31,7 +31,7 @@ def cmd_dupont(args):
     required = {"period", "revenue", "net_income", "total_assets", "equity"}
     if not required.issubset(rows[0].keys()):
         missing = required - set(rows[0].keys())
-        print(f"CSV 缺少列: {missing}", file=sys.stderr)
+        print(f"CSV missing columns: {missing}", file=sys.stderr)
         sys.exit(1)
 
     periods = []
@@ -41,7 +41,7 @@ def cmd_dupont(args):
         ta = float(r["total_assets"])
         eq = float(r["equity"])
         if rev == 0 or ta == 0 or eq == 0:
-            print(f"警告: '{r['period']}' 存在零值，跳过", file=sys.stderr)
+            print(f"Warning: '{r['period']}' has zero value, skipped", file=sys.stderr)
             continue
         net_margin = ni / rev
         asset_turnover = rev / ta
@@ -67,9 +67,9 @@ def cmd_dupont(args):
             "delta_leverage": delta_leverage, "delta_roe": delta_roe,
         })
 
-    lines = ["# 杜邦分析报告\n"]
-    lines.append("## 三因素数据\n")
-    headers = ["期间", "净利率", "资产周转率", "权益乘数", "ROE"]
+    lines = ["# DuPont Analysis Report\n"]
+    lines.append("## Three-Factor Data\n")
+    headers = ["Period", "Net Profit Margin", "Asset Turnover", "Equity Multiplier", "ROE"]
     table_rows = []
     for p in periods:
         table_rows.append([
@@ -79,8 +79,8 @@ def cmd_dupont(args):
         ])
     lines.append(md_table(headers, table_rows))
 
-    lines.append("## 原始财务数据\n")
-    headers2 = ["期间", "营业收入", "净利润", "总资产", "股东权益"]
+    lines.append("## Raw Financial Data\n")
+    headers2 = ["Period", "Revenue", "Net Income", "Total Assets", "Shareholders' Equity"]
     table_rows2 = []
     for p in periods:
         table_rows2.append([
@@ -90,23 +90,23 @@ def cmd_dupont(args):
     lines.append(md_table(headers2, table_rows2))
 
     if changes:
-        lines.append("## 因素变动贡献（连环替代法）\n")
+        lines.append("## Factor Contribution Analysis (Chain Substitution Method)\n")
         for c in changes:
             lines.append(f"### {c['from']} → {c['to']}\n")
-            lines.append(f"- 净利率变动贡献: {c['delta_margin']:+.4f} ({pct(c['delta_margin'] / c['delta_roe'] * 100) if c['delta_roe'] != 0 else 'N/A'})")
-            lines.append(f"- 周转率变动贡献: {c['delta_turnover']:+.4f} ({pct(c['delta_turnover'] / c['delta_roe'] * 100) if c['delta_roe'] != 0 else 'N/A'})")
-            lines.append(f"- 权益乘数变动贡献: {c['delta_leverage']:+.4f} ({pct(c['delta_leverage'] / c['delta_roe'] * 100) if c['delta_roe'] != 0 else 'N/A'})")
-            lines.append(f"- **ROE 总变动**: {c['delta_roe']:+.4f}\n")
+            lines.append(f"- Net profit margin contribution: {c['delta_margin']:+.4f} ({pct(c['delta_margin'] / c['delta_roe'] * 100) if c['delta_roe'] != 0 else 'N/A'})")
+            lines.append(f"- Turnover ratio contribution: {c['delta_turnover']:+.4f} ({pct(c['delta_turnover'] / c['delta_roe'] * 100) if c['delta_roe'] != 0 else 'N/A'})")
+            lines.append(f"- Equity multiplier contribution: {c['delta_leverage']:+.4f} ({pct(c['delta_leverage'] / c['delta_roe'] * 100) if c['delta_roe'] != 0 else 'N/A'})")
+            lines.append(f"- **Total ROE change**: {c['delta_roe']:+.4f}\n")
 
     if periods:
         latest = periods[-1]
-        lines.append("## 诊断建议\n")
+        lines.append("## Diagnostic Recommendations\n")
         if latest["net_margin"] < 0.05:
-            lines.append("- ⚠️ 净利率偏低 (<5%)：考虑提价 / 降本 / 产品结构升级")
+            lines.append("- ⚠️ Low net profit margin (<5%): consider price increase / cost reduction / product mix upgrade")
         if latest["asset_turnover"] < 0.5:
-            lines.append("- ⚠️ 资产周转率偏低 (<0.5)：考虑库存管理 / 应收账款优化 / 资产处置")
+            lines.append("- ⚠️ Low asset turnover (<0.5): consider inventory management / receivables optimization / asset disposal")
         if latest["equity_multiplier"] > 3:
-            lines.append("- ⚠️ 权益乘数偏高 (>3)：杠杆风险较大，考虑降杠杆")
+            lines.append("- ⚠️ High equity multiplier (>3): high leverage risk, consider deleveraging")
 
     if args.json:
         result = {"periods": periods, "changes": changes}
@@ -118,20 +118,20 @@ def cmd_dupont(args):
 # ───────────────────────── DCF ─────────────────────────
 
 DCF_HELP = """
-DCF 现金流折现: 企业价值 = Σ FCF/(1+r)^t + 终值/(1+r)^n
+DCF Discounted Cash Flow: Enterprise value = Σ FCF/(1+r)^t + Terminal value/(1+r)^n
 
-CSV 格式:
+CSV Format:
   year,fcf
 
-  year : 年份标识 (1, 2, 3, ...)
-  fcf  : 自由现金流
+  year : Year identifier (1, 2, 3, ...)
+  fcf  : Free cash flow
 
-额外参数通过命令行传入:
-  --rate       折现率 (WACC), 如 0.10 表示 10%
-  --growth     永续增长率, 如 0.03 表示 3%
-  --shares     流通股数（可选，用于计算每股价值）
+Additional parameters via command line:
+  --rate       Discount rate (WACC), e.g. 0.10 for 10%
+  --growth     Perpetual growth rate, e.g. 0.03 for 3%
+  --shares     Shares outstanding (optional, for per-share valuation)
 
-示例:
+Example:
   python kueiku-calc.py dcf -i cashflows.csv --rate 0.10 --growth 0.03 --shares 1000000
 """
 
@@ -140,7 +140,7 @@ def cmd_dcf(args):
     rows = read_csv(args.input)
     required = {"year", "fcf"}
     if not required.issubset(rows[0].keys()):
-        print(f"CSV 缺少列: {required - set(rows[0].keys())}", file=sys.stderr)
+        print(f"CSV missing columns: {required - set(rows[0].keys())}", file=sys.stderr)
         sys.exit(1)
 
     rate = float(args.rate) if hasattr(args, 'rate') and args.rate else 0.10
@@ -153,7 +153,7 @@ def cmd_dcf(args):
     cashflows.sort(key=lambda x: x["year"])
 
     if not cashflows:
-        print("无现金流数据", file=sys.stderr)
+        print("No cash flow data", file=sys.stderr)
         sys.exit(1)
 
     pv_items = []
@@ -182,25 +182,25 @@ def cmd_dcf(args):
         sensitivity.append({"discount_rate": dr, "enterprise_value": ev,
                             "per_share": ev / shares if shares > 0 else 0})
 
-    lines = ["# DCF 现金流折现估值报告\n"]
-    lines.append(f"折现率: {pct(rate * 100)} | 永续增长率: {pct(growth * 100)} | 预测期: {n} 年\n")
+    lines = ["# DCF Valuation Report\n"]
+    lines.append(f"Discount rate: {pct(rate * 100)} | Perpetual growth rate: {pct(growth * 100)} | Projection period: {n} years\n")
 
-    lines.append("## 现金流折现\n")
-    headers = ["年份", "自由现金流", "折现因子", "现值"]
+    lines.append("## Cash Flow Discounting\n")
+    headers = ["Year", "Free Cash Flow", "Discount Factor", "Present Value"]
     trows = [[it["year"], fmt_num(it["fcf"], 0), f"{it['discount_factor']:.4f}", fmt_num(it["pv"], 0)] for it in pv_items]
     lines.append(md_table(headers, trows))
 
-    lines.append("## 估值汇总\n")
-    lines.append(f"- 预测期现值合计: **{fmt_num(total_pv, 0)}**")
-    lines.append(f"- 终值 (Gordon): **{fmt_num(terminal_value, 0)}**")
-    lines.append(f"- 终值现值: **{fmt_num(terminal_pv, 0)}**")
-    lines.append(f"- **企业价值**: **{fmt_num(enterprise_value, 0)}**")
+    lines.append("## Valuation Summary\n")
+    lines.append(f"- PV of projection period: **{fmt_num(total_pv, 0)}**")
+    lines.append(f"- Terminal value (Gordon): **{fmt_num(terminal_value, 0)}**")
+    lines.append(f"- PV of terminal value: **{fmt_num(terminal_pv, 0)}**")
+    lines.append(f"- **Enterprise value**: **{fmt_num(enterprise_value, 0)}**")
     if shares > 0:
-        lines.append(f"- 流通股数: {fmt_num(shares, 0)}")
-        lines.append(f"- **每股价值**: **{fmt_num(per_share)}**")
+        lines.append(f"- Shares outstanding: {fmt_num(shares, 0)}")
+        lines.append(f"- **Per-share value**: **{fmt_num(per_share)}**")
 
-    lines.append(f"\n## 敏感性分析（折现率变动）\n")
-    s_headers = ["折现率", "企业价值"] + (["每股价值"] if shares > 0 else [])
+    lines.append(f"\n## Sensitivity Analysis (Discount rate variation)\n")
+    s_headers = ["Discount Rate", "Enterprise Value"] + (["Per-Share Value"] if shares > 0 else [])
     s_rows = [[pct(s["discount_rate"] * 100), fmt_num(s["enterprise_value"], 0)] + ([fmt_num(s["per_share"])] if shares > 0 else []) for s in sensitivity]
     lines.append(md_table(s_headers, s_rows))
 
@@ -216,18 +216,18 @@ def cmd_dcf(args):
 # ───────────────────────── EVA ─────────────────────────
 
 EVA_HELP = """
-EVA 经济增加值: EVA = NOPAT - WACC × 投入资本
+EVA Economic Value Added: EVA = NOPAT - WACC × Invested Capital
 
-CSV 格式:
+CSV Format:
   period,ebit,tax_rate,invested_capital,wacc
 
-  period          : 期间标识
-  ebit            : 息税前利润
-  tax_rate        : 税率 (小数, 如 0.25)
-  invested_capital: 投入资本
-  wacc            : 加权平均资本成本 (小数, 如 0.10)
+  period          : Period identifier
+  ebit            : Earnings before interest and tax
+  tax_rate        : Tax rate (decimal, e.g. 0.25)
+  invested_capital: Invested capital
+  wacc            : Weighted average cost of capital (decimal, e.g. 0.10)
 
-示例:
+Example:
   period,ebit,tax_rate,invested_capital,wacc
   2023,500000,0.25,3000000,0.10
   2024,600000,0.25,3200000,0.09
@@ -238,7 +238,7 @@ def cmd_eva(args):
     rows = read_csv(args.input)
     required = {"period", "ebit", "tax_rate", "invested_capital", "wacc"}
     if not required.issubset(rows[0].keys()):
-        print(f"CSV 缺少列: {required - set(rows[0].keys())}", file=sys.stderr)
+        print(f"CSV missing columns: {required - set(rows[0].keys())}", file=sys.stderr)
         sys.exit(1)
 
     items = []
@@ -256,27 +256,27 @@ def cmd_eva(args):
                        "invested_capital": ic, "wacc": wacc, "nopat": nopat,
                        "capital_charge": capital_charge, "eva": eva, "roic": roic, "spread": spread})
 
-    lines = ["# EVA 经济增加值分析报告\n"]
-    lines.append(f"分析期间数: {len(items)}\n")
+    lines = ["# EVA (Economic Value Added) Analysis Report\n"]
+    lines.append(f"Periods analyzed: {len(items)}\n")
 
-    lines.append("## 核心指标\n")
-    headers = ["期间", "NOPAT", "资本成本", "EVA", "ROIC", "Spread"]
+    lines.append("## Core Metrics\n")
+    headers = ["Period", "NOPAT", "Capital Charge", "EVA", "ROIC", "Spread"]
     trows = [[it["period"], fmt_num(it["nopat"], 0), fmt_num(it["capital_charge"], 0),
               fmt_num(it["eva"], 0), pct(it["roic"] * 100), pct(it["spread"] * 100)] for it in items]
     lines.append(md_table(headers, trows))
 
-    lines.append("## 原始数据\n")
-    h2 = ["期间", "EBIT", "税率", "投入资本", "WACC"]
+    lines.append("## Raw Data\n")
+    h2 = ["Period", "EBIT", "Tax Rate", "Invested Capital", "WACC"]
     t2 = [[it["period"], fmt_num(it["ebit"], 0), pct(it["tax_rate"] * 100),
            fmt_num(it["invested_capital"], 0), pct(it["wacc"] * 100)] for it in items]
     lines.append(md_table(h2, t2))
 
-    lines.append("## 诊断\n")
+    lines.append("## Diagnostics\n")
     for it in items:
         if it["eva"] > 0:
-            lines.append(f"- **{it['period']}**: EVA > 0，创造价值 (Spread = {pct(it['spread'] * 100)})")
+            lines.append(f"- **{it['period']}**: EVA > 0, creating value (Spread = {pct(it['spread'] * 100)})")
         else:
-            lines.append(f"- **{it['period']}**: EVA < 0，毁灭价值！ROIC ({pct(it['roic'] * 100)}) < WACC ({pct(it['wacc'] * 100)})")
+            lines.append(f"- **{it['period']}**: EVA < 0, destroying value! ROIC ({pct(it['roic'] * 100)}) < WACC ({pct(it['wacc'] * 100)})")
 
     if args.json:
         write_output(json.dumps(items, ensure_ascii=False, indent=2), args.output)

@@ -1,186 +1,20 @@
-# AARRR Funnel · 海盗指标 / 增长漏斗
+# AARRR Funnel
 
-## 核心理念
+## Core Concept
+5-stage growth funnel: Acquisition → Activation → Retention → Referral → Revenue. Identify which stage is the bottleneck to focus growth efforts.
 
-由 Dave McClure 提出的增长框架，将用户生命周期拆解为五个阶段，系统定位增长瓶颈。五个字母拼起来像海盗喊"AARRR"，故又称"海盗指标"。
+## Applicable Scenarios
+✅ **Best for**
+- Growth bottleneck identification
+- User lifecycle analysis
+- Growth team prioritization
 
-```
-Acquisition   获取  → 用户是如何找到我们的？
-Activation    激活  → 用户第一次体验是否感受到价值？
-Retention     留存  → 用户是否会持续回来使用？
-Revenue       营收  → 我们如何从用户身上获取收入？
-Referral      推荐  → 用户是否会主动推荐给他人？
-```
+## Key Steps
+1. Define metrics for each stage: Acquisition (signups), Activation (first key action), Retention (return usage), Referral (invites), Revenue (payment)
+2. Measure conversion rates between stages
+3. Identify the stage with the lowest conversion (the bottleneck)
+4. Focus growth experiments on the bottleneck stage
+5. Re-measure after experiments; iterate
 
-> **核心洞察**：大多数产品的问题不在获取，而在激活和留存。先找到最薄弱的漏斗层，集中资源修复它。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 增长瓶颈定位（"我们增长停滞了，问题在哪"）
-- 产品上线后的首次健康诊断
-- 制定季度增长策略前的现状摸底
-- 团队共识对齐（统一语言讨论增长问题）
-
-⚠️ **慎用**
-- B2B 复杂销售流程（漏斗需要大量定制化改造）
-- 新产品冷启动阶段（数据太少，难以有效分析）
-
----
-
-## 五层详解
-
-### A1 · Acquisition（获取）
-
-**核心问题**：用户从哪里来？哪个渠道的获客成本和质量最优？
-
-关键指标：
-- 各渠道流量量（SEO/付费/口碑/社交/内容）
-- CAC（Customer Acquisition Cost，每获取一个用户的成本）
-- 渠道转化率（访客→注册）
-
-诊断信号：
-- 🔴 流量很少 → 品牌认知/渠道问题
-- 🔴 流量多但注册少 → 落地页/价值主张问题
-
----
-
-### A2 · Activation（激活）
-
-**核心问题**：新用户是否在首次使用中真正体验到产品价值（"Aha Moment"）？
-
-关键指标：
-- 注册到核心行为完成率（如：注册→发第一条消息）
-- 新用户 D1/D3/D7 留存率
-- Onboarding 完成率
-
-诊断信号：
-- 🔴 注册多但很快流失 → 激活失败，用户没感受到价值
-- 找到并量化产品的 **Aha Moment**（用户体验到价值的那个具体行为）
-
----
-
-### R1 · Retention（留存）
-
-**核心问题**：用户是否持续回来使用？流失发生在哪个阶段？
-
-关键指标：
-- D1 / D7 / D30 留存率
-- 月活跃用户（MAU）/ 日活（DAU）
-- 用户回访间隔分布
-- 流失用户的最后行为路径
-
-诊断信号：
-- 🔴 留存曲线无法趋于平稳 → 产品核心价值不足，无法形成习惯
-- 🔴 特定时间节点大幅流失 → 该节点有产品体验断点
-
----
-
-### R2 · Revenue（营收）
-
-**核心问题**：我们的变现效率如何？
-
-关键指标：
-- 转化率（免费→付费）
-- ARPU（每用户平均收入）
-- LTV（用户生命周期价值）
-- LTV / CAC 比值（>3 为健康，<1 为烧钱）
-
-诊断信号：
-- 🔴 LTV/CAC < 1 → 获客成本超过用户价值，商业模式不可持续
-- 🔴 付费转化率低 → 定价/价值传达/付费路径问题
-
----
-
-### R3 · Referral（推荐）
-
-**核心问题**：用户是否会主动带来新用户？
-
-关键指标：
-- NPS（Net Promoter Score，净推荐值）
-- K 因子（K = 邀请率 × 邀请接受率；K>1 代表病毒式增长）
-- 推荐渠道占总注册比例
-
-诊断信号：
-- 🔴 K 因子接近 0 → 产品核心价值不够强，或没有推荐机制
-- 🟡 NPS 低 → 产品整体满意度低，需要先提升产品质量再做推荐
-
----
-
-## 执行步骤
-
-### Step 1：填充当前数据
-
-对五个层级，收集现有数据或最优估算，建立基线表。
-
-### Step 2：识别最薄弱层
-
-计算每层的转化率，找到**漏斗最大断层**所在的层级。
-
-### Step 3：深入分析薄弱层
-
-对最薄弱的层级，进一步分解：
-- 用户细分（新用户 vs 老用户？渠道A vs 渠道B？）
-- 行为路径分析（用户在哪个步骤流失？）
-- 定性研究（用 JTBD/用户访谈了解流失原因）
-
-### Step 4：制定改进假设
-
-针对薄弱层，提出 3-5 个改进假设，优先级用 RICE 评分排序。
-
-### Step 5：A/B 测试 → 迭代
-
----
-
-## 输出模板
-
-```
-产品：[名称]
-分析时间范围：[月份]
-
-AARRR 漏斗数据：
-
-Acquisition：
-  主要渠道：[渠道名] — 占比 [%]，CAC：[¥]
-  总月新访客：[N]
-  访客→注册转化率：[%]
-
-Activation：
-  注册→ Aha Moment 完成率：[%]
-  Aha Moment 定义：[具体行为]
-  D1 留存率：[%]
-
-Retention：
-  D7 留存率：[%]，D30 留存率：[%]
-  流失高峰节点：[Day X]
-  MAU：[N]
-
-Revenue：
-  免费→付费转化率：[%]
-  ARPU：[¥]
-  LTV：[¥]，CAC：[¥]，LTV/CAC：[倍]
-
-Referral：
-  NPS：[分]
-  K 因子：[值]
-  推荐渠道占注册比：[%]
-
-漏斗诊断：
-  最薄弱层：[层级名]
-  核心问题：[...]
-  改进假设 Top 3：
-    1. [假设] — RICE 分：[N]
-    2. [...]
-    3. [...]
-```
-
----
-
-## 与其他方法论的关系
-
-- **前置 JTBD**：AARRR 定位问题在哪层，JTBD 解释用户为什么在那层流失
-- **输出接 RICE**：改进假设的优先级排序用 RICE
-- **配合 Customer Journey Map**：AARRR 是量化漏斗，旅程地图是质化路径，互补使用
-- **配合 Lean BML**：AARRR 发现问题，BML 循环验证解决方案
+## Source
+Dave McClure, 500 Startups (2007); *Startup Metrics for Pirates*.

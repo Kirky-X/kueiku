@@ -1,149 +1,26 @@
-# Death Filter · 存在主义决策过滤器
+# Death Filter
 
-## 核心理念
+## Core Concept
+An existential decision filter: "If this were the last decision I ever make, would I still choose this?" Forces confrontation with mortality to clarify true values and priorities. Not for daily decisions — reserved for major, irreversible life/career/startup decisions.
 
-用**"如果这是我最后一个决策，我会怎么选？"** 作为过滤器，剥离短期噪音、他人期待、沉没成本，让真正重要的考虑浮出水面。这是存在主义视角的决策工具：面对有限性，看清什么是真正值得的。
+## Applicable Scenarios
+✅ **Best for**
+- Major life decisions
+- Career direction choices
+- Startup direction decisions
 
-> 死亡过滤器不是悲观工具，而是**澄清工具**。它通过引入"有限性"这一终极约束，把决策从短期情绪和外部期待中解放出来。
+⚠️ **Not for**
+- Daily operational decisions
+- Urgent/time-critical decisions
+- Reversible decisions
 
----
+## Key Steps
+1. Confirm this is a major, irreversible decision (not daily/urgent)
+2. List all candidate options
+3. Apply the Death Filter to each: "On my deathbed, would I regret NOT choosing this?"
+4. Rank options by existential resonance
+5. Validate: does the top option align with your core values?
+6. Commit to the decision
 
-## 适用场景
-
-✅ **最适合**
-- 重大人生决策（婚姻/生育/重大健康选择）
-- 职业方向选择（转行/创业/接受 offer）
-- 创业方向与项目选择
-- 价值观冲突的两难决策
-
-⚠️ **局限标注 — 不适用于以下场景**
-- 日常运营决策（会过度严肃化，导致决策瘫痪）
-- 必须快速决策的紧急场景（如生产事故、危机响应）
-- 纯客观的技术选型（无价值观成分，过滤器无意义）
-- 涉及他人重大利益但本人非决策主体（代入感失真）
-
----
-
-## 执行步骤
-
-### Step 1：识别决策重要性
-
-先判断这个决策是否值得用死亡过滤器（避免滥用）：
-
-```
-决策重要性检查：
-  □ 影响时长：[短期/中期/长期/终身]
-  □ 可逆性：[易逆/难逆/不可逆]
-  □ 价值负荷：[纯技术/含价值观/核心价值]
-  □ 情感纠缠：[低/中/高]
-
-适用判断：
-  长期 + 难逆/不可逆 + 含价值观 + 情感纠缠 → 适用
-  短期 + 易逆 + 纯技术 → 不适用，用常规决策法
-```
-
-> 滥用是最大风险。把日常决策上升到存在主义层面，会导致决策瘫痪与精力耗竭。
-
-### Step 2：应用死亡过滤器
-
-对每个候选选项，问以下问题：
-
-```
-死亡过滤提问（对每个选项逐一问）：
-  1. 如果这是我最后一个决策，我还会选这个吗？
-  2. 如果生命只剩 [N 年]，这个选项还重要吗？
-  3. 这个选择是出于我真正想要的，还是出于他人期待/社会规范/沉没成本？
-  4. 10 年后回看，我会后悔没选哪个？会后悔选了哪个？
-  5. 如果这个决策的后果由我独自承担（无人知晓无人评判），我还会这样选吗？
-  6. 这个选择让我的生活更接近还是更远离"我真正想成为的人"？
-
-记录每个选项在每个问题下的真实反应（不是理性答案，是直觉反应）。
-```
-
-> 过滤器的价值在于暴露被噪音掩盖的真实倾向。诚实面对直觉反应，而非编造理性答案。
-
-### Step 3：评估剩余选项
-
-经过过滤后，哪些选项"活下来"了：
-
-```
-剩余选项评估：
-  选项 A：通过 [N/6] 个过滤问题 — 真实倾向：[...]
-  选项 B：通过 [N/6] 个过滤问题 — 真实倾向：[...]
-  选项 C：通过 [N/6] 个过滤问题 — 真实倾向：[...]
-
-被过滤掉的选项：
-  选项 X：被过滤原因：[主要受他人期待/沉没成本/短期情绪驱动]
-```
-
-如果所有选项都被过滤（都不通过），说明问题不在选项，而在**问题本身需要重构**（参考 Reframe and Elevate）。
-
-### Step 4：决策并承担
-
-```
-最终决策：
-  选定：[选项]
-  核心理由：[基于过滤后真实倾向，而非理性化]
-  我将放弃的：[选定 A 意味着放弃 B/C，明确承认放弃]
-  我将承担的：[可能的最坏后果 + 应对预案]
-  承诺：[这是我的选择，我为后果负责，不归咎于他人或环境]
-```
-
-> 死亡过滤器的终点是"承担"。看清真实倾向后，决策并为之负责，是其完整闭环。过滤后仍犹豫不决，是未真正承担。
-
----
-
-## 输出模板
-
-```
-存在主义决策过滤分析
-
-一、决策重要性
-  决策内容：[...]
-  影响时长：[...] / 可逆性：[...] / 价值负荷：[...] / 情感纠缠：[...]
-  适用性判断：[适用/不适用] — 理由：[...]
-
-二、候选选项
-  选项 A：[...]
-  选项 B：[...]
-  选项 C：[...]
-
-三、死亡过滤
-  [对每个选项记录 6 个过滤问题的真实反应]
-  通过情况：[A: N/6 / B: N/6 / C: N/6]
-  被过滤项及原因：[...]
-
-四、剩余选项评估
-  活下来的选项：[...]
-  真实倾向：[...]
-
-五、最终决策
-  选定：[...]
-  核心理由：[...]
-  放弃的：[...]
-  承担的后果与预案：[...]
-  承诺声明：[...]
-```
-
----
-
-## 常见陷阱
-
-| 陷阱 | 避免方式 |
-|------|---------|
-| 滥用于日常决策导致瘫痪 | 严格走重要性检查，只用于重大不可逆决策 |
-| 用理性答案替代直觉反应 | 记录第一直觉反应，而非编造的合理化 |
-| 过滤后仍犹豫不决 | 设定决策截止时间，到期必须承担选定项 |
-| 忽视对他人的影响 | 过滤器聚焦"我"，但重大决策须兼顾利益相关者 |
-| 把过滤器当逃避工具 | 过滤器用于看清真实倾向，不是用于合理化冲动 |
-| 一次决策定终身 | 重大决策可分期验证，非一次性 all-in |
-
----
-
-## 与其他方法论的关系
-
-- **搭配 Pre-mortem**：死亡过滤器选方向，Pre-mortem 预演选定方向的失败风险
-- **搭配 Decision Matrix**：Decision Matrix 处理可量化决策，Death Filter 处理价值决策
-- **搭配 Reframe and Elevate**：所有选项都被过滤时，需重构问题本身
-- **搭配 Socratic Questioning**：苏格拉底追问帮助识别决策中的隐含价值观
-- **搭配 Second-Order Thinking**：选定后用二阶思维评估长期连锁效应
+## Source
+Existential decision-making framework; inspired by Steve Jobs' "deathbed" reflection.

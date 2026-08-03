@@ -1,157 +1,22 @@
-# Six Thinking Hats · 六顶思考帽
+# Six Thinking Hats
 
-## 核心理念
+## Core Concept
+6 thinking modes that teams switch between simultaneously: White (facts/data), Red (emotions/intuition), Black (caution/risks), Yellow (optimism/benefits), Green (creativity/alternatives), Blue (process/facilitation). Forces the team to look at a problem from the same angle at the same time.
 
-通过**强制切换六种思维模式**，让团队或个人在同一时间聚焦同一视角，避免多头争论、情绪混战。由 Edward de Bono 提出。
+## Applicable Scenarios
+✅ **Best for**
+- Team review and evaluation
+- Comprehensive solution assessment
+- Breaking discussion deadlocks
 
-> 大多数讨论低效是因为：有人在讲数据，有人在表达情绪，有人在提方案，有人在挑毛病——同时进行，互相干扰。六顶帽让所有人同时戴同一顶帽子。
+## Key Steps
+1. **Blue Hat** (facilitator): define the problem, set the agenda
+2. **White Hat**: gather and present facts and data
+3. **Red Hat**: share emotions and intuitions (no justification needed)
+4. **Yellow Hat**: identify benefits and best-case scenarios
+5. **Black Hat**: identify risks, cautions, potential problems
+6. **Green Hat**: generate creative alternatives and new ideas
+7. **Blue Hat** (facilitator): summarize, decide next steps
 
-**六顶帽子：**
-
-| 帽色 | 模式 | 关注点 |
-|------|------|--------|
-| ⚪ 白帽 | 客观事实 | 数据、信息、已知、未知 |
-| 🔴 红帽 | 直觉情绪 | 感受、预感、不需要理由 |
-| ⚫ 黑帽 | 批判风险 | 风险、问题、为什么行不通 |
-| 🟡 黄帽 | 乐观价值 | 为什么值得做、最好的情况 |
-| 🟢 绿帽 | 创意发散 | 新想法、替代方案、可能性 |
-| 🔵 蓝帽 | 流程管控 | 思维过程本身、总结、下一步 |
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 团队讨论陷入僵局或情绪化争论
-- 需要全面评估一个方案（既看机会也看风险）
-- 头脑风暴后需要结构化筛选
-- 个人独立做重大决策时避免思维盲区
-
-⚠️ **慎用**
-- 已有明确数据指向结论，只需执行（过度使用六帽是浪费时间）
-- 根因分析场景（改用 5 Whys/Fishbone）
-
----
-
-## 执行步骤
-
-### Step 1：蓝帽开场（流程设定）
-
-由主持人（或 agent 自己）戴蓝帽，宣布：
-- 本次讨论的问题/议题是什么
-- 计划使用哪几顶帽子、顺序如何
-- 每顶帽子的时间预算
-
-**常用顺序：**
-- 决策场景：白 → 黄 → 黑 → 绿 → 红 → 蓝
-- 创意场景：绿 → 黄 → 白 → 黑 → 红 → 蓝
-- 风险评估：白 → 黑 → 黄 → 绿 → 蓝
-
-### Step 2：白帽阶段（仅收集事实）
-
-**只允许**：已知数据、客观信息、信息缺口
-**不允许**：观点、评价、情绪
-
-```
-已知：[...]
-未知/需要补充的信息：[...]
-数据来源可信度：[...]
-```
-
-### Step 3：黄帽阶段（挖掘价值）
-
-**只允许**：为什么值得做、最佳情形、价值和收益
-**不允许**：风险和问题（留给黑帽）
-
-```
-核心价值：[...]
-最好的可能结果：[...]
-支撑乐观判断的理由：[...]
-```
-
-### Step 4：黑帽阶段（识别风险）
-
-**只允许**：风险、潜在失败、逻辑错误、为什么行不通
-**不允许**：解决方案（留给绿帽）
-
-```
-主要风险：[...]
-逻辑漏洞：[...]
-最坏情形：[...]
-```
-
-### Step 5：绿帽阶段（创意发散）
-
-**只允许**：新思路、替代方案、「如果……会怎样」
-**不允许**：评判（先发散，后收敛）
-
-```
-替代方案：[...]
-改进想法：[...]
-大胆假设：[...]
-```
-
-### Step 6：红帽阶段（直觉表态）
-
-**只允许**：直觉、感受、预感——不需要解释理由
-**价值**：让潜意识信号浮出水面
-
-```
-直觉判断：[支持/反对/不确定]
-感受：[...]
-```
-
-### Step 7：蓝帽收尾（总结与决策）
-
-综合以上各帽，提炼：
-- 关键发现
-- 主要分歧
-- 推荐行动或决策
-
----
-
-## 输出模板
-
-```
-议题：[...]
-
-⚪ 白帽 — 事实
-  已知：[...]  |  信息缺口：[...]
-
-🟡 黄帽 — 价值
-  核心收益：[...]  |  最佳情形：[...]
-
-⚫ 黑帽 — 风险
-  主要风险：[...]  |  关键假设：[...]
-
-🟢 绿帽 — 创意
-  替代方案：[...]  |  改进方向：[...]
-
-🔴 红帽 — 直觉
-  总体感受：[支持/反对/存疑]
-
-🔵 蓝帽 — 结论
-  核心洞察：[...]
-  推荐行动：[...]
-  置信度：[高/中/低]
-```
-
----
-
-## 常见陷阱
-
-| 陷阱 | 说明 | 避免方式 |
-|------|------|---------|
-| 跳帽 | 黑帽阶段混入解决方案，绿帽阶段开始评判 | 每顶帽子开始时重申「只允许」规则 |
-| 黑帽过载 | 批判型思维者主导，黄帽草草了事 | 黄帽和黑帽时间对等，强制执行 |
-| 红帽被理性化 | 直觉被要求给出「理由」，失去真实性 | 红帽阶段明确说：「不需要解释，说感受就好」 |
-| 蓝帽缺失 | 讨论完各帽无人总结 | 始终由蓝帽开场和收尾 |
-
----
-
-## 与其他方法论的关系
-
-- **黑帽输出接 Pre-mortem**：风险识别后，用逆向规划深化最坏情形
-- **绿帽输出接 SCAMPER**：创意阶段的想法用 SCAMPER 系统展开
-- **白帽缺数据时接 5 Whys**：信息缺口明确后，用根因分析补充
-- **蓝帽结论接 OKR/RICE**：决策后转化为可执行目标或优先级
+## Source
+Edward de Bono, *Six Thinking Hats* (1985).

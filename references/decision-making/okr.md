@@ -1,185 +1,21 @@
-# OKR · Objectives & Key Results（目标与关键结果）
+# OKR — Objectives and Key Results
 
-## 核心理念
+## Core Concept
+Goal-setting framework: Objectives define "what we want to achieve" (qualitative, inspiring), Key Results define "how we'll measure progress" (quantitative, time-bound). Typically set quarterly.
 
-由 Andy Grove 在英特尔创立，John Doerr 推广至 Google。通过**明确目标（O）**和**可量化的关键结果（KR）**，将组织意图转化为可执行、可衡量的行动。
+## Applicable Scenarios
+✅ **Best for**
+- Quarterly/annual goal setting
+- Team alignment
+- Tracking progress toward strategic goals
 
-```
-Objective（目标）：激励人心的定性方向描述
-  ↓
-Key Result 1：量化里程碑，验证目标进展
-Key Result 2：量化里程碑
-Key Result 3：量化里程碑
-  ↓
-Initiatives（举措）：实现 KR 的具体行动计划
-```
+## Key Steps
+1. Define 3-5 Objectives (qualitative, inspiring, time-bound)
+2. For each Objective, define 2-5 Key Results (quantitative, measurable)
+3. Key Results should be ambitious (70% achievement = good)
+4. Assign owners for each KR
+5. Review weekly/monthly; adjust if needed
+6. End-of-quarter retrospective: score each KR 0-1.0
 
-**核心区分：**
-- **Objective** = What（去哪里）—— 定性、鼓舞人心、有时间边界
-- **Key Result** = How we know we're getting there（如何知道在前进）—— 定量、可验证
-- **Initiative** = How（怎么做）—— 具体任务，不是 KR 的一部分
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 季度/年度目标制定与全员对齐
-- 团队优先级共识建立
-- 个人/团队成长目标设定
-- 从战略到执行的层层拆解
-
-⚠️ **慎用**
-- 用于绩效考核（OKR 与绩效挂钩会导致 KR 保守化）
-- 日常操作性工作（有 SLA/KPI 即可，OKR 面向挑战性目标）
-- 频率短于 1 个月的任务（Eisenhower Matrix 更合适）
-
----
-
-## Objective 撰写标准
-
-**好的 O：**
-✅ 定性的，描述想去的状态
-✅ 激励人心，让团队感到值得奋斗
-✅ 有时间边界（本季度）
-✅ 行动导向（以动词开头）
-
-**差的 O：**
-❌ 包含数字（那是 KR 的事）
-❌ 平淡无聊的描述（"完成产品迭代"）
-❌ 太宏大无法在一个季度内有进展
-
-```
-❌ "提升产品质量" — 太模糊
-❌ "DAU 增长 20%" — 这是 KR 不是 O
-✅ "成为用户每天离不开的工作伙伴" — 有方向感，令人振奋
-✅ "在华东市场建立领先的品牌认知" — 清晰、有边界
-```
-
----
-
-## Key Result 撰写标准
-
-**好的 KR：**
-✅ 可量化（有具体数字）
-✅ 有截止时间
-✅ 结果导向，而非任务导向
-✅ 雄心但可实现（60-70% 达成率是健康信号）
-✅ 真正衡量 Objective 的进展
-
-**差的 KR：**
-❌ 任务型（"完成 XX 功能开发"）—— 这是 Initiative
-❌ 无法量化（"提升用户满意度"）
-❌ 太保守（确保 100% 达成会导致无挑战性目标）
-
-```
-❌ "完成新版首页改版" — 这是 Initiative，不是结果
-❌ "提升用户体验" — 无法量化
-✅ "Q2 末 D7 留存率从 28% 提升至 38%" — 明确结果+数字+时间
-✅ "用户月均 Core Feature 使用次数从 3 次提升至 8 次" — 量化行为变化
-```
-
----
-
-## OKR 层级设计
-
-### 公司级 OKR
-
-方向性、跨季度甚至年度的大目标，通常 3-5 个 O。
-
-### 团队级 OKR
-
-支撑公司 OKR 的子目标。每个团队 OKR 应该能清晰回答："这如何推动公司 OKR 的实现？"
-
-### 个人 OKR（可选）
-
-用于个人成长和对团队 OKR 的贡献对齐。
-
-**级联原则**：不是简单地将公司 OKR 拆分下放，而是每层团队根据自身职责**主动设定**如何支撑上级 OKR。
-
----
-
-## 执行步骤
-
-### Step 1：收集输入
-
-- 上一周期回顾：哪些 KR 完成了？哪些没有？原因是什么？
-- 战略方向：公司当前最重要的挑战/机遇是什么？
-- 外部输入：SWOT 分析、PESTLE、用户反馈
-
-### Step 2：起草 Objectives
-
-团队集体讨论，起草 3-5 个 Objectives。
-用以下问题检验："如果我们实现了这个 O，公司/团队会在哪里？这令人振奋吗？"
-
-### Step 3：为每个 O 制定 Key Results
-
-每个 O 对应 2-5 个 KR，确保 KR 真正衡量 O 的达成，而非仅是活动清单。
-
-**KR 多样性检验**：一个 O 的所有 KR 是否覆盖了不同角度？（如：效率指标 + 质量指标 + 用户指标）
-
-### Step 4：打分标准共识
-
-达成共识：KR 的目标值设定在**70% 信心达成**的水平（stretch goal）。
-提前定义：什么算 1.0（完全达成）/ 0.7（基本达成）/ 0.3（部分达成）。
-
-### Step 5：检查对齐和依赖
-
-- 各团队 OKR 是否与公司 OKR 对齐？
-- 是否有跨团队依赖需要提前协商？
-
-### Step 6：周期性 Check-in
-
-- **周度**：1-2 句话更新 KR 进展，是否有 blocker？
-- **月度**：对每个 KR 评分（0.0-1.0），调整 Initiatives
-- **季度末**：全面评分 + 总结学习 + 下季度 OKR 制定
-
----
-
-## 输出模板
-
-```
-时间周期：[YYYY Q/年度]
-团队：[...]
-
-Objective 1：[激励人心的定性目标]
-
-  KR 1.1：[指标] 从 [现状值] 提升至 [目标值]，截止 [日期]
-  KR 1.2：[指标] 从 [现状值] 提升至 [目标值]，截止 [日期]
-  KR 1.3：[指标] 从 [现状值] 提升至 [目标值]，截止 [日期]
-
-  Initiatives（支撑 KR 的主要举措）：
-    - [具体行动 A]
-    - [具体行动 B]
-
-Objective 2：[...]
-  KR 2.1：[...]
-  ...
-
----
-季度末复盘（回填）：
-  O1 KR 1.1 实际：[值] — 得分：[0.0-1.0] — 原因：[...]
-  O1 KR 1.2 实际：[值] — 得分：[0.0-1.0] — 原因：[...]
-  整体复盘：[下个周期需调整什么]
-```
-
----
-
-## 常见陷阱
-
-| 陷阱 | 避免方式 |
-|------|---------|
-| KR 写成 To-Do 列表 | 区分 Initiative（任务）和 Key Result（结果）|
-| 目标太多 | 每团队最多 3 个 O，每个 O 最多 4 个 KR |
-| OKR 与绩效考核挂钩 | 分离 OKR（成长/挑战）与绩效评估系统 |
-| 季度后期才开始关注 | 双周/月度强制 check-in |
-| 所有 KR 都 1.0 完成 | 说明目标太保守，需要提升挑战性 |
-
----
-
-## 与其他方法论的关系
-
-- **前置 SWOT**：SWOT 识别战略机遇和威胁，转化为 OKR 的 Objectives
-- **配合 RICE**：OKR 定义要达成的 KR，RICE 对实现路径（功能/项目）排优先级
-- **配合 Eisenhower Matrix**：OKR 的 Objectives 定义了什么是"重要"，矩阵帮助识别 Q2 任务
-- **配合 Lean BML**：OKR KR 是成功指标，BML 循环验证实现路径的有效性
+## Source
+Andy Grove, *High Output Management* (1983); popularized by John Doerr at Google.

@@ -1,52 +1,52 @@
-# Product & Growth · 产品与增长
+# Product & Growth
 
-**适用场景**：产品设计、用户增长、需求验证
+**When to use**: Product design, user growth, demand validation
 
-| 方法论 | 一句话描述 | 最佳场景 | Reference |
+| Methodology | One-line description | Best scenario | Reference |
 | --- | --- | --- | --- |
-| **AARRR Funnel** | 获取→激活→留存→推荐→营收 的增长漏斗 | 增长瓶颈定位、用户生命周期分析 | `aarrr.md` |
-| **JTBD** | 用户购买的是"任务完成"，不是产品本身 | 需求挖掘、产品定位、竞品替换分析 | `jtbd.md` |
-| **Design Thinking** | 同理→定义→构思→原型→测试 的人本设计循环 | 新产品从0到1、服务设计、创新工作坊 | `design-thinking.md` |
-| **Lean BML Loop** | 最小化假设→构建→测量→学习 的快速迭代 | 产品验证、MVP设计、假设检验 | `lean-bml.md` |
-| **Value Proposition Canvas** | 产品功能与用户痛点/收益的契合度验证 | PMF验证、功能优先级、差异化定位 | `value-proposition-canvas.md` |
-| **SCAMPER** | 替换/合并/借鉴/改变/转用/删减/反转 七维创意触发 | 产品迭代、体验优化、系统化创新 | `scamper.md` |
-| **Kano Model** | 将功能分为必备/期望/兴奋/无差异/反向五类 | 需求性质分类、满意度策略、功能类型判断 | `kano.md` |
-| **North Star Framework** | 定义一个北极星指标+3-5个输入指标，统一增长方向 | 指标体系设计、全公司增长对齐 | `north-star.md` |
+| **AARRR Funnel** | Acquisition→Activation→Retention→Referral→Revenue growth funnel | Growth bottleneck identification, user lifecycle analysis | `aarrr.md` |
+| **JTBD** | Users buy "job completion", not the product itself | Demand mining, product positioning, competitive replacement analysis | `jtbd.md` |
+| **Design Thinking** | Empathize→Define→Ideate→Prototype→Test human-centered design loop | New product 0-to-1, service design, innovation workshops | `design-thinking.md` |
+| **Lean BML Loop** | Minimize assumptions→Build→Measure→Learn rapid iteration | Product validation, MVP design, hypothesis testing | `lean-bml.md` |
+| **Value Proposition Canvas** | Product feature to user pain/gain fit validation | PMF validation, feature prioritization, differentiated positioning | `value-proposition-canvas.md` |
+| **SCAMPER** | Substitute/Combine/Adapt/Modify/Put to other use/Eliminate/Reverse 7-dimension creative trigger | Product iteration, experience optimization, systematic innovation | `scamper.md` |
+| **Kano Model** | Classify features into Must-be/Performance/Excitement/Indifferent/Reverse | Requirement nature classification, satisfaction strategy, feature type judgment | `kano.md` |
+| **North Star Framework** | Define one North Star metric + 3-5 input metrics, unifying growth direction | Metrics framework design, company-wide growth alignment | `north-star.md` |
 
-## 各方法论最低信息需求
+## Minimum Information Requirements per Methodology
 
-- **AARRR**：需要产品已有用户数据或明确的业务阶段
-- **Value Proposition Canvas**：需要至少有初步用户访谈数据或假设
-- **SCAMPER**：需要明确的现有产品/服务/流程作为改造对象
-- **Kano Model**：需要候选功能列表 + 可接触的目标用户（用于问卷）
-- **North Star**：需要明确的产品核心价值主张
-- **JTBD**：需要可接触的目标用户做访谈（JTBD 是定性框架，通过访谈挖掘用户真实任务）
-- **Design Thinking**：需要明确的问题/用户群体 + 跨职能团队投入
-- **Lean BML Loop**：需要可表述的最小化假设 + 可度量的学习指标
+- **AARRR**: Requires existing product user data or clear business stage
+- **Value Proposition Canvas**: Requires at least preliminary user interview data or hypotheses
+- **SCAMPER**: Requires clear existing product/service/process as transformation target
+- **Kano Model**: Requires candidate feature list + accessible target users (for survey)
+- **North Star**: Requires clear product core value proposition
+- **JTBD**: Requires accessible target users for interviews (JTBD is a qualitative framework, uncovering real jobs through interviews)
+- **Design Thinking**: Requires clear problem/user group + cross-functional team commitment
+- **Lean BML Loop**: Requires expressible minimum hypothesis + measurable learning metrics
 
-## 路由触发信号
+## Routing Trigger Signals
 
-- "用户要完成什么任务/功能替代分析/需求挖掘" → JTBD（主）⚡ 若需描述典型用户完整画像→用 User Personas（市场研究类）；若需共情理解用户感受→用 Empathy Map（用户研究类）
-- "增长瓶颈分析" → AARRR Funnel（主）
-- "从0到1设计产品/服务" → Design Thinking（主）
-- "产品迭代验证假设" → Lean Build-Measure-Learn（主）
-- "产品-需求契合度验证" → Value Proposition Canvas（主）
-- "产品/服务系统化创意" → SCAMPER（主）
-- "功能需求性质分类" → Kano Model（主）
-- "关键指标体系设计" → North Star Framework（主）
+- "What job do users want done / feature substitution analysis / demand mining" → JTBD (primary) ⚡ If need to describe typical user's complete profile → use User Personas (Market Research); if need empathetic understanding of user feelings → use Empathy Map (User Research)
+- "Growth bottleneck analysis" → AARRR Funnel (primary)
+- "0-to-1 product/service design" → Design Thinking (primary)
+- "Product iteration hypothesis validation" → Lean Build-Measure-Learn (primary)
+- "Product-demand fit validation" → Value Proposition Canvas (primary)
+- "Systematic product/service creativity" → SCAMPER (primary)
+- "Feature requirement nature classification" → Kano Model (primary)
+- "Key metrics framework design" → North Star Framework (primary)
 
-## 常见组合
+## Common Combinations
 
-- **产品创新**：JTBD → Design Thinking → Lean BML
-- **系统创意**：六顶思考帽（绿帽）→ SCAMPER → RICE（筛选）
-- **增长诊断**：AARRR → 5 Whys → RICE
-- **需求全流程管理**：Kano（分类性质）→ MoSCoW（裁剪范围）→ RICE（排优先级）
-- **指标体系搭建**：North Star（定义核心指标）→ AARRR（分层拆解）→ OKR（目标对齐）
+- **Product innovation**: JTBD → Design Thinking → Lean BML
+- **Systematic creativity**: Six Thinking Hats (Green Hat) → SCAMPER → RICE (screening)
+- **Growth diagnostics**: AARRR → 5 Whys → RICE
+- **Requirement full lifecycle**: Kano (classify nature) → MoSCoW (scope) → RICE (prioritize)
+- **Metrics framework**: North Star (define core metric) → AARRR (layered decomposition) → OKR (goal alignment)
 
-## 方法论互斥与先后约束
+## Methodology Mutual Exclusion and Ordering Constraints
 
-| 约束对 | 规则 | 原因 |
+| Constraint pair | Rule | Reason |
 | --- | --- | --- |
-| JTBD vs User Personas | **按目标选择**：挖掘用户要完成的“任务”→JTBD；描述典型用户 archetype→Personas | 输入数据可重叠但输出目的不同，JTBD 输出任务陈述，Personas 输出用户画像 |
-| JTBD vs Empathy Map | **按目标选择**：挖掘功能性/情感性任务→JTBD；共情理解用户感受→Empathy Map | JTBD 是定性访谈框架，Empathy Map 是共情映射工具 |
-| Kano → MoSCoW → RICE | **需求全流程先后顺序** | Kano 分类性质→MoSCoW 裁剪范围→RICE 排优先级，不可颠倒 |
+| JTBD vs User Personas | **Choose by goal**: uncover users' "jobs"→JTBD; describe typical user archetype→Personas | Input data may overlap but output purposes differ; JTBD outputs job statements, Personas outputs user profiles |
+| JTBD vs Empathy Map | **Choose by goal**: uncover functional/emotional jobs→JTBD; empathetic understanding of user feelings→Empathy Map | JTBD is a qualitative interview framework; Empathy Map is an empathy mapping tool |
+| Kano → MoSCoW → RICE | **Requirement full lifecycle order** | Kano classifies nature → MoSCoW scopes → RICE prioritizes; order cannot be reversed |

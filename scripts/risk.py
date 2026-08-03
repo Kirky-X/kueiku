@@ -1,4 +1,4 @@
-"""风险评估方法论 — Risk Matrix / FMEA / Pareto"""
+"""Risk assessment methodologies — Risk Matrix / FMEA / Pareto"""
 
 import json
 import sys
@@ -8,21 +8,21 @@ from utils import read_csv, write_output, md_table, fmt_num, pct
 # ───────────────────────── Risk Matrix ─────────────────────────
 
 RISK_HELP = """
-风险矩阵: 概率 × 影响 快速风险评估与排序
+Risk Matrix: Probability × Impact quick risk assessment and prioritization
 
-CSV 格式:
+CSV Format:
   name,probability,impact,category
 
-  name        : 风险描述
-  probability : 概率 (1-5)
-  impact      : 影响 (1-5)
-  category    : 风险类别（可选，用于分组）
+  name        : Risk description
+  probability : Probability (1-5)
+  impact      : Impact (1-5)
+  category    : Risk category (optional, for grouping)
 
-示例:
+Example:
   name,probability,impact,category
-  服务器宕机,3,5,技术
-  关键人员离职,2,4,人员
-  需求变更频繁,4,3,需求
+  Server Outage,3,5,Technical
+  Key Personnel Departure,2,4,Personnel
+  Frequent Requirement Changes,4,3,Requirements
 """
 
 
@@ -31,7 +31,7 @@ def cmd_risk(args):
     required = {"name", "probability", "impact"}
     if not required.issubset(rows[0].keys()):
         missing = required - set(rows[0].keys())
-        print(f"CSV 缺少列: {missing}", file=sys.stderr)
+        print(f"CSV missing columns: {missing}", file=sys.stderr)
         sys.exit(1)
 
     risks = []
@@ -40,13 +40,13 @@ def cmd_risk(args):
         i = int(r["impact"])
         risk_value = p * i
         if risk_value >= 15:
-            zone, zone_en, action = "红色", "CRITICAL", "立即行动"
+            zone, zone_en, action = "Red", "CRITICAL", "Act immediately"
         elif risk_value >= 8:
-            zone, zone_en, action = "橙色", "HIGH", "主动缓解"
+            zone, zone_en, action = "Orange", "HIGH", "Proactive mitigation"
         elif risk_value >= 4:
-            zone, zone_en, action = "黄色", "MEDIUM", "持续监控"
+            zone, zone_en, action = "Yellow", "MEDIUM", "Continuous monitoring"
         else:
-            zone, zone_en, action = "绿色", "LOW", "接受风险"
+            zone, zone_en, action = "Green", "LOW", "Accept risk"
         risks.append({
             "name": r["name"], "probability": p, "impact": i,
             "risk_value": risk_value, "zone": zone, "zone_en": zone_en,
@@ -55,20 +55,20 @@ def cmd_risk(args):
 
     risks.sort(key=lambda x: x["risk_value"], reverse=True)
 
-    zone_counts = {"红色": 0, "橙色": 0, "黄色": 0, "绿色": 0}
+    zone_counts = {"Red": 0, "Orange": 0, "Yellow": 0, "Green": 0}
     for r in risks:
         zone_counts[r["zone"]] += 1
 
-    lines = ["# 风险评估报告\n"]
-    lines.append(f"识别风险总数: {len(risks)}\n")
-    lines.append("## 风险分布\n")
-    lines.append(f"- 🔴 红色（极高 15-25）: {zone_counts['红色']} 项")
-    lines.append(f"- 🟠 橙色（高 8-14）: {zone_counts['橙色']} 项")
-    lines.append(f"- 🟡 黄色（中 4-7）: {zone_counts['黄色']} 项")
-    lines.append(f"- 🟢 绿色（低 1-3）: {zone_counts['绿色']} 项\n")
+    lines = ["# Risk Assessment Report\n"]
+    lines.append(f"Total risks identified: {len(risks)}\n")
+    lines.append("## Risk Distribution\n")
+    lines.append(f"- 🔴 Red (extreme 15-25): {zone_counts['Red']} items")
+    lines.append(f"- 🟠 Orange (high 8-14): {zone_counts['Orange']} items")
+    lines.append(f"- 🟡 Yellow (medium 4-7): {zone_counts['Yellow']} items")
+    lines.append(f"- 🟢 Green (low 1-3): {zone_counts['Green']} items\n")
 
-    lines.append("## 风险清单（按风险值排序）\n")
-    headers = ["排名", "风险", "概率", "影响", "风险值", "区域", "应对策略"]
+    lines.append("## Risk Register (sorted by risk value)\n")
+    headers = ["Rank", "Risk", "Probability", "Impact", "Risk Value", "Zone", "Response Strategy"]
     table_rows = []
     for idx, r in enumerate(risks, 1):
         table_rows.append([
@@ -77,12 +77,12 @@ def cmd_risk(args):
         ])
     lines.append(md_table(headers, table_rows))
 
-    lines.append("## 风险矩阵\n")
+    lines.append("## Risk Matrix\n")
     grid = {}
     for r in risks:
         grid[(r["probability"], r["impact"])] = r["name"][:8]
-    lines.append("```\n影响 →  1    2    3    4    5")
-    lines.append("概率 ↓")
+    lines.append("```\nImpact →  1    2    3    4    5")
+    lines.append("Probability ↓")
     for p in range(5, 0, -1):
         row_str = f"  {p}  "
         for i in range(1, 6):
@@ -100,9 +100,9 @@ def cmd_risk(args):
 
     critical = [r for r in risks if r["risk_value"] >= 8]
     if critical:
-        lines.append("## 需立即关注的风险\n")
+        lines.append("## Risks Requiring Immediate Attention\n")
         for r in critical:
-            lines.append(f"- **{r['name']}** (风险值 {r['risk_value']}, {r['zone']}) → {r['action']}")
+            lines.append(f"- **{r['name']}** (RiskValue {r['risk_value']}, {r['zone']}) → {r['action']}")
 
     if args.json:
         write_output(json.dumps(risks, ensure_ascii=False, indent=2), args.output)
@@ -113,21 +113,21 @@ def cmd_risk(args):
 # ───────────────────────── FMEA ─────────────────────────
 
 FMEA_HELP = """
-FMEA 失效模式与影响分析: RPN = 严重度(S) × 频度(O) × 探测度(D)
+FMEA Failure Mode and Effects Analysis: RPN = Severity(S) × Occurrence(O) × Detection(D)
 
-CSV 格式:
+CSV Format:
   name,severity,occurrence,detection,category
 
-  name      : 失效模式描述
-  severity  : 严重度 (1-10)
-  occurrence: 频度 (1-10)
-  detection : 探测度 (1-10, 1=必能检出, 10=无法检出)
-  category  : 类别（可选）
+  name      : Failure mode description
+  severity  : Severity (1-10)
+  occurrence: Occurrence (1-10)
+  detection : Detection (1-10, 1=certain detection, 10=undetectable)
+  category  : Category (optional)
 
-示例:
+Example:
   name,severity,occurrence,detection,category
-  电源过载,8,4,3,硬件
-  数据丢失,9,3,5,软件
+  Power Overload,8,4,3,Hardware
+  Data Loss,9,3,5,Software
 """
 
 
@@ -135,7 +135,7 @@ def cmd_fmea(args):
     rows = read_csv(args.input)
     required = {"name", "severity", "occurrence", "detection"}
     if not required.issubset(rows[0].keys()):
-        print(f"CSV 缺少列: {required - set(rows[0].keys())}", file=sys.stderr)
+        print(f"CSV missing columns: {required - set(rows[0].keys())}", file=sys.stderr)
         sys.exit(1)
 
     items = []
@@ -143,28 +143,28 @@ def cmd_fmea(args):
         s, o, d = int(r["severity"]), int(r["occurrence"]), int(r["detection"])
         rpn = s * o * d
         if rpn >= 200:
-            zone, action = "极高", "立即采取纠正措施"
+            zone, action = "Critical", "Immediate corrective action required"
         elif rpn >= 100:
-            zone, action = "高", "尽快制定缓解方案"
+            zone, action = "High", "Develop mitigation plan ASAP"
         elif rpn >= 50:
-            zone, action = "中", "纳入监控并计划改善"
+            zone, action = "Medium", "Include in monitoring and plan improvement"
         else:
-            zone, action = "低", "常规监控"
+            zone, action = "Low", "Routine monitoring"
         items.append({"name": r["name"], "s": s, "o": o, "d": d, "rpn": rpn,
                        "zone": zone, "action": action, "category": r.get("category", "")})
 
     items.sort(key=lambda x: x["rpn"], reverse=True)
 
-    lines = ["# FMEA 失效模式分析报告\n"]
-    lines.append(f"失效模式数: {len(items)}\n")
-    lines.append("## 风险优先数排序\n")
-    headers = ["排名", "失效模式", "S", "O", "D", "RPN", "风险等级", "应对策略"]
+    lines = ["# FMEA Failure Mode Analysis Report\n"]
+    lines.append(f"Number of failure modes: {len(items)}\n")
+    lines.append("## Risk Priority Number Ranking\n")
+    headers = ["Rank", "Failure Mode", "S", "O", "D", "RPN", "Risk Level", "Response Strategy"]
     trows = [[i + 1, it["name"], it["s"], it["o"], it["d"], it["rpn"], it["zone"], it["action"]] for i, it in enumerate(items)]
     lines.append(md_table(headers, trows))
 
     high = [it for it in items if it["rpn"] >= 100]
     if high:
-        lines.append("## 需优先处理的失效模式\n")
+        lines.append("## Failure Modes Requiring Priority Action\n")
         for it in high:
             lines.append(f"- **{it['name']}** (RPN={it['rpn']}, {it['zone']}) → {it['action']}")
 
@@ -177,23 +177,23 @@ def cmd_fmea(args):
 # ───────────────────────── Pareto Analysis ─────────────────────────
 
 PARETO_HELP = """
-帕累托分析: 识别关键少数（20% 原因产生 80% 影响）
+Pareto Analysis: Identify the vital few (20% of causes produce 80% of impact)
 
-CSV 格式:
+CSV Format:
   name,value
 
-  name  : 项目名称
-  value : 影响值（数值）
+  name  : Item name
+  value : Impact value (numeric)
 
-示例:
+Example:
   name,value
-  支付失败,420
-  登录异常,300
-  订单不同步,180
-  退款查询,120
-  地址修改,90
-  优惠券,60
-  其他,30
+  Payment Failure,420
+  Login Error,300
+  Order Sync Issue,180
+  Refund Query,120
+  Address Change,90
+  Coupon Issue,60
+  Other,30
 """
 
 
@@ -202,7 +202,7 @@ def cmd_pareto(args):
     required = {"name", "value"}
     if not required.issubset(rows[0].keys()):
         missing = required - set(rows[0].keys())
-        print(f"CSV 缺少列: {missing}", file=sys.stderr)
+        print(f"CSV missing columns: {missing}", file=sys.stderr)
         sys.exit(1)
 
     items = []
@@ -215,7 +215,7 @@ def cmd_pareto(args):
     items.sort(key=lambda x: x["value"], reverse=True)
     total = sum(i["value"] for i in items)
     if total == 0:
-        print("所有值为 0，无法分析", file=sys.stderr)
+        print("All values are 0, cannot analyze", file=sys.stderr)
         sys.exit(1)
 
     cumulative = 0
@@ -224,19 +224,19 @@ def cmd_pareto(args):
         cumulative += pct_val
         item["pct"] = pct_val
         item["cumulative"] = cumulative
-        item["classification"] = "关键少数" if cumulative <= 80 else ("临界" if cumulative - pct_val < 80 else "琐碎多数")
+        item["classification"] = "Vital Few" if cumulative <= 80 else ("Boundary" if cumulative - pct_val < 80 else "Trivial Many")
 
-    vital = [i for i in items if i["classification"] == "关键少数" or i["classification"] == "临界"]
-    trivial = [i for i in items if i["classification"] == "琐碎多数"]
+    vital = [i for i in items if i["classification"] == "Vital Few" or i["classification"] == "Boundary"]
+    trivial = [i for i in items if i["classification"] == "Trivial Many"]
 
-    lines = ["# 帕累托分析报告\n"]
-    lines.append(f"分析项数: {len(items)} | 总值: {fmt_num(total)}\n")
+    lines = ["# Pareto Analysis Report\n"]
+    lines.append(f"Items analyzed: {len(items)} | Total value: {fmt_num(total)}\n")
 
-    lines.append("## 排序结果\n")
-    headers = ["排名", "项目", "影响值", "占比", "累积占比", "分类"]
+    lines.append("## Sorted Results\n")
+    headers = ["Rank", "Item", "Impact Value", "Percentage", "Cumulative %", "Classification"]
     table_rows = []
     for idx, item in enumerate(items, 1):
-        marker = " ← 80% 分界" if (item["cumulative"] >= 80 and (item["cumulative"] - item["pct"]) < 80) else ""
+        marker = " ← 80% boundary" if (item["cumulative"] >= 80 and (item["cumulative"] - item["pct"]) < 80) else ""
         table_rows.append([
             idx, item["name"], fmt_num(item["value"]),
             pct(item["pct"]), pct(item["cumulative"]),
@@ -245,16 +245,16 @@ def cmd_pareto(args):
     lines.append(md_table(headers, table_rows))
 
     vital_pct = sum(i["pct"] for i in vital)
-    lines.append(f"\n## 关键少数（{len(vital)} 项，贡献 {pct(vital_pct)} 影响）\n")
+    lines.append(f"\n## Vital Few ({len(vital)} items, contributing {pct(vital_pct)} impact)\n")
     for i, item in enumerate(vital, 1):
-        lines.append(f"{i}. **{item['name']}** — 影响值: {fmt_num(item['value'])} ({pct(item['pct'])})")
+        lines.append(f"{i}. **{item['name']}** — ImpactValue: {fmt_num(item['value'])} ({pct(item['pct'])})")
 
     if trivial:
         trivial_pct = sum(i["pct"] for i in trivial)
-        lines.append(f"\n## 琐碎多数（{len(trivial)} 项，贡献 {pct(trivial_pct)} 影响）\n")
-        lines.append("处理策略: 降低投入 / 标准化处理 / 暂缓 / 删除")
+        lines.append(f"\n## Trivial Many ({len(trivial)} items, contributing {pct(trivial_pct)} impact)\n")
+        lines.append("Strategy: Reduce investment / Standardize process / Defer / Remove")
 
-    lines.append("\n## 累积分布\n")
+    lines.append("\n## Cumulative Distribution\n")
     lines.append("```")
     bar_max = 40
     for item in items:

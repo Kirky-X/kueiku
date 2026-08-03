@@ -1,131 +1,26 @@
-# Reality Distortion Field · 现实扭曲力场
+# Reality Distortion Field
 
-## 核心理念
+## Core Concept
+Through conviction and expression, make the team believe the impossible is possible. Not about lying — it's about setting audacious goals and creating unwavering belief that they can be achieved. Must have exit conditions to prevent toxicity.
 
-通过信念和表达让团队相信不可能可能。
+## Applicable Scenarios
+✅ **Best for**
+- Pushing teams past self-imposed limits
+- Selling vision (investors, customers, team)
+- Rally speeches and mobilization
 
-现实扭曲力场（RDF）指领导者以极强的信念密度和表达力，让周围人暂时悬置"这不可能"的判断，从而释放团队被自我设限锁住的能力。RDF 不是欺骗，而是把"可能性的边界"推到团队未曾想象的地方。
+⚠️ **Use with caution**
+- Must have exit conditions (when to acknowledge reality)
+- Not sustainable as a long-term management style
+- Requires genuine belief from the leader
 
-> **局限标注（重要）**
-> RDF 是强效但有副作用的工具，**必须明确边界**：
->
-> **反例**：Jobs 因 RDF 延误癌症治疗 9 个月——他相信自己能用食疗治愈癌症，结果是悲剧。RDF 不能对抗物理现实。
->
-> - ✅ **适用**：推动团队突破自我设限、销售愿景、动员攻坚
-> - ❌ **不适用**：技术可行性判断、风险评估、医疗决策、安全相关决策、合规决策
->
-> **核心原则**：RDF 扭曲的是"心理边界"，不是"物理边界"。任何涉及安全、健康、合规、客观规律的决策，禁止使用 RDF。
+## Key Steps
+1. Set an audacious but not delusional goal
+2. Articulate a compelling vision of the future
+3. Demonstrate unwavering personal conviction
+4. Create urgency and momentum
+5. Define exit conditions: when to pivot or acknowledge failure
+6. Follow through with action — credibility requires delivery
 
----
-
-## 适用场景
-
-✅ **最适合**
-- 团队自我设限，认为目标不可能达成
-- 销售愿景（融资路演、客户动员、内部攻坚）
-- 推动团队尝试未曾尝试的方向
-- 短期攻坚需要超常投入
-
-⚠️ **慎用 / 禁止**
-- ❌ 技术可行性判断（用工程评估，不是信念）
-- ❌ 风险评估（用数据，不是乐观）
-- ❌ 医疗/健康相关决策
-- ❌ 安全相关决策
-- ❌ 合规/法律边界决策
-- 长期持续使用（团队会疲劳或质疑）
-
----
-
-## 执行步骤
-
-### Step 1：识别自我设限
-
-判断团队当前是"客观不可能"还是"心理设限"：
-- 客观不可能：物理/技术/资源硬约束（不能用 RDF 突破）
-- 心理设限：基于过往经验、恐惧、惯性思维的"不敢想"
-
-> 区分方法：问"如果有 10 倍资源/时间，能做到吗？"——若能，是心理设限；若仍不能，是客观约束。
-
-### Step 2：重塑框架
-
-把"不可能"重新表述为"路径待发现"：
-- 不说"这做不到"，改说"做到这需要先解决 X、Y、Z"
-- 把宏大目标拆解为可挑战的子目标
-- 用类比（"X 团队做到过类似的"）松动"不可能"的信念
-
-> 重塑框架基于事实和路径，不是凭空宣称"一定能成"。
-
-### Step 3：信念传递
-
-以高信念密度传递：
-- 语言：坚定、具体、有画面感
-- 行为：亲自投入、以身作则
-- 重复：在多个场合一致传达，避免信号摇摆
-- 证据：用小胜利证明路径可行
-
-### Step 4：设定退出条件（必须有）
-
-RDF 必须有明确的退出条件，否则会演变为固执：
-- 时间退出：X 时间内未达到里程碑 Y，停止 RDF 转向评估
-- 数据退出：关键指标 Z 跌破阈值，承认判断失误
-- 客观信号退出：出现技术/市场/资源的硬约束证据
-
-> **没有退出条件的 RDF 是赌徒行为，不是领导力。**
-
----
-
-## 输出模板
-
-```
-分析对象：[团队/项目]
-分析时间：[日期]
-
-自我设限识别：
-  - 当前目标：[...]
-  - 团队信念状态：[不可能/很难/没试过]
-  - 判断：[客观不可能 / 心理设限]
-  - 判断依据：[若有 10 倍资源能做到吗？硬约束是什么？]
-
-框架重塑：
-  - 原表述：[这做不到]
-  - 新表述：[做到这需要先解决 X、Y、Z]
-  - 子目标拆解：[...]
-  - 类比证据：[X 团队/产品做到过类似的...]
-
-信念传递计划：
-  - 语言锚点：[核心口号/画面]
-  - 行为示范：[领导者将亲自...]
-  - 传达场合：[会议/邮件/1on1]
-  - 小胜利里程碑：[短期可证明路径的胜利]
-
-退出条件（必须有）：
-  - 时间退出：[X 时间内未达里程碑 Y，停止 RDF]
-  - 数据退出：[指标 Z 跌破阈值，转向评估]
-  - 客观信号：[出现硬约束证据时立即停止]
-
-边界确认：
-  - 本决策不涉及：[技术可行性/风险/安全/医疗/合规]
-  - 若涉及上述领域：[改用工程评估/数据决策，禁用 RDF]
-```
-
----
-
-## 常见陷阱
-
-| 陷阱 | 避免方式 |
-|------|---------|
-| 用 RDF 对抗物理/技术硬约束 | Step 1 必须严格区分客观约束和心理设限 |
-| 无退出条件，RDF 演变为固执 | 退出条件是强制项，缺失即失败 |
-| 用于安全/医疗/合规决策 | 这些领域禁用 RDF，改用数据和标准 |
-| 团队因 RDF 不敢报坏消息 | 明确"RDF 不影响如实上报"，建立心理安全 |
-| RDF 变成精神控制/PUA | RDF 是松动心理设限，不是操纵或胁迫 |
-| 长期持续使用导致疲劳 | RDF 是阶段性工具，非日常管理常态 |
-
----
-
-## 与其他方法论的关系
-
-- **前置 A-Player Density**：A 级人才更能承接 RDF 并转化为真实能力
-- **对照 First Principles**：First Principles 拆解客观约束，RDF 突破心理设限，两者互补不冲突
-- **后接 OKR**：RDF 推动的目标需转化为可追踪的 OKR
-- **互补 Cynefin**：RDF 适用于"复杂/可知"域，不适用于"混沌"域的硬约束
+## Source
+Term coined by Apple employees describing Steve Jobs; analyzed in Brent Schlender's *Becoming Steve Jobs*.

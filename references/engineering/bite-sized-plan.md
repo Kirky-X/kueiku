@@ -1,26 +1,20 @@
-# Bite-Sized Plan · 小步可执行计划
+# Bite-Sized Plan
 
-## 核心思想
-让 agent / 人类工程师都能照着执行的计划——每步 2–5 分钟可完成、无占位符（No Placeholders）、明确到文件路径、每步带 Self-Review 三查。避免"宏伟但无法执行"的计划文档。
+## Core Concept
+Every step should be 2-5 minutes, with no placeholders, exact file paths, and a Self-Review 3-check. Plans so small that both agents and humans can execute them without ambiguity.
 
-## 适用场景
-- 计划写得高大上但无人能照做
-- AI agent 执行计划时频繁卡在"我下一步该做什么"
-- 任务跨多文件但缺乏执行顺序
+## Applicable Scenarios
+✅ **Best for**
+- Agent-executable plans
+- Complex task decomposition
+- Reducing implementation errors
 
-## 关键步骤
-1. 把任务拆为 2–5 分钟可完成的原子步骤
-2. 每步包含 4 要素：
-   - exact file path（绝对路径或相对项目根的明确路径）
-   - 具体动作（创建/编辑/删除/运行命令）
-   - 预期结果（可见的验证点）
-   - 失败处理（这一步出错怎么办，不是"重试"）
-3. No Placeholders 规则：禁止"在 X 处填入 Y"这类占位——要么给出具体值，要么明确"由 agent 在上下文中查询"
-4. Self-Review 三查（每步完成后）：
-   - 是否产生预期结果？
-   - 是否影响未声明的文件/函数？
-   - 下一步的前置条件是否就绪？
-5. 步骤间显式串行/并行标记，避免 agent 顺序错误
+## Key Steps
+1. Break the task into steps of 2-5 minutes each
+2. Each step must have: exact file path, exact code change, no placeholders
+3. Self-Review 3-checks: Does it compile? Does it pass existing tests? Does it match the intent?
+4. If a step needs more than 5 minutes, break it further
+5. Execute steps sequentially; verify after each step
 
-## 来源
-writing-plans 实践（Anthropic Claude Code patterns、Trae writing-plans skill）
+## Source
+Agent workflow optimization methodology; bite-sized execution patterns.

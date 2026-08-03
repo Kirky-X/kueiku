@@ -1,36 +1,36 @@
-# Product Discovery · 产品发现
+# Product Discovery
 
-**适用场景**：持续产品发现、假设验证、用户访谈、实验设计
+**When to use**: Continuous product discovery, hypothesis validation, user interviews, experiment design
 
-| 方法论 | 一句话描述 | 最佳场景 | Reference |
+| Methodology | One-line description | Best scenario | Reference |
 | --- | --- | --- | --- |
-| **Opportunity Solution Tree** | Outcome→Opportunities→Solutions→Experiments 4 层结构 | 持续发现、把发现对齐业务结果 | `opportunity-solution-tree.md` |
-| **Assumption Mapping** | 4/8 风险类假设 × Impact×Risk 矩阵 | 立项前识别"我们在赌什么" | `assumption-mapping.md` |
-| **Pretotypes** | XYZ 假设 + 轻量 pretotype + Skin-in-the-Game | 写代码前验证需求存在性 | `pretotypes.md` |
-| **The Mom Test** | 问过去不问未来、不 pitch、80/20 倾听 | 用户访谈避免虚假正面反馈 | `mom-test.md` |
-| **Product Trio** | PM+Designer+Engineer 协同发现 | 发现工作不再由 PM 单人扛 | `product-trio.md` |
-| **Opportunity Score** | Importance × (1−Satisfaction) 归一化 0-1 | 找未满足需求、产品机会识别 | `opportunity-score.md` |
-| **ICE Framework** | Impact×Confidence×Ease，RICE 轻量替代 | 大量想法 30 分钟内初筛 | `ice-framework.md` |
-| **Experiment Design Library** | 7 种实验类型可选菜单 | 假设验证实验选型 | `experiment-design-library.md` |
+| **Opportunity Solution Tree** | Outcome→Opportunities→Solutions→Experiments 4-layer structure | Continuous discovery, aligning discovery to business outcomes | `opportunity-solution-tree.md` |
+| **Assumption Mapping** | 4/8 risk-category assumptions × Impact×Risk matrix | Pre-kickoff identification of "what are we betting on" | `assumption-mapping.md` |
+| **Pretotypes** | XYZ hypothesis + lightweight pretotype + Skin-in-the-Game | Validate demand existence before writing code | `pretotypes.md` |
+| **The Mom Test** | Ask about past not future, don't pitch, 80/20 listening | User interviews avoiding false positive feedback | `mom-test.md` |
+| **Product Trio** | PM+Designer+Engineer collaborative discovery | Discovery work no longer borne by PM alone | `product-trio.md` |
+| **Opportunity Score** | Importance × (1−Satisfaction) normalized 0-1 | Finding unmet needs, product opportunity identification | `opportunity-score.md` |
+| **ICE Framework** | Impact×Confidence×Ease, lightweight RICE alternative | Rough screening of many ideas in 30 min | `ice-framework.md` |
+| **Experiment Design Library** | 7 experiment types menu | Hypothesis validation experiment selection | `experiment-design-library.md` |
 
-## 各方法论最低信息需求
+## Minimum Information Requirements per Methodology
 
-- **Opportunity Solution Tree**：需要明确的业务 Outcome + 用户访谈数据
-- **Assumption Mapping**：需要明确的方案/计划 + 列出依赖假设的能力
-- **Pretotypes**：需要可表述的 XYZ 假设 + 选定 pretotype 类型的执行能力
-- **The Mom Test**：需要可接触的目标用户 + 访谈机会
-- **Product Trio**：需要 PM/Designer/Engineer 三人可投入每周访谈
-- **Opportunity Score**：需要可触达的目标用户做重要度+满意度调研
-- **ICE Framework**：需要候选想法列表 + 团队 30 分钟讨论
-- **Experiment Design Library**：需要明确的待验证假设
+- **Opportunity Solution Tree**: Requires clear business Outcome + user interview data
+- **Assumption Mapping**: Requires clear plan/proposal + ability to list dependent assumptions
+- **Pretotypes**: Requires expressible XYZ hypothesis + execution capability for selected pretotype type
+- **The Mom Test**: Requires accessible target users + interview opportunities
+- **Product Trio**: Requires PM/Designer/Engineer trio available for weekly interviews
+- **Opportunity Score**: Requires accessible target users for importance+satisfaction survey
+- **ICE Framework**: Requires candidate idea list + 30-min team discussion
+- **Experiment Design Library**: Requires clear hypotheses to validate
 
-## 路由触发信号
+## Routing Trigger Signals
 
-- "持续产品发现/把发现对齐业务结果" → Opportunity Solution Tree（主）
-- "用户访谈避免虚假正面反馈" → The Mom Test（主）
-- "早期想法快速筛选（<30 分钟）" → ICE Framework（主）
-- "找未满足需求/产品机会识别" → Opportunity Score（主）
-- "假设验证实验选型" → Experiment Design Library（主）
-- "假设识别与分类" / "不确定性映射" → Assumption Mapping
-- "最小可行原型" / "pretotype" → Pretotypes
-- "产品团队协作" / "三合一角色" → Product Trio
+- "Continuous product discovery / aligning discovery to business outcomes" → Opportunity Solution Tree (primary)
+- "User interviews avoiding false positive feedback" → The Mom Test (primary)
+- "Quick early idea screening (<30 min)" → ICE Framework (primary)
+- "Finding unmet needs / product opportunity identification" → Opportunity Score (primary)
+- "Hypothesis validation experiment selection" → Experiment Design Library (primary)
+- "Assumption identification and mapping" / "uncertainty mapping" → Assumption Mapping
+- "Minimum viable prototype" / "pretotype" → Pretotypes
+- "Product team collaboration" / "triad role" → Product Trio

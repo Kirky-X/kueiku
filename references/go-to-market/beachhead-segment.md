@@ -1,23 +1,21 @@
-# Beachhead Segment · 滩头堡细分市场
+# Beachhead Segment
 
-## 核心思想
-跨越鸿沟的关键不是同时攻多个市场，而是先集中拿下**一个**细分市场作为滩头堡，用它做参照案例再向相邻市场扩张。Geoffrey Moore 给出 4 个选择准则，缺一不可。
+## Core Concept
+Select your initial market segment using 4 criteria: Burning Pain (must-have), Willingness to Pay, Winnable (60-70% win rate), Referral potential. Concentrate all resources on winning one segment before expanding — "crossing the chasm."
 
-## 适用场景
-- 创新产品跨过早期采用者进入主流市场受阻
-- 资源有限却试图同时服务多个客群
-- 缺乏"标志性客户"作为销售参照
+## Applicable Scenarios
+✅ **Best for**
+- Crossing the chasm (early market entry)
+- Concentrating resources on a winnable segment
+- B2B market segmentation
 
-## 关键步骤
-1. 候选 segment 必须同时满足 4 准则：
-   - Burning Pain：有未被满足的强烈痛点（不是"也想要"，是"必须解决"）
-   - Willingness to Pay：愿意为解决方案付费（且付费能力足够支撑商业模式）
-   - Winnable 60–70%：能在该 segment 拿到 60–70% 份额（避免一开始就硬刚巨头）
-   - Referral Potential：客户之间互相参考决策（拿下几个就能撬动整个 segment）
-2. 用 4 准则筛选全部候选，淘汰任一不达标的
-3. 在剩余 segment 中选最小但最锋利的一个作为滩头堡
-4. 全部资源投入：销售/市场/产品都为这个 segment 优化
-5. 拿下后再选下一个相邻 segment（基于已建立的参照案例）
+## Key Steps
+1. List all potential market segments
+2. Evaluate each against 4 criteria: Burning Pain / WTP / Winnable 60-70% / Referral
+3. Score and rank segments
+4. Select the top segment as beachhead
+5. Develop go-to-market plan focused exclusively on this segment
+6. Win the beachhead before expanding to adjacent segments
 
-## 来源
-Geoffrey Moore《Crossing the Chasm》（1991 / 第三版 2014）
+## Source
+Geoffrey Moore, *Crossing the Chasm* (1991); *Living on the Fault Line*.

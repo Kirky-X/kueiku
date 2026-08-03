@@ -1,29 +1,29 @@
-# Leadership · 领导力
+# Leadership
 
-**适用场景**：需要在团队激励、人才密度、组织能力上做判断
+**When to use**: Need to make judgments on team motivation, talent density, organizational capability
 
-| 方法论 | 一句话描述 | 最佳场景 | Reference |
+| Methodology | One-line description | Best scenario | Reference |
 | --- | --- | --- | --- |
-| **Reality Distortion Field** | 通过信念和表达让团队相信不可能可能 | 推动团队突破自我设限、销售愿景 | `reality-distortion-field.md` |
-| **A-Player Density** | A 级人才招聘 A 级，B 级招 C 级，人才密度决定团队上限 | 招聘决策、团队组建、绩效管理 | `a-player-density.md` |
-| **Change Management** | Kotter 8 步法 + ADKAR 模型，系统化推动组织变革落地 | 组织转型、文化变革、大规模行为改变 | `change-management.md` |
+| **Reality Distortion Field** | Using conviction and expression to make the team believe the impossible is possible | Pushing teams past self-imposed limits, selling vision | `reality-distortion-field.md` |
+| **A-Player Density** | A-players hire A-players, B-players hire C-players; talent density determines team ceiling | Hiring decisions, team building, performance management | `a-player-density.md` |
+| **Change Management** | Kotter 8-step + ADKAR model, systematically driving organizational change | Organizational transformation, cultural change, large-scale behavior change | `change-management.md` |
 
-## 各方法论最低信息需求
+## Minimum Information Requirements per Methodology
 
-- **Reality Distortion Field**：明确的目标 + 团队当前信念状态 + 退出条件
-- **A-Player Density**：A 级行为标准定义 + 现有团队评估数据 + 招聘/淘汰机制
-- **Change Management**：明确的变革目标 + 组织准备度评估 + 利益相关方清单
+- **Reality Distortion Field**: Clear goal + team's current belief state + exit conditions
+- **A-Player Density**: A-player behavior standard definition + existing team evaluation data + hiring/termination mechanisms
+- **Change Management**: Clear change objective + organizational readiness assessment + stakeholder list
 
-## 路由触发信号
+## Routing Trigger Signals
 
-- "团队自我设限/觉得做不到" → Reality Distortion Field（主）
-- "销售愿景/融资路演/动员讲话" → Reality Distortion Field（主）
-- "招聘标准/团队质量下滑/人才密度" → A-Player Density（主）
-- "绩效管理/淘汰机制/团队组建" → A-Player Density（主）
-- "组织变革/文化转型/变革落地" → Change Management（主）
+- "Team self-limiting / feels impossible" → Reality Distortion Field (primary)
+- "Selling vision / fundraising pitch / rally speech" → Reality Distortion Field (primary)
+- "Hiring standards / team quality decline / talent density" → A-Player Density (primary)
+- "Performance management / termination mechanism / team building" → A-Player Density (primary)
+- "Organizational change / cultural transformation / change execution" → Change Management (primary)
 
-## 常见组合
+## Common Combinations
 
-- **团队突破**：A-Player Density（确保人才密度）→ Reality Distortion Field（推动突破）→ Change Management（固化成果）
-- **组织扩张**：A-Player Density（招聘标准）→ McKinsey 7S（组织一致性）
-- **组织变革**：Stakeholder Mapping（利益相关方分析）→ Change Management（Kotter 8 步推动）→ OKR（变革目标追踪）
+- **Team breakthrough**: A-Player Density (ensure talent density) → Reality Distortion Field (drive breakthrough) → Change Management (solidify results)
+- **Organizational expansion**: A-Player Density (hiring standards) → McKinsey 7S (organizational alignment)
+- **Organizational change**: Stakeholder Mapping (stakeholder analysis) → Change Management (Kotter 8-step execution) → OKR (change goal tracking)

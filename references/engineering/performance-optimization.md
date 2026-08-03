@@ -1,56 +1,20 @@
-# Performance Optimization · 性能优化方法论
+# Performance Optimization
 
-## 核心思想
-性能优化不是靠猜和直觉——先度量，再定位，最后优化。遵循"度量→假设→验证→优化→再度量"循环，避免过早优化和方向性错误。每次优化必须有前后对比数据，没有数据支撑的优化视为投机。
+## Core Concept
+Measure → Locate → Optimize → Verify cycle. Bottleneck layering (CPU / Memory / I/O / Network). Anti-pattern warnings: don't optimize without measuring, don't guess bottlenecks.
 
-## 适用场景
-- 系统响应变慢、吞吐量下降的排查
-- 新项目性能基线建立
-- 资源成本优化（CPU/内存/带宽/数据库）
-- 高并发场景的容量评估
+## Applicable Scenarios
+✅ **Best for**
+- Performance troubleshooting
+- Baseline establishment
+- Resource cost optimization
 
-## 关键步骤
+## Key Steps
+1. **Measure**: establish performance baseline with realistic load
+2. **Locate**: profile to find the actual bottleneck (don't guess)
+3. **Optimize**: address the bottleneck (layer: CPU → Memory → I/O → Network)
+4. **Verify**: re-measure to confirm improvement; check for regressions
+5. **Repeat**: find the next bottleneck; iterate
 
-### 优化循环（4 步）
-
-1. **度量（Measure）**
-   - 建立性能基线：当前 P50/P95/P99 延迟、QPS、资源使用率
-   - 定义目标：SLO 指标（如 P99 < 200ms, QPS > 1000）
-   - 工具选择：
-     - APM：Datadog / New Relic / SkyWalking
-     - Profiler：语言内置（pprof / py-spy / async-profiler）
-     - 负载测试：k6 / wrk / JMeter / vegeta
-
-2. **定位（Identify）**
-   - **自上而下**：从用户请求入口追踪到最慢环节
-   - 常见瓶颈分类：
-     - **CPU**：计算密集型操作、序列化/反序列化、正则回溯
-     - **I/O**：数据库慢查询、外部 API 调用、磁盘读写
-     - **内存**：GC 压力、内存泄漏、大对象分配
-     - **网络**：DNS 解析、连接池耗尽、带宽瓶颈
-     - **锁**：线程竞争、死锁、锁粒度过大
-   - 80/20 法则：找到贡献 80% 延迟的 20% 代码路径
-
-3. **优化（Optimize）**
-   - 按 ROI 排序，优先优化收益最大的瓶颈
-   - 优化层级（从低成本到高成本）：
-     1. **算法/数据结构**：O(n²) → O(n log n)，HashMap 替代 List 查找
-     2. **缓存**：本地缓存 → 分布式缓存 → 查询缓存 → 计算结果缓存
-     3. **并发**：串行 → 并行 / 异步 / 批处理
-     4. **I/O**：同步 → 异步，连接池，批量操作
-     5. **数据库**：索引优化、查询改写、读写分离、分库分表
-     6. **架构**：引入 CDN、消息队列、微服务拆分
-
-4. **验证（Verify）**
-   - 优化后重新跑负载测试，对比基线
-   - 确认目标达成且无回归（功能测试 + 性能测试）
-   - 记录优化前后数据，作为团队知识沉淀
-
-### 反模式警告
-- **过早优化**：没有度量数据就"感觉慢"然后改代码
-- **局部优化陷阱**：优化了不关键的代码路径，整体无改善
-- **缓存滥用**：不分析一致性和失效策略就加缓存
-- **忽略 GC**：不调整 GC 参数/不分析 GC 日志就怀疑内存问题
-
-## 来源
-Brendan Gregg《Systems Performance》(2013)；Martin Fowler "Performance" essay；Google SRE Book Chapter on performance
+## Source
+Performance engineering best practices; Brendan Gregg's systems performance methodology.

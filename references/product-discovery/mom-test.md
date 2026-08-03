@@ -1,19 +1,19 @@
-# The Mom Test · 妈妈测试
+# The Mom Test
 
-## 核心思想
-即使是你的妈妈也会说你的想法不错——所以不要问"你觉得我的想法怎么样"，要问关于她**过去**的真实行为。Rob Fitzpatrick 提出 10 条规则，核心是：避免获取虚假正面反馈。
+## Core Concept
+Even your mom will say your idea is great — so don't ask "what do you think of my idea", ask about her **past** real behaviors. Rob Fitzpatrick proposes 10 rules, the core being: avoid collecting false positive feedback.
 
-## 适用场景
-- 创业/新功能早期，需要做用户访谈验证需求
-- 你发现自己总在 pitch 想法而不是倾听
-- 访谈结论总是"用户说喜欢"，但转化数据很差
+## Applicable Scenarios
+- Early-stage startup/new feature, need user interviews to validate demand
+- You find yourself pitching ideas instead of listening
+- Interview conclusions are always "users say they like it" but conversion data is poor
 
-## 关键步骤
-1. 问过去，不问未来——"上次你遇到 X 问题时怎么处理的"，而非"你会用 X 功能吗"
-2. 不要 pitch 你的想法——一旦 pitch，对方会按社交礼貌附和
-3. 80/20 倾听——你说 20%，让用户说 80%
-4. 捕捉强烈情绪信号——"我恨死这个流程了"、"我花了三小时"——这些比"挺好"重要十倍
-5. 验证承诺而非意见——"你为这个付过钱吗"、"你试过哪些替代方案"
+## Key Steps
+1. Ask about the past, not the future — "last time you encountered problem X, what did you do?" not "would you use feature X?"
+2. Don't pitch your idea — once you pitch, the other person will socially agree
+3. 80/20 listening — you talk 20%, let the user talk 80%
+4. Capture strong emotional signals — "I hate that process", "I spent three hours" — these are 10x more important than "it's fine"
+5. Validate commitment, not opinions — "have you paid for this?", "what alternatives have you tried?"
 
-## 来源
-Rob Fitzpatrick《The Mom Test》（2013）
+## Source
+Rob Fitzpatrick, *The Mom Test* (2013)

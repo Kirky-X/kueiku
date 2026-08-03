@@ -1,148 +1,21 @@
-# DCF · 现金流折现
+# DCF — Discounted Cash Flow
 
-## 核心理念
+## Core Concept
+Enterprise value equals the sum of all future free cash flows discounted to present value. The most fundamental intrinsic valuation method.
 
-企业价值 = 未来自由现金流的现值之和。
+## Applicable Scenarios
+✅ **Best for**
+- Enterprise valuation
+- Investment decisions
+- M&A pricing
 
-DCF（Discounted Cash Flow）基于"资产的价值等于其未来能产生的现金流的现值"这一基本原则。它是内在价值法，不依赖市场交易价格，因此被视为最理论的估值方法。但 DCF 的准确性高度依赖假设——垃圾进，垃圾出。
+## Key Steps
+1. Project free cash flows (FCF) for 5-10 years
+2. Estimate WACC (Weighted Average Cost of Capital)
+3. Calculate terminal value (Gordon Growth or Exit Multiple)
+4. Discount all cash flows to present value using WACC
+5. Sum PV of FCFs + PV of terminal value = Enterprise Value
+6. Conduct sensitivity analysis on key assumptions (growth rate, WACC, terminal multiple)
 
-> **核心理念**：DCF 是"假设驱动"的估值方法。
-> 估值的准确性不在于公式，而在于现金流预测的合理性和折现率的准确性。敏感性分析是必做项，不是可选项。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 企业估值（成熟、现金流稳定的企业）
-- 投资决策（计算内在价值 vs 市场价格）
-- 并购定价（确定报价区间）
-- 资本预算（项目投资决策）
-
-⚠️ **慎用**
-- 早期创业公司（现金流不可预测）
-- 周期性行业（需跨周期平均化）
-- 高增长未盈利企业（需调整模型）
-- 短期投机决策（DCF 是长期内在价值）
-
----
-
-## 执行步骤
-
-### Step 1：预测自由现金流
-
-预测显性预测期（通常 5-10 年）的自由现金流（FCF）：
-- FCFF（公司自由现金流）= EBIT × (1 - 税率) + 折旧摊销 - 资本支出 - 营运资本变动
-- FCFE（股权自由现金流）= FCFF - 税后利息 + 净新增借款
-
-预测依据：
-- 历史财务数据趋势
-- 行业增长预测
-- 公司竞争力和战略规划
-- 宏观经济假设
-
-> 预测需基于可解释的假设，不是简单外推历史增长率。
-
-### Step 2：估算 WACC
-
-计算加权平均资本成本（WACC）作为折现率：
-- WACC = E/(D+E) × Re + D/(D+E) × Rd × (1 - 税率)
-- Re（股权成本）= Rf + β × (Rm - Rf)（CAPM）
-- Rd（债务成本）= 税前债务利率
-- Rf：无风险利率（长期国债）
-- Rm - Rf：股权风险溢价
-- β：行业 beta
-
-### Step 3：计算终值
-
-显性预测期后的价值用终值（Terminal Value）表示：
-- 永续增长法：TV = FCF(n+1) / (WACC - g)，g 为永续增长率（通常 2-3%，不超长期 GDP）
-- 退出倍数法：TV = EBITDA(n) × 行业 EV/EBITDA 倍数
-
-> 两种方法交叉验证，终值常占估值 60-80%，假设敏感。
-
-### Step 4：折现求和
-
-计算企业价值：
-- 企业价值（EV）= Σ FCFt / (1+WACC)^t + TV / (1+WACC)^n
-- 股权价值 = EV - 净债务
-- 每股价值 = 股权价值 / 股本
-
-### Step 5：敏感性分析
-
-对关键假设做敏感性分析：
-- WACC ± 1% / 2% 的影响
-- 永续增长率 g ± 0.5% 的影响
-- 显性期增长率 ± 10% 的影响
-- 输出估值区间（保守 / 基准 / 乐观），而非单一数字
-
-> 没有敏感性分析的 DCF 是不负责任的——单一数字给出虚假的精确感。
-
----
-
-## 输出模板
-
-```
-分析对象：[公司名称]
-估值日期：[日期]
-
-自由现金流预测（FCFF）：
-  | 年份 | 营收 | EBIT | 税后EBIT | +D&A | -CapEx | -ΔWC | FCFF |
-  |------|------|------|---------|------|--------|------|------|
-  | Y1   | ...  | ...  | ...     | ...  | ...    | ...  | ...  |
-  | ...  | ...  | ...  | ...     | ...  | ...    | ...  | ...  |
-  | Y10  | ...  | ...  | ...     | ...  | ...    | ...  | ...  |
-
-WACC 计算：
-  - 无风险利率 Rf：[X%]
-  - 股权风险溢价 Rm-Rf：[Y%]
-  - Beta：[Z]
-  - 股权成本 Re：[X%]
-  - 债务成本 Rd（税后）：[X%]
-  - 资本结构 D/(D+E)：[X%]
-  - WACC：[X%]
-
-终值计算：
-  - 方法：[永续增长 / 退出倍数]
-  - 永续增长率 g：[X%]
-  - 终值 TV：[X]
-  - 终值现值：[X]
-
-估值结果：
-  - 企业价值 EV：[X]
-  - 净债务：[X]
-  - 股权价值：[X]
-  - 每股价值：[X]
-  - 当前股价：[X]
-  - 溢价/折价：[X%]
-
-敏感性分析：
-  | WACC \ g | 1.5% | 2.0% | 2.5% | 3.0% |
-  |----------|------|------|------|------|
-  | 8%       | ...  | ...  | ...  | ...  |
-  | 9%       | ...  | ...  | ...  | ...  |
-  | 10%      | ...  | ...  | ...  | ...  |
-
-估值结论：[低估/合理/高估]，区间 [保守 ~ 乐观]
-```
-
----
-
-## 常见陷阱
-
-| 陷阱 | 避免方式 |
-|------|---------|
-| 给出单一数字的虚假精确感 | 必做敏感性分析，输出区间 |
-| 永续增长率超过长期 GDP | g 通常 ≤ 3%，超过需极强理由 |
-| 终值占比过高未审视 | 终值占比 > 80% 说明显性期预测不足 |
-| WACC 估算随意 | 各参数需有数据来源，不可拍脑袋 |
-| 用 DCF 估值早期创业公司 | 早期公司用可比公司法或实物期权法 |
-| 预测期过短 | 显性期至少 5 年，覆盖一个商业周期 |
-
----
-
-## 与其他方法论的关系
-
-- **互补 Comparable Company**：DCF 是内在价值法，可比公司是市场法，交叉验证
-- **前置 DuPont Analysis**：杜邦诊断历史质量，支撑 FCF 预测的合理性
-- **后接 EVA**：DCF 估算价值，EVA 验证持有期价值创造
+## Source
+Standard finance methodology; Irving Fisher (1907), modernized by McKinsey.

@@ -1,138 +1,19 @@
-# First Principles Thinking · 第一性原理
+# First Principles Thinking
 
-## 核心理念
+## Core Concept
+Break down a problem to its most fundamental truths (axioms), then reason up from there — rather than reasoning by analogy or convention. Forces you to question every assumption and rebuild from the ground up.
 
-把问题分解到**不可再分的基本事实（公理）**，从这些基本事实出发重新构建解决方案，而不是基于类比、惯例或"行业通常这么做"来推理。
+## Applicable Scenarios
+- Innovative design where existing solutions are inadequate
+- Disrupting conventional approaches
+- Breaking through mental models and industry assumptions
 
-> 类比思维：别人这样做，所以我们也应该这样做。
-> 第一性原理：从物理定律/基本事实出发，这件事**应该**怎么做？
+## Key Steps
+1. State the current assumption or conventional approach clearly
+2. Ask: "What are the fundamental truths we know with certainty?"
+3. Challenge every other assumption: "Is this a law of physics, or just a convention?"
+4. Reconstruct the solution from the fundamental truths upward
+5. Compare the first-principles solution with the analogy-based solution; identify the delta
 
-埃隆·马斯克对此的表述：*"我倾向于用第一性原理来思考。你把事情提炼到最基本的真相，然后从那里向上推理，而不是通过类比推理。"*
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 现有解决方案代价高昂，需要颠覆式重设计
-- 被行业"惯例"或"最佳实践"束缚，需要打破假设
-- 创新产品/服务设计，从零开始构建
-- 评估某个"不可能"的事情是否真的不可能
-
-⚠️ **慎用**
-- 时间紧迫的日常决策（类比思维更高效）
-- 已有成熟解决方案且不需要创新的情况
-- 团队缺乏对基础知识的深度理解（推理会悬空）
-
----
-
-## 执行步骤
-
-### Step 1：明确要解决的问题
-
-写出问题陈述，注意**不要在问题中预设解决方案**。
-
-```
-❌ 预设方案："我们需要建更好的电池工厂"
-✅ 中立陈述："我们需要以更低的成本存储和使用电能"
-```
-
-### Step 2：识别并挑战所有假设
-
-列出当前解决方案背后的所有假设，逐一追问：
-- **这个假设是真实的物理/化学/数学约束，还是历史惯例？**
-- 如果这个假设不存在，方案会如何变化？
-
-| 假设 | 是事实还是惯例？ | 真实约束是什么？ |
-|------|----------------|----------------|
-| 电动车电池成本高 | 行业惯例定价 | 原材料实际市场价格是多少？ |
-| ... | ... | ... |
-
-### Step 3：找到基本事实
-
-追问到真正不可置疑的**物理/化学/数学/经济基本事实**：
-
-- 这个材料的**原子结构**是什么？
-- 这个流程的**物理极限**是什么？
-- 去掉所有中间环节，**直接成本**是多少？
-
-### Step 4：从基本事实重新构建
-
-从上一步确认的基本事实出发，**不受现有方案约束**，推导出新的解决方案：
-
-- "如果我们从基本事实出发，理论最优解是什么？"
-- "现有方案和理论最优解之间的差距在哪？"
-- "如何设计方案来逼近理论最优？"
-
-### Step 5：验证和迭代
-
-新方案是否仍然遵循基本事实？是否引入了新的隐性假设？
-
----
-
-## 输出模板
-
-```
-问题陈述：[去掉预设方案的中立描述]
-
-假设清单：
-  - 假设 A：[描述] → 本质：事实 / 惯例 / 待验证
-  - 假设 B：[描述] → 本质：...
-  - ...
-
-基本事实：
-  - 事实 1：[不可反驳的基础约束或数据]
-  - 事实 2：[...]
-  - ...
-
-从基本事实重新构建：
-  理论最优解：[...]
-  现有方案差距：[...]
-  新方案方向：[...]
-
-待验证的推论：[哪些推导步骤还需要实验/数据验证]
-```
-
----
-
-## 执行示例
-
-**问题**：为什么 SpaceX 能把火箭发射成本从 $500M 降到 $60M？
-
-```
-传统假设：
-  - 火箭是高度复杂精密设备，一次性使用是行业标准
-  - 政府级采购流程决定了成本结构
-  - 航天供应链价格固定
-
-追问到基本事实：
-  - 火箭材料（铝合金、钛合金、碳纤维）的原材料市价是多少？→ ~$2M
-  - 物理上，推进剂（煤油+液氧）的成本是多少？→ ~$200K
-  - 复用火箭是否违反物理定律？→ 不违反
-
-重新构建：
-  - 如果材料成本只有 $2M，$500M 的成本来自哪里？→ 复杂供应链、认证流程、一次性设计
-  - 打破"一次性使用"假设：火箭可以像飞机一样复用
-  - 重新内化供应链：垂直整合，自制而非外购
-
-结论：可复用 + 垂直整合供应链 → 10x 成本降低
-```
-
----
-
-## 常见陷阱
-
-| 陷阱 | 说明 |
-|------|------|
-| 假装第一性原理，实际仍在类比 | "谷歌这样做，所以从第一性原理来说这是对的" |
-| 基本事实层拆解不够深 | 停在"行业数据"而不是"物理约束" |
-| 重建阶段缺乏可行性验证 | 纯理论推导出完美方案，但忽略实施约束 |
-| 用于不需要创新的场景 | 日常运营决策用第一性原理是过度工程 |
-
----
-
-## 与其他方法论的关系
-
-- **补充 5 Whys**：5 Whys 找到根因后，用第一性原理设计颠覆性解决方案
-- **前置 Design Thinking**：在 Design Thinking 的"构思"阶段引入，突破常规解法
-- **对立 SWOT**：SWOT 评估现状约束，第一性原理质疑这些约束是否真实
+## Source
+Aristotle; popularized in modern business by Elon Musk.

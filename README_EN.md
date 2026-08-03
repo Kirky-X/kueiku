@@ -1,8 +1,6 @@
-# Kueiku (鬼谷子) — Methodology Compass Skill
+# Kueiku — Methodology Compass Skill
 
-[中文](README.md)
-
-[![GitHub Release](https://img.shields.io/github/v/release/Kirky-X/kueiku?style=flat-square)](https://github.com/Kirky-X/kueiku/releases) [![GitHub License](https://img.shields.io/github/license/Kirky-X/kueiku?style=flat-square)](LICENSE)
+[![GitHub Release](https://img.shields.io/github/v/release/Kirky-X/kueiku?style=flat-square)](https://github.com/Kirky-X/kueiku/releases) [![GitHub License](https://img.shields.io/github/v/release/Kirky-X/kueiku?style=flat-square)](LICENSE)
 
 Kueiku is a methodology navigation skill for AI agents, built in the Google Labs agent-first format (YAML frontmatter + Markdown routing table). It is not yet another analysis tool — it is a **methodology index map**: it guides agents to **choose the right framework first, then use it correctly** before analyzing problems, crafting strategy, making decisions, designing products, researching users, or organizing thinking.
 

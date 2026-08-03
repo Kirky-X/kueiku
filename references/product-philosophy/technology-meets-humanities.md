@@ -1,119 +1,22 @@
-# Technology Meets Humanities · 科技与人文的十字路口
+# Technology Meets Humanities
 
-## 核心理念
+## Core Concept
+Great products require 3-dimension assessment: Technology (does it work?) × Humanities (does it resonate with humans?) × Business (is it viable?). A single perspective is insufficient for good products.
 
-单一科技视角不足以做出好产品，需要人文视角补充。
+## Applicable Scenarios
+✅ **Best for**
+- Product evaluation
+- Design decisions
+- Team building
 
-科技视角回答"能不能做到"和"做得有多好"，人文视角回答"值不值得做"和"做出来对人意味着什么"。两者交汇处才是真正卓越产品的诞生地——技术先进但人文缺失的产品是冰冷的工具，人文动人但技术不足的产品是空洞的演示。
+## Key Steps
+1. For any product decision, assess all 3 dimensions:
+   - Technology: Is it technically feasible? Scalable? Reliable?
+   - Humanities: Does it resonate emotionally? Is it accessible? Does it respect users?
+   - Business: Is it economically viable? Does it serve the business model?
+2. If any dimension scores poorly, the product decision is incomplete
+3. Build teams with T-shaped skills covering all 3 dimensions
+4. Use the 3-dimension framework in design reviews
 
-> **三维评估**：技术先进性 × 人文感受性 × 商业可行性。
-> 任何一维缺失，产品都难以持久。三者交汇的"甜区"是产品决策的目标区域。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 产品整体评估（不只看技术指标）
-- 设计决策（功能 vs 体验的权衡）
-- 团队组建（补充人文视角的人才）
-- 新技术采用决策（技术可行 ≠ 用户体验好）
-
-⚠️ **慎用**
-- 纯工程任务（技术可行性是主决策维度）
-- 短期交付压力下的执行决策
-- 合规/安全相关决策（标准明确，非体验问题）
-
----
-
-## 执行步骤
-
-### Step 1：技术先进性评估
-
-评估产品的技术维度：
-- 技术是否领先于替代方案？
-- 技术指标（性能/精度/效率）如何？
-- 技术壁垒是否可持续？
-- 技术成熟度（参考 Gartner Hype Cycle）
-
-### Step 2：人文感受性评估
-
-评估产品的人文维度：
-- 用户使用时的情绪体验是什么？
-- 产品是否尊重用户的认知负担和时间？
-- 产品传递的价值观是否与目标用户共鸣？
-- 产品的美学和细节是否打磨？
-
-> 人文评估不能靠"我觉得"，需要用户访谈、行为数据、情绪反馈支撑。
-
-### Step 3：商业可行性评估
-
-评估产品的商业维度：
-- 单位经济模型是否成立？
-- 市场规模和增长趋势如何？
-- 竞争格局和差异化空间？
-- 商业模式是否可持续？
-
-### Step 4：三维交汇分析
-
-将三维评估结果绘制到坐标系，识别：
-- **甜区**（三维都强）：投入资源放大
-- **短板区**（某维度弱）：明确补足方向
-- **死区**（多维弱）：考虑退出或重构
-
-> 决策原则：不追求三维都满分，但不能有任何一维处于"死区"。
-
----
-
-## 输出模板
-
-```
-分析对象：[产品/功能]
-分析时间：[日期]
-
-技术先进性评估：
-  - 技术领先度：[强/中/弱] — 依据：[...]
-  - 技术指标：[关键指标及对比]
-  - 技术壁垒：[可持续/可复制/无壁垒]
-  - 技术成熟度：[阶段] — 参考 Gartner Hype Cycle
-
-人文感受性评估：
-  - 核心情绪体验：[描述]
-  - 认知负担：[低/中/高] — 依据：[...]
-  - 价值观共鸣：[描述]
-  - 细节打磨度：[评估]
-
-商业可行性评估：
-  - 单位经济：[LTV/CAC 等关键指标]
-  - 市场规模：[TAM/SAM/SOM]
-  - 差异化空间：[描述]
-  - 商业模式：[描述]
-
-三维交汇定位：
-  - 甜区：[哪些方面三维都强]
-  - 短板区：[哪个维度弱，补足方向]
-  - 死区：[是否有多维弱项需退出]
-
-决策：[投入放大 / 补足短板 / 退出重构]
-```
-
----
-
-## 常见陷阱
-
-| 陷阱 | 避免方式 |
-|------|---------|
-| 只评估技术维度，人文/商业靠"感觉" | 三维都必须有数据或访谈支撑 |
-| 把"人文"等同于"UI 好看" | 人文包括情绪、认知、价值观、美学多维 |
-| 追求三维都满分导致决策瘫痪 | 目标是避开死区，不是全满分 |
-| 商业维度被技术团队忽视 | 必须有商业视角的人参与评估 |
-| 技术先进性评估脱离用户需求 | 技术领先要服务于用户任务，不是为先进而先进 |
-
----
-
-## 与其他方法论的关系
-
-- **前置 Focus as No**：聚焦后对保留功能做三维评估
-- **互补 Whole Widget**：整合决策需兼顾技术可行性和人文体验
-- **对照 SWOT**：SWOT 是四象限现状评估，本方法是三维产品评估
-- **后接 Invisible Perfection**：人文维度的高分需要内部工艺支撑
+## Source
+Steve Jobs: "It is in Apple's DNA that technology alone is not enough — it's technology married with liberal arts that yields the best results."

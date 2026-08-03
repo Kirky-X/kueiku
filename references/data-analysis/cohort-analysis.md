@@ -1,20 +1,36 @@
-# Cohort Analysis · 同期群分析
+# Cohort Analysis
 
-## 核心思想
-把"平均留存率"拆为按时间分组的同期群留存曲线——按用户首次使用时间分组（如"1 月注册用户"为一组），追踪每组在 W1/W2/W4/W8 的留存。平均数会掩盖 cohort 间的差异，而 cohort 视图能暴露"新用户留存是否在变好/变差"。
+## Core Concept
+Track user retention by grouping users into cohorts (typically by signup date) and measuring how many remain active over time. Reveals whether retention is improving, stable, or declining — a key PMF signal.
 
-## 适用场景
-- 总留存率看似稳定但实际在恶化
-- 评估产品改动对不同时段用户的影响
-- 判断 PMF 是否达成（同期群曲线应趋于水平而非持续下降）
+## Applicable Scenarios
+✅ **Best for**
+- Is retention improving over time?
+- PMF (Product-Market Fit) assessment
+- Identifying drop-off patterns and engagement trends
 
-## 关键步骤
-1. 选定 cohort 维度：按注册时间（最常见）/按首次付费时间/按渠道来源
-2. 选定时间窗口：周（高频产品）/月（B2B 或低频产品）
-3. 计算每个 cohort 在 W1/W2/W4/W8/W12 的留存率
-4. 横向看单 cohort 曲线：drop-off 集中在哪一期（首周？次周？）
-5. 纵向看同期对比：W4 留存率随 cohort 推进是否提升（产品改进奏效）
-6. 结合 engagement 趋势：留存用户的使用频率是否同步增长
+⚠️ **Use with caution**
+- Very new products without enough cohort history
+- Highly seasonal products where cohort timing biases results
 
-## 来源
-标准 PM analytics 实践（Amplitude/Mixpanel 等推广）
+## Key Steps
+1. Define cohort grouping (typically by signup week/month)
+2. For each cohort, track active users at each subsequent period (Week 1, Week 2, etc.)
+3. Calculate retention rate = active users in period N / initial cohort size
+4. Build a cohort retention matrix (cohorts as rows, periods as columns)
+5. Look for patterns: are newer cohorts retaining better? Is there a drop-off cliff?
+
+## Output Template
+```
+Cohort Retention Matrix:
+           Period 1   Period 2   Period 3   ...
+Cohort A:   100%       60%        45%
+Cohort B:   100%       65%        52%
+Cohort C:   100%       70%        ??
+
+PMF Signal: [improving/stable/declining] retention trend
+Key Insight: [notable pattern or anomaly]
+```
+
+## Source
+Lean Analytics (Croll & Yoskovitz); standard product analytics methodology.

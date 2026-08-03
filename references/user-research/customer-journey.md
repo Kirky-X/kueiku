@@ -1,182 +1,21 @@
-# Customer Journey Map · 客户旅程地图
+# Customer Journey Map
 
-## 核心理念
+## Core Concept
+Visualize the user's complete journey across all touchpoints, mapping actions, emotions, pain points, and opportunities at each stage. Enables service optimization and cross-department alignment.
 
-将用户与产品/服务的**全流程交互**可视化，呈现每个触点的用户行为、情绪、痛点和机遇，帮助团队从**用户视角**而非功能视角理解产品体验。
+## Applicable Scenarios
+✅ **Best for**
+- Service optimization
+- Product experience design
+- Cross-department alignment
 
-旅程地图的维度：
+## Key Steps
+1. Define the persona and scenario
+2. Map journey stages: Awareness → Consideration → Purchase → Onboarding → Usage → Support → Renewal/Churn
+3. For each stage, document: user actions, touchpoints, emotions (high/low), pain points
+4. Identify "moments of truth" (critical decision points) and pain peaks
+5. Prioritize improvement opportunities based on impact and feasibility
+6. Share with cross-functional teams for alignment
 
-```
-阶段（Stage）：用户的旅程阶段划分
-行动（Actions）：用户在每个阶段做什么
-想法（Thoughts）：用户在想什么
-情绪（Emotions）：用户的情绪曲线（高/平/低）
-痛点（Pain Points）：阻碍或令人沮丧的体验
-机遇（Opportunities）：可以改善的设计机会
-触点（Touchpoints）：用户与产品/服务的接触渠道
-```
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 产品体验综合诊断（"用户在哪里流失或不满"）
-- 新产品/服务设计前的体验规划
-- 跨部门对齐（让产品、运营、客服共同理解用户体验全貌）
-- 发现被忽视的体验断点
-
-⚠️ **慎用**
-- 没有用户研究数据支撑时（凭想象绘制的旅程地图意义有限）
-- 需要量化分析的场景（配合 AARRR 互补）
-
----
-
-## 执行步骤
-
-### Step 1：确定范围
-
-- **用户视角**：选择一个具体的用户角色（Persona）
-- **旅程边界**：起点（用户第一次听说产品）和终点（用户流失 or 成为忠实用户）
-- **场景**：特定任务/目标（如"完成首次购买"或"从注册到完成第一个项目"）
-
-### Step 2：拆解旅程阶段
-
-将旅程划分为 4-7 个阶段，阶段名用**用户视角**描述（不是功能名）：
-
-常见阶段模式：
-```
-消费产品：认知 → 兴趣 → 考虑 → 购买 → 使用 → 续费/流失
-SaaS 产品：发现 → 注册 → 激活 → 日常使用 → 付费 → 续费/推荐
-线下服务：需求产生 → 搜索 → 到店 → 服务过程 → 离开 → 复购
-```
-
-### Step 3：填充每个阶段的维度
-
-对每个阶段，逐一填充：
-
-**行动（What are they doing?）**
-- 用户在这个阶段的具体操作步骤
-
-**想法（What are they thinking?）**
-- 用户的内心独白，关注点，疑虑
-- 来源：用户访谈引语、客服记录、用户评论
-
-**情绪（How do they feel?）**
-- 情绪曲线：用+5到-5的曲线表示情绪高低
-- 情绪峰值和低谷点是最重要的设计机会
-
-**触点（Touchpoints）**
-- 用户在这个阶段通过什么渠道接触产品/服务
-- 如：App、官网、邮件、客服、社交媒体
-
-**痛点（Pain Points）**
-- 让用户感到阻力、困惑、沮丧的具体时刻
-
-**机遇（Opportunities）**
-- 基于痛点和情绪低谷，可以设计哪些改善措施
-
-### Step 4：绘制情绪曲线
-
-将整个旅程的情绪变化绘制为曲线，重点标注：
-- **情绪低谷**：流失和不满的高风险点（首要改善对象）
-- **情绪峰值**：可以强化的"Wow Moment"
-- **情绪平段**：可能存在可以优化的低刺激区域
-
-### Step 5：提取机遇点并排优先级
-
-从旅程地图中提取所有机遇点，用 RICE 或 Eisenhower 矩阵排序优先级。
-
----
-
-## 输出模板（文字版）
-
-```
-旅程主体：[用户角色/Persona 描述]
-旅程场景：[具体目标，如"新用户完成首次项目创建"]
-旅程范围：[起点] → [终点]
-
----
-
-阶段 1：[阶段名称，用户视角]
-
-  触点：[App 首页 / 官网 / 邮件邀请]
-  
-  行动：
-    - [用户动作 1]
-    - [用户动作 2]
-  
-  想法：
-    "[用户内心独白，最好是访谈引语]"
-    "[...]"
-  
-  情绪：[+3 / 好奇，期待] 
-  
-  痛点：
-    - [具体痛点描述]
-    - [...]
-  
-  机遇：
-    - [改善方向 1]
-    - [...]
-
----
-
-阶段 2：[...] （同上格式）
-
----
-
-情绪曲线摘要：
-  阶段：[1]  [2]  [3]  [4]  [5]
-  情绪：[+3] [+1] [-2] [-4] [+2]
-  关键：阶段 4 是情绪最低谷，原因：[...]
-
-机遇点优先级：
-  P0（必须修复）：[阶段4痛点，情绪-4]
-  P1：[...]
-  P2：[...]
-```
-
----
-
-## 执行示例（片段）
-
-**场景**：SaaS 项目管理工具，新用户首次使用旅程
-
-```
-阶段 3：激活（注册后 24 小时内）
-
-  触点：Web App、引导邮件
-
-  行动：
-    - 登录产品
-    - 查看 Onboarding Checklist
-    - 尝试创建第一个项目
-    - 邀请团队成员（卡壳）
-
-  想法：
-    "界面很多东西，不知道从哪开始"
-    "我只想先建一个项目试试，为什么要填这么多"
-    "邀请成员怎么这么复杂？"
-
-  情绪：+1 → -3（创建项目时开始焦虑）
-
-  痛点：
-    - 信息密度过高，认知负荷大
-    - 邀请流程需要 5 步，用户找不到入口
-    - 无法跳过非核心配置直接体验核心功能
-
-  机遇：
-    - 重设计 Onboarding，只保留最核心的 3 个步骤
-    - 把邀请成员简化为一键复制链接
-    - 提供示例项目模板，让用户"看到成功状态"
-```
-
----
-
-## 与其他方法论的关系
-
-- **前置 JTBD**：JTBD 定义用户的核心 Job，旅程地图描述完成这个 Job 的过程
-- **配合 AARRR**：AARRR 提供量化漏斗（哪个阶段数字下滑），旅程地图提供质化解释（为什么下滑）
-- **输出接 RICE**：机遇点排优先级
-- **输入 Design Thinking**：旅程地图是 Empathize 阶段的核心工具，产出用于 Define 阶段
+## Source
+Service design methodology; widely used in UX and customer experience.

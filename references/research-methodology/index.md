@@ -1,23 +1,23 @@
-# Research Methodology · 研究方法论
+# Research Methodology
 
-**适用场景**：需要对复杂问题做系统化调研，输出有证据支撑的结论
+**When to use**: Need systematic research on complex problems, producing evidence-backed conclusions
 
-| 方法论 | 一句话描述 | 最佳场景 | Reference |
+| Methodology | One-line description | Best scenario | Reference |
 | --- | --- | --- | --- |
-| **Systematic Research Process** | 提问→检索→评估→综合→输出 五步闭环研究流程 | 复杂问题调研、行业研究、技术选型调研 | `systematic-research-process.md` |
+| **Systematic Research Process** | Question→Search→Evaluate→Synthesize→Output 5-step closed-loop research process | Complex problem research, industry research, technology selection research | `systematic-research-process.md` |
 
-## 各方法论最低信息需求
+## Minimum Information Requirements per Methodology
 
-- **Systematic Research Process**：明确的研究问题 + 可访问的多源信息渠道
+- **Systematic Research Process**: Clear research question + accessible multi-source information channels
 
-## 路由触发信号
+## Routing Trigger Signals
 
-- "研究/调研/分析某个复杂问题" → Systematic Research Process（主）
-- "需要多源交叉验证的结论" → Systematic Research Process（主）
-- "技术选型/行业趋势/竞品深度" → Systematic Research Process（主）
+- "Research / investigate / analyze a complex problem" → Systematic Research Process (primary)
+- "Need conclusions with multi-source cross-validation" → Systematic Research Process (primary)
+- "Technology selection / industry trends / competitive deep dive" → Systematic Research Process (primary)
 
-## 常见组合
+## Common Combinations
 
-- **行业研究**：Systematic Research Process（信息收集）→ Industry Value Chain（价值链分析）→ Gartner Hype Cycle（技术成熟度）
-- **竞品调研**：Systematic Research Process（信息收集）→ SWOT（竞争对比）
-- **技术选型**：Systematic Research Process（信息收集）→ Gartner Hype Cycle（成熟度判断）→ DCF（投入产出评估）
+- **Industry research**: Systematic Research Process (information gathering) → Industry Value Chain (value chain analysis) → Gartner Hype Cycle (technology maturity)
+- **Competitive research**: Systematic Research Process (information gathering) → SWOT (competitive comparison)
+- **Technology selection**: Systematic Research Process (information gathering) → Gartner Hype Cycle (maturity assessment) → DCF (ROI evaluation)

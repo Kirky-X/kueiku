@@ -1,26 +1,14 @@
-# Monetization Strategy · 变现策略
+# Monetization Strategy
 
-## 核心思想
-把"怎么赚钱"拆为 7 种可对比的模型，强迫团队从用户价值与商业模式匹配的角度选型，而不是默认"做 SaaS 订阅"。模型选择会反过来影响产品形态与定价。
+## Core Concept
+7 monetization models: Freemium, Subscription, Usage-based, Per-seat, One-time, Marketplace, Advertising.
 
-## 适用场景
-- 新产品立项，需确定商业模式
-- 已有产品但变现效率低，考虑切换/叠加模型
-- 投资人/董事会要求说明 monetization 路径
+## Applicable Scenarios
+✅ **Best for**
+- Business model selection, monetization efficiency optimization
 
-## 关键步骤
-1. 列出 7 种候选模型并评估适配度：
-   - Freemium：免费版获客，付费版变现（适合边际成本低的产品）
-   - Subscription：周期订阅（适合持续价值产品）
-   - Usage-based：按用量计费（适合成本与用量强相关）
-   - Enterprise-seat：按席位（适合 B2B 协同工具）
-   - One-time：买断（适合工具型，但 LTV 低）
-   - Marketplace：双边抽佣（需供需平衡）
-   - Advertising：广告（需规模流量）
-2. 对每种评估：单位经济、对产品体验的影响、扩展性
-3. 主选一种 + 可叠加 1–2 种辅助
-4. 验证假设：用户是否真的接受这种付费方式
-5. 设计从免费到付费的转化路径与时间表
+## Key Steps
+1. List all 7 monetization models\n2. Assess fit for each: your product type, user willingness to pay, market norms\n3. Select primary model + backup\n4. Design pricing tiers\n5. Validate with market data
 
-## 来源
-Product Compass（Monetization Strategy 框架）
+## Source
+Standard monetization strategy methodology.

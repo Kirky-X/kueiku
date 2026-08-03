@@ -1,161 +1,19 @@
-# Fishbone Diagram · 鱼骨图 / 石川图
+# Fishbone / Ishikawa Diagram
 
-## 核心理念
+## Core Concept
+A fishbone (cause-and-effect) diagram systematically categorizes potential causes of a problem across multiple dimensions, helping teams visualize the full landscape of contributing factors rather than fixating on the first plausible cause.
 
-将问题的所有潜在成因**系统性、多维度**地可视化，避免遗漏成因类别。形似鱼骨：鱼头=问题，主骨=大类成因，小骨=具体成因。
+## Applicable Scenarios
+- Quality issues with multiple potential contributing factors
+- Team brainstorming sessions for root cause identification
+- When 5 Whys alone is insufficient due to multi-factor causation
 
-由日本质量管理专家石川馨（Kaoru Ishikawa）在1960年代发明。
+## Key Steps
+1. Write the problem statement at the "head" of the fish
+2. Define major cause categories (common: 6M for manufacturing — Man/Machine/Material/Method/Measurement/Mother Nature; or 4P for services — Policies/Procedures/People/Plant)
+3. Brainstorm potential causes within each category
+4. For each potential cause, ask "why" to drill deeper (combine with 5 Whys)
+5. Validate causes with data; prioritize the most likely root causes
 
-> 5 Whys 是垂直深挖，Fishbone 是水平铺开——二者互补。
-
----
-
-## 适用场景
-
-✅ **最适合**
-- 问题有**多个相互独立的成因**（5 Whys 只能处理单条因果链）
-- 需要**团队协作**头脑风暴成因（Fishbone 可视化结构利于讨论）
-- 制造业/工程领域的质量问题分析
-- 复杂业务问题的全貌梳理
-
-⚠️ **慎用**
-- 单一明确根因的问题（5 Whys 更直接）
-- 需要定量分析的场景（Fishbone 是定性工具）
-
----
-
-## 常用分类框架
-
-### 6M 框架（制造/工程领域）
-
-| 类别 | 英文 | 说明 |
-|------|------|------|
-| 人员 | Man / People | 人为操作、技能、疲劳、疏忽 |
-| 机器 | Machine | 设备故障、工具磨损、校准问题 |
-| 材料 | Material | 原材料质量、供应商问题 |
-| 方法 | Method | 流程、操作规程、标准 |
-| 测量 | Measurement | 测量方式偏差、仪器精度 |
-| 环境 | Milieu/Environment | 温度、湿度、噪声、工作环境 |
-
-### 4P 框架（服务/营销领域）
-
-| 类别 | 说明 |
-|------|------|
-| 流程 (Policies) | 政策规则、审批流程、SOP |
-| 流程 (Procedures) | 操作步骤、执行方式 |
-| 人员 (People) | 团队能力、培训、协作 |
-| 工厂/设施 (Plant) | 系统、工具、物理空间 |
-
-### 8P 框架（互联网/产品领域，自定义）
-
-可根据产品特点自定义类别，例如：
-- **产品 (Product)**：功能缺陷、设计问题
-- **技术 (Platform)**：系统稳定性、性能
-- **流程 (Process)**：研发流程、协作方式
-- **人员 (People)**：技能、资源
-- **数据 (Data)**：数据质量、监控覆盖
-- **外部 (External)**：第三方依赖、政策
-
----
-
-## 执行步骤
-
-### Step 1：定义问题（鱼头）
-
-在图的右侧写出**清晰、具体**的问题陈述（同 5 Whys 的要求）。
-
-### Step 2：选择分类框架
-
-根据问题领域选择 6M / 4P / 自定义框架，画出主骨。
-
-### Step 3：集体脑暴成因
-
-对每个类别，**头脑风暴**所有可能的成因，写在对应的小骨上：
-- 不评判，先发散
-- 鼓励追问"这条成因的成因是什么"（可向小骨再分叉）
-- 每个成因用**名词短语**描述，不是解决方案
-
-### Step 4：整理和验证
-
-- 标记**高可能性**的成因（用数据/观察支撑）
-- 识别**成因聚集区域**（哪个类别问题最多）
-- 确定**下一步需要验证**的成因
-
-### Step 5：优先级排序
-
-选出 Top 3-5 最可能的根因，进行深入调查（可以对每条用 5 Whys 继续追问）。
-
----
-
-## 输出模板（文字版）
-
-```
-问题（鱼头）：[具体问题陈述]
-
-分析框架：[6M / 4P / 自定义]
-
-成因梳理：
-
-【人员 / People】
-  - [成因 A]
-  - [成因 B]
-  - [成因 B.1]（成因 B 的子成因）
-
-【方法 / Method】
-  - [成因 C]
-  - [成因 D]
-
-【技术 / Machine / Platform】
-  - [成因 E]
-
-【材料 / Material / Data】
-  - [成因 F]
-
-【环境 / Environment / External】
-  - [成因 G]
-
-高优先级成因（需进一步调查）：
-  1. [成因 X] — 证据/理由：[...]
-  2. [成因 Y] — 证据/理由：[...]
-  3. [成因 Z] — 证据/理由：[...]
-```
-
----
-
-## 执行示例
-
-**问题**：APP 新版本上线后 7 日留存率从 42% 下降至 28%
-
-```
-【产品/功能】
-  - 核心功能入口下沉，用户找不到
-  - 新 Tab 栏设计用户不熟悉
-  - 首页信息密度过高，认知负荷增加
-
-【技术/性能】
-  - 新版包体积增大，低端机崩溃率上升
-  - 图片懒加载延迟导致白屏
-
-【流程/测试】
-  - A/B 测试覆盖率不足，只测了 5% 用户
-  - 测试期间未观察留存指标，只看了 DAU
-
-【数据/埋点】
-  - 新版本埋点遗漏，用户行为路径不可追踪
-
-【外部/竞品】
-  - 竞品同期上线了相似功能（分流）
-
-高优先级：
-  1. 核心功能入口下沉 — 热力图数据显示核心路径点击下降 60%
-  2. 低端机崩溃率上升 — Crash 报告显示崩溃率从 0.3% 升至 2.1%
-  3. A/B 测试流程缺陷 — 这次测试确认未包含留存指标
-```
-
----
-
-## 与其他方法论的关系
-
-- **配合 5 Whys**：Fishbone 铺开全貌，5 Whys 对重点成因深挖
-- **输入 RICE**：高优先级成因对应的解决方案可用 RICE 排优先级
-- **配合数据分析**：Fishbone 生成假设，数据分析验证假设
+## Source
+Kaoru Ishikawa (1960s); quality management tool.

@@ -1,47 +1,47 @@
-# Market Research · 市场研究
+# Market Research
 
-**适用场景**：市场规模、细分、用户分群、画像
+**When to use**: Market sizing, segmentation, user groups, personas
 
-| 方法论 | 一句话描述 | 最佳场景 | Reference |
+| Methodology | One-line description | Best scenario | Reference |
 | --- | --- | --- | --- |
-| **Market Sizing** | TAM/SAM/SOM + top-down 与 bottom-up 三角验证 | 融资 deck、新市场评估 | `market-sizing.md` |
-| **Market Segmentation** | 3-5 个 non-overlapping segments，behavior+JTBD+needs | 战略制定初期明确服务谁 | `market-segmentation.md` |
-| **User Segmentation** | 从反馈数据按 behavior/JTBD/needs 聚类 | 同一客户群内部使用模式差异分析 | `user-segmentation.md` |
-| **User Personas** | 3 个 persona，含 JTBD+Top3 Pains/Gains+Unexpected Insight | 团队对目标用户认知对齐 | `user-personas.md` |
-| **STP Analysis** | Segmentation-Targeting-Positioning 三步法 | 市场进入、产品定位、营销策略制定 | `stp-analysis.md` |
-| **Perceptual Mapping** | 二维坐标图展示消费者对品牌的感知定位 | 品牌定位、竞品感知对比、定位调整 | `perceptual-mapping.md` |
-| **Technology Adoption Lifecycle** | 创新者→早期采用者→大众→落后者 5 阶段+鸿沟 | 技术产品营销、跨越鸿沟策略、目标客户选择 | `technology-adoption-lifecycle.md` |
+| **Market Sizing** | TAM/SAM/SOM + top-down and bottom-up triangulation | Funding decks, new market assessment | `market-sizing.md` |
+| **Market Segmentation** | 3-5 non-overlapping segments, behavior+JTBD+needs | Early strategy definition of who to serve | `market-segmentation.md` |
+| **User Segmentation** | Cluster by behavior/JTBD/needs from feedback data | Analyzing usage pattern differences within the same customer base | `user-segmentation.md` |
+| **User Personas** | 3 personas with JTBD + Top 3 Pains/Gains + Unexpected Insight | Aligning team understanding of target users | `user-personas.md` |
+| **STP Analysis** | Segmentation-Targeting-Positioning 3-step method | Market entry, product positioning, marketing strategy | `stp-analysis.md` |
+| **Perceptual Mapping** | 2D coordinate chart showing consumer brand perception positioning | Brand positioning, competitive perception comparison, positioning adjustment | `perceptual-mapping.md` |
+| **Technology Adoption Lifecycle** | Innovators→Early Adopters→Majority→Laggards 5 stages + the chasm | Technology product marketing, crossing the chasm strategy, target customer segment selection | `technology-adoption-lifecycle.md` |
 
-## 各方法论最低信息需求
+## Minimum Information Requirements per Methodology
 
-- **Market Sizing**：需要行业总量数据 + 单客户 ARPU 数据
-- **Market Segmentation**：需要客户行为/JTBD/needs 数据
-- **User Segmentation**：需要产品分析 + 调研 + 工单数据
-- **User Personas**：需要访谈/调研数据聚类
-- **STP Analysis**：需要细分维度数据 + 各段规模/竞争/匹配度评估
-- **Perceptual Mapping**：需要 50+ 目标段用户对多品牌的感知评分数据
-- **Technology Adoption Lifecycle**：需要客户构成 + 获客方式 + 成交周期数据
+- **Market Sizing**: Requires industry volume data + per-customer ARPU data
+- **Market Segmentation**: Requires customer behavior/JTBD/needs data
+- **User Segmentation**: Requires product analysis + surveys + ticket data
+- **User Personas**: Requires interview/survey data clustering
+- **STP Analysis**: Requires segmentation dimension data + per-segment scale/competition/fit assessment
+- **Perceptual Mapping**: Requires 50+ target segment users' perception ratings for multiple brands
+- **Technology Adoption Lifecycle**: Requires customer composition + acquisition channel + deal cycle data
 
-## 路由触发信号
+## Routing Trigger Signals
 
-- "市场规模测算" → Market Sizing（主）
-- "市场细分/3-5 个 non-overlapping" → Market Segmentation（主）
-- "用户细分/使用行为聚类" → User Segmentation（主）
-- "用户画像/3 个 persona/团队用户认知对齐" → User Personas（主）⚡ 若需挖掘用户要完成的“任务”→用 JTBD（产品与增长类）；若需共情理解用户感受→用 Empathy Map（用户研究类）
-- "市场进入/产品定位/营销策略制定" → STP Analysis（主）
-- "品牌定位/竞品感知对比/定位调整" → Perceptual Mapping（主）
-- "技术产品营销/跨越鸿沟/目标客户段选择" → Technology Adoption Lifecycle（主）
+- "Market sizing" → Market Sizing (primary)
+- "Market segmentation / 3-5 non-overlapping" → Market Segmentation (primary)
+- "User segmentation / usage behavior clustering" → User Segmentation (primary)
+- "User personas / 3 personas / team user awareness alignment" → User Personas (primary) ⚡ If need to uncover users' "jobs" → use JTBD (Product & Growth); if need empathetic understanding of user feelings → use Empathy Map (User Research)
+- "Market entry / product positioning / marketing strategy" → STP Analysis (primary)
+- "Brand positioning / competitive perception comparison / positioning adjustment" → Perceptual Mapping (primary)
+- "Technology product marketing / crossing the chasm / target customer segment selection" → Technology Adoption Lifecycle (primary)
 
-## 常见组合
+## Common Combinations
 
-- **市场进入策略**：Market Sizing → Market Segmentation → STP Analysis → Perceptual Mapping
-- **新产品上市**：STP Analysis → Technology Adoption Lifecycle → Pricing Strategy
-- **品牌定位优化**：Perceptual Mapping → STP Analysis（重新定位）
+- **Market entry strategy**: Market Sizing → Market Segmentation → STP Analysis → Perceptual Mapping
+- **New product launch**: STP Analysis → Technology Adoption Lifecycle → Pricing Strategy
+- **Brand positioning optimization**: Perceptual Mapping → STP Analysis (repositioning)
 
-## 方法论互斥与先后约束
+## Methodology Mutual Exclusion and Ordering Constraints
 
-| 约束对 | 规则 | 原因 |
+| Constraint pair | Rule | Reason |
 | --- | --- | --- |
-| Market Segmentation → User Personas | **先 Segmentation 后 Personas** | 先明确市场细分，再为每个目标段构建用户画像，避免画像无细分基础 |
-| User Personas vs JTBD | **按目标选择**：描述典型用户完整画像→Personas；挖掘用户要完成的“任务”→JTBD | 输入数据可重叠但输出目的不同 |
-| User Segmentation vs RFM Model | **按数据基础选择**：需行为/JTBD/needs 聚类→User Segmentation；需交易数据三维度分层→RFM Model | User Segmentation 更广泛，RFM 聚焦交易数据 |
+| Market Segmentation → User Personas | **Segmentation first, then Personas** | Define market segments first, then build personas per target segment; avoids personas without segmentation basis |
+| User Personas vs JTBD | **Choose by goal**: describe typical user's complete profile→Personas; uncover users' "jobs"→JTBD | Input data may overlap but output purposes differ |
+| User Segmentation vs RFM Model | **Choose by data foundation**: need behavior/JTBD/needs clustering→User Segmentation; need 3-dimension transaction data tiering→RFM Model | User Segmentation is broader; RFM focuses on transaction data |
