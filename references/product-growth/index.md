@@ -26,7 +26,7 @@
 
 ## 路由触发信号
 
-- "理解用户真实需求" → JTBD（主）
+- "用户要完成什么任务/功能替代分析/需求挖掘" → JTBD（主）⚡ 若需描述典型用户完整画像→用 User Personas（市场研究类）；若需共情理解用户感受→用 Empathy Map（用户研究类）
 - "增长瓶颈分析" → AARRR Funnel（主）
 - "从0到1设计产品/服务" → Design Thinking（主）
 - "产品迭代验证假设" → Lean Build-Measure-Learn（主）
@@ -42,3 +42,11 @@
 - **增长诊断**：AARRR → 5 Whys → RICE
 - **需求全流程管理**：Kano（分类性质）→ MoSCoW（裁剪范围）→ RICE（排优先级）
 - **指标体系搭建**：North Star（定义核心指标）→ AARRR（分层拆解）→ OKR（目标对齐）
+
+## 方法论互斥与先后约束
+
+| 约束对 | 规则 | 原因 |
+| --- | --- | --- |
+| JTBD vs User Personas | **按目标选择**：挖掘用户要完成的“任务”→JTBD；描述典型用户 archetype→Personas | 输入数据可重叠但输出目的不同，JTBD 输出任务陈述，Personas 输出用户画像 |
+| JTBD vs Empathy Map | **按目标选择**：挖掘功能性/情感性任务→JTBD；共情理解用户感受→Empathy Map | JTBD 是定性访谈框架，Empathy Map 是共情映射工具 |
+| Kano → MoSCoW → RICE | **需求全流程先后顺序** | Kano 分类性质→MoSCoW 裁剪范围→RICE 排优先级，不可颠倒 |

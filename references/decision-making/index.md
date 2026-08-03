@@ -28,11 +28,11 @@
 
 ## 路由触发信号
 
-- "功能/需求优先级排序" → RICE Scoring（主）
+- "功能/需求优先级排序" → RICE Scoring（主）⚡ 若评估维度需自定义（非 R/I/C/E）→用 Decision Matrix；若需 30 分钟内快速粗筛→用 ICE
 - "个人/团队任务管理" → Eisenhower Matrix（主）
 - "目标制定与追踪" → OKR（主）
 - "重大决策前风险预演" → Pre-mortem & Counterfactual（主）
-- "多方案多标准选型" → Decision Matrix（主）
+- "多方案多标准选型（评估维度需自定义）" → Decision Matrix（主）⚡ 若评估维度固定为 Reach/Impact/Confidence/Effort→用 RICE
 - "需求裁剪/范围管理" → MoSCoW Method（主）
 - "系统性风险识别/失效模式分析" → FMEA（主）
 - "重大人生决策/职业选择/创业方向（价值型决策）" → Death Filter（主）
@@ -46,3 +46,41 @@
 - **重大人生/创业决策**：Death Filter（过滤真实倾向）→ Pre-mortem（预演选定方向风险）→ Second-Order Thinking（长期效应）
 - **项目启动风险评估**：Pre-mortem（识别风险）→ Risk Matrix（量化排序）→ FMEA（高风险项深度分析）
 - **技术选型风险**：Decision Matrix（方案对比）→ Risk Matrix（风险排序）→ Second-Order Thinking（连锁效应）
+
+## 相似方法论消歧决策树
+
+当用户意图在以下方法论之间模糊时，按决策树消歧：
+
+```
+"多选项评估排序"
+  ├─ 评估维度已固定为 Reach/Impact/Confidence/Effort？
+  │   └─ 是 → RICE Scoring
+  ├─ 评估维度需要自定义？（如技术选型的性能/成本/风险）
+  │   └─ 是 → Decision Matrix
+  └─ 需要 30 分钟内快速粗筛，不需要精确量化？
+      └─ 是 → ICE Framework
+
+"任务/需求排序"
+  ├─ 是个人/团队日常任务管理？
+  │   └─ 是 → Eisenhower Matrix
+  ├─ 是产品功能/需求优先级？
+  │   └─ 是 → RICE Scoring
+  └─ 是需求范围裁剪（做/不做）？
+      └─ 是 → MoSCoW Method
+
+"风险评估"
+  ├─ 已有明确计划，需预演失败场景？
+  │   └─ 是 → Pre-mortem
+  ├─ 需系统化识别失效模式？
+  │   └─ 是 → FMEA
+  └─ 需快速风险全景扫描与排序？
+      └─ 是 → Risk Matrix
+```
+
+## 方法论互斥与先后约束
+
+| 约束对 | 规则 | 原因 |
+| --- | --- | --- |
+| RICE ↔ ICE | **ICE 粗筛后→RICE 精排**，不要并行使用 | ICE 是 RICE 的简化版，并行使用产生冗余输出 |
+| RICE vs Decision Matrix | **按评估维度选择**：固定 R/I/C/E→RICE；自定义维度→Decision Matrix | 核心差异在于维度是否固定，输入结构相似但用途不同 |
+| FMEA → Pre-mortem | **FMEA 先于 Pre-mortem**（风险全面评估场景） | FMEA 系统化识别，Pre-mortem 作为想象式补充 |
