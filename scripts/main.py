@@ -124,3 +124,7 @@ def main():
         "riskparity": cmd_riskparity, "perf": cmd_perf,
     }
     commands[args.command](args)
+
+
+if __name__ == "__main__":
+    main()

@@ -154,7 +154,7 @@ flowchart TD
 
 ## 自动化脚本工具
 
-`scripts/tools/kueiku-calc.py` 提供 19 个高计算密度方法论的自动化计算，纯 Python 标准库实现，无外部依赖。代码按主题拆分至 `scripts/` 目录：
+`scripts/main.py` 提供 19 个高计算密度方法论的自动化计算：
 
 | 模块 | 文件 | 子命令 |
 | --- | --- | --- |
@@ -193,28 +193,27 @@ flowchart TD
 
 ```bash
 # 用法
-python scripts/tools/kueiku-calc.py <subcommand> -i <input.csv> [-o report.md] [--json]
+python scripts/main.py <subcommand> -i <input.csv> [-o report.md] [--json]
 
 # 示例
-python scripts/tools/kueiku-calc.py fmea     -i failures.csv
-python scripts/tools/kueiku-calc.py dcf      -i cashflows.csv --rate 0.10 --growth 0.03 --shares 1000000
-python scripts/tools/kueiku-calc.py abtest   -i experiment.csv
-python scripts/tools/kueiku-calc.py rfm      -i customers.csv
-python scripts/tools/kueiku-calc.py bcg      -i products.csv
-python scripts/tools/kueiku-calc.py cohort   -i retention.csv
-python scripts/tools/kueiku-calc.py factor   -i factor-data.csv
-python scripts/tools/kueiku-calc.py momentum -i prices.csv
-python scripts/tools/kueiku-calc.py riskparity -i asset-returns.csv
-python scripts/tools/kueiku-calc.py perf     -i strategy-returns.csv
+python scripts/main.py fmea     -i failures.csv
+python scripts/main.py dcf      -i cashflows.csv --rate 0.10 --growth 0.03 --shares 1000000
+python scripts/main.py abtest   -i experiment.csv
+python scripts/main.py rfm      -i customers.csv
+python scripts/main.py bcg      -i products.csv
+python scripts/main.py cohort   -i retention.csv
+python scripts/main.py factor   -i factor-data.csv
+python scripts/main.py momentum -i prices.csv
+python scripts/main.py riskparity -i asset-returns.csv
+python scripts/main.py perf     -i strategy-returns.csv
 ```
 
-每个子命令支持 `--help` 查看完整 CSV 格式说明。支持 Markdown 报告输出（默认）和 JSON 格式（`--json`）。
+支持 Markdown 报告输出（默认）和 JSON 格式（`--json`）。
 
 ---
 
 ## 维护说明
 
-- 新增方法论：放入对应 `references/<category>/` 目录，并更新该类别 `index.md` 的表格、最低信息需求、路由触发信号
-- 新增类别：在 SKILL.md 类别总览表追加一行，创建 `references/<category>/index.md`
-- 路由表调整：修改 SKILL.md "用户意图 → 类别快速路由" 章节
+- 新增方法论：更新该类别 `index.md` 的表格、最低信息需求、路由触发信号
+- 新增类别：在类别总览表追加一行，创建对应 `index.md`
 - **读取原则**：仅在需要时读取对应的 reference 文件，不要预加载全部文件
