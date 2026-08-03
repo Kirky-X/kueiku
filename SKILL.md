@@ -1,6 +1,6 @@
 ---
 name: kueiku
-description: "工作方法论导航地图。触发：分析/策略/决策/用户研究/结构化思考/产品发现/上市策略/市场研究/数据分析/编程/架构优化/根因分析/优先级排序/风险预演/技术选型/TDD"
+description: "工作方法论导航地图。触发：分析/策略/决策/用户研究/结构化思考/产品发现/上市策略/市场研究/数据分析/编程/架构优化/根因分析/优先级排序/风险预演/技术选型/TDD/量化投资/因子选股/组合优化/回测/代码审查/重构/CI-CD/可观测性/DDD/性能优化/安全设计/API设计/数据库设计/故障响应/Git工作流/依赖管理/微服务"
 license: MIT
 ---
 
@@ -24,7 +24,7 @@ flowchart TD
     I -- 否 --> K["完成"]
 ```
 
-**能力概览**：18 个类别 × 95 个方法论。每个类别的方法论清单、最佳场景、最低信息需求均在该类别的 `index.md` 中。
+**能力概览**：19 个类别 × 116 个方法论。每个类别的方法论清单、最佳场景、最低信息需求均在该类别的 `index.md` 中。
 
 ## 核心原则
 
@@ -36,7 +36,7 @@ flowchart TD
 
 ---
 
-## 类别总览（18 类 × 95 个方法论）
+## 类别总览（19 类 × 116 个方法论）
 
 | # | 类别 | 适用任务类型 | 数量 | 索引路径 |
 | --- | --- | --- | --- | --- |
@@ -52,12 +52,13 @@ flowchart TD
 | 10 | 数据分析 | 同期群、A/B 测试、指标体系、RFM | 4 | `references/data-analysis/index.md` |
 | 11 | AI 交付 | 交付物标准、文档代码 drift | 2 | `references/ai-delivery/index.md` |
 | 12 | 执行 | 结果导向路线图、战略红队、敏捷需求 | 4 | `references/execution/index.md` |
-| 13 | 编程与架构 | TDD、小步计划、服务契约、Agent DX | 4 | `references/engineering/index.md` |
+| 13 | 编程与架构 | TDD、小步计划、服务契约、Agent DX、代码审查、重构、架构设计、CI/CD、可观测性、DDD、性能优化、安全设计、API 设计、数据库设计、故障响应、Git 工作流、依赖管理、微服务 | 18 | `references/engineering/index.md` |
 | 14 | 产品哲学 | 激进减法、垂直整合、科技人文、隐形完美 | 4 | `references/product-philosophy/index.md` |
 | 15 | 领导力 | 现实扭曲力场、A 级人才密度、变革管理 | 3 | `references/leadership/index.md` |
 | 16 | 财务分析 | 杜邦、DCF、可比公司、EVA | 4 | `references/financial-analysis/index.md` |
 | 17 | 研究方法论 | 系统化研究流程 | 1 | `references/research-methodology/index.md` |
 | 18 | 行业分析 | 行业价值链、技术成熟度曲线 | 2 | `references/industry-analysis/index.md` |
+| 19 | 量化投资 | 因子选股、组合优化、风险平价、动量策略、统计套利、回测验证、ML 选股 | 7 | `references/quantitative-investment/index.md` |
 
 ---
 
@@ -77,12 +78,13 @@ flowchart TD
 **数据分析** — 留存分析→Cohort Analysis；A/B测试→A/B Test Analysis；指标选型→Lean Analytics Metrics；用户价值分层→RFM Model
 **AI 交付** — 交付物标准→Shipping Artifacts；drift检测→Intended vs Implemented
 **执行** — 结果导向路线图→Outcome Roadmap；战略红队→Strategy Red Team；敏捷需求→User Stories；情境化需求→Job Stories
-**编程与架构** — 测试驱动→TDD；小步计划→Bite-Sized Plan；服务契约→Typed Service Contracts；Agent友好度→Agent DX/CLI Scale
+**编程与架构** — 测试驱动→TDD；小步计划→Bite-Sized Plan；服务契约→Typed Service Contracts；Agent友好度→Agent DX/CLI Scale；代码审查→Code Review Checklist；重构→Refactoring Patterns；架构设计→Clean Architecture；领域建模→DDD；微服务→Microservices Patterns；API设计→API Design；数据库设计→Database Schema Design；CI/CD→CI/CD Pipeline Design；安全设计→Security by Design；可观测性→Observability；性能优化→Performance Optimization；故障响应→Incident Response & Postmortem；Git工作流→Git Workflow Strategies；依赖管理→Dependency Management
 **产品哲学** — 激进减法→Focus as No；垂直整合→Whole Widget；科技人文→Technology Meets Humanities；隐形完美→Invisible Perfection
 **领导力** — 现实扭曲力场→Reality Distortion Field；A 级人才密度→A-Player Density；组织变革→Change Management
 **财务分析** — ROE 拆解→DuPont；企业估值→DCF；可比公司→Comparable Company；价值创造→EVA
 **研究方法论** — 系统化研究→Systematic Research Process
 **行业分析** — 行业价值链→Industry Value Chain；技术成熟度→Gartner Hype Cycle
+**量化投资** — 因子选股→Factor Investing；组合优化→Portfolio Optimization；风险预算→Risk Parity；趋势跟踪→Momentum Strategy；配对交易→Statistical Arbitrage；策略回测→Backtesting Framework；AI 选股→ML Stock Selection
 
 ---
 
@@ -152,7 +154,20 @@ flowchart TD
 
 ## 自动化脚本工具
 
-`scripts/tools/kueiku-calc.py` 提供 15 个高计算密度方法论的自动化计算，纯 Python 标准库实现，无外部依赖。
+`scripts/tools/kueiku-calc.py` 提供 19 个高计算密度方法论的自动化计算，纯 Python 标准库实现，无外部依赖。代码按主题拆分至 `scripts/tools/kueiku_calc/` 包：
+
+| 模块 | 文件 | 子命令 |
+| --- | --- | --- |
+| 公共工具 | `kueiku_calc/utils.py` | — |
+| 决策与优先级 | `kueiku_calc/decision.py` | `rice`, `dmatrix`, `ice` |
+| 风险评估 | `kueiku_calc/risk.py` | `risk`, `fmea`, `pareto` |
+| 财务分析 | `kueiku_calc/financial.py` | `dupont`, `dcf`, `eva` |
+| 数据分析 | `kueiku_calc/data.py` | `abtest`, `rfm`, `cohort` |
+| 战略矩阵 | `kueiku_calc/strategy.py` | `oppscore`, `bcg`, `gemckinsey` |
+| 量化投资 | `kueiku_calc/quant.py` | `factor`, `momentum`, `riskparity`, `perf` |
+| CLI 入口 | `kueiku_calc/main.py` | 全部 19 个子命令 |
+
+### 子命令一览
 
 | 子命令 | 方法论 | 功能 | CSV 输入 |
 | --- | --- | --- | --- |
@@ -171,6 +186,10 @@ flowchart TD
 | `cohort` | Cohort Analysis | 同期群留存率矩阵 + PMF信号 | cohort,period,active,initial |
 | `bcg` | BCG Matrix | 增长率×份额 → 4象限战略建议 | product,market_growth,relative_share[,revenue] |
 | `gemckinsey` | GE-McKinsey | 吸引力×实力 → 9格分类 | business,attractiveness,strength[,revenue] |
+| `factor` | Factor Investing | IC/IC_IR + 5 分组收益 + 单调性检验 | date,asset,factor_value,forward_return |
+| `momentum` | Momentum Strategy | 多期收益 + 截面排名 + 分组收益 + 滚动动量 | date,asset1,asset2,... |
+| `riskparity` | Risk Parity | 迭代求解风险平价权重 + 风险分解 | period,asset1,asset2,... |
+| `perf` | Backtesting Framework | Sharpe/Sortino/Calmar/回撤/VaR/胜率/分布 | date,return[,benchmark] |
 
 ```bash
 # 用法
@@ -183,6 +202,10 @@ python scripts/tools/kueiku-calc.py abtest   -i experiment.csv
 python scripts/tools/kueiku-calc.py rfm      -i customers.csv
 python scripts/tools/kueiku-calc.py bcg      -i products.csv
 python scripts/tools/kueiku-calc.py cohort   -i retention.csv
+python scripts/tools/kueiku-calc.py factor   -i factor-data.csv
+python scripts/tools/kueiku-calc.py momentum -i prices.csv
+python scripts/tools/kueiku-calc.py riskparity -i asset-returns.csv
+python scripts/tools/kueiku-calc.py perf     -i strategy-returns.csv
 ```
 
 每个子命令支持 `--help` 查看完整 CSV 格式说明。支持 Markdown 报告输出（默认）和 JSON 格式（`--json`）。
