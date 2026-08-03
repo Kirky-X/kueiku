@@ -16,7 +16,7 @@ The skill provides an index of 95 methodologies, a quick routing table (task typ
 - **Combination rules** — 14 common methodology combos (e.g. strategic planning: PESTLE → SWOT → OKR)
 - **Degradation path** — 4 levels of handling for insufficient information; never force a framework
 - **Correction mechanism** — stop immediately and re-route when a framework turns out to be a poor fit
-- **Automation tools** — CLI tool for 5 computation-heavy methodologies (RICE / Decision Matrix / Risk Matrix / DuPont / Pareto)
+- **Automation tools** — CLI tool for 15 computation-heavy methodologies (RICE / Decision Matrix / Risk Matrix / DuPont / Pareto / FMEA / ICE / Opportunity Score / DCF / EVA / A/B Test / RFM / Cohort / BCG / GE-McKinsey)
 
 ## Installation
 

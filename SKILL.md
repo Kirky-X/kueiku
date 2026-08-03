@@ -67,7 +67,7 @@ flowchart TD
 
 **问题诊断** — 找根因→5 Whys；颠覆性思考→First Principles；80/20 聚焦→Pareto；多因素成因→Fishbone
 **战略分析** — 现状评估→SWOT；竞争格局→Porter's Five Forces；外部环境→PESTLE；商业模式→Business Model Canvas；多方对齐→Stakeholder Mapping；增长方向→Ansoff；价值创新→Blue Ocean；组织诊断→McKinsey 7S；产品组合→BCG Matrix；战略显性化→Product Strategy Canvas；早期创业验证→Lean Canvas；战略与盈利分离→Startup Canvas；价值主张文案→JDB Value Proposition；变现模型→Monetization Strategy；定价→Pricing Strategy；护城河→Can't-Won't Defensibility；资源能力评估→VRIO；国家竞争优势→Porter Diamond Model；业务组合管理→GE 麦肯锡矩阵；战略群组→Strategic Group Mapping；价值链→Value Chain Analysis；最佳实践→Benchmarking；产品生命周期→Product Life Cycle；战略演化感知→Wardley Mapping
-**产品与增长** — 用户真实需求→JTBD；增长瓶颈→AARRR；从0到1→Design Thinking；迭代验证→Lean BML；契合度验证→Value Proposition Canvas；系统化创意→SCAMPER；需求性质分类→Kano；指标体系→North Star
+**产品与增长** — 用户要完成的核心任务→JTBD；增长瓶颈→AARRR；从0到1→Design Thinking；迭代验证→Lean BML；契合度验证→Value Proposition Canvas；系统化创意→SCAMPER；需求性质分类→Kano；指标体系→North Star
 **决策制定** — 优先级排序→RICE；任务管理→Eisenhower；目标制定→OKR；风险预演→Pre-mortem；多标准选型→Decision Matrix；需求裁剪→MoSCoW；失效风险→FMEA；存在主义决策→Death Filter；快速风险评估→Risk Matrix
 **用户研究** — 用户旅程→Customer Journey Map；同理心画像→Empathy Map；消费者决策旅程→Consumer Decision Journey；需求层次→Maslow Hierarchy
 **结构化思维** — 结构化表达→MECE+Pyramid；多视角评估→Six Thinking Hats；澄清假设→Socratic Questioning；问题域判断→Cynefin；二阶效应→Second-Order Thinking；框架选择→Framework Selection；连点思维→Connecting Dots；重构升维→Reframe and Elevate；系统思考→Systems Thinking
@@ -111,6 +111,18 @@ flowchart TD
 
 部分任务需要方法论组合。常见组合在各 `index.md` 的"常见组合"章节。每个框架执行完毕后，进入下一框架前确认：①上一框架核心结论是否已明确？②下一框架是否需要上一框架输出作为输入？③用户对上一框架结论有无异议？
 
+### 方法论互斥与先后约束
+
+部分方法论存在互斥或先后依赖关系，组合使用时必须遵守：
+
+| 约束对 | 规则 | 原因 |
+| --- | --- | --- |
+| Lean Canvas ↔ Startup Canvas | **二选一**，不要同时使用 | 输出高度重叠，均基于 BMC 改造面向早期创业 |
+| RICE ↔ ICE | **ICE 粗筛后→RICE 精排**，不要并行使用 | ICE 是 RICE 的简化版，并行使用产生冗余输出 |
+| PESTLE → SWOT | **PESTLE 先于 SWOT** | PESTLE 是 SWOT 中 O/T 维度的展开，先做可避免外部分析遗漏 |
+| SWOT vs Porter's Five Forces | **按分析对象选择**：单一企业综合现状→SWOT；行业竞争结构→Porter's | 维度不同，同时使用需明确各自输入边界 |
+| JTBD vs User Personas | **按目标选择**：挖掘任务→JTBD；描述用户 archetype→Personas | 输入数据可重叠但输出目的不同 |
+
 ---
 
 ## 信息不足降级路径
@@ -120,7 +132,7 @@ flowchart TD
 | L1 | 信息基本充分 | 正常执行框架 |
 | L2 | 信息部分缺失 | 明确标注哪些维度是假设而非事实；用 `[需补充数据]` 占位，输出后列出待收集项 |
 | L3 | 核心信息缺失（无法产出有效结论） | 停止执行，向用户提出 1-3 个最关键问题；说明缺少什么信息、为何影响输出质量 |
-| L4 | 信息严重不足（连框架选择都无法判断） | 退化为「直接最佳判断」，不套框架；说明当前判断的置信度和依赖假设 |
+| L4 | 信息严重不足（连框架选择都无法判断） | 优先使用 Cynefin 或 Framework Selection 判断问题性质和适用框架；若仍无法确定，退化为「直接最佳判断」，不套框架；说明当前判断的置信度和依赖假设 |
 
 各框架最低信息需求详见各 `index.md` 的"各方法论最低信息需求"章节。
 
@@ -134,12 +146,13 @@ flowchart TD
 2. 说明：已完成部分 + 为何判断此框架不适合
 3. 从快速路由表重新选择，说明切换理由
 4. 已完成部分如有价值可保留作为输入
+5. 记录纠偏原因（触发信号不准确 / 信息不匹配 / 场景不适用），用于优化路由表
 
 ---
 
 ## 自动化脚本工具
 
-`scripts/tools/kueiku-calc.py` 提供 5 个高计算密度方法论的自动化计算，纯 Python 标准库实现，无外部依赖。
+`scripts/tools/kueiku-calc.py` 提供 15 个高计算密度方法论的自动化计算，纯 Python 标准库实现，无外部依赖。
 
 | 子命令 | 方法论 | 功能 | CSV 输入 |
 | --- | --- | --- | --- |
@@ -148,17 +161,28 @@ flowchart TD
 | `risk` | Risk Matrix | 概率×影响评估 + 四区分类 | name,probability,impact[,category] |
 | `dupont` | DuPont Analysis | 三因素分解 + 连环替代法 | period,revenue,net_income,total_assets,equity |
 | `pareto` | Pareto Analysis | 排序 + 累积百分比 + 关键少数识别 | name,value |
+| `fmea` | FMEA | RPN=S×O×D + 风险等级分类 | name,severity,occurrence,detection[,category] |
+| `ice` | ICE Framework | Impact×Confidence×Ease 评分 | name,impact,confidence,ease |
+| `oppscore` | Opportunity Score | Importance×(1-Satisfaction) 机会识别 | name,importance,satisfaction |
+| `dcf` | DCF 现金流折现 | NPV + 终值 + 敏感性分析 | year,fcf + --rate --growth [--shares] |
+| `eva` | EVA 经济增加值 | NOPAT-WACC×IC + 价值创造诊断 | period,ebit,tax_rate,invested_capital,wacc |
+| `abtest` | A/B Test Analysis | z检验 + SRM检测 + 决策矩阵 | variant,users,conversions |
+| `rfm` | RFM Model | R/F/M分位评分 → 8段用户分类 | customer_id,recency,frequency,monetary |
+| `cohort` | Cohort Analysis | 同期群留存率矩阵 + PMF信号 | cohort,period,active,initial |
+| `bcg` | BCG Matrix | 增长率×份额 → 4象限战略建议 | product,market_growth,relative_share[,revenue] |
+| `gemckinsey` | GE-McKinsey | 吸引力×实力 → 9格分类 | business,attractiveness,strength[,revenue] |
 
 ```bash
 # 用法
-python scripts/tools/kueiku-calc.py rice    -i items.csv [-o report.md] [--json]
-python scripts/tools/kueiku-calc.py dmatrix -i scores.csv [-o report.md] [--json]
-python scripts/tools/kueiku-calc.py risk    -i risks.csv  [-o report.md] [--json]
-python scripts/tools/kueiku-calc.py dupont  -i finance.csv [-o report.md] [--json]
-python scripts/tools/kueiku-calc.py pareto  -i items.csv  [-o report.md] [--json]
+python scripts/tools/kueiku-calc.py <subcommand> -i <input.csv> [-o report.md] [--json]
 
-# 示例数据
-ls scripts/tools/examples/
+# 示例
+python scripts/tools/kueiku-calc.py fmea     -i failures.csv
+python scripts/tools/kueiku-calc.py dcf      -i cashflows.csv --rate 0.10 --growth 0.03 --shares 1000000
+python scripts/tools/kueiku-calc.py abtest   -i experiment.csv
+python scripts/tools/kueiku-calc.py rfm      -i customers.csv
+python scripts/tools/kueiku-calc.py bcg      -i products.csv
+python scripts/tools/kueiku-calc.py cohort   -i retention.csv
 ```
 
 每个子命令支持 `--help` 查看完整 CSV 格式说明。支持 Markdown 报告输出（默认）和 JSON 格式（`--json`）。
