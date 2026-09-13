@@ -4,7 +4,8 @@ import json
 import math
 import sys
 
-from utils import read_csv, write_output, md_table, fmt_num, pct, z_test, quintile_score
+from utils import (read_csv, write_output, md_table, fmt_num, pct, z_test,
+                    quintile_score, fnum, inum)
 
 # ───────────────────────── A/B Test Analysis ─────────────────────────
 
@@ -17,6 +18,10 @@ CSV Format:
   variant     : Variant name (control / treatment)
   users       : Number of users
   conversions : Number of conversions
+
+Two or more variants supported. The first two rows are treated as control and
+primary treatment; any additional variants are summarized and compared against
+the control in an 'Additional Variants' section (not part of the primary decision).
 
 Example:
   variant,users,conversions
@@ -33,8 +38,9 @@ def cmd_abtest(args):
         sys.exit(1)
 
     variants = {}
-    for r in rows:
-        u, c = int(r["users"]), int(r["conversions"])
+    for row_no, r in enumerate(rows, 2):
+        u = inum(r["users"], "users", row_no)
+        c = inum(r["conversions"], "conversions", row_no)
         variants[r["variant"]] = {"users": u, "conversions": c, "rate": c / u if u > 0 else 0}
 
     if len(variants) < 2:
@@ -44,25 +50,28 @@ def cmd_abtest(args):
     names = list(variants.keys())
     ctrl_name = names[0]
     treat_name = names[1]
+    extra_names = names[2:]  # 3rd+ variants: summarized below, never silently dropped
     ctrl = variants[ctrl_name]
     treat = variants[treat_name]
 
-    # SRM detection
+    # SRM detection: chi-square goodness-of-fit vs 50/50 split,
+    # critical value chi2 > 3.841 (alpha = 0.05, df = 1)
     total_users = ctrl["users"] + treat["users"]
     expected_ctrl = total_users * 0.5
     srm_chi2 = (ctrl["users"] - expected_ctrl) ** 2 / expected_ctrl + (treat["users"] - expected_ctrl) ** 2 / expected_ctrl
-    srm_detected = abs(ctrl["users"] - treat["users"]) / total_users > 0.01
+    srm_detected = srm_chi2 > 3.841
 
     # z-test
     z, p_val = z_test(ctrl["rate"], ctrl["users"], treat["rate"], treat["users"])
     significant = p_val < 0.05
     lift = (treat["rate"] - ctrl["rate"]) / ctrl["rate"] * 100 if ctrl["rate"] > 0 else 0
 
-    # MDE
+    # MDE for 80% power: (z_alpha + z_beta) * SE, z_alpha = 1.96, z_beta = 0.84
     alpha = 0.05
     z_alpha = 1.96
+    z_beta = 0.84
     p_pool = (ctrl["conversions"] + treat["conversions"]) / (ctrl["users"] + treat["users"])
-    mde = z_alpha * math.sqrt(2 * p_pool * (1 - p_pool) / min(ctrl["users"], treat["users"]))
+    mde = (z_alpha + z_beta) * math.sqrt(2 * p_pool * (1 - p_pool) / min(ctrl["users"], treat["users"]))
 
     if srm_detected:
         decision = "⚠️ INVALID — SRM detected sample ratio mismatch, results unreliable"
@@ -77,6 +86,11 @@ def cmd_abtest(args):
 
     lines = ["# A/B Test Analysis Report\n"]
     lines.append(f"Control: {ctrl_name} | Treatment: {treat_name}\n")
+    if extra_names:
+        lines.append(f"⚠️ **WARNING**: {len(variants)} variants provided. Only the first two "
+                     f"('{ctrl_name}' vs '{treat_name}') are analyzed in the primary decision; the other "
+                     f"{len(extra_names)} variant(s) ({', '.join(extra_names)}) are summarized in "
+                     f"'Additional Variants' below and are **not** part of the primary decision.\n")
 
     lines.append("## Basic Data\n")
     headers = ["Variant", "Users", "Conversions", "Conversion Rate"]
@@ -100,10 +114,29 @@ def cmd_abtest(args):
 
     lines.append(f"## Decision: {decision}")
 
+    if extra_names:
+        lines.append("\n## Additional Variants (vs control, informational)\n")
+        a_headers = ["Variant", "Users", "Conversions", "Conversion Rate", "Lift vs Control", "z", "p Value", "Significant?"]
+        a_trows = []
+        for name in extra_names:
+            v = variants[name]
+            vz, vp = z_test(ctrl["rate"], ctrl["users"], v["rate"], v["users"])
+            v_lift = (v["rate"] - ctrl["rate"]) / ctrl["rate"] * 100 if ctrl["rate"] > 0 else 0
+            a_trows.append([name, fmt_num(v["users"], 0), v["conversions"], pct(v["rate"] * 100),
+                            f"{v_lift:+.2f}%", f"{vz:.4f}", f"{vp:.6f}",
+                            "Yes" if vp < 0.05 else "No"])
+        lines.append(md_table(a_headers, a_trows))
+        lines.append("\nNote: for a decision across 3+ variants, control for multiplicity "
+                     "(e.g. Bonferroni: use α = 0.05 / number of comparisons) or run a chi-square test first.")
+
     if args.json:
         result = {"control": ctrl, "treatment": treat, "z": z, "p_value": p_val,
                    "significant": significant, "lift": lift, "srm_detected": srm_detected,
-                   "mde": mde, "decision": decision}
+                   "srm_chi2": srm_chi2, "mde": mde, "decision": decision}
+        if extra_names:
+            result["ignored_variants_warning"] = (f"Only the first two variants were compared; "
+                                                   f"{len(extra_names)} additional variant(s) summarized separately.")
+            result["additional_variants"] = {name: variants[name] for name in extra_names}
         write_output(json.dumps(result, ensure_ascii=False, indent=2), args.output)
     else:
         write_output("\n".join(lines), args.output)
@@ -138,9 +171,11 @@ def cmd_rfm(args):
         sys.exit(1)
 
     data = []
-    for r in rows:
-        data.append({"id": r["customer_id"], "recency": float(r["recency"]),
-                      "frequency": float(r["frequency"]), "monetary": float(r["monetary"])})
+    for row_no, r in enumerate(rows, 2):
+        data.append({"id": r["customer_id"],
+                      "recency": fnum(r["recency"], "recency", row_no),
+                      "frequency": fnum(r["frequency"], "frequency", row_no),
+                      "monetary": fnum(r["monetary"], "monetary", row_no)})
 
     r_vals = [d["recency"] for d in data]
     f_vals = [d["frequency"] for d in data]
@@ -243,11 +278,11 @@ def cmd_cohort(args):
 
     cohorts = {}
     max_period = 0
-    for r in rows:
+    for row_no, r in enumerate(rows, 2):
         c = r["cohort"]
-        p = int(r["period"])
-        a = int(r["active"])
-        ini = int(r["initial"])
+        p = inum(r["period"], "period", row_no)
+        a = inum(r["active"], "active", row_no)
+        ini = inum(r["initial"], "initial", row_no)
         if c not in cohorts:
             cohorts[c] = {}
         cohorts[c][p] = {"active": a, "initial": ini, "retention": a / ini if ini > 0 else 0}

@@ -24,7 +24,7 @@ flowchart TD
     I -- No --> K["Done"]
 ```
 
-**Capability overview**: 19 categories × 116 methodologies. Each category's methodology list, best-use scenarios, and minimum information requirements are in that category's `index.md`.
+**Capability overview**: 19 categories × 129 methodologies. Each category's methodology list, best-use scenarios, and minimum information requirements are in that category's `index.md`.
 
 ## Core Principles
 
@@ -36,12 +36,12 @@ flowchart TD
 
 ---
 
-## Category Overview (19 categories × 116 methodologies)
+## Category Overview (19 categories × 129 methodologies)
 
 | # | Category | Task types | Count | Index path |
 | --- | --- | --- | --- | --- |
 | 1 | Problem Diagnosis | Root cause analysis, disruptive thinking, 80/20 focus | 4 | `references/problem-diagnosis/index.md` |
-| 2 | Strategic Analysis | Situation assessment, competitive landscape, business model, pricing moat, value chain, benchmarking, resource/capability assessment, strategic evolution | 23 | `references/strategy/index.md` |
+| 2 | Strategic Analysis | Situation assessment, competitive landscape, business model, pricing moat, value chain, benchmarking, resource/capability assessment, strategic evolution | 24 | `references/strategy/index.md` |
 | 3 | Product & Growth | User needs, growth bottleneck, product innovation, metrics | 8 | `references/product-growth/index.md` |
 | 4 | Decision Making | Prioritization, goal setting, risk rehearsal, technology selection, existential decision, risk assessment | 9 | `references/decision-making/index.md` |
 | 5 | User Research | User journey, empathy mapping, decision journey, needs hierarchy | 4 | `references/user-research/index.md` |
@@ -64,27 +64,27 @@ flowchart TD
 
 ## User Intent → Category Quick Routing
 
-Grouped by category, listing the core user intents covered → primary methodology. See each `index.md` "Routing Trigger Signals" section for the full list of alternative methodologies.
+Category-level mapping only (one line per category). The full intent→methodology routing, trigger signals, and alternatives are in each `index.md` "Routing Trigger Signals" — read it before declaring a framework.
 
-**Problem Diagnosis** — Find root cause→5 Whys; Disruptive thinking→First Principles; 80/20 focus→Pareto; Multi-factor causation→Fishbone
-**Strategic Analysis** — Situation assessment→SWOT; Competitive landscape→Porter's Five Forces; External environment→PESTLE; Business model→Business Model Canvas; Multi-stakeholder alignment→Stakeholder Mapping; Growth direction→Ansoff; Value innovation→Blue Ocean; Org diagnosis→McKinsey 7S; Product portfolio→BCG Matrix; Strategy visualization→Product Strategy Canvas; Early-stage startup validation→Lean Canvas; Strategy & monetization separation→Startup Canvas; Value proposition copy→JDB Value Proposition; Monetization model→Monetization Strategy; Pricing→Pricing Strategy; Moat→Can't-Won't Defensibility; Resource/capability assessment→VRIO; National competitive advantage→Porter Diamond Model; Business portfolio management→GE-McKinsey Matrix; Strategic groups→Strategic Group Mapping; Value chain→Value Chain Analysis; Best practices→Benchmarking; Product life cycle→Product Life Cycle; Strategic evolution awareness→Wardley Mapping
-**Product & Growth** — Core job users want done→JTBD; Growth bottleneck→AARRR; Zero-to-one→Design Thinking; Iterative validation→Lean BML; Fit validation→Value Proposition Canvas; Systematic creativity→SCAMPER; Need type classification→Kano; Metrics→North Star
-**Decision Making** — Prioritization→RICE; Task management→Eisenhower; Goal setting→OKR; Risk rehearsal→Pre-mortem; Multi-criteria selection→Decision Matrix; Scope trimming→MoSCoW; Failure risk→FMEA; Existential decision→Death Filter; Quick risk assessment→Risk Matrix
-**User Research** — User journey→Customer Journey Map; Empathy mapping→Empathy Map; Consumer decision journey→Consumer Decision Journey; Needs hierarchy→Maslow Hierarchy
-**Structured Thinking** — Structured expression→MECE+Pyramid; Multi-perspective assessment→Six Thinking Hats; Clarify assumptions→Socratic Questioning; Problem domain identification→Cynefin; Second-order effects→Second-Order Thinking; Framework selection→Framework Selection; Connecting dots→Connecting Dots; Reframe & elevate→Reframe and Elevate; Systems thinking→Systems Thinking
-**Product Discovery** — Continuous discovery→Opportunity Solution Tree; User interviews→The Mom Test; Idea screening→ICE; Unmet needs→Opportunity Score; Experiment selection→Experiment Design Library; Assumption identification→Assumption Mapping; Minimum viable prototype→Pretotypes; Product team collaboration→Product Trio
-**Go-to-Market** — Beachhead→Beachhead Segment; Ideal customer→ICP; GTM actions→GTM Motions; Launch plan→GTM Strategy; Growth flywheel→Growth Loops; Competitive response→Competitive Battlecard; Positioning→Positioning Strategy
-**Market Research** — Market sizing→Market Sizing; Market segmentation→Market Segmentation; User segmentation→User Segmentation; User personas→User Personas; STP analysis→STP Analysis; Brand perception→Perceptual Mapping; Technology adoption→Technology Adoption Lifecycle
-**Data Analysis** — Retention analysis→Cohort Analysis; A/B testing→A/B Test Analysis; Metrics selection→Lean Analytics Metrics; User value segmentation→RFM Model
-**AI Delivery** — Shipping artifacts standards→Shipping Artifacts; Drift detection→Intended vs Implemented
-**Execution** — Outcome roadmap→Outcome Roadmap; Strategy red team→Strategy Red Team; Agile requirements→User Stories; Contextualized requirements→Job Stories
-**Engineering** — Test-driven→TDD; Bite-sized plan→Bite-Sized Plan; Service contracts→Typed Service Contracts; Agent friendliness→Agent DX/CLI Scale; Code review→Code Review Checklist; Refactoring→Refactoring Patterns; Architecture design→Clean Architecture; Domain modeling→DDD; Microservices→Microservices Patterns; API design→API Design; Database design→Database Schema Design; CI/CD→CI/CD Pipeline Design; Security design→Security by Design; Observability→Observability; Performance optimization→Performance Optimization; Incident response→Incident Response & Postmortem; Git workflow→Git Workflow Strategies; Dependency management→Dependency Management
-**Product Philosophy** — Radical focus→Focus as No; Vertical integration→Whole Widget; Tech meets humanities→Technology Meets Humanities; Invisible perfection→Invisible Perfection
-**Leadership** — Reality distortion field→Reality Distortion Field; A-player density→A-Player Density; Org change→Change Management
-**Financial Analysis** — ROE decomposition→DuPont; Enterprise valuation→DCF; Comparable company→Comparable Company; Value creation→EVA
-**Research Methodology** — Systematic research→Systematic Research Process
-**Industry Analysis** — Industry value chain→Industry Value Chain; Technology maturity→Gartner Hype Cycle
-**Quantitative Investment** — Factor investing→Factor Investing; Portfolio optimization→Portfolio Optimization; Risk budgeting→Risk Parity; Trend following→Momentum Strategy; Pairs trading→Statistical Arbitrage; Strategy backtesting→Backtesting Framework; AI stock selection→ML Stock Selection
+**Problem Diagnosis** — root cause→5 Whys; disruptive thinking→First Principles; 80/20→Pareto; multi-factor→Fishbone
+**Strategic Analysis** — situation assessment→SWOT; competitive landscape→Porter's Five Forces; business model/pricing/moat/portfolio/evolution (24 methodologies)→`strategy/index.md`
+**Product & Growth** — user needs→JTBD; growth bottleneck→AARRR; metrics→North Star
+**Decision Making** — prioritization→RICE; goal setting→OKR; risk rehearsal→Pre-mortem
+**User Research** — user journey→Customer Journey Map; empathy→Empathy Map; needs hierarchy→Maslow
+**Structured Thinking** — structured expression→MECE+Pyramid; multi-perspective→Six Thinking Hats; problem nature→Cynefin
+**Product Discovery** — continuous discovery→Opportunity Solution Tree; interviews→The Mom Test; experiments→Experiment Design Library
+**Go-to-Market** — beachhead→Beachhead Segment; ideal customer→ICP; positioning→Positioning Strategy
+**Market Research** — market sizing→Market Sizing; segmentation→Segmentation; personas→User Personas
+**Data Analysis** — retention→Cohort Analysis; A/B testing→A/B Test Analysis; user value→RFM
+**AI Delivery** — shipping standards→Shipping Artifacts; doc-code drift→Intended vs Implemented
+**Execution** — outcome roadmap→Outcome Roadmap; strategy red team→Strategy Red Team; requirements→User Stories
+**Engineering** — TDD; code review; architecture→Clean Architecture/DDD; CI/CD; observability; security/API/DB design; incident response (18 methodologies)→`engineering/index.md`
+**Product Philosophy** — radical focus→Focus as No; vertical integration→Whole Widget; invisible perfection→Invisible Perfection
+**Leadership** — vision→Reality Distortion Field; hiring→A-Player Density; org change→Change Management
+**Financial Analysis** — ROE decomposition→DuPont; valuation→DCF; comparables→Comparable Company; value creation→EVA
+**Research Methodology** — systematic research→Systematic Research Process
+**Industry Analysis** — value chain→Industry Value Chain; technology maturity→Gartner Hype Cycle
+**Quantitative Investment** — factor investing→Factor Investing; portfolio optimization→Portfolio Optimization; backtesting→Backtesting Framework
 
 ---
 
@@ -167,45 +167,20 @@ If during execution you find the framework is a poor fit (key dimensions cannot 
 | Quantitative Investment | `scripts/quant.py` | `factor`, `momentum`, `riskparity`, `perf` |
 | CLI Entry | `scripts/main.py` | All 19 subcommands |
 
-### Subcommand Reference
+### Usage
 
-| Subcommand | Methodology | Function | CSV Input |
-| --- | --- | --- | --- |
-| `rice` | RICE Scoring | Priority scoring + ranking + tiered recommendations | name,reach,impact,confidence,effort |
-| `dmatrix` | Decision Matrix | Multi-option weighted scoring + sensitivity analysis | option,criterion,weight,score |
-| `risk` | Risk Matrix | Probability×Impact assessment + 4-zone classification | name,probability,impact[,category] |
-| `dupont` | DuPont Analysis | 3-factor decomposition + chain substitution | period,revenue,net_income,total_assets,equity |
-| `pareto` | Pareto Analysis | Ranking + cumulative percentage + vital few identification | name,value |
-| `fmea` | FMEA | RPN=S×O×D + risk level classification | name,severity,occurrence,detection[,category] |
-| `ice` | ICE Framework | Impact×Confidence×Ease scoring | name,impact,confidence,ease |
-| `oppscore` | Opportunity Score | Importance×(1-Satisfaction) opportunity identification | name,importance,satisfaction |
-| `dcf` | DCF | NPV + terminal value + sensitivity analysis | year,fcf + --rate --growth [--shares] |
-| `eva` | EVA | NOPAT-WACC×IC + value creation diagnostics | period,ebit,tax_rate,invested_capital,wacc |
-| `abtest` | A/B Test Analysis | z-test + SRM detection + decision matrix | variant,users,conversions |
-| `rfm` | RFM Model | R/F/M quantile scoring → 8-segment user classification | customer_id,recency,frequency,monetary |
-| `cohort` | Cohort Analysis | Cohort retention matrix + PMF signals | cohort,period,active,initial |
-| `bcg` | BCG Matrix | Growth rate×share → 4-quadrant strategic recommendations | product,market_growth,relative_share[,revenue] |
-| `gemckinsey` | GE-McKinsey | Attractiveness×strength → 9-cell classification | business,attractiveness,strength[,revenue] |
-| `factor` | Factor Investing | IC/IC_IR + 5-group returns + monotonicity test | date,asset,factor_value,forward_return |
-| `momentum` | Momentum Strategy | Multi-period returns + cross-sectional ranking + group returns + rolling momentum | date,asset1,asset2,... |
-| `riskparity` | Risk Parity | Iterative risk parity weight solving + risk decomposition | period,asset1,asset2,... |
-| `perf` | Backtesting Framework | Sharpe/Sortino/Calmar/drawdown/VaR/win rate/distribution | date,return[,benchmark] |
+Each subcommand reads a CSV (headers must match; run with `--help` for the exact column spec, options, and a worked example):
 
 ```bash
-# Usage
 python scripts/main.py <subcommand> -i <input.csv> [-o report.md] [--json]
 
 # Examples
-python scripts/main.py fmea     -i failures.csv
-python scripts/main.py dcf      -i cashflows.csv --rate 0.10 --growth 0.03 --shares 1000000
-python scripts/main.py abtest   -i experiment.csv
-python scripts/main.py rfm      -i customers.csv
-python scripts/main.py bcg      -i products.csv
-python scripts/main.py cohort   -i retention.csv
-python scripts/main.py factor   -i factor-data.csv
-python scripts/main.py momentum -i prices.csv
-python scripts/main.py riskparity -i asset-returns.csv
-python scripts/main.py perf     -i strategy-returns.csv
+python scripts/main.py rice    -i features.csv                 # RICE priority scoring
+python scripts/main.py dcf     -i cashflows.csv --rate 0.10 --growth 0.03   # DCF valuation
+python scripts/main.py abtest  -i experiment.csv               # A/B significance + SRM
+
+# Full parameters and CSV formats per subcommand:
+python scripts/main.py <subcommand> --help
 ```
 
 Supports Markdown report output (default) and JSON format (`--json`).
@@ -214,6 +189,7 @@ Supports Markdown report output (default) and JSON format (`--json`).
 
 ## Maintenance Notes
 
+- **Methodology counts are generated**: the "N categories × M methodologies" figures in this file and `skill.json` come from `python3 scripts/count_methodologies.py` (also writes `scripts/methodology-count.json`). After adding/removing anything under `references/`, re-run it and update the numbers here.
 - Adding a methodology: update the category's `index.md` table, minimum information requirements, and routing trigger signals
 - Adding a category: add a row to the category overview table and create the corresponding `index.md`
 - **Reading principle**: only read the corresponding reference file when needed; do not preload all files

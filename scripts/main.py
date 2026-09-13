@@ -93,21 +93,30 @@ def main():
     add_common_args(p)
 
     # Quantitative investment
+    def add_periods_per_year(p):
+        p.add_argument("--periods-per-year", type=float, default=252,
+                       help="Periods per year for annualization (default 252 trading days; "
+                            "use 12 for monthly data, 52 for weekly data)")
+
     p = subparsers.add_parser("factor", help="Factor analysis (IC/Group/Monotonicity)", description=FACTOR_HELP,
                                formatter_class=argparse.RawDescriptionHelpFormatter)
     add_common_args(p)
+    add_periods_per_year(p)
 
     p = subparsers.add_parser("momentum", help="Momentum signal analysis", description=MOMENTUM_HELP,
                                formatter_class=argparse.RawDescriptionHelpFormatter)
     add_common_args(p)
+    add_periods_per_year(p)
 
     p = subparsers.add_parser("riskparity", help="Risk parityWeight", description=RISKPARITY_HELP,
                                formatter_class=argparse.RawDescriptionHelpFormatter)
     add_common_args(p)
+    add_periods_per_year(p)
 
     p = subparsers.add_parser("perf", help="StrategyPerformanceMetric", description=PERF_HELP,
                                formatter_class=argparse.RawDescriptionHelpFormatter)
     add_common_args(p)
+    add_periods_per_year(p)
 
     args = parser.parse_args()
     if not args.command:

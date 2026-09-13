@@ -10,13 +10,39 @@ from pathlib import Path
 # ───────────────────────── I/O Tool ─────────────────────────
 
 def read_csv(source):
-    """Read CSV from file path or stdin, return list[dict]."""
+    """Read CSV from file path or stdin, return list[dict].
+
+    Exits with a friendly error if the CSV is empty or has no data rows.
+    """
     if source == "-" or source is None:
         text = sys.stdin.read()
     else:
         text = Path(source).read_text(encoding="utf-8")
     reader = csv.DictReader(io.StringIO(text))
-    return [row for row in reader]
+    rows = [row for row in reader]
+    if not rows:
+        where = "stdin" if (source == "-" or source is None) else f"'{source}'"
+        print(f"Error: CSV input {where} is empty (no header or no data rows).", file=sys.stderr)
+        sys.exit(1)
+    return rows
+
+
+def fnum(value, field, row_no):
+    """Parse a float from a CSV cell; exit with a friendly error on bad values."""
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        print(f"Error: row {row_no}: invalid number for field '{field}': {value!r} (expected a number)", file=sys.stderr)
+        sys.exit(1)
+
+
+def inum(value, field, row_no):
+    """Parse an int from a CSV cell; exit with a friendly error on bad values."""
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        print(f"Error: row {row_no}: invalid integer for field '{field}': {value!r} (expected an integer)", file=sys.stderr)
+        sys.exit(1)
 
 
 def write_output(content, output_path=None):

@@ -3,7 +3,7 @@
 import json
 import sys
 
-from utils import read_csv, write_output, md_table, fmt_num, pct
+from utils import read_csv, write_output, md_table, fmt_num, pct, fnum
 
 # ───────────────────────── Opportunity Score ─────────────────────────
 
@@ -32,8 +32,9 @@ def cmd_oppscore(args):
         sys.exit(1)
 
     items = []
-    for r in rows:
-        imp, sat = float(r["importance"]), float(r["satisfaction"])
+    for row_no, r in enumerate(rows, 2):
+        imp = fnum(r["importance"], "importance", row_no)
+        sat = fnum(r["satisfaction"], "satisfaction", row_no)
         imp_n = (imp - 1) / 4
         sat_n = (sat - 1) / 4
         opp = imp_n * (1 - sat_n)
@@ -106,10 +107,10 @@ def cmd_bcg(args):
     share_threshold = 1.0
 
     items = []
-    for r in rows:
-        g = float(r["market_growth"])
-        s = float(r["relative_share"])
-        rev = float(r.get("revenue", 0))
+    for row_no, r in enumerate(rows, 2):
+        g = fnum(r["market_growth"], "market_growth", row_no)
+        s = fnum(r["relative_share"], "relative_share", row_no)
+        rev = fnum(r.get("revenue", 0), "revenue", row_no)
         if g >= growth_threshold and s >= share_threshold:
             quadrant = "⭐ Star"
         elif g < growth_threshold and s >= share_threshold:
@@ -186,10 +187,10 @@ def cmd_gemckinsey(args):
         sys.exit(1)
 
     items = []
-    for r in rows:
-        a = float(r["attractiveness"])
-        s = float(r["strength"])
-        rev = float(r.get("revenue", 0))
+    for row_no, r in enumerate(rows, 2):
+        a = fnum(r["attractiveness"], "attractiveness", row_no)
+        s = fnum(r["strength"], "strength", row_no)
+        rev = fnum(r.get("revenue", 0), "revenue", row_no)
         if a >= 3.67 and s >= 3.67:
             cell = "Invest/Grow"
         elif a >= 3.67 and s >= 2.33:

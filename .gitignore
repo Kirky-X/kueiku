@@ -48,9 +48,9 @@ yarn-error.log*
 # Meta
 .meta
 
-# Test code (development use, not in repo)
-tests/
-**/tests/
+# Note: tests/ IS tracked — it is the regression suite for scripts/
+# (run: python3 -m unittest discover tests -v, also runs in release.yml)
+# Scratch test dirs elsewhere are still ignored:
 **/test/
 
 # Darwin skill optimization artifacts (development use, not in repo)

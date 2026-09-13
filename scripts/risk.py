@@ -3,7 +3,7 @@
 import json
 import sys
 
-from utils import read_csv, write_output, md_table, fmt_num, pct
+from utils import read_csv, write_output, md_table, fmt_num, pct, fnum, inum
 
 # ───────────────────────── Risk Matrix ─────────────────────────
 
@@ -35,9 +35,9 @@ def cmd_risk(args):
         sys.exit(1)
 
     risks = []
-    for r in rows:
-        p = int(r["probability"])
-        i = int(r["impact"])
+    for row_no, r in enumerate(rows, 2):
+        p = inum(r["probability"], "probability", row_no)
+        i = inum(r["impact"], "impact", row_no)
         risk_value = p * i
         if risk_value >= 15:
             zone, zone_en, action = "Red", "CRITICAL", "Act immediately"
@@ -139,8 +139,10 @@ def cmd_fmea(args):
         sys.exit(1)
 
     items = []
-    for r in rows:
-        s, o, d = int(r["severity"]), int(r["occurrence"]), int(r["detection"])
+    for row_no, r in enumerate(rows, 2):
+        s = inum(r["severity"], "severity", row_no)
+        o = inum(r["occurrence"], "occurrence", row_no)
+        d = inum(r["detection"], "detection", row_no)
         rpn = s * o * d
         if rpn >= 200:
             zone, action = "Critical", "Immediate corrective action required"
@@ -206,9 +208,11 @@ def cmd_pareto(args):
         sys.exit(1)
 
     items = []
-    for r in rows:
-        v = float(r["value"])
+    skipped = 0
+    for row_no, r in enumerate(rows, 2):
+        v = fnum(r["value"], "value", row_no)
         if v <= 0:
+            skipped += 1
             continue
         items.append({"name": r["name"], "value": v})
 
@@ -230,6 +234,8 @@ def cmd_pareto(args):
     trivial = [i for i in items if i["classification"] == "Trivial Many"]
 
     lines = ["# Pareto Analysis Report\n"]
+    if skipped:
+        lines.append(f"⚠️ Skipped {skipped} input row(s) with value ≤ 0 (Pareto analysis requires positive values).\n")
     lines.append(f"Items analyzed: {len(items)} | Total value: {fmt_num(total)}\n")
 
     lines.append("## Sorted Results\n")

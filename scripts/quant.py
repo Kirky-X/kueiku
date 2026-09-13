@@ -4,8 +4,14 @@ import json
 import math
 import sys
 
-from utils import (read_csv, write_output, md_table, fmt_num, pct,
+from utils import (read_csv, write_output, md_table, fmt_num, pct, fnum,
                     mat_mult, quad_form, spearman_ic)
+
+
+def get_ppy(args):
+    """Periods per year for annualization (default 252 trading days)."""
+    ppy = getattr(args, "periods_per_year", None)
+    return float(ppy) if ppy else 252.0
 
 # ───────────────────────── Factor Analysis ─────────────────────────
 
@@ -19,6 +25,9 @@ CSV Format (long table, one asset per cross-section):
   asset          : Asset identifier
   factor_value   : Factor value
   forward_return : Forward return rate (decimal)
+
+Additional parameters:
+  --periods-per-year : Periods per year for annualization (default 252; use 12 for monthly)
 
 Example:
   date,asset,factor_value,forward_return
@@ -36,15 +45,17 @@ def cmd_factor(args):
         print(f"CSV missing columns: {required - set(rows[0].keys())}", file=sys.stderr)
         sys.exit(1)
 
+    ppy = get_ppy(args)
+
     dates = {}
-    for r in rows:
+    for row_no, r in enumerate(rows, 2):
         d = r["date"]
         if d not in dates:
             dates[d] = []
         dates[d].append({
             "asset": r["asset"],
-            "fv": float(r["factor_value"]),
-            "ret": float(r["forward_return"]),
+            "fv": fnum(r["factor_value"], "factor_value", row_no),
+            "ret": fnum(r["forward_return"], "forward_return", row_no),
         })
 
     sorted_dates = sorted(dates.keys())
@@ -55,10 +66,14 @@ def cmd_factor(args):
     ic_series = []
     group_returns = {g: [] for g in range(1, 6)}
     ls_returns = []
+    skipped_sections = 0
+    skipped_dates = []
 
     for d in sorted_dates:
         assets = dates[d]
         if len(assets) < 5:
+            skipped_sections += 1
+            skipped_dates.append(d)
             continue
         fvs = [a["fv"] for a in assets]
         rets = [a["ret"] for a in assets]
@@ -94,6 +109,10 @@ def cmd_factor(args):
     ls_avg = sum(ls_returns) / len(ls_returns) if ls_returns else 0
 
     lines = ["# Factor Analysis Report\n"]
+    if skipped_sections:
+        lines.append(f"⚠️ Skipped {skipped_sections} cross-section(s) with fewer than 5 assets "
+                     f"(IC and quintile grouping need ≥ 5 assets): {', '.join(skipped_dates[:10])}"
+                     f"{'...' if len(skipped_dates) > 10 else ''}\n")
     lines.append(f"Cross-sections: {len(ic_series)} | Assets per cross-section: ~{len(rows) // max(len(sorted_dates), 1)}\n")
 
     lines.append("## IC Statistics\n")
@@ -109,8 +128,8 @@ def cmd_factor(args):
     trows = []
     for g in range(1, 6):
         label = f"G{g}" + (" (Bottom)" if g == 1 else " (Top)" if g == 5 else "")
-        trows.append([label, pct(group_avg[g] * 100), pct(group_avg[g] * 252 * 100)])
-    trows.append(["Long-Short (Top-Bottom)", pct(ls_avg * 100), pct(ls_avg * 252 * 100)])
+        trows.append([label, pct(group_avg[g] * 100), pct(group_avg[g] * ppy * 100)])
+    trows.append(["Long-Short (Top-Bottom)", pct(ls_avg * 100), pct(ls_avg * ppy * 100)])
     lines.append(md_table(headers, trows))
 
     lines.append(f"\n## Monotonicity Test: {'✅ Perfect monotonic' if monotonic else '⚠️ Non-perfect monotonic'}\n")
@@ -162,10 +181,10 @@ def cmd_momentum(args):
 
     dates = []
     prices = {a: [] for a in assets}
-    for r in rows:
+    for row_no, r in enumerate(rows, 2):
         dates.append(r["date"])
         for a in assets:
-            prices[a].append(float(r[a]))
+            prices[a].append(fnum(r[a], a, row_no))
 
     n_dates = len(dates)
 
@@ -225,11 +244,18 @@ def cmd_momentum(args):
 
     if n_dates > 21:
         lines.append("## Rolling Momentum Signal\n")
+        ppy = get_ppy(args)
         lb_ts = min(21, n_dates - 1)
         skip = 1
         eff_lb = lb_ts + skip
         portfolio_rets = []
+        skipped_signals = 0
         for t in range(eff_lb, n_dates):
+            if t + 1 >= n_dates:
+                # No next-period price for this signal: skip it instead of
+                # counting a fabricated 0% return.
+                skipped_signals += 1
+                continue
             mom = {}
             for a in assets:
                 p1 = prices[a][t - eff_lb]
@@ -241,17 +267,19 @@ def cmd_momentum(args):
             port_ret = sum(
                 (prices[a][t + 1] - prices[a][t]) / prices[a][t]
                 for a in top_assets if prices[a][t] != 0
-            ) / len(top_assets) if t + 1 < n_dates else 0
+            ) / len(top_assets)
             portfolio_rets.append(port_ret)
 
         if portfolio_rets:
             avg_ret = sum(portfolio_rets) / len(portfolio_rets)
             vol = math.sqrt(sum((r - avg_ret) ** 2 for r in portfolio_rets) / len(portfolio_rets)) if len(portfolio_rets) > 1 else 0
-            sharpe = (avg_ret * 252) / (vol * math.sqrt(252)) if vol > 0 else 0
+            sharpe = (avg_ret * ppy) / (vol * math.sqrt(ppy)) if vol > 0 else 0
             win_rate = sum(1 for r in portfolio_rets if r > 0) / len(portfolio_rets)
             lines.append(f"- Lookback period: {lb_ts} periods, skip last {skip} period")
+            if skipped_signals:
+                lines.append(f"- ⚠️ Skipped {skipped_signals} trailing signal(s) with no next-period return (excluded, not counted as 0%)")
             lines.append(f"- Equal-weight Top 20% Portfolio avg daily return: {pct(avg_ret * 100)}")
-            lines.append(f"- Annualized volatility: {pct(vol * math.sqrt(252) * 100)}")
+            lines.append(f"- Annualized volatility: {pct(vol * math.sqrt(ppy) * 100)}")
             lines.append(f"- Annualized Sharpe: {sharpe:.2f}")
             lines.append(f"- Daily win rate: {pct(win_rate * 100)}")
 
@@ -274,6 +302,9 @@ CSV Format (wide table, one period per row, asset returns as columns):
   period : Period identifier
   assetN : Period return (decimal)
 
+Additional parameters:
+  --periods-per-year : Periods per year for covariance annualization (default 252; use 12 for monthly)
+
 Example:
   period,stocks,bonds,commodities,reits
   2020-01,0.02,-0.01,0.03,0.01
@@ -284,6 +315,7 @@ Example:
 
 def cmd_riskparity(args):
     rows = read_csv(args.input)
+    ppy = get_ppy(args)
     assets = [k for k in rows[0].keys() if k != "period"]
     n_assets = len(assets)
     if n_assets < 2:
@@ -291,8 +323,8 @@ def cmd_riskparity(args):
         sys.exit(1)
 
     returns = []
-    for r in rows:
-        returns.append([float(r[a]) for a in assets])
+    for row_no, r in enumerate(rows, 2):
+        returns.append([fnum(r[a], a, row_no) for a in assets])
     n_obs = len(returns)
     if n_obs < n_assets + 1:
         print(f"Insufficient data: {n_obs} periods, recommend at least {n_assets + 1} periods", file=sys.stderr)
@@ -302,7 +334,7 @@ def cmd_riskparity(args):
     for i in range(n_assets):
         for j in range(n_assets):
             s = sum((returns[t][i] - means[i]) * (returns[t][j] - means[j]) for t in range(n_obs))
-            cov[i][j] = s / (n_obs - 1) * 252
+            cov[i][j] = s / (n_obs - 1) * ppy
 
     # Volatility-inverse weighting as initial value
     asset_vols_init = [math.sqrt(max(cov[i][i], 1e-12)) for i in range(n_assets)]
@@ -414,6 +446,9 @@ CSV Format:
 Optional column:
   benchmark : Benchmark return (decimal, for information ratio/excess return)
 
+Additional parameters:
+  --periods-per-year : Periods per year for annualization (default 252; use 12 for monthly)
+
 Example:
   date,return,benchmark
   2024-01-02,0.005,0.003
@@ -430,14 +465,15 @@ def cmd_perf(args):
         sys.exit(1)
 
     has_benchmark = "benchmark" in rows[0].keys()
+    ppy = get_ppy(args)
     dates = []
     rets = []
     bench_rets = []
-    for r in rows:
+    for row_no, r in enumerate(rows, 2):
         dates.append(r["date"])
-        rets.append(float(r["return"]))
+        rets.append(fnum(r["return"], "return", row_no))
         if has_benchmark:
-            bench_rets.append(float(r["benchmark"]))
+            bench_rets.append(fnum(r["benchmark"], "benchmark", row_no))
 
     n = len(rets)
     if n < 5:
@@ -447,8 +483,8 @@ def cmd_perf(args):
     mean_ret = sum(rets) / n
     var_ret = sum((r - mean_ret) ** 2 for r in rets) / (n - 1) if n > 1 else 0
     std_ret = math.sqrt(var_ret)
-    ann_ret = mean_ret * 252
-    ann_vol = std_ret * math.sqrt(252)
+    ann_ret = mean_ret * ppy
+    ann_vol = std_ret * math.sqrt(ppy)
 
     cum = 1.0
     cum_rets = []
@@ -474,9 +510,12 @@ def cmd_perf(args):
 
     dd_duration = dd_end - dd_start
 
+    # Downside deviation, standard definition: sum of squared negative returns
+    # divided by the FULL sample size n (not the count of loss periods), so a
+    # strategy with few losing periods is not under-penalized.
     downside_rets = [r for r in rets if r < 0]
-    down_std = math.sqrt(sum(r ** 2 for r in downside_rets) / len(downside_rets)) if downside_rets else 0
-    ann_down_std = down_std * math.sqrt(252)
+    down_std = math.sqrt(sum(r ** 2 for r in downside_rets) / n) if downside_rets else 0
+    ann_down_std = down_std * math.sqrt(ppy)
 
     sharpe = ann_ret / ann_vol if ann_vol > 0 else 0
     sortino = ann_ret / ann_down_std if ann_down_std > 0 else 0
@@ -511,13 +550,13 @@ def cmd_perf(args):
             bench_cum *= (1 + r)
             bench_cum_rets.append(bench_cum)
         bench_total = bench_cum - 1
-        bench_ann = bench_mean * 252
+        bench_ann = bench_mean * ppy
 
         excess_rets = [rets[i] - bench_rets[i] for i in range(n)]
         excess_mean = sum(excess_rets) / n
-        excess_ann = excess_mean * 252
+        excess_ann = excess_mean * ppy
         excess_var = sum((r - excess_mean) ** 2 for r in excess_rets) / (n - 1)
-        te = math.sqrt(excess_var * 252)
+        te = math.sqrt(excess_var * ppy)
         ir = excess_ann / te if te > 0 else 0
 
         excess_data = {

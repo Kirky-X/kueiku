@@ -3,7 +3,7 @@
 import json
 import sys
 
-from utils import read_csv, write_output, md_table, fmt_num, pct
+from utils import read_csv, write_output, md_table, fmt_num, pct, fnum
 
 # ───────────────────────── DuPont Analysis ─────────────────────────
 
@@ -35,11 +35,11 @@ def cmd_dupont(args):
         sys.exit(1)
 
     periods = []
-    for r in rows:
-        rev = float(r["revenue"])
-        ni = float(r["net_income"])
-        ta = float(r["total_assets"])
-        eq = float(r["equity"])
+    for row_no, r in enumerate(rows, 2):
+        rev = fnum(r["revenue"], "revenue", row_no)
+        ni = fnum(r["net_income"], "net_income", row_no)
+        ta = fnum(r["total_assets"], "total_assets", row_no)
+        eq = fnum(r["equity"], "equity", row_no)
         if rev == 0 or ta == 0 or eq == 0:
             print(f"Warning: '{r['period']}' has zero value, skipped", file=sys.stderr)
             continue
@@ -123,7 +123,8 @@ DCF Discounted Cash Flow: Enterprise value = Σ FCF/(1+r)^t + Terminal value/(1+
 CSV Format:
   year,fcf
 
-  year : Year identifier (1, 2, 3, ...)
+  year : Period index starting at 1 (1, 2, 3, ...). Calendar years
+         (e.g. 2024) or non-consecutive sequences are rejected with an error.
   fcf  : Free cash flow
 
 Additional parameters via command line:
@@ -148,12 +149,22 @@ def cmd_dcf(args):
     shares = float(args.shares) if hasattr(args, 'shares') and args.shares else 0
 
     cashflows = []
-    for r in rows:
-        cashflows.append({"year": int(r["year"]), "fcf": float(r["fcf"])})
+    for row_no, r in enumerate(rows, 2):
+        cashflows.append({"year": int(fnum(r["year"], "year", row_no)), "fcf": fnum(r["fcf"], "fcf", row_no)})
     cashflows.sort(key=lambda x: x["year"])
 
     if not cashflows:
         print("No cash flow data", file=sys.stderr)
+        sys.exit(1)
+
+    # Validate years: the discount index t must be a period count starting at 1
+    # (1, 2, 3, ...). Calendar years (e.g. 2024) or gaps would silently deflate
+    # present values to ~0, so fail loudly instead.
+    years = [cf["year"] for cf in cashflows]
+    if years != list(range(1, len(years) + 1)) or years[-1] > 2100:
+        print("Error: 'year' must be consecutive period indices starting at 1 (1, 2, 3, ...), "
+              f"not calendar years or an irregular sequence. Got: {years}. "
+              "Map calendar years to periods 1..n before running DCF.", file=sys.stderr)
         sys.exit(1)
 
     pv_items = []
@@ -242,11 +253,11 @@ def cmd_eva(args):
         sys.exit(1)
 
     items = []
-    for r in rows:
-        ebit = float(r["ebit"])
-        tax = float(r["tax_rate"])
-        ic = float(r["invested_capital"])
-        wacc = float(r["wacc"])
+    for row_no, r in enumerate(rows, 2):
+        ebit = fnum(r["ebit"], "ebit", row_no)
+        tax = fnum(r["tax_rate"], "tax_rate", row_no)
+        ic = fnum(r["invested_capital"], "invested_capital", row_no)
+        wacc = fnum(r["wacc"], "wacc", row_no)
         nopat = ebit * (1 - tax)
         capital_charge = wacc * ic
         eva = nopat - capital_charge

@@ -3,7 +3,7 @@
 import json
 import sys
 
-from utils import read_csv, write_output, md_table, fmt_num
+from utils import read_csv, write_output, md_table, fmt_num, fnum, inum
 
 # ───────────────────────── RICE Scoring ─────────────────────────
 
@@ -35,11 +35,11 @@ def cmd_rice(args):
         sys.exit(1)
 
     scored = []
-    for r in rows:
-        reach = float(r["reach"])
-        impact = float(r["impact"])
-        conf = float(r["confidence"]) / 100.0
-        effort = float(r["effort"])
+    for row_no, r in enumerate(rows, 2):
+        reach = fnum(r["reach"], "reach", row_no)
+        impact = fnum(r["impact"], "impact", row_no)
+        conf = fnum(r["confidence"], "confidence", row_no) / 100.0
+        effort = fnum(r["effort"], "effort", row_no)
         if effort <= 0:
             print(f"Warning: '{r['name']}' has Effort={effort}, skipped", file=sys.stderr)
             continue
@@ -64,10 +64,13 @@ def cmd_rice(args):
     lines.append(md_table(headers, table_rows))
 
     if len(scored) >= 3:
+        # Standard three-way split: top third / middle third / bottom third.
+        # (n < 3: tiers are skipped entirely — with fewer than 3 items a
+        # three-way split is meaningless, all items simply rank above.)
         top_third = max(1, len(scored) // 3)
+        mid_end = top_third * 2
         lines.append("## Tier Recommendations\n")
         lines.append(f"- **Must do (Top {top_third})**: {', '.join(s['name'] for s in scored[:top_third])}")
-        mid_end = max(top_third * 2, len(scored) - 1)
         lines.append(f"- **Target**: {', '.join(s['name'] for s in scored[top_third:mid_end])}")
         lines.append(f"- **Backlog**: {', '.join(s['name'] for s in scored[mid_end:])}")
 
@@ -112,11 +115,11 @@ def cmd_dmatrix(args):
     data = {}
     weights = {}
 
-    for r in rows:
+    for row_no, r in enumerate(rows, 2):
         opt = r["option"].strip()
         crit = r["criterion"].strip()
-        w = float(r["weight"])
-        s = float(r["score"])
+        w = fnum(r["weight"], "weight", row_no)
+        s = fnum(r["score"], "score", row_no)
         if opt not in options:
             options.append(opt)
         if crit not in criteria:
@@ -243,8 +246,8 @@ def cmd_ice(args):
         sys.exit(1)
 
     items = []
-    for r in rows:
-        i, c, e = float(r["impact"]), float(r["confidence"]), float(r["ease"])
+    for row_no, r in enumerate(rows, 2):
+        i, c, e = fnum(r["impact"], "impact", row_no), fnum(r["confidence"], "confidence", row_no), fnum(r["ease"], "ease", row_no)
         score = i * c * e
         items.append({"name": r["name"], "impact": i, "confidence": c, "ease": e, "score": score})
 
