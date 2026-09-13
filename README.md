@@ -1,158 +1,113 @@
-# Kueiku — Methodology Compass Skill
+# Kueiku（奎库）— 方法论导航罗盘
 
-[![GitHub Release](https://img.shields.io/github/v/release/Kirky-X/kueiku?style=flat-square)](https://github.com/Kirky-X/kueiku/releases) [![GitHub License](https://img.shields.io/github/v/release/Kirky-X/kueiku?style=flat-square)](LICENSE)
+> AI agent 的方法论导航图：先选对框架，再用对框架。19 类 × 129 个方法论的索引地图，含选择路由、调用协议、信息不足降级路径与框架纠偏机制。
 
-Kueiku is a methodology navigation skill for AI agents, built in the Google Labs agent-first format (YAML frontmatter + Markdown routing table). It is not yet another analysis tool — it is a **methodology index map**: it guides agents to **choose the right framework first, then use it correctly** before analyzing problems, crafting strategy, making decisions, designing products, researching users, or organizing thinking.
+[![version](https://img.shields.io/github/v/tag/Kirky-X/kueiku?style=flat-square)](https://github.com/Kirky-X/kueiku/tags) [![license](https://img.shields.io/github/license/Kirky-X/kueiku?style=flat-square)](LICENSE) [![python](https://img.shields.io/badge/python-3.8%2B-blue?style=flat-square)](scripts/)
 
-The skill provides an index of 95 methodologies, a quick routing table (task type → recommended methodology), a calling protocol (declare → read reference → gather inputs → execute → gated output), a 4-level degradation path for insufficient information, and a correction mechanism for when a framework turns out to be a poor fit. The full routing table, combination rules, and usage protocol are in [SKILL.md](SKILL.md).
+中文 | [English](README_EN.md)
 
-## Features
+## ✨ 功能特性
 
-- **95 methodologies · 18 categories** — covering Problem Diagnosis / Strategic Analysis / Product & Growth / Decision Making / User Research / Structured Thinking / Product Discovery / Go-to-Market / Market Research / Data Analysis / AI Delivery / Execution / Engineering / Product Philosophy / Leadership / Financial Analysis / Research Methodology / Industry Analysis
-- **Quick routing table** — match a task type to a primary + backup framework in under 30 seconds
-- **Calling protocol** — a 5-step standard flow that makes framework usage explicit and traceable
-- **Combination rules** — 14 common methodology combos (e.g. strategic planning: PESTLE → SWOT → OKR)
-- **Degradation path** — 4 levels of handling for insufficient information; never force a framework
-- **Correction mechanism** — stop immediately and re-route when a framework turns out to be a poor fit
-- **Automation tools** — CLI tool for 15 computation-heavy methodologies (RICE / Decision Matrix / Risk Matrix / DuPont / Pareto / FMEA / ICE / Opportunity Score / DCF / EVA / A/B Test / RFM / Cohort / BCG / GE-McKinsey)
+- **19 类 × 129 个方法论索引**：每个方法论一个 `references/<类别>/<方法论>.md`（执行步骤 + 输出模板），按需读取、不全量预载；数目由 `scripts/count_methodologies.py` 脚本生成（`methodology-count.json`）
+- **快速路由表**：任务类型 → 主框架 + 备选框架，30 秒内完成选择（见 [SKILL.md](SKILL.md)）
+- **调用协议**：声明 → 读参考 → 收集输入 → 执行 → 门控输出，五步标准流程，方法论使用可追溯
+- **信息不足降级路径**：4 级处理——正常执行 → 标注假设与待收集项 → 停下追问关键问题 → 回退最佳判断，绝不硬套框架
+- **框架纠偏机制**：执行中发现框架不适配（关键维度填不上、结论漂移、用户否定方向）立即停止、说明原因、重新路由
+- **组合规则**：常见方法论组合及互斥对（如 Lean Canvas ↔ Startup Canvas 二选一、ICE 粗筛 → RICE 精排）
+- **计算工具 CLI**（`kueiku-calc`，19 个子命令）：RICE / 决策矩阵 / ICE / 风险矩阵 / FMEA / 帕累托 / 杜邦 / DCF / EVA / A-B 测试 / RFM / Cohort / 机会分 / BCG / GE-McKinsey / 因子分析 / 动量信号 / 风险平价 / 绩效指标
 
-## Installation
+| 类别（计数） | 类别（计数） | 类别（计数） |
+| ------------ | ------------ | ------------ |
+| 问题诊断（4） | 战略分析（24） | 产品增长（8） |
+| 决策制定（9） | 用户研究（4） | 结构化思考（9） |
+| 产品发现（8） | 上市策略（7） | 市场研究（7） |
+| 数据分析（4） | AI 交付（2） | 执行落地（4） |
+| 工程实践（18） | 产品哲学（4） | 领导力（3） |
+| 财务分析（4） | 研究方法论（1） | 行业分析（2） |
+| 量化投资（7） | | |
 
-### Option 1: Install via the `skills` package (recommended)
-
-Requires [Node.js](https://nodejs.org/) 18+ and the `skills` npm package (v1.5.12+). `skills` is the CLI of the open agent skills ecosystem, supporting 68+ agents (Claude Code / Trae / Cursor / Codex / OpenCode, etc.).
-
-```bash
-# Install to Claude Code
-npx skills add https://github.com/Kirky-X/kueiku.git --agent claude-code -y
-
-# Equivalent shorthand (owner/repo)
-npx skills add Kirky-X/kueiku --agent claude-code -y
-
-# Install to Trae
-npx skills add Kirky-X/kueiku --agent trae -y
-
-# List all discoverable skills in the repo (without installing)
-npx skills add https://github.com/Kirky-X/kueiku.git --list
-```
-
-After installation the skill files live in the agent's skills directory (e.g. `.claude/skills/kueiku/`).
-
-### Option 2: Traditional git clone
+## 📦 安装
 
 ```bash
-git clone https://github.com/Kirky-X/kueiku.git
-# Link or copy SKILL.md + references/ into the agent skills directory
-# Example skills directory paths per runtime (pick one):
-#   Claude Code:  ~/.claude/skills/kueiku/
-#   Trae:         ~/.trae-cn/skills/kueiku/
-#   Cursor:       ~/.cursor/skills/kueiku/
-#   Codex:        ~/.codex/skills/kueiku/
+# 方式 1：从本仓库根一键部署（同步到 ~/.zcode/skills/ 与 ~/.claude/skills/，LF 强制归一）
+bash scripts/sync-skills.sh kueiku
+
+# 方式 2：手动拷贝到 agent 技能目录
+cp -r kueiku/ ~/.zcode/skills/kueiku/
 ```
 
-## Usage Examples
+首跑依赖：仅需 Python 3.8+（CLI 工具全部使用标准库），无 requirements.txt。
 
-Once loaded as a skill, Kueiku is triggered by natural-language intent — no explicit command needed. The full task-type → methodology routing is in the [SKILL.md quick routing table](./SKILL.md).
+## 🚀 快速开始
 
-| Task type | Recommended methodology | One-line function |
-| --------- | ----------------------- | ----------------- |
-| Find root cause | 5 Whys | Ask "why" repeatedly to pierce through symptoms |
-| Strategic assessment | SWOT | Internal strengths/weaknesses × external opportunities/threats |
-| Growth bottleneck | AARRR Funnel | Acquisition→Activation→Retention→Referral→Revenue |
-| Requirement prioritization | RICE Scoring | Reach×Impact×Confidence÷Effort quantification |
-| True user needs | JTBD | Users hire products to get a "job" done |
-| Business model design | Business Model Canvas | 9-block complete business model |
-| Pre-decision risk rehearsal | Pre-mortem | Imagine failure scenarios in reverse |
-| Structured expression | MECE + Pyramid | Mutually exclusive, collectively exhaustive + conclusion first |
+前置：skill 已部署到 agent 技能目录，在支持 skills 的 agent 会话中用自然语言触发。
 
-## Capability Overview
-
-### 18 categories · 95 methodologies
-
-| Category | Count | When to use |
-| -------- | ----- | ----------- |
-| 🔍 Problem Diagnosis | 4 | Find root cause, disruptive thinking, 80/20 focus |
-| 📊 Strategic Analysis | 23 | Situation assessment, competition, business model, pricing, value chain, strategic evolution |
-| 🚀 Product & Growth | 8 | User needs, growth bottleneck, product innovation, metrics |
-| ⚖️ Decision Making | 9 | Prioritization, goal setting, risk rehearsal, selection, risk assessment |
-| 👥 User Research | 4 | User journey, empathy mapping, decision journey, needs hierarchy |
-| 🧠 Structured Thinking | 9 | MECE expression, multi-perspective, assumption clarification, framework selection, systems thinking |
-| 🔬 Product Discovery | 8 | Continuous discovery, hypothesis validation, user interviews, experiment design |
-| 🚩 Go-to-Market | 7 | Beachhead, ICP, GTM, growth loops, positioning |
-| 📈 Market Research | 7 | Market sizing, segmentation, personas, STP, perceptual mapping, tech adoption |
-| 📉 Data Analysis | 4 | Cohort, A/B testing, metrics, RFM |
-| 🤖 AI Delivery | 2 | Shipping artifacts, doc-code drift |
-| 🏃 Execution | 4 | Outcome roadmap, strategy red team, agile requirements |
-| 💻 Engineering | 4 | TDD, bite-sized plan, service contracts, Agent DX |
-| 🎯 Product Philosophy | 4 | Radical focus, vertical integration, tech+humanities, invisible perfection |
-| 👑 Leadership | 3 | Reality distortion field, A-player density, change management |
-| 💰 Financial Analysis | 4 | DuPont, DCF, comparable company, EVA |
-| 📚 Research Methodology | 1 | Systematic research process |
-| 🏭 Industry Analysis | 2 | Industry value chain, Gartner Hype Cycle |
-
-Full methodology list and routing: see [SKILL.md category overview](./SKILL.md).
-
-### `references/` — 95 methodology reference files
-
-Each methodology has a corresponding `references/<category>/<methodology>.md` containing execution steps and output templates. Read only the relevant file when needed; do not preload all of them.
-
-```
-references/
-├── problem-diagnosis/        (4)  5 Whys / Fishbone / First Principles / Pareto
-├── strategy/                 (23) SWOT / PESTLE / Porter's / BMC / Ansoff / Blue Ocean / Wardley Mapping ...
-├── product-growth/            (8) AARRR / JTBD / Design Thinking / Lean BML / VPC / SCAMPER / Kano / North Star
-├── decision-making/           (9) RICE / Eisenhower / OKR / Pre-mortem / Decision Matrix / MoSCoW / FMEA / Risk Matrix
-├── user-research/             (4) Customer Journey / Empathy Map / Consumer Decision Journey / Maslow
-├── structured-thinking/       (9) MECE+Pyramid / Six Hats / Socratic / Cynefin / Second-Order / Systems Thinking ...
-├── product-discovery/         (8) OST / Mom Test / ICE / Opportunity Score / Pretotypes / Assumption Mapping ...
-├── go-to-market/              (7) Beachhead / ICP / GTM Motions / GTM Strategy / Growth Loops / Battlecard / Positioning
-├── market-research/           (7) Market Sizing / Segmentation / User Personas / STP / Perceptual Mapping ...
-├── data-analysis/             (4) Cohort / A/B Test / Lean Analytics / RFM
-├── ai-delivery/               (2) Shipping Artifacts / Intended vs Implemented
-├── execution/                 (4) Outcome Roadmap / Strategy Red Team / User Stories / Job Stories
-├── engineering/               (4) TDD / Bite-Sized Plan / Typed Service Contracts / Agent DX
-├── product-philosophy/        (4) Focus as No / Whole Widget / Technology Meets Humanities / Invisible Perfection
-├── leadership/                (3) Reality Distortion Field / A-Player Density / Change Management
-├── financial-analysis/        (4) DuPont / DCF / Comparable Company / EVA
-├── research-methodology/      (1) Systematic Research Process
-└── industry-analysis/         (2) Industry Value Chain / Gartner Hype Cycle
+```text
+用 SWOT 分析一下我们的出海策略          # 路由 → 战略分析 → swot
+这三个需求先做哪个？                    # 路由 → 决策制定 → RICE
+给这批用户做分层                        # 路由 → 数据分析 → RFM
 ```
 
-## Calling Protocol
+计算类方法论可直接用 CLI（确定性、可复现，输入 CSV）：
 
-Standard flow for invoking a methodology:
-
-```
-0. Pre-check    → Confirm the task type matches the routing table; confirm information sufficiency
-1. Declare      → State which methodology is used and why
-2. Read ref     → Extract execution steps and output template
-3. Gather input → Confirm inputs item by item; handle missing items via the degradation path
-4. Execute      → Output step by step, tagging the source of each piece of information
-5. Gated output → Conclusion must directly answer the question + actionable advice + confidence
+```bash
+python3 ~/.zcode/skills/kueiku/scripts/main.py rice -i items.csv     # RICE 优先级打分
+python3 ~/.zcode/skills/kueiku/scripts/main.py abtest -i ab.csv --json   # A/B 显著性 + SRM 检测
+# ab.csv 格式：variant,users,conversions 两行（control / treatment）
 ```
 
-## FAQ
+### 调用协议（五步）
 
-### Required `skills` package version?
+进入某方法论后的五步标准流程：
 
-The `skills` npm package **v1.5.12+** is required. `skills` is the CLI of the [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) ecosystem, supporting 68+ agents. Use `npx skills@latest` to get the latest version.
+```text
+0. 预检      → 任务类型匹配路由表；确认信息充分性
+1. 声明      → 说明使用哪个方法论、为什么
+2. 读参考    → 提取执行步骤与输出模板
+3. 收集输入  → 逐项确认框架所需输入，缺失项走降级路径
+4. 执行      → 逐步输出，标注每条信息的来源
+5. 门控输出  → 结论直接回答问题 + 可执行建议 + 置信度
+```
 
-### When should I NOT use a framework?
+## ✅ 测试与验证
 
-- The task is simple and clear; a framework would add unnecessary complexity
-- The user explicitly asks for a direct answer
-- Information is severely missing (Level 4); even framework selection cannot be determined
+pytest 套件实测（2026-09-13，Python 3.12）：
 
-In these cases, state it directly, give your best judgment, and label confidence and dependent assumptions.
+```text
+$ python3 -m pytest tests -q
+...........................                                              [100%]
+27 passed in 0.73s
+```
 
-### What if information is insufficient?
+覆盖 6 个测试文件：`test_abtest`（A/B 显著性）、`test_dcf`（DCF 估值）、`test_rice_tiers`（RICE 分档）、`test_input_validation`（输入校验）、`test_consistency`（口径一致性）、`test_skips`（跳过逻辑）。
 
-Follow the 4-level degradation path: Level 1 normal execution → Level 2 label assumptions and to-collect items → Level 3 stop and ask key questions → Level 4 fall back to best judgment. See [SKILL.md degradation path](./SKILL.md).
+方法论计数口径：`python3 scripts/count_methodologies.py` → `TOTAL 129`、`categories 19`（写入 `scripts/methodology-count.json`）。
 
-### What if the wrong framework was chosen?
+## 📁 目录结构
 
-If during execution you find the framework is a poor fit (a key dimension can't be filled and it's not an information issue, the conclusion drifts from the question, or the user says it's the wrong direction), stop immediately, explain what was done and why it doesn't fit, re-select from the routing table, and explain the switch.
+```text
+kueiku/
+├── SKILL.md                 # 入口：路由表 + 调用协议 + 降级路径 + 纠偏机制
+├── skill.json               # 元数据（v0.1.3，MIT）
+├── references/              # 19 个类别目录，每目录 index.md + 各方法论 .md
+│   ├── strategy/            # 24 个：SWOT / PESTLE / 五力 / BMC / 蓝海 / Wardley …
+│   ├── engineering/         # 18 个：TDD / DDD / API 设计 / 代码评审清单 / 事件响应 …
+│   ├── quantitative-investment/  # 7 个：因子 / 动量 / 风险平价 / 回测 / ML 选股 …
+│   └── …（另 16 类）
+├── scripts/
+│   ├── main.py              # kueiku-calc CLI 入口（19 子命令）
+│   ├── count_methodologies.py  # 方法论计数（生成 methodology-count.json）
+│   └── decision|financial|quant|risk|strategy|data|utils.py  # 各域计算实现
+└── tests/                   # pytest 套件（27 用例，6 文件）
+```
 
-## License
+## 🔮 边界
 
-MIT
+- **简单任务不套框架**：任务简单明确或用户要直接答案时，跳过框架直接回答
+- **信息严重不足不硬选**：连框架选择都无法确定时，先澄清提问（降级路径 L3+）
+- **只导航与计算，不执行改动**：本 skill 提供方法论选择、推理框架与计算工具；实际改代码、跑安全扫描由执行型 skill 承担（代码审查→diting，SAST→tiangang）
+- **互斥组合不并用**：Lean Canvas ↔ Startup Canvas 二选一；ICE 只做粗筛，与 RICE 并行会产生冗余输出
+
+## 📄 License 与归属
+
+MIT License（© 2026 Kirky-X）。
