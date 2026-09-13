@@ -35,6 +35,8 @@ bash scripts/sync-skills.sh kueiku
 
 # Option 2: manual copy into an agent skills directory
 cp -r kueiku/ ~/.zcode/skills/kueiku/
+# Option 3: Remote install (GitHub repo)
+npx skills add Kirky-X/kueiku --agent claude-code -y
 ```
 
 First-run requirements: Python 3.8+ only (the CLI uses the standard library exclusively); no requirements.txt.
