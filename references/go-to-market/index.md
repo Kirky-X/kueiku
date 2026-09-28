@@ -31,3 +31,9 @@
 - "Sustainable growth mechanism / growth flywheel" → Growth Loops (primary)
 - "Competitive response / sales battlecard" → Competitive Battlecard (primary)
 - "Positioning / user mindshare positioning" → Positioning Strategy (primary)
+
+## Common Combinations
+
+- **Market entry**: Beachhead Segment (pick the winnable wedge) → Positioning Strategy (claim mindshare whitespace) → GTM Strategy (channel + phased launch)
+- **Sales enablement**: Ideal Customer Profile (qualify who to target) → GTM Motions (pick the motion matching ICP, price, and cycle) → Competitive Battlecard (arm reps for objections)
+- **Positioning refresh**: Competitive Battlecard (win/loss signals) → Positioning Strategy (reposition into the gap competitors left)

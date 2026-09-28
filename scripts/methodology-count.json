@@ -1,25 +1,25 @@
 {
   "categories": 19,
-  "total_methodologies": 129,
+  "total_methodologies": 142,
   "per_category": {
     "ai-delivery": 2,
-    "data-analysis": 4,
-    "decision-making": 9,
-    "engineering": 18,
+    "data-analysis": 5,
+    "decision-making": 12,
+    "engineering": 21,
     "execution": 4,
-    "financial-analysis": 4,
+    "financial-analysis": 5,
     "go-to-market": 7,
     "industry-analysis": 2,
     "leadership": 3,
     "market-research": 7,
-    "problem-diagnosis": 4,
+    "problem-diagnosis": 7,
     "product-discovery": 8,
     "product-growth": 8,
     "product-philosophy": 4,
     "quantitative-investment": 7,
-    "research-methodology": 1,
+    "research-methodology": 2,
     "strategy": 24,
     "structured-thinking": 9,
-    "user-research": 4
+    "user-research": 5
   }
 }

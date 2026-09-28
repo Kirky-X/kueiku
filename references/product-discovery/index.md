@@ -34,3 +34,10 @@
 - "Assumption identification and mapping" / "uncertainty mapping" → Assumption Mapping
 - "Minimum viable prototype" / "pretotype" → Pretotypes
 - "Product team collaboration" / "triad role" → Product Trio
+
+## Common Combinations
+
+- **Continuous discovery cycle**: Opportunity Solution Tree (structure outcome→opportunity) → The Mom Test (interview without false positives) → Opportunity Score (quantify which opportunity is biggest)
+- **Idea triage to validation**: ICE Framework (rough screening) → Pretotypes (validate demand before code) → Experiment Design Library (pick the experiment for what survives)
+- **Kickoff risk check**: Assumption Mapping (surface the bets) → Experiment Design Library (match an experiment to the riskiest assumption)
+- **Weekly discovery cadence**: Product Trio (who runs discovery) → The Mom Test (how they interview)

@@ -16,3 +16,7 @@
 
 - "AI project delivery standards" → Shipping Artifacts (primary)
 - "Doc-code drift detection" → Intended vs Implemented (primary)
+
+## Common Combinations
+
+- **AI project delivery**: Shipping Artifacts (define the artifact set) → Intended vs Implemented (keep docs and cited code aligned as the project evolves)

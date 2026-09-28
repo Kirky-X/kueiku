@@ -1,6 +1,6 @@
 # Engineering
 
-**When to use**: Test-driven development, bite-sized executable plans, service contract design, Agent friendliness assessment, code review, architecture design, CI/CD, observability, domain-driven design, performance optimization, security design, API design, database design, incident response, Git workflow, dependency management, microservices, refactoring
+**When to use**: Test-driven development, bite-sized executable plans, service contract design, Agent friendliness assessment, code review, architecture design, CI/CD, observability, domain-driven design, performance optimization, security design, API design, database design, incident response, Git workflow, dependency management, microservices, refactoring, back-of-envelope estimation, throughput constraints, design contradiction resolution
 
 ## Programming Methodologies
 
@@ -24,6 +24,7 @@
 | **Microservices Patterns** | Saga/CQRS/Event Sourcing + service governance + resilience patterns | Monolith decomposition, distributed data consistency, service governance | `microservices-patterns.md` |
 | **API Design** | RESTful/GraphQL/gRPC selection + version management + idempotency + error response | Interface design, API standardization, version compatibility | `api-design.md` |
 | **Database Schema Design** | Data modeling + index strategy + safe migration + normalization/denormalization | New project data model, schema restructuring, query optimization | `database-schema-design.md` |
+| **TRIZ Contradiction Separation** | Template-named contradiction → IFR → separate in time/space/condition/scale → reuse existing resources → lock no-compromise or record residual trade-off | Design parameters pull in opposite directions, "can't have both" trade-offs | `triz-contradictions.md` |
 
 ## Process Methodologies
 
@@ -33,6 +34,8 @@
 | **Security by Design** | STRIDE threat modeling + secure coding patterns + CI continuous verification | Security architecture design, compliance requirements, security hardening | `security-by-design.md` |
 | **Observability** | Logs + Metrics + Traces 3-pillar collaboration + SLO-driven alerting | Production incident investigation, distributed system tracing, capacity planning | `observability.md` |
 | **Performance Optimization** | Measure→Locate→Optimize→Verify cycle + bottleneck layering + anti-pattern warnings | Performance troubleshooting, baseline establishment, resource cost optimization | `performance-optimization.md` |
+| **Back-of-Envelope Estimation** | Fermi decomposition + c×10^e magnitude target + unit checksum + hardware/cost constant table | Pre-build capacity/QPS/cost feasibility checks, design sanity checks | `napkin-math-estimation.md` |
+| **Theory of Constraints** | Identify→Exploit→Subordinate→Elevate→Recheck on the single binding stage + resource vs policy classification | One stage queues while downstream idles, added capacity doesn't raise end-to-end output | `theory-of-constraints.md` |
 | **Incident Response & Postmortem** | Detect→Respond→Mitigate→Resolve + blameless postmortem + Action Item closure | Production incident emergency, On-Call process building, experience capture | `incident-response-postmortem.md` |
 
 ## Minimum Information Requirements per Methodology
@@ -50,10 +53,13 @@
 - **Microservices Patterns**: Requires existing system architecture + team organizational structure
 - **API Design**: Requires API usage scenarios + consumer requirements
 - **Database Schema Design**: Requires business entity relationships + query patterns
+- **TRIZ Contradiction Separation**: Requires two named opposing states of one parameter + the benefit each state serves
 - **CI/CD Pipeline Design**: Requires project type + deployment environment + team size
 - **Security by Design**: Requires system data flow diagram + compliance requirements
 - **Observability**: Requires system architecture + SLA/SLO definitions
 - **Performance Optimization**: Requires performance baseline data + SLO targets
+- **Back-of-Envelope Estimation**: Requires workload shape (request size / rates / data volumes) + hardware or cost constants for the rows used
+- **Theory of Constraints**: Requires flow stage sequence + per-stage rate or queue evidence + a throughput goal
 - **Incident Response & Postmortem**: Requires incident timeline + monitoring data
 
 ## Routing Trigger Signals
@@ -75,4 +81,13 @@
 - "Security design / threat modeling / STRIDE / secure coding" → Security by Design (primary)
 - "Observability / monitoring / logging / tracing / alerting" → Observability (primary)
 - "Performance optimization / performance troubleshooting / latency / throughput" → Performance Optimization (primary)
+- "Back-of-envelope / napkin math / Fermi estimation / capacity estimation / cost estimation" → Back-of-Envelope Estimation (primary)
+- "Bottleneck / throughput constraint / where work piles up / system-wide limit / five focusing steps" → Theory of Constraints (primary)
+- "Design contradiction / conflicting requirements / resolve trade-off / can't have both" → TRIZ Contradiction Separation (primary)
 - "Incident response / On-Call / Postmortem / review" → Incident Response & Postmortem (primary)
+
+## Common Combinations
+
+- **Capacity & cost design**: Back-of-Envelope Estimation (design-time magnitude) → Performance Optimization (measured verification once the system runs)
+- **Throughput workup**: Theory of Constraints (identify the binding stage) → Performance Optimization (profile the code inside that stage)
+- **Contradiction-first design**: Microservices Patterns (check the pattern inventory first) → TRIZ Contradiction Separation (no standard pattern fits the conflict)

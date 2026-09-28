@@ -22,3 +22,8 @@
 - "Strategy red team / Steelman-then-attack" → Strategy Red Team (primary)
 - "Agile requirements / User Story" → User Stories (primary)
 - "Contextualized requirements / Job Story" → Job Stories (primary)
+
+## Common Combinations
+
+- **Strategy to backlog**: Strategy Red Team (stress-test the thesis) → Outcome Roadmap (sequence outcomes per segment) → User Stories (break outcomes into INVEST items)
+- **Requirements formatting**: Job Stories (situation-first draft) → User Stories (formalize where the situation genuinely differs by role)

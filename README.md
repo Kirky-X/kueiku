@@ -1,6 +1,6 @@
 # Kueiku（鬼谷子）— 方法论导航罗盘
 
-> AI agent 的方法论导航图：先选对框架，再用对框架。19 类 × 129 个方法论的索引地图，含选择路由、调用协议、信息不足降级路径与框架纠偏机制。
+> AI agent 的方法论导航图：先选对框架，再用对框架。19 类 × 142 个方法论的索引地图，含选择路由、调用协议、信息不足降级路径与框架纠偏机制。
 
 [![version](https://img.shields.io/github/v/tag/Kirky-X/kueiku?style=flat-square)](https://github.com/Kirky-X/kueiku/tags) [![license](https://img.shields.io/github/license/Kirky-X/kueiku?style=flat-square)](LICENSE) [![python](https://img.shields.io/badge/python-3.8%2B-blue?style=flat-square)](scripts/)
 
@@ -8,7 +8,7 @@
 
 ## ✨ 功能特性
 
-- **19 类 × 129 个方法论索引**：每个方法论一个 `references/<类别>/<方法论>.md`（执行步骤 + 输出模板），按需读取、不全量预载；数目由 `scripts/count_methodologies.py` 脚本生成（`methodology-count.json`）
+- **19 类 × 142 个方法论索引**：每个方法论一个 `references/<类别>/<方法论>.md`（执行步骤 + 输出模板），按需读取、不全量预载；数目由 `scripts/count_methodologies.py` 脚本生成（`methodology-count.json`）
 - **快速路由表**：任务类型 → 主框架 + 备选框架，30 秒内完成选择（见 [SKILL.md](SKILL.md)）
 - **调用协议**：声明 → 读参考 → 收集输入 → 执行 → 门控输出，五步标准流程，方法论使用可追溯
 - **信息不足降级路径**：4 级处理——正常执行 → 标注假设与待收集项 → 停下追问关键问题 → 回退最佳判断，绝不硬套框架
@@ -18,12 +18,12 @@
 
 | 类别（计数） | 类别（计数） | 类别（计数） |
 | ------------ | ------------ | ------------ |
-| 问题诊断（4） | 战略分析（24） | 产品增长（8） |
-| 决策制定（9） | 用户研究（4） | 结构化思考（9） |
+| 问题诊断（7） | 战略分析（24） | 产品增长（8） |
+| 决策制定（12） | 用户研究（5） | 结构化思考（9） |
 | 产品发现（8） | 上市策略（7） | 市场研究（7） |
-| 数据分析（4） | AI 交付（2） | 执行落地（4） |
-| 工程实践（18） | 产品哲学（4） | 领导力（3） |
-| 财务分析（4） | 研究方法论（1） | 行业分析（2） |
+| 数据分析（5） | AI 交付（2） | 执行落地（4） |
+| 工程实践（21） | 产品哲学（4） | 领导力（3） |
+| 财务分析（5） | 研究方法论（2） | 行业分析（2） |
 | 量化投资（7） | | |
 
 ## 📦 安装
@@ -73,34 +73,36 @@ python3 ~/.zcode/skills/kueiku/scripts/main.py abtest -i ab.csv --json   # A/B �
 
 ## ✅ 测试与验证
 
-pytest 套件实测（2026-09-13，Python 3.12）：
+pytest 套件实测（2026-09-29，Python 3.12，42 用例 / 8 文件）：
 
 ```text
 $ python3 -m pytest tests -q
-...........................                                              [100%]
-27 passed in 0.73s
+......................................                                               [100%]
+42 passed in 0.67s
 ```
 
-覆盖 6 个测试文件：`test_abtest`（A/B 显著性）、`test_dcf`（DCF 估值）、`test_rice_tiers`（RICE 分档）、`test_input_validation`（输入校验）、`test_consistency`（口径一致性）、`test_skips`（跳过逻辑）。
+覆盖 8 个测试文件：`test_abtest`（A/B 显著性）、`test_dcf`（DCF 估值）、`test_rice_tiers`（RICE 分档）、`test_input_validation`（输入校验）、`test_consistency`（口径一致性）、`test_skips`（跳过逻辑）、`test_navigation`（导航链接完整性 + index 必含章节 + 验收场景资产回归 + 条目骨架覆盖下限）、`test_routing_signals`（index.md 层路由一致性守卫：表内 Reference 文件存在、触发信号指向可解析、最低信息要求全覆盖、组合引用可解析）。
 
-方法论计数口径：`python3 scripts/count_methodologies.py` → `TOTAL 129`、`categories 19`（写入 `scripts/methodology-count.json`）。
+验收场景 `test-prompts.json`（4 个人工验收 prompt）与其配套守卫 `tests/test_navigation.py`、`tests/test_routing_signals.py` 目前为 untracked、待纳入 git 跟踪（随下批提交收口），其依赖的路由资产已由 `test_navigation` 做结构化回归。
+
+方法论计数口径：`python3 scripts/count_methodologies.py`（写入 `scripts/methodology-count.json`），SKILL.md 与 skill.json 的计数以其为准。
 
 ## 📁 目录结构
 
 ```text
 kueiku/
 ├── SKILL.md                 # 入口：路由表 + 调用协议 + 降级路径 + 纠偏机制
-├── skill.json               # 元数据（v0.1.3，MIT）
+├── skill.json               # 元数据（v0.1.5，MIT）
 ├── references/              # 19 个类别目录，每目录 index.md + 各方法论 .md
 │   ├── strategy/            # 24 个：SWOT / PESTLE / 五力 / BMC / 蓝海 / Wardley …
-│   ├── engineering/         # 18 个：TDD / DDD / API 设计 / 代码评审清单 / 事件响应 …
+│   ├── engineering/         # 21 个：TDD / DDD / API 设计 / 代码评审清单 / 事件响应 …
 │   ├── quantitative-investment/  # 7 个：因子 / 动量 / 风险平价 / 回测 / ML 选股 …
 │   └── …（另 16 类）
 ├── scripts/
 │   ├── main.py              # kueiku-calc CLI 入口（19 子命令）
 │   ├── count_methodologies.py  # 方法论计数（生成 methodology-count.json）
 │   └── decision|financial|quant|risk|strategy|data|utils.py  # 各域计算实现
-└── tests/                   # pytest 套件（27 用例，6 文件）
+└── tests/                   # pytest 套件（42 用例，8 文件）
 ```
 
 ## 🔮 边界
