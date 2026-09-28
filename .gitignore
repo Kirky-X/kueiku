@@ -55,5 +55,4 @@ yarn-error.log*
 
 # Darwin skill optimization artifacts (development use, not in repo)
 results.tsv
-test-prompts.json
 darwin-result-card.png

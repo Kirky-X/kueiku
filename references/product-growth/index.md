@@ -29,7 +29,7 @@
 - "What job do users want done / feature substitution analysis / demand mining" → JTBD (primary) ⚡ If need to describe typical user's complete profile → use User Personas (Market Research); if need empathetic understanding of user feelings → use Empathy Map (User Research)
 - "Growth bottleneck analysis" → AARRR Funnel (primary)
 - "0-to-1 product/service design" → Design Thinking (primary)
-- "Product iteration hypothesis validation" → Lean Build-Measure-Learn (primary)
+- "Product iteration hypothesis validation" → Lean BML Loop (primary)
 - "Product-demand fit validation" → Value Proposition Canvas (primary)
 - "Systematic product/service creativity" → SCAMPER (primary)
 - "Feature requirement nature classification" → Kano Model (primary)

@@ -1,4 +1,4 @@
-# Lean Build-Measure-Learn Loop
+# Lean BML Loop (Lean Build-Measure-Learn Loop)
 
 ## Core Concept
 Minimize assumptions → Build the minimum thing to test → Measure results → Learn and decide (pivot or persevere). The fastest loop wins.

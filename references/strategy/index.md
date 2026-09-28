@@ -32,6 +32,7 @@
 ## Minimum Information Requirements per Methodology
 
 - **SWOT / PESTLE**: Requires clear analysis target (product/company/market)
+- **Porter's Five Forces**: Requires a named industry + major competitors + per-force competitive evidence
 - **Business Model Canvas**: Requires clear analysis target (which company/product)
 - **Ansoff Matrix**: Requires clear current product scope and market scope
 - **Stakeholder Mapping**: Requires clear project/decision scope
