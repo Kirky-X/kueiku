@@ -2,6 +2,11 @@
 name: kueiku
 description: "Methodology navigation map for AI agents. Triggers: analysis/strategy/decision/user research/structured thinking/product discovery/go-to-market/market research/data analysis/engineering/architecture optimization/root cause analysis/prioritization/risk rehearsal/tech selection/TDD/quantitative investing/factor investing/portfolio optimization/backtesting/code review/refactoring/CI-CD/observability/DDD/performance optimization/security design/API design/database design/incident response/Git workflow/dependency management/microservices"
 license: MIT
+metadata:
+  version: "0.1.5"
+  author: "Kirky-X"
+  repo: "https://github.com/Kirky-X/kueiku"
+  tags: "methodology, framework, decision-making, strategy, root-cause, prioritization, structured-thinking, user-research"
 ---
 
 # Methodology Compass
@@ -196,7 +201,7 @@ Supports Markdown report output (default) and JSON format (`--json`).
 ## Maintenance Notes
 
 - **Methodology counts are generated**: the "N categories × M methodologies" figures in this file and `skill.json` come from `python3 scripts/count_methodologies.py` (also writes `scripts/methodology-count.json`). After adding/removing anything under `references/`, re-run it and update the numbers here.
-- Adding a methodology: update the category's `index.md` table, minimum information requirements, and routing trigger signals. **Entry skeleton** — Every methodology entry must carry a When NOT to use boundary (where the framework misleads or wastes effort, not only where it shines), **Failure Modes** (how its output typically goes wrong + the countermeasure), **Evidence Strength** (an honest grade — strong / mixed / contested / practitioner consensus; never launder numbers), and **Output Template** (a copy-pasteable scaffold), on top of Core Concept / Applicable Scenarios / Key Steps / Source. **Write mechanism, not persona** — entries prescribe judgment rules, never style imitation. Worked example: `references/product-growth/jtbd.md`
+- Adding a methodology: update the category's `index.md` table, minimum information requirements, and routing trigger signals. **Entry skeleton** — Every methodology entry must carry a When NOT to use boundary (where the framework misleads or wastes effort, not only where it shines), **Failure Modes** (how its output typically goes wrong + the countermeasure), **Evidence Strength** (an honest grade — strong / mixed / contested / practitioner consensus; never launder numbers), and **Output Template** (a copy-pasteable scaffold), on top of Core Concept / Applicable Scenarios / Key Steps / Source. **Write mechanism, not persona** — entries prescribe judgment rules, never style imitation. Worked example: `references/product-growth/jtbd.md`. Backfill status: entries added from v0.1.5 on ship complete; the legacy corpus is partially backfilled (80/142 as of 2026-09-29) and `tests/test_navigation.py` holds the regression floor — this standard is not a claim of present coverage
 - **Admission verdict — one of four**: Build (new entry) / Fold into X (merge into an existing entry) / Recipe (cross-reference it from an index or combination, no new file) / Reject (outside a navigation map's scope). Record the verdict and reason in the entry's Source section; never add a stub to pad the count
 - Adding a category: add a row to the category overview table and create the corresponding `index.md`
 - **Reading principle**: only read the corresponding reference file when needed; do not preload all files
