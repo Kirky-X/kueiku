@@ -2,7 +2,7 @@
   "name": "kueiku",
   "description": "Methodology navigation map for agents. Index of 142 methodologies across 19 categories with selection routing, calling protocol, information-insufficient degradation path, and framework correction mechanism. Categories: problem diagnosis / strategic analysis / product growth / decision making / user research / structured thinking / product discovery / go-to-market / market research / data analysis / AI delivery / execution / engineering / product philosophy / leadership / financial analysis / research methodology / industry analysis / quantitative investment.",
   "license": "MIT",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Kirky-X",
   "repo": "https://github.com/Kirky-X/kueiku",
   "homepage": "https://github.com/Kirky-X/kueiku",
