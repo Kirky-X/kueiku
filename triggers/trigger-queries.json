@@ -1,0 +1,26 @@
+{
+  "skill": "kueiku",
+  "queries": [
+    {"q": "我们该做 ToB 还是 ToC？帮我系统分析一下这个战略决策", "expect": "trigger"},
+    {"q": "怎么给这个新产品做市场分析和 GTM 规划？", "expect": "trigger"},
+    {"q": "手头十个需求只能做三个，怎么排优先级？", "expect": "trigger"},
+    {"q": "用户流失严重，帮我用结构化方法找根因", "expect": "trigger"},
+    {"q": "做技术选型：核心模块自建还是买现成 SaaS？", "expect": "trigger"},
+    {"q": "帮我做用户研究，设计一份访谈提纲", "expect": "trigger"},
+    {"q": "这个决策的风险点在哪？帮我做一次风险预演", "expect": "trigger"},
+    {"q": "代码审查流程应该怎么设计才落得了地？", "expect": "trigger"},
+    {"q": "量化投资的因子回测该注意哪些方法论陷阱？", "expect": "trigger"},
+    {"q": "对外 API 的设计原则应该遵循哪套方法论？", "expect": "trigger"},
+    {"q": "单体拆微服务的决策框架是什么？", "expect": "trigger"},
+    {"q": "帮我 review 这个 PR 的代码", "expect": "no", "owner": "diting"},
+    {"q": "重构这个模块，把重复代码合并掉", "expect": "no", "owner": "diting"},
+    {"q": "分析这个项目的依赖树，找出版本冲突", "expect": "no", "owner": "dayv"},
+    {"q": "优化这个函数的执行性能，太慢了", "expect": "no", "owner": "ouyezi"},
+    {"q": "langgraph、crewai、autogen 选哪个，还是自己造轮子？", "expect": "no", "owner": "diting"},
+    {"q": "扫描这个项目的安全漏洞", "expect": "no", "owner": "tiangang"},
+    {"q": "新项目初始化，配好 CI 和脚手架", "expect": "no", "owner": "pangu"},
+    {"q": "把这份调研访谈记录总结成笔记", "expect": "no", "owner": "cangjie"},
+    {"q": "帮这个数据集跑一遍描述性统计和可视化", "expect": "no", "owner": "none"},
+    {"q": "给订单系统设计表结构，主外键和索引都定好", "expect": "no", "owner": "none"}
+  ]
+}

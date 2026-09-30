@@ -1,0 +1,38 @@
+{
+  "skill_name": "kueiku",
+  "evals": [
+    {
+      "id": 1,
+      "scenario": "Typical scenario: Root cause analysis routing",
+      "prompt": "Production incident: order service 500 error rate spiked from 0.1% to 15%. Help me find the root cause",
+      "expected_output": "Agent should identify this as a 'find root cause' task type → route to 5 Whys (backup: Fishbone/First Principles) → read references/problem-diagnosis/five-whys.md → declare framework and required inputs (quantifiable problem statement) → ask 'why' repeatedly to pierce through symptoms → produce root cause conclusion + actionable fix recommendations + confidence labels",
+      "assertions": [
+        "The output includes a root cause conclusion, actionable fix recommendations, and confidence labels"
+      ]
+    },
+    {
+      "id": 2,
+      "scenario": "Complex scenario: Methodology combination (strategic planning)",
+      "prompt": "We're preparing to enter the Southeast Asian market and need a complete analysis from environmental scanning to goal setting",
+      "expected_output": "Agent should identify this as a multi-step task → chain PESTLE (external environment) → SWOT (internal-external fit) → OKR (goal decomposition) per combination rules → pass checkpoints after each framework (is the core conclusion clear? / is the next framework's input ready?) → produce macro environment scan + 4-quadrant assessment + quarterly objectives and key results",
+      "assertions": [
+        "The output includes a macro environment scan, a 4-quadrant assessment, and quarterly objectives with key results"
+      ]
+    },
+    {
+      "id": 3,
+      "scenario": "Ambiguity/failure scenario: Severe information insufficiency degradation",
+      "prompt": "Help me analyze what our company should do next",
+      "expected_output": "Agent should judge information is severely insufficient (Level 4, cannot even determine framework selection) → don't force a framework → fall back to 'direct best judgment' with explanation → ask 1-3 most critical questions (analysis target / business stage / core problem statement) → explain what information is missing and why it affects framework selection quality",
+      "assertions": [
+        "The agent asks 1 to 3 critical questions instead of forcing a framework"
+      ]
+    },
+    {
+      "id": 4,
+      "scenario": "Correction scenario: Framework turns out unsuitable during execution",
+      "prompt": "Use SWOT to analyze our internal tool product that hasn't launched yet and has no user data",
+      "expected_output": "Agent should declare SWOT and attempt execution → discover that 'opportunities/threats' dimensions cannot be filled due to lack of market data (logical mismatch, not an information problem) → stop immediately → explain completed portion + reason for unsuitability → re-select from quick routing table (e.g. JTBD or Design Thinking better fits the 0→1 stage) → explain switch reason"
+    }
+  ]
+}
