@@ -1,6 +1,6 @@
 ---
 name: kueiku
-description: "Methodology navigation map for AI agents. Triggers: analysis/strategy/decision/user research/structured thinking/product discovery/go-to-market/market research/data analysis/engineering/architecture optimization/root cause analysis/prioritization/risk rehearsal/tech selection/TDD/quantitative investing/factor investing/portfolio optimization/backtesting/code review/refactoring/CI-CD/observability/DDD/performance optimization/security design/API design/database design/incident response/Git workflow/dependency management/microservices"
+description: "Methodology navigation map for AI agents. Triggers: analysis/strategy/decision/user research/structured thinking/product discovery/go-to-market/market research/data analysis/engineering/architecture optimization/root cause analysis/prioritization/risk rehearsal/tech selection/TDD/quantitative investing/factor investing/portfolio optimization/backtesting/engineering methodology (code review process, refactoring strategy, CI-CD process design, observability strategy, DDD, performance/security/API/database design methods, incident response playbook, Git workflow, dependency strategy, microservices architecture decisions). 中文触发：方法论/分析框架/决策方法/优先级排序/根因分析/技术选型/用户研究/产品发现/结构化思考/怎么设计/选什么方案"
 license: MIT
 metadata:
   version: "0.1.5"
