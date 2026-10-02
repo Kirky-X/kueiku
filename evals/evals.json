@@ -32,7 +32,34 @@
       "id": 4,
       "scenario": "Correction scenario: Framework turns out unsuitable during execution",
       "prompt": "Use SWOT to analyze our internal tool product that hasn't launched yet and has no user data",
-      "expected_output": "Agent should declare SWOT and attempt execution → discover that 'opportunities/threats' dimensions cannot be filled due to lack of market data (logical mismatch, not an information problem) → stop immediately → explain completed portion + reason for unsuitability → re-select from quick routing table (e.g. JTBD or Design Thinking better fits the 0→1 stage) → explain switch reason"
+      "expected_output": "Agent should declare SWOT and attempt execution → discover that 'opportunities/threats' dimensions cannot be filled due to lack of market data (logical mismatch, not an information problem) → stop immediately → explain completed portion + reason for unsuitability → re-select from quick routing table (e.g. JTBD or Design Thinking better fits the 0→1 stage) → explain switch reason",
+      "assertions": [
+        "The agent stops SWOT, explains the unsuitability reason, and re-routes with the switch reason stated"
+      ]
     }
+  ],
+  "routing_cases": [
+    {"id": "r01", "category": "problem-diagnosis", "prompt": "灰度发布后 API 错误率涨了 3 倍，帮我系统排查到底哪里出了问题", "kind": "trigger", "expected": "5 Whys", "acceptable": ["Fishbone / Ishikawa", "IS/IS-NOT Difference Analysis (Kepner-Tregoe)"]},
+    {"id": "r02", "category": "strategy", "prompt": "我们要进入东南亚市场，先做一次宏观环境和行业竞争格局的完整评估", "kind": "trigger", "expected": "PESTLE", "acceptable": ["Porter's Five Forces", "SWOT"]},
+    {"id": "r03", "category": "product-growth", "prompt": "用户说功能都挺全但就是不常用，帮我搞清楚他们到底想完成什么任务", "kind": "trigger", "expected": "JTBD", "acceptable": ["Kano Model"]},
+    {"id": "r04", "category": "decision-making", "prompt": "手头十个需求只能做三个，帮我定一套优先级排序方法", "kind": "trigger", "expected": "RICE Scoring", "acceptable": ["Decision Matrix"]},
+    {"id": "r05", "category": "user-research", "prompt": "下季度要做一轮用户访谈，帮我设计访谈提纲和筛选条件", "kind": "trigger", "expected": "Qualitative Research Plan", "acceptable": []},
+    {"id": "r06", "category": "structured-thinking", "prompt": "我们的复盘会每次都跑题还下不了结论，帮我设计一个结构化的讨论和表达方式", "kind": "trigger", "expected": "MECE + Pyramid Principle", "acceptable": ["Six Thinking Hats"]},
+    {"id": "r07", "category": "product-discovery", "prompt": "客户都说功能不错但就是不买单，我怎么验证到底哪个假设错了？", "kind": "trigger", "expected": "The Mom Test", "acceptable": ["Experiment Design Library"]},
+    {"id": "r08", "category": "go-to-market", "prompt": "产品要正式上线了，帮我规划一条分阶段的上市路线", "kind": "trigger", "expected": "GTM Strategy", "acceptable": ["GTM Motions"]},
+    {"id": "r09", "category": "market-research", "prompt": "估算一下国内企业级 SaaS 市场到底有多大", "kind": "trigger", "expected": "Market Sizing", "acceptable": ["Market Segmentation"]},
+    {"id": "r10", "category": "data-analysis", "prompt": "新版本上线后留存掉了一截，帮我按注册批次拆开看看是哪批用户的问题", "kind": "trigger", "expected": "Cohort Analysis", "acceptable": ["RFM Model"]},
+    {"id": "r11", "category": "ai-delivery", "prompt": "我们的 AI 项目总在交付前返工，帮我定一套交付物标准", "kind": "trigger", "expected": "Shipping Artifacts", "acceptable": []},
+    {"id": "r12", "category": "execution", "prompt": "别再按功能排 roadmap 了，帮我改成按业务结果来排", "kind": "trigger", "expected": "Outcome Roadmap", "acceptable": []},
+    {"id": "r13", "category": "engineering", "prompt": "微服务拆了之后跨服务数据老不一致，Saga 和 CQRS 该怎么选？", "kind": "trigger", "expected": "Microservices Patterns", "acceptable": ["Typed Service Contracts"]},
+    {"id": "r14", "category": "product-philosophy", "prompt": "需求越加越多产品越来越臃肿，帮我建立砍需求的判断标准", "kind": "trigger", "expected": "Focus as No", "acceptable": []},
+    {"id": "r15", "category": "leadership", "prompt": "团队新招的人水平越来越水，帮我重新定招聘和人才密度标准", "kind": "trigger", "expected": "A-Player Density", "acceptable": []},
+    {"id": "r16", "category": "financial-analysis", "prompt": "公司 ROE 明显低于同行，帮我拆解到底差在哪个环节", "kind": "trigger", "expected": "DuPont Analysis", "acceptable": []},
+    {"id": "r17", "category": "research-methodology", "prompt": "帮我把这批用户访谈转录稿整理出主题和洞察", "kind": "trigger", "expected": "Qualitative Synthesis", "acceptable": []},
+    {"id": "r18", "category": "industry-analysis", "prompt": "我们要进入机器人行业，帮我分析这条产业链的利润分布和该卡哪个位置", "kind": "trigger", "expected": "Industry Value Chain", "acceptable": []},
+    {"id": "r19", "category": "quantitative-investment", "prompt": "帮我设计一套多因子选股模型，并做好因子有效性检验", "kind": "trigger", "expected": "Factor Investing", "acceptable": []},
+    {"id": "n01", "prompt": "帮这个数据集跑一遍描述性统计和可视化", "kind": "none", "note": "直接执行型任务，无方法论选择问题"},
+    {"id": "n02", "prompt": "把这个函数改成异步的，现在阻塞主线程", "kind": "none", "note": "直接编码执行，不进分析"},
+    {"id": "n03", "prompt": "帮我把这份周报按模板排个版", "kind": "none", "note": "排版执行，不进分析"}
   ]
 }

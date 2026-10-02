@@ -47,7 +47,7 @@ def _display_to_dir():
     """SKILL.md category table: display name -> references/ directory name."""
     skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
     row = re.compile(
-        r"^\|\s*\d+\s*\|\s*([^|]+?)\s*\|[^|]*\|\s*\d+\s*\|\s*`references/([^/]+)/index\.md`", re.M)
+        r"^\|\s*\d+\s*\|\s*([^|]+?)\s*\|\s*\d+\s*\|\s*`references/([^/]+)/index\.md`", re.M)
     return {display.strip(): directory for display, directory in row.findall(skill)}
 
 

@@ -58,6 +58,18 @@ Open question: [what the questioning did not resolve]
 - **Rhetorical Socratic** — questions whose only acceptable answer is agreement; the Orientation Check red line exists for this
 - **Infinite regress** — "but why do you say that?" until the conversation dies; each probe must be answerable in one step from something the user actually said
 
+## Cognitive-Bias Quick Check (Recipe cross-reference)
+
+Before treating probe answers as findings, run three "Ask:" checks on the answers themselves:
+
+- **Anchoring** — Ask: was the first number offered the anchor every later estimate quietly moved from?
+- **Sunk cost** — Ask: is any option defended mainly by what has already been spent, not by what it returns next?
+- **Confirmation bias** — Ask: what observation would have overturned this conclusion — and did anyone actually look for it?
+
+For the full detector table (lifecycle coverage with trigger signal + check action per bias), route to **Cognitive & Statistical Bias Checklist** (data-analysis, `debias-checklist.md`). This entry holds the pointer, not a duplicate table.
+
+**Admission verdict** (v0.1.6): standalone cognitive-bias entries reviewed — Recipe verdict, because data-analysis already owns the checklist methodology and a second table here would create twin sources of truth.
+
 ## Evidence Strength
 
 **Practitioner consensus on method, contested on transfer.** Socratic questioning is a standard fixture in critical-thinking education and the assumption-probing sequence is well documented. Evidence that Socratic dialogue improves decision quality in applied settings is mixed, and trained facilitation matters more than the question types themselves — treat the six types as a checklist for a facilitator, not a self-operating procedure.
@@ -65,3 +77,4 @@ Open question: [what the questioning did not resolve]
 ## Source
 Socrates (470-399 BC); formalized in critical thinking education.
 Provenance: orientation-capture patterns absorbed from [thinking-partner](https://github.com/mattnowdev/thinking-partner) (MIT license), absorbed 2026-09.
+Cognitive-Bias Quick Check added with **Recipe** verdict, 2026-10-01 — data-analysis owns the full checklist (`debias-checklist.md`); this entry holds a three-question pointer, not a second table.

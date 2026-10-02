@@ -15,10 +15,11 @@ By repeatedly asking "why" (typically 5 times), pierce through the symptoms of a
 - Process errors or quality issues
 - Results consistently below expectations
 
-⚠️ **Use with caution**
-- Problem has multiple independent root causes (use Fishbone instead)
-- Root cause is structural/political (5 Whys can identify but not resolve)
-- Insufficient data to support each why step
+⚠️ **When NOT to use**
+- Multiple independent root causes are plausible from the start — a single forced chain hides the branches; map with Fishbone first
+- The system behaves as a feedback loop (causes and effects reinforce each other) — linear why-chains mislead on entangled systems; use Systems Thinking
+- No evidence exists to check any "why" step (no logs, no data, no observations) — the output would be plausible fiction, not diagnosis; gather data first (see Red Flags in SKILL.md)
+- The root cause is structural or political — 5 Whys can identify it but cannot resolve it; pair the finding with organizational tools
 
 ---
 
@@ -100,16 +101,18 @@ Corrective Actions:
   Long-term: ① Add analytics tracking ② Build onboarding funnel monitoring ③ Standardize onboarding priority assessment
 ```
 
+## Failure Modes
+
+- **Stopping at symptoms**: the chain ends at Why 1-2 with a restated symptom → force the question until the level found is actionable (system/process/design), never a person
+- **Evidence-free steps**: each "why" answered from plausibility instead of observation → every step carries its evidence; a step that cannot be verified ends the chain honestly ("cause not established" at that level)
+- **Single-chain bias**: one tidy causal chain reported for a multi-cause problem → when a second chain surfaces mid-analysis, switch to Fishbone and branch
+- **"Human error" terminal**: the chain stops at "someone made a mistake" — a non-actionable end → keep asking what made the error likely (system, process, training)
+
 ---
 
-## Common Pitfalls
+## Evidence Strength
 
-| Pitfall | Description | How to avoid |
-|---------|-------------|-------------|
-| Stopping at symptoms | Stopping at Why 1-2, only finding symptoms | Force asking until reaching actionable systemic root cause |
-| Jumping to conclusions | Logic between steps is not rigorous, skipping based on gut feeling | Each step must have evidence support |
-| Single root cause bias | Attributing complex problems to just one cause | When multiple Why chains emerge, supplement with Fishbone |
-| Stopping at "human error" | Root cause is "someone made a mistake" — this is not actionable | Keep asking: why did this person make a mistake? What went wrong in system/process/training? |
+Practitioner consensus for simple, chain-traceable causation — decades of Toyota Production System use. The specific "five" is convention, not calibration: stop at the actionable level, whether that takes three whys or seven. Contested for complex systems, where linear root-cause narratives can false-compress multi-factor failures (see When NOT to use).
 
 ---
 

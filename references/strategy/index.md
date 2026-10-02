@@ -85,8 +85,14 @@
 ## Common Combinations
 
 - **Strategic planning**: PESTLE → SWOT → OKR
+  - Step outputs: PESTLE → O/T factor list with evidence; SWOT → 4-quadrant fit assessment consuming that O/T list; OKR → quarterly objectives with measurable key results
+  - Branch: policy or regulatory shock surfacing mid-analysis → re-run PESTLE before continuing; no shocks → proceed
+  - Final deliverable: macro scan + 4-quadrant assessment + quarterly OKR sheet — one synthesized conclusion, not three stapled reports
 - **Business model design**: PESTLE/Porter's → Business Model Canvas → Value Proposition Canvas
 - **Competitive analysis**: Porter's Five Forces → SWOT → First Principles
+  - Step outputs: Five Forces → industry structure verdict (where profit pools sit and why); SWOT → position fit consuming that structure analysis; First Principles → challenge any "industry law" the plan quietly assumed
+  - Branch: analysis target is one company's full assessment → SWOT leads and Five Forces feeds it (see constraint table); industry entry decision → Five Forces leads
+  - Final deliverable: industry structure verdict + positioned assessment + assumption audit — synthesized, not stapled
 - **Organizational change**: Stakeholder Mapping → Six Thinking Hats → OKR
 - **Growth strategy**: Cynefin (judge problem domain) → Ansoff Matrix (select direction) → Blue Ocean (differentiation)
 - **Product portfolio optimization**: BCG Matrix (portfolio classification) → Ansoff Matrix (growth direction) → RICE (execution ranking)

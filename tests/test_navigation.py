@@ -3,7 +3,7 @@ guards counts; this module guards routing assets):
 
 - all methodology links resolve (SKILL.md + every index.md backtick reference)
 - every index.md carries its required routing sections
-- the 4 acceptance scenarios in test-prompts.json are still backed by routing assets
+- the 4 acceptance scenarios in evals/evals.json are still backed by routing assets
 - entry-skeleton field coverage: a regression floor for the stub-repair batch
 - no literal "\\n" escapes in methodology files (regression for the strategy stubs)
 """
@@ -19,7 +19,7 @@ REFS = ROOT / "references"
 
 INDEX_SECTIONS = ["Routing Trigger Signals", "Minimum Information Requirements"]
 SKELETON_FIELDS = ["When NOT to use", "Failure Modes", "Evidence Strength", "Output Template"]
-SKELETON_COVERAGE_FLOOR = 67  # the stub-repair batch + framework-selection.md
+SKELETON_COVERAGE_FLOOR = 91  # v0.1.6 backfill batch 1: five-whys + all of go-to-market
 
 
 def index_files():
@@ -106,22 +106,23 @@ class TestEntrySkeleton(unittest.TestCase):
 
 
 class TestAcceptanceScenarios(unittest.TestCase):
-    """test-prompts.json holds 4 behavioral acceptance scenarios. pytest cannot
-    execute an LLM; what it can hold is the structural regression: the routing
-    assets each scenario depends on must stay in place."""
+    """evals/evals.json holds 4 behavioral acceptance scenarios (single source
+    of acceptance truth — the former test-prompts.json copy was removed in
+    v0.1.6). pytest cannot execute an LLM; what it can hold is the structural
+    regression: the routing assets each scenario depends on must stay in place."""
 
-    PROMPTS = ROOT / "test-prompts.json"
+    PROMPTS = ROOT / "evals" / "evals.json"
 
     @classmethod
     def setUpClass(cls):
         data = json.loads(cls.PROMPTS.read_text(encoding="utf-8"))
-        cls.scenarios = {s["id"]: s for s in data}
+        cls.scenarios = {s["id"]: s for s in data["evals"]}
         cls.skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
 
     def test_prompts_inventory(self):
         self.assertEqual(sorted(self.scenarios), [1, 2, 3, 4])
         for sid, s in self.scenarios.items():
-            for key in ("scenario", "prompt", "expected"):
+            for key in ("scenario", "prompt", "expected_output"):
                 self.assertTrue(s.get(key), f"scenario {sid} missing '{key}'")
 
     def test_scenario_1_root_cause_routing(self):

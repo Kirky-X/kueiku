@@ -1,9 +1,9 @@
 ---
 name: kueiku
-description: "Methodology navigation map for AI agents. Triggers: analysis/strategy/decision/user research/structured thinking/product discovery/go-to-market/market research/data analysis/engineering/architecture optimization/root cause analysis/prioritization/risk rehearsal/tech selection/TDD/quantitative investing/factor investing/portfolio optimization/backtesting/engineering methodology (code review process, refactoring strategy, CI-CD process design, observability strategy, DDD, performance/security/API/database design methods, incident response playbook, Git workflow, dependency strategy, microservices architecture decisions). 中文触发：方法论/分析框架/决策方法/优先级排序/根因分析/技术选型/用户研究/产品发现/结构化思考/怎么设计/选什么方案"
+description: "Methodology navigation map for AI agents — an index of 142 methodologies across 19 categories. Triggers: analysis/strategy/decision/user research/structured thinking/product discovery/go-to-market/market research/data analysis/engineering/root cause analysis/prioritization/risk rehearsal/tech selection/TDD/quantitative investment/factor investing/portfolio optimization/backtesting/engineering methods (code review, refactoring, CI-CD, observability, DDD, performance/security/API/database design, incident response playbook, Git workflow, dependency strategy, microservices). Also routes: problem diagnosis, product growth, decision making, AI delivery, execution, product philosophy, leadership, financial analysis, research methodology, industry analysis. 中文触发：方法论/分析框架/决策方法/优先级排序/根因分析/技术选型/用户研究/产品发现/结构化思考/怎么设计/选什么方案"
 license: MIT
 metadata:
-  version: "0.1.5"
+  version: "0.1.6"
   author: "Kirky-X"
   repo: "https://github.com/Kirky-X/kueiku"
   tags: "methodology, framework, decision-making, strategy, root-cause, prioritization, structured-thinking, user-research"
@@ -43,27 +43,27 @@ flowchart TD
 
 ## Category Overview (19 categories × 142 methodologies)
 
-| # | Category | Task types | Count | Index path |
-| --- | --- | --- | --- | --- |
-| 1 | Problem Diagnosis | Root cause analysis, disruptive thinking, 80/20 focus | 7 | `references/problem-diagnosis/index.md` |
-| 2 | Strategic Analysis | Situation assessment, competitive landscape, business model, pricing moat, value chain, benchmarking, resource/capability assessment, strategic evolution | 24 | `references/strategy/index.md` |
-| 3 | Product & Growth | User needs, growth bottleneck, product innovation, metrics | 8 | `references/product-growth/index.md` |
-| 4 | Decision Making | Prioritization, goal setting, risk rehearsal, technology selection, existential decision, risk assessment | 12 | `references/decision-making/index.md` |
-| 5 | User Research | User journey, empathy mapping, decision journey, needs hierarchy | 5 | `references/user-research/index.md` |
-| 6 | Structured Thinking | MECE expression, multi-perspective assessment, assumption clarification, framework selection, connecting dots, systems thinking | 9 | `references/structured-thinking/index.md` |
-| 7 | Product Discovery | Continuous discovery, hypothesis validation, user interviews, experiment design | 8 | `references/product-discovery/index.md` |
-| 8 | Go-to-Market | Beachhead, ICP, GTM, growth loops, positioning | 7 | `references/go-to-market/index.md` |
-| 9 | Market Research | Market sizing, segmentation, user personas, STP, perceptual mapping, technology adoption | 7 | `references/market-research/index.md` |
-| 10 | Data Analysis | Cohort, A/B testing, metrics, RFM | 5 | `references/data-analysis/index.md` |
-| 11 | AI Delivery | Shipping artifacts standards, doc-code drift | 2 | `references/ai-delivery/index.md` |
-| 12 | Execution | Outcome roadmap, strategy red team, agile requirements | 4 | `references/execution/index.md` |
-| 13 | Engineering | TDD, bite-sized plan, service contracts, Agent DX, code review, refactoring, architecture design, CI/CD, observability, DDD, performance optimization, security design, API design, database design, incident response, Git workflow, dependency management, microservices | 21 | `references/engineering/index.md` |
-| 14 | Product Philosophy | Radical focus, vertical integration, tech meets humanities, invisible perfection | 4 | `references/product-philosophy/index.md` |
-| 15 | Leadership | Reality distortion field, A-player density, change management | 3 | `references/leadership/index.md` |
-| 16 | Financial Analysis | DuPont, DCF, comparable company, EVA | 5 | `references/financial-analysis/index.md` |
-| 17 | Research Methodology | Systematic research process | 2 | `references/research-methodology/index.md` |
-| 18 | Industry Analysis | Industry value chain, Gartner Hype Cycle | 2 | `references/industry-analysis/index.md` |
-| 19 | Quantitative Investment | Factor investing, portfolio optimization, risk parity, momentum strategy, statistical arbitrage, backtesting, ML stock selection | 7 | `references/quantitative-investment/index.md` |
+| # | Category | Count | Index path |
+| --- | --- | --- | --- |
+| 1 | Problem Diagnosis | 7 | `references/problem-diagnosis/index.md` |
+| 2 | Strategic Analysis | 24 | `references/strategy/index.md` |
+| 3 | Product & Growth | 8 | `references/product-growth/index.md` |
+| 4 | Decision Making | 12 | `references/decision-making/index.md` |
+| 5 | User Research | 5 | `references/user-research/index.md` |
+| 6 | Structured Thinking | 9 | `references/structured-thinking/index.md` |
+| 7 | Product Discovery | 8 | `references/product-discovery/index.md` |
+| 8 | Go-to-Market | 7 | `references/go-to-market/index.md` |
+| 9 | Market Research | 7 | `references/market-research/index.md` |
+| 10 | Data Analysis | 5 | `references/data-analysis/index.md` |
+| 11 | AI Delivery | 2 | `references/ai-delivery/index.md` |
+| 12 | Execution | 4 | `references/execution/index.md` |
+| 13 | Engineering | 21 | `references/engineering/index.md` |
+| 14 | Product Philosophy | 4 | `references/product-philosophy/index.md` |
+| 15 | Leadership | 3 | `references/leadership/index.md` |
+| 16 | Financial Analysis | 5 | `references/financial-analysis/index.md` |
+| 17 | Research Methodology | 2 | `references/research-methodology/index.md` |
+| 18 | Industry Analysis | 2 | `references/industry-analysis/index.md` |
+| 19 | Quantitative Investment | 7 | `references/quantitative-investment/index.md` |
 
 ---
 
@@ -96,16 +96,18 @@ Category-level mapping only (one line per category). The full intent→methodolo
 ## Calling Protocol
 
 ```
-0. Pre-check, in strict order — information first, fitness second: a) Confirm the task type matches a row in the table above and information sufficiency ≥ Level 1; below that, run the Degradation Path before any framework choice. b) Decide depth: quick scan or full analysis (it trims step 5). c) Score candidate frameworks against the fitness gate (see `references/structured-thinking/framework-selection.md`); no candidate clears the bar → NONE: answer directly without a framework. d) If two frameworks both fit, pick primary + backup and explain why primary is primary
+0. Pre-check, in strict order — information first, fitness second: a) Confirm the task type matches a row in the table above and information sufficiency ≥ Level 1; below that, run the Degradation Path before any framework choice. b) Decide depth: quick scan or full analysis (it trims step 5). c) Framework check in three tiers — exactly one realistic candidate → apply the 5 principles as a one-sentence check (can it directly answer the core question? inputs available? effort proportional? — `references/structured-thinking/framework-selection.md`) and say the short-circuit path was taken; ≥ 2 candidates or a habitual pick → full fitness-gate scorecard; no candidate clears the bar → NONE: answer directly without a framework. d) If two frameworks both fit, pick primary + backup and explain why primary is primary
 1. Declare framework and depth: "I will use [methodology name] for this analysis. Depth: [quick scan | full analysis]. Reason: [routing correspondence]; Required inputs: [list]; Expected output: [format]"
 2. Read reference: Open references/<category>/<methodology>.md to extract execution steps and output template
 3. Gather inputs: Confirm each item as required by the framework; handle missing items via the degradation path
 4. Execute framework: Output step by step per the reference, tagging each piece of information as fact/inference/assumption
-5. Output conclusion (quality gate):
+5. Output conclusion (quality gate — six checks, hard cap; do not add more):
    ✓ Directly answers the user's original question
    ✓ Includes at least one immediately actionable recommendation
-   ✓ Labels confidence (High/Medium/Low) and key uncertainties
+   ✓ Labels confidence (High/Medium/Low), key uncertainties, and a stop_reason — `completed | degraded(L2) | rerouted | none_direct` — so an information-limited output is never structurally indistinguishable from a finished one
    ✓ Depth trim: quick scan → conclusion + the primary framework's key output only (no full template walkthrough); full analysis → complete steps + output template
+   ✓ Failure boundary & disagreements: one line stating the input or boundary under which this conclusion would mislead (generate it at execution time if the reference lacks such a section); in a multi-framework combination, list where the conclusions disagree instead of silently picking a winner
+   ✓ Reassess When: 2-3 triggers that should reopen framework selection (e.g. sample regime change, stage shift, data availability change)
    ✗ If the conclusion merely restates the framework without incremental insight, refine further
 ```
 
@@ -115,10 +117,14 @@ Category-level mapping only (one line per category). The full intent→methodolo
 - The user explicitly asks for a direct answer
 - Information required by the framework is severely missing (see Degradation Path Level 3+)
 - **NONE default**: no candidate framework clears the fitness gate (task alignment ≥ 4 and weighted total ≥ 3.5 — `references/structured-thinking/framework-selection.md`); answer directly and name why each candidate fell short. A marginal framework is not "run with caveats", it is a wrong framework
+- **Red Flags — do not enter analysis at all** (checked before the Degradation Path; these are out-of-scope situations, not information gaps):
+  - Suspected fraud, legal liability, or personal crisis → no framework; refer to the appropriate professional and say why you are not analyzing
+  - No baseline data at all → route to instrumentation/measurement first (see `references/engineering/observability.md`), not diagnosis on empty data
+  - Burning emergency (cash runway in weeks, incident in progress) → skip the analysis, output a minimal action list now; analyze after stabilization
 
 ### Combination rules
 
-Some tasks require a methodology combination. Where present, common combinations are listed in each `index.md` under "Common Combinations". **Combination cap**: at most 3 methodologies per task, and only as an exception — a single well-fitting framework beats a stack. Every member must bring a complementary role (e.g. framing → evaluation → sequencing); near-synonym or same-domain stacks are redundancy, not combinations. Run members sequentially by default, and check the constraint table below before combining. After each framework completes, before moving to the next, confirm: ① Is the core conclusion from the previous framework clear? ② Does the next framework need the previous one's output as input? ③ Does the user have any objections to the previous framework's conclusion?
+Some tasks require a methodology combination. Where present, common combinations are listed in each `index.md` under "Common Combinations". **Combination cap**: at most 3 methodologies per task, and only as an exception — a single well-fitting framework beats a stack. Every member must bring a complementary role (e.g. framing → evaluation → sequencing); near-synonym or same-domain stacks are redundancy, not combinations. Run members sequentially by default, and check the constraint table below before combining. After each framework completes, before moving to the next, confirm: ① Is the core conclusion from the previous framework clear? ② Does the next framework need the previous one's output as input? ③ Does the user have any objections to the previous framework's conclusion? Multi-step combinations follow the playbook format where an index's Common Combinations prescribes one (per-step output, conditional branches, final deliverable); a multi-framework output must end in a synthesized conclusion section, never a side-by-side pile.
 
 ### Methodology mutual exclusion and ordering constraints
 
@@ -147,6 +153,8 @@ Some methodologies have mutual exclusion or ordering dependencies. When combinin
 | L4 | Information severely insufficient (cannot even determine framework selection) | Use Cynefin or Framework Selection first to determine problem nature and applicable framework; if still uncertain, fall back to "direct best judgment" without a framework; state confidence level and dependent assumptions |
 
 See each `index.md` "Minimum Information Requirements per Methodology" section for each framework's minimum information needs.
+
+**Three input modes when information is missing** — announce which one you are in: **Guided** (ask the L3 questions one at a time, with progress labels like "input Q2/4"); **Context dump** (the user pastes everything once — you extract it yourself and never re-ask what was already given); **Best guess** (zero input — proceed on typical-case assumptions, flag every assumption in the output, invite correction). At any step the user may say "skip the rest": deliver the result from what you have and discount confidence accordingly. Degradation is a whole-protocol exit, not an entry-only gate.
 
 ---
 
@@ -180,28 +188,14 @@ If during execution you find the framework is a poor fit, don't force completion
 
 ### Usage
 
-Each subcommand reads a CSV (headers must match; run with `--help` for the exact column spec, options, and a worked example):
-
 ```bash
-python scripts/main.py <subcommand> -i <input.csv> [-o report.md] [--json]
-
-# Examples
-python scripts/main.py rice    -i features.csv                 # RICE priority scoring
-python scripts/main.py dcf     -i cashflows.csv --rate 0.10 --growth 0.03   # DCF valuation
-python scripts/main.py abtest  -i experiment.csv               # A/B significance + SRM
-
-# Full parameters and CSV formats per subcommand:
-python scripts/main.py <subcommand> --help
+python scripts/main.py <subcommand> -i <input.csv> [--json]
 ```
 
-Supports Markdown report output (default) and JSON format (`--json`).
+Every subcommand has `--help` with the exact CSV column spec, options, and a worked example. Output is a Markdown report by default, JSON with `--json`.
 
 ---
 
 ## Maintenance Notes
 
-- **Methodology counts are generated**: the "N categories × M methodologies" figures in this file and `skill.json` come from `python3 scripts/count_methodologies.py` (also writes `scripts/methodology-count.json`). After adding/removing anything under `references/`, re-run it and update the numbers here.
-- Adding a methodology: update the category's `index.md` table, minimum information requirements, and routing trigger signals. **Entry skeleton** — Every methodology entry must carry a When NOT to use boundary (where the framework misleads or wastes effort, not only where it shines), **Failure Modes** (how its output typically goes wrong + the countermeasure), **Evidence Strength** (an honest grade — strong / mixed / contested / practitioner consensus; never launder numbers), and **Output Template** (a copy-pasteable scaffold), on top of Core Concept / Applicable Scenarios / Key Steps / Source. **Write mechanism, not persona** — entries prescribe judgment rules, never style imitation. Worked example: `references/product-growth/jtbd.md`. Backfill status: entries added from v0.1.5 on ship complete; the legacy corpus is partially backfilled (80/142 as of 2026-09-29) and `tests/test_navigation.py` holds the regression floor — this standard is not a claim of present coverage
-- **Admission verdict — one of four**: Build (new entry) / Fold into X (merge into an existing entry) / Recipe (cross-reference it from an index or combination, no new file) / Reject (outside a navigation map's scope). Record the verdict and reason in the entry's Source section; never add a stub to pad the count
-- Adding a category: add a row to the category overview table and create the corresponding `index.md`
-- **Reading principle**: only read the corresponding reference file when needed; do not preload all files
+Entry skeleton & admission rules, count regeneration, the add-must-trim budget rule, and evaluation-asset conventions: see [docs/MAINTENANCE.md](docs/MAINTENANCE.md).

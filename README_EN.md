@@ -13,7 +13,9 @@ English | [中文](README.md)
 - **Calling protocol**: declare → read reference → gather inputs → execute → gated output, a five-step standard flow that makes methodology usage traceable
 - **Degradation path for insufficient information**: 4 levels — execute normally → label assumptions and to-collect items → stop and ask key questions → fall back to best judgment; never force a framework
 - **Framework correction mechanism**: if a framework turns out to be a poor fit mid-execution (a key dimension cannot be filled, the conclusion drifts, the user rejects the direction), stop immediately, explain, and re-route
-- **Combination rules**: common methodology combos plus mutually exclusive pairs (Lean Canvas ↔ Startup Canvas: pick one; ICE rough screening → RICE fine ranking)
+- **Combination rules**: common methodology combos plus mutually exclusive pairs (Lean Canvas ↔ Startup Canvas: pick one; ICE rough screening → RICE fine ranking); high-frequency multi-step combos follow a playbook format (per-step output + conditional branches + final deliverable)
+- **Hard exits**: six-check quality gate (with a stop_reason label and Reassess When re-selection triggers), Red Flags gate (fraud / zero-baseline-data / burning emergencies never enter analysis), three input modes for missing information (Guided / Context dump / Best guess)
+- **Evaluation & validation assets**: `evals/evals.json` routing eval set (22 lenient/strict dual-metric cases + 4 end-to-end scenarios), `triggers/trigger-queries.json` trigger guard (static signal check), `scripts/validate_skill.py` structure validation (runs in CI)
 - **Computation CLI** (`kueiku-calc`, 19 subcommands): RICE / Decision Matrix / ICE / Risk Matrix / FMEA / Pareto / DuPont / DCF / EVA / A-B Test / RFM / Cohort / Opportunity Score / BCG / GE-McKinsey / Factor Analysis / Momentum / Risk Parity / Performance Metrics
 
 | Category (count) | Category (count) | Category (count) |
@@ -69,22 +71,22 @@ The five-step standard flow once a methodology is selected:
 2. Read ref     → extract execution steps and the output template
 3. Gather input → confirm each required input item by item; missing items take the degradation path
 4. Execute      → output step by step, tagging the source of each piece of information
-5. Gated output → conclusion directly answers the question + actionable advice + confidence
+5. Gated output → conclusion directly answers + actionable advice + confidence + a stop_reason label + Reassess When triggers
 ```
 
 ## ✅ Tests & Verification
 
-Measured pytest run (2026-09-29, Python 3.12, 42 cases / 8 files):
+Measured pytest run (2026-10-01, Python 3.12, 45 cases / 9 files):
 
 ```text
 $ python3 -m pytest tests -q
-......................................                                               [100%]
-42 passed in 0.67s
+.............................................                         [100%]
+45 passed in 0.60s
 ```
 
-Eight test files: `test_abtest` (A/B significance), `test_dcf` (DCF valuation), `test_rice_tiers` (RICE tiering), `test_input_validation`, `test_consistency` (metric consistency), `test_skips`, `test_navigation` (link integrity + required index sections + acceptance-scenario asset regression + entry-skeleton coverage floor), `test_routing_signals` (index.md-layer routing consistency guard: table Reference files exist, trigger-signal targets resolve, minimum information requirements cover every methodology, combination members resolve).
+Nine test files: `test_abtest` (A/B significance), `test_dcf` (DCF valuation), `test_rice_tiers` (RICE tiering), `test_input_validation`, `test_consistency` (metric consistency), `test_skips`, `test_navigation` (link integrity + required index sections + acceptance-scenario asset regression + entry-skeleton coverage floor at 91/142), `test_routing_signals` (index.md-layer routing consistency guard), `test_eval_assets` (routing-case schema/coverage guard + static signal check for trigger queries).
 
-The acceptance scenarios in `test-prompts.json` (4 human-eval prompts) and their guard tests `tests/test_navigation.py` / `tests/test_routing_signals.py` are currently untracked and pending git tracking (to be committed with the next batch); the routing assets they depend on are regression-tested by `test_navigation`.
+Acceptance truth lives in `evals/evals.json`: 4 end-to-end scenarios + `routing_cases` (≥1 trigger case per category + 3 `none` negatives; live scoring is lenient/strict). The v0.1.5-era duplicate `test-prompts.json` was removed. Structure validation: `python3 scripts/validate_skill.py` (frontmatter whitelist, name/description limits, SKILL.md ↔ skill.json version & description consistency), wired into CI.
 
 Methodology count of record: `python3 scripts/count_methodologies.py` (writes `scripts/methodology-count.json`); SKILL.md and skill.json take their figures from it.
 
@@ -93,17 +95,21 @@ Methodology count of record: `python3 scripts/count_methodologies.py` (writes `s
 ```text
 kueiku/
 ├── SKILL.md                 # Entry: routing table + calling protocol + degradation path + correction mechanism
-├── skill.json               # Metadata (v0.1.5, MIT)
+├── skill.json               # Metadata (v0.1.6, MIT)
 ├── references/              # 19 category directories, each with index.md + one .md per methodology
 │   ├── strategy/            # 24: SWOT / PESTLE / Five Forces / BMC / Blue Ocean / Wardley …
 │   ├── engineering/         # 21: TDD / DDD / API design / code-review checklist / incident response …
 │   ├── quantitative-investment/  # 7: factors / momentum / risk parity / backtesting / ML stock selection …
 │   └── … (16 more categories)
+├── evals/                   # Acceptance truth: end-to-end scenarios + routing_cases
+├── triggers/                # Skill-level trigger / near-miss queries (statically guarded)
+├── docs/MAINTENANCE.md      # Maintenance & contribution rules (entry skeleton / admission verdicts / add-must-trim budget)
 ├── scripts/
 │   ├── main.py              # kueiku-calc CLI entry (19 subcommands)
 │   ├── count_methodologies.py  # methodology counter (writes methodology-count.json)
+│   ├── validate_skill.py    # structure validation (frontmatter / description / version consistency)
 │   └── decision|financial|quant|risk|strategy|data|utils.py  # per-domain calculations
-└── tests/                   # pytest suite (42 cases, 8 files)
+└── tests/                   # pytest suite (45 cases, 9 files)
 ```
 
 ## 🔮 Boundaries

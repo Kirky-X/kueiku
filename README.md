@@ -13,7 +13,9 @@
 - **调用协议**：声明 → 读参考 → 收集输入 → 执行 → 门控输出，五步标准流程，方法论使用可追溯
 - **信息不足降级路径**：4 级处理——正常执行 → 标注假设与待收集项 → 停下追问关键问题 → 回退最佳判断，绝不硬套框架
 - **框架纠偏机制**：执行中发现框架不适配（关键维度填不上、结论漂移、用户否定方向）立即停止、说明原因、重新路由
-- **组合规则**：常见方法论组合及互斥对（如 Lean Canvas ↔ Startup Canvas 二选一、ICE 粗筛 → RICE 精排）
+- **组合规则**：常见方法论组合及互斥对（如 Lean Canvas ↔ Startup Canvas 二选一、ICE 粗筛 → RICE 精排）；高频多步组合按 playbook 格式（每步产物 + 条件分支 + 最终交付物）编排
+- **硬性出口**：质量门禁六检（含 stop_reason 终止原因标注与 Reassess When 重选触发条件）、Red Flags 负面门禁（欺诈/零数据/紧急生存不进分析）、信息缺失三入口模式（Guided / Context dump / Best guess）
+- **评估与校验资产**：`evals/evals.json` 路由评测集（22 条 lenient/strict 双指标用例 + 4 条端到端场景）、`triggers/trigger-queries.json` 触发守卫（signal 词静态检查）、`scripts/validate_skill.py` 结构校验（CI 常跑）
 - **计算工具 CLI**（`kueiku-calc`，19 个子命令）：RICE / 决策矩阵 / ICE / 风险矩阵 / FMEA / 帕累托 / 杜邦 / DCF / EVA / A-B 测试 / RFM / Cohort / 机会分 / BCG / GE-McKinsey / 因子分析 / 动量信号 / 风险平价 / 绩效指标
 
 | 类别（计数） | 类别（计数） | 类别（计数） |
@@ -68,22 +70,22 @@ python3 ~/.zcode/skills/kueiku/scripts/main.py abtest -i ab.csv --json   # A/B �
 2. 读参考    → 提取执行步骤与输出模板
 3. 收集输入  → 逐项确认框架所需输入，缺失项走降级路径
 4. 执行      → 逐步输出，标注每条信息的来源
-5. 门控输出  → 结论直接回答问题 + 可执行建议 + 置信度
+5. 门控输出  → 结论直答 + 可执行建议 + 置信度 + stop_reason 终止原因 + Reassess When 重选触发条件
 ```
 
 ## ✅ 测试与验证
 
-pytest 套件实测（2026-09-29，Python 3.12，42 用例 / 8 文件）：
+pytest 套件实测（2026-10-01，Python 3.12，45 用例 / 9 文件）：
 
 ```text
 $ python3 -m pytest tests -q
-......................................                                               [100%]
-42 passed in 0.67s
+.............................................                         [100%]
+45 passed in 0.60s
 ```
 
-覆盖 8 个测试文件：`test_abtest`（A/B 显著性）、`test_dcf`（DCF 估值）、`test_rice_tiers`（RICE 分档）、`test_input_validation`（输入校验）、`test_consistency`（口径一致性）、`test_skips`（跳过逻辑）、`test_navigation`（导航链接完整性 + index 必含章节 + 验收场景资产回归 + 条目骨架覆盖下限）、`test_routing_signals`（index.md 层路由一致性守卫：表内 Reference 文件存在、触发信号指向可解析、最低信息要求全覆盖、组合引用可解析）。
+覆盖 9 个测试文件：`test_abtest`（A/B 显著性）、`test_dcf`（DCF 估值）、`test_rice_tiers`（RICE 分档）、`test_input_validation`（输入校验）、`test_consistency`（口径一致性）、`test_skips`（跳过逻辑）、`test_navigation`（导航链接完整性 + index 必含章节 + 验收场景资产回归 + 条目骨架覆盖下限 91/142）、`test_routing_signals`（index.md 层路由一致性守卫）、`test_eval_assets`（路由评测集 schema/覆盖下限守卫 + trigger 查询 signal 词静态守卫）。
 
-验收场景 `test-prompts.json`（4 个人工验收 prompt）与其配套守卫 `tests/test_navigation.py`、`tests/test_routing_signals.py` 目前为 untracked、待纳入 git 跟踪（随下批提交收口），其依赖的路由资产已由 `test_navigation` 做结构化回归。
+验收事实源收敛在 `evals/evals.json`：4 条端到端场景 + `routing_cases` 路由用例（19 类每类 ≥1 条正例 + 3 条 `none` 负例；live 评测按 lenient/strict 双指标打分）。v0.1.5 时代的重复拷贝 `test-prompts.json` 已删除。结构校验：`python3 scripts/validate_skill.py`（frontmatter 白名单、name/description 限制、SKILL.md ↔ skill.json 版本与 description 一致性），已挂入 CI。
 
 方法论计数口径：`python3 scripts/count_methodologies.py`（写入 `scripts/methodology-count.json`），SKILL.md 与 skill.json 的计数以其为准。
 
@@ -92,17 +94,21 @@ $ python3 -m pytest tests -q
 ```text
 kueiku/
 ├── SKILL.md                 # 入口：路由表 + 调用协议 + 降级路径 + 纠偏机制
-├── skill.json               # 元数据（v0.1.5，MIT）
+├── skill.json               # 元数据（v0.1.6，MIT）
 ├── references/              # 19 个类别目录，每目录 index.md + 各方法论 .md
 │   ├── strategy/            # 24 个：SWOT / PESTLE / 五力 / BMC / 蓝海 / Wardley …
 │   ├── engineering/         # 21 个：TDD / DDD / API 设计 / 代码评审清单 / 事件响应 …
 │   ├── quantitative-investment/  # 7 个：因子 / 动量 / 风险平价 / 回测 / ML 选股 …
 │   └── …（另 16 类）
+├── evals/                   # 验收事实源：端到端场景 + routing_cases 路由用例
+├── triggers/                # skill 级触发/近失查询（signal 词静态守卫的对象）
+├── docs/MAINTENANCE.md      # 维护与贡献规则（条目骨架 / 准入裁决 / 加必配删预算）
 ├── scripts/
 │   ├── main.py              # kueiku-calc CLI 入口（19 子命令）
 │   ├── count_methodologies.py  # 方法论计数（生成 methodology-count.json）
+│   ├── validate_skill.py    # 结构校验（frontmatter / description / 版本一致性）
 │   └── decision|financial|quant|risk|strategy|data|utils.py  # 各域计算实现
-└── tests/                   # pytest 套件（42 用例，8 文件）
+└── tests/                   # pytest 套件（45 用例，9 文件）
 ```
 
 ## 🔮 边界

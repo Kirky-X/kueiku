@@ -28,13 +28,13 @@ class TestCountConsistency(CSVTestCase):
         counts = self.count_methodologies()
         skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
         for cat, n in counts.items():
-            # table row is: | idx | Name | types | Count | `path` | — count precedes path
-            row = re.compile(rf"\|\s*\d+\s*\|[^|]+\|[^|]*\|\s*(\d+)\s*\|\s*`references/{re.escape(cat)}/index\.md`")
+            # table row is: | idx | Name | Count | `path` | — count precedes path
+            row = re.compile(rf"\|\s*\d+\s*\|[^|]+\|\s*(\d+)\s*\|\s*`references/{re.escape(cat)}/index\.md`")
             m = row.search(skill)
             self.assertIsNotNone(m, f"No category table row for {cat}")
             self.assertEqual(int(m.group(1)), n, f"Count mismatch for {cat}: table={m.group(1)} actual={n}")
         # Table counts sum to the real total
-        rows = re.findall(r"^\|\s*\d+\s*\|[^|]+\|[^|]*\|\s*(\d+)\s*\|", skill, re.M)
+        rows = re.findall(r"^\|\s*\d+\s*\|[^|]+\|\s*(\d+)\s*\|", skill, re.M)
         self.assertEqual(sum(int(x) for x in rows), sum(counts.values()))
 
     # Directory name -> display name used in skill.json (only where they differ)
