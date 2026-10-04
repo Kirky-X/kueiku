@@ -38,7 +38,8 @@ bash scripts/sync-skills.sh kueiku
 
 # 方式 2：手动拷贝到 agent 技能目录
 cp -r kueiku/ ~/.zcode/skills/kueiku/
-# 方式三：远程安装（GitHub 仓库）
+
+# 方式 3：远程安装（GitHub 仓库）
 npx skills add Kirky-X/kueiku --agent claude-code -y
 ```
 
