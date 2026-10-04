@@ -15,7 +15,7 @@
 - **框架纠偏机制**：执行中发现框架不适配（关键维度填不上、结论漂移、用户否定方向）立即停止、说明原因、重新路由
 - **组合规则**：常见方法论组合及互斥对（如 Lean Canvas ↔ Startup Canvas 二选一、ICE 粗筛 → RICE 精排）；高频多步组合按 playbook 格式（每步产物 + 条件分支 + 最终交付物）编排
 - **硬性出口**：质量门禁六检（含 stop_reason 终止原因标注与 Reassess When 重选触发条件）、Red Flags 负面门禁（欺诈/零数据/紧急生存不进分析）、信息缺失三入口模式（Guided / Context dump / Best guess）
-- **评估与校验资产**：`evals/evals.json` 路由评测集（22 条 lenient/strict 双指标用例 + 4 条端到端场景）、`triggers/trigger-queries.json` 触发守卫（signal 词静态检查）、`scripts/validate_skill.py` 结构校验（CI 常跑）
+- **评估与校验资产**：`evals/evals.json` 路由评测集（22 条路由用例 + 4 条端到端场景；用例带 `expected`/`acceptable` 字段，live 评测按 lenient/strict 双口径计分）、`triggers/trigger-queries.json` 触发守卫（signal 词静态检查）、`scripts/validate_skill.py` 结构校验（CI 常跑）
 - **计算工具 CLI**（`kueiku-calc`，19 个子命令）：RICE / 决策矩阵 / ICE / 风险矩阵 / FMEA / 帕累托 / 杜邦 / DCF / EVA / A-B 测试 / RFM / Cohort / 机会分 / BCG / GE-McKinsey / 因子分析 / 动量信号 / 风险平价 / 绩效指标
 
 | 类别（计数） | 类别（计数） | 类别（计数） |
@@ -31,7 +31,9 @@
 ## 📦 安装
 
 ```bash
-# 方式 1：从本仓库根一键部署（同步到 ~/.zcode/skills/ 与 ~/.claude/skills/，LF 强制归一）
+# 方式 1：多 skill 工作区一键部署——需在 kueiku/ 与 scripts/ 同层的工作区根执行
+# （scripts/sync-skills.sh 属多 skill 工作区，不随本仓分发；单独 clone 本仓请用方式 2/3。
+#   同步到 ~/.zcode/skills/ 与 ~/.claude/skills/，LF 强制归一）
 bash scripts/sync-skills.sh kueiku
 
 # 方式 2：手动拷贝到 agent 技能目录
@@ -58,6 +60,8 @@ npx skills add Kirky-X/kueiku --agent claude-code -y
 python3 ~/.zcode/skills/kueiku/scripts/main.py rice -i items.csv     # RICE 优先级打分
 python3 ~/.zcode/skills/kueiku/scripts/main.py abtest -i ab.csv --json   # A/B 显著性 + SRM 检测
 # ab.csv 格式：variant,users,conversions 两行（control / treatment）
+python3 ~/.zcode/skills/kueiku/scripts/main.py dcf -i cashflows.csv --rate 0.10 --growth 0.03 --shares 1000000   # DCF 估值 + 每股价值（--rate 贴现率，--growth 永续增长率）
+# cashflows.csv 格式：year,fcf；全部子命令支持 -i -（stdin）与 -o <file>（写文件，默认 stdout）
 ```
 
 ### 调用协议（五步）
@@ -85,7 +89,7 @@ $ python3 -m pytest tests -q
 
 覆盖 9 个测试文件：`test_abtest`（A/B 显著性）、`test_dcf`（DCF 估值）、`test_rice_tiers`（RICE 分档）、`test_input_validation`（输入校验）、`test_consistency`（口径一致性）、`test_skips`（跳过逻辑）、`test_navigation`（导航链接完整性 + index 必含章节 + 验收场景资产回归 + 条目骨架覆盖下限 91/142）、`test_routing_signals`（index.md 层路由一致性守卫）、`test_eval_assets`（路由评测集 schema/覆盖下限守卫 + trigger 查询 signal 词静态守卫）。
 
-验收事实源收敛在 `evals/evals.json`：4 条端到端场景 + `routing_cases` 路由用例（19 类每类 ≥1 条正例 + 3 条 `none` 负例；live 评测按 lenient/strict 双指标打分）。v0.1.5 时代的重复拷贝 `test-prompts.json` 已删除。结构校验：`python3 scripts/validate_skill.py`（frontmatter 白名单、name/description 限制、SKILL.md ↔ skill.json 版本与 description 一致性），已挂入 CI。
+验收事实源收敛在 `evals/evals.json`：4 条端到端场景 + `routing_cases` 路由用例（19 类每类 ≥1 条正例 + 3 条 `none` 负例；用例带 `expected`/`acceptable` 字段，lenient/strict 双口径计分发生在跑 LLM 的 live 评测中——本仓无打分脚本，pytest 不执行，口径定义见 [docs/MAINTENANCE.md](docs/MAINTENANCE.md)）。v0.1.5 时代的重复拷贝 `test-prompts.json` 已删除。结构校验：`python3 scripts/validate_skill.py`（frontmatter 白名单、name/description 限制、SKILL.md ↔ skill.json 版本与 description 一致性），已挂入 CI。
 
 方法论计数口径：`python3 scripts/count_methodologies.py`（写入 `scripts/methodology-count.json`），SKILL.md 与 skill.json 的计数以其为准。
 
@@ -107,6 +111,8 @@ kueiku/
 │   ├── main.py              # kueiku-calc CLI 入口（19 子命令）
 │   ├── count_methodologies.py  # 方法论计数（生成 methodology-count.json）
 │   ├── validate_skill.py    # 结构校验（frontmatter / description / 版本一致性）
+│   ├── install-skill.sh     # 安装器：install/update/uninstall 等 7 子命令，支持 9 种 agent 与 standalone 仓模式
+│   ├── skill_lint.py        # 仓库体检：frontmatter/链接/JSON/版本一致性门禁（FAIL/WARN 两级）
 │   └── decision|financial|quant|risk|strategy|data|utils.py  # 各域计算实现
 └── tests/                   # pytest 套件（45 用例，9 文件）
 ```

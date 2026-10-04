@@ -15,7 +15,7 @@ English | [中文](README.md)
 - **Framework correction mechanism**: if a framework turns out to be a poor fit mid-execution (a key dimension cannot be filled, the conclusion drifts, the user rejects the direction), stop immediately, explain, and re-route
 - **Combination rules**: common methodology combos plus mutually exclusive pairs (Lean Canvas ↔ Startup Canvas: pick one; ICE rough screening → RICE fine ranking); high-frequency multi-step combos follow a playbook format (per-step output + conditional branches + final deliverable)
 - **Hard exits**: six-check quality gate (with a stop_reason label and Reassess When re-selection triggers), Red Flags gate (fraud / zero-baseline-data / burning emergencies never enter analysis), three input modes for missing information (Guided / Context dump / Best guess)
-- **Evaluation & validation assets**: `evals/evals.json` routing eval set (22 lenient/strict dual-metric cases + 4 end-to-end scenarios), `triggers/trigger-queries.json` trigger guard (static signal check), `scripts/validate_skill.py` structure validation (runs in CI)
+- **Evaluation & validation assets**: `evals/evals.json` routing eval set (22 routing cases + 4 end-to-end scenarios; cases carry `expected`/`acceptable` fields for lenient/strict live scoring), `triggers/trigger-queries.json` trigger guard (static signal check), `scripts/validate_skill.py` structure validation (runs in CI)
 - **Computation CLI** (`kueiku-calc`, 19 subcommands): RICE / Decision Matrix / ICE / Risk Matrix / FMEA / Pareto / DuPont / DCF / EVA / A-B Test / RFM / Cohort / Opportunity Score / BCG / GE-McKinsey / Factor Analysis / Momentum / Risk Parity / Performance Metrics
 
 | Category (count) | Category (count) | Category (count) |
@@ -31,8 +31,10 @@ English | [中文](README.md)
 ## 📦 Installation
 
 ```bash
-# Option 1: one-command deploy from this repository root
-# (syncs to ~/.zcode/skills/ and ~/.claude/skills/, LF-normalized)
+# Option 1: one-command deploy from the multi-skill workspace root — run where
+# kueiku/ and scripts/ sit side by side (scripts/sync-skills.sh belongs to the
+# workspace, not this repo; for a standalone clone use Option 2/3).
+# Syncs to ~/.zcode/skills/ and ~/.claude/skills/, LF-normalized
 bash scripts/sync-skills.sh kueiku
 
 # Option 2: manual copy into an agent skills directory
@@ -59,6 +61,8 @@ Computation-heavy methodologies run directly via the CLI (deterministic, reprodu
 python3 ~/.zcode/skills/kueiku/scripts/main.py rice -i items.csv     # RICE priority scoring
 python3 ~/.zcode/skills/kueiku/scripts/main.py abtest -i ab.csv --json   # A/B significance + SRM check
 # ab.csv format: variant,users,conversions with two rows (control / treatment)
+python3 ~/.zcode/skills/kueiku/scripts/main.py dcf -i cashflows.csv --rate 0.10 --growth 0.03 --shares 1000000   # DCF valuation + per-share value (--rate discount rate, --growth perpetual growth)
+# cashflows.csv format: year,fcf; every subcommand accepts -i - (stdin) and -o <file> (write to file, default stdout)
 ```
 
 ### Calling Protocol (five steps)
@@ -86,7 +90,7 @@ $ python3 -m pytest tests -q
 
 Nine test files: `test_abtest` (A/B significance), `test_dcf` (DCF valuation), `test_rice_tiers` (RICE tiering), `test_input_validation`, `test_consistency` (metric consistency), `test_skips`, `test_navigation` (link integrity + required index sections + acceptance-scenario asset regression + entry-skeleton coverage floor at 91/142), `test_routing_signals` (index.md-layer routing consistency guard), `test_eval_assets` (routing-case schema/coverage guard + static signal check for trigger queries).
 
-Acceptance truth lives in `evals/evals.json`: 4 end-to-end scenarios + `routing_cases` (≥1 trigger case per category + 3 `none` negatives; live scoring is lenient/strict). The v0.1.5-era duplicate `test-prompts.json` was removed. Structure validation: `python3 scripts/validate_skill.py` (frontmatter whitelist, name/description limits, SKILL.md ↔ skill.json version & description consistency), wired into CI.
+Acceptance truth lives in `evals/evals.json`: 4 end-to-end scenarios + `routing_cases` (≥1 trigger case per category + 3 `none` negatives; cases carry `expected`/`acceptable` fields, and lenient/strict scoring happens in live LLM runs — no scorer ships in this repo, pytest does not execute it, definitions in [docs/MAINTENANCE.md](docs/MAINTENANCE.md)). The v0.1.5-era duplicate `test-prompts.json` was removed. Structure validation: `python3 scripts/validate_skill.py` (frontmatter whitelist, name/description limits, SKILL.md ↔ skill.json version & description consistency), wired into CI.
 
 Methodology count of record: `python3 scripts/count_methodologies.py` (writes `scripts/methodology-count.json`); SKILL.md and skill.json take their figures from it.
 
@@ -108,6 +112,8 @@ kueiku/
 │   ├── main.py              # kueiku-calc CLI entry (19 subcommands)
 │   ├── count_methodologies.py  # methodology counter (writes methodology-count.json)
 │   ├── validate_skill.py    # structure validation (frontmatter / description / version consistency)
+│   ├── install-skill.sh     # installer: install/update/uninstall etc., 7 subcommands, 9 agents, standalone-repo mode
+│   ├── skill_lint.py        # repo health lint: frontmatter/link/JSON/version-consistency gates (FAIL/WARN)
 │   └── decision|financial|quant|risk|strategy|data|utils.py  # per-domain calculations
 └── tests/                   # pytest suite (45 cases, 9 files)
 ```

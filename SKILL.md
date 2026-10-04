@@ -11,7 +11,7 @@ metadata:
 
 # Methodology Compass
 
-Every agent task requires methodology support. This skill is a methodology index map that guides agents to **choose the right framework, then use it correctly**. The detailed methodology list for each category is in the respective `references/<category>/index.md`.
+Every agent task requires methodology support. This skill is a methodology index map that guides agents to **choose the right framework, then use it correctly**.
 
 ## TL;DR — 30-Second Quick Reference
 
@@ -29,7 +29,7 @@ flowchart TD
     I -- No --> K["Done"]
 ```
 
-**Capability overview**: 19 categories × 142 methodologies. Each category's methodology list, best-use scenarios, and minimum information requirements are in that category's `index.md`.
+**Capability overview**: 19 categories × 142 methodologies. Each category's methodology list, best-use scenarios, and minimum information requirements are in its `index.md`.
 
 ## Core Principles
 
@@ -96,7 +96,7 @@ Category-level mapping only (one line per category). The full intent→methodolo
 ## Calling Protocol
 
 ```
-0. Pre-check, in strict order — information first, fitness second: a) Confirm the task type matches a row in the table above and information sufficiency ≥ Level 1; below that, run the Degradation Path before any framework choice. b) Decide depth: quick scan or full analysis (it trims step 5). c) Framework check in three tiers — exactly one realistic candidate → apply the 5 principles as a one-sentence check (can it directly answer the core question? inputs available? effort proportional? — `references/structured-thinking/framework-selection.md`) and say the short-circuit path was taken; ≥ 2 candidates or a habitual pick → full fitness-gate scorecard; no candidate clears the bar → NONE: answer directly without a framework. d) If two frameworks both fit, pick primary + backup and explain why primary is primary
+0. Pre-check, in strict order — information first, fitness second: a) Confirm the task type matches a routing-table row and information sufficiency ≥ Level 1; below that, run the Degradation Path before any framework choice. b) Decide depth: quick scan or full analysis (it trims step 5). c) Framework check in three tiers — exactly one realistic candidate → apply the 5 principles as a one-sentence check (can it directly answer the core question? inputs available? effort proportional? — `references/structured-thinking/framework-selection.md`) and say the short-circuit path was taken; ≥ 2 candidates or a habitual pick → full fitness-gate scorecard; no candidate clears the bar → NONE: answer directly without a framework. d) If two frameworks both fit, pick primary + backup and explain why primary is primary
 1. Declare framework and depth: "I will use [methodology name] for this analysis. Depth: [quick scan | full analysis]. Reason: [routing correspondence]; Required inputs: [list]; Expected output: [format]"
 2. Read reference: Open references/<category>/<methodology>.md to extract execution steps and output template
 3. Gather inputs: Confirm each item as required by the framework; handle missing items via the degradation path
@@ -192,10 +192,10 @@ If during execution you find the framework is a poor fit, don't force completion
 python scripts/main.py <subcommand> -i <input.csv> [--json]
 ```
 
-Every subcommand has `--help` with the exact CSV column spec, options, and a worked example. Output is a Markdown report by default, JSON with `--json`.
+Every subcommand has `--help` with the exact CSV columns, options, and a worked example; `-i -` reads stdin; `-o` writes a file (default stdout). Output is a Markdown report by default, JSON with `--json`. Extras: `dcf --rate --growth --shares` (per-share value); `factor`/`momentum`/`riskparity`/`perf --periods-per-year` (annualization, default 252).
 
 ---
 
 ## Maintenance Notes
 
-Entry skeleton & admission rules, count regeneration, the add-must-trim budget rule, and evaluation-asset conventions: see [docs/MAINTENANCE.md](docs/MAINTENANCE.md).
+Entry skeleton & admission rules, count regeneration, add-must-trim budget, evaluation-asset conventions: [docs/MAINTENANCE.md](docs/MAINTENANCE.md).

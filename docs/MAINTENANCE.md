@@ -32,7 +32,12 @@ Add a row to the SKILL.md category overview table and create the corresponding `
 
 ## Add-must-trim budget rule (SKILL.md)
 
-SKILL.md is resident context in every session where the skill loads — its size is a per-session token tax. Therefore: **any batch that adds content to SKILL.md must trim or compress an equal amount elsewhere in the same batch.** Soft cap: keep SKILL.md under 17,500 characters — measured 17,431 after the v0.1.6 rework (down from 18,662; the description unification with skill.json spent part of the trim surplus on restoring trigger words to the marketplace chain). Verify with `wc -m SKILL.md` after every batch. Contributor-facing content (maintenance rules, long usage examples) belongs in `docs/MAINTENANCE.md`, not SKILL.md.
+SKILL.md is resident context in every session where the skill loads — its size is a per-session token tax. Therefore: **any batch that adds content to SKILL.md must trim or compress an equal amount elsewhere in the same batch.** Soft cap: keep SKILL.md under 17,500 characters — measured 17,499 as of the 2026-10-04 doc-drift batch (the v0.1.6 rework took it from 18,662 down to 17,431, and the description unification with skill.json spent part of the trim surplus on restoring trigger words to the marketplace chain). Verify with `wc -m SKILL.md` after every batch. Contributor-facing content (maintenance rules, long usage examples) belongs in `docs/MAINTENANCE.md`, not SKILL.md.
+
+## Repo tooling
+
+- `scripts/skill_lint.py` — repo health lint: `python3 scripts/skill_lint.py .` checks SKILL.md frontmatter, internal `.md` links, JSON assets, and SKILL.md ↔ skill.json version consistency (FAIL blocks, WARN advises; this repo currently passes with 0 FAIL / 1 WARN).
+- `scripts/install-skill.sh` — in-repo installer for project-level agent directories: `install | update | uninstall | list-skills | list-agents | status | generate-commands`, with `--target` / `--agent` / `--all-agents` (claude, cursor, windsurf, trae, gemini, copilot, opencode, roocode, qoder); auto-detects multi-skill workspace vs standalone-repo mode.
 
 ## Evaluation assets
 
