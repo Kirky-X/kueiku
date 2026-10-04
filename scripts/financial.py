@@ -133,7 +133,7 @@ Additional parameters via command line:
   --shares     Shares outstanding (optional, for per-share valuation)
 
 Example:
-  python kueiku-calc.py dcf -i cashflows.csv --rate 0.10 --growth 0.03 --shares 1000000
+  python scripts/main.py dcf -i cashflows.csv --rate 0.10 --growth 0.03 --shares 1000000
 """
 
 
