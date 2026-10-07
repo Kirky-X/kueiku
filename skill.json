@@ -2,7 +2,7 @@
   "name": "kueiku",
   "description": "Methodology navigation map for AI agents — an index of 142 methodologies across 19 categories. Triggers: analysis/strategy/decision/user research/structured thinking/product discovery/go-to-market/market research/data analysis/engineering/root cause analysis/prioritization/risk rehearsal/tech selection/TDD/quantitative investment/factor investing/portfolio optimization/backtesting/engineering methods (code review, refactoring, CI-CD, observability, DDD, performance/security/API/database design, incident response playbook, Git workflow, dependency strategy, microservices). Also routes: problem diagnosis, product growth, decision making, AI delivery, execution, product philosophy, leadership, financial analysis, research methodology, industry analysis. 中文触发：方法论/分析框架/决策方法/优先级排序/根因分析/技术选型/用户研究/产品发现/结构化思考/怎么设计/选什么方案",
   "license": "MIT",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "author": "Kirky-X",
   "repo": "https://github.com/Kirky-X/kueiku",
   "homepage": "https://github.com/Kirky-X/kueiku",
