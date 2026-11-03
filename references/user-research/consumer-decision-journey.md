@@ -11,7 +11,7 @@ Non-linear decision journey: Consider → Evaluate → Purchase → Experience �
 - Loyalty loop design
 
 ⚠️ **When NOT to use**
-- B2B committee buying — the CDJ models an individual consumer loop; multi-stakeholder purchases need account-based mapping
+- B2B committee buying — the CDJ models an individual consumer loop; multi-stakeholder purchases need **B2B Buying Center Mapping** (Go-to-Market)
 - Service-stage redesign (onboarding, support, renewal) — the **Customer Journey Map** covers the full lifecycle with stage owners; the CDJ is sharpest on the pre-purchase loop and advocacy
 - Categories where the loop doesn't cycle — one-shot or infrequent purchases may have no loyalty loop to optimize
 - Replacing measurement with mapping — the journey is a hypothesis; stage-level churn data decides, not the diagram

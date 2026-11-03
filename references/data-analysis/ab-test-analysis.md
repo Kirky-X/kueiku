@@ -17,6 +17,7 @@ The `abtest` script analyzes 3+ variant inputs as follows: the first two variant
 
 ⚠️ **When NOT to use**
 - Many simultaneous changes that may interact — a two-arm test cannot separate their effects; use factorial or sequential designs, and read the result as a bundle-level answer rather than a per-change one
+- Individual-level assignment impossible (campaigns spanning regions, stores, or time periods) → randomize at the **geo/cluster level** and analyze cluster-level outcomes; for time-varying treatments use switchback designs — the power, SRM, and decision machinery below apply unchanged, only the unit of randomization changes
 - Reading results before the pre-registered decision point — peeking converts a pre-registered test into a search for a lucky read; fix the sample size and the stopping rule first, then look
 - Outcomes that cannot be observed soon enough to decide — if the metric takes a season to move, the experiment buys delay instead of an answer; ship and monitor instead
 - Instrument changes or other measurement artifacts riding along with the treatment — novelty, notification, or instrumentation effects can dominate the signal → audit the data path with **Cognitive & Statistical Bias Checklist** before trusting the read

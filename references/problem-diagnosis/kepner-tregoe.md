@@ -21,6 +21,14 @@ Diagnose a *selective* deviation by asking not only "where does it occur?" but "
 3. Score survivors per WANT; for leaders, list adverse consequences (probability × impact) and the assumption or weight change that would flip the ranking.
 4. Decide — or return "none passes the MUSTs" rather than force a winner.
 
+**Mode 1 software variant — fault localization**
+The same boundary discipline, mechanical over code:
+1. Precondition: a **minimal reproduction** — the smallest input/setup that still shows the defect; no repro, no diagnosis (an unreproducible bug is a logging task first)
+2. Bisect = IS/IS-NOT over the **time axis** (`git bisect`: passes / fails / distinction = the change), delta debugging = IS/IS-NOT over the **input axis** (shrink the failing input until the minimal differentiating case remains)
+3. Candidates must explain both sides: a theory that fits "fails on Tuesday" must also fit "not on Monday" — reject single-side theories
+4. Fix-verification gate: the fix must pass the minimal repro **and** the adjacent IS-NOT cases (the fix that breaks the passing side is a new defect)
+5. Situation still moving (intermittent under live traffic) → **OODA Loop**; confirmed code-level cause found → fix directly, no framework
+
 ## Output Template
 
 ```

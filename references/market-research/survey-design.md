@@ -9,6 +9,7 @@ A survey is an instrument: wording, order, and sample shape the answers as much 
 - Satisfaction/usage baselines and tracking
 - Segmentation inputs (feeds User Segmentation and User Personas)
 - Pricing research with an established instrument (Van Westendorp PSM)
+- Established instruments for specific constructs: **SERVQUAL** (service quality — expectation vs perception gaps across tangibility/reliability/responsiveness/assurance/empathy, Parasuraman-Zeithaml-Berry 1985) and **conjoint / MaxDiff** (willingness-to-pay decomposed across feature attributes, when WTP varies by bundle rather than by overall price)
 
 ⚠️ **When NOT to use**
 - Discovering unknown needs — questions only confirm what you thought to ask; interview first → The Mom Test (Product Discovery), then survey to size what interviews surfaced

@@ -19,6 +19,17 @@ Van Westendorp Price Sensitivity Meter + value metric identification + tier desi
 4. Design tiers based on value metric
 5. Validate with A/B testing
 
+## Presentation Psychology (folded)
+
+The PSM answers *what the price is*; these levers shape *how the price is presented* — applied inside tier design, after the range exists:
+- **Decoy / asymmetric dominance**: a middle tier priced to make the intended home look strictly better (the `[Pro] — the intended home` row above is this lever in template form); the decoy must be dominated, not merely worse
+- **Reference price & anchoring**: buyers judge against the first price seen — order tiers high-to-low, and never show the discount next to a fabricated "original" price you cannot defend
+- **Price endings & per-period framing**: charm endings and per-month-per-seat framing change perception without changing the number; disclose the annualized cost honestly
+- **Versioning**: split one product into tiers on a value metric the customer controls (Shapiro & Varian, *Information Rules*, 1998) — the metric choice is a pricing decision, not a packaging detail
+- **Bundling / unbundling test**: bundle when valuations are heterogeneous and marginal costs near zero; unbundle when a segment's valuation of one component is extreme — test both against the PSM band before committing
+
+Evidence grade: lab-strong (prospect theory, decoy effects replicate), field-mixed — the lever moves perception; revenue moves only with the A/B validation step above.
+
 ## Output Template
 
 ```
@@ -47,4 +58,4 @@ Validation: A/B or sales test of [$y vs $y±15%] on [segment], success criterion
 Mixed — Van Westendorp is a standard, cheap first pass, but stated-price methods systematically diverge from revealed willingness to pay (the gap is well documented); treat its range as a hypothesis band to be confirmed by real transactions, which the framework itself prescribes.
 
 ## Source
-Peter van Westendorp (1976); pricing strategy methodology.
+Peter van Westendorp (1976); pricing strategy methodology. Presentation-psychology fold added v0.1.16 (necessity audit: distinct lever set — what the price is vs how it is presented — but applied inside this entry's tier design; a separate card would force a routing arbitration between two pricing entries).

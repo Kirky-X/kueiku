@@ -1,14 +1,14 @@
 {
   "categories": 19,
-  "total_methodologies": 152,
+  "total_methodologies": 156,
   "per_category": {
-    "ai-delivery": 2,
+    "ai-delivery": 3,
     "data-analysis": 5,
     "decision-making": 16,
-    "engineering": 21,
+    "engineering": 22,
     "execution": 5,
     "financial-analysis": 5,
-    "go-to-market": 7,
+    "go-to-market": 9,
     "industry-analysis": 2,
     "leadership": 4,
     "market-research": 8,

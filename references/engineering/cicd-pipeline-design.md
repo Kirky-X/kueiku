@@ -24,6 +24,12 @@
 6. **Deploy**: blue-green / canary / rolling; environment promotion
 7. **Post-Deploy**: smoke tests, monitoring, rollback triggers
 
+**Flaky-test triage (Test stage)** — a red gate nobody trusts is worse than no gate:
+1. **Quarantine immediately**: move the test out of the blocking path (keep it visible on a dashboard) — a flaky test in the gate trains people to re-run and ignore red
+2. **Classify before fixing**: time-dependent (sleeps, clocks) / ordering-dependent (shared state, parallelism) / async race (missing wait) / resource-leaky (ports, files, DB state) — the class picks the fix
+3. **Fix or delete, no third option**: flaky tests do not live in quarantine forever — a test not worth fixing is not worth keeping; delete it and note what it was guarding
+4. **Re-admit only green×N**: a repaired test re-enters the gate after passing consistently across N runs
+
 ## Output Template
 
 ```
@@ -40,6 +46,7 @@ Stages (run in parallel where independent):
 
 Rollback: artifact [id] → [previous id]; RTO [x min]; decision owner [role]; drill date [date]
 Budget: pipeline p50 [x min], slowest stage [x s] — required checks must finish under [n] min
+Flaky triage: quarantined [n] — [test → class → fix-or-delete deadline]; re-admit criterion: [green × N runs]
 ```
 
 ## Failure Modes

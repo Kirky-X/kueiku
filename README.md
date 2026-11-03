@@ -1,6 +1,6 @@
 # Kueiku（鬼谷子）— 方法论导航罗盘
 
-> AI agent 的方法论导航图：先选对框架，再用对框架。19 类 × 152 个方法论的索引地图，含选择路由、调用协议、信息不足降级路径与框架纠偏机制。
+> AI agent 的方法论导航图：先选对框架，再用对框架。19 类 × 156 个方法论的索引地图，含选择路由、调用协议、信息不足降级路径与框架纠偏机制。
 
 [![version](https://img.shields.io/github/v/tag/Kirky-X/kueiku?style=flat-square)](https://github.com/Kirky-X/kueiku/tags) [![license](https://img.shields.io/github/license/Kirky-X/kueiku?style=flat-square)](LICENSE) [![python](https://img.shields.io/badge/python-3.8%2B-blue?style=flat-square)](scripts/)
 
@@ -8,7 +8,7 @@
 
 ## ✨ 功能特性
 
-- **19 类 × 152 个方法论索引**：每个方法论一个 `references/<类别>/<方法论>.md`（执行步骤 + 输出模板），按需读取、不全量预载；数目由 `scripts/count_methodologies.py` 脚本生成（`methodology-count.json`）
+- **19 类 × 156 个方法论索引**：每个方法论一个 `references/<类别>/<方法论>.md`（执行步骤 + 输出模板），按需读取、不全量预载；数目由 `scripts/count_methodologies.py` 脚本生成（`methodology-count.json`）
 - **快速路由表**：任务类型 → 主框架 + 备选框架，30 秒内完成选择（见 [SKILL.md](SKILL.md)）
 - **调用协议**：声明 → 读参考 → 收集输入 → 执行 → 门控输出，五步标准流程，方法论使用可追溯
 - **信息不足降级路径**：4 级处理——正常执行 → 标注假设与待收集项 → 停下追问关键问题 → 回退最佳判断，绝不硬套框架
@@ -88,7 +88,7 @@ $ python3 -m pytest tests -q
 45 passed in 0.60s
 ```
 
-覆盖 9 个测试文件：`test_abtest`（A/B 显著性）、`test_dcf`（DCF 估值）、`test_rice_tiers`（RICE 分档）、`test_input_validation`（输入校验）、`test_consistency`（口径一致性）、`test_skips`（跳过逻辑）、`test_navigation`（导航链接完整性 + index 必含章节 + 验收场景资产回归 + 条目骨架覆盖下限 152/152）、`test_routing_signals`（index.md 层路由一致性守卫）、`test_eval_assets`（路由评测集 schema/覆盖下限守卫 + trigger 查询 signal 词静态守卫）。
+覆盖 9 个测试文件：`test_abtest`（A/B 显著性）、`test_dcf`（DCF 估值）、`test_rice_tiers`（RICE 分档）、`test_input_validation`（输入校验）、`test_consistency`（口径一致性）、`test_skips`（跳过逻辑）、`test_navigation`（导航链接完整性 + index 必含章节 + 验收场景资产回归 + 条目骨架覆盖下限 156/156）、`test_routing_signals`（index.md 层路由一致性守卫）、`test_eval_assets`（路由评测集 schema/覆盖下限守卫 + trigger 查询 signal 词静态守卫）。
 
 验收事实源收敛在 `evals/evals.json`：4 条端到端场景 + `routing_cases` 路由用例（19 类每类 ≥1 条正例 + 3 条 `none` 负例；用例带 `expected`/`acceptable` 字段，lenient/strict 双口径计分发生在跑 LLM 的 live 评测中——本仓无打分脚本，pytest 不执行，口径定义见 [docs/MAINTENANCE.md](docs/MAINTENANCE.md)）。v0.1.5 时代的重复拷贝 `test-prompts.json` 已删除。结构校验：`python3 scripts/validate_skill.py`（frontmatter 白名单、name/description 限制、SKILL.md ↔ skill.json 版本与 description 一致性），已挂入 CI。
 

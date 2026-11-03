@@ -19,6 +19,7 @@
 | --- | --- | --- | --- |
 | **Typed Service Contracts** | Spec&Handler + Design by Contract + Result Monad + Parse don't validate | Service boundary contract design, boundary error defense | `typed-service-contracts.md` |
 | **Agent DX / CLI Scale** | 7-axis 0-3 scoring: Machine-Readable/Raw Payload/Schema/Context/Hardening/Safety/Knowledge | CLI/SDK agent friendliness assessment | `agent-dx-cli-scale.md` |
+| **Agent Autonomy & Runtime Design** | Workflow-vs-agent decision + composable patterns + per-action autonomy dial + HITL + injection defense | Should this be an agent; how much autonomy; where do human checkpoints sit | `agent-autonomy-design.md` |
 | **Clean Architecture** | Dependency inversion layering + Port & Adapter + domain layer zero external dependencies | New project architecture design, framework/database replacement | `clean-architecture.md` |
 | **Domain-Driven Design** | Bounded context + aggregate root + ubiquitous language + event storming | Complex business system modeling, microservice boundary definition | `domain-driven-design.md` |
 | **Microservices Patterns** | Saga/CQRS/Event Sourcing + service governance + resilience patterns | Monolith decomposition, distributed data consistency, service governance | `microservices-patterns.md` |
@@ -48,6 +49,7 @@
 - **Dependency Management**: Requires project dependency list + security scanning tools
 - **Typed Service Contracts**: Requires service boundary identification + type system support
 - **Agent DX / CLI Scale**: Requires CLI/SDK to evaluate + 7-dimension scoring capability
+- **Agent Autonomy & Runtime Design**: Requires a concrete task description + tool inventory (the workflow-vs-agent verdict is the entry's output, not its input)
 - **Clean Architecture**: Requires business domain analysis + tech stack constraints
 - **Domain-Driven Design**: Requires business expert participation + domain knowledge
 - **Microservices Patterns**: Requires existing system architecture + team organizational structure
@@ -72,6 +74,7 @@
 - "Dependency management / dependency selection / dependency vulnerabilities / dependency audit" → Dependency Management (primary)
 - "Service boundary contract design" → Typed Service Contracts (primary)
 - "Agent friendliness assessment" → Agent DX / CLI Scale (primary)
+- "Should this be an agent or a workflow / how much autonomy / where does the human check / multi-step LLM orchestration / prompt injection defense for the loop" → Agent Autonomy & Runtime Design (primary) ⚡ If choosing between agent frameworks (langgraph/crewai/autogen) or reviewing built agent code → diting; if authoring ZCode workflow scripts → dynamic-workflows
 - "Architecture design / layering / hexagonal / onion architecture" → Clean Architecture (primary)
 - "Domain-driven / DDD / bounded context / event storming / aggregate root" → Domain-Driven Design (primary)
 - "Microservices / distributed systems / Saga / CQRS / service governance" → Microservices Patterns (primary)

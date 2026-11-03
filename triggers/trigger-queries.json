@@ -18,6 +18,7 @@
     {"q": "分析这个项目的依赖树，找出版本冲突", "expect": "no", "owner": "dayv"},
     {"q": "优化这个函数的执行性能，太慢了", "expect": "no", "owner": "ouyezi"},
     {"q": "langgraph、crewai、autogen 选哪个，还是自己造轮子？", "expect": "no", "owner": "diting"},
+    {"q": "这个仓库哪些模块在腐化、最该还技术债？给我个健康度诊断", "expect": "no", "owner": "diting"},
     {"q": "扫描这个项目的安全漏洞", "expect": "no", "owner": "tiangang"},
     {"q": "新项目初始化，配好 CI 和脚手架", "expect": "no", "owner": "pangu"},
     {"q": "把这份调研访谈记录总结成笔记", "expect": "no", "owner": "cangjie"},

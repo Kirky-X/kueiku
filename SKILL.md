@@ -1,9 +1,9 @@
 ---
 name: kueiku
-description: "Methodology navigation map for AI agents — an index of 152 methodologies across 19 categories. Triggers: analysis/strategy/decision/negotiation/game theory/user research/structured thinking/product discovery/go-to-market/market research/data analysis/engineering/root cause analysis/prioritization/risk rehearsal/tech selection/TDD/quantitative investment/factor investing/portfolio optimization/backtesting/engineering methods (code review, refactoring, CI-CD, observability, DDD, performance/security/API/database design, incident response playbook, Git workflow, dependency strategy, microservices). Also routes: problem diagnosis, product growth, decision making, AI delivery, execution, product philosophy, leadership, financial analysis, research methodology, industry analysis. 中文触发：方法论/分析框架/决策方法/优先级排序/根因分析/技术选型/用户研究/产品发现/结构化思考/怎么设计/选什么方案。Boundary: content summarization & structured notes → cangjie; academic search & paper writing → liuxiang; code review → diting; dependency analysis → dayv."
+description: "Methodology navigation map for AI agents — an index of 156 methodologies across 19 categories. Triggers: analysis/strategy/decision/negotiation/game theory/user research/structured thinking/product discovery/go-to-market/market research/data analysis/engineering/root cause analysis/prioritization/risk rehearsal/tech selection/TDD/quantitative investment/factor investing/portfolio optimization/backtesting/engineering methods (code review, refactoring, CI-CD, observability, DDD, performance/security/API/database design, incident response playbook, Git workflow, dependency strategy, microservices). Also routes: problem diagnosis, product growth, decision making, AI delivery, execution, product philosophy, leadership, financial analysis, research methodology, industry analysis. 中文触发：方法论/分析框架/决策方法/优先级排序/根因分析/技术选型/用户研究/产品发现/结构化思考/怎么设计/选什么方案。Boundary: content summarization & structured notes → cangjie; academic search & paper writing → liuxiang; code review → diting; dependency analysis → dayv."
 license: MIT
 metadata:
-  version: "0.1.15"
+  version: "0.1.16"
   author: "Kirky-X"
   repo: "https://github.com/Kirky-X/kueiku"
   tags: "methodology, framework, decision-making, strategy, root-cause, prioritization, structured-thinking, user-research"
@@ -42,7 +42,7 @@ Each category's methodology list, best-use scenarios, and minimum information re
 
 ---
 
-## Category Overview (19 categories × 152 methodologies)
+## Category Overview (19 categories × 156 methodologies)
 
 | # | Category | Count | Index path |
 | --- | --- | --- | --- |
@@ -53,12 +53,12 @@ Each category's methodology list, best-use scenarios, and minimum information re
 | 5 | User Research | 5 | `references/user-research/index.md` |
 | 6 | Structured Thinking | 9 | `references/structured-thinking/index.md` |
 | 7 | Product Discovery | 8 | `references/product-discovery/index.md` |
-| 8 | Go-to-Market | 7 | `references/go-to-market/index.md` |
+| 8 | Go-to-Market | 9 | `references/go-to-market/index.md` |
 | 9 | Market Research | 8 | `references/market-research/index.md` |
 | 10 | Data Analysis | 5 | `references/data-analysis/index.md` |
-| 11 | AI Delivery | 2 | `references/ai-delivery/index.md` |
+| 11 | AI Delivery | 3 | `references/ai-delivery/index.md` |
 | 12 | Execution | 5 | `references/execution/index.md` |
-| 13 | Engineering | 21 | `references/engineering/index.md` |
+| 13 | Engineering | 22 | `references/engineering/index.md` |
 | 14 | Product Philosophy | 4 | `references/product-philosophy/index.md` |
 | 15 | Leadership | 4 | `references/leadership/index.md` |
 | 16 | Financial Analysis | 5 | `references/financial-analysis/index.md` |
@@ -79,12 +79,12 @@ The full intent→methodology routing, trigger signals, and alternatives are in 
 **User Research** — user journey→Customer Journey Map; empathy→Empathy Map; needs hierarchy→Maslow
 **Structured Thinking** — structured expression→MECE + Pyramid Principle; multi-perspective→Six Thinking Hats; problem nature→Cynefin
 **Product Discovery** — continuous discovery→Opportunity Solution Tree; interviews→The Mom Test; experiments→Experiment Design Library
-**Go-to-Market** — beachhead→Beachhead Segment; ideal customer→ICP; positioning→Positioning Strategy
+**Go-to-Market** — beachhead→Beachhead Segment; ideal customer→ICP; positioning→Positioning Strategy; offer assembly→Marketing Mix; B2B committee→Buying Center
 **Market Research** — market sizing→Market Sizing; segmentation→Segmentation; personas→User Personas
 **Data Analysis** — retention→Cohort Analysis; A/B testing→A/B Test Analysis; user value→RFM
-**AI Delivery** — shipping standards→Shipping Artifacts; doc-code drift→Intended vs Implemented
+**AI Delivery** — shipping standards→Shipping Artifacts; doc-code drift→Intended vs Implemented; prompt/model change gate→LLM Output Evaluation
 **Execution** — outcome roadmap→Outcome Roadmap; strategy red team→Strategy Red Team; requirements→User Stories
-**Engineering** — TDD; code review; architecture→Clean Architecture/DDD; CI/CD; observability; security/API/DB design; incident response (21 methodologies)→`engineering/index.md`
+**Engineering** — TDD; code review; architecture→Clean Architecture/DDD; CI/CD; observability; security/API/DB design; incident response; agent design (22 methodologies)→`engineering/index.md`
 **Product Philosophy** — radical focus→Focus as No; vertical integration→Whole Widget; invisible perfection→Invisible Perfection
 **Leadership** — vision→Reality Distortion Field; hiring→A-Player Density; org change→Change Management
 **Financial Analysis** — ROE decomposition→DuPont; valuation→DCF; comparables→Comparable Company; value creation→EVA
@@ -97,11 +97,11 @@ The full intent→methodology routing, trigger signals, and alternatives are in 
 ## Calling Protocol
 
 ```
-0. Pre-check, in strict order — information first, fitness second: a) Confirm the task type matches a routing-table row and information sufficiency ≥ Level 1; below that, run the Degradation Path before any framework choice. b) Decide depth: quick scan or full analysis (it trims step 5). c) Framework check in three tiers — exactly one realistic candidate → apply the 5 principles as a one-sentence check (can it directly answer the core question? inputs available? effort proportional? — `references/structured-thinking/framework-selection.md`) and say the short-circuit path was taken; ≥ 2 candidates or a habitual pick → full fitness-gate scorecard; no candidate clears the bar → NONE: answer directly without a framework. d) If two frameworks both fit, pick primary + backup and explain why primary is primary
+0. Pre-check, in strict order — information first, fitness second: a) Confirm the task type matches a routing-table row and information sufficiency ≥ Level 1; below that, run the Degradation Path before any framework choice. b) Decide depth: quick scan or full analysis (it trims step 5). c) Framework check in three tiers — exactly one realistic candidate → apply the 5 principles as a one-sentence check (can it directly answer the core question? inputs available? effort proportional? — `references/structured-thinking/framework-selection.md`) and say the short-circuit path was taken; ≥ 2 candidates or a habitual pick → full fitness-gate scorecard; no candidate clears the bar → NONE: answer directly without a framework. d) Two frameworks both fit → pick primary + backup; explain why primary is primary
 1. Declare framework and depth: "I will use [methodology name] for this analysis. Depth: [quick scan | full analysis]. Reason: [routing correspondence]; Required inputs: [list]; Expected output: [format]"
 2. Read reference: Open references/<category>/<methodology>.md to extract execution steps and output template
 3. Gather inputs: Confirm each item as required by the framework; handle missing items via the degradation path
-4. Dispatch execution (Principle 6): brief a fresh subagent with the user's original question verbatim, confirmed facts only (no session narrative or earlier guesses), framework name + reference path or extracted steps, depth, and the step-5 output gate; it outputs step by step per the reference, tagging each piece of information as fact/inference/assumption, and returns the gated conclusion. Without dispatch capability or on user opt-out, execute in-session and state it
+4. Dispatch execution (Principle 6): brief a fresh subagent with the user's original question verbatim, confirmed facts only (no session narrative or earlier guesses), framework name + reference path or extracted steps, depth, and the step-5 output gate; it outputs step by step per the reference, tagging each piece of information as fact/inference/assumption, and returns the gated conclusion
 5. Output conclusion (quality gate — six checks, hard cap; do not add more):
    ✓ Directly answers the user's original question
    ✓ Includes at least one immediately actionable recommendation
@@ -121,7 +121,7 @@ The full intent→methodology routing, trigger signals, and alternatives are in 
 - **Red Flags — do not enter analysis at all** (checked before the Degradation Path; these are out-of-scope situations, not information gaps):
   - Suspected fraud, legal liability, or personal crisis → no framework; refer to the appropriate professional and say why you are not analyzing
   - No baseline data at all → route to instrumentation/measurement first (see `references/engineering/observability.md`), not diagnosis on empty data
-  - Burning emergency (cash runway in weeks, incident in progress) → skip the analysis, output a minimal action list now; analyze after stabilization
+  - Burning emergency (cash runway in weeks, incident in progress) → skip analysis, output a minimal action list now; analyze after stabilization
 
 ### Combination rules
 
