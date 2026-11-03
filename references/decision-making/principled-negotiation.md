@@ -24,6 +24,16 @@ Negotiate over interests, not positions, and derive your walk-away power from al
 6. Insist on objective criteria: market benchmarks, industry standards, third-party appraisals as the fairness basis
 7. Close or walk: written agreement against the criteria, or exercise the BATNA — a prepared walk-away is the strongest move in the room
 
+## Conflict Mode Selection
+
+Before bargaining, choose the stance on two axes — how hard to press for substance, how much the relationship must survive:
+
+- **Collaborate** — both matter: full principled negotiation (the default this entry assumes)
+- **Compete** — substance matters, relationship doesn't (one-shot price talk): anchor hard, hold the BATNA; the four principles buy little here
+- **Accommodate** — relationship outweighs the issue: concede deliberately, price the goodwill, log the trade so it is banked rather than lost
+- **Compromise** — equal power, time-boxed: split the difference only after options for mutual gain are exhausted; it is the lazy default that silently leaves value on the table
+- **Avoid** — neither matters now: defer explicitly with a revisit date; silent avoidance reads as consent and festers
+
 ## Output Template
 
 ```
@@ -48,4 +58,4 @@ Walk-away trigger: [the condition that ends talks]
 Practitioner consensus with a strong research core — BATNA/reservation-point effects are among the most replicated findings in negotiation research; the "invent options for mutual gain" prescriptions transfer less reliably to adversarial one-shot settings and remain debated there.
 
 ## Source
-Roger Fisher & William Ury, *Getting to Yes* (1981, where BATNA was coined); Howard Raiffa, *The Art and Science of Negotiation* (1982, reservation-price formalization). Admission verdict: **Build** (v0.1.11) — negotiation had no dedicated entry in the corpus; BATNA is folded into this entry as its preparation step rather than a separate stub (same mechanism, one file).
+Roger Fisher & William Ury, *Getting to Yes* (1981, where BATNA was coined); Howard Raiffa, *The Art and Science of Negotiation* (1982, reservation-price formalization). Admission verdict: **Build** (v0.1.11) — negotiation had no dedicated entry in the corpus; BATNA is folded into this entry as its preparation step rather than a separate stub (same mechanism, one file). Thomas–Kilmann conflict modes **Fold into** this entry (v0.1.13, Conflict Mode Selection section) — stance selection is the preamble to principled bargaining; a separate card would force a file hop to decide how to enter the negotiation.

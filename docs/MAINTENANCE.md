@@ -24,7 +24,7 @@ Backfill status: entries added from v0.1.5 on ship complete; the legacy corpus i
 
 **Build** (new entry) / **Fold into X** (merge into an existing entry) / **Recipe** (cross-reference it from an index or combination, no new file) / **Reject** (outside a navigation map's scope). Record the verdict and reason in the entry's Source section; never add a stub to pad the count.
 
-Precedents: Inversion → Fold into `references/decision-making/premortem-counterfactual.md` (same failure-rehearsal mechanism, v0.1.6); cognitive-bias self-check → Recipe (data-analysis already owns `Cognitive & Statistical Bias Checklist`; structured-thinking holds a compact pointer in `socratic-questioning.md`, v0.1.6).
+Precedents: Inversion → Fold into `references/decision-making/premortem-counterfactual.md` (same failure-rehearsal mechanism, v0.1.6); cognitive-bias self-check → Recipe (data-analysis already owns `Cognitive & Statistical Bias Checklist`; structured-thinking holds a compact pointer in `socratic-questioning.md`, v0.1.6); Thomas–Kilmann conflict modes → Fold into `references/decision-making/principled-negotiation.md` (stance selection as negotiation preamble, v0.1.13); Balanced Scorecard → Recipe (pointer in `okr.md`, strategy→metrics translation, v0.1.13); Fault Tree Analysis → Recipe (pointer in `fmea.md`, deductive top-down twin of FMEA's bottom-up, v0.1.13).
 
 ## Adding a category
 
