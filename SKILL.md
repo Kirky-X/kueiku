@@ -3,7 +3,7 @@ name: kueiku
 description: "Methodology navigation map for AI agents — an index of 142 methodologies across 19 categories. Triggers: analysis/strategy/decision/user research/structured thinking/product discovery/go-to-market/market research/data analysis/engineering/root cause analysis/prioritization/risk rehearsal/tech selection/TDD/quantitative investment/factor investing/portfolio optimization/backtesting/engineering methods (code review, refactoring, CI-CD, observability, DDD, performance/security/API/database design, incident response playbook, Git workflow, dependency strategy, microservices). Also routes: problem diagnosis, product growth, decision making, AI delivery, execution, product philosophy, leadership, financial analysis, research methodology, industry analysis. 中文触发：方法论/分析框架/决策方法/优先级排序/根因分析/技术选型/用户研究/产品发现/结构化思考/怎么设计/选什么方案。Boundary: content summarization & structured notes → cangjie; academic search & paper writing → liuxiang; code review → diting; dependency analysis → dayv."
 license: MIT
 metadata:
-  version: "0.1.9"
+  version: "0.1.10"
   author: "Kirky-X"
   repo: "https://github.com/Kirky-X/kueiku"
   tags: "methodology, framework, decision-making, strategy, root-cause, prioritization, structured-thinking, user-research"
@@ -11,7 +11,7 @@ metadata:
 
 # Methodology Compass
 
-Every agent task requires methodology support. This skill is a methodology index map that guides agents to **choose the right framework, then use it correctly**.
+A methodology index map that guides agents to **choose the right framework, then use it correctly**.
 
 ## TL;DR — 30-Second Quick Reference
 
@@ -23,21 +23,22 @@ flowchart TD
     D -- Yes --> E["Ask clarifying questions, don't force a framework"]
     D -- No --> F{"Needs analysis/strategy/decision/research?"}
     F -- Yes --> G["Check routing table below → pick category → read index.md → select methodology"]
-    G --> H["Execute: declare → read reference → gather inputs → execute → gated output"]
+    G --> H["Declare → read reference → gather inputs → dispatch execution → gated output"]
     H --> I{"Framework turns out to be a poor fit during execution?"}
     I -- Yes --> J["Stop immediately, re-route"]
     I -- No --> K["Done"]
 ```
 
-**Capability overview**: 19 categories × 142 methodologies. Each category's methodology list, best-use scenarios, and minimum information requirements are in its `index.md`.
+Each category's methodology list, best-use scenarios, and minimum information requirements are in its `index.md`.
 
 ## Core Principles
 
-1. **Choose the framework first, then do the work** — When receiving a task, first determine which methodology applies; framework selection should take < 30 seconds
+1. **Choose the framework first, then do the work** — determine which methodology applies on task receipt; selection takes < 30 seconds
 2. **Frameworks are tools, not goals** — Combine flexibly based on context; don't force-fit
 3. **Make usage explicit** — Tell the user which methodology is being used and why, making the analysis process traceable
-4. **Structured and verifiable output** — Output should include actionable recommendations + verification criteria
+4. **Structured and verifiable output** — actionable recommendations + verification criteria
 5. **Framework fitness self-check** — After selecting a framework, verify in one sentence: "Can [framework name] directly answer [the user's core question]?" If not, re-select
+6. **Dispatch a dedicated agent for analysis** — Framework execution runs in a freshly dispatched subagent, never in the current session: session history (earlier guesses, sunk-cost framing, user tone) pollutes conclusions, while the dispatched agent receives only the question, confirmed inputs, and the framework. No dispatch capability or user opts out → execute in-session and say so
 
 ---
 
@@ -69,7 +70,7 @@ flowchart TD
 
 ## User Intent → Category Quick Routing
 
-Category-level mapping only (one line per category). The full intent→methodology routing, trigger signals, and alternatives are in each `index.md` "Routing Trigger Signals" — read it before declaring a framework.
+The full intent→methodology routing, trigger signals, and alternatives are in each `index.md` "Routing Trigger Signals" — read it before declaring a framework.
 
 **Problem Diagnosis** — root cause→5 Whys; disruptive thinking→First Principles; 80/20→Pareto; multi-factor→Fishbone
 **Strategic Analysis** — situation assessment→SWOT; competitive landscape→Porter's Five Forces; business model/pricing/moat/portfolio/evolution (24 methodologies)→`strategy/index.md`
@@ -100,13 +101,13 @@ Category-level mapping only (one line per category). The full intent→methodolo
 1. Declare framework and depth: "I will use [methodology name] for this analysis. Depth: [quick scan | full analysis]. Reason: [routing correspondence]; Required inputs: [list]; Expected output: [format]"
 2. Read reference: Open references/<category>/<methodology>.md to extract execution steps and output template
 3. Gather inputs: Confirm each item as required by the framework; handle missing items via the degradation path
-4. Execute framework: Output step by step per the reference, tagging each piece of information as fact/inference/assumption
+4. Dispatch execution (Principle 6): brief a fresh subagent with the user's original question verbatim, confirmed facts only (no session narrative or earlier guesses), framework name + reference path or extracted steps, depth, and the step-5 output gate; it outputs step by step per the reference, tagging each piece of information as fact/inference/assumption, and returns the gated conclusion. Without dispatch capability or on user opt-out, execute in-session and state it
 5. Output conclusion (quality gate — six checks, hard cap; do not add more):
    ✓ Directly answers the user's original question
    ✓ Includes at least one immediately actionable recommendation
    ✓ Labels confidence (High/Medium/Low), key uncertainties, and a stop_reason — `completed | degraded(L2) | rerouted | none_direct` — so an information-limited output is never structurally indistinguishable from a finished one
    ✓ Depth trim: quick scan → conclusion + the primary framework's key output only (no full template walkthrough); full analysis → complete steps + output template
-   ✓ Failure boundary & disagreements: one line stating the input or boundary under which this conclusion would mislead (generate it at execution time if the reference lacks such a section); in a multi-framework combination, list where the conclusions disagree instead of silently picking a winner
+   ✓ Failure boundary & disagreements: one line stating the input or boundary under which this conclusion would mislead (create it if the reference lacks one); in a multi-framework combination, list where the conclusions disagree instead of silently picking a winner
    ✓ Reassess When: 2-3 triggers that should reopen framework selection (e.g. sample regime change, stage shift, data availability change)
    ✗ If the conclusion merely restates the framework without incremental insight, refine further
 ```
@@ -116,7 +117,7 @@ Category-level mapping only (one line per category). The full intent→methodolo
 - The task is simple and clear; a framework would add unnecessary complexity
 - The user explicitly asks for a direct answer
 - Information required by the framework is severely missing (see Degradation Path Level 3+)
-- **NONE default**: no candidate framework clears the fitness gate (task alignment ≥ 4 and weighted total ≥ 3.5 — `references/structured-thinking/framework-selection.md`); answer directly and name why each candidate fell short. A marginal framework is not "run with caveats", it is a wrong framework
+- **NONE default**: no candidate framework clears the fitness gate (task alignment ≥ 4 and weighted total ≥ 3.5 — `references/structured-thinking/framework-selection.md`); answer directly and name why each candidate fell short
 - **Red Flags — do not enter analysis at all** (checked before the Degradation Path; these are out-of-scope situations, not information gaps):
   - Suspected fraud, legal liability, or personal crisis → no framework; refer to the appropriate professional and say why you are not analyzing
   - No baseline data at all → route to instrumentation/measurement first (see `references/engineering/observability.md`), not diagnosis on empty data
@@ -124,11 +125,9 @@ Category-level mapping only (one line per category). The full intent→methodolo
 
 ### Combination rules
 
-Some tasks require a methodology combination. Where present, common combinations are listed in each `index.md` under "Common Combinations". **Combination cap**: at most 3 methodologies per task, and only as an exception — a single well-fitting framework beats a stack. Every member must bring a complementary role (e.g. framing → evaluation → sequencing); near-synonym or same-domain stacks are redundancy, not combinations. Run members sequentially by default, and check the constraint table below before combining. After each framework completes, before moving to the next, confirm: ① Is the core conclusion from the previous framework clear? ② Does the next framework need the previous one's output as input? ③ Does the user have any objections to the previous framework's conclusion? Multi-step combinations follow the playbook format where an index's Common Combinations prescribes one (per-step output, conditional branches, final deliverable); a multi-framework output must end in a synthesized conclusion section, never a side-by-side pile.
+Some tasks require a methodology combination. Where present, common combinations are listed in each `index.md` under "Common Combinations". **Combination cap**: at most 3 methodologies per task, and only as an exception — a single well-fitting framework beats a stack. Every member must bring a complementary role (e.g. framing → evaluation → sequencing); near-synonym or same-domain stacks are redundancy, not combinations. Run members sequentially by default, and check the constraint table below before combining. After each framework completes, confirm before the next: ① previous conclusion clear? ② next needs its output as input? ③ user objections? Multi-step combinations follow the playbook an index's Common Combinations prescribes; a multi-framework output must end in a synthesized conclusion section, never a side-by-side pile.
 
 ### Methodology mutual exclusion and ordering constraints
-
-Some methodologies have mutual exclusion or ordering dependencies. When combining, these must be observed:
 
 | Constraint pair | Rule | Reason |
 | --- | --- | --- |
@@ -152,7 +151,7 @@ Some methodologies have mutual exclusion or ordering dependencies. When combinin
 | L3 | Core information missing (cannot produce valid conclusion) | Stop execution; ask the user 1-3 most critical questions; explain what information is missing and why it affects output quality |
 | L4 | Information severely insufficient (cannot even determine framework selection) | Use Cynefin or Framework Selection first to determine problem nature and applicable framework; if still uncertain, fall back to "direct best judgment" without a framework; state confidence level and dependent assumptions |
 
-See each `index.md` "Minimum Information Requirements per Methodology" section for each framework's minimum information needs.
+Each framework's minimum information needs: the `index.md` "Minimum Information Requirements" section.
 
 **Three input modes when information is missing** — announce which one you are in: **Guided** (ask the L3 questions one at a time, with progress labels like "input Q2/4"); **Context dump** (the user pastes everything once — you extract it yourself and never re-ask what was already given); **Best guess** (zero input — proceed on typical-case assumptions, flag every assumption in the output, invite correction). At any step the user may say "skip the rest": deliver the result from what you have and discount confidence accordingly. Degradation is a whole-protocol exit, not an entry-only gate.
 
@@ -173,18 +172,7 @@ If during execution you find the framework is a poor fit, don't force completion
 
 ## Automation Script Tools
 
-`scripts/main.py` provides automated computation for 19 computation-heavy methodologies:
-
-| Module | File | Subcommands |
-| --- | --- | --- |
-| Utilities | `scripts/utils.py` | — |
-| Decision & Prioritization | `scripts/decision.py` | `rice`, `dmatrix`, `ice` |
-| Risk Assessment | `scripts/risk.py` | `risk`, `fmea`, `pareto` |
-| Financial Analysis | `scripts/financial.py` | `dupont`, `dcf`, `eva` |
-| Data Analysis | `scripts/data.py` | `abtest`, `rfm`, `cohort` |
-| Strategy Matrices | `scripts/strategy.py` | `oppscore`, `bcg`, `gemckinsey` |
-| Quantitative Investment | `scripts/quant.py` | `factor`, `momentum`, `riskparity`, `perf` |
-| CLI Entry | `scripts/main.py` | All 19 subcommands |
+`scripts/main.py` automates 19 computation-heavy methodologies across six modules: `decision.py` (`rice` `dmatrix` `ice`), `risk.py` (`risk` `fmea` `pareto`), `financial.py` (`dupont` `dcf` `eva`), `data.py` (`abtest` `rfm` `cohort`), `strategy.py` (`oppscore` `bcg` `gemckinsey`), `quant.py` (`factor` `momentum` `riskparity` `perf`); shared helpers in `utils.py`.
 
 ### Usage
 
@@ -192,10 +180,10 @@ If during execution you find the framework is a poor fit, don't force completion
 python scripts/main.py <subcommand> -i <input.csv> [--json]
 ```
 
-Every subcommand has `--help` with the exact CSV columns, options, and a worked example; `-i -` reads stdin; `-o` writes a file (default stdout). Output is a Markdown report by default, JSON with `--json`. Extras: `dcf --rate --growth --shares` (per-share value); `factor`/`momentum`/`riskparity`/`perf --periods-per-year` (annualization, default 252).
+Every subcommand has `--help` with exact CSV columns, options, a worked example, and extra flags (`dcf --rate --growth --shares`; `--periods-per-year` for annualization); `-i -` reads stdin; `-o` writes a file (default stdout); Markdown report by default, JSON with `--json`.
 
 ---
 
 ## Maintenance Notes
 
-Entry skeleton & admission rules, count regeneration, add-must-trim budget, evaluation-asset conventions: [docs/MAINTENANCE.md](docs/MAINTENANCE.md).
+Admission rules, count regeneration, size budget, eval conventions: [docs/MAINTENANCE.md](docs/MAINTENANCE.md).
