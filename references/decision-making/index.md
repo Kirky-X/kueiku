@@ -16,6 +16,7 @@
 | **Reversibility Grading** | Type 2/1.5/1 undo-cost classification matching analysis depth to how reversible a decision is | Deciding how much process a choice deserves; high-lock-in vs low-blast-radius calls | `reversibility.md` |
 | **OODA Loop** | Observe→Orient→Decide→Act cycling on ~70% confidence for reversible moves | In-flight incidents, moving-target debugging, decisions under a still-moving situation | `ooda-loop.md` |
 | **Probabilistic Reasoning** | Base-rate priors, ranges, likelihood-ratio updates for uncertain quantities | Forecasts, risk sizing, any confident single number you cannot actually know | `probabilistic-reasoning.md` |
+| **Principled Negotiation** | Interests-not-positions bargaining with BATNA-derived walk-away power and objective criteria | Salary/vendor/partnership deals, resource disputes, multi-round agreements where the relationship survives | `principled-negotiation.md` |
 
 ## Minimum Information Requirements per Methodology
 
@@ -31,6 +32,7 @@
 - **Reversibility Grading**: Requires a named decision + concrete undo path (rollback, revoke, re-negotiate)
 - **OODA Loop**: Requires a still-moving situation + at least one reversible next action
 - **Probabilistic Reasoning**: Requires a checkable claim (outcome + timeframe + unit) + a reference class or prior anchor
+- **Principled Negotiation**: Requires a live counterpart + your own alternatives inventoried and valued (a BATNA you could actually exercise)
 
 ## Routing Trigger Signals
 
@@ -46,6 +48,7 @@
 - "How much analysis does this decision deserve / is it reversible / one-way vs two-way door" → Reversibility Grading (primary) ⚡ If the question is values-level "should I do this at all" (life/career/startup direction) → use Death Filter
 - "Situation still moving, must act under time pressure (incident, outage, moving-target debugging)" → OODA Loop (primary) ⚡ If already stabilized → use Incident Response & Postmortem (Engineering); if rehearsing before action → use Pre-mortem & Counterfactual
 - "Forecast / estimate an uncertain number / how likely is X / update a belief with evidence" → Probabilistic Reasoning (primary) ⚡ If only qualitative ranking of known risks → use Risk Matrix; if weighing options against criteria → use Decision Matrix
+- "Negotiate a deal / salary / vendor terms / reach agreement with another party / deadlock over positions" → Principled Negotiation (primary) ⚡ If no real alternative to walk away to → build the BATNA first (Decision Matrix + Reversibility Grading); if mapping who influences the outcome without a live counterpart → use Stakeholder Mapping (Strategic Analysis)
 
 ## Common Combinations
 
@@ -102,6 +105,14 @@ When user intent is ambiguous between these methodologies, disambiguate per the 
   │   └─ Yes → Probabilistic Reasoning
   └─ Situation still moving and action cannot wait for the estimate?
       └─ Yes → OODA Loop (act on ~70% confidence for reversible moves)
+
+"Reaching agreement with another party"
+  ├─ Live counterpart, terms on the table (price, salary, scope, partnership)?
+  │   └─ Yes → Principled Negotiation
+  ├─ No live counterpart — deciding whether/how much to commit to a path?
+  │   └─ Yes → Reversibility Grading (or Death Filter for values-level calls)
+  └─ Multiple parties with veto power, no single negotiation table?
+      └─ Yes → Stakeholder Mapping (Strategic Analysis)
 ```
 
 ## Methodology Mutual Exclusion and Ordering Constraints
@@ -114,3 +125,4 @@ When user intent is ambiguous between these methodologies, disambiguate per the 
 | Reversibility Grading vs Death Filter | **Choose by question level**: values-level "whether at all"→Death Filter; process depth "how much analysis"→Reversibility Grading | Different questions about the same decision; they compose on big calls (filter first, then grade) rather than run in parallel |
 | OODA Loop → Incident Response & Postmortem | **Same event, by phase**: in-flight → OODA Loop; stabilized → Incident Response & Postmortem (`engineering/`) | Both on the same live event split attention from the loop; postmortem needs the stabilized outcome as input |
 | Probabilistic Reasoning vs Risk Matrix | **Choose by treatment**: calibrated estimate that updates with evidence→Probabilistic Reasoning; qualitative P×I screening of a risk list→Risk Matrix | Same input (uncertainty), different output: a number to revise vs a zone to rank |
+| Principled Negotiation vs Stakeholder Mapping | **Choose by state**: live counterpart with terms→Principled Negotiation; mapping all parties' influence before/without a table→Stakeholder Mapping (Strategic Analysis) | Negotiation works one counterpart's interests; stakeholder mapping works the whole influence field — feeding it into your BATNA estimate |

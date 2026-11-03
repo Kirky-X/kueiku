@@ -1,10 +1,10 @@
 {
   "categories": 19,
-  "total_methodologies": 142,
+  "total_methodologies": 144,
   "per_category": {
     "ai-delivery": 2,
     "data-analysis": 5,
-    "decision-making": 12,
+    "decision-making": 13,
     "engineering": 21,
     "execution": 4,
     "financial-analysis": 5,
@@ -18,7 +18,7 @@
     "product-philosophy": 4,
     "quantitative-investment": 7,
     "research-methodology": 2,
-    "strategy": 24,
+    "strategy": 25,
     "structured-thinking": 9,
     "user-research": 5
   }

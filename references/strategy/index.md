@@ -28,6 +28,7 @@
 | **Product Life Cycle** | Introduction/Growth/Maturity/Decline 4-stage strategy matching | Product strategy, investment timing, portfolio management | `product-life-cycle.md` |
 | **VRIO Framework** | Value/Rarity/Imitability/Organization 4-question resource-based view | Resource/capability assessment, sustainable competitive advantage identification | `vrio.md` |
 | **Wardley Mapping** | Value chain (vertical) × evolution stage (horizontal) strategic terrain map | Strategic evolution awareness, Build/Buy/Outsource decisions, competitive dynamics analysis | `wardley-mapping.md` |
+| **Game Theory** | Players×strategies×payoffs modeling; Nash equilibrium locates stable outcomes | Rivals will react to our move, pricing wars, bids/auctions, cooperation design, repeated interactions | `game-theory.md` |
 
 ## Minimum Information Requirements per Methodology
 
@@ -54,6 +55,7 @@
 - **Product Life Cycle**: Requires product sales/competition/customer composition trend data
 - **VRIO Framework**: L1: enterprise resource/capability inventory; L2: competitor comparison data
 - **Wardley Mapping**: Requires value chain component decomposition + per-component evolution stage judgment + major competitor comparison
+- **Game Theory**: Requires named players + per-player strategy lists + at least ordinal payoffs per strategy combination
 
 ## Routing Trigger Signals
 
@@ -81,6 +83,7 @@
 - "Benchmarking best practices / performance gap analysis" → Benchmarking (primary)
 - "Product stage strategy / investment timing judgment" → Product Life Cycle (primary)
 - "Strategic evolution awareness / value chain visualization / Build vs Buy" → Wardley Mapping (primary)
+- "Rival will react to our move / pricing war response / bid against competitors / will they retaliate / trust and retaliation design" → Game Theory (primary) ⚡ If analyzing static industry structure with no specific move → use Porter's Five Forces; if negotiating one counterpart with terms on the table → use Principled Negotiation (Decision Making)
 
 ## Common Combinations
 
@@ -113,3 +116,4 @@
 | Porter's Five Forces → SWOT | **Porter's before SWOT** (competitive analysis scenario) | Porter's provides industry structure deep analysis, serving as more complete SWOT input |
 | Value Chain Analysis → VRIO | **Value Chain first, then VRIO** (competitive advantage diagnostics scenario) | First identify per-stage value sources, then assess whether resources are sustainable |
 | SWOT vs Porter's Five Forces | **Choose by analysis target**: comprehensive single-enterprise assessment→SWOT; industry competitive structure→Porter's | SWOT is 4-quadrant comprehensive assessment; Porter's is industry five-forces deep analysis; different dimensions |
+| Game Theory vs Porter's Five Forces | **Choose by question**: which move to make knowing rivals react→Game Theory; what industry structure determines profitability→Porter's | Static structure vs interdependent moves; Five Forces' bargaining-power findings are payoffs input to the game, not a substitute for it |
