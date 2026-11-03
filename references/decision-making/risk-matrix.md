@@ -10,7 +10,7 @@ Quick 2-dimensional risk assessment using Probability × Impact. Plot identified
 - Technology selection risk comparison
 
 ⚠️ **When NOT to use**
-- Risks need quantitative treatment (expected loss in dollars) — a 3×3 grid cannot sum exposures; use FMEA or Monte Carlo for financial decisions
+- Risks need quantitative treatment (expected loss in dollars) — a 3×3 grid cannot sum exposures; use FMEA for ranked failure modes or Monte Carlo Simulation for quantified exposure
 - Probability estimates have no basis (novel one-shot projects) — the plot implies precision nobody has
 - Safety-critical domains with mandated methods — use the prescribed standard; the matrix is a screening tool, not a compliance artifact
 

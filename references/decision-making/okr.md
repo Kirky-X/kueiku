@@ -44,7 +44,7 @@ Quarter score: [0.0-1.0 per KR]
 
 Choosing WHAT to measure before writing KRs: **Balanced Scorecard** (Kaplan & Norton) translates strategy into financial / customer / internal-process / learning-growth perspectives — use it when strategy-execution measurement is the open question; OKR then drives movement on the chosen metrics. This entry holds the pointer, not a duplicate card.
 
-**Admission verdict** (v0.1.13): Balanced Scorecard reviewed → Recipe, because OKR + North Star already own goal and metric mechanics; a full BSC card would duplicate measurement scaffolding without adding a distinct question.
+**Admission verdict** (v0.1.13, corrected v0.1.15): Balanced Scorecard reviewed → Recipe, because OKR + North Star already own goal and metric mechanics; a full BSC card would duplicate measurement scaffolding without adding a distinct question. **Corrected**: the Recipe verdict assumed OKR/North Star covered the strategy→measures translation — they do not, so the pointer was a dead route. BSC is now its own entry (`../strategy/balanced-scorecard.md`); this pointer stays.
 
 ## Evidence Strength
 **Practitioner consensus on adoption, mixed on causal lift.** The Grove/Doerr lineage and decades of industry use are well documented; evidence that OKR itself raises performance is confounded by selection effects and by the measurement/focus practices it bundles — treat the cadence and the stretch rule as the active ingredients.

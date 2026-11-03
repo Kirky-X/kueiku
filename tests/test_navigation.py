@@ -19,7 +19,7 @@ REFS = ROOT / "references"
 
 INDEX_SECTIONS = ["Routing Trigger Signals", "Minimum Information Requirements"]
 SKELETON_FIELDS = ["When NOT to use", "Failure Modes", "Evidence Strength", "Output Template"]
-SKELETON_COVERAGE_FLOOR = 149  # v0.1.14: full-corpus backfill complete (every entry carries all four fields)
+SKELETON_COVERAGE_FLOOR = 152  # v0.1.15: full-corpus backfill complete (every entry carries all four fields)
 
 
 def index_files():

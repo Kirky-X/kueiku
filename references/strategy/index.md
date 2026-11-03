@@ -30,6 +30,7 @@
 | **Wardley Mapping** | Value chain (vertical) × evolution stage (horizontal) strategic terrain map | Strategic evolution awareness, Build/Buy/Outsource decisions, competitive dynamics analysis | `wardley-mapping.md` |
 | **Game Theory** | Players×strategies×payoffs modeling; Nash equilibrium locates stable outcomes | Rivals will react to our move, pricing wars, bids/auctions, cooperation design, repeated interactions | `game-theory.md` |
 | **Scenario Planning** | 3-4 structurally distinct futures; robust strategy + hedges + signposts | Multi-year strategy under deep uncertainty, irreversible bets, single-point-forecast audits | `scenario-planning.md` |
+| **Balanced Scorecard** | Strategy → linked objectives and measures across financial/customer/process/learning perspectives | Translating a chosen strategy into an executable measurement system, balancing a revenue-only metric set | `balanced-scorecard.md` |
 
 ## Minimum Information Requirements per Methodology
 
@@ -58,6 +59,7 @@
 - **Wardley Mapping**: Requires value chain component decomposition + per-component evolution stage judgment + major competitor comparison
 - **Game Theory**: Requires named players + per-player strategy lists + at least ordinal payoffs per strategy combination
 - **Scenario Planning**: Requires a named focal decision + time horizon + awareness of driving forces (the ranking can be built in-session)
+- **Balanced Scorecard**: Requires a settled one-sentence strategy (measures follow it, not the reverse) + at least three perspectives with real content
 
 ## Routing Trigger Signals
 
@@ -87,6 +89,7 @@
 - "Strategic evolution awareness / value chain visualization / Build vs Buy" → Wardley Mapping (primary)
 - "Rival will react to our move / pricing war response / bid against competitors / will they retaliate / trust and retaliation design" → Game Theory (primary) ⚡ If analyzing static industry structure with no specific move → use Porter's Five Forces; if negotiating one counterpart with terms on the table → use Principled Negotiation (Decision Making)
 - "Deep uncertainty / multiple plausible futures / what if the market goes either way / stress-test the strategy across futures" → Scenario Planning (primary) ⚡ If uncertainty is narrow and quantifiable (one estimable number) → use Probabilistic Reasoning (Decision Making); if modeling a specific rival interaction → use Game Theory
+- "Which metrics should we track / translate strategy into a measurement system / our scorecard only has revenue / cascade strategy into goals" → Balanced Scorecard (primary) ⚡ If the goal is a time-boxed target and key results → use OKR (Decision Making); if you need one north-star metric and its input metrics → use North Star Framework (Product & Growth)
 
 ## Common Combinations
 
@@ -120,3 +123,4 @@
 | Value Chain Analysis → VRIO | **Value Chain first, then VRIO** (competitive advantage diagnostics scenario) | First identify per-stage value sources, then assess whether resources are sustainable |
 | SWOT vs Porter's Five Forces | **Choose by analysis target**: comprehensive single-enterprise assessment→SWOT; industry competitive structure→Porter's | SWOT is 4-quadrant comprehensive assessment; Porter's is industry five-forces deep analysis; different dimensions |
 | Game Theory vs Porter's Five Forces | **Choose by question**: which move to make knowing rivals react→Game Theory; what industry structure determines profitability→Porter's | Static structure vs interdependent moves; Five Forces' bargaining-power findings are payoffs input to the game, not a substitute for it |
+| Balanced Scorecard vs OKR vs North Star Framework | **Choose by job**: choose which measures reflect a strategy→Balanced Scorecard; set time-boxed goals with key results→OKR (Decision Making); pick one metric plus its input metrics→North Star Framework (Product & Growth) | They compose in that order (what to measure → what to move → the one number), and each has a distinct output; using two interchangeably leaves the strategy unmeasured or the goals unmeasured |

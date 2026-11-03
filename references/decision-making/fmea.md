@@ -49,7 +49,7 @@ Risk Classification:
 
 Top-down deductive twin: start from a named top event and enumerate the AND/OR combinations that reach it — **Fault Tree Analysis** (IEC 61025). Use FTA when one specific failure demands causal decomposition; use FMEA to sweep components for what could fail. This entry holds the pointer, not a duplicate method.
 
-**Admission verdict** (v0.1.13): Fault Tree Analysis reviewed → Recipe, because it complements rather than duplicates FMEA's question, and a separate card would split one bottom-up/top-down pairing across two files.
+**Admission verdict** (v0.1.13, corrected v0.1.15): Fault Tree Analysis reviewed → Recipe, because it complements rather than duplicates FMEA's question, and a separate card would split one bottom-up/top-down pairing across two files. **Corrected**: the Recipe verdict assumed another entry held FTA — none did, so this pointer was a dead route. FTA is now its own entry (`fault-tree-analysis.md`); the pointer stays, and the bottom-up/top-down pairing is documented in one place.
 
 ## Evidence Strength
 **Practitioner consensus in its industries, heuristic arithmetic.** FMEA is standard in automotive (AIAG-VDA), aerospace, and medical devices with decades of institutional use; the RPN product itself is criticized (ordinal scales multiplied as if cardinal) — use rankings, not the absolute number.
