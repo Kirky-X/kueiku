@@ -29,6 +29,7 @@
 | **VRIO Framework** | Value/Rarity/Imitability/Organization 4-question resource-based view | Resource/capability assessment, sustainable competitive advantage identification | `vrio.md` |
 | **Wardley Mapping** | Value chain (vertical) × evolution stage (horizontal) strategic terrain map | Strategic evolution awareness, Build/Buy/Outsource decisions, competitive dynamics analysis | `wardley-mapping.md` |
 | **Game Theory** | Players×strategies×payoffs modeling; Nash equilibrium locates stable outcomes | Rivals will react to our move, pricing wars, bids/auctions, cooperation design, repeated interactions | `game-theory.md` |
+| **Scenario Planning** | 3-4 structurally distinct futures; robust strategy + hedges + signposts | Multi-year strategy under deep uncertainty, irreversible bets, single-point-forecast audits | `scenario-planning.md` |
 
 ## Minimum Information Requirements per Methodology
 
@@ -56,6 +57,7 @@
 - **VRIO Framework**: L1: enterprise resource/capability inventory; L2: competitor comparison data
 - **Wardley Mapping**: Requires value chain component decomposition + per-component evolution stage judgment + major competitor comparison
 - **Game Theory**: Requires named players + per-player strategy lists + at least ordinal payoffs per strategy combination
+- **Scenario Planning**: Requires a named focal decision + time horizon + awareness of driving forces (the ranking can be built in-session)
 
 ## Routing Trigger Signals
 
@@ -84,6 +86,7 @@
 - "Product stage strategy / investment timing judgment" → Product Life Cycle (primary)
 - "Strategic evolution awareness / value chain visualization / Build vs Buy" → Wardley Mapping (primary)
 - "Rival will react to our move / pricing war response / bid against competitors / will they retaliate / trust and retaliation design" → Game Theory (primary) ⚡ If analyzing static industry structure with no specific move → use Porter's Five Forces; if negotiating one counterpart with terms on the table → use Principled Negotiation (Decision Making)
+- "Deep uncertainty / multiple plausible futures / what if the market goes either way / stress-test the strategy across futures" → Scenario Planning (primary) ⚡ If uncertainty is narrow and quantifiable (one estimable number) → use Probabilistic Reasoning (Decision Making); if modeling a specific rival interaction → use Game Theory
 
 ## Common Combinations
 

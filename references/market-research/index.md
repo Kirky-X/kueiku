@@ -11,6 +11,7 @@
 | **STP Analysis** | Segmentation-Targeting-Positioning 3-step method | Market entry, product positioning, marketing strategy | `stp-analysis.md` |
 | **Perceptual Mapping** | 2D coordinate chart showing consumer brand perception positioning | Brand positioning, competitive perception comparison, positioning adjustment | `perceptual-mapping.md` |
 | **Technology Adoption Lifecycle** | Innovators→Early Adopters→Majority→Laggards 5 stages + the chasm | Technology product marketing, crossing the chasm strategy, target customer segment selection | `technology-adoption-lifecycle.md` |
+| **Survey Design** | Instrument design: wording/order/scale/pilot rules; behavior over stated intent | Quantifying known hypotheses at scale, baselines, validating interview findings | `survey-design.md` |
 
 ## Minimum Information Requirements per Methodology
 
@@ -21,6 +22,7 @@
 - **STP Analysis**: Requires segmentation dimension data + per-segment scale/competition/fit assessment
 - **Perceptual Mapping**: Requires 50+ target segment users' perception ratings for multiple brands
 - **Technology Adoption Lifecycle**: Requires customer composition + acquisition channel + deal cycle data
+- **Survey Design**: Requires a named decision + testable hypotheses + reachable sampling frame (pilot before fielding)
 
 ## Routing Trigger Signals
 
@@ -31,6 +33,7 @@
 - "Market entry / product positioning / marketing strategy" → STP Analysis (primary)
 - "Brand positioning / competitive perception comparison / positioning adjustment" → Perceptual Mapping (primary)
 - "Technology product marketing / crossing the chasm / target customer segment selection" → Technology Adoption Lifecycle (primary)
+- "Design a questionnaire / run a survey / quantify across many users / validate interview findings at scale" → Survey Design (primary) ⚡ If discovering unknown needs → use The Mom Test (Product Discovery); if clustering the results into segments → use User Segmentation
 
 ## Common Combinations
 
@@ -45,3 +48,4 @@
 | Market Segmentation → User Personas | **Segmentation first, then Personas** | Define market segments first, then build personas per target segment; avoids personas without segmentation basis |
 | User Personas vs JTBD | **Choose by goal**: describe typical user's complete profile→Personas; uncover users' "jobs"→JTBD | Input data may overlap but output purposes differ |
 | User Segmentation vs RFM Model | **Choose by data foundation**: need behavior/JTBD/needs clustering→User Segmentation; need 3-dimension transaction data tiering→RFM Model | User Segmentation is broader; RFM focuses on transaction data |
+| Survey Design vs The Mom Test | **Choose by knowledge state**: known hypotheses to quantify→Survey Design; unknown needs to discover→The Mom Test (Product Discovery) | Questions can only confirm what you thought to ask; discovery needs interviews, quantification needs instruments |

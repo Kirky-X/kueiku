@@ -7,12 +7,14 @@
 | **Reality Distortion Field** | Using conviction and expression to make the team believe the impossible is possible | Pushing teams past self-imposed limits, selling vision | `reality-distortion-field.md` |
 | **A-Player Density** | A-players hire A-players, B-players hire C-players; talent density determines team ceiling | Hiring decisions, team building, performance management | `a-player-density.md` |
 | **Change Management** | Kotter 8-step + ADKAR model, systematically driving organizational change | Organizational transformation, cultural change, large-scale behavior change | `change-management.md` |
+| **Team Topologies** | Four team types × three interaction modes; cognitive load bounds team scope | Org structure design, platform-vs-product splits, dependency-hell diagnosis | `team-topologies.md` |
 
 ## Minimum Information Requirements per Methodology
 
 - **Reality Distortion Field**: Clear goal + team's current belief state + exit conditions
 - **A-Player Density**: A-player behavior standard definition + existing team evaluation data + hiring/termination mechanisms
 - **Change Management**: Clear change objective + organizational readiness assessment + stakeholder list
+- **Team Topologies**: Requires current team inventory + ownership scope + honest cognitive-load self-report
 
 ## Routing Trigger Signals
 
@@ -21,6 +23,7 @@
 - "Hiring standards / team quality decline / talent density" → A-Player Density (primary)
 - "Performance management / termination mechanism / team building" → A-Player Density (primary)
 - "Organizational change / cultural transformation / change execution" → Change Management (primary)
+- "Org structure / team boundaries / platform team scope / too many cross-team dependencies" → Team Topologies (primary) ⚡ If the binding constraint is individual capability → use A-Player Density; if designing the software side of the boundary → use Domain-Driven Design (Engineering)
 
 ## Common Combinations
 

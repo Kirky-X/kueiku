@@ -17,6 +17,7 @@
 | **OODA Loop** | Observe→Orient→Decide→Act cycling on ~70% confidence for reversible moves | In-flight incidents, moving-target debugging, decisions under a still-moving situation | `ooda-loop.md` |
 | **Probabilistic Reasoning** | Base-rate priors, ranges, likelihood-ratio updates for uncertain quantities | Forecasts, risk sizing, any confident single number you cannot actually know | `probabilistic-reasoning.md` |
 | **Principled Negotiation** | Interests-not-positions bargaining with BATNA-derived walk-away power and objective criteria | Salary/vendor/partnership deals, resource disputes, multi-round agreements where the relationship survives | `principled-negotiation.md` |
+| **Decision Tree & Expected Value** | Roll back probability-weighted payoffs across branches; max EV then risk + sensitivity check | Discrete options with probabilistic outcomes: build vs buy, settle vs litigate, pivot vs persevere | `decision-tree.md` |
 
 ## Minimum Information Requirements per Methodology
 
@@ -33,6 +34,7 @@
 - **OODA Loop**: Requires a still-moving situation + at least one reversible next action
 - **Probabilistic Reasoning**: Requires a checkable claim (outcome + timeframe + unit) + a reference class or prior anchor
 - **Principled Negotiation**: Requires a live counterpart + your own alternatives inventoried and valued (a BATNA you could actually exercise)
+- **Decision Tree & Expected Value**: Requires discrete alternatives + base-rate-anchored probabilities + quantifiable payoffs (ordinal utility acceptable)
 
 ## Routing Trigger Signals
 
@@ -49,6 +51,7 @@
 - "Situation still moving, must act under time pressure (incident, outage, moving-target debugging)" → OODA Loop (primary) ⚡ If already stabilized → use Incident Response & Postmortem (Engineering); if rehearsing before action → use Pre-mortem & Counterfactual
 - "Forecast / estimate an uncertain number / how likely is X / update a belief with evidence" → Probabilistic Reasoning (primary) ⚡ If only qualitative ranking of known risks → use Risk Matrix; if weighing options against criteria → use Decision Matrix
 - "Negotiate a deal / salary / vendor terms / reach agreement with another party / deadlock over positions" → Principled Negotiation (primary) ⚡ If no real alternative to walk away to → build the BATNA first (Decision Matrix + Reversibility Grading); if mapping who influences the outcome without a live counterpart → use Stakeholder Mapping (Strategic Analysis)
+- "Build vs buy / settle vs litigate / what's the expected value of this gamble / weight the option by what could happen" → Decision Tree & Expected Value (primary) ⚡ If estimating one uncertain quantity (no choice among branches) → use Probabilistic Reasoning; if scoring options on criteria without probability structure → use Decision Matrix
 
 ## Common Combinations
 
@@ -113,6 +116,14 @@ When user intent is ambiguous between these methodologies, disambiguate per the 
   │   └─ Yes → Reversibility Grading (or Death Filter for values-level calls)
   └─ Multiple parties with veto power, no single negotiation table?
       └─ Yes → Stakeholder Mapping (Strategic Analysis)
+
+"Choosing among probabilistic outcomes"
+  ├─ Discrete options, outcomes with probabilities and quantifiable payoffs?
+  │   └─ Yes → Decision Tree & Expected Value
+  ├─ One uncertain quantity to estimate (no branch choice)?
+  │   └─ Yes → Probabilistic Reasoning
+  └─ Fixed evaluation criteria, no probability structure?
+      └─ Yes → Decision Matrix
 ```
 
 ## Methodology Mutual Exclusion and Ordering Constraints
@@ -126,3 +137,4 @@ When user intent is ambiguous between these methodologies, disambiguate per the 
 | OODA Loop → Incident Response & Postmortem | **Same event, by phase**: in-flight → OODA Loop; stabilized → Incident Response & Postmortem (`engineering/`) | Both on the same live event split attention from the loop; postmortem needs the stabilized outcome as input |
 | Probabilistic Reasoning vs Risk Matrix | **Choose by treatment**: calibrated estimate that updates with evidence→Probabilistic Reasoning; qualitative P×I screening of a risk list→Risk Matrix | Same input (uncertainty), different output: a number to revise vs a zone to rank |
 | Principled Negotiation vs Stakeholder Mapping | **Choose by state**: live counterpart with terms→Principled Negotiation; mapping all parties' influence before/without a table→Stakeholder Mapping (Strategic Analysis) | Negotiation works one counterpart's interests; stakeholder mapping works the whole influence field — feeding it into your BATNA estimate |
+| Decision Tree vs Decision Matrix vs Probabilistic Reasoning | **Choose by question type**: choosing among probabilistic gambles→Decision Tree; scoring options on criteria→Decision Matrix; estimating one uncertain quantity→Probabilistic Reasoning | Same inputs recur (options, uncertainty) but the outputs differ: a choice, a ranking, a number |

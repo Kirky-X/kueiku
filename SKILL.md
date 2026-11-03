@@ -1,9 +1,9 @@
 ---
 name: kueiku
-description: "Methodology navigation map for AI agents — an index of 144 methodologies across 19 categories. Triggers: analysis/strategy/decision/negotiation/game theory/user research/structured thinking/product discovery/go-to-market/market research/data analysis/engineering/root cause analysis/prioritization/risk rehearsal/tech selection/TDD/quantitative investment/factor investing/portfolio optimization/backtesting/engineering methods (code review, refactoring, CI-CD, observability, DDD, performance/security/API/database design, incident response playbook, Git workflow, dependency strategy, microservices). Also routes: problem diagnosis, product growth, decision making, AI delivery, execution, product philosophy, leadership, financial analysis, research methodology, industry analysis. 中文触发：方法论/分析框架/决策方法/优先级排序/根因分析/技术选型/用户研究/产品发现/结构化思考/怎么设计/选什么方案。Boundary: content summarization & structured notes → cangjie; academic search & paper writing → liuxiang; code review → diting; dependency analysis → dayv."
+description: "Methodology navigation map for AI agents — an index of 149 methodologies across 19 categories. Triggers: analysis/strategy/decision/negotiation/game theory/user research/structured thinking/product discovery/go-to-market/market research/data analysis/engineering/root cause analysis/prioritization/risk rehearsal/tech selection/TDD/quantitative investment/factor investing/portfolio optimization/backtesting/engineering methods (code review, refactoring, CI-CD, observability, DDD, performance/security/API/database design, incident response playbook, Git workflow, dependency strategy, microservices). Also routes: problem diagnosis, product growth, decision making, AI delivery, execution, product philosophy, leadership, financial analysis, research methodology, industry analysis. 中文触发：方法论/分析框架/决策方法/优先级排序/根因分析/技术选型/用户研究/产品发现/结构化思考/怎么设计/选什么方案。Boundary: content summarization & structured notes → cangjie; academic search & paper writing → liuxiang; code review → diting; dependency analysis → dayv."
 license: MIT
 metadata:
-  version: "0.1.11"
+  version: "0.1.12"
   author: "Kirky-X"
   repo: "https://github.com/Kirky-X/kueiku"
   tags: "methodology, framework, decision-making, strategy, root-cause, prioritization, structured-thinking, user-research"
@@ -42,25 +42,25 @@ Each category's methodology list, best-use scenarios, and minimum information re
 
 ---
 
-## Category Overview (19 categories × 144 methodologies)
+## Category Overview (19 categories × 149 methodologies)
 
 | # | Category | Count | Index path |
 | --- | --- | --- | --- |
 | 1 | Problem Diagnosis | 7 | `references/problem-diagnosis/index.md` |
-| 2 | Strategic Analysis | 25 | `references/strategy/index.md` |
+| 2 | Strategic Analysis | 26 | `references/strategy/index.md` |
 | 3 | Product & Growth | 8 | `references/product-growth/index.md` |
-| 4 | Decision Making | 13 | `references/decision-making/index.md` |
+| 4 | Decision Making | 14 | `references/decision-making/index.md` |
 | 5 | User Research | 5 | `references/user-research/index.md` |
 | 6 | Structured Thinking | 9 | `references/structured-thinking/index.md` |
 | 7 | Product Discovery | 8 | `references/product-discovery/index.md` |
 | 8 | Go-to-Market | 7 | `references/go-to-market/index.md` |
-| 9 | Market Research | 7 | `references/market-research/index.md` |
+| 9 | Market Research | 8 | `references/market-research/index.md` |
 | 10 | Data Analysis | 5 | `references/data-analysis/index.md` |
 | 11 | AI Delivery | 2 | `references/ai-delivery/index.md` |
-| 12 | Execution | 4 | `references/execution/index.md` |
+| 12 | Execution | 5 | `references/execution/index.md` |
 | 13 | Engineering | 21 | `references/engineering/index.md` |
 | 14 | Product Philosophy | 4 | `references/product-philosophy/index.md` |
-| 15 | Leadership | 3 | `references/leadership/index.md` |
+| 15 | Leadership | 4 | `references/leadership/index.md` |
 | 16 | Financial Analysis | 5 | `references/financial-analysis/index.md` |
 | 17 | Research Methodology | 2 | `references/research-methodology/index.md` |
 | 18 | Industry Analysis | 2 | `references/industry-analysis/index.md` |
@@ -73,7 +73,7 @@ Each category's methodology list, best-use scenarios, and minimum information re
 The full intent→methodology routing, trigger signals, and alternatives are in each `index.md` "Routing Trigger Signals" — read it before declaring a framework.
 
 **Problem Diagnosis** — root cause→5 Whys; disruptive thinking→First Principles; 80/20→Pareto; multi-factor→Fishbone
-**Strategic Analysis** — situation assessment→SWOT; competitive landscape→Porter's Five Forces; business model/pricing/moat/portfolio/evolution (25 methodologies)→`strategy/index.md`
+**Strategic Analysis** — situation assessment→SWOT; competitive landscape→Porter's Five Forces; business model/pricing/moat/portfolio/evolution (26 methodologies)→`strategy/index.md`
 **Product & Growth** — user needs→JTBD; growth bottleneck→AARRR; metrics→North Star
 **Decision Making** — prioritization→RICE; goal setting→OKR; risk rehearsal→Pre-mortem
 **User Research** — user journey→Customer Journey Map; empathy→Empathy Map; needs hierarchy→Maslow
