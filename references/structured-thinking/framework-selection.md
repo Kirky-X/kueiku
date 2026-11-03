@@ -53,14 +53,6 @@ Score each candidate 1–5 per criterion, then compute the weighted total:
 
 On any signal: stop, explain what was completed and why the framework fails, re-select once per task (the replacement must clear the scorecard); if the replacement fails too, return NONE and answer from the evidence gathered so far.
 
-## Failure Modes
-- Scoring theater: inventing justifying scores for an already-made choice → write the evidence next to each score before totalling
-- Bar-lowering under momentum: rounding a 3.4 up to 3.5 → the gate only works if NONE is a real, cost-free option
-- Gate-skipping for familiar frameworks: habit picks skip scoring entirely → habitual picks get scored like any other candidate
-
-## Evidence Strength
-Mechanism-level, not empirical: no controlled studies show that this specific weighted bar improves decision quality. Its value is decision hygiene — it makes "no framework" a legitimate, explicit outcome instead of a failure state. The weights are defaults, not calibrated constants; adjust them per task and disclose the adjustment.
-
 ## Output Template
 
 ```
@@ -73,6 +65,14 @@ Candidates (1-5 per criterion; weights: alignment 30% / readiness 20% / competen
 Decision: use [Framework A] (primary), [backup if any]; skip [B, C] — [near-synonym of A / missing inputs / no complementary role]
 If NONE: answer directly. Why no framework: [top candidate + its failing criterion]
 ```
+
+## Failure Modes
+- Scoring theater: inventing justifying scores for an already-made choice → write the evidence next to each score before totalling
+- Bar-lowering under momentum: rounding a 3.4 up to 3.5 → the gate only works if NONE is a real, cost-free option
+- Gate-skipping for familiar frameworks: habit picks skip scoring entirely → habitual picks get scored like any other candidate
+
+## Evidence Strength
+Mechanism-level, not empirical: no controlled studies show that this specific weighted bar improves decision quality. Its value is decision hygiene — it makes "no framework" a legitimate, explicit outcome instead of a failure state. The weights are defaults, not calibrated constants; adjust them per task and disclose the adjustment.
 
 ## Source
 Kueiku skill methodology; meta-framework design.
