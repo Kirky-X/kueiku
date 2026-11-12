@@ -1,9 +1,9 @@
 ---
 name: kueiku
-description: "Methodology navigation map for AI agents — an index of 156 methodologies across 19 categories. Triggers: analysis/strategy/decision/negotiation/game theory/user research/structured thinking/product discovery/go-to-market/market research/data analysis/engineering/root cause analysis/prioritization/risk rehearsal/tech selection/TDD/quantitative investment/factor investing/portfolio optimization/backtesting/engineering methods (code review, refactoring, CI-CD, observability, DDD, performance/security/API/database design, incident response playbook, Git workflow, dependency strategy, microservices). Also routes: problem diagnosis, product growth, decision making, AI delivery, execution, product philosophy, leadership, financial analysis, research methodology, industry analysis. 中文触发：方法论/分析框架/决策方法/优先级排序/根因分析/技术选型/用户研究/产品发现/结构化思考/怎么设计/选什么方案。Boundary: content summarization & structured notes → cangjie; academic search & paper writing → liuxiang; code review → diting; dependency analysis → dayv."
+description: "Methodology navigation map for AI agents — an index of 157 methodologies across 19 categories. Triggers: analysis/strategy/decision/negotiation/game theory/user research/structured thinking/product discovery/go-to-market/market research/data analysis/engineering/root cause analysis/prioritization/risk rehearsal/tech selection/TDD/quantitative investment/factor investing/portfolio optimization/backtesting/engineering methods (code review, refactoring, CI-CD, observability, DDD, performance/security/API/database design, incident response playbook, Git workflow, dependency strategy, microservices). Also routes: problem diagnosis, product growth, decision making, AI delivery, execution, product philosophy, leadership, financial analysis, research methodology, industry analysis. 中文触发：方法论/分析框架/决策方法/优先级排序/根因分析/技术选型/用户研究/产品发现/结构化思考/怎么设计/选什么方案。Boundary: content summarization & structured notes → cangjie; academic search & paper writing → liuxiang; code review → diting; dependency analysis → dayv."
 license: MIT
 metadata:
-  version: "0.1.16"
+  version: "0.1.17"
   author: "Kirky-X"
   repo: "https://github.com/Kirky-X/kueiku"
   tags: "methodology, framework, decision-making, strategy, root-cause, prioritization, structured-thinking, user-research"
@@ -42,7 +42,7 @@ Each category's methodology list, best-use scenarios, and minimum information re
 
 ---
 
-## Category Overview (19 categories × 156 methodologies)
+## Category Overview (19 categories × 157 methodologies)
 
 | # | Category | Count | Index path |
 | --- | --- | --- | --- |
@@ -57,7 +57,7 @@ Each category's methodology list, best-use scenarios, and minimum information re
 | 9 | Market Research | 8 | `references/market-research/index.md` |
 | 10 | Data Analysis | 5 | `references/data-analysis/index.md` |
 | 11 | AI Delivery | 3 | `references/ai-delivery/index.md` |
-| 12 | Execution | 5 | `references/execution/index.md` |
+| 12 | Execution | 6 | `references/execution/index.md` |
 | 13 | Engineering | 22 | `references/engineering/index.md` |
 | 14 | Product Philosophy | 4 | `references/product-philosophy/index.md` |
 | 15 | Leadership | 4 | `references/leadership/index.md` |
